@@ -1,13 +1,50 @@
 <template>
   <div id="barra" class="barra-navegacion">
     <nav class="barra" @mouseout="exit_mouse">
-      <a id="a1" class="home" href="#">articles</a>
-      <a id="a2" href="#" @mouseover="hover_mover('a2')">benefits</a>
-      <a id="a3" href="#" @mouseover="hover_mover('a3')">tokenomics</a>
-      <a id="a4" href="#" @mouseover="hover_mover('a4')">news</a>
-      <a id="a5" href="#" @mouseover="hover_mover('a5')">roadmaps</a>
-      <a id="a6" href="#" @mouseover="hover_mover('a6')">search</a>
-      <div id="animacion" class="animacion"></div>
+      <a
+        id="a1"
+        class="home"
+        href="#"
+        @mouseover="hover_mover('a1')"
+        @click="leave_mouse('a1')"
+        >articles</a
+      >
+      <a
+        id="a2"
+        href="#"
+        @mouseover="hover_mover('a2')"
+        @click="leave_mouse('a2')"
+        >benefits</a
+      >
+      <a
+        id="a3"
+        href="#"
+        @mouseover="hover_mover('a3')"
+        @click="leave_mouse('a3')"
+        >tokenomics</a
+      >
+      <a
+        id="a4"
+        href="#"
+        @mouseover="hover_mover('a4')"
+        @click="leave_mouse('a4')"
+        >news</a
+      >
+      <a
+        id="a5"
+        href="#"
+        @mouseover="hover_mover('a5')"
+        @click="leave_mouse('a5')"
+        >roadmaps</a
+      >
+      <a
+        id="a6"
+        href="#"
+        @mouseover="hover_mover('a6')"
+        @click="leave_mouse('a6')"
+        >search</a
+      >
+      <div id="animacion" class="animacion traslado_animacion"></div>
     </nav>
 
     <button class="btn">WHITEPAPER</button>
@@ -24,6 +61,27 @@ function getOffset(el) {
     el = el.offsetParent;
   }
   return { top: _y, left: _x };
+}
+
+function recargar() {
+  var anim = document.getElementById("animacion");
+  var link = document.getElementsByClassName("home")[0];
+  anim.style.minWidth = link.offsetWidth + "px";
+  anim.style.left = getOffset(link).left + "px";
+}
+
+function quitar_animacion() {
+  let anim = document.getElementById("animacion");
+  anim.classList.remove("traslado_animacion");
+  console.log(anim);
+  recargar();
+}
+
+function agregar_animacion() {
+  let anim = document.getElementById("animacion");
+  anim.classList.add("traslado_animacion");
+  console.log(anim);
+  recargar();
 }
 
 export default {
@@ -46,15 +104,25 @@ export default {
       anim.style.minWidth = link.offsetWidth + "px";
       anim.style.left = getOffset(link).left + "px";
     },
+    leave_mouse(id) {
+      var anim = document.getElementById("animacion");
+      var activo = document.getElementsByClassName("home")[0];
+      let link = document.getElementById(id);
+      activo.classList.remove("home");
+      link.classList.add("home");
+    },
   },
 
   mounted() {
-    var anim = document.getElementById("animacion");
-    var link = document.getElementsByClassName("home")[0];
-    anim.style.minWidth = link.offsetWidth + "px";
-    anim.style.left = getOffset(link).left + "px";
+    recargar();
   },
 };
+window.addEventListener("resize", function () {
+  quitar_animacion();
+  agregar_animacion();
+});
+
+window.onresize = quitar_animacion();
 </script>
 
 <style>
@@ -100,7 +168,6 @@ export default {
 }
 .animacion {
   position: absolute;
-
   /* left: 60rem; */
   min-width: 1rem;
   width: 2rem;
@@ -108,8 +175,12 @@ export default {
   border-radius: 0.4rem;
   background-color: #ffc000;
   z-index: 0;
+}
+
+.traslado_animacion {
   transition: all 0.4s ease 0s;
 }
+
 /* .barra a:hover {
   background-color: #ffc000;
   padding: 0rem 0.4rem;
