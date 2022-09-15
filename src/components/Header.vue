@@ -1,19 +1,16 @@
 <template>
   <div id="barra" class="barra-navegacion">
-    
-    <nav class="barra">
-
-      <a id="a1" href="#" @mouseover="hover_mover('a1')">articels</a>
+    <nav class="barra" @mouseout="exit_mouse">
+      <a id="a1" class="home" href="#">articles</a>
       <a id="a2" href="#" @mouseover="hover_mover('a2')">benefits</a>
       <a id="a3" href="#" @mouseover="hover_mover('a3')">tokenomics</a>
       <a id="a4" href="#" @mouseover="hover_mover('a4')">news</a>
       <a id="a5" href="#" @mouseover="hover_mover('a5')">roadmaps</a>
       <a id="a6" href="#" @mouseover="hover_mover('a6')">search</a>
       <div id="animacion" class="animacion"></div>
-    
     </nav>
 
-    <button class="btn" @click="increment">WHITEPAPER</button>
+    <button class="btn">WHITEPAPER</button>
   </div>
 </template>
 
@@ -38,20 +35,24 @@ export default {
   },
   methods: {
     hover_mover(id) {
-      let  anim = document.getElementById("animacion");
-      let  link = document.getElementById(id);
+      let anim = document.getElementById("animacion");
+      let link = document.getElementById(id);
       anim.style.minWidth = link.offsetWidth + "px";
       anim.style.left = getOffset(link).left + "px";
-   
+    },
+    exit_mouse() {
+      var anim = document.getElementById("animacion");
+      var link = document.getElementsByClassName("home")[0];
+      anim.style.minWidth = link.offsetWidth + "px";
+      anim.style.left = getOffset(link).left + "px";
     },
   },
-  mounted() {
 
+  mounted() {
     var anim = document.getElementById("animacion");
-    var link = document.getElementById("a1");
+    var link = document.getElementsByClassName("home")[0];
     anim.style.minWidth = link.offsetWidth + "px";
-    anim.style.left =  getOffset(anim).left + "px";
-  
+    anim.style.left = getOffset(link).left + "px";
   },
 };
 </script>
@@ -72,7 +73,7 @@ export default {
 
 .barra {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 70%;
   height: 100%;
@@ -93,21 +94,21 @@ export default {
   text-decoration: none;
   height: 70%;
   margin: 0rem;
-  padding: 0.4rem;
+  padding: 0.6rem;
   border-radius: 0.4rem;
-  z-index:1;
+  z-index: 1;
 }
 .animacion {
   position: absolute;
-  
+
   /* left: 60rem; */
   min-width: 1rem;
   width: 2rem;
   height: 70%;
   border-radius: 0.4rem;
   background-color: #ffc000;
-  z-index:0;
-  transition: all .4s ease 0s;
+  z-index: 0;
+  transition: all 0.4s ease 0s;
 }
 /* .barra a:hover {
   background-color: #ffc000;
