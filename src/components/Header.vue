@@ -2,31 +2,37 @@
 
 <template>
   <div id="barra" class="barra-navegacion">
+    <div class="animacion"></div>
     <nav class="barra">
-      <div class="animacion comienzo-casa"></div>
-      <a href="#" @mouseover="hover">ARTICLES</a>
-      <a href="#">BENEFITS</a>
-      <a href="#">TOKENOMICS</a>
-      <a href="#">NEWS</a>
-      <a href="#">ROADMAPS</a>
-      <a href="#">SEARCH</a>
+
+        <a id="a1" href="#" @mouseover="hover_mover('a1')">ARTICLES</a>
+        <a href="#">BENEFITS</a>
+        <a href="#">TOKENOMICS</a>
+        <a href="#">NEWS</a>
+        <a href="#">ROADMAPS</a>
+        <a href="#">SEARCH</a>
+       
+    
     </nav>
-    <button class="btn" @click="hover">WHITEPAPER</button>
+    
+   
+    <button class="btn" @click="increment">WHITEPAPER</button>
   </div>
 </template>
 <script>
-import { createApp } from "vue";
-// new createApp({
-// el: "#barra",
-// data: {
-//     show: true,
-// },
-// methods: {
-//     hover: function (event) {
-//     alert("Hola ");
-//     },
-// },
-// });
+export default {
+  data() {
+    return {
+      count: 0,
+    };
+  },
+  methods: {
+    hover_mover(id) {
+      alert(id);
+    },
+  },
+  mounted() {},
+};
 </script>
 <style >
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
@@ -43,7 +49,7 @@ import { createApp } from "vue";
 }
 
 .barra {
-  z-index: 999;
+ 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,10 +57,11 @@ import { createApp } from "vue";
   height: 100%;
   max-width: 40rem;
   margin-right: 3rem;
-  
 }
 
 .barra a {
+  position: relative;
+  left: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +74,14 @@ import { createApp } from "vue";
   padding: 0.4rem;
   border-radius: 0.4rem;
 }
-
+.animacion {
+  position: relative;
+  left:6rem;
+  min-width: 6.5rem;
+  height: 70%;
+  border-radius: 0.4rem;
+  background-color: #ffc000;
+}
 .barra a:hover {
   background-color: #ffc000;
   padding: 0rem 0.4rem;
