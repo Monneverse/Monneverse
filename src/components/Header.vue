@@ -2,36 +2,55 @@
 
 <template>
   <div id="barra" class="barra-navegacion">
-    <div class="animacion"></div>
+    <div id="animacion" class="animacion"></div>
     <nav class="barra">
-
-        <a id="a1" href="#" @mouseover="hover_mover('a1')">ARTICLES</a>
-        <a href="#">BENEFITS</a>
-        <a href="#">TOKENOMICS</a>
-        <a href="#">NEWS</a>
-        <a href="#">ROADMAPS</a>
-        <a href="#">SEARCH</a>
-       
-    
+      <a id="a1" href="#" @mouseover="hover_mover('a1')">ARTICLES</a>
+      <a id="a2" href="#" @mouseover="hover_mover('a2')">BENEFITS</a>
+      <a id="a3" href="#" @mouseover="hover_mover('a3')">TOKENOMICS</a>
+      <a id="a4" href="#" @mouseover="hover_mover('a4')">NEWS</a>
+      <a id="a5" href="#" @mouseover="hover_mover('a5')">ROADMAPS</a>
+      <a id="a6" href="#" @mouseover="hover_mover('a6')">SEARCH</a>
     </nav>
-    
-   
+
     <button class="btn" @click="increment">WHITEPAPER</button>
   </div>
 </template>
 <script>
+function getOffset(el) {
+  var _x = 0;
+  var _y = 0;
+  while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
+    _x += el.offsetLeft - el.scrollLeft;
+    _y += el.offsetTop - el.scrollTop;
+    el = el.offsetParent;
+  }
+  return { top: _y, left: _x };
+}
+
 export default {
   data() {
     return {
-      count: 0,
+      distancia: 0,
+      animando: false,
     };
   },
   methods: {
     hover_mover(id) {
-      alert(id);
+      if (this.animando) {
+        return;
+      }
+      var anim = document.getElementById("animacion");
+      var link = document.getElementById(id);
+      var distancia_recorrer = link.offsetLeft - this.distancia;
+      anim.style.left = distancia_recorrer + "px";
     },
   },
-  mounted() {},
+  mounted() {
+    this.distancia = getOffset(document.getElementById("animacion")).left;
+    var anim = document.getElementById("animacion");
+    var link = document.getElementById("a1");
+    anim.style.left = link.offsetLeft - this.distancia + "px";
+  },
 };
 </script>
 <style >
@@ -49,7 +68,6 @@ export default {
 }
 
 .barra {
- 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,16 +94,16 @@ export default {
 }
 .animacion {
   position: relative;
-  left:6rem;
-  min-width: 6.5rem;
+  /* left: 60rem; */
+  width: 5rem;
   height: 70%;
   border-radius: 0.4rem;
   background-color: #ffc000;
 }
-.barra a:hover {
+/* .barra a:hover {
   background-color: #ffc000;
   padding: 0rem 0.4rem;
-}
+} */
 
 .btn {
   font-family: "Montserrat", sans-serif;
