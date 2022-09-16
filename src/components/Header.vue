@@ -70,19 +70,7 @@ function recargar() {
   anim.style.left = getOffset(link).left + "px";
 }
 
-function quitar_animacion() {
-  let anim = document.getElementById("animacion");
-  anim.classList.remove("traslado_animacion");
-  console.log(anim);
-  recargar();
-}
 
-function agregar_animacion() {
-  let anim = document.getElementById("animacion");
-  anim.classList.add("traslado_animacion");
-  console.log(anim);
-  recargar();
-}
 
 export default {
   data() {
@@ -118,11 +106,9 @@ export default {
   },
 };
 window.addEventListener("resize", function () {
-  quitar_animacion();
-  agregar_animacion();
+ 
 });
 
-window.onresize = quitar_animacion();
 </script>
 
 <style>
