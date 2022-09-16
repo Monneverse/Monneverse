@@ -116,7 +116,6 @@ window.addEventListener("resize", function () {
   quitar_animacion();
   agregar_animacion();
 });
-window.onresize = quitar_animacion();
 </script>
 
 <style>
