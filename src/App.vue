@@ -1,4 +1,6 @@
 <script setup>
+
+import Bienvenida from "./components/Bienvenida.vue";
 import Header from "./components/Header.vue";
 </script>
 
@@ -7,7 +9,9 @@ import Header from "./components/Header.vue";
     <Header></Header>
   </header>
 
-  <main></main>
+  <main>
+    <Bienvenida></Bienvenida>
+  </main>
 </template>
 
 <style >
@@ -34,6 +38,10 @@ body {
 header,
 Header {
   width: 100%;
+  position: fixed;
+  z-index: 999;
 }
-
+main{
+  z-index: 0;
+}
 </style>

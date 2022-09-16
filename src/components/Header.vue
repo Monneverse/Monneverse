@@ -70,8 +70,6 @@ function recargar() {
   anim.style.left = getOffset(link).left + "px";
 }
 
-
-
 export default {
   data() {
     return {
@@ -106,9 +104,8 @@ export default {
   },
 };
 window.addEventListener("resize", function () {
- 
+  recargar();
 });
-
 </script>
 
 <style>
