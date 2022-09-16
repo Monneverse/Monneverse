@@ -36,16 +36,16 @@
   </div>
 
   <div class="fondo-suave">
-    <img src="../../public/img/fondo-suave.png" alt="" srcset="" />
+    <img src="/public/img/fondo-suave.png" alt="" srcset="" />
   </div>
   <div class="fondo-montana">
-    <img src="../../public/img/fondo-montana.png" alt="" srcset="" />
+    <img src="/public/img/fondo-montana.png" alt="" srcset="" />
   </div>
   <div class="fondo-oscuro-superior">
-    <img src="../../public/img/fondo-oscuro-superior.png" alt="" srcset="" />
+    <img src="/public/img/fondo-oscuro-superior.png" alt="" srcset="" />
   </div>
   <div class="fondo-mundial">
-    <img src="../../public/img/fondo-mundial.png" alt="" srcset="" />
+    <img src="/public/img/fondo-mundial.png" alt="" srcset="" />
   </div>
 </template>
   

@@ -156,7 +156,7 @@ window.addEventListener("resize", function () {
   width: 2rem;
   height: 70%;
   border-radius: 0.4rem;
-  background-color: #ffc000;
+  background-color: #0ed8419a;
   z-index: 0;
 }
 
