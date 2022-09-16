@@ -164,7 +164,7 @@ window.addEventListener("resize", function () {
   width: 2rem;
   height: 70%;
   border-radius: 0.4rem;
-  background-color: #ffc000;
+  background-color: rgb(77, 77, 77);
   z-index: 0;
 }
 .traslado_animacion {
@@ -187,6 +187,6 @@ window.addEventListener("resize", function () {
   min-width: 8rem;
 }
 .btn:hover {
-  background-color: red;
+  background-color: #b48700;
 }
 </style>

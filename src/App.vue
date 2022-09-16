@@ -1,16 +1,17 @@
 <script setup>
 import Header from "./components/Header.vue";
+import Info from "./components/Informacion.vue";
 </script>
 
 <template>
   <header>
     <Header></Header>
   </header>
-
+  <Info></Info>
   <main></main>
 </template>
 
-<style >
+<style>
 * {
   margin: 0;
   padding: 0;
@@ -35,5 +36,4 @@ header,
 Header {
   width: 100%;
 }
-
 </style>
