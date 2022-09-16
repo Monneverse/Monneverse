@@ -21,6 +21,7 @@
   top: 30%;
   left: 8.8%;
   width: 30%;
+  z-index: 6;
 }
 
 .welcome p {
@@ -42,6 +43,7 @@
   left: 4%;
   justify-content: center;
   width: 40%;
+  z-index: 6;
 }
 
 .welcome_text p {

@@ -1,14 +1,17 @@
 <script setup>
 import Header from "./components/Header.vue";
 import Info from "./components/Informacion.vue";
+import Bienvenida from "./components/Bienvenida.vue";
 </script>
 
 <template>
   <header>
     <Header></Header>
   </header>
-  <Info></Info>
-  <main></main>
+  <Bienvenida></Bienvenida>
+  <main>
+    <Info></Info>
+  </main>
 </template>
 
 <style>
@@ -35,5 +38,10 @@ body {
 header,
 Header {
   width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+main {
+  z-index: 0;
 }
 </style>
