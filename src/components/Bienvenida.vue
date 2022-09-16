@@ -77,6 +77,7 @@ img {
 .logo {
   position: fixed;
   z-index: 1;
+  opacity: 40%;
 }
 #logo-1 {
   left: 3rem;
