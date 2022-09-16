@@ -11,18 +11,7 @@
   </div>
 </template>
 
-<script>
-function quitar_animacion() {
-  let anim = document.getElementById("welcome");
-  anim.classList.remove("fadeInLeft");
-  console.log(anim);
-}
-function agregar_animacion() {
-  let anim = document.getElementById("animacion");
-  anim.classList.add("traslado_animacion");
-  console.log(anim);
-}
-</script>
+<script></script>
 
 <style>
 .welcome {
