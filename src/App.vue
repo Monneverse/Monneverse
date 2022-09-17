@@ -3,6 +3,7 @@
 import Header from "./components/Header.vue";
 import Info from "./components/Informacion.vue";
 import Bienvenida from "./components/Bienvenida.vue";
+import Calculadora from "./components/Calculadora.vue"
 </script>
 
 <template>
@@ -23,9 +24,14 @@ import Bienvenida from "./components/Bienvenida.vue";
       <Bienvenida />
       <Info />
     </div>
-    <div id="2" class="container red"></div>
-    <div id="3" class="container yellow"></div>
-    <div id="4" class="container green"></div>
+    <div id="2" class="container red"> </div>
+    <div id="3" class="container yellow">
+
+
+    </div>
+    <div id="4" class="container green">
+      <Calculadora />
+    </div>
     <div id="5" class="container orange"></div>
   </main>
 </template>
