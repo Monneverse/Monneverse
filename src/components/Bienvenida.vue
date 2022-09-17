@@ -141,10 +141,10 @@ img {
 }
 .fondo-mundial {
   position: fixed;
-  left: 20%;
+  left: 32%;
   top: 20%;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 95%;
   z-index: 6;
   opacity: 100%;
 }
