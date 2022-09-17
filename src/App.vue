@@ -1,6 +1,5 @@
 <script setup>
 
-import Bienvenida from "./components/Bienvenida.vue";
 import Header from "./components/Header.vue";
 import Info from "./components/Informacion.vue";
 import Bienvenida from "./components/Bienvenida.vue";
@@ -12,9 +11,8 @@ import Bienvenida from "./components/Bienvenida.vue";
   </header>
 
   <main>
-  <Bienvenida></Bienvenida>
-  <main>
-    <Info></Info>
+  <Bienvenida/>
+    <Info/>
   </main>
 </template>
 
