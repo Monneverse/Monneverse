@@ -20,7 +20,7 @@ import Calculadora from "./components/Calculadora.vue"
     y dentro de su div van los componentes, puede eliminar las clases 
     guiese del ejemplo div 1
     -->
-    <div id="1">
+    <div id="1" class="container comenzar">
       <Bienvenida />
       <Info />
     </div>
@@ -119,5 +119,12 @@ main {
   padding: 0%;
   margin: 0%;
   height: 100%;
+}
+
+.container{
+  visibility: hidden;
+}
+.comenzar { 
+  visibility: visible;
 }
 </style>
