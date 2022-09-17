@@ -62,14 +62,24 @@ function getOffset(el) {
   }
   return { top: _y, left: _x };
 }
-
 function recargar() {
   var anim = document.getElementById("animacion");
   var link = document.getElementsByClassName("home")[0];
   anim.style.minWidth = link.offsetWidth + "px";
   anim.style.left = getOffset(link).left + "px";
 }
-
+function quitar_animacion() {
+  let anim = document.getElementById("animacion");
+  anim.classList.remove("traslado_animacion");
+  console.log(anim);
+  recargar();
+}
+function agregar_animacion() {
+  let anim = document.getElementById("animacion");
+  anim.classList.add("traslado_animacion");
+  console.log(anim);
+  recargar();
+}
 export default {
   data() {
     return {
@@ -98,13 +108,13 @@ export default {
       link.classList.add("home");
     },
   },
-
   mounted() {
     recargar();
   },
 };
 window.addEventListener("resize", function () {
-  recargar();
+  quitar_animacion();
+  agregar_animacion();
 });
 </script>
 
@@ -121,7 +131,6 @@ window.addEventListener("resize", function () {
   justify-content: center;
   align-items: center;
 }
-
 .barra {
   display: flex;
   justify-content: center;
@@ -131,7 +140,6 @@ window.addEventListener("resize", function () {
   max-width: 40rem;
   margin-right: 3rem;
 }
-
 .barra a {
   position: relative;
   left: 0%;
@@ -156,19 +164,16 @@ window.addEventListener("resize", function () {
   width: 2rem;
   height: 70%;
   border-radius: 0.4rem;
-  background-color: #0ed8419a;
+  background-color: rgb(77, 77, 77);
   z-index: 0;
 }
-
 .traslado_animacion {
   transition: all 0.4s ease 0s;
 }
-
 /* .barra a:hover {
   background-color: #ffc000;
   padding: 0rem 0.4rem;
 } */
-
 .btn {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -179,11 +184,9 @@ window.addEventListener("resize", function () {
   text-align: center;
   background-color: #ffc000;
   padding: 0.8rem;
-
   min-width: 8rem;
 }
-
 .btn:hover {
-  background-color: red;
+  background-color: #b48700;
 }
 </style>

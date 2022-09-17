@@ -2,6 +2,8 @@
 
 import Bienvenida from "./components/Bienvenida.vue";
 import Header from "./components/Header.vue";
+import Info from "./components/Informacion.vue";
+import Bienvenida from "./components/Bienvenida.vue";
 </script>
 
 <template>
@@ -10,11 +12,13 @@ import Header from "./components/Header.vue";
   </header>
 
   <main>
-    <Bienvenida></Bienvenida>
+  <Bienvenida></Bienvenida>
+  <main>
+    <Info></Info>
   </main>
 </template>
 
-<style >
+<style>
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +45,7 @@ Header {
   position: fixed;
   z-index: 999;
 }
-main{
+main {
   z-index: 0;
 }
 </style>

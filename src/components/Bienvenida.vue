@@ -1,6 +1,6 @@
 <template>
   <video
-    src="/public/video/video_binario.mp4"
+    src="/video/video_binariov2.mp4"
     autoplay="true"
     muted="true"
     loop="true"
@@ -30,11 +30,9 @@
   <div id="logo-6" class="logo">
     <img src="/public/img/logo_empresa.png" alt="" />
   </div>
-
   <div id="logo-7" class="logo">
     <img src="/public/img/logo_empresa.png" alt="" />
   </div>
-
   <div class="fondo-suave">
     <img src="/public/img/fondo-suave.png" alt="" srcset="" />
   </div>
@@ -47,13 +45,16 @@
   <div class="fondo-mundial">
     <img src="/public/img/fondo-mundial.png" alt="" srcset="" />
   </div>
+  <!-- <div class="semi-circle rotateOutUpRight animated">
+    <img src="/public/img/semi_circulo.png" alt="" />
+  </div> -->
 </template>
-  
-  <script>
+
+<script>
 export default {};
 </script>
-  
-  <style scoped>
+
+<style scoped>
 img {
   width: 100%;
   height: 100%;
@@ -138,7 +139,7 @@ img {
   z-index: 5;
   opacity: 100%;
 }
-.fondo-mundial{
+.fondo-mundial {
   position: fixed;
   left: 20%;
   top: 20%;
@@ -146,5 +147,20 @@ img {
   height: 100%;
   z-index: 6;
   opacity: 100%;
+}
+
+.semi-circle {
+  position: fixed;
+  left: 38%;
+  top: 75%;
+  width: 30%;
+  height: 60%;
+  z-index: 8;
+  opacity: 100%;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
 }
 </style>
