@@ -1,5 +1,7 @@
 <template>
   <div>
+    <div class="logo">
+        <img src="/img/logo.svg" alt="logo monneverse"></div>
     <div class="fondo fondo-calculadora"></div>
     <div class="fondo filtro-superior"></div>
     <div class="fondo fondo-montana">
@@ -307,6 +309,14 @@ img {
   top: 75%;
   left: 65%;
   z-index: 11;
+}
+.logo{
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    width: 5rem;
+    height: 5rem;
+    z-index: 12;
 }
 </style>
 
