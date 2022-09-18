@@ -333,7 +333,7 @@ img {
 
 .logo-redes {
   position: absolute;
-  top: 90%;
+  bottom: 0%;
   left: 1rem;
   width: 20rem;
   height: 5rem;
