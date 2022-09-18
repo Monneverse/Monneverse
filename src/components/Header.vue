@@ -37,13 +37,6 @@
         @click="leave_mouse('a5')"
         >roadmaps</a
       >
-      <a
-        id="a6"
-        href="#"
-        @mouseover="hover_mover('a6')"
-        @click="leave_mouse('a6')"
-        >search</a
-      >
       <div id="animacion" class="animacion traslado_animacion"></div>
     </nav>
 
@@ -146,8 +139,8 @@ window.addEventListener("resize", function () {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.1rem;
   text-transform: uppercase;
   color: white;
   text-decoration: none;
@@ -164,16 +157,17 @@ window.addEventListener("resize", function () {
   width: 2rem;
   height: 70%;
   border-radius: 0.4rem;
-  background-color: rgb(77, 77, 77);
+  background: radial-gradient(
+    circle at center,
+    #32987d 0%,
+    #097561 50%,
+    #505863 100%
+  );
   z-index: 0;
 }
 .traslado_animacion {
   transition: all 0.4s ease 0s;
 }
-/* .barra a:hover {
-  background-color: #ffc000;
-  padding: 0rem 0.4rem;
-} */
 .btn {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;

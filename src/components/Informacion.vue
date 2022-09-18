@@ -14,6 +14,8 @@
 <script></script>
 
 <style>
+@import url("http://fonts.cdnfonts.com/css/bahnschrift");
+
 .welcome {
   position: fixed;
   display: flex;
@@ -26,7 +28,7 @@
 
 .welcome p {
   font-size: 3.4vw;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Bahnschrift", sans-serif;
   color: white;
   text-align: center;
   text-transform: uppercase;
@@ -48,7 +50,7 @@
 
 .welcome_text p {
   font-size: 2vw;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Bahnschrift", sans-serif;
   color: white;
   text-align: center;
   text-transform: capitalize;
