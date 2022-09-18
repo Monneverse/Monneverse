@@ -69,7 +69,7 @@
 
       <p></p>
       <div class="inversion">
-        <input type="number" name="inversion" id="inversion" placeholder="$ 100">
+        <input type="number" min="0" name="inversion" id="inversion" placeholder="$ 100">
         <label class="tag-inversion" for="inversion">Invert</label>
 
       </div>
@@ -83,16 +83,16 @@
       <div class="icon icon-telegram">
         <font-awesome-icon icon="fa-brands fa-telegram" />
         <div class="fondo-icono"></div>
-        
+
       </div>
       <div class="icon icon-reddit">
         <font-awesome-icon icon="fa-brands fa-reddit" />
         <div class="fondo-icono"> </div>
-        
+
       </div>
       <div class="icon icon-discord">
         <font-awesome-icon icon="fa-brands fa-discord" />
-        
+
       </div>
     </div>
   </div>
@@ -100,13 +100,33 @@
 
 <script>
 
+
+
 export default {
+
   data() {
     return {
       inversion: 0,
+      porcentajeInteres: 12.6,
       interes: 0,
       meses: 0
     };
+  },
+  methods: {
+    Calculator() {
+    let txtInversion = document.getElementById("inversion");
+    let txtInteres = document.getElementById("interes");
+
+    let inversion = parseInt(txtInversion.value);
+    let interes = inversion * (this.porcentajeInteres / 100);
+    txtInteres.value = interes.toFixed(2) ;
+
+}
+  },
+  mounted() {
+    let txtInversion = document.getElementById("inversion");
+    let txtInteres = document.getElementById("interes");
+    txtInversion.addEventListener('input', this.Calculator);
   }
 }
 </script>
@@ -305,10 +325,12 @@ img {
 }
 
 .indicador svg {
-  margin-top: 3.5rem;
-  margin-right: 6rem;
-  width: 22%;
+  position: relative;
+  top: 4.4rem;
+  right: .5rem;
+  width: 24%;
   min-width: 22rem;
+  transform: rotate(-70deg);
 }
 
 #month-1 {
@@ -350,7 +372,8 @@ img {
   height: 5rem;
   z-index: 12;
 }
-.icon{
+
+.icon {
   font-size: 4rem;
   z-index: 18;
   margin-left: 1rem;
@@ -361,11 +384,13 @@ img {
   color: #5CBAE7;
   z-index: 18;
 }
-.fa-reddit{
+
+.fa-reddit {
   position: relative;
   color: #FF4500;
   z-index: 18;
 }
+
 .fondo-icono {
   position: relative;
   top: -75%;
@@ -375,7 +400,8 @@ img {
   background-color: white;
   z-index: 17;
 }
-.icon-discord{
+
+.icon-discord {
   border-radius: 50%;
   background-color: #5865F2;
   width: 4rem;
@@ -384,7 +410,8 @@ img {
   justify-content: center;
   align-items: center;
 }
-.fa-discord{
+
+.fa-discord {
   color: #ffffff;
   font-size: 2rem;
 }
