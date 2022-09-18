@@ -4,6 +4,7 @@ import Info from "./components/Informacion.vue";
 import Bienvenida from "./components/Bienvenida.vue";
 import Calculadora from "./components/Calculadora.vue";
 import Alianzas from "./components/Alianzas.vue";
+import Certificado from "./components/Certificado.vue";
 </script>
 
 <template>
@@ -29,15 +30,20 @@ import Alianzas from "./components/Alianzas.vue";
       <Calculadora />
     </div>
     <div id="5" class="container orange"></div>
+    <div id="6" class="container orange"></div>
+    <div id="7" class="container red">
+      <Certificado/>
+    </div>
   </main>
 </template>
 <script>
 let id = 1;
+let limite =7;
 
 document.addEventListener("wheel", function () {
   document.getElementById(id).style.visibility = "hidden";
   if (event.deltaY > 0) {
-    if (id < 5) id = id + 1;
+    if (id < limite) id = id + 1;
   } else {
     if (id > 1) id = id - 1;
   }
