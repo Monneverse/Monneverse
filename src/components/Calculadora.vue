@@ -79,7 +79,7 @@
       </div>
     </div>
     <div class="logo-redes">
-      <font-awesome-icon icon="fa-brands fa-telegram" />
+      <font-awesome-icon icon="fa-brands fa-telegram" size="10x" />
     </div>
   </div>
 </template>
@@ -320,9 +320,9 @@ img {
     left: 20rem;
     width: 5rem;
     height: 5rem;
-    border: 1px solid red;
     z-index: 14;
 }
+
 .logo{
     position: relative;
     top: 2rem;
@@ -332,11 +332,6 @@ img {
     z-index: 12;
 }
 
-font-awesome-icon{
-
-  border: 1px solid red;
-  font-size: 2rem;
-}
 </style>
 
 

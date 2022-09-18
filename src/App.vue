@@ -12,6 +12,8 @@ import Certificado from "./components/Certificado.vue";
   </header>
 
   <main>
+    
+
     <!-- 
     para agregar una pantalla agreguela dentro de uno de los div libre
     sino hay div libre, cree uno con el siguiente #Id respetando la secuencia, por ejemplo
