@@ -4,6 +4,7 @@ import Info from "./components/Informacion.vue";
 import Bienvenida from "./components/Bienvenida.vue";
 import Calculadora from "./components/Calculadora.vue";
 import Alianzas from "./components/Alianzas.vue";
+import Alliances from "./components/Alliances.vue";
 </script>
 
 <template>
@@ -23,7 +24,9 @@ import Alianzas from "./components/Alianzas.vue";
       <Bienvenida />
       <Info />
     </div>
-    <div id="2" class="container red"></div>
+    <div id="2" class="container red">
+      <Alliances />
+    </div>
     <div id="3" class="container upcoming_alliance"></div>
     <div id="4" class="container green">
       <Calculadora />
