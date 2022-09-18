@@ -1,9 +1,9 @@
 <script setup>
-
 import Header from "./components/Header.vue";
 import Info from "./components/Informacion.vue";
 import Bienvenida from "./components/Bienvenida.vue";
-import Calculadora from "./components/Calculadora.vue"
+import Calculadora from "./components/Calculadora.vue";
+import Alianzas from "./components/Alianzas.vue";
 </script>
 
 <template>
@@ -12,7 +12,6 @@ import Calculadora from "./components/Calculadora.vue"
   </header>
 
   <main>
-
     <!-- 
     para agregar una pantalla agreguela dentro de uno de los div libre
     sino hay div libre, cree uno con el siguiente #Id respetando la secuencia, por ejemplo
@@ -24,11 +23,8 @@ import Calculadora from "./components/Calculadora.vue"
       <Bienvenida />
       <Info />
     </div>
-    <div id="2" class="container red"> </div>
-    <div id="3" class="container yellow">
-
-
-    </div>
+    <div id="2" class="container red"></div>
+    <div id="3" class="container upcoming_alliance"></div>
     <div id="4" class="container green">
       <Calculadora />
     </div>
@@ -36,21 +32,18 @@ import Calculadora from "./components/Calculadora.vue"
   </main>
 </template>
 <script>
-let id = 1
+let id = 1;
 
-document.addEventListener('wheel', function () {
-  document.getElementById(id).style.visibility = "hidden"
+document.addEventListener("wheel", function () {
+  document.getElementById(id).style.visibility = "hidden";
   if (event.deltaY > 0) {
-    if (id < 5)
-      id = id + 1
+    if (id < 5) id = id + 1;
   } else {
-    if (id > 1)
-      id = id - 1
+    if (id > 1) id = id - 1;
   }
-  document.getElementById(id).style.visibility = "visible"
+  document.getElementById(id).style.visibility = "visible";
   location.hash = "#" + id;
   window.history.pushState({}, document.title, window.location.pathname);
-
 });
 </script>
 <style>
@@ -61,7 +54,6 @@ document.addEventListener('wheel', function () {
   text-decoration: none;
   border: none;
   outline: none;
-
 }
 
 #app,
@@ -99,16 +91,31 @@ main {
   background-color: green;
 }
 
-.yellow {
-  background-color: yellow;
+.upcoming_alliance {
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
 }
 
 .orange {
-  background-color: orange;
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
 }
 
 .red {
-  background-color: red;
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
 }
 
 ::-webkit-scrollbar {

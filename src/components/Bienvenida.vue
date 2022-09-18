@@ -5,45 +5,43 @@
     muted="true"
     loop="true"
     class="video-fondo"
-    poster="/public/img/fondo_binario.png"
+    poster="/img/fondo_binario.png"
   ></video>
 
-  <div class="fondo-oscuro">
-    <img src="/public/img/fondo_oscuro.png" />
-  </div>
+  <div class="fondo-oscuro"></div>
 
   <div id="logo-1" class="logo">
-    <img src="/public/img/logo_empresa.png" alt="" />
+    <img src="/img/logo_empresa.png" alt="" />
   </div>
   <div id="logo-2" class="logo">
-    <img src="/public/img/logo_empresa.png" alt="" />
+    <img src="/img/logo_empresa.png" alt="" />
   </div>
   <div id="logo-3" class="logo">
-    <img src="public/img/logo_empresa.png" alt="" />
+    <img src="/img/logo_empresa.png" alt="" />
   </div>
   <div id="logo-4" class="logo">
-    <img src="/public/img/logo_empresa.png" alt="" />
+    <img src="/img/logo_empresa.png" alt="" />
   </div>
   <div id="logo-5" class="logo">
-    <img src="/public/img/logo_empresa.png" alt="" />
+    <img src="/img/logo_empresa.png" alt="" />
   </div>
   <div id="logo-6" class="logo">
-    <img src="/public/img/logo_empresa.png" alt="" />
+    <img src="/img/logo_empresa.png" alt="" />
   </div>
   <div id="logo-7" class="logo">
-    <img src="/public/img/logo_empresa.png" alt="" />
+    <img src="/img/logo_empresa.png" alt="" />
   </div>
   <div class="fondo-suave">
-    <img src="/public/img/fondo-suave.png" alt="" srcset="" />
+    <img src="/img/fondo-suave.png" alt="" srcset="" />
   </div>
   <div class="fondo-montana">
-    <img src="/public/img/fondo-montana.png" alt="" srcset="" />
+    <img src="/img/fondo-montana.png" alt="" srcset="" />
   </div>
   <div class="fondo-oscuro-superior">
-    <img src="/public/img/fondo-oscuro-superior.png" alt="" srcset="" />
+    <img src="/img/fondo-oscuro-superior.png" alt="" srcset="" />
   </div>
   <div class="fondo-mundial">
-    <img src="/public/img/fondo-mundial.png" alt="" srcset="" />
+    <img src="/img/fondo-mundial.png" alt="" srcset="" />
   </div>
   <!-- <div class="semi-circle rotateOutUpRight animated">
     <img src="/public/img/semi_circulo.png" alt="" />
@@ -69,10 +67,13 @@ img {
   z-index: 0;
 }
 .fondo-oscuro {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
+  z-index: 10;
   opacity: 70%;
 }
 .logo {
@@ -148,7 +149,6 @@ img {
   z-index: 6;
   opacity: 100%;
 }
-
 .semi-circle {
   position: fixed;
   left: 38%;
@@ -158,7 +158,6 @@ img {
   z-index: 8;
   opacity: 100%;
 }
-
 .animated.hinge {
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
