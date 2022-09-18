@@ -1,9 +1,9 @@
 <template>
     <div class="logo">
-        <img src="../../public/img/logo.svg" alt="logo monneverse"></div>
+        <img src="/img/logo.svg" alt="logo monneverse"></div>
     <div class="fondo">
         <div class="imagen">
-            <img src="../../public/img/certificado.png" alt="">
+            <img src="/img/certificado.png" alt="">
         </div>
     </div>
 </template>
