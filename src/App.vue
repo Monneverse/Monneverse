@@ -6,7 +6,6 @@ import Calculadora from "./components/Calculadora.vue";
 import Alianzas from "./components/Alianzas.vue";
 import Certificado from "./components/Certificado.vue";
 </script>
-
 <template>
   <header>
     <Header></Header>
@@ -51,6 +50,16 @@ document.addEventListener("wheel", function () {
   location.hash = "#" + id;
   window.history.pushState({}, document.title, window.location.pathname);
 });
+
+export default {
+  data() {
+    return {
+    
+    };
+  },
+  mounted() {
+  },
+};
 </script>
 <style>
 * {

@@ -1,3 +1,4 @@
+
 <template>
   <div>
     <div class="logo">
@@ -76,6 +77,9 @@
         <label class="tag-inversion" for="interes">Interest</label>
 
       </div>
+    </div>
+    <div class="logo-redes">
+      <font-awesome-icon icon="fa-brands fa-telegram" />
     </div>
   </div>
 </template>
@@ -310,6 +314,15 @@ img {
   left: 65%;
   z-index: 11;
 }
+.logo-redes{
+  position: relative;
+    top: 10rem;
+    left: 20rem;
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid red;
+    z-index: 14;
+}
 .logo{
     position: relative;
     top: 2rem;
@@ -317,6 +330,12 @@ img {
     width: 5rem;
     height: 5rem;
     z-index: 12;
+}
+
+font-awesome-icon{
+
+  border: 1px solid red;
+  font-size: 2rem;
 }
 </style>
 
