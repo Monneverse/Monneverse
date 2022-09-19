@@ -10,15 +10,12 @@ import Exchanges from "./components/Exchanges.vue";
 </script>
 
 
-</script>
 <template>
   <header>
     <Header></Header>
   </header>
 
   <main>
-    
-
     <!-- 
     para agregar una pantalla agreguela dentro de uno de los div libre
     sino hay div libre, cree uno con el siguiente #Id respetando la secuencia, por ejemplo
@@ -40,13 +37,13 @@ import Exchanges from "./components/Exchanges.vue";
     <div id="5" class="container orange"></div>
     <div id="6" class="container orange"></div>
     <div id="7" class="container red">
-      <Certificado/>
+      <Certificado />
     </div>
   </main>
 </template>
 <script>
 let id = 1;
-let limite =7;
+let limite = 7;
 
 document.addEventListener("wheel", function () {
   document.getElementById(id).style.visibility = "hidden";
@@ -62,12 +59,9 @@ document.addEventListener("wheel", function () {
 
 export default {
   data() {
-    return {
-    
-    };
+    return {};
   },
-  mounted() {
-  },
+  mounted() {},
 };
 </script>
 <style>
