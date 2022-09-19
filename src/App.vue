@@ -34,7 +34,9 @@ import Exchanges from "./components/Exchanges.vue";
     <div id="4" class="container calculadora">
       <Calculadora />
     </div>
-    <div id="5" class="container orange"></div>
+    <div id="5" class="container exchanges">
+      <Exchanges />
+    </div>
     <div id="6" class="container orange"></div>
     <div id="7" class="container red">
       <Certificado />

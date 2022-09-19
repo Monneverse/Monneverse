@@ -42,7 +42,7 @@
 
 <script></script>
 
-<style>
+<style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
 
 /*FONDO*/

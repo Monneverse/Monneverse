@@ -111,7 +111,7 @@ window.addEventListener("resize", function () {
 });
 </script>
 
-<style>
+<style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
 .barra-navegacion {
   position: fixed;
