@@ -65,6 +65,7 @@
   <script></script>
 
   <style scoped>
+    @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
 .logo {
   position: relative;
   top: 2rem;
@@ -167,7 +168,8 @@
   color: black;
   display:flex;
   flex-direction: column;
-  font-weight: 600;
+  font-weight:100;
+  font-family: 'Work Sans', sans-serif;
 }
 .alianzas a span{
   
@@ -181,6 +183,7 @@
   -webkit-box-shadow: -16px 3px 135px 10px rgba(8,8,8,1);
   -moz-box-shadow: -16px 3px 135px 10px rgba(8,8,8,1);
   box-shadow: -16px 3px 135px 10px rgba(8,8,8,1);
+ 
 
 }
 .alianzas img{
@@ -223,6 +226,8 @@
     top: 50%;
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
+    font-weight:100;
+    font-family: 'Work Sans', sans-serif;
 }
 .rectangulo-medio{
     width: 44%;
