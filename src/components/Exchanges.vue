@@ -54,7 +54,7 @@
 
 <script></script>
 
-<style>
+<style scoped>
 .fondo {
   background-color: #121026;
   z-index: 0;
