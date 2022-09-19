@@ -6,6 +6,8 @@ import Calculadora from "./components/Calculadora.vue";
 import Alianzas from "./components/Alianzas.vue";
 import Alliances from "./components/Alliances.vue";
 import Certificado from "./components/Certificado.vue";
+import Exchanges from "./components/Exchanges.vue";
+</script>
 
 
 </script>
@@ -32,7 +34,7 @@ import Certificado from "./components/Certificado.vue";
       <Alliances />
     </div>
     <div id="3" class="container upcoming_alliance"></div>
-    <div id="4" class="container green">
+    <div id="4" class="container calculadora">
       <Calculadora />
     </div>
     <div id="5" class="container orange"></div>
@@ -140,6 +142,9 @@ main {
   );
 }
 
+.exchanges {
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -150,10 +155,10 @@ main {
   height: 100%;
 }
 
-.container{
+.container {
   visibility: hidden;
 }
-.comenzar { 
+.comenzar {
   visibility: visible;
 }
 </style>
