@@ -1,81 +1,85 @@
 
 <template>
 
-    <div class="logo">
-      <img src="/img/logo.svg" alt="logo monneverse">
-    </div>
-    <div class="fondo fondo-calculadora"></div>
-    <div class="fondo filtro-superior"></div>
-    <div class="fondo fondo-montana">
-      <img src="/img/fondo-montana.png" />
-    </div>
-    <div class="fondo fondo-oscurecer"></div>
-    <div class="circuito-izquierdo">
-      <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
-    </div>
-    <div class="circuito-derecho">
-      <img src="/img/calculadora/circuito-derecho.png" alt="" />
-    </div>
-    <div class="medidor">
-      <div class="circulo">
-        <img src="../assets/circulo-blanco.svg" srcset="">
-      </div>
-
-      <div class="circulo">
-        <img src="../assets/circulo-colores.svg" alt="" srcset="">
-      </div>
-      <div class="circulo indicador">
-
-        <img src="../assets/indicador.svg">
-      </div>
+  <div class="logo">
+    <img src="/img/logo.svg" alt="logo monneverse">
+  </div>
+  <div class="fondo fondo-calculadora"></div>
+  <div class="fondo filtro-superior"></div>
+  <div class="fondo fondo-montana">
+    <img src="/img/fondo-montana.png" />
+  </div>
+  <div class="fondo fondo-oscurecer"></div>
+  <div class="circuito-izquierdo">
+    <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
+  </div>
+  <div class="circuito-derecho">
+    <img src="/img/calculadora/circuito-derecho.png" alt="" />
+  </div>
+  <div class="medidor">
+    <div class="circulo">
+      <img src="../assets/circulo-blanco.svg" srcset="">
     </div>
 
-    <div class="informacion">
-      <p id="title">12%<span>*</span>48h</p>
-      <p id="descripcion">FIRST TWO MONTHS EVERY 48 HOURS
-        THE MONNER WILL RETURN 12.6% INTEREST
-      </p>
+    <div class="circulo">
+      <img src="../assets/circulo-colores.svg" alt="" srcset="">
     </div>
+    <div class="circulo indicador">
 
-    <p id="month-1">1st Month</p>
-    <p id="month-2">2st Month</p>
-    <div class="form-controles">
-
-      <p></p>
-      <div class="inversion">
-        <input type="number" min="0" name="inversion" id="inversion" placeholder="$ 100">
-        <label class="tag-inversion" for="inversion">Invert</label>
-
-      </div>
-      <div class="interes">
-        <input type="number" name="interes" id="interes" placeholder="$ 100">
-        <label class="tag-inversion" for="interes">Interest</label>
-
+      <img id="indicador-img" class="hour48" src="../assets/indicador.svg">
+      <div id="indicador" class="descripcion">
+        <p id="cantidad">48</p>
+        <p id="medida">HOURS</p>
       </div>
     </div>
-    <div class="logo-redes">
-      <div class="icon icon-telegram">
-        <font-awesome-icon icon="fa-brands fa-telegram" />
-        <div class="fondo-icono"></div>
+  </div>
 
-      </div>
-      <div class="icon icon-reddit">
-        <font-awesome-icon icon="fa-brands fa-reddit" />
-        <div class="fondo-icono"> </div>
+  <div class="informacion">
+    <p id="title">12%<span>*</span>48h</p>
+    <p id="descripcion">FIRST TWO MONTHS EVERY 48 HOURS
+      THE MONNER WILL RETURN 12.6% INTEREST
+    </p>
+  </div>
 
-      </div>
-      <div class="icon icon-discord">
-        <font-awesome-icon icon="fa-brands fa-discord" />
+  <p id="month-1">1st Month</p>
+  <p id="month-2">2st Month</p>
+  <div class="form-controles">
 
-      </div>
+    <p></p>
+    <div class="inversion">
+      <input type="number" min="0" name="inversion" id="inversion" placeholder="$ 100">
+      <label class="tag-inversion" for="inversion">Invert</label>
+
     </div>
+    <div class="interes">
+      <input type="number" name="interes" id="interes" placeholder="$ 100">
+      <label class="tag-inversion" for="interes">Interest</label>
+
+    </div>
+  </div>
+  <div class="logo-redes">
+    <div class="icon icon-telegram">
+      <font-awesome-icon icon="fa-brands fa-telegram" />
+      <div class="fondo-icono"></div>
+
+    </div>
+    <div class="icon icon-reddit">
+      <font-awesome-icon icon="fa-brands fa-reddit" />
+      <div class="fondo-icono"> </div>
+
+    </div>
+    <div class="icon icon-discord">
+      <font-awesome-icon icon="fa-brands fa-discord" />
+
+    </div>
+  </div>
 
 </template>
 
 <script>
 
 
-
+const State = Object.freeze({ Hour48: 1, Month1: 2, Month2: 3 });
 export default {
 
   data() {
@@ -83,24 +87,62 @@ export default {
       inversion: 0,
       porcentajeInteres: 12.6,
       interes: 0,
-      meses: 0
+      meses: State.Hour48,
+      cantidadMes: 30
     };
   },
   methods: {
     Calculator() {
       let txtInversion = document.getElementById("inversion");
       let txtInteres = document.getElementById("interes");
-
       let inversion = parseInt(txtInversion.value);
-      let interes = inversion * (this.porcentajeInteres / 100);
+      let interes = 0;
+      if (this.meses == State.Hour48) {
+        interes = inversion * (this.porcentajeInteres / 100);
+      } else if (this.meses == State.Month1) {
+        interes = (inversion * (this.porcentajeInteres / 100)) * (this.cantidadMes / 2);
+      } else {
+        interes = (inversion * (this.porcentajeInteres / 100)) * (this.cantidadMes);
+      }
+
       txtInteres.value = interes.toFixed(2);
 
+    },
+    CambiarMonth() {
+      let imgIndicador = document.getElementById("indicador-img");
+      let txtCantidad = document.getElementById("cantidad");
+      let txtMedida = document.getElementById("medida");
+      imgIndicador.classList.forEach(x => imgIndicador.classList.remove(x));
+      console.log(imgIndicador);
+      if (this.meses < 3) {
+        this.meses++;
+      } else {
+        this.meses = State.Hour48;
+      }
+      if (this.meses == State.Hour48) {
+        txtCantidad.innerText = "48";
+        txtMedida.innerText = "HOURS";
+        imgIndicador.classList.add("hour48")
+      } else if (this.meses == State.Month1) {
+        txtCantidad.innerText = "1st";
+        txtMedida.innerText = "MONTH";
+        imgIndicador.classList.add("month1")
+      } else {
+        imgIndicador.classList.add("month2")
+        txtCantidad.innerText = "2st";
+        txtMedida.innerText = "MONTH";
+      }
+      this.Calculator();
     }
   },
   mounted() {
     let txtInversion = document.getElementById("inversion");
+    txtInversion.value = "100"
     let txtInteres = document.getElementById("interes");
+    let txtIndicador = document.getElementById("indicador");
+    txtIndicador.addEventListener('click', this.CambiarMonth)
     txtInversion.addEventListener('input', this.Calculator);
+    this.Calculator();
   }
 }
 </script>
@@ -183,6 +225,31 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
+}
+
+.descripcion {
+  color: white;
+  position: absolute;
+  top: 48%;
+  width: 7rem;
+  left: calc(50%-4rem);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.descripcion>p {
+  width: 100%;
+  text-align: center;
+  user-select: none;
+}
+
+.descripcion :first-child {
+  color: #01C28D;
+  font-size: 3rem;
 }
 
 .circulo {
@@ -207,8 +274,24 @@ img {
   top: 2rem;
   right: 0rem;
   scale: .5;
+
+  user-select: none;
+  pointer-events: none;
+  transition: all 0.4s ease 0s;
+}
+
+.hour48 {
   transform: rotate(-80deg);
 }
+
+.month1 {
+  transform: rotate(65deg);
+}
+
+.month2 {
+  transform: rotate(200deg);
+}
+
 .form-controles {
   position: absolute;
   bottom: 0%;
@@ -219,7 +302,8 @@ img {
   justify-content: center;
 }
 
-.inversion,.interes {
+.inversion,
+.interes {
   color: #f9f9fa;
   display: flex;
   flex-direction: column;
@@ -229,7 +313,7 @@ img {
 
 #inversion,
 #interes {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 1.5rem;
   color: #067F4E;
   padding: .1rem;
@@ -244,7 +328,7 @@ img {
 }
 
 .tag-inversion {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 1.5rem;
   color: white;
   padding: 0rem;
@@ -260,7 +344,7 @@ img {
   left: 3%;
   max-width: 20rem;
   z-index: 9;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   color: white;
 
 }
