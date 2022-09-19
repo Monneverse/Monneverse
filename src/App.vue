@@ -4,6 +4,7 @@ import Info from "./components/Informacion.vue";
 import Bienvenida from "./components/Bienvenida.vue";
 import Calculadora from "./components/Calculadora.vue";
 import Alianzas from "./components/Alianzas.vue";
+import Exchanges from "./components/Exchanges.vue";
 </script>
 
 <template>
@@ -25,10 +26,13 @@ import Alianzas from "./components/Alianzas.vue";
     </div>
     <div id="2" class="container red"></div>
     <div id="3" class="container upcoming_alliance"></div>
-    <div id="4" class="container green">
+    <div id="4" class="container calculadora">
       <Calculadora />
     </div>
-    <div id="5" class="container orange"></div>
+    <div id="5" class="container articles"></div>
+    <div id="6" class="container exchanges">
+      <Exchanges />
+    </div>
   </main>
 </template>
 <script>
@@ -37,7 +41,7 @@ let id = 1;
 document.addEventListener("wheel", function () {
   document.getElementById(id).style.visibility = "hidden";
   if (event.deltaY > 0) {
-    if (id < 5) id = id + 1;
+    if (id < 6) id = id + 1;
   } else {
     if (id > 1) id = id - 1;
   }
@@ -118,6 +122,9 @@ main {
   );
 }
 
+.exchanges {
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -128,10 +135,10 @@ main {
   height: 100%;
 }
 
-.container{
+.container {
   visibility: hidden;
 }
-.comenzar { 
+.comenzar {
   visibility: visible;
 }
 </style>
