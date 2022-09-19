@@ -1,6 +1,9 @@
 <template>
+    <div class="logo">
+    <img src="/img/logo.svg" alt="logo monneverse">
+  </div>
   <div class="fondo"></div>
-  <div class="text_1">
+  <div class="exchange_text">
     <p>first exchanges after our pre-sale</p>
   </div>
   <div class="social_media">
@@ -9,9 +12,12 @@
     <a href=""><i class="fa-brands fa-discord fa-3x"></i></a>
   </div>
   <div class="pancakeswap">
-    <a href=""> <img src="/public/img/Exchanges/bunny-color.svg" alt="" /></a>
+    <div class="bunny">
+      <img class="bunny_icon" src="/public/img/Exchanges/bunny-color.svg" />
+      <div class="name_coin"><h1>pancakeswap</h1></div>
+    </div>
   </div>
-  <div class="kucoin">
+  <!-- <div class="kucoin">
     <a href=""> <img src="/public/img/Exchanges/Kucoin.svg" alt="" /></a>
   </div>
   <div class="gate">
@@ -49,17 +55,33 @@
   </div>
   <div class="probit">
     <img src="/img/Exchanges/probit.png" alt="" />
-  </div>
+  </div> -->
 </template>
 
 <script></script>
 
-<style>
+<style scoped>
+
 .fondo {
-  background-color: #121026;
-  z-index: 0;
+  position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #121026;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.text_1 {
+.logo {
+  position: relative;
+  top: 2rem;
+  left: 2rem;
+  width: 5rem;
+  height: 5rem;
+  z-index: 12;
+}
+.exchange_text {
   display: block;
   position: relative;
   top: 24%;
@@ -71,7 +93,7 @@
   text-transform: uppercase;
   z-index: 1;
 }
-.text_1 p {
+.exchange_text p {
   background: linear-gradient(
     to right,
     #8753c1 0%,
@@ -87,7 +109,7 @@
 }
 .social_media {
   position: relative;
-  top: 71%;
+  bottom: -66%;
   left: 1%;
   z-index: 3;
 }
@@ -106,24 +128,74 @@
   padding: 0.2%;
   z-index: 6;
 }
+
+
 .pancakeswap {
-  box-shadow: 6px 6px 2px 0px #251e6f;
-  background: #121026;
+  background: linear-gradient(to right,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%);;
+  /*background: #121026;*/
   position: relative;
   display: relative;
   top: -6%;
   left: 40%;
-  width: 6%;
-  height: 12%;
+  width: 5.5%;
+  height: 9.8%;
   border-radius: 30%;
-  justify-content: center;
   z-index: 7;
 }
-.pancakeswap img {
+
+/* .pancakeswap:hover {
+  width: 360px;
+  transition: 0.75s;
+} */
+
+.pancakeswap .bunny {
+  position: absolute;
+  display: inline-flexbox;
+  width: 80%;
+  height: 80%;
+  max-width: 100%;
+  max-height: 100%;
+  left: 10%;
+  top: 10%;
+}
+
+.name_coin{
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  left: 105%;
+  top: 1%;
+  border-radius: 5%;
+  color: #121026;
+  text-transform: uppercase;
+  display: none;
+}
+
+.pancakeswap .bunny .bunny_icon{
+  position: absolute;
   width: 100%;
   height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
-.kucoin {
+
+.bunny:hover > .name_coin {
+  display: block;
+  font-size: 1rem;
+  width: 250px;
+  height: 75px;
+  background: #ff4500;
+  background: linear-gradient(to left,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%);
+  animation : all 0.4s ease-in-out 0s;
+}
+
+/* .kucoin {
   box-shadow: 6px 6px 2px 0px #251e6f;
   background: #121026;
   position: relative;
@@ -353,5 +425,5 @@
 .probit img {
   width: 110%;
   height: 110%;
-}
+} */
 </style>
