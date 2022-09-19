@@ -7,6 +7,8 @@ import Alianzas from "./components/Alianzas.vue";
 import Alliances from "./components/Alliances.vue";
 import Certificado from "./components/Certificado.vue";
 import Exchanges from "./components/Exchanges.vue";
+import Articulo from "./components/Articulo.vue";
+import ContenedorArticulo from "./components/ContenedorArticulo.vue";
 </script>
 
 
@@ -30,12 +32,16 @@ import Exchanges from "./components/Exchanges.vue";
     <div id="2" class="container red">
       <Alliances />
     </div>
-    <div id="3" class="container upcoming_alliance"></div>
+    <div id="3" class="container upcoming_alliance">
+      
+    </div>
     <div id="4" class="container calculadora">
       <Calculadora />
     </div>
-    <div id="5" class="container orange"></div>
-    <div id="6" class="container orange"></div>
+    <div id="5" class="container orange">
+      <ContenedorArticulo/>
+    </div>
+    <div id="6" class="container green"></div>
     <div id="7" class="container red">
       <Certificado />
     </div>
