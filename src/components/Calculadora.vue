@@ -216,16 +216,21 @@ img {
 }
 
 .medidor {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 7;
-  height: 100%;
+  height: 90%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   user-select: none;
+  border: 3px solid red;
+}
+
+.medidor>*{
+  border: 3px solid red;
 }
 
 .descripcion {
@@ -255,6 +260,7 @@ img {
 .circulo {
   position: absolute;
   left: 0;
+  top: 0;
   height: 100%;
   width: 100%;
   z-index: 7;
@@ -294,7 +300,7 @@ img {
 
 .form-controles {
   position: absolute;
-  bottom: 0%;
+  top: 85%;
   left: 0%;
   z-index: 9;
   display: flex;
@@ -376,8 +382,8 @@ img {
   color: white;
   font-size: 1.5rem;
   position: absolute;
-  top: 28%;
-  left: 46%;
+  top: 24%;
+  left: 45.5%;
   z-index: 11;
 }
 
@@ -386,7 +392,7 @@ img {
   color: white;
   font-size: 1.5rem;
   position: absolute;
-  top: 85%;
+  top: 75%;
   left: 63%;
   z-index: 11;
 }
