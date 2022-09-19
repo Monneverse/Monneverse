@@ -33,15 +33,18 @@ import ContenedorArticulo from "./components/ContenedorArticulo.vue";
       <Alliances />
     </div>
     <div id="3" class="container upcoming_alliance">
-      
+
     </div>
     <div id="4" class="container calculadora">
       <Calculadora />
     </div>
     <div id="5" class="container orange">
-      <ContenedorArticulo/>
+      <ContenedorArticulo />
     </div>
-    <div id="6" class="container green"></div>
+    <div id="6" class="container green">
+      <Exchanges />
+    </div>
+
     <div id="7" class="container red">
       <Certificado />
     </div>
@@ -67,7 +70,7 @@ export default {
   data() {
     return {};
   },
-  mounted() {},
+  mounted() { },
 };
 </script>
 <style>
@@ -116,34 +119,27 @@ main {
 }
 
 .upcoming_alliance {
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
 }
 
 .orange {
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
 }
 
 .red {
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
 }
 
-.exchanges {
-}
+.exchanges {}
 
 ::-webkit-scrollbar {
   display: none;
@@ -158,6 +154,7 @@ main {
 .container {
   visibility: hidden;
 }
+
 .comenzar {
   visibility: visible;
 }

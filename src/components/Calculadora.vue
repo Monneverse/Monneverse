@@ -278,7 +278,7 @@ img {
 
   user-select: none;
   pointer-events: none;
-  transition: all 0.4s ease 0s;
+  transition: all 0.4s ease-in 0s;
 }
 
 .hour48 {

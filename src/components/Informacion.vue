@@ -13,7 +13,7 @@
 
 <script></script>
 
-<style>
+<style scoped>
 @import url("http://fonts.cdnfonts.com/css/bahnschrift");
 
 .welcome {
