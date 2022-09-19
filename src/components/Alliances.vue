@@ -1,6 +1,8 @@
 <template>
 
-
+    <div class="logo">
+      <img src="/img/logo.svg" alt="logo monneverse">
+    </div>
 
     <!--FONDO-->
     <div class="fondo-video">
@@ -63,6 +65,14 @@
   <script></script>
 
   <style scoped>
+.logo {
+  position: relative;
+  top: 2rem;
+  left: 2rem;
+  width: 5rem;
+  height: 5rem;
+  z-index: 12;
+}
     .fondo-video{
       width : 100%;
       height: 100%;
