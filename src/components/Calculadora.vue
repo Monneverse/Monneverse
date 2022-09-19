@@ -183,7 +183,7 @@ img {
 
 .fondo-montana {
   height: 100%;
-  top: 10%;
+  top: 0%;
   left: 0;
   z-index: 2;
 }
@@ -295,7 +295,7 @@ img {
 
 .form-controles {
   position: absolute;
-  top: 85%;
+  top: 75%;
   left: 0%;
   z-index: 9;
   display: flex;
@@ -318,7 +318,6 @@ img {
   font-size: 1.5rem;
   color: #067F4E;
   padding: .1rem;
-  padding-right: 1rem;
   width: 100%;
   min-height: 2.5rem;
   border-radius: 2rem;
@@ -377,8 +376,8 @@ img {
   color: white;
   font-size: 1.5rem;
   position: absolute;
-  top: 24%;
-  left: 45.5%;
+  top: 15%;
+  left: 46.5%;
   z-index: 11;
 }
 
@@ -387,8 +386,8 @@ img {
   color: white;
   font-size: 1.5rem;
   position: absolute;
-  top: 75%;
-  left: 63%;
+  top: 70%;
+  left: 60%;
   z-index: 11;
 }
 
