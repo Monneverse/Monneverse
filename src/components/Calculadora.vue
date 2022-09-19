@@ -226,11 +226,6 @@ img {
   justify-content: center;
   align-items: center;
   user-select: none;
-  border: 3px solid red;
-}
-
-.medidor>*{
-  border: 3px solid red;
 }
 
 .descripcion {
