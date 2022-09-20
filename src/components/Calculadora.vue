@@ -59,18 +59,19 @@
   </div>
   <div class="logo-redes">
     <div class="icon icon-telegram">
-      <font-awesome-icon icon="fa-brands fa-telegram" />
-      <div class="fondo-icono"></div>
-
+      <a href="https://t.me/monnerversecommunity" target="_blank">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="">
+      </a>
     </div>
     <div class="icon icon-reddit">
-      <font-awesome-icon icon="fa-brands fa-reddit" />
-      <div class="fondo-icono"> </div>
-
+      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="">
+      </a>
     </div>
-    <div class="icon icon-discord">
-      <font-awesome-icon icon="fa-brands fa-discord" />
-
+    <div class="icon icon-discord ">
+      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="">
+      </a>
     </div>
   </div>
 
@@ -235,7 +236,7 @@ img {
   width: 7rem;
   left: calc(50%-4rem);
   font-family: 'Work Sans', sans-serif;
-  font-size: 2rem;
+  font-size: 3.5vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -278,7 +279,7 @@ img {
 
   user-select: none;
   pointer-events: none;
-  transition: all 0.4s ease-in 0s;
+  transition: transform 0.4s ease-in 0s;
 }
 
 .hour48 {
@@ -350,7 +351,7 @@ img {
 }
 
 .informacion #title {
-  font-size: 5rem;
+  font-size: 10vh;
 }
 
 .informacion #title span {
@@ -403,7 +404,7 @@ img {
 }
 
 .logo {
-  position: relative;
+  position: absolute;
   top: 2rem;
   left: 2rem;
   width: 5rem;
@@ -412,7 +413,8 @@ img {
 }
 
 .icon {
-  font-size: 4rem;
+  width: 3rem;
+  height: auto;
   z-index: 18;
   margin-left: 1rem;
 }
@@ -439,20 +441,14 @@ img {
   z-index: 17;
 }
 
-.icon-discord {
+.icon-discord > img {
   border-radius: 50%;
   background-color: #5865F2;
   width: 4rem;
   height: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.fa-discord {
-  color: #ffffff;
-  font-size: 2rem;
-}
+
 </style>
 
 

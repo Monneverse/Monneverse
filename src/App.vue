@@ -3,10 +3,10 @@ import Header from "./components/Header.vue";
 import Info from "./components/Informacion.vue";
 import Bienvenida from "./components/Bienvenida.vue";
 import Calculadora from "./components/Calculadora.vue";
-import Alianzas from "./components/Alianzas.vue";
 import Alliances from "./components/Alliances.vue";
 import Certificado from "./components/Certificado.vue";
 import Exchanges from "./components/Exchanges.vue";
+import ContenedorArticulo from "./components/ContenedorArticulo.vue";
 </script>
 
 
@@ -30,14 +30,19 @@ import Exchanges from "./components/Exchanges.vue";
     <div id="2" class="container red">
       <Alliances />
     </div>
-    <div id="3" class="container upcoming_alliance"></div>
+    <div id="3" class="container upcoming_alliance">
+
+    </div>
     <div id="4" class="container calculadora">
       <Calculadora />
     </div>
-    <div id="5" class="container exchanges">
+    <div id="5" class="container">
+      <ContenedorArticulo />
+    </div>
+    <div id="6" class="container green">
       <Exchanges />
     </div>
-    <div id="6" class="container orange"></div>
+
     <div id="7" class="container red">
       <Certificado />
     </div>
@@ -63,7 +68,7 @@ export default {
   data() {
     return {};
   },
-  mounted() {},
+  mounted() { },
 };
 </script>
 <style>
@@ -112,34 +117,27 @@ main {
 }
 
 .upcoming_alliance {
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
 }
 
 .orange {
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
 }
 
 .red {
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
 }
 
-.exchanges {
-}
+
 
 ::-webkit-scrollbar {
   display: none;
@@ -154,6 +152,7 @@ main {
 .container {
   visibility: hidden;
 }
+
 .comenzar {
   visibility: visible;
 }
