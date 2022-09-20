@@ -47,12 +47,12 @@
 
     <p></p>
     <div class="inversion">
-      <input type="number" min="0" name="inversion" id="inversion" placeholder="$ 100">
+      <input type="number" min="0" @input="Calculator" name="inversion" id="inversion" v-model="inversion" placeholder="$ 100">
       <label class="tag-inversion" for="inversion">Invert</label>
 
     </div>
     <div class="interes">
-      <input type="number" name="interes" id="interes" placeholder="$ 100">
+      <input type="number" name="interes" id="interes" v-model="interes" placeholder="$ 100">
       <label class="tag-inversion" for="interes">Interest</label>
 
     </div>
@@ -94,19 +94,14 @@ export default {
   },
   methods: {
     Calculator() {
-      let txtInversion = document.getElementById("inversion");
-      let txtInteres = document.getElementById("interes");
-      let inversion = parseInt(txtInversion.value);
-      let interes = 0;
+    
       if (this.meses == State.Hour48) {
-        interes = inversion * (this.porcentajeInteres / 100);
+        this.interes = (this.inversion * (this.porcentajeInteres / 100)).toFixed(2);;
       } else if (this.meses == State.Month1) {
-        interes = (inversion * (this.porcentajeInteres / 100)) * (this.cantidadMes / 2);
+        this.interes = ((this.inversion * (this.porcentajeInteres / 100)) * (this.cantidadMes / 2)).toFixed(2);;
       } else {
-        interes = (inversion * (this.porcentajeInteres / 100)) * (this.cantidadMes);
+        this.interes  = ((this.inversion * (this.porcentajeInteres / 100)) * (this.cantidadMes)).toFixed(2);
       }
-
-      txtInteres.value = interes.toFixed(2);
 
     },
     CambiarMonth() {
@@ -137,12 +132,8 @@ export default {
     }
   },
   mounted() {
-    let txtInversion = document.getElementById("inversion");
-    txtInversion.value = "100"
-    let txtInteres = document.getElementById("interes");
-    let txtIndicador = document.getElementById("indicador");
-    txtIndicador.addEventListener('click', this.CambiarMonth)
-    txtInversion.addEventListener('input', this.Calculator);
+   
+    this.inversion = 10;
     this.Calculator();
   }
 }
