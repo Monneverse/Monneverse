@@ -23,6 +23,9 @@
     </div>
   
     <!--CIRCULOS-->
+    <div class="centrar">
+
+    
     <div class="circulo">
 
     <div class="circulo-medio">
@@ -42,8 +45,9 @@
     </div>
     </div>
     </div>
-    <div class="semi_circulo">
-   <!--<img src="img/semi_circulo.png" alt="">-->    
+   
+
+  
     </div>
     <!--UPCOMING ALLIANCES-->
     <div class="rectangulo">
@@ -52,12 +56,16 @@
     <!-- VISA MASTERD CARD -->
     <div class="rectangulo-medio">
         <div class="tarjetas">
-          <img src="/img/Alianzas/visa.png" alt="">
-          <img src="/img/Alianzas/mastercard.png" alt="">
+         <p>Join our community and get our
+        </p>
+      <p> latest news</p>
         </div>
     </div>
     <div class="puntero">
-     <!-- <img src="img/puntero.png" alt="">-->
+     <img src="img/puntero.svg" alt="">
+    </div>
+    <div class="semi_circulo">
+   <img src="img/arco.svg" alt=""> 
     </div>
 
   </template>
@@ -65,6 +73,18 @@
 
   <style scoped>
     @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
+.centrar{
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
 .logo {
   position: relative;
   top: 2rem;
@@ -83,6 +103,7 @@
 .fondo-video{
       width : 100%;
       height: 100%;
+      
      
     }
     .fondo-video video{
@@ -94,6 +115,7 @@
      object-fit : cover;
      opacity: 40%;
      z-index: 0;
+     
     }
 
 .filtro-superior {
@@ -105,13 +127,16 @@
     #a8aaaf 100%
   );
   mix-blend-mode: multiply;
+  
 }
+
 .fondo-montana img{
   position: absolute;
   top: 30%;
   width: 100%;
   height: 75%;
   z-index:2;
+  
 }
 .fondo-oscurecer {
   position:absolute;
@@ -119,34 +144,41 @@
   background-color: rgb(0, 0, 0);
   opacity: 60%;
   mix-blend-mode: multiply;
+  
 }
+
 .fondo-red img{
   position: absolute;
   top: 35%;
   width: 100%;
   height: 75%;
   z-index:3;
+  
 }
 .circulo{
-    width: 40%;
+    width: 100%;
+    max-width: 40%;
     height: 80%;
-    margin: 0 auto;
     background-color: rgb(238, 236, 234, 0.4);
     position: absolute;
     border-radius: 100%;
-    top: 22%;
-    left: 30%;
+
     z-index: 5;
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end
   }
 
   .circulo-medio{
     width: 90%;
     height: 90%;
-    margin: 0 auto;
+    
     border-radius: 100%;
     background-color: rgba(248, 248, 247, 0.4);
-    position: relative;
-    bottom: -7%;
+    margin-bottom: 3%;
   }
 
 .alianzas{
@@ -188,16 +220,17 @@
   margin: auto auto;
 }
 
-.semi_circulo{
+.semi_circulo img{
    position: absolute;
-   z-index: 7;
-   width: 40%;
+   z-index: 6;
+   width: 36%;
    height: 80%;
    padding: 0;
    margin: 0;
-   top:23%;
-   left: 30%;
-   transform: rotate(3.142rad);
+   top:18%;
+   left: 32%;
+   
+  
 
 }
 
@@ -208,8 +241,8 @@
     position: absolute;
     top: 60%;
     left: 25%;
-    background: rgb(8,7,32);
-    background: linear-gradient(90deg, rgba(8,7,32,1) 0%, rgba(1,209,88,1) 100%);
+  
+    background: linear-gradient(90deg, rgb(8, 7, 32) 0%, rgba(1,209,88,1) 100%);
     border-radius: 2.5rem; 
     text-align: center;
     z-index: 5;
@@ -240,21 +273,29 @@
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
- 
+  flex-direction: column;
+  justify-content: center;
+
 
 }
 .tarjetas img{
   width: 28%; 
 }
+.tarjetas p{
+  text-align: center;
+  font-size: 1.7rem;
+  font-family: 'Work Sans', sans-serif;
+  font-weight:100;
+
+}
 .puntero{
-  position: absolute;
+   position: absolute;
    z-index: 7;
    width: 20%;
    height: 40%;
    padding: 0;
    margin: 0;
-   top:80%;
+   top:85%;
    left: 40%;
  
 }
