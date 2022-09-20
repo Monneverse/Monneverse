@@ -318,11 +318,11 @@ img {
   font-family: 'Work Sans', sans-serif;
   font-size: 1.5rem;
   color: #067F4E;
-  padding: .1rem;
-  width: 100%;
+  padding-right: 1rem;
+  width: 8rem;
   min-height: 2.5rem;
   border-radius: 2rem;
-  max-width: 10rem;
+  max-width: 8rem;
   text-align: center;
   margin-left: 5rem;
   margin-right: 5rem;
