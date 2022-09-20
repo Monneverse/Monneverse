@@ -17,7 +17,7 @@
 
     <div class="container2">
         <h5 class="titulo1">{{contenedor}}</h5>
-        <div class="ddd">
+        <div class="imagenDeArticulo">
             <img   :src=img alt="" class="imagenArticulo01" />
         </div>
         <button class="btn">Read More</button>
@@ -69,7 +69,7 @@ h5 {
     font-size: 1rem;
 }
 
-.ddd {
+.imagenDeArticulo {
     width: 100%;
     height: 100%;
     margin-bottom: 1rem;
