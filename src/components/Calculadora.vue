@@ -235,7 +235,7 @@ img {
   width: 7rem;
   left: calc(50%-4rem);
   font-family: 'Work Sans', sans-serif;
-  font-size: 2rem;
+  font-size: 3.5vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -350,7 +350,7 @@ img {
 }
 
 .informacion #title {
-  font-size: 5rem;
+  font-size: 10vh;
 }
 
 .informacion #title span {
