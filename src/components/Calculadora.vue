@@ -27,7 +27,7 @@
     <div class="circulo indicador">
 
       <img id="indicador-img" class="hour48" src="../assets/indicador.svg">
-      <div id="indicador" class="descripcion">
+      <div id="indicador" @click="CambiarMonth" class="descripcion">
         <p id="cantidad">48</p>
         <p id="medida">HOURS</p>
       </div>
@@ -52,7 +52,7 @@
 
     </div>
     <div class="interes">
-      <input type="number" name="interes" id="interes" v-model="interes" placeholder="$ 100">
+      <input type="number" name="interes" id="interes" v-model="interes" placeholder="$ 100" disabled>
       <label class="tag-inversion" for="interes">Interest</label>
 
     </div>
@@ -318,7 +318,11 @@ img {
   margin-left: 5rem;
   margin-right: 5rem;
 }
-
+#interes:disabled{
+  background-color: white;
+  user-select: none;
+  pointer-events: none;
+}
 .tag-inversion {
   font-family: 'Work Sans', sans-serif;
   font-size: 1.5rem;
