@@ -149,11 +149,9 @@
 }
 /* FIN REDES SOCIALES */
 
-/*ICONOS EXCHANGES*/
 .pancakeswap {
-  background: linear-gradient(to left, #48d0ab 0%, #097561 50%, #505863 100%);
-  justify-content: space-between;
-  border-radius: 8px;
+  background: linear-gradient(to right, #48d0ab 0%, #097561 50%, #505863 100%);
+  /*background: #121026;*/
   position: relative;
   overflow: hidden;
   display: flex;
@@ -167,10 +165,8 @@
   width: 18%;
   transition: 0.75s;
 }
-.pancakeswap:hover .bunny {
-  width: 100%;
-}
-.bunny {
+
+.name_coin {
   position: relative;
   width: 100%;
   height: 98%;
@@ -181,10 +177,28 @@
   transition: 0.75s;
   text-transform: uppercase;
 }
-.kucoin {
-  background: linear-gradient(to right, #48d0ab 0%, #097561 50%, #505863 100%);
-  justify-content: space-between;
-  border-radius: 8px;
+
+.pancakeswap .bunny .bunny_icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.bunny:hover > .name_coin {
+  display: block;
+  font-size: 1rem;
+  width: 250px;
+  height: 75px;
+  background: #ff4500;
+  background: linear-gradient(to left, #48d0ab 0%, #097561 50%, #505863 100%);
+  animation: all 0.4s ease-in-out 0s;
+}
+
+/* .kucoin {
+  box-shadow: 6px 6px 2px 0px #251e6f;
+  background: #121026;
   position: relative;
   overflow: hidden;
   display: flex;
