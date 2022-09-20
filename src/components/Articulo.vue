@@ -79,6 +79,8 @@ h5 {
 .btn {
     color: white;
     margin-left: 2%;
+    border-radius: 3rem;
+    padding: 1rem;
     background: linear-gradient(to left,
             #029F50 0%,
             #0A664E 50%,

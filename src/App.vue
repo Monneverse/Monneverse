@@ -3,11 +3,9 @@ import Header from "./components/Header.vue";
 import Info from "./components/Informacion.vue";
 import Bienvenida from "./components/Bienvenida.vue";
 import Calculadora from "./components/Calculadora.vue";
-import Alianzas from "./components/Alianzas.vue";
 import Alliances from "./components/Alliances.vue";
 import Certificado from "./components/Certificado.vue";
 import Exchanges from "./components/Exchanges.vue";
-import Articulo from "./components/Articulo.vue";
 import ContenedorArticulo from "./components/ContenedorArticulo.vue";
 </script>
 
@@ -38,7 +36,7 @@ import ContenedorArticulo from "./components/ContenedorArticulo.vue";
     <div id="4" class="container calculadora">
       <Calculadora />
     </div>
-    <div id="5" class="container orange">
+    <div id="5" class="container">
       <ContenedorArticulo />
     </div>
     <div id="6" class="container green">
@@ -139,7 +137,7 @@ main {
       #505863 100%);
 }
 
-.exchanges {}
+
 
 ::-webkit-scrollbar {
   display: none;
