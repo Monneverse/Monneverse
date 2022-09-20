@@ -1,77 +1,95 @@
 <template>
-    <div class="logo">
-    <img src="/img/logo.svg" alt="logo monneverse">
+  <div class="logo">
+    <img src="/img/logo.svg" alt="logo monneverse" />
   </div>
   <div class="fondo"></div>
   <div class="exchange_text">
     <p>first exchanges after our pre-sale</p>
   </div>
+
   <div class="social_media">
     <a href=""> <i class="fa-brands fa-reddit fa-3x"></i></a>
     <a href=""> <i class="fa-brands fa-telegram fa-3x"></i></a>
     <a href=""><i class="fa-brands fa-discord fa-3x"></i></a>
   </div>
+
   <div class="pancakeswap">
     <div class="bunny">
-      <img class="bunny_icon" src="/public/img/Exchanges/bunny-color.svg" />
-      <div class="name_coin"><h1>pancakeswap</h1></div>
+      <img class="icon_coin" src="/public/img/Exchanges/bunny-color.svg" />
+      <div class="name_coin"><p>pancakeswap</p></div>
     </div>
   </div>
-  <!-- <div class="kucoin">
-    <a href=""> <img src="/public/img/Exchanges/Kucoin.svg" alt="" /></a>
+
+  <div class="kucoin">
+    <div class="kcoin">
+      <img class="icon_coin" src="/img/Exchanges/Kucoin.svg" />
+      <div class="name_coin"><p>kucoin</p></div>
+    </div>
   </div>
-  <div class="gate">
-    <a href=""> <img src="/public/img/Exchanges/Gate.svg" alt="" /></a>
+
+  <div class="gateio">
+    <div class="gate">
+      <img class="icon_coin" src="/img/Exchanges/Gatebw.svg" />
+      <div class="name_coin"><p>gate.io</p></div>
+    </div>
   </div>
-  <div class="lbank">
-    <a href=""> <img src="/public/img/Exchanges/lbank.png" alt="" /></a>
+
+  <div class="Lbank">
+    <div class="l_bank">
+      <img class="icon_coin" src="/img/Exchanges/lbank2.svg" />
+      <div class="name_coin"><p>lbank</p></div>
+    </div>
   </div>
-  <div class="okx">
-    <a href=""> <img src="/public/img/Exchanges/okx1.png" alt="" /></a>
+
+  <div class="okx_logo">
+    <div class="okx_l">
+      <img class="icon_coin" src="/img/Exchanges/okxlogo.svg" />
+      <div class="name_coin"><p>okx</p></div>
+    </div>
   </div>
-  <div class="coin_gecko">
-    <img src="/img/Exchanges/coingecko.png" alt="" />
+
+  <div class="mexc_logo">
+    <div class="mexc">
+      <img class="icon_coin" src="/img/Exchanges/mexclogo.png" />
+      <div class="name_coin"><p>mexc global</p></div>
+    </div>
   </div>
-  <div class="mexcglb">
-    <img src="/img/Exchanges/mexcglb.png" alt="" />
+
+  <div class="xtcom_logo">
+    <div class="xt">
+      <img class="icon_coin" src="/img/Exchanges/xtcom.png" />
+      <div class="name_coin"><p>xt.com</p></div>
+    </div>
   </div>
-  <div class="xt">
-    <img src="/img/Exchanges/xt.png" alt="" />
+
+  <div class="poloniex_logo">
+    <div class="poloniex">
+      <img class="icon_coin" src="/img/Exchanges/poloniex.svg" />
+      <div class="name_coin"><p>poloniex</p></div>
+    </div>
   </div>
-  <div class="poloniex">
-    <img src="/img/Exchanges/poloniex.png" alt="" />
+
+  <div class="hotbit_logo">
+    <div class="hotbit">
+      <img class="icon_coin" src="/img/Exchanges/hotbit.png" />
+      <div class="name_coin"><p>hotbit</p></div>
+    </div>
   </div>
-  <div class="hotbit">
-    <img src="/img/Exchanges/hotbit.png" alt="" />
-  </div>
-  <div class="ftx">
-    <img src="/img/Exchanges/ftx.png" alt="" />
-  </div>
-  <div class="latoken">
-    <img src="/img/Exchanges/latoken.png" alt="" />
-  </div>
-  <div class="bitrue">
-    <img src="/img/Exchanges/bitrue.png" alt="" />
-  </div>
-  <div class="probit">
-    <img src="/img/Exchanges/probit.png" alt="" />
-  </div> -->
 </template>
 
 <script></script>
 
 <style scoped>
-
 .fondo {
   position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #121026;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  top: 0;
+  left: 0;
+  background-color: #121026;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .logo {
   position: relative;
@@ -84,8 +102,8 @@
 .exchange_text {
   display: block;
   position: relative;
-  top: 24%;
-  left: 3%;
+  top: 15%;
+  left: 5%;
   height: 20%;
   width: 30%;
   text-align: space-between;
@@ -107,9 +125,10 @@
   color: transparent;
   z-index: 2;
 }
+/* REDES SOCIALES */
 .social_media {
   position: relative;
-  bottom: -66%;
+  top: 58%;
   left: 1%;
   z-index: 3;
 }
@@ -128,302 +147,315 @@
   padding: 0.2%;
   z-index: 6;
 }
+/* FIN REDES SOCIALES */
 
-
+/*ICONOS EXCHANGES*/
 .pancakeswap {
-  background: linear-gradient(to right,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%);;
-  /*background: #121026;*/
+  background: linear-gradient(to left, #48d0ab 0%, #097561 50%, #505863 100%);
+  justify-content: space-between;
+  border-radius: 8px;
   position: relative;
-  display: relative;
-  top: -6%;
-  left: 40%;
-  width: 5.5%;
-  height: 9.8%;
-  border-radius: 30%;
+  overflow: hidden;
+  display: flex;
+  height: 9%;
+  width: 4%;
   z-index: 7;
+  left: 40%;
+  top: -14%;
 }
-
-/* .pancakeswap:hover {
-  width: 360px;
+.pancakeswap:hover {
+  width: 18%;
   transition: 0.75s;
-} */
-
-.pancakeswap .bunny {
-  position: absolute;
-  display: inline-flexbox;
-  width: 80%;
-  height: 80%;
-  max-width: 100%;
-  max-height: 100%;
-  left: 10%;
-  top: 10%;
 }
-
-.name_coin{
+.pancakeswap:hover .bunny {
+  width: 100%;
+}
+.bunny {
   position: relative;
-  justify-content: center;
-  text-align: center;
-  left: 105%;
-  top: 1%;
-  border-radius: 5%;
-  color: #121026;
+  width: 100%;
+  height: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.75s;
   text-transform: uppercase;
-  display: none;
 }
-
-.pancakeswap .bunny .bunny_icon{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.bunny:hover > .name_coin {
-  display: block;
-  font-size: 1rem;
-  width: 250px;
-  height: 75px;
-  background: #ff4500;
-  background: linear-gradient(to left,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%);
-  animation : all 0.4s ease-in-out 0s;
-}
-
-/* .kucoin {
-  box-shadow: 6px 6px 2px 0px #251e6f;
-  background: #121026;
+.kucoin {
+  background: linear-gradient(to right, #48d0ab 0%, #097561 50%, #505863 100%);
+  justify-content: space-between;
+  border-radius: 8px;
   position: relative;
-  display: relative;
-  top: -4%;
-  left: 40%;
-  width: 6%;
-  height: 12%;
-  border-radius: 30%;
-  justify-content: center;
+  overflow: hidden;
+  display: flex;
+  height: 9%;
+  width: 4%;
   z-index: 7;
+  left: 40%;
+  top: -11%;
 }
-.kucoin img {
+.kucoin:hover {
+  width: 18%;
+  transition: 0.75s;
+}
+.kucoin:hover .kcoin {
   width: 100%;
-  height: 100%;
+}
+.kcoin {
+  position: relative;
+  width: 100%;
+  height: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.75s;
+  text-transform: uppercase;
+}
+.gateio {
+  background: linear-gradient(to left, #48d0ab 0%, #097561 50%, #505863 100%);
+  justify-content: space-between;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  height: 9%;
+  width: 4%;
+  z-index: 7;
+  left: 40%;
+  top: -8%;
+}
+.gateio:hover {
+  width: 18%;
+  transition: 0.75s;
+}
+.gateio:hover .gate {
+  width: 100%;
 }
 .gate {
-  box-shadow: 6px 6px 2px 0px #251e6f;
-  background: #121026;
   position: relative;
-  display: relative;
+  width: 100%;
+  height: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.75s;
+  text-transform: uppercase;
+}
+.Lbank {
+  background: linear-gradient(to right, #48d0ab 0%, #097561 50%, #505863 100%);
+  justify-content: space-between;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  height: 9%;
+  width: 4%;
+  z-index: 7;
+  left: 40%;
+  top: -5%;
+}
+.Lbank:hover {
+  width: 18%;
+  transition: 0.75s;
+}
+.Lbank:hover .l_bank {
+  width: 100%;
+}
+.l_bank {
+  position: relative;
+  width: 100%;
+  height: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.75s;
+  text-transform: uppercase;
+}
+.okx_logo {
+  background: linear-gradient(to left, #48d0ab 0%, #097561 50%, #505863 100%);
+  justify-content: space-between;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  height: 9%;
+  width: 4%;
+  z-index: 7;
+  left: 40%;
   top: -2%;
-  left: 40%;
-  width: 6%;
-  height: 12%;
-  border-radius: 30%;
-  justify-content: center;
-  z-index: 7;
 }
-.gate img {
+.okx_logo:hover {
+  width: 18%;
+  transition: 0.75s;
+}
+.okx_logo:hover .okx_l {
   width: 100%;
-  height: 100%;
 }
-.lbank {
-  box-shadow: 6px 6px 2px 0px #251e6f;
-  background: #121026;
+.okx_l {
   position: relative;
-  display: relative;
-  top: 0%;
-  left: 40%;
-  width: 6%;
-  height: 12%;
-  border-radius: 30%;
-  justify-content: center;
-  z-index: 7;
-}
-.lbank img {
   width: 100%;
-  height: 100%;
+  height: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.75s;
+  text-transform: uppercase;
 }
-.okx {
-  box-shadow: 6px 6px 2px 0px #251e6f;
-  background: #121026;
+.mexc_logo {
+  background: linear-gradient(to right, #48d0ab 0%, #097561 50%, #505863 100%);
+  justify-content: space-between;
+  border-radius: 8px;
   position: relative;
-  display: block;
-  top: 2%;
-  left: 40%;
-  width: 6%;
-  height: 12%;
-  border-radius: 30%;
-  align-content: center;
-  text-align: center;
+  overflow: hidden;
+  display: flex;
+  height: 9%;
+  width: 4%;
   z-index: 7;
+  left: 60%;
+  top: -59%;
 }
-.okx img {
-  width: 80%;
-  height: 80%;
+.mexc_logo:hover {
+  width: 18%;
+  transition: 0.75s;
 }
-.coin_gecko {
-  box-shadow: 6px 6px 2px 0px #251e6f;
-  background: #121026;
+.mexc_logo:hover .mexc {
+  width: 100%;
+}
+.mexc {
   position: relative;
-  display: block;
-  top: -66.4%;
-  left: 55%;
-  width: 6%;
-  height: 12%;
-  border-radius: 30%;
-  align-content: center;
-  text-align: center;
-  z-index: 7;
+  width: 100%;
+  height: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.75s;
+  text-transform: uppercase;
 }
-.coin_gecko img {
-  width: 110%;
-  height: 110%;
-}
-.mexcglb {
-  box-shadow: 6px 6px 2px 0px #251e6f;
-  background: #121026;
+.xtcom_logo {
+  background: linear-gradient(to left, #48d0ab 0%, #097561 50%, #505863 100%);
+  justify-content: space-between;
+  border-radius: 8px;
   position: relative;
-  display: block;
-  top: -64.4%;
-  left: 55%;
-  width: 6%;
-  height: 12%;
-  border-radius: 30%;
-  align-content: center;
-  text-align: center;
+  overflow: hidden;
+  display: flex;
+  height: 9%;
+  width: 4%;
   z-index: 7;
+  left: 60%;
+  top: -56%;
 }
-.mexcglb img {
-  width: 110%;
-  height: 110%;
+.xtcom_logo:hover {
+  width: 18%;
+  transition: 0.75s;
+}
+.xtcom_logo:hover .xt {
+  width: 100%;
 }
 .xt {
-  box-shadow: 6px 6px 2px 0px #251e6f;
-  background: #121026;
   position: relative;
-  display: block;
-  top: -62.4%;
-  left: 55%;
-  width: 6%;
-  height: 12%;
-  border-radius: 30%;
-  align-content: center;
-  text-align: center;
-  z-index: 7;
+  width: 100%;
+  height: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.75s;
+  text-transform: uppercase;
 }
-.xt img {
-  width: 110%;
-  height: 110%;
+.poloniex_logo {
+  background: linear-gradient(to right, #48d0ab 0%, #097561 50%, #505863 100%);
+  justify-content: space-between;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  height: 9%;
+  width: 4%;
+  z-index: 7;
+  left: 60%;
+  top: -53%;
+}
+.poloniex_logo:hover {
+  width: 18%;
+  transition: 0.75s;
+}
+.poloniex_logo:hover .poloniex {
+  width: 100%;
 }
 .poloniex {
-  box-shadow: 6px 6px 2px 0px #251e6f;
-  background: #121026;
   position: relative;
-  display: block;
-  top: -60.4%;
-  left: 55%;
-  width: 6%;
-  height: 12%;
-  border-radius: 30%;
-  align-content: center;
-  text-align: center;
-  z-index: 7;
+  width: 100%;
+  height: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.75s;
+  text-transform: uppercase;
 }
-.poloniex img {
-  width: 110%;
-  height: 110%;
+.hotbit_logo {
+  background: linear-gradient(to left, #48d0ab 0%, #097561 50%, #505863 100%);
+  justify-content: space-between;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  height: 9%;
+  width: 4%;
+  z-index: 7;
+  left: 60%;
+  top: -50%;
+}
+.hotbit_logo:hover {
+  width: 18%;
+  transition: 0.75s;
+}
+.hotbit_logo:hover .hotbit {
+  width: 100%;
 }
 .hotbit {
-  box-shadow: 6px 6px 2px 0px #251e6f;
-  background: #121026;
   position: relative;
-  display: block;
-  top: -58.4%;
-  left: 55%;
-  width: 6%;
-  height: 12%;
-  border-radius: 30%;
-  align-content: center;
-  text-align: center;
-  z-index: 7;
+  width: 100%;
+  height: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.75s;
+  text-transform: uppercase;
 }
-.hotbit img {
-  width: 110%;
-  height: 110%;
-}
-.ftx {
-  box-shadow: 6px 6px 2px 0px #251e6f;
-  background: #121026;
+
+/* FIN ICONOS EXCHANGES */
+
+/* TAMANO TEXTOS Y ICONOS */
+.icon_coin {
+  height: 100%;
+  min-width: 54px;
   position: relative;
-  display: block;
-  top: -125.9%;
-  left: 70%;
-  width: 6%;
-  height: 12%;
-  border-radius: 30%;
-  align-content: center;
-  text-align: center;
-  z-index: 7;
+  padding: 0%;
+  overflow: hidden;
+  border-radius: 40%;
 }
-.ftx img {
-  width: 110%;
-  height: 110%;
+.icon_coin img {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0%;
+  width: 100%;
+  object-fit: contain;
 }
-.latoken {
-  box-shadow: 6px 6px 2px 0px #251e6f;
-  background: #121026;
-  position: relative;
-  display: block;
-  top: -123.9%;
-  left: 70%;
-  width: 6%;
-  height: 12%;
-  border-radius: 30%;
-  align-content: center;
-  text-align: center;
-  z-index: 7;
+.name_coin {
+  font-size: 1.3rem;
+  float: left;
+  white-space: nowrap;
+  margin: 10%;
+  font-weight: bold;
+  font-family: "Work Sans", sans-serif;
 }
-.latoken img {
-  width: 110%;
-  height: 110%;
-}
-.bitrue {
-  box-shadow: 6px 6px 2px 0px #251e6f;
-  background: #121026;
-  position: relative;
-  display: block;
-  top: -121.9%;
-  left: 70%;
-  width: 6%;
-  height: 12%;
-  border-radius: 30%;
-  align-content: center;
-  text-align: center;
-  z-index: 7;
-}
-.bitrue img {
-  width: 110%;
-  height: 110%;
-}
-.probit {
-  box-shadow: 6px 6px 2px 0px #251e6f;
-  background: #121026;
-  position: relative;
-  display: block;
-  top: -119.9%;
-  left: 70%;
-  width: 6%;
-  height: 12%;
-  border-radius: 30%;
-  align-content: center;
-  text-align: center;
-  z-index: 7;
-}
-.probit img {
-  width: 110%;
-  height: 110%;
-} */
+/* TFIN TAMANO TEXTOS Y ICONOS */
 </style>
