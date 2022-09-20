@@ -11,7 +11,6 @@
     autoplay="true"
     muted="true"
     loop="true"
-    class="fondo-video"
     poster="/img/fondo_binario.png"></video>
     </div>
    
@@ -44,7 +43,7 @@
     </div>
     </div>
     <div class="semi_circulo">
-      <img src="img/semi_circulo.png" alt="">
+   <!--<img src="img/semi_circulo.png" alt="">-->    
     </div>
     <!--UPCOMING ALLIANCES-->
     <div class="rectangulo">
@@ -58,7 +57,7 @@
         </div>
     </div>
     <div class="puntero">
-      <img src="img/puntero.png" alt="">
+     <!-- <img src="img/puntero.png" alt="">-->
     </div>
 
   </template>
@@ -74,7 +73,14 @@
   height: 5rem;
   z-index: 12;
 }
-    .fondo-video{
+    
+.fondo {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.fondo-video{
       width : 100%;
       height: 100%;
      
@@ -89,22 +95,7 @@
      opacity: 40%;
      z-index: 0;
     }
-.fondo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-.fondo-calculadora {
-  z-index: 0;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
-}
+
 .filtro-superior {
   z-index: 1;
   background: radial-gradient(
@@ -115,21 +106,24 @@
   );
   mix-blend-mode: multiply;
 }
-.fondo-montana {
-  height: 100%;
-  top: 20%;
-  left: 0;
-  z-index: 2;
+.fondo-montana img{
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  height: 75%;
+  z-index:2;
 }
 .fondo-oscurecer {
+  position:absolute;
   z-index: 4;
   background-color: rgb(0, 0, 0);
   opacity: 60%;
   mix-blend-mode: multiply;
 }
 .fondo-red img{
-  position: relative;
+  position: absolute;
   top: 35%;
+  width: 100%;
   height: 75%;
   z-index:3;
 }

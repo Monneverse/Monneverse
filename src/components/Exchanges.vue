@@ -1,6 +1,6 @@
 <template>
-    <div class="logo">
-    <img src="/img/logo.svg" alt="logo monneverse">
+  <div class="logo">
+    <img src="/img/logo.svg" alt="logo monneverse" />
   </div>
   <div class="fondo"></div>
   <div class="exchange_text">
@@ -61,17 +61,16 @@
 <script></script>
 
 <style scoped>
-
 .fondo {
   position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #121026;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  top: 0;
+  left: 0;
+  background-color: #121026;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .logo {
   position: relative;
@@ -129,12 +128,8 @@
   z-index: 6;
 }
 
-
 .pancakeswap {
-  background: linear-gradient(to right,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%);;
+  background: linear-gradient(to right, #48d0ab 0%, #097561 50%, #505863 100%);
   /*background: #121026;*/
   position: relative;
   display: relative;
@@ -162,7 +157,7 @@
   top: 10%;
 }
 
-.name_coin{
+.name_coin {
   position: relative;
   justify-content: center;
   text-align: center;
@@ -174,7 +169,7 @@
   display: none;
 }
 
-.pancakeswap .bunny .bunny_icon{
+.pancakeswap .bunny .bunny_icon {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -188,11 +183,8 @@
   width: 250px;
   height: 75px;
   background: #ff4500;
-  background: linear-gradient(to left,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%);
-  animation : all 0.4s ease-in-out 0s;
+  background: linear-gradient(to left, #48d0ab 0%, #097561 50%, #505863 100%);
+  animation: all 0.4s ease-in-out 0s;
 }
 
 /* .kucoin {
