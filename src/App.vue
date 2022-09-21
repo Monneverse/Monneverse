@@ -54,10 +54,11 @@ import Exchanges from "./components/Exchanges.vue";
     <div :class="{container:true,  'mostrar-container':index_pagina==7}">
       <Certificado />
     </div>
-
-    <div id="8" class="container red">
+    
+    <div :class="{container:true,  'mostrar-container':index_pagina==8}">
       <Benefits />
     </div>
+ 
   </main>
 </template>
 <script>
