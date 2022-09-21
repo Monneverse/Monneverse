@@ -1,9 +1,6 @@
 
 <template>
 
-  <div class="logo">
-    <img src="/img/logo.svg" alt="logo monneverse">
-  </div>
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
   <div class="fondo fondo-montana">
@@ -398,14 +395,7 @@ img {
   justify-content: start;
 }
 
-.logo {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  width: 5rem;
-  height: 5rem;
-  z-index: 12;
-}
+
 
 .icon {
   width: 3rem;
@@ -414,27 +404,7 @@ img {
   margin-left: 1rem;
 }
 
-.fa-telegram {
-  position: relative;
-  color: #5CBAE7;
-  z-index: 18;
-}
 
-.fa-reddit {
-  position: relative;
-  color: #FF4500;
-  z-index: 18;
-}
-
-.fondo-icono {
-  position: relative;
-  top: -75%;
-  left: 20%;
-  width: 60%;
-  height: 50%;
-  background-color: white;
-  z-index: 17;
-}
 
 .icon-discord > img {
   border-radius: 50%;

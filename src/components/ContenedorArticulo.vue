@@ -4,9 +4,6 @@ import Articulo from "./Articulo.vue";
 </script>
 
 <template>
-    <div class="logoEmpresa">
-        <img src="/img/logo.svg" alt="logo empresa">
-    </div>
     <div class="fondo fondoArticulo">
         <img src="/img/fondo_Articulo.png" alt="fondo Articulo">
     </div>
@@ -41,11 +38,6 @@ img {
     height: 100%;
 }
 
-.fondo {
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
 
 .circuitoIzquierdo {
     position: absolute;
@@ -67,14 +59,7 @@ img {
     min-width: 30rem;
 }
 
-.logoEmpresa {
-    position: relative;
-    top: 2rem;
-    left: 2rem;
-    width: 5rem;
-    height: 5rem;
-    z-index: 2;
-}
+
 
 .contenido{
         display: flex;
