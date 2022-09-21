@@ -14,7 +14,7 @@
       <div id="animacion" class="animacion traslado_animacion"></div>
     </nav>
 
-    <button class="btn">WHITEPAPER{{index}}</button>
+    <button class="btn">WHITEPAPER</button>
   </div>
 </template>
 
