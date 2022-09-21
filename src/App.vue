@@ -7,6 +7,7 @@ import Alliances from "./components/Alliances.vue";
 import Certificado from "./components/Certificado.vue";
 import Exchanges from "./components/Exchanges.vue";
 import ContenedorArticulo from "./components/ContenedorArticulo.vue";
+import Benefits from "./components/Benefits.vue";
 </script>
 
 
@@ -46,11 +47,15 @@ import ContenedorArticulo from "./components/ContenedorArticulo.vue";
     <div id="7" class="container red">
       <Certificado />
     </div>
+
+    <div id="8" class="container red">
+      <Benefits />
+    </div>
   </main>
 </template>
 <script>
 let id = 1;
-let limite = 7;
+let limite = 8;
 
 document.addEventListener("wheel", function () {
   document.getElementById(id).style.visibility = "hidden";

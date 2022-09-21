@@ -1,4 +1,9 @@
+<script setup>
+
+
+</script>
 <template>
+  
 
     <div class="logo">
       <img src="/img/logo.svg" alt="logo monneverse">
@@ -67,13 +72,17 @@
     <div class="semi_circulo">
    <img src="img/arco.svg" alt=""> 
     </div>
+    
+
 
   </template>
-  <script></script>
+
 
   <style scoped>
     @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
-.centrar{
+
+
+    .centrar{
 
     position: absolute;
     left: 0;
