@@ -94,9 +94,9 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< HEAD @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
 
-=======.logo {
+.logo {
   position: absolute;
   top: 2rem;
   left: 2rem;
@@ -110,7 +110,7 @@ export default {
   display: block;
 }
 
->>>>>>>e2f83dc67ee6e37b8456ae915194b0d3228b0401 .barra-navegacion {
+.barra-navegacion {
   position: fixed;
   top: 0%;
   background-color: transparent;

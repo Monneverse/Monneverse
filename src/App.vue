@@ -5,9 +5,9 @@ import Bienvenida from "./components/Bienvenida.vue";
 import Calculadora from "./components/Calculadora.vue";
 import Alliances from "./components/Alliances.vue";
 import Certificado from "./components/Certificado.vue";
-import Exchanges from "./components/Exchanges.vue";
 import ContenedorArticulo from "./components/ContenedorArticulo.vue";
 import Alianzas from "./components/Alianzas.vue";
+import Exchanges from "./components/Exchanges.vue";
 </script>
 
 
@@ -28,18 +28,23 @@ import Alianzas from "./components/Alianzas.vue";
       <Bienvenida />
       <Info />
     </div>
+
     <div :class="{container:true,  'mostrar-container':index_pagina==2}">
       <Alliances />
     </div>
+
     <div :class="{container:true,  'mostrar-container':index_pagina==3}">
-      <Allianzas />
+      <Alianzas />
     </div>
+
     <div :class="{container:true,  'mostrar-container':index_pagina==4}">
       <Calculadora />
     </div>
+
     <div :class="{container:true,  'mostrar-container':index_pagina==5}">
       <ContenedorArticulo />
     </div>
+
     <div :class="{container:true,  'mostrar-container':index_pagina==6}">
       <Exchanges />
     </div>

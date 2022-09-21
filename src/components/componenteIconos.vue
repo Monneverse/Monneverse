@@ -24,8 +24,15 @@ defineProps({
   </div>
 </template>
 
-<style>
+<style scoped>
 .contenedor_icono {
+  display: flex;
+  justify-content: center;
+  border: 1px solid greenyellow;
+}
+
+.contenedor_icono {
+  border: 1px solid #ccc;
   background: linear-gradient(to left, #48d0ab 0%, #097561 50%, #505863 100%);
   justify-content: space-between;
   border-radius: 8px;
@@ -35,8 +42,6 @@ defineProps({
   height: 9%;
   width: 5%;
   z-index: 7;
-  left: 40%;
-  top: -14%;
   margin: 1.5%;
 }
 
@@ -50,7 +55,7 @@ defineProps({
 }
 
 .icono {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 98%;
   display: flex;
@@ -61,7 +66,7 @@ defineProps({
 .icon_coin {
   height: 100%;
   min-width: 70px;
-  position: relative;
+  position: absolute;
   padding: 0%;
   overflow: hidden;
   border-radius: 40%;

@@ -50,8 +50,8 @@ import ComponenteIconos from "./componenteIconos.vue";
 
 .exchange_text {
   display: block;
-  position: relative;
-  top: 15%;
+  position: absolute;
+  top: 28%;
   left: 5%;
   height: 20%;
   width: 30%;
@@ -77,9 +77,10 @@ import ComponenteIconos from "./componenteIconos.vue";
 
 /* REDES SOCIALES */
 .social_media {
-  position: relative;
-  top: 58%;
+  position: absolute;
+  bottom: 1%;
   left: 1%;
+  width: 100%;
   z-index: 3;
 }
 
@@ -105,11 +106,12 @@ import ComponenteIconos from "./componenteIconos.vue";
 
 /*ICONOS EXCHANGES*/
 .contenedor_moneda {
-  display: absolute;
+  border: 1px solid greenyellow;
   width: 100%;
   height: 100%;
-  left: 50%;
-  top: 10%;
+  position: relative;
+  display: inline-block;
+  z-index: 7;
 }
 
 .moneda {
