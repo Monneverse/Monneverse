@@ -1,9 +1,6 @@
 
 <template>
 
-  <div class="logo">
-    <img src="/img/logo.svg" alt="logo monneverse">
-  </div>
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
   <div class="fondo fondo-montana">
@@ -27,7 +24,7 @@
     <div class="circulo indicador">
 
       <img id="indicador-img" class="hour48" src="../assets/indicador.svg">
-      <div id="indicador" class="descripcion">
+      <div id="indicador" @click="CambiarMonth" class="descripcion">
         <p id="cantidad">48</p>
         <p id="medida">HOURS</p>
       </div>
@@ -47,30 +44,31 @@
 
     <p></p>
     <div class="inversion">
-      <input type="number" min="0" name="inversion" id="inversion" placeholder="$ 100">
+      <input type="number" min="0" @input="Calculator" name="inversion" id="inversion" v-model="inversion" placeholder="$ 100">
       <label class="tag-inversion" for="inversion">Invert</label>
 
     </div>
     <div class="interes">
-      <input type="number" name="interes" id="interes" placeholder="$ 100">
+      <input type="number" name="interes" id="interes" v-model="interes" placeholder="$ 100" disabled>
       <label class="tag-inversion" for="interes">Interest</label>
 
     </div>
   </div>
   <div class="logo-redes">
     <div class="icon icon-telegram">
-      <font-awesome-icon icon="fa-brands fa-telegram" />
-      <div class="fondo-icono"></div>
-
+      <a href="https://t.me/monnerversecommunity" target="_blank">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="">
+      </a>
     </div>
     <div class="icon icon-reddit">
-      <font-awesome-icon icon="fa-brands fa-reddit" />
-      <div class="fondo-icono"> </div>
-
+      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="">
+      </a>
     </div>
-    <div class="icon icon-discord">
-      <font-awesome-icon icon="fa-brands fa-discord" />
-
+    <div class="icon icon-discord ">
+      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="">
+      </a>
     </div>
   </div>
 
@@ -93,19 +91,14 @@ export default {
   },
   methods: {
     Calculator() {
-      let txtInversion = document.getElementById("inversion");
-      let txtInteres = document.getElementById("interes");
-      let inversion = parseInt(txtInversion.value);
-      let interes = 0;
+    
       if (this.meses == State.Hour48) {
-        interes = inversion * (this.porcentajeInteres / 100);
+        this.interes = (this.inversion * (this.porcentajeInteres / 100)).toFixed(2);;
       } else if (this.meses == State.Month1) {
-        interes = (inversion * (this.porcentajeInteres / 100)) * (this.cantidadMes / 2);
+        this.interes = ((this.inversion * (this.porcentajeInteres / 100)) * (this.cantidadMes / 2)).toFixed(2);;
       } else {
-        interes = (inversion * (this.porcentajeInteres / 100)) * (this.cantidadMes);
+        this.interes  = ((this.inversion * (this.porcentajeInteres / 100)) * (this.cantidadMes)).toFixed(2);
       }
-
-      txtInteres.value = interes.toFixed(2);
 
     },
     CambiarMonth() {
@@ -136,12 +129,8 @@ export default {
     }
   },
   mounted() {
-    let txtInversion = document.getElementById("inversion");
-    txtInversion.value = "100"
-    let txtInteres = document.getElementById("interes");
-    let txtIndicador = document.getElementById("indicador");
-    txtIndicador.addEventListener('click', this.CambiarMonth)
-    txtInversion.addEventListener('input', this.Calculator);
+   
+    this.inversion = 10;
     this.Calculator();
   }
 }
@@ -278,7 +267,7 @@ img {
 
   user-select: none;
   pointer-events: none;
-  transition: all 0.4s ease-in 0s;
+  transition: transform 0.4s ease-in 0s;
 }
 
 .hour48 {
@@ -317,16 +306,20 @@ img {
   font-family: 'Work Sans', sans-serif;
   font-size: 1.5rem;
   color: #067F4E;
-  padding: .1rem;
-  width: 100%;
+  padding-right: 1rem;
+  width: 8rem;
   min-height: 2.5rem;
   border-radius: 2rem;
-  max-width: 10rem;
+  max-width: 8rem;
   text-align: center;
   margin-left: 5rem;
   margin-right: 5rem;
 }
-
+#interes:disabled{
+  background-color: white;
+  user-select: none;
+  pointer-events: none;
+}
 .tag-inversion {
   font-family: 'Work Sans', sans-serif;
   font-size: 1.5rem;
@@ -402,57 +395,25 @@ img {
   justify-content: start;
 }
 
-.logo {
-  position: relative;
-  top: 2rem;
-  left: 2rem;
-  width: 5rem;
-  height: 5rem;
-  z-index: 12;
-}
+
 
 .icon {
-  font-size: 4rem;
+  width: 3rem;
+  height: auto;
   z-index: 18;
   margin-left: 1rem;
 }
 
-.fa-telegram {
-  position: relative;
-  color: #5CBAE7;
-  z-index: 18;
-}
 
-.fa-reddit {
-  position: relative;
-  color: #FF4500;
-  z-index: 18;
-}
 
-.fondo-icono {
-  position: relative;
-  top: -75%;
-  left: 20%;
-  width: 60%;
-  height: 50%;
-  background-color: white;
-  z-index: 17;
-}
-
-.icon-discord {
+.icon-discord > img {
   border-radius: 50%;
   background-color: #5865F2;
   width: 4rem;
   height: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.fa-discord {
-  color: #ffffff;
-  font-size: 2rem;
-}
+
 </style>
 
 

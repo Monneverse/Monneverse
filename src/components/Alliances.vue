@@ -102,6 +102,7 @@
       #c8ced4 50%,
       #a8aaaf 100%);
   mix-blend-mode: multiply;
+
 }
 
 .fondo-montana img {
@@ -118,6 +119,7 @@
   background-color: rgb(0, 0, 0);
   opacity: 60%;
   mix-blend-mode: multiply;
+
 }
 
 .fondo-red img {

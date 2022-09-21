@@ -1,5 +1,10 @@
+
 <template>
+  <div :class="{logo: true , mostrar:index_pagina!=1}">
+    <img src="/img/logo.svg" alt="logo monneverse">
+  </div>
   <div id="barra" class="barra-navegacion">
+
     <nav class="barra" @mouseout="exit_mouse">
       <a id="a1" class="home" href="#" @mouseover="hover_mover('a1')" @click="leave_mouse('a1')">articles</a>
       <a id="a2" href="#" @mouseover="hover_mover('a2')" @click="leave_mouse('a2')">benefits</a>
@@ -9,39 +14,13 @@
       <div id="animacion" class="animacion traslado_animacion"></div>
     </nav>
 
-    <button class="btn">WHITEPAPER</button>
+    <button class="btn">WHITEPAPER{{index}}</button>
   </div>
 </template>
 
 <script>
-function getOffset(el) {
-  var _x = 0;
-  var _y = 0;
-  while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
-    _x += el.offsetLeft - el.scrollLeft;
-    _y += el.offsetTop - el.scrollTop;
-    el = el.offsetParent;
-  }
-  return { top: _y, left: _x };
-}
-function recargar() {
-  var anim = document.getElementById("animacion");
-  var link = document.getElementsByClassName("home")[0];
-  anim.style.minWidth = link.offsetWidth + "px";
-  anim.style.left = getOffset(link).left + "px";
-}
-function quitar_animacion() {
-  let anim = document.getElementById("animacion");
-  anim.classList.remove("traslado_animacion");
-  console.log(anim);
-  recargar();
-}
-function agregar_animacion() {
-  let anim = document.getElementById("animacion");
-  anim.classList.add("traslado_animacion");
-  console.log(anim);
-  recargar();
-}
+
+
 export default {
   data() {
     return {
@@ -49,18 +28,29 @@ export default {
       animando: false,
     };
   },
+  props: {
+
+    index: {
+      type: Number,
+      required: true
+    },
+    index_pagina: {
+      type: Number,
+      required: true
+    }
+  },
   methods: {
     hover_mover(id) {
       let anim = document.getElementById("animacion");
       let link = document.getElementById(id);
       anim.style.minWidth = link.offsetWidth + "px";
-      anim.style.left = getOffset(link).left + "px";
+      anim.style.left = this.getOffset(link).left + "px";
     },
     exit_mouse() {
       var anim = document.getElementById("animacion");
       var link = document.getElementsByClassName("home")[0];
       anim.style.minWidth = link.offsetWidth + "px";
-      anim.style.left = getOffset(link).left + "px";
+      anim.style.left = this.getOffset(link).left + "px";
     },
     leave_mouse(id) {
       var anim = document.getElementById("animacion");
@@ -69,21 +59,58 @@ export default {
       activo.classList.remove("home");
       link.classList.add("home");
     },
+    getOffset(el) {
+      var _x = 0;
+      var _y = 0;
+      while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
+        _x += el.offsetLeft - el.scrollLeft;
+        _y += el.offsetTop - el.scrollTop;
+        el = el.offsetParent;
+      }
+      return { top: _y, left: _x };
+    },
+    quitar_animacion() {
+      let anim = document.getElementById("animacion");
+      anim.classList.remove("traslado_animacion");
+      console.log(anim);
+      this.recargar();
+    },
+    agregar_animacion() {
+      let anim = document.getElementById("animacion");
+      anim.classList.add("traslado_animacion");
+      this.recargar();
+    },
+    recargar() {
+      var anim = document.getElementById("animacion");
+      var link = document.getElementsByClassName("home")[0];
+      anim.style.minWidth = link.offsetWidth + "px";
+      anim.style.left = this.getOffset(link).left + "px";
+    }
   },
   mounted() {
-    recargar();
+    this.recargar();
   },
 };
-window.addEventListener("resize", function () {
-  quitar_animacion();
-  agregar_animacion();
-});
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
+<<<<<<< HEAD @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
 
-.barra-navegacion {
+=======.logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 5rem;
+  height: 5rem;
+  z-index: 12;
+  display: none;
+}
+
+.mostrar {
+  display: block;
+}
+
+>>>>>>>e2f83dc67ee6e37b8456ae915194b0d3228b0401 .barra-navegacion {
   position: fixed;
   top: 0%;
   background-color: transparent;
