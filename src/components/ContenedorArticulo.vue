@@ -12,27 +12,31 @@ import Articulo from "./Articulo.vue";
     </div>
     <div class="circuitoDerecho">
         <img src=" /img/Articulo/circuito-derecho.png" alt="">
-    </div> 
+    </div>
 
     <div class="containe">
         <div class="con">
-            <Articulo contenedor = "Presale and benefits For investors" img="/img/Articulo/imagenArticulo1.png" />
-            <Articulo contenedor = "How to avoid being scammed by investing in monner coin?"  img ="/img/Articulo/imagenArticulo2.png"/>
-            <Articulo contenedor = "Why will monner become one of the best cryptocurrencies to investin?"  img ="/img/Articulo/imagenArticulo3.png"/>
+            <Articulo contenedor="Presale and benefits For investors" img="/img/Articulo/imagenArticulo1.png" />
+            <Articulo contenedor="How to avoid being scammed by investing in monner coin?"
+                img="/img/Articulo/imagenArticulo2.png" />
+            <Articulo contenedor="Why will monner become one of the best cryptocurrencies to investin?"
+                img="/img/Articulo/imagenArticulo3.png" />
         </div>
-       
+
     </div>
- 
+
 </template>
 
 <style scoped>
-.fondo{
+.fondo {
     position: absolute;
-    top: 0  ;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 0;
 }
+
 img {
     width: 100%;
     height: 100%;
@@ -61,27 +65,27 @@ img {
 
 
 
-.contenido{
-        display: flex;
-    }
+.contenido {
+    display: flex;
+}
 
-.containe{
-
+.containe {
+    position: absolute;
+    top: 0%;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: chartreuse;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 4;
 }
-.con{
+
+.con {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 70rem;
     height: 30rem;
 }
-
-
 </style>
