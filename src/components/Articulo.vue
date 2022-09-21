@@ -1,4 +1,4 @@
-<script setup >
+<script setup>
     defineProps({
   contenedor: {
     type: String,
@@ -18,7 +18,7 @@
     <div class="container2">
         <h5 class="titulo1">{{contenedor}}</h5>
         <div class="ddd">
-            <img   :src=img alt="" class="imagenArticulo01" />
+            <img  :src=img alt="" class="imagenArticulo01" />
         </div>
         <button class="btn">Read More</button>
     </div>

@@ -1,22 +1,17 @@
 <template>
-  <div class="upcoming_alliance"><h1>UPCOMING ALLIANCES</h1></div>
+  <div class="upcoming_alliance">
+    <h1>UPCOMING ALLIANCES</h1>
+  </div>
   <div class="visa_img">
     <img src="/img/Alianzas/visa.png" />
   </div>
   <div class="mastercard_img">
     <img src="/img/Alianzas/mastercard.png" />
   </div>
-  <div class="reddit">
-    <a href="#"><img src="/img/Alianzas/reddit.png" /></a>
-    <!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
-  </div>
-  <div class="telegram">
-    <a href="#"><img src="/img/Alianzas/telegram.png" /></a>
-    <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
-  </div>
-  <div class="discord">
-    <a href="#"><img src="/img/Alianzas/discord.png" /></a>
-    <!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
+  <div class="social_media">
+    <a href=""><i class="fa-brands fa-reddit fa-3x"></i></a>
+    <a href=""><i class="fa-brands fa-telegram fa-3x"></i></a>
+    <a href=""><i class="fa-brands fa-discord fa-3x"></i></a>
   </div>
 
   <div class="semi_circle">
@@ -51,6 +46,7 @@ img {
   height: 100%;
   width: 100%;
 }
+
 .fondo {
   position: absolute;
   top: 0;
@@ -58,37 +54,38 @@ img {
   height: 100%;
   width: 100%;
 }
+
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
 }
+
 .filtro-superior {
   z-index: 1;
-  background: radial-gradient(
-    circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
-  );
+  background: radial-gradient(circle at center,
+      #f9f9fa 0%,
+      #c8ced4 50%,
+      #a8aaaf 100%);
   mix-blend-mode: multiply;
 }
+
 .fondo-montana {
   height: 100%;
   top: 20%;
   left: 0;
   z-index: 2;
 }
+
 .fondo-oscurecer {
   z-index: 3;
   background-color: rgb(0, 0, 0);
   opacity: 60%;
   mix-blend-mode: multiply;
 }
+
 .circuito-izquierdo {
   position: absolute;
   z-index: 4;
@@ -98,6 +95,7 @@ img {
   width: 40%;
   min-width: 30rem;
 }
+
 .circuito-derecho {
   position: absolute;
   z-index: 4;
@@ -125,6 +123,7 @@ img {
   font-family: "Work Sans", sans-serif;
   z-index: 5;
 }
+
 .visa_img {
   position: absolute;
   display: flex;
@@ -134,9 +133,11 @@ img {
   left: 27%;
   z-index: 5;
 }
+
 .visa_img img:hover {
   transform: scale(1.2);
 }
+
 .mastercard_img {
   position: absolute;
   display: flex;
@@ -146,36 +147,40 @@ img {
   right: 33%;
   z-index: 5;
 }
+
 .mastercard_img img:hover {
   transform: scale(1.2);
 }
-.reddit img {
-  position: absolute;
-  display: flex;
-  width: 3%;
-  height: 6%;
-  top: 80%;
-  left: 42%;
+
+.social_media {
+  position: relative;
+  top: 78%;
+  left: 41.5%;
+  z-index: 3;
+}
+
+.social_media:hover {
+  transform: scale(1.2);
+}
+
+.social_media a .fa-reddit {
+  color: #ff4500;
+  padding: 0.2%;
+  z-index: 4;
+}
+
+.social_media a .fa-telegram {
+  color: #2198d1;
+  padding: 0.2%;
   z-index: 5;
 }
-.telegram img {
-  position: absolute;
-  display: flex;
-  width: 3%;
-  height: 6%;
-  top: 80%;
-  left: 46%;
-  z-index: 5;
+
+.social_media a .fa-discord {
+  color: #5865f2;
+  padding: 0.2%;
+  z-index: 6;
 }
-.discord img {
-  position: absolute;
-  display: flex;
-  width: 3%;
-  height: 6%;
-  top: 80%;
-  left: 50%;
-  z-index: 5;
-}
+
 .semi_circle {
   position: fixed;
   right: 32%;
@@ -186,6 +191,7 @@ img {
   opacity: 100%;
   rotate: 180deg;
 }
+
 .circle {
   position: fixed;
   right: 32%;

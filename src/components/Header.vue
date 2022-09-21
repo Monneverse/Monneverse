@@ -1,42 +1,16 @@
+
 <template>
+  <div :class="{logo: true , mostrar:index_pagina!=1}">
+    <img src="/img/logo.svg" alt="logo monneverse">
+  </div>
   <div id="barra" class="barra-navegacion">
+
     <nav class="barra" @mouseout="exit_mouse">
-      <a
-        id="a1"
-        class="home"
-        href="#"
-        @mouseover="hover_mover('a1')"
-        @click="leave_mouse('a1')"
-        >articles</a
-      >
-      <a
-        id="a2"
-        href="#"
-        @mouseover="hover_mover('a2')"
-        @click="leave_mouse('a2')"
-        >benefits</a
-      >
-      <a
-        id="a3"
-        href="#"
-        @mouseover="hover_mover('a3')"
-        @click="leave_mouse('a3')"
-        >tokenomics</a
-      >
-      <a
-        id="a4"
-        href="#"
-        @mouseover="hover_mover('a4')"
-        @click="leave_mouse('a4')"
-        >news</a
-      >
-      <a
-        id="a5"
-        href="#"
-        @mouseover="hover_mover('a5')"
-        @click="leave_mouse('a5')"
-        >roadmaps</a
-      >
+      <a id="a1" class="home" href="#" @mouseover="hover_mover('a1')" @click="leave_mouse('a1')">articles</a>
+      <a id="a2" href="#" @mouseover="hover_mover('a2')" @click="leave_mouse('a2')">benefits</a>
+      <a id="a3" href="#" @mouseover="hover_mover('a3')" @click="leave_mouse('a3')">tokenomics</a>
+      <a id="a4" href="#" @mouseover="hover_mover('a4')" @click="leave_mouse('a4')">news</a>
+      <a id="a5" href="#" @mouseover="hover_mover('a5')" @click="leave_mouse('a5')">roadmaps</a>
       <div id="animacion" class="animacion traslado_animacion"></div>
     </nav>
 
@@ -45,34 +19,8 @@
 </template>
 
 <script>
-function getOffset(el) {
-  var _x = 0;
-  var _y = 0;
-  while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
-    _x += el.offsetLeft - el.scrollLeft;
-    _y += el.offsetTop - el.scrollTop;
-    el = el.offsetParent;
-  }
-  return { top: _y, left: _x };
-}
-function recargar() {
-  var anim = document.getElementById("animacion");
-  var link = document.getElementsByClassName("home")[0];
-  anim.style.minWidth = link.offsetWidth + "px";
-  anim.style.left = getOffset(link).left + "px";
-}
-function quitar_animacion() {
-  let anim = document.getElementById("animacion");
-  anim.classList.remove("traslado_animacion");
-  console.log(anim);
-  recargar();
-}
-function agregar_animacion() {
-  let anim = document.getElementById("animacion");
-  anim.classList.add("traslado_animacion");
-  console.log(anim);
-  recargar();
-}
+
+
 export default {
   data() {
     return {
@@ -80,18 +28,29 @@ export default {
       animando: false,
     };
   },
+  props: {
+
+    index: {
+      type: Number,
+      required: true
+    },
+    index_pagina: {
+      type: Number,
+      required: true
+    }
+  },
   methods: {
     hover_mover(id) {
       let anim = document.getElementById("animacion");
       let link = document.getElementById(id);
       anim.style.minWidth = link.offsetWidth + "px";
-      anim.style.left = getOffset(link).left + "px";
+      anim.style.left = this.getOffset(link).left + "px";
     },
     exit_mouse() {
       var anim = document.getElementById("animacion");
       var link = document.getElementsByClassName("home")[0];
       anim.style.minWidth = link.offsetWidth + "px";
-      anim.style.left = getOffset(link).left + "px";
+      anim.style.left = this.getOffset(link).left + "px";
     },
     leave_mouse(id) {
       var anim = document.getElementById("animacion");
@@ -100,19 +59,57 @@ export default {
       activo.classList.remove("home");
       link.classList.add("home");
     },
+    getOffset(el) {
+      var _x = 0;
+      var _y = 0;
+      while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
+        _x += el.offsetLeft - el.scrollLeft;
+        _y += el.offsetTop - el.scrollTop;
+        el = el.offsetParent;
+      }
+      return { top: _y, left: _x };
+    },
+    quitar_animacion() {
+      let anim = document.getElementById("animacion");
+      anim.classList.remove("traslado_animacion");
+      console.log(anim);
+      this.recargar();
+    },
+    agregar_animacion() {
+      let anim = document.getElementById("animacion");
+      anim.classList.add("traslado_animacion");
+      this.recargar();
+    },
+    recargar() {
+      var anim = document.getElementById("animacion");
+      var link = document.getElementsByClassName("home")[0];
+      anim.style.minWidth = link.offsetWidth + "px";
+      anim.style.left = this.getOffset(link).left + "px";
+    }
   },
   mounted() {
-    recargar();
+    this.recargar();
   },
 };
-window.addEventListener("resize", function () {
-  quitar_animacion();
-  agregar_animacion();
-});
 </script>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
+
+.logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 5rem;
+  height: 5rem;
+  z-index: 12;
+  display: none;
+}
+
+.mostrar {
+  display: block;
+}
+
 .barra-navegacion {
   position: fixed;
   top: 0%;
@@ -124,6 +121,7 @@ window.addEventListener("resize", function () {
   justify-content: center;
   align-items: center;
 }
+
 .barra {
   display: flex;
   justify-content: center;
@@ -133,6 +131,7 @@ window.addEventListener("resize", function () {
   max-width: 40rem;
   margin-right: 3rem;
 }
+
 .barra a {
   position: relative;
   left: 0%;
@@ -150,6 +149,7 @@ window.addEventListener("resize", function () {
   border-radius: 0.4rem;
   z-index: 1;
 }
+
 .animacion {
   position: absolute;
   /* left: 60rem; */
@@ -157,17 +157,17 @@ window.addEventListener("resize", function () {
   width: 2rem;
   height: 70%;
   border-radius: 0.4rem;
-  background: radial-gradient(
-    circle at center,
-    #32987d 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #32987d 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 0;
 }
+
 .traslado_animacion {
   transition: all 0.4s ease 0s;
 }
+
 .btn {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -180,6 +180,7 @@ window.addEventListener("resize", function () {
   padding: 0.8rem;
   min-width: 8rem;
 }
+
 .btn:hover {
   background-color: #b48700;
 }

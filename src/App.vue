@@ -5,15 +5,17 @@ import Bienvenida from "./components/Bienvenida.vue";
 import Calculadora from "./components/Calculadora.vue";
 import Alliances from "./components/Alliances.vue";
 import Certificado from "./components/Certificado.vue";
-import Exchanges from "./components/Exchanges.vue";
 import ContenedorArticulo from "./components/ContenedorArticulo.vue";
 import Benefits from "./components/Benefits.vue";
+import Alianzas from "./components/Alianzas.vue";
+import Exchanges from "./components/Exchanges.vue";
+
 </script>
 
 
 <template>
   <header>
-    <Header></Header>
+    <Header :index=index :index_pagina=index_pagina></Header>
   </header>
 
   <main>
@@ -24,27 +26,32 @@ import Benefits from "./components/Benefits.vue";
     y dentro de su div van los componentes, puede eliminar las clases 
     guiese del ejemplo div 1
     -->
-    <div id="1" class="container comenzar">
+    <div :class="{container:true,  'mostrar-container':index_pagina==1}">
       <Bienvenida />
       <Info />
     </div>
-    <div id="2" class="container red">
+
+    <div :class="{container:true,  'mostrar-container':index_pagina==2}">
       <Alliances />
     </div>
-    <div id="3" class="container upcoming_alliance">
 
+    <div :class="{container:true,  'mostrar-container':index_pagina==3}">
+      <Alianzas />
     </div>
-    <div id="4" class="container calculadora">
+
+    <div :class="{container:true,  'mostrar-container':index_pagina==4}">
       <Calculadora />
     </div>
-    <div id="5" class="container">
+
+    <div :class="{container:true,  'mostrar-container':index_pagina==5}">
       <ContenedorArticulo />
     </div>
-    <div id="6" class="container green">
+
+    <div :class="{container:true,  'mostrar-container':index_pagina==6}">
       <Exchanges />
     </div>
 
-    <div id="7" class="container red">
+    <div :class="{container:true,  'mostrar-container':index_pagina==7}">
       <Certificado />
     </div>
 
@@ -71,12 +78,36 @@ document.addEventListener("wheel", function () {
 
 export default {
   data() {
-    return {};
+    return {
+      index: 1,
+      index_pagina: 1,
+      limite: 7
+
+    };
   },
-  mounted() { },
+  methods: {
+    Navegar() {
+      if (event.deltaY > 0) {
+        if (this.index_pagina < this.limite) this.index_pagina = this.index_pagina + 1;
+      } else {
+        if (this.index_pagina > 1) this.index_pagina = this.index_pagina - 1;
+      }
+      console.log(this.index_pagina);
+      location.hash = "#" + this.index_pagina;
+      window.history.pushState({}, document.title, window.location.pathname);
+    }
+  },
+  mounted() {
+    this.index_pagina = 1;
+    document.addEventListener("wheel", this.Navegar);
+  },
 };
 </script>
 <style>
+/* Fuentes Aquí */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
+
+/*  */
 * {
   margin: 0;
   padding: 0;
@@ -121,12 +152,7 @@ main {
   background-color: green;
 }
 
-.upcoming_alliance {
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
-}
+.upcoming_alliance {}
 
 .orange {
   background: radial-gradient(circle at center,
@@ -149,16 +175,13 @@ main {
 }
 
 .container {
+  visibility: hidden;
   padding: 0%;
   margin: 0%;
   height: 100%;
 }
 
-.container {
-  visibility: hidden;
-}
-
-.comenzar {
+.mostrar-container {
   visibility: visible;
 }
 </style>
