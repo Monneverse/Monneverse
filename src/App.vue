@@ -12,7 +12,7 @@ import ContenedorArticulo from "./components/ContenedorArticulo.vue";
 
 <template>
   <header>
-    <Header></Header>
+    <Header :index=index :index_pagina=index_pagina></Header>
   </header>
 
   <main>
@@ -23,55 +23,65 @@ import ContenedorArticulo from "./components/ContenedorArticulo.vue";
     y dentro de su div van los componentes, puede eliminar las clases 
     guiese del ejemplo div 1
     -->
-    <div id="1" class="container comenzar">
+    <div :class="{container:true,  'mostrar-container':index_pagina==1}">
       <Bienvenida />
       <Info />
     </div>
-    <div id="2" class="container red">
+    <div :class="{container:true,  'mostrar-container':index_pagina==2}">
       <Alliances />
     </div>
-    <div id="3" class="container upcoming_alliance">
+    <div :class="{container:true,  'mostrar-container':index_pagina==3}">
 
     </div>
-    <div id="4" class="container calculadora">
+    <div :class="{container:true,  'mostrar-container':index_pagina==4}">
       <Calculadora />
     </div>
-    <div id="5" class="container">
+    <div :class="{container:true,  'mostrar-container':index_pagina==5}">
       <ContenedorArticulo />
     </div>
-    <div id="6" class="container green">
+    <div :class="{container:true,  'mostrar-container':index_pagina==6}">
       <Exchanges />
     </div>
 
-    <div id="7" class="container red">
+    <div :class="{container:true,  'mostrar-container':index_pagina==7}">
       <Certificado />
     </div>
   </main>
 </template>
 <script>
-let id = 1;
-let limite = 7;
-
-document.addEventListener("wheel", function () {
-  document.getElementById(id).style.visibility = "hidden";
-  if (event.deltaY > 0) {
-    if (id < limite) id = id + 1;
-  } else {
-    if (id > 1) id = id - 1;
-  }
-  document.getElementById(id).style.visibility = "visible";
-  location.hash = "#" + id;
-  window.history.pushState({}, document.title, window.location.pathname);
-});
 
 export default {
   data() {
-    return {};
+    return {
+      index: 1,
+      index_pagina: 1,
+      limite: 7
+
+    };
   },
-  mounted() { },
+  methods: {
+    Navegar() {
+      if (event.deltaY > 0) {
+        if (this.index_pagina < this.limite) this.index_pagina = this.index_pagina + 1;
+      } else {
+        if (this.index_pagina > 1) this.index_pagina = this.index_pagina - 1;
+      }
+      console.log(this.index_pagina);
+      location.hash = "#" + this.index_pagina;
+      window.history.pushState({}, document.title, window.location.pathname);
+    }
+  },
+  mounted() {
+    this.index_pagina = 1;
+    document.addEventListener("wheel", this.Navegar);
+  },
 };
 </script>
 <style>
+/* Fuentes Aquí */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
+
+/*  */
 * {
   margin: 0;
   padding: 0;
@@ -144,16 +154,13 @@ main {
 }
 
 .container {
+  visibility: hidden;
   padding: 0%;
   margin: 0%;
   height: 100%;
 }
 
-.container {
-  visibility: hidden;
-}
-
-.comenzar {
+.mostrar-container {
   visibility: visible;
 }
 </style>

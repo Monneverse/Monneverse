@@ -1,9 +1,6 @@
 <template>
 
-    <div class="logo">
-      <img src="/img/logo.svg" alt="logo monneverse">
-    </div>
-
+ 
     <!--FONDO-->
     <div class="fondo-video">
       <video
@@ -85,14 +82,7 @@
     justify-content: space-evenly;
     align-items: flex-end;
 }
-.logo {
-  position: relative;
-  top: 2rem;
-  left: 2rem;
-  width: 5rem;
-  height: 5rem;
-  z-index: 12;
-}
+
     
 .fondo {
   top: 0;

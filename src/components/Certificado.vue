@@ -1,6 +1,4 @@
 <template>
-    <div class="logo">
-        <img src="/img/logo.svg" alt="logo monneverse"></div>
     <div class="fondo">
         <div class="imagen">
             <img src="/img/certificado.png" alt="">
@@ -38,13 +36,6 @@ img {
     width: auto;
     
 }
-.logo{
-    position: relative;
-    top: 2rem;
-    left: 2rem;
-    width: 5rem;
-    height: 5rem;
-    z-index: 2;
-}
+
 </style>
 
