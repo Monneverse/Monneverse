@@ -7,6 +7,7 @@ import Alliances from "./components/Alliances.vue";
 import Certificado from "./components/Certificado.vue";
 import Exchanges from "./components/Exchanges.vue";
 import ContenedorArticulo from "./components/ContenedorArticulo.vue";
+import Alianzas from "./components/Alianzas.vue";
 </script>
 
 
@@ -31,7 +32,7 @@ import ContenedorArticulo from "./components/ContenedorArticulo.vue";
       <Alliances />
     </div>
     <div id="3" class="container upcoming_alliance">
-
+      <Alianzas />
     </div>
     <div id="4" class="container calculadora">
       <Calculadora />
@@ -116,12 +117,7 @@ main {
   background-color: green;
 }
 
-.upcoming_alliance {
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
-}
+.upcoming_alliance {}
 
 .orange {
   background: radial-gradient(circle at center,

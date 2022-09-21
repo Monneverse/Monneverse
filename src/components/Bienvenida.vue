@@ -1,12 +1,6 @@
 <template>
-  <video
-    src="/video/video_binariov2.mp4"
-    autoplay="true"
-    muted="true"
-    loop="true"
-    class="video-fondo"
-    poster="/img/fondo_binario.png"
-  ></video>
+  <video src="/video/video_binario.mp4" autoplay="true" muted="true" loop="true" class="video-fondo"
+    poster="/img/fondo_binario.png"></video>
 
   <div class="fondo-oscuro"></div>
 
@@ -66,21 +60,22 @@ img {
   height: 100%;
   z-index: 0;
 }
+
 .fondo-oscuro {
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 10;
   opacity: 70%;
 }
+
 .logo {
   position: fixed;
   z-index: 1;
   opacity: 40%;
 }
+
 #logo-1 {
   left: 3rem;
   top: 3rem;
@@ -90,16 +85,19 @@ img {
   left: 18rem;
   top: 3rem;
 }
+
 #logo-3 {
   left: 3.5rem;
   top: 12rem;
   transform: rotate(-30deg);
 }
+
 #logo-4 {
   left: 18rem;
   top: 12rem;
   transform: rotate(-30deg);
 }
+
 #logo-5 {
   max-width: 30rem;
   max-height: 25rem;
@@ -110,21 +108,25 @@ img {
   bottom: 0;
   margin: auto;
 }
+
 #logo-6 {
   right: 18rem;
   top: 3rem;
 }
+
 #logo-7 {
   right: 18rem;
   top: 12rem;
   transform: rotate(-30deg);
 }
+
 .fondo-suave {
   position: absolute;
   top: 70%;
   z-index: 2;
   opacity: 70%;
 }
+
 .fondo-montana {
   position: absolute;
   top: 60%;
@@ -133,6 +135,7 @@ img {
   z-index: 4;
   opacity: 70%;
 }
+
 .fondo-oscuro-superior {
   position: fixed;
   width: 100%;
@@ -140,6 +143,7 @@ img {
   z-index: 5;
   opacity: 100%;
 }
+
 .fondo-mundial {
   position: fixed;
   left: 32%;
@@ -149,6 +153,7 @@ img {
   z-index: 6;
   opacity: 100%;
 }
+
 .semi-circle {
   position: fixed;
   left: 38%;
@@ -158,6 +163,7 @@ img {
   z-index: 8;
   opacity: 100%;
 }
+
 .animated.hinge {
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
