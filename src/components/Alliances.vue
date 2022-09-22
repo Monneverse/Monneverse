@@ -1,4 +1,9 @@
+<script setup>
+
+
+</script>
 <template>
+  
 
   <div class="logo">
     <img src="/img/logo.svg" alt="logo monneverse">
@@ -22,45 +27,52 @@
   <div class="circulo">
 
     <div class="circulo-medio">
-
-
       <div class="alianzas">
 
-        <a href="#"><Span><img src="/img/Alianzas/reddit.png" /></Span>REDDIT</a>
-        <!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
+<a href="#"><Span><img src="/img/Alianzas/reddit.png" /></Span>REDDIT</a>
+<!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
 
 
-        <a href="#"><SPan><img src="/img/Alianzas/telegram.png" /></SPan>TELEGRAM</a>
-        <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
+<a href="#"><SPan><img src="/img/Alianzas/telegram.png" /></SPan>TELEGRAM</a>
+<!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 
-        <a href="#"><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a>
-        <!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
-      </div>
+<a href="#"><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a>
+<!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
+</div>
+</div>
+</div>
+<div class="semi_circulo">
+<!--<img src="img/semi_circulo.png" alt="">-->
+</div>
+
+
+    <!--UPCOMING ALLIANCES-->
+    <div class="rectangulo">
+     <p>UPCOMING ALLIANCES</p>
     </div>
-  </div>
-  <div class="semi_circulo">
-    <!--<img src="img/semi_circulo.png" alt="">-->
-  </div>
-  <!--UPCOMING ALLIANCES-->
-  <div class="rectangulo">
-    <p>UPCOMING ALLIANCES</p>
-  </div>
-  <!-- VISA MASTERD CARD -->
-  <div class="rectangulo-medio">
-    <div class="tarjetas">
-      <img src="/img/Alianzas/visa.png" alt="">
-      <img src="/img/Alianzas/mastercard.png" alt="">
+    <!-- VISA MASTERD CARD -->
+    <div class="rectangulo-medio">
+        <div class="tarjetas">
+         <p>Join our community and get our
+        </p>
+      <p> latest news</p>
+        </div>
     </div>
-  </div>
-  <div class="puntero">
-    <!-- <img src="img/puntero.png" alt="">-->
-  </div>
+    <div class="puntero">
+     <img src="img/puntero.svg" alt="">
+    </div>
+    <div class="semi_circulo">
+   <img src="img/arco.svg" alt=""> 
+    </div>
+    
 
-</template>
-<script></script>
 
-<style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
+  </template>
+
+
+  <style scoped>
+    @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
+
 
 .logo {
   position: relative;
@@ -203,7 +215,6 @@
   margin: 0;
   top: 23%;
   left: 30%;
-  transform: rotate(3.142rad);
 
 }
 

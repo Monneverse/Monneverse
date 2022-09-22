@@ -6,6 +6,7 @@ import Calculadora from "./components/Calculadora.vue";
 import Alliances from "./components/Alliances.vue";
 import Certificado from "./components/Certificado.vue";
 import ContenedorArticulo from "./components/ContenedorArticulo.vue";
+import Benefits from "./components/Benefits.vue";
 import Alianzas from "./components/Alianzas.vue";
 import Exchanges from "./components/Exchanges.vue";
 </script>
@@ -52,16 +53,24 @@ import Exchanges from "./components/Exchanges.vue";
     <div :class="{container:true,  'mostrar-container':index_pagina==7}">
       <Certificado />
     </div>
+    
+    <div :class="{container:true,  'mostrar-container':index_pagina==8}">
+      <Benefits />
+    </div>
+ 
   </main>
 </template>
 <script>
+
+
+
 
 export default {
   data() {
     return {
       index: 1,
       index_pagina: 1,
-      limite: 7
+      limite: 8
 
     };
   },
@@ -132,7 +141,7 @@ main {
   background-color: green;
 }
 
-.upcoming_alliance {}
+
 
 .orange {
   background: radial-gradient(circle at center,

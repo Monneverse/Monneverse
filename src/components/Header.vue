@@ -6,15 +6,19 @@
   <div id="barra" class="barra-navegacion">
 
     <nav class="barra" @mouseout="exit_mouse">
-      <a id="a1" class="home" href="#" @mouseover="hover_mover('a1')" @click="leave_mouse('a1')">articles</a>
-      <a id="a2" href="#" @mouseover="hover_mover('a2')" @click="leave_mouse('a2')">benefits</a>
-      <a id="a3" href="#" @mouseover="hover_mover('a3')" @click="leave_mouse('a3')">tokenomics</a>
-      <a id="a4" href="#" @mouseover="hover_mover('a4')" @click="leave_mouse('a4')">news</a>
-      <a id="a5" href="#" @mouseover="hover_mover('a5')" @click="leave_mouse('a5')">roadmaps</a>
+      <a id="a1" :class="{home:index==1}" href="#" @mouseover="hover_mover('a1')"
+        @click="leave_mouse('a1')">articles</a>
+      <a id="a2" :class="{home:index==2}" href="#" @mouseover="hover_mover('a2')"
+        @click="leave_mouse('a2')">benefits</a>
+      <a id="a3" :class="{home:index==3}" href="#" @mouseover="hover_mover('a3')"
+        @click="leave_mouse('a3')">tokenomics</a>
+      <a id="a4" :class="{home:index==4}" href="#" @mouseover="hover_mover('a4')" @click="leave_mouse('a4')">news</a>
+      <a id="a5" :class="{home:index==5}" href="#" @mouseover="hover_mover('a5')"
+        @click="leave_mouse('a5')">roadmaps</a>
       <div id="animacion" class="animacion traslado_animacion"></div>
     </nav>
 
-    <button class="btn">WHITEPAPER{{index}}</button>
+    <button class="btn">WHITEPAPER</button>
   </div>
 </template>
 
@@ -69,17 +73,6 @@ export default {
       }
       return { top: _y, left: _x };
     },
-    quitar_animacion() {
-      let anim = document.getElementById("animacion");
-      anim.classList.remove("traslado_animacion");
-      console.log(anim);
-      this.recargar();
-    },
-    agregar_animacion() {
-      let anim = document.getElementById("animacion");
-      anim.classList.add("traslado_animacion");
-      this.recargar();
-    },
     recargar() {
       var anim = document.getElementById("animacion");
       var link = document.getElementsByClassName("home")[0];
@@ -89,6 +82,7 @@ export default {
   },
   mounted() {
     this.recargar();
+    window.addEventListener("resize", this.recargar);
   },
 };
 </script>
