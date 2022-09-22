@@ -1,0 +1,3 @@
+Estas reglas deben de seguirse al momento de crear el estilo y la estructura de cada componente
+
+En los templates -> 
