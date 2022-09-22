@@ -107,9 +107,11 @@ import ComponenteIconos from "./componenteIconos.vue";
 /*ICONOS EXCHANGES*/
 .contenedor_moneda {
   border: 1px solid greenyellow;
-  width: 100%;
-  height: 100%;
-  position: relative;
+  width: 57%;
+  height: 75%;
+  position: absolute;
+  top: 20%;
+  left: 40%;
   display: inline-block;
   z-index: 7;
 }
