@@ -1,6 +1,6 @@
 <script setup>
     defineProps({
-  contenedor: {
+  titulo: {
     type: String,
     required: true
   },
@@ -16,7 +16,7 @@
 
 
     <div class="container2">
-        <h5 class="titulo1">{{contenedor}}</h5>
+        <h5 class="titulo1">{{titulo}}</h5>
         <div class="imagenDeArticulo">
             <img   :src=img alt="" class="imagenArticulo01" />
         </div>
@@ -62,6 +62,7 @@ img {
     align-items: center;
     margin-bottom: 1rem;
 
+
 }
 
 h5 {
@@ -73,13 +74,15 @@ h5 {
     width: 100%;
     height: 100%;
     margin-bottom: 1rem;
+    
 
 }
 
 .btn {
     color: white;
-    margin-left: 2%;
-    border-radius: 3rem;
+    margin-left: -30%;
+    width: 60%;
+    border-radius: 3rem;;
     padding: 1rem;
     background: linear-gradient(to left,
             #029F50 0%,
@@ -90,4 +93,6 @@ h5 {
 img {
     scale: 1.2;
 }
+
+
 </style>
