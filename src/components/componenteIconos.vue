@@ -25,70 +25,77 @@ defineProps({
 </template>
 
 <style scoped>
-.contenedor_icono {
-  display: flex;
-  justify-content: center;
-  border: 1px solid greenyellow;
+.grid {
+  border: 1px solid yellowgreen;
+  display: grid;
+  height: 100%;
+  width: 100%;
 }
 
 .contenedor_icono {
-  border: 1px solid #ccc;
+  border: 1px solid yellowgreen;
   background: linear-gradient(to left, #48d0ab 0%, #097561 50%, #505863 100%);
   justify-content: space-between;
   border-radius: 8px;
   position: relative;
   overflow: hidden;
   display: flex;
-  height: 9%;
-  width: 5%;
+  margin: 4.5%;
+  height: 12%;
   z-index: 7;
-  margin: 1.5%;
+  left: -4%;
+  width: 8%;
+  top: -4%;
 }
 
 .contenedor_icono:hover {
-  width: 19%;
-  transition: 0.75s;
+  width: 32%;
+  transition: 0.80s;
 }
 
 .contenedor_icono:hover .icono {
-  width: 110%;
+  width: 100%;
 }
 
 .icono {
-  position: absolute;
-  width: 100%;
-  height: 98%;
-  display: flex;
+  transition: transform 0.75s;
+  position: relative;
   overflow: hidden;
-  transition: 0.75s;
+  display: flex;
+  height: 100%;
+  width: 100%;
 }
 
 .icon_coin {
-  height: 100%;
-  min-width: 70px;
-  position: absolute;
-  padding: 0%;
-  overflow: hidden;
+  position: relative;
   border-radius: 40%;
+  overflow: hidden;
+  min-width: 70px;
+  height: 100%;
+  padding: 0%;
+  left: -3%;
 }
 
 .icon_coin img {
+  object-fit: contain;
   position: absolute;
   height: 100%;
-  left: 0;
-  top: 0%;
   width: 100%;
-  object-fit: contain;
-
+  left: 0%;
+  top: 0%;
 }
 
 .name_coin {
+  border: 1px solid yellowgreen;
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: bold;
   font-size: 1.3rem;
   float: left;
   margin: 5%;
-  white-space: nowrap;
-  font-weight: bold;
-  font-family: "Work Sans", sans-serif;
-  text-transform: uppercase;
 }
 </style>
