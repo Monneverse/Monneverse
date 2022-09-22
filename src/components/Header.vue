@@ -73,17 +73,6 @@ export default {
       }
       return { top: _y, left: _x };
     },
-    quitar_animacion() {
-      let anim = document.getElementById("animacion");
-      anim.classList.remove("traslado_animacion");
-      console.log(anim);
-      this.recargar();
-    },
-    agregar_animacion() {
-      let anim = document.getElementById("animacion");
-      anim.classList.add("traslado_animacion");
-      this.recargar();
-    },
     recargar() {
       var anim = document.getElementById("animacion");
       var link = document.getElementsByClassName("home")[0];
@@ -93,6 +82,7 @@ export default {
   },
   mounted() {
     this.recargar();
+    window.addEventListener("resize", this.recargar);
   },
 };
 </script>
