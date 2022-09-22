@@ -8,18 +8,17 @@
   <div class="mastercard_img">
     <img src="/img/Alianzas/mastercard.png" />
   </div>
-  <div class="social_media">
-    <a href=""><i class="fa-brands fa-reddit fa-3x"></i></a>
-    <a href=""><i class="fa-brands fa-telegram fa-3x"></i></a>
-    <a href=""><i class="fa-brands fa-discord fa-3x"></i></a>
+
+  <div class="circulos_redes">
+    <div class="semi_circle">
+      <img src="/img/semi_circulo.png" />
+    </div>
+    <div class="circle">
+      <img src="/img/Semi_circulo1.png" />
+    </div>
   </div>
 
-  <div class="semi_circle">
-    <img src="/img/semi_circulo.png" />
-  </div>
-  <div class="circle">
-    <img src="/img/Semi_circulo1.png" />
-  </div>
+
 
   <!--FONDO-->
   <div class="fondo fondo-calculadora"></div>
@@ -32,13 +31,38 @@
   <div class="circuito-derecho">
     <img src="/img/calculadora/circuito-derecho.png" alt="" />
   </div>
+  <div class="degradado_azuliz"></div>
+  <div class="degradado_azulde"></div>
   <!--FIN FONDO-->
+
+  <div class="logo-redes">
+    <div class="icon icon-telegram">
+      <a href="https://t.me/monnerversecommunity" target="_blank">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="">
+      </a>
+    </div>
+    <div class="icon icon-reddit">
+      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="">
+      </a>
+    </div>
+    <div class="icon icon-discord ">
+      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="">
+      </a>
+    </div>
+  </div>
 </template>
 
 <script></script>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
+
+@font-face {
+  font-family: "Custom";
+  src: url("../assets/fonts/Work+Sans:wght@700&display=swap");
+}
 
 /*FONDO*/
 
@@ -116,10 +140,10 @@ img {
 .upcoming_alliance h1 {
   position: absolute;
   display: flex;
-  top: 26.5%;
-  right: 38%;
+  top: 17%;
+  right: 24%;
   color: white;
-  font-size: 2rem;
+  font-size: 5vw;
   font-family: "Work Sans", sans-serif;
   z-index: 5;
 }
@@ -130,7 +154,7 @@ img {
   width: 17.9%;
   height: 31%;
   top: 37%;
-  left: 27%;
+  left: 25%;
   z-index: 5;
 }
 
@@ -144,7 +168,7 @@ img {
   width: 17.9%;
   height: 31%;
   top: 37%;
-  right: 33%;
+  right: 34%;
   z-index: 5;
 }
 
@@ -152,53 +176,77 @@ img {
   transform: scale(1.2);
 }
 
-.social_media {
+.circulos_redes {
   position: relative;
-  top: 78%;
-  left: 41.5%;
-  z-index: 3;
-}
-
-.social_media:hover {
-  transform: scale(1.2);
-}
-
-.social_media a .fa-reddit {
-  color: #ff4500;
-  padding: 0.2%;
-  z-index: 4;
-}
-
-.social_media a .fa-telegram {
-  color: #2198d1;
-  padding: 0.2%;
-  z-index: 5;
-}
-
-.social_media a .fa-discord {
-  color: #5865f2;
-  padding: 0.2%;
-  z-index: 6;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  border: 1px solid yellowgreen;
 }
 
 .semi_circle {
   position: fixed;
-  right: 32%;
+  right: 30%;
   top: 71%;
   width: 40%;
   height: 80%;
-  z-index: 5;
+  z-index: 6;
   opacity: 100%;
   rotate: 180deg;
 }
 
 .circle {
   position: fixed;
-  right: 32%;
+  right: 29.5%;
   top: 82%;
   width: 40%;
   height: 80%;
-  z-index: 6;
+  z-index: 7;
   opacity: 100%;
+}
+
+.logo-redes {
+  position: absolute;
+  bottom: 13%;
+  left: 43.5%;
+  width: 20rem;
+  height: 5rem;
+  z-index: 14;
+  display: flex;
+  justify-content: start;
+  z-index: 8;
+}
+
+
+
+.icon {
+  width: 4rem;
+  height: auto;
+  z-index: 18;
+  margin-left: 1rem;
+  z-index: 8;
+}
+
+.degradado_azuliz {
+  background: linear-gradient(to right, #08047A 0.5%, transparent);
+  position: absolute;
+  transform: rotate(-60deg);
+  top: 0%;
+  right: 50%;
+  width: 50%;
+  height: 180%;
+  z-index: 3;
+}
+
+.degradado_azulde {
+  background: linear-gradient(to right, #08047A 0.5%, transparent);
+  position: absolute;
+  transform: rotate(230deg);
+  top: -12%;
+  left: 50%;
+  width: 50%;
+  height: 180%;
+  z-index: 3;
 }
 </style>

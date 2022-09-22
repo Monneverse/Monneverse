@@ -9,6 +9,7 @@ import ContenedorArticulo from "./components/ContenedorArticulo.vue";
 import Benefits from "./components/Benefits.vue";
 import Alianzas from "./components/Alianzas.vue";
 import Exchanges from "./components/Exchanges.vue";
+import Logos_auditorias from "./components/Logos_auditorias.vue";
 </script>
 
 
@@ -50,14 +51,18 @@ import Exchanges from "./components/Exchanges.vue";
       <Exchanges />
     </div>
 
-    <div :class="{container:true,  'mostrar-container':index_pagina==7}">
+    <div :class="{container:true, 'mostrar-container':index_pagina==7}">
+      <Logos_auditorias />
+    </div>
+
+    <div :class="{container:true,  'mostrar-container':index_pagina==8}">
       <Certificado />
     </div>
-    
-    <div :class="{container:true,  'mostrar-container':index_pagina==8}">
+
+    <div :class="{container:true,  'mostrar-container':index_pagina==9}">
       <Benefits />
     </div>
- 
+
   </main>
 </template>
 <script>
@@ -70,7 +75,7 @@ export default {
     return {
       index: 1,
       index_pagina: 1,
-      limite: 8
+      limite: 9
 
     };
   },

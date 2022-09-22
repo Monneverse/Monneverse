@@ -3,18 +3,27 @@ import ComponenteIconos from "./componenteIconos.vue";
 </script>
 
 <template>
-  <div class="logo">
-    <img src="/img/logo.svg" alt="logo monneverse" />
-  </div>
   <div class="fondo"></div>
   <div class="exchange_text">
     <p>first exchanges after our pre-sale</p>
   </div>
 
-  <div class="social_media">
-    <a href=""> <i class="fa-brands fa-reddit fa-3x"></i></a>
-    <a href=""> <i class="fa-brands fa-telegram fa-3x"></i></a>
-    <a href=""><i class="fa-brands fa-discord fa-3x"></i></a>
+  <div class="logo-redes">
+    <div class="icon icon-telegram">
+      <a href="https://t.me/monnerversecommunity" target="_blank">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="">
+      </a>
+    </div>
+    <div class="icon icon-reddit">
+      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="">
+      </a>
+    </div>
+    <div class="icon icon-discord ">
+      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="">
+      </a>
+    </div>
   </div>
 
   <div class="contenedor_moneda">
@@ -29,6 +38,11 @@ import ComponenteIconos from "./componenteIconos.vue";
 </template>
 
 <style scoped>
+img {
+  height: 100%;
+  width: 100%;
+}
+
 .fondo {
   position: absolute;
   top: 0;
@@ -39,14 +53,6 @@ import ComponenteIconos from "./componenteIconos.vue";
   display: flex;
 }
 
-.logo {
-  position: relative;
-  top: 2rem;
-  left: 2rem;
-  width: 5rem;
-  height: 5rem;
-  z-index: 12;
-}
 
 .exchange_text {
   display: block;
@@ -76,40 +82,33 @@ import ComponenteIconos from "./componenteIconos.vue";
 }
 
 /* REDES SOCIALES */
-.social_media {
+.logo-redes {
   position: absolute;
-  bottom: 1%;
-  left: 1%;
-  width: 100%;
-  z-index: 3;
+  bottom: 0%;
+  left: 1rem;
+  width: 20rem;
+  height: 5rem;
+  z-index: 14;
+  display: flex;
+  justify-content: start;
 }
 
-.social_media a .fa-reddit {
-  color: #ff4500;
-  padding: 0.2%;
-  z-index: 4;
-}
-
-.social_media a .fa-telegram {
-  color: #2198d1;
-  padding: 0.2%;
-  z-index: 5;
-}
-
-.social_media a .fa-discord {
-  color: #5865f2;
-  padding: 0.2%;
-  z-index: 6;
+.icon {
+  width: 3rem;
+  height: auto;
+  z-index: 18;
+  margin-left: 1rem;
 }
 
 /* FIN REDES SOCIALES */
 
 /*ICONOS EXCHANGES*/
 .contenedor_moneda {
-  border: 1px solid greenyellow;
-  width: 100%;
-  height: 100%;
-  position: relative;
+  width: 57%;
+  height: 75%;
+  position: absolute;
+  top: 20%;
+  left: 40%;
   display: inline-block;
   z-index: 7;
 }
