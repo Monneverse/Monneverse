@@ -25,7 +25,7 @@
 
   <!--CIRCULOS-->
   <div class="circulo">
-
+   
     <div class="circulo-medio">
       <div class="alianzas">
 
@@ -52,26 +52,26 @@
     </div>
     <!-- VISA MASTERD CARD -->
     <div class="rectangulo-medio">
-        <div class="tarjetas">
+        <div class="mensaje">
          <p>Join our community and get our
         </p>
-      <p> latest news</p>
+         <p> latest news</p>
         </div>
     </div>
     <div class="puntero">
      <img src="img/puntero.svg" alt="">
     </div>
-    <div class="semi_circulo">
-   <img src="img/arco.svg" alt=""> 
-    </div>
     
-
+    
+    <div class="luna">
+ 
+</div>
 
   </template>
 
 
   <style scoped>
-    @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
+   @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
 
 
 .logo {
@@ -108,6 +108,7 @@
 }
 
 .filtro-superior {
+  position: absolute;
   z-index: 1;
   background: radial-gradient(circle at center,
       #f9f9fa 0%,
@@ -163,6 +164,22 @@
   position: relative;
   bottom: -7%;
 }
+.luna {
+  position: absolute;
+  top: 27%;
+  left:32%;
+  z-index: 6;
+  width: 35.5%;
+  height: 70.6%;
+  border:0.4rem solid #eddfde;
+   
+    border-radius: 100%;
+    -webkit-box-shadow: -7px 3px 55px -11px rgba(255,255,255,1);
+-moz-box-shadow: -7px 3px 55px -11px rgba(255,255,255,1);
+box-shadow: -7px 3px 55px -11px rgba(255,255,255,1);
+    transform: rotate(200deg);
+
+}
 
 .alianzas {
   margin: 0;
@@ -178,12 +195,14 @@
   color: black;
   display: flex;
   flex-direction: column;
-  font-weight: 100;
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+
+ 
 }
 
 .alianzas a span {
-
+  
   padding: 0;
   margin: 0 auto;
   width: 4rem;
@@ -233,6 +252,8 @@
 }
 
 .rectangulo p {
+
+  
   font-weight: 700;
   position: relative;
   top: 50%;
@@ -256,19 +277,19 @@
   z-index: 6;
 }
 
-.tarjetas {
+.mensaje {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
-
-
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
-
-.tarjetas img {
-  width: 28%;
+.mensaje p {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: 'Work Sans', sans-serif;
 }
-
 .puntero {
   position: absolute;
   z-index: 7;
@@ -276,7 +297,7 @@
   height: 40%;
   padding: 0;
   margin: 0;
-  top: 80%;
+  top: 82%;
   left: 40%;
 
 }
