@@ -9,7 +9,6 @@ import ContenedorArticulo from "./components/ContenedorArticulo.vue";
 import Benefits from "./components/Benefits.vue";
 import Alianzas from "./components/Alianzas.vue";
 import Exchanges from "./components/Exchanges.vue";
-
 </script>
 
 
@@ -62,27 +61,16 @@ import Exchanges from "./components/Exchanges.vue";
   </main>
 </template>
 <script>
-let id = 1;
-let limite = 8;
 
-document.addEventListener("wheel", function () {
-  document.getElementById(id).style.visibility = "hidden";
-  if (event.deltaY > 0) {
-    if (id < limite) id = id + 1;
-  } else {
-    if (id > 1) id = id - 1;
-  }
-  document.getElementById(id).style.visibility = "visible";
-  location.hash = "#" + id;
-  window.history.pushState({}, document.title, window.location.pathname);
-});
+
+
 
 export default {
   data() {
     return {
       index: 1,
       index_pagina: 1,
-      limite: 7
+      limite: 8
 
     };
   },
@@ -153,7 +141,7 @@ main {
   background-color: green;
 }
 
-.upcoming_alliance {}
+
 
 .orange {
   background: radial-gradient(circle at center,
