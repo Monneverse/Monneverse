@@ -215,7 +215,6 @@
   margin: 0;
   top: 23%;
   left: 30%;
-  transform: rotate(3.142rad);
 
 }
 

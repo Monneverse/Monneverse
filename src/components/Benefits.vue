@@ -9,7 +9,7 @@
 
         <div class="fondo ">
          <div class="fondo_rayos">
-          <img src="img/rayos.png" alt="">  
+         <img src="img/rayos.png" alt=""> 
          </div>
          <div class="fondo_luz">
             <img src="img/luz.png" alt="">
@@ -65,6 +65,8 @@
 
     }
     .fondo {
+      position: absolute;
+      z-index: 1; 
       top: 0;
       left: 0;
       height: 100%;
@@ -73,13 +75,14 @@
     }
     .fondo_rayos{
 
-        position: relative;
-        z-index: 0;
-        position: relative;
+        position: absolute;
+       
         left: -30%;
         width: 100%;
-
+        height: 100%;
     }
+
+   
     .fondo_luz{
        position: absolute;
        z-index: 4;
