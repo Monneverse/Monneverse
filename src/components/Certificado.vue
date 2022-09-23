@@ -5,7 +5,16 @@
     <div class="circuito circuito-derecho">
         <img src="/img/calculadora/circuito-derecho.png" alt="" />
     </div>
-
+    <div class="reflector reflector-izquierdo">
+        <div class="luz-1"></div>
+        <div class="luz-2"></div>
+        <div class="luz-3"></div>
+    </div>
+    <div class="reflector reflector-derecho">
+        <div class="luz-1"></div>
+        <div class="luz-2"></div>
+        <div class="luz-3"></div>
+    </div>
     <div class="degradado degradado_izquierdo"></div>
     <div class="degradado degradado_derecho"></div>
     <div class="fondo">
@@ -129,6 +138,54 @@ img {
     100% {
         opacity: 100%;
     }
+
+
+}
+
+.reflector {
+    position: absolute;
+    bottom: 0%;
+    left: 15%;
+    width: 40%;
+    height: 90%;
+    z-index: 10;
+
+}
+.reflector-derecho{
+    left: 40%;
+}
+.luz-1 {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    border-radius: 50%;
+    bottom: -30%;
+    transform: rotate(-30deg);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, transparent 47%, rgba(184, 184, 184, 0) 100%);
+    filter: blur(3rem);
+    left: 30%;
+}
+.luz-2 {
+    position: absolute;
+    width: 30%;
+    height: 140%;
+    border-radius: 50%;
+    bottom: -30%;
+    left: 40%;
+    transform: rotate(0deg);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.8) 0%, transparent 47%, rgba(184, 184, 184, 0) 100%);
+    filter: blur(3rem);
+}
+.luz-3 {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    border-radius: 50%;
+    bottom: -30%;
+    left: 55%;
+    transform: rotate(-150deg);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.8) 0%, transparent 47%, rgba(184, 184, 184, 0) 100%);
+    filter: blur(3rem);
 }
 </style>
 
