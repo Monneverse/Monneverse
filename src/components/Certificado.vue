@@ -149,7 +149,25 @@ img {
     width: 40%;
     height: 90%;
     z-index: 10;
+    animation-duration: 3s;
+    animation-name: reflector;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 
+}
+
+@keyframes reflector{
+    0% {
+        opacity: 40%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
 }
 .reflector-derecho{
     left: 40%;
