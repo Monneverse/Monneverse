@@ -61,7 +61,11 @@
 
 
   <div class="informacion">
-    <p id="title">12%<span>*</span>48h</p>
+    <div class="titulo-imagen">
+      <img src="../assets/add.svg" alt="">
+      <p id="title">12%<span>*</span>48h</p>
+    </div>
+
     <p id="descripcion">FIRST TWO MONTHS EVERY 48 HOURS
       THE MONNER WILL RETURN 12.6% INTEREST
     </p>
@@ -108,11 +112,11 @@ export default {
     Calculator() {
 
       if (this.meses == State.Hour0) {
-        this.interes =0;
+        this.interes = 0;
       } else if (this.meses == State.Hour24) {
-        this.interes = ((this.inversion * (this.porcentajeInteres / 100)) /2).toFixed(2);;
+        this.interes = ((this.inversion * (this.porcentajeInteres / 100)) / 2).toFixed(2);;
       } else {
-        this.interes = ((this.inversion * (this.porcentajeInteres / 100)) ).toFixed(2);
+        this.interes = ((this.inversion * (this.porcentajeInteres / 100))).toFixed(2);
       }
 
     },
@@ -201,7 +205,7 @@ img {
   width: 40%;
   min-width: 30rem;
   top: 20%;
-  
+
 }
 
 .circuito-izquierdo {
@@ -211,15 +215,18 @@ img {
   animation-direction: alternate;
   animation-iteration-count: infinite;
 }
+
 @keyframes mover_izquierdo {
-  0%{
+  0% {
     left: -10%;
   }
-  100%{
+
+  100% {
     left: 0%;
   }
-  
+
 }
+
 .circuito-derecho {
   right: -10%;
   animation-name: mover_derecho;
@@ -227,15 +234,18 @@ img {
   animation-direction: alternate-reverse;
   animation-iteration-count: infinite;
 }
+
 @keyframes mover_derecho {
-  0%{
+  0% {
     right: -10%;
   }
-  100%{
+
+  100% {
     right: 0%;
   }
-  
+
 }
+
 .contenido {
   position: absolute;
   top: 0;
@@ -341,23 +351,27 @@ img {
   margin-top: .5rem;
   margin-bottom: .5rem;
 }
-.porcentaje>p{
+
+.porcentaje>p {
   font-family: 'Work Sans', sans-serif;
   font-size: 1.5rem;
   color: white;
 }
-.indicador-texto{
+
+.indicador-texto {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.indicador-texto > p{
+
+.indicador-texto>p {
   font-family: 'Work Sans', sans-serif;
   color: white;
   font-size: 1.5rem;
   position: absolute;
   z-index: 9;
 }
+
 #month-1 {
   top: 23%;
 }
@@ -423,7 +437,11 @@ img {
 .informacion #title {
   font-size: 10vh;
 }
-
+@media( max-width: 1400px){
+  .informacion #title {
+  font-size: 8vh;
+}
+}
 .informacion #title span {
   color: #01C28D;
   font-family: 'Work Sans', sans-serif;
@@ -436,7 +454,18 @@ img {
   text-transform: uppercase;
 
 }
+.titulo-imagen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6rem;
+}
+.titulo-imagen>img{
+  width: 3rem;
+  height: auto;
+  margin-right: 1rem;
 
+}
 .logo-redes {
   position: absolute;
   bottom: 0%;
@@ -455,7 +484,8 @@ img {
   height: auto;
   margin-left: 1rem;
 }
-.degradado{
+
+.degradado {
   background: linear-gradient(to right, #08047A 0.5%, transparent);
   position: absolute;
   width: 50%;
@@ -467,27 +497,32 @@ img {
   animation-direction: alternate;
   top: 0%;
 }
+
 .degradado_izquierdo {
   transform: rotate(-60deg);
   right: 50%;
 }
 
-.degradado_derecho{
+.degradado_derecho {
   transform: rotate(230deg);
   left: 55%;
 }
 
 @keyframes luz {
- 0%{
-  opacity: 20%;
- }
- 50% {
-  opacity: 50%;
- }
- 100%{
-  opacity: 100%;
- }
+  0% {
+    opacity: 20%;
+  }
+
+  50% {
+    opacity: 50%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+
 }
+
 </style>
 
 

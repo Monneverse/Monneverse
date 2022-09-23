@@ -25,32 +25,24 @@ defineProps({
 </template>
 
 <style scoped>
-.grid {
-  border: 1px solid yellowgreen;
-  display: grid;
-  height: 100%;
-  width: 100%;
-}
-
 .contenedor_icono {
-  border: 1px solid yellowgreen;
   background: linear-gradient(to left, #48d0ab 0%, #097561 50%, #505863 100%);
   justify-content: space-between;
   border-radius: 8px;
-  position: relative;
+  position: absolute;
   overflow: hidden;
   display: flex;
   margin: 4.5%;
-  height: 12%;
+  height: 70%;
   z-index: 7;
   left: -4%;
-  width: 8%;
+  width: 24%;
   top: -4%;
 }
 
 .contenedor_icono:hover {
-  width: 32%;
-  transition: 1.5s;
+  width: 88%;
+  transition: 1.8s;
 }
 
 .contenedor_icono:hover .icono {
@@ -70,10 +62,10 @@ defineProps({
   position: relative;
   border-radius: 40%;
   overflow: hidden;
-  min-width: 70px;
-  height: 100%;
+  min-width: 60px;
+  height: 95%;
   padding: 0%;
-  left: -3%;
+  left: 3%;
 }
 
 .icon_coin img {
@@ -86,7 +78,6 @@ defineProps({
 }
 
 .name_coin {
-  border: 1px solid yellowgreen;
   font-family: "Work Sans", sans-serif;
   text-transform: uppercase;
   justify-content: center;
@@ -96,6 +87,6 @@ defineProps({
   font-weight: bold;
   font-size: 1.3rem;
   float: left;
-  margin: 5%;
+  margin: 15px;
 }
 </style>

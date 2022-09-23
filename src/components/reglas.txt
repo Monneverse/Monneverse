@@ -1,3 +1,19 @@
 Estas reglas deben de seguirse al momento de crear el estilo y la estructura de cada componente
 
 En los templates -> 
+
+1.
+2.
+3.
+
+En los Css ->
+
+1.
+2.
+3.
+
+En Javascript ->
+
+1.
+2.
+3.
