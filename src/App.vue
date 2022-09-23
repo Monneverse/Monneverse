@@ -11,6 +11,7 @@ import Alianzas from "./components/Alianzas.vue";
 import Exchanges from "./components/Exchanges.vue";
 import Logos_auditorias from "./components/Logos_auditorias.vue";
 import News from "./components/News.vue";
+import Tokenomics from "./components/Tokenomics.vue";
 </script>
 
 
@@ -64,6 +65,9 @@ import News from "./components/News.vue";
       <Benefits />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==10}">
+      <Tokenomics />
+    </div>
+    <div :class="{container:true, 'mostrar-container':index_pagina==11}">
       <News />
     </div>
 
@@ -79,7 +83,7 @@ export default {
     return {
       index: 1,
       index_pagina: 1,
-      limite: 10
+      limite: 11
 
     };
   },

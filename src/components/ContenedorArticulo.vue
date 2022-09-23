@@ -11,19 +11,16 @@ import Articulo from "./Articulo.vue";
     <div class="fondoArticulo">
       <img src="/img/circulo_Fondo.png" alt="" class="circuloFondo1" />
       <img src="/img/circuloImagen.png" alt="" class="circuloFondo2" />
-      <img
-        src="/img/Articulo/circuito-izquierdo.png"
-        alt=""
-        class="circuitoIzquierdo"
-      />
-      <img
-        src="/img/Articulo/circuito-derecho.png"
-        alt=""
-        class="circuitoDerecho"
-      />
     </div>
+    <div class="degradado_azulizquierdo"></div>
+    <div class="degradado_azulderecho"></div>
   </div>
-
+  <div class="circuitoIzquierdo">
+      <img src="/img/Articulo/circuito-izquierdo.png" alt=""/>
+    </div>
+    <div class="circuitoDerecho">
+      <img src="/img/Articulo/circuito-derecho.png" alt=""/>
+    </div>
   <!-- Contenedor de Tiempo -->
   <div class="container_tiempo">
     <h2>Pre Sale Time</h2>
@@ -55,6 +52,25 @@ import Articulo from "./Articulo.vue";
       />
     </div>
   </div>
+
+  <!-- Contenedor de Redes Sociales -->
+  <div class="logo_redes">
+    <div class="icon icon-telegram">
+      <a href="https://t.me/monnerversecommunity" target="_blank">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="">
+      </a>
+    </div>
+    <div class="icon icon-reddit">
+      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="">
+      </a>
+    </div>
+    <div class="icon icon-discord ">
+      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="">
+      </a>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -65,33 +81,19 @@ export default {
         {
           titulo: "Presale and benefits For investors",
           imagen: "/img/Articulo/imagenArticulo1.png",
-          link: "",
+          link: "https://sites.google.com/view/blog-monnerverse/home/presale-and-its-benefits-for-investors",
         },
         {
           titulo: "How to avoid being scammed by investing in monner coin?",
           imagen: "/img/Articulo/imagenArticulo2.png",
-          link: "",
+          link: "https://sites.google.com/view/blog-monnerverse/home/how-to-avoid-being-scammed-by-investing-in-monner-coin",
         },
         {
           titulo: "Why will monner become one of the best cryptocurrencies to investin?",
           imagen: "/img/Articulo/imagenArticulo3.png",
-          link: "",
+          link: "https://sites.google.com/view/blog-monnerverse/home/why-will-monner-become-one-of-the-best-cryptocurrencies-to-invest-in",
         },
-        {
-          titulo: "Why invest in monner and how to secure your investment?",
-          imagen: "/img/Articulo/imagenArticulo4.png",
-          link: "",
-        },
-        {
-          titulo: "What to do to not miss any Monner news?",
-          imagen: "/img/Articulo/imagenArticulo5.png",
-          link: "",
-        },
-        {
-          titulo: "The monner coin and it’s benefits",
-          imagen: "/img/Articulo/imagenArticulo6.png",
-          link: "",
-        },
+        
       ],
     };
   },
@@ -103,6 +105,8 @@ img {
   height: 100%;
   width: 100%;
 }
+
+/* fondo de la pantalla */
 .fondo {
   position: absolute;
   top: 0;
@@ -155,17 +159,18 @@ img {
 
 .circuitoIzquierdo {
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   left: -10%;
   top: 15%;
   height: 80%;
   width: 50%;
   min-width: 30rem;
+  opacity: 100%;
 }
 
 .circuitoDerecho {
   position: absolute;
-  z-index: 3;
+  z-index: 7;
   right: -10%;
   top: 15%;
   right: -5%;
@@ -173,6 +178,32 @@ img {
   width: 55%;
   min-width: 30rem;
 }
+.degradado_azulizquierdo {
+    background: linear-gradient(to right, #08047A 0.5%, transparent);
+    position: absolute;
+    transform: rotate(-60deg);
+    top: 0%;
+    z-index: 3;
+    right: 50%;
+    width: 50%;
+    height: 180%;
+    opacity: 70%;
+
+}
+
+.degradado_azulderecho {
+    background: linear-gradient(to right, #08047A 0.5%, transparent);
+    position: absolute;
+    transform: rotate(230deg);
+    top: -12%;
+    left: 50%;
+    width: 50%;
+    height: 180%;
+    opacity: 70%;
+    z-index: 3;
+}
+
+/* contendero de Articulo */
 .containerArticulo {
   position: absolute;
   bottom: 10%;
@@ -183,7 +214,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 4;
+  z-index: 8;
 }
 
 .contenedorDeArticulo {
@@ -196,6 +227,7 @@ img {
 
 h1 {
   color: #40fb2b;
+
 }
 
 h2 {
@@ -205,6 +237,7 @@ h2 {
   z-index: 7;
   justify-content: center;
   align-items: center;
+  
 }
 
 .container_tiempo {
@@ -219,7 +252,7 @@ h2 {
   width: 30rem;
   height: 15rem;
   z-index: 5;
-  border: 1px solid white;
+  
 }
 
 .bloque_temporizador {
@@ -232,11 +265,10 @@ h2 {
   width: 25rem;
   background-color: black;
   z-index: 6;
-  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid yellowgreen;
+  
 }
 .btn_comenzar {
   display: flex;
@@ -252,8 +284,28 @@ h2 {
   margin-top: 7rem;
   margin-left: 7rem;
 }
+
+.logo_redes {
+  position: absolute;
+  bottom: 0%;
+  left: 1rem;
+  width: 20rem;
+  height: 5rem;
+  z-index: 14;
+  display: flex;
+  justify-content: start;
+}
+
+.icon {
+  width: 3rem;
+  height: auto;
+  z-index: 18;
+  margin-left: 1rem;
+}
+
+
 .contenedorDeArticulo > * {
-  border: 1px solid red;
+  
   animation: mover 10s normal infinite;
 }
 @keyframes mover {
