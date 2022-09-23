@@ -449,7 +449,7 @@ img {
 
 .degradado_derecho{
   transform: rotate(230deg);
-  left: 50%;
+  left: 55%;
 }
 
 @keyframes luz {
