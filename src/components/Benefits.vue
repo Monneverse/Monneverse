@@ -90,4 +90,5 @@ import Benefits from "./TemplateBenefits.vue";
   width: 20%;
   min-height: 15%;
 }
+
 </style>

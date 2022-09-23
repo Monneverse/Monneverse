@@ -1,78 +1,70 @@
-<script setup>
-
-
-</script>
+<script setup></script>
 <template>
-  
-
   <div class="logo">
-    <img src="/img/logo.svg" alt="logo monneverse">
+    <img src="/img/logo.svg" alt="logo monneverse" />
   </div>
 
   <!--FONDO-->
   <div class="fondo-video">
-    <video src="/video/video_binario.mp4" autoplay="true" muted="true" loop="true"
-      poster="/img/fondo_binario.png"></video>
+    <video
+      src="/video/video_binario.mp4"
+      autoplay="true"
+      muted="true"
+      loop="true"
+      poster="/img/fondo_binario.png"
+    ></video>
   </div>
-
 
   <div class="fondo filtro-superior"></div>
   <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
   <div class="fondo fondo-oscurecer"></div>
   <div class="fondo fondo-red">
-    <img src="img/red.png" alt="">
+    <img src="img/red.png" alt="" />
   </div>
 
   <!--CIRCULOS-->
   <div class="circulo">
-   
     <div class="circulo-medio">
       <div class="alianzas">
+        <a href="#"
+          ><Span><img src="/img/Alianzas/reddit.png" /></Span>REDDIT</a
+        >
+        <!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
 
-<a href="#"><Span><img src="/img/Alianzas/reddit.png" /></Span>REDDIT</a>
-<!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
+        <a href="#"
+          ><SPan><img src="/img/Alianzas/telegram.png" /></SPan>TELEGRAM</a
+        >
+        <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 
-
-<a href="#"><SPan><img src="/img/Alianzas/telegram.png" /></SPan>TELEGRAM</a>
-<!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
-
-<a href="#"><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a>
-<!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
-</div>
-</div>
-</div>
-<div class="semi_circulo">
-<!--<img src="img/semi_circulo.png" alt="">-->
-</div>
-
-
-    <!--UPCOMING ALLIANCES-->
-    <div class="rectangulo">
-     <p>UPCOMING ALLIANCES</p>
+        <a href="#"
+          ><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a
+        >
+        <!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
+      </div>
     </div>
-    <!-- VISA MASTERD CARD -->
-    <div class="rectangulo-medio">
-        <div class="mensaje">
-         <p>Join our community and get our
-        </p>
-         <p> latest news</p>
-        </div>
+  </div>
+  <div class="semi_circulo">
+    <!--<img src="img/semi_circulo.png" alt="">-->
+  </div>
+
+  <!--UPCOMING ALLIANCES-->
+  <div class="rectangulo">
+    <p>UPCOMING ALLIANCES</p>
+  </div>
+  <!-- VISA MASTERD CARD -->
+  <div class="rectangulo-medio">
+    <div class="mensaje">
+      <p>Join our community and get our</p>
+      <p>latest news</p>
     </div>
-    <div class="puntero">
-     <img src="img/puntero.svg" alt="">
-    </div>
-    
-    
-    <div class="luna">
- 
-</div>
+  </div>
+  <div class="puntero">
+    <img src="img/puntero.svg" alt="" />
+  </div>
+</template>
 
-  </template>
-
-
-  <style scoped>
-   @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
-
+<style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
 .logo {
   position: relative;
@@ -93,7 +85,6 @@
 .fondo-video {
   width: 100%;
   height: 100%;
-
 }
 
 .fondo-video video {
@@ -110,12 +101,13 @@
 .filtro-superior {
   position: absolute;
   z-index: 1;
-  background: radial-gradient(circle at center,
-      #f9f9fa 0%,
-      #c8ced4 50%,
-      #a8aaaf 100%);
+  background: radial-gradient(
+    circle at center,
+    #f9f9fa 0%,
+    #c8ced4 50%,
+    #a8aaaf 100%
+  );
   mix-blend-mode: multiply;
-
 }
 
 .fondo-montana img {
@@ -132,7 +124,6 @@
   background-color: rgb(0, 0, 0);
   opacity: 60%;
   mix-blend-mode: multiply;
-
 }
 
 .fondo-red img {
@@ -164,22 +155,6 @@
   position: relative;
   bottom: -7%;
 }
-.luna {
-  position: absolute;
-  top: 27%;
-  left:32%;
-  z-index: 6;
-  width: 35.5%;
-  height: 70.6%;
-  border:0.4rem solid #eddfde;
-   
-    border-radius: 100%;
-    -webkit-box-shadow: -7px 3px 55px -11px rgba(255,255,255,1);
--moz-box-shadow: -7px 3px 55px -11px rgba(255,255,255,1);
-box-shadow: -7px 3px 55px -11px rgba(255,255,255,1);
-    transform: rotate(200deg);
-
-}
 
 .alianzas {
   margin: 0;
@@ -195,14 +170,12 @@ box-shadow: -7px 3px 55px -11px rgba(255,255,255,1);
   color: black;
   display: flex;
   flex-direction: column;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
-
- 
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.3vw;
 }
 
 .alianzas a span {
-  
   padding: 0;
   margin: 0 auto;
   width: 4rem;
@@ -213,8 +186,6 @@ box-shadow: -7px 3px 55px -11px rgba(255,255,255,1);
   -webkit-box-shadow: -16px 3px 135px 10px rgba(8, 8, 8, 1);
   -moz-box-shadow: -16px 3px 135px 10px rgba(8, 8, 8, 1);
   box-shadow: -16px 3px 135px 10px rgba(8, 8, 8, 1);
-
-
 }
 
 .alianzas img {
@@ -234,9 +205,7 @@ box-shadow: -7px 3px 55px -11px rgba(255,255,255,1);
   margin: 0;
   top: 23%;
   left: 30%;
-
 }
-
 
 .rectangulo {
   width: 50%;
@@ -245,22 +214,24 @@ box-shadow: -7px 3px 55px -11px rgba(255,255,255,1);
   top: 60%;
   left: 25%;
   background: rgb(8, 7, 32);
-  background: linear-gradient(90deg, rgba(8, 7, 32, 1) 0%, rgba(1, 209, 88, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(8, 7, 32, 1) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
   border-radius: 2.5rem;
   text-align: center;
   z-index: 5;
 }
 
 .rectangulo p {
-
-  
   font-weight: 700;
   position: relative;
   top: 50%;
   color: rgb(255, 255, 255);
-  font-size: 1.5rem;
+  font-size: 2vw;
   font-weight: 100;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 .rectangulo-medio {
@@ -286,9 +257,9 @@ box-shadow: -7px 3px 55px -11px rgba(255,255,255,1);
   text-align: center;
 }
 .mensaje p {
-  font-size: 2rem;
+  font-size: 2.3vw;
   font-weight: 300;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 .puntero {
   position: absolute;
@@ -299,6 +270,5 @@ box-shadow: -7px 3px 55px -11px rgba(255,255,255,1);
   margin: 0;
   top: 82%;
   left: 40%;
-
 }
 </style>
