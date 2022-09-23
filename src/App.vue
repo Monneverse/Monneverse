@@ -10,6 +10,7 @@ import Benefits from "./components/Benefits.vue";
 import Alianzas from "./components/Alianzas.vue";
 import Exchanges from "./components/Exchanges.vue";
 import Logos_auditorias from "./components/Logos_auditorias.vue";
+import News from "./components/News.vue";
 </script>
 
 
@@ -62,6 +63,9 @@ import Logos_auditorias from "./components/Logos_auditorias.vue";
     <div :class="{container:true,  'mostrar-container':index_pagina==9}">
       <Benefits />
     </div>
+    <div :class="{container:true, 'mostrar-container':index_pagina==10}">
+      <News />
+    </div>
 
   </main>
 </template>
@@ -75,7 +79,7 @@ export default {
     return {
       index: 1,
       index_pagina: 1,
-      limite: 9
+      limite: 10
 
     };
   },

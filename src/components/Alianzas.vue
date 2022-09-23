@@ -8,7 +8,6 @@
   <div class="mastercard_img">
     <img src="/img/Alianzas/mastercard.png" />
   </div>
-
   <div class="circulos_redes">
     <div class="semi_circle">
       <img src="/img/semi_circulo.png" />
@@ -64,7 +63,7 @@
   src: url("../assets/fonts/Work+Sans:wght@700&display=swap");
 }
 
-/*FONDO*/
+/*INICIO ESTILO FONDO*/
 
 img {
   height: 100%;
@@ -130,7 +129,29 @@ img {
   min-width: 30rem;
 }
 
-/*FIN FONDO*/
+.degradado_azuliz {
+  background: linear-gradient(to right, #08047A 0.5%, transparent);
+  position: absolute;
+  transform: rotate(-60deg);
+  top: 0%;
+  right: 50%;
+  width: 50%;
+  height: 180%;
+  z-index: 3;
+}
+
+.degradado_azulde {
+  background: linear-gradient(to right, #08047A 0.5%, transparent);
+  position: absolute;
+  transform: rotate(230deg);
+  top: -12%;
+  left: 50%;
+  width: 50%;
+  height: 180%;
+  z-index: 3;
+}
+
+/*FIN ESTILO FONDO*/
 
 .upcoming_alliance {
   position: relative;
@@ -218,35 +239,11 @@ img {
   z-index: 8;
 }
 
-
-
 .icon {
   width: 3rem;
   height: auto;
   z-index: 18;
   margin-left: 1rem;
   z-index: 8;
-}
-
-.degradado_azuliz {
-  background: linear-gradient(to right, #08047A 0.5%, transparent);
-  position: absolute;
-  transform: rotate(-60deg);
-  top: 0%;
-  right: 50%;
-  width: 50%;
-  height: 180%;
-  z-index: 3;
-}
-
-.degradado_azulde {
-  background: linear-gradient(to right, #08047A 0.5%, transparent);
-  position: absolute;
-  transform: rotate(230deg);
-  top: -12%;
-  left: 50%;
-  width: 50%;
-  height: 180%;
-  z-index: 3;
 }
 </style>
