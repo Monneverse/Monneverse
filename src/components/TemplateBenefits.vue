@@ -1,119 +1,139 @@
 <script>
-  
-  export default{
-
-
-
-data(){
-  return{
-    valores: [
-      {icono:'/img/Alianzas/telegram.png',symbol: '$', precio:'1,5', moneda:'USD', sale_price:'Pre-sale Price', texto:''},
-      {icono:'/img/Alianzas/telegram.png',symbol: '$', precio:'22,5', moneda:'USD', sale_price:'Sale Price',texto:'The price on Pancakeswap for purchases and sales will be $22,6 one day after the pre-sale of our first 2,000,000 Monners to the public ends'},
-      {icono:'/img/Alianzas/telegram.png',symbol: '',  precio:'12%*48h', moneda:'', sale_price:'Sale Price', texto:'Enter our first phase os staking buying in pre-sale and earn 12.6% every 48 hours of your total capital in Monnercoins after the launch in Pancakeswap'},
-    ],
-   
-  }
-}
+export default {
+  data() {
+    return {
+      valores: [
+        {
+          icono: "/img/plus.svg",
+          symbol: "$",
+          precio: "1,5",
+          moneda: "USD",
+          sale_price: "Pre-sale Price",
+          texto: "",
+        },
+        {
+          icono: "/img/plus.svg",
+          symbol: "$",
+          precio: "22,5",
+          moneda: "USD",
+          sale_price: "Sale Price",
+          texto:
+            "The price on Pancakeswap for purchases and sales will be $22,6 one day after the pre-sale of our first 2,000,000 Monners to the public ends",
+        },
+        {
+          icono: "/img/plus.svg",
+          symbol: "",
+          precio: "12%*48h",
+          moneda: "",
+          sale_price: "Sale Price",
+          texto:
+            "Enter our first phase os staking buying in pre-sale and earn 12.6% every 48 hours of your total capital in Monnercoins after the launch in Pancakeswap",
+        },
+      ],
+    };
+  },
 };
 </script>
 
-
 <template>
-      <div v-for="valor in valores" class="benefit" >
-        <div class="content_price">
-        <i><img class="icon-discord " :src= valor.icono alt=""></i>    
-        <h1 class="dolar">{{valor.symbol}}</h1>
-        <h1>{{valor.precio}}</h1> 
-        <span>{{valor.moneda}}</span>
-        </div>
-        <div class="content_text">
-        <h3>{{valor.sale_price}}</h3>
-        <p v-show="valor.texto">
-          {{valor.texto}}
-        </p>
-       </div>
-      </div>
+  <div v-for="valor in valores" class="benefit">
+    <i><img class="icon-discord" :src="valor.icono" alt="" /></i>
+    <div class="content_price">
+      <h1></h1>
+      <h1>
+        <b class="dolar">{{ valor.symbol }}</b
+        >{{ valor.precio }}<span>{{ valor.moneda }}</span>
+      </h1>
+    </div>
+    <div class="content_text">
+      <h3>{{ valor.sale_price }}</h3>
+      <p v-show="valor.texto">
+        {{ valor.texto }}
+      </p>
+    </div>
+  </div>
 </template>
 
+<style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;700&display=swap");
 
-
-<style scoped >
-  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;700&display=swap');
-
-.benefit{
-
+.benefit {
   width: 50%;
   height: 15%;
-  
-  margin-bottom: 8%;
- 
+
+  margin-bottom: 5%;
+
   color: white;
   display: flex;
-  flex-direction: column;
-  
-  font-family: 'Work Sans', sans-serif;
+  flex-wrap: wrap;
+  font-family: "Work Sans", sans-serif;
 }
-.benefit:last-child{
-  margin: 0;
-  width: 70%;
-  
-}
-.benefit:last-child p{
-  margin: 0;
-  width: 70%;
-}
-.benefit h1{
- 
- font-weight: 500;
- font-size: 5rem;
 
+.benefit:nth-child(2) {
+  width: 58%;
+  margin-bottom: 10%;
 }
-.dolar{
-  color: rgb(55, 243, 149);
+.benefit:nth-child(3) {
+  margin: 0;
+  width: 75%;
 }
-.benefit span{
- display: flex;
- font-size: 1rem;
-  
-}
-.content_price{
-width: 70%;
-background-color: #161431;
-border-radius: .5rem;
-display: flex;
-justify-content: center;
-align-items: flex-end;
-height: 100%;
-}
-.content_text{
-  padding-left: 5%;
+
+.benefit h1 {
   width: 100%;
+  font-weight: 500;
+  font-size: 6vw;
+  text-align: center;
 }
-.content_text h3{
+
+.benefit span {
+  font-size: 1.5vw;
+}
+.dolar {
+  color: rgb(55, 243, 149);
+  font-size: 6vw;
+}
+.content_price {
+  width: 70%;
+  height: 100%;
+  background-color: #161431;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 10% 70%;
+  align-items: center;
+}
+.content_text {
+  position: relative;
+  left: 15%;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.content_text h3 {
+  font-size: 1.6vw;
+  font-weight: 400;
+}
+.content_text p {
+  width: 80%;
   font-weight: 300;
-}
-.content_text p{
-  font-weight: 100;
-  font-size: 0.8rem;
+  font-size: .9vw;
   text-align: justify;
-  
+  align-items: left;
 }
-i{
+i {
+  position: relative;
+  left: 4%;
   height: 100%;
   display: flex;
-  
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
 }
-i img{
-  position: relative;
+i img {
   align-items: flex-start;
   top: 0;
   right: 4%;
-  height: 40%;
+  height: 50%;
 }
-
-
-
-
 </style>
