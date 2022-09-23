@@ -85,6 +85,7 @@ export default {
   text-align: center;
 }
 
+
 .benefit span {
   font-size: 1.5vw;
 }
@@ -100,7 +101,13 @@ export default {
   display: grid;
   grid-template-columns: 10% 70%;
   align-items: center;
+  justify-items: center;
+  transition: 0.5s ease-in;
 }
+.content_price:hover {
+  box-shadow: 5px 5px 40px rgb(55, 243, 149, 0.2);
+}
+
 .content_text {
   position: relative;
   left: 15%;
@@ -118,7 +125,7 @@ export default {
 .content_text p {
   width: 80%;
   font-weight: 300;
-  font-size: .9vw;
+  font-size: 0.9vw;
   text-align: justify;
   align-items: left;
 }
