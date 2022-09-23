@@ -57,7 +57,7 @@ import News from "./components/News.vue";
     </div>
 
     <div :class="{container:true,  'mostrar-container':index_pagina==8}">
-      <Certificado />
+      <Certificado :index=index :index_pagina=index_pagina />
     </div>
 
     <div :class="{container:true,  'mostrar-container':index_pagina==9}">
