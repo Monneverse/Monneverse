@@ -8,8 +8,14 @@
 
     <div class="fondo_Proximalianza">
         <h1>UPCOMING ALLIANCES</h1>
-        <img src="/img/Alianzas/visa.svg" alt="">
-        <img src="/img/Alianzas/mastercard-4.svg" alt="">
+        <div class="imagen_Proximalianza" >
+            <img src="/img/Alianzas/visa.svg" alt="" > 
+        </div>
+        
+        <div  class="imagen_Proximalianza2">
+            <img src="/img/Alianzas/masterCard.svg" alt="">
+        </div>
+        
     </div>
 
 </template>
@@ -30,7 +36,6 @@ img {
   z-index: 0;
 }
 
-
 .fondoTokenomics {
   position: absolute;
   top: 0;
@@ -40,30 +45,44 @@ img {
   z-index: 1;
 }
 
-.fondo_Proximalianza{
-    position: absolute;
-    align-items: center;
-    bottom: 0%;
-    left: 30%;
-    background-color: black;
-    width: 30%;
-    height: 10%;
-    border: 1px solid white;
-    z-index: 2;
+.fondo_Proximalianza {
+  position: absolute;
+  align-items: center;
+  bottom: 0%;
+  left: 30%;
+  background-color: black;
+  width: 30%;
+  height: 10%;
+  border: 1px solid white;
+  z-index: 2;
+  opacity: 70%;
 }
 
-h1{
-    font-size: 150%;
-    position: relative;
-    margin-left: 5%;
-    margin-top: 6%;
-    color: white;
+h1 {
+  font-size: 150%;
+  position: relative;
+  margin-left: 5%;
+  margin-top: 6%;
+  color: white;
 }
 
+.imagen_Proximalianza {
+  position: absolute;
+  top: 0;
+  left: 55%;
+  width: 20%;
+  height: 100%;
+}
 
+.imagen_Proximalianza2 {
+  position: absolute;
+  top: 0;
+  left: 75%;
+  width: 20%;
+  height: 100%;
+}
 </style>
 
 <script>
-
 
 </script>
