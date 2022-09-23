@@ -154,7 +154,7 @@ img {
   width: 17.9%;
   height: 31%;
   top: 37%;
-  left: 25%;
+  left: 18%;
   z-index: 5;
 }
 
@@ -168,7 +168,7 @@ img {
   width: 17.9%;
   height: 31%;
   top: 37%;
-  right: 34%;
+  right: 22%;
   z-index: 5;
 }
 
@@ -208,8 +208,8 @@ img {
 
 .logo-redes {
   position: absolute;
-  bottom: 13%;
-  left: 43.5%;
+  bottom: 11%;
+  left: 42.5%;
   width: 20rem;
   height: 5rem;
   z-index: 14;
@@ -221,7 +221,7 @@ img {
 
 
 .icon {
-  width: 4rem;
+  width: 3rem;
   height: auto;
   z-index: 18;
   margin-left: 1rem;

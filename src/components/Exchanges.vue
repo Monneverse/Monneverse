@@ -27,14 +27,53 @@ import ComponenteIconos from "./componenteIconos.vue";
   </div>
 
   <div class="contenedor_moneda">
-    <div class="moneda">
+    <div class="pancake">
       <ComponenteIconos iconos="/img/Exchanges/bunny-color.svg" iconname="pancakeswap" />
+    </div>
+    <div class="kucoin">
       <ComponenteIconos iconos="/img/Exchanges/Kucoin.svg" iconname="kucoin" />
+    </div>
+    <div class="gateio">
       <ComponenteIconos iconos="/img/Exchanges/Gatebw.svg" iconname="gate.io" />
+    </div>
+    <div class="lbank">
       <ComponenteIconos iconos="/img/Exchanges/lbank2.svg" iconname="LBank" />
+    </div>
+    <div class="okx">
       <ComponenteIconos iconos="/img/Exchanges/okxlogo.svg" iconname="okx" />
     </div>
+    <div class="coingecko">
+      <ComponenteIconos iconos="/img/Exchanges/CoinGecko.svg " iconname="coingecko" />
+    </div>
+    <div class="mexcglobal">
+      <ComponenteIconos iconos="/img/Exchanges/mexclogo.png" iconname="mexc global" />
+    </div>
+    <div class="xtcom">
+      <ComponenteIconos iconos="/img/Exchanges/xtcom.png" iconname="xt.com" />
+    </div>
+    <div class="poloniex">
+      <ComponenteIconos iconos="/img/Exchanges/Poloniex.svg" iconname="poloniex" />
+    </div>
+    <div class="hotbit">
+      <ComponenteIconos iconos="/img/Exchanges/hotbit.png" iconname="hotbit" />
+    </div>
+    <div class="coinmarket">
+      <ComponenteIconos iconos="/img/Exchanges/coinmarket.svg" iconname="coinmarket" />
+    </div>
+    <div class="ftx">
+      <ComponenteIconos iconos="/img/Exchanges/ftx.ico" iconname="ftx" />
+    </div>
+    <div class="latoken">
+      <ComponenteIconos iconos="/img/Exchanges/latoken.svg" iconname="latoken" />
+    </div>
+    <div class="bitrue">
+      <ComponenteIconos iconos="/img/Exchanges/bitrue-coin.png" iconname="bitrue" />
+    </div>
+    <div class="favicon">
+      <ComponenteIconos iconos="/img/Exchanges/favicon.ico" iconname="favicon" />
+    </div>
   </div>
+
 </template>
 
 <style scoped>
@@ -52,7 +91,6 @@ img {
   width: 100%;
   display: flex;
 }
-
 
 .exchange_text {
   display: block;
@@ -104,13 +142,27 @@ img {
 
 /*ICONOS EXCHANGES*/
 .contenedor_moneda {
-  width: 57%;
+  width: 60%;
   height: 75%;
   position: absolute;
   top: 20%;
-  left: 40%;
-  display: inline-block;
+  left: 35%;
+  display: grid;
+  grid-template-columns: 33% 33% 31%;
+  grid-template-rows: 18% 18% 18% 18% 18%;
+  gap: 1%;
   z-index: 7;
+}
+
+.contenedor_moneda>div {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .moneda {
