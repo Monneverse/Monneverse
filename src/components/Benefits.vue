@@ -1,5 +1,8 @@
 <script setup>
+
 import Benefits from "./TemplateBenefits.vue";
+import Circulos from "./ComponentesCirculo.vue";
+
 </script>
 <template>
   <!--FONDO-->
@@ -17,15 +20,34 @@ import Benefits from "./TemplateBenefits.vue";
     <div class="titulo">
       <h1>BENEFITS</h1>
     </div>
-    <div class="benefits">
+    <div class="display_flex">
+      <div class="benefits">
       <Benefits />
     </div>
+    <div class="circulos">
+    
+      <Circulos />
+
+    </div>
+    </div>
+   
+
+
   </div>
 </template>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
+.display_flex{
+
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+}
 .logo {
   position: absolute;
   top: 2rem;
@@ -90,5 +112,18 @@ import Benefits from "./TemplateBenefits.vue";
   width: 20%;
   min-height: 15%;
 }
+.circulos{
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  top: 38%;
+  left: 35%;
+  transform: rotate(225deg);
+}
+
 
 </style>
