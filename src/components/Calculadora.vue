@@ -201,16 +201,41 @@ img {
   width: 40%;
   min-width: 30rem;
   top: 20%;
+  
 }
 
 .circuito-izquierdo {
   left: -10%;
+  animation-name: mover_izquierdo;
+  animation-duration: 5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
-
+@keyframes mover_izquierdo {
+  0%{
+    left: -10%;
+  }
+  100%{
+    left: 0%;
+  }
+  
+}
 .circuito-derecho {
   right: -10%;
+  animation-name: mover_derecho;
+  animation-duration: 5s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
 }
-
+@keyframes mover_derecho {
+  0%{
+    right: -10%;
+  }
+  100%{
+    right: 0%;
+  }
+  
+}
 .contenido {
   position: absolute;
   top: 0;
