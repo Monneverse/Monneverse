@@ -1,35 +1,64 @@
-
 <template>
 
+  <!-- Fondo de la calculadora -->
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
   <div class="fondo fondo-montana">
     <img src="/img/fondo-montana.png" />
   </div>
   <div class="fondo fondo-oscurecer"></div>
-  <div class="circuito-izquierdo">
+
+
+  <div class="circuito circuito-izquierdo">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
   </div>
-  <div class="circuito-derecho">
+  <div class="circuito circuito-derecho">
     <img src="/img/calculadora/circuito-derecho.png" alt="" />
   </div>
-  <div class="medidor">
-    <div class="circulo">
-      <img src="../assets/circulo-blanco.svg" srcset="">
-    </div>
+  <div class="degradado degradado_izquierdo"></div>
+  <div class="degradado degradado_derecho"></div>
 
-    <div class="circulo">
-      <img src="../assets/circulo-colores.svg" alt="" srcset="">
-    </div>
-    <div class="circulo indicador">
+  <div class="contenido">
+    <div class="calculadora">
+      <div class="circulo">
+        <img src="../assets/circulo-blanco.svg" srcset="">
+      </div>
 
-      <img id="indicador-img" class="hour48" src="../assets/indicador.svg">
-      <div id="indicador" @click="CambiarMonth" class="descripcion">
-        <p id="cantidad">48</p>
-        <p id="medida">HOURS</p>
+      <div class="circulo circulo-superior">
+        <img src="../assets/circulo-colores.svg" alt="" srcset="">
+      </div>
+      <div class="circulo indicador">
+
+        <img id="indicador-img" class="hour48" src="../assets/indicador.svg">
+        <div id="indicador" @click="CambiarMonth" class="descripcion">
+          <p id="cantidad">0</p>
+          <p id="medida">HOURS</p>
+        </div>
+      </div>
+      <div class="indicador-texto">
+        <p id="month-1">24 h</p>
+        <p id="month-2">48 h</p>
+
+      </div>
+      <div class="form-controles">
+        <div class="control">
+          <input type="number" min="0" @input="Calculator" name="inversion" id="inversion" v-model="inversion"
+            placeholder="$ 100">
+          <label for="inversion">Invert</label>
+        </div>
+        <div class="porcentaje">
+          <p>{{porcentajeInteres}}%</p>
+        </div>
+        <div class="control">
+          <input type="number" name="interes" id="interes" v-model="interes" placeholder="$ 100" disabled>
+          <label for="interes">Interest</label>
+
+        </div>
       </div>
     </div>
   </div>
+
+
 
   <div class="informacion">
     <p id="title">12%<span>*</span>48h</p>
@@ -38,22 +67,8 @@
     </p>
   </div>
 
-  <p id="month-1">1st Month</p>
-  <p id="month-2">2st Month</p>
-  <div class="form-controles">
 
-    <p></p>
-    <div class="inversion">
-      <input type="number" min="0" @input="Calculator" name="inversion" id="inversion" v-model="inversion" placeholder="$ 100">
-      <label class="tag-inversion" for="inversion">Invert</label>
 
-    </div>
-    <div class="interes">
-      <input type="number" name="interes" id="interes" v-model="interes" placeholder="$ 100" disabled>
-      <label class="tag-inversion" for="interes">Interest</label>
-
-    </div>
-  </div>
   <div class="logo-redes">
     <div class="icon icon-telegram">
       <a href="https://t.me/monnerversecommunity" target="_blank">
@@ -77,27 +92,27 @@
 <script>
 
 
-const State = Object.freeze({ Hour48: 1, Month1: 2, Month2: 3 });
+const State = Object.freeze({ Hour0: 1, Hour24: 2, Hour48: 3 });
 export default {
 
   data() {
     return {
-      inversion: 0,
+      inversion: 100,
       porcentajeInteres: 12.6,
       interes: 0,
-      meses: State.Hour48,
+      meses: State.Hour0,
       cantidadMes: 30
     };
   },
   methods: {
     Calculator() {
-    
-      if (this.meses == State.Hour48) {
-        this.interes = (this.inversion * (this.porcentajeInteres / 100)).toFixed(2);;
-      } else if (this.meses == State.Month1) {
-        this.interes = ((this.inversion * (this.porcentajeInteres / 100)) * (this.cantidadMes / 2)).toFixed(2);;
+
+      if (this.meses == State.Hour0) {
+        this.interes =0;
+      } else if (this.meses == State.Hour24) {
+        this.interes = ((this.inversion * (this.porcentajeInteres / 100)) /2).toFixed(2);;
       } else {
-        this.interes  = ((this.inversion * (this.porcentajeInteres / 100)) * (this.cantidadMes)).toFixed(2);
+        this.interes = ((this.inversion * (this.porcentajeInteres / 100)) ).toFixed(2);
       }
 
     },
@@ -110,27 +125,25 @@ export default {
       if (this.meses < 3) {
         this.meses++;
       } else {
-        this.meses = State.Hour48;
+        this.meses = State.Hour0;
       }
-      if (this.meses == State.Hour48) {
-        txtCantidad.innerText = "48";
+      if (this.meses == State.Hour0) {
+        txtCantidad.innerText = "0";
         txtMedida.innerText = "HOURS";
         imgIndicador.classList.add("hour48")
-      } else if (this.meses == State.Month1) {
-        txtCantidad.innerText = "1st";
-        txtMedida.innerText = "MONTH";
+      } else if (this.meses == State.Hour24) {
+        txtCantidad.innerText = "24";
+        txtMedida.innerText = "HOURS";
         imgIndicador.classList.add("month1")
       } else {
         imgIndicador.classList.add("month2")
-        txtCantidad.innerText = "2st";
-        txtMedida.innerText = "MONTH";
+        txtCantidad.innerText = "48";
+        txtMedida.innerText = "HOURS";
       }
       this.Calculator();
     }
   },
   mounted() {
-   
-    this.inversion = 10;
     this.Calculator();
   }
 }
@@ -171,9 +184,6 @@ img {
 }
 
 .fondo-montana {
-  height: 100%;
-  top: 0%;
-  left: 0;
   z-index: 2;
 }
 
@@ -184,38 +194,154 @@ img {
   mix-blend-mode: multiply;
 }
 
-.circuito-izquierdo {
+.circuito {
   position: absolute;
   z-index: 4;
-  left: -10%;
-  top: 20%;
   height: 80%;
   width: 40%;
   min-width: 30rem;
+  top: 20%;
+}
+
+.circuito-izquierdo {
+  left: -10%;
 }
 
 .circuito-derecho {
-  position: absolute;
-  z-index: 4;
   right: -10%;
-  top: 20%;
-  height: 80%;
-  width: 40%;
-  min-width: 30rem;
 }
 
-.medidor {
+.contenido {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 7;
-  height: 90%;
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  user-select: none;
 }
+
+.calculadora {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  height: 90%;
+  width: 90%;
+  max-width: 60rem;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+}
+
+
+.circulo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.circulo img {
+  height: 60%;
+  width: 70%;
+}
+
+.indicador img {
+  position: relative;
+  top: 2rem;
+  right: 0rem;
+  width: 40%;
+  max-width: 15rem;
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.4s ease-in 0s;
+}
+
+
+.form-controles {
+  position: absolute;
+  top: 82%;
+  left: 0%;
+  width: 100%;
+  z-index: 8;
+  display: flex;
+  justify-content: center;
+}
+
+.control {
+  color: #f9f9fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.control>input {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.5rem;
+  color: #067F4E;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 8rem;
+  min-height: 2.5rem;
+  border-radius: 2rem;
+  max-width: 8rem;
+  text-align: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+#interes:disabled {
+  background-color: white;
+  user-select: none;
+  pointer-events: none;
+}
+
+.control>label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0rem;
+  text-align: center;
+  width: 5rem;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+.porcentaje>p{
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+}
+.indicador-texto{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.indicador-texto > p{
+  font-family: 'Work Sans', sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  z-index: 9;
+}
+#month-1 {
+  top: 23%;
+}
+
+#month-2 {
+  top: 75%;
+  left: 75%;
+}
+
 
 .descripcion {
   color: white;
@@ -241,35 +367,11 @@ img {
   font-size: 3rem;
 }
 
-.circulo {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.circulo img {
-  margin-top: 0%;
-  height: 55%;
-  width: 70%;
-}
 
-.indicador img {
-  position: relative;
-  top: 2rem;
-  right: 0rem;
-  scale: .5;
 
-  user-select: none;
-  pointer-events: none;
-  transition: transform 0.4s ease-in 0s;
-}
 
+/* Clases de animaciones */
 .hour48 {
   transform: rotate(-80deg);
 }
@@ -280,55 +382,6 @@ img {
 
 .month2 {
   transform: rotate(200deg);
-}
-
-.form-controles {
-  position: absolute;
-  top: 75%;
-  left: 0%;
-  z-index: 9;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-.inversion,
-.interes {
-  color: #f9f9fa;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#inversion,
-#interes {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1.5rem;
-  color: #067F4E;
-  padding-right: 1rem;
-  width: 8rem;
-  min-height: 2.5rem;
-  border-radius: 2rem;
-  max-width: 8rem;
-  text-align: center;
-  margin-left: 5rem;
-  margin-right: 5rem;
-}
-#interes:disabled{
-  background-color: white;
-  user-select: none;
-  pointer-events: none;
-}
-.tag-inversion {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1.5rem;
-  color: white;
-  padding: 0rem;
-  text-align: center;
-  width: 5rem;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
 }
 
 .informacion {
@@ -359,31 +412,6 @@ img {
 
 }
 
-
-
-
-
-
-#month-1 {
-  font-family: 'Work Sans', sans-serif;
-  color: white;
-  font-size: 1.5rem;
-  position: absolute;
-  top: 15%;
-  left: 46.5%;
-  z-index: 11;
-}
-
-#month-2 {
-  font-family: 'Work Sans', sans-serif;
-  color: white;
-  font-size: 1.5rem;
-  position: absolute;
-  top: 70%;
-  left: 60%;
-  z-index: 11;
-}
-
 .logo-redes {
   position: absolute;
   bottom: 0%;
@@ -400,20 +428,42 @@ img {
 .icon {
   width: 3rem;
   height: auto;
-  z-index: 18;
   margin-left: 1rem;
 }
-
-
-
-.icon-discord > img {
-  border-radius: 50%;
-  background-color: #5865F2;
-  width: 4rem;
-  height: 4rem;
+.degradado{
+  background: linear-gradient(to right, #08047A 0.5%, transparent);
+  position: absolute;
+  width: 50%;
+  height: 180%;
+  z-index: 3;
+  animation-duration: 3s;
+  animation-name: luz;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.degradado_izquierdo {
+  transform: rotate(-60deg);
+  top: 0%;
+  right: 50%;
 }
 
+.degradado_derecho{
+  transform: rotate(230deg);
+  top: -12%;
+  left: 50%;
+}
 
+@keyframes luz {
+ 0%{
+  opacity: 20%;
+ }
+ 50% {
+  opacity: 50%;
+ }
+ 100%{
+  opacity: 100%;
+ }
+}
 </style>
 
 
