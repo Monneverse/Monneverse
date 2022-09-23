@@ -440,16 +440,15 @@ img {
   animation-name: luz;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  top: 0%;
 }
 .degradado_izquierdo {
   transform: rotate(-60deg);
-  top: 0%;
   right: 50%;
 }
 
 .degradado_derecho{
   transform: rotate(230deg);
-  top: -12%;
   left: 50%;
 }
 
