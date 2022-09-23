@@ -437,7 +437,11 @@ img {
 .informacion #title {
   font-size: 10vh;
 }
-
+@media( max-width: 1400px){
+  .informacion #title {
+  font-size: 8vh;
+}
+}
 .informacion #title span {
   color: #01C28D;
   font-family: 'Work Sans', sans-serif;
