@@ -1,8 +1,6 @@
 <script setup>
-
 import Benefits from "./TemplateBenefits.vue";
 import Circulos from "./ComponentesCirculo.vue";
-
 </script>
 <template>
   <!--FONDO-->
@@ -20,33 +18,48 @@ import Circulos from "./ComponentesCirculo.vue";
     <div class="titulo">
       <h1>BENEFITS</h1>
     </div>
+
     <div class="display_flex">
       <div class="benefits">
-      <Benefits />
+        <Benefits />
+      </div>
+      <div class="circulos">
+        <Circulos />
+      </div>
     </div>
-    <div class="circulos">
-    
-      <Circulos />
-
+    <div class="logo-redes">
+      <div class="icon icon-telegram">
+        <a href="https://t.me/monnerversecommunity" target="_blank">
+          <img
+            src="../assets/Telegram_logo.svg"
+            alt="logo telegram"
+            srcset=""
+          />
+        </a>
+      </div>
+      <div class="icon icon-reddit">
+        <a href="https://www.reddit.com/user/monnerverse" target="_blank">
+          <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
+        </a>
+      </div>
+      <div class="icon icon-discord">
+        <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+          <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+        </a>
+      </div>
     </div>
-    </div>
-   
-
-
   </div>
 </template>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
-.display_flex{
-
+.display_flex {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
   height: 100%;
   margin: 0 auto;
-
 }
 .logo {
   position: absolute;
@@ -112,18 +125,32 @@ import Circulos from "./ComponentesCirculo.vue";
   width: 20%;
   min-height: 15%;
 }
-.circulos{
-  margin: 0 auto;
+.circulos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 50%;
   height: 50%;
   position: relative;
-  top: 38%;
+  top: 35%;
   left: 35%;
   transform: rotate(225deg);
+
+}
+.logo-redes {
+  position: absolute;
+  bottom: 0%;
+  left: 1rem;
+  width: 20rem;
+  height: 5rem;
+  z-index: 14;
+  display: flex;
+  justify-content: start;
 }
 
-
+.icon  img{
+  width: 3.5vw;
+  height: auto;
+  margin-left: 1rem;
+}
 </style>

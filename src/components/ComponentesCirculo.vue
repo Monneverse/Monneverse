@@ -27,14 +27,17 @@ export default {
 
 <template>
   <div v-for="value in values" class="circulo">
-    <h2
-      :class="{
-        blanco: value.color == 'blanco',
-        verde: value.color == 'verde',
-      }"
-    >
-      {{ value.texto }}
-    </h2>
+    <div class="contenedor">
+      <i><img alt="" /></i>
+      <h2
+        :class="{
+          blanco: value.color == 'blanco',
+          verde: value.color == 'verde',
+        }"
+      >
+        {{ value.texto }}
+      </h2>
+    </div>
   </div>
 </template>
 
@@ -42,7 +45,6 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;700&display=swap");
 
 .circulo {
-  margin-top: 0;
   margin-left: 5%;
   border-radius: 100%;
   z-index: 5;
@@ -52,10 +54,14 @@ export default {
   margin-bottom: 5%;
   color: white;
   font-family: "Work Sans", sans-serif;
+  display: flex;
   text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(135deg);
 }
 .circulo h2 {
-  transform: rotate(135deg);
 }
 .circulo:nth-child(1) {
   background-color: white;
@@ -77,18 +83,25 @@ export default {
 .circulo:nth-child(4) {
   background-color: white;
 }
-.circulo h2{
-  
+.circulo h2 {
+  text-align: center;
   background-color: rgb(82, 80, 80, 0.6);
-
+}
+.contenedor {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  align-items: center;
 }
 .verde {
   color: rgba(1, 209, 88, 1);
   border: 2px solid rgba(1, 209, 88, 1);
-  
+  border-radius: 2rem;
 }
 .blanco {
   color: white;
   border: 2px solid rgb(219, 219, 237);
+  border-radius: 2rem;
 }
 </style>
