@@ -26,10 +26,6 @@
 <script>
 export default {
   props: {
-    index: {
-      type: Number,
-      required: true,
-    },
     index_pagina: {
       type: Number,
       required: true,

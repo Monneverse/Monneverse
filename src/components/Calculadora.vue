@@ -73,7 +73,7 @@
 
 
 
-  <div class="logo-redes">
+  <div :class="{'logo-redes':true, 'logo-redes-animation':index_pagina==4} ">
     <div class="icon icon-telegram">
       <a href="https://t.me/monnerversecommunity" target="_blank">
         <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="">
@@ -98,7 +98,12 @@
 
 const State = Object.freeze({ Hour0: 1, Hour24: 2, Hour48: 3 });
 export default {
-
+  props: {
+    index_pagina: {
+      type: Number,
+      required: true,
+    },
+  },
   data() {
     return {
       inversion: 100,
@@ -261,7 +266,7 @@ img {
 .calculadora {
   position: relative;
   top: 0%;
-  left: 0%;
+  left: 15%;
   height: 90%;
   width: 90%;
   max-width: 60rem;
@@ -468,7 +473,7 @@ img {
 }
 .logo-redes {
   position: absolute;
-  bottom: 0%;
+  bottom: 1rem;
   left: 1rem;
   width: 20rem;
   height: 5rem;
@@ -476,7 +481,20 @@ img {
   display: flex;
   justify-content: start;
 }
-
+.logo-redes-animation {
+  animation-name: redes_animation;
+  animation-duration: 3s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+@keyframes redes_animation{
+  0%{
+    left: 45%;
+  }
+  100%{
+    left: 1rem;
+  }
+}
 
 
 .icon {

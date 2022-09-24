@@ -43,7 +43,7 @@ import Fases from "./components/Fases.vue";
     </div>
 
     <div :class="{container:true,  'mostrar-container':index_pagina==4}">
-      <Calculadora />
+      <Calculadora :index_pagina=index_pagina />
     </div>
 
     <div :class="{container:true,  'mostrar-container':index_pagina==5}">
@@ -59,7 +59,7 @@ import Fases from "./components/Fases.vue";
     </div>
 
     <div :class="{container:true,  'mostrar-container':index_pagina==8}">
-      <Certificado :index=index :index_pagina=index_pagina />
+      <Certificado :index_pagina=index_pagina />
     </div>
 
     <div :class="{container:true,  'mostrar-container':index_pagina==9}">
