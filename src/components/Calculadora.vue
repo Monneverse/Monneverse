@@ -38,7 +38,7 @@
       <div class="indicador-texto">
         <p id="month-1">24 h</p>
         <p id="month-2">48 h</p>
-
+        <div class="circulo-indicador"></div>
       </div>
       <div class="form-controles">
         <div class="control">
@@ -385,7 +385,15 @@ img {
   top: 75%;
   left: 75%;
 }
-
+.circulo-indicador{
+  position: absolute;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: white;
+  height: 3rem;
+  top: 17%;
+  z-index: 10;
+}
 
 .descripcion {
   color: white;
@@ -442,11 +450,13 @@ img {
 .informacion #title {
   font-size: 10vh;
 }
-@media( max-width: 1400px){
+
+@media(max-width: 1400px) {
   .informacion #title {
-  font-size: 8vh;
+    font-size: 8vh;
+  }
 }
-}
+
 .informacion #title span {
   color: #01C28D;
   font-family: 'Work Sans', sans-serif;
@@ -459,18 +469,21 @@ img {
   text-transform: uppercase;
 
 }
-.titulo-imagen{
+
+.titulo-imagen {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 6rem;
 }
-.titulo-imagen>img{
+
+.titulo-imagen>img {
   width: 3rem;
   height: auto;
   margin-right: 1rem;
 
 }
+
 .logo-redes {
   position: absolute;
   bottom: 1rem;
@@ -481,17 +494,20 @@ img {
   display: flex;
   justify-content: start;
 }
+
 .logo-redes-animation {
   animation-name: redes_animation;
   animation-duration: 3s;
   animation-direction: normal;
   animation-iteration-count: 1;
 }
-@keyframes redes_animation{
-  0%{
+
+@keyframes redes_animation {
+  0% {
     left: 45%;
   }
-  100%{
+
+  100% {
     left: 1rem;
   }
 }
@@ -540,7 +556,6 @@ img {
   }
 
 }
-
 </style>
 
 
