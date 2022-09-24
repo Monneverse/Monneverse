@@ -12,6 +12,7 @@ import Exchanges from "./components/Exchanges.vue";
 import Logos_auditorias from "./components/Logos_auditorias.vue";
 import News from "./components/News.vue";
 import Tokenomics from "./components/Tokenomics.vue";
+import Fases from "./components/Fases.vue";
 </script>
 
 
@@ -69,6 +70,9 @@ import Tokenomics from "./components/Tokenomics.vue";
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==11}">
       <News />
+    </div>
+    <div :class="{container:true, 'mostrar-container':index_pagina==11}">
+      <Fases />
     </div>
 
   </main>

@@ -36,7 +36,7 @@ defineProps({
   height: 70%;
   z-index: 7;
   left: -4%;
-  width: 24%;
+  width: 25%;
   top: -4%;
 }
 
@@ -62,10 +62,10 @@ defineProps({
   position: relative;
   border-radius: 40%;
   overflow: hidden;
-  min-width: 60px;
+  min-width: 4.5vw;
   height: 95%;
   padding: 0%;
-  left: 3%;
+  left: 4%;
 }
 
 .icon_coin img {
@@ -85,8 +85,8 @@ defineProps({
   text-align: center;
   white-space: nowrap;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.3vw;
   float: left;
-  margin: 15px;
+  margin: 8%;
 }
 </style>
