@@ -38,7 +38,7 @@
       <div class="indicador-texto">
         <p id="month-1">24 h</p>
         <p id="month-2">48 h</p>
-        <div class="circulo-indicador"></div>
+        <div :class="{'circulo-indicador':true, 'circulo-indicador-animation':index_pagina==4}"></div>
       </div>
       <div class="form-controles">
         <div class="control">
@@ -385,7 +385,8 @@ img {
   top: 75%;
   left: 75%;
 }
-.circulo-indicador{
+
+.circulo-indicador {
   position: absolute;
   width: 3rem;
   border-radius: 50%;
@@ -393,6 +394,31 @@ img {
   height: 3rem;
   top: 17%;
   z-index: 10;
+}
+
+.circulo-indicador-animation {
+  animation-duration: 1s;
+  animation-name: circulo-indicador-animation;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+
+@keyframes circulo-indicador-animation {
+  0% {
+    position: absolute;
+    top: -10%;
+    right: 10%;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  100% {
+    position: absolute;
+    right: 48%;
+    top: 17%;
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 .descripcion {
@@ -497,7 +523,7 @@ img {
 
 .logo-redes-animation {
   animation-name: redes_animation;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-direction: normal;
   animation-iteration-count: 1;
 }
@@ -525,7 +551,7 @@ img {
   width: 50%;
   height: 180%;
   z-index: 3;
-  animation-duration: 3s;
+  animation-duration: 1s;
   animation-name: luz;
   animation-iteration-count: infinite;
   animation-direction: alternate;
