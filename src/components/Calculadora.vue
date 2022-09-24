@@ -20,14 +20,14 @@
 
   <div class="contenido">
     <div class="calculadora">
-      <div class="circulo">
+      <div :class="{circulo:true,  'aparecer-animation':index_pagina==4}">
         <img src="../assets/circulo-blanco.svg" srcset="">
       </div>
 
-      <div class="circulo circulo-superior">
+      <div :class="{circulo:true,  'circulo-superior-animation':index_pagina==4}">
         <img src="../assets/circulo-colores.svg" alt="" srcset="">
       </div>
-      <div class="circulo indicador">
+      <div :class="{circulo:true, indicador:true, 'indicador-animacion':index_pagina==4}">
 
         <img id="indicador-img" class="hour48" src="../assets/indicador.svg">
         <div id="indicador" @click="CambiarMonth" class="descripcion">
@@ -35,12 +35,12 @@
           <p id="medida">HOURS</p>
         </div>
       </div>
-      <div class="indicador-texto">
+      <div :class="{'indicador-texto':true, 'aparecer-animation':index_pagina==4}">
         <p id="month-1">24 h</p>
         <p id="month-2">48 h</p>
         <div :class="{'circulo-indicador':true, 'circulo-indicador-animation':index_pagina==4}"></div>
       </div>
-      <div class="form-controles">
+      <div :class="{'form-controles':true,  'aparecer-animation':index_pagina==4} ">
         <div class="control">
           <input type="number" min="0" @input="Calculator" name="inversion" id="inversion" v-model="inversion"
             placeholder="$ 100">
@@ -60,7 +60,7 @@
 
 
 
-  <div class="informacion">
+  <div :class="{informacion:true,  'aparecer-animation':index_pagina==4} ">
     <div class="titulo-imagen">
       <img src="../assets/add.svg" alt="">
       <p id="title">12%<span>*</span>48h</p>
@@ -263,6 +263,26 @@ img {
   align-items: center;
 }
 
+.aparecer-animation {
+  animation-duration: .5s;
+  animation-name: aparecer-animation ;
+  animation-iteration-count: 1;
+}
+
+@keyframes aparecer-animation {
+  0% {
+    opacity: 0%;
+  }
+
+  40% {
+    opacity: 0%;
+  }
+
+  45% {
+    opacity: 100%;
+  }
+}
+
 .calculadora {
   position: relative;
   top: 0%;
@@ -292,6 +312,33 @@ img {
 .circulo img {
   height: 60%;
   width: 70%;
+}
+
+.circulo-superior-animation {
+  animation-name: circulo-superior-animation;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+.indicador-animacion {
+  animation-name: circulo-superior-animation;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes circulo-superior-animation {
+  0% {
+    top: 100%;
+    left: -40%;
+    transform: rotate(-80deg);
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+    transition: rotate(0deg);
+    transform: rotate(0deg);
+  }
 }
 
 .indicador img {
@@ -523,8 +570,7 @@ img {
 
 .logo-redes-animation {
   animation-name: redes_animation;
-  animation-duration: 2s;
-  animation-direction: normal;
+  animation-duration: 1s;
   animation-iteration-count: 1;
 }
 
