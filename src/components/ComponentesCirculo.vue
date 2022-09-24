@@ -28,7 +28,7 @@ export default {
 <template>
   <div v-for="value in values" class="circulo">
     <div class="contenedor">
-      <i><img alt="" /></i>
+     
       <h2
         :class="{
           blanco: value.color == 'blanco',
@@ -37,9 +37,12 @@ export default {
       >
         {{ value.texto }}
       </h2>
+
+      <i><img alt="" /></i>
     </div>
-  </div>
+   </div>
 </template>
+
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;700&display=swap");
@@ -89,10 +92,14 @@ export default {
 }
 .contenedor {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 50%;
   height: 50%;
   align-items: center;
+}
+.contenedor h2{
+
+
 }
 .verde {
   color: rgba(1, 209, 88, 1);
@@ -103,5 +110,20 @@ export default {
   color: white;
   border: 2px solid rgb(219, 219, 237);
   border-radius: 2rem;
+}
+.gasolinera {
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  display: flex;
+  justify-content: center;
+  
+
+}
+.gasolinera img {
+  position: relative;
+  z-index: -4;
+  width: 15vw;
+  height: 15vw;
 }
 </style>
