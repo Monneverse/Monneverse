@@ -16,9 +16,6 @@
       <img src="/img/Semi_circulo1.png" />
     </div>
   </div>
-
-
-
   <!--FONDO-->
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
@@ -232,17 +229,15 @@ img {
   bottom: 11%;
   left: 42.5%;
   width: 20rem;
-  height: 5rem;
-  z-index: 14;
+  height: 7rem;
   display: flex;
   justify-content: start;
   z-index: 8;
 }
 
 .icon {
-  width: 3rem;
+  width: 4vw;
   height: auto;
-  z-index: 18;
   margin-left: 1rem;
   z-index: 8;
 }
