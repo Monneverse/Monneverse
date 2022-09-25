@@ -50,12 +50,12 @@ img {
 }
 
 .filtro-superior {
-    z-index: 2;
     background: radial-gradient(circle at center,
             #f9f9fa 0%,
             #c8ced4 50%,
             #a8aaaf 100%);
     mix-blend-mode: multiply;
+    z-index: 2;
 }
 
 .fondo-montana {
@@ -74,39 +74,50 @@ img {
 
 .circuito-izquierdo {
     position: absolute;
-    z-index: 7;
     left: -12%;
     top: 18%;
     height: 80%;
     width: 40%;
     min-width: 30rem;
+    z-index: 5;
 }
 
 .circuito-derecho {
     position: absolute;
-    z-index: 7;
     right: -12%;
     top: 18%;
     height: 80%;
     width: 40%;
     min-width: 30rem;
+    z-index: 5;
 }
 
 /* FIN ESTILO FONDO */
 
 .Fases {
-    background-color: aliceblue;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    position: absolute;
+    top: 35%;
+    left: 24%;
+    justify-content: center;
+    text-align: center;
+    z-index: 6;
 }
 
 .titulo {
     color: white;
-    top: 0%;
-    left: 0;
+    right: 24%;
+    bottom: 15%;
     width: 100%;
     height: 100%;
     position: absolute;
+    opacity: 100%;
+    z-index: 6;
+}
+
+.description {
+    color: white;
+    width: 55%;
 }
 </style>

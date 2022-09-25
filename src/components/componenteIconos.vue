@@ -42,7 +42,7 @@ defineProps({
 
 .contenedor_icono:hover {
   width: 88%;
-  transition: 1.8s;
+  transition: 0.5s;
 }
 
 .contenedor_icono:hover .icono {
