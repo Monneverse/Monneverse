@@ -1,8 +1,11 @@
 <template>
     <!-- Fondo de la footer -->
+    <div :class="{logo: true , 'logo-animation':index_pagina==13}">
+        <img src="/img/logo.svg" alt="logo monneverse">
+    </div>
     <div class="fondo fondo-footer"></div>
     <div class="fondo filtro-superior"></div>
-    <div :class="{fondo:true, 'fondo-montana':true,'fondo-montana-animation':index_pagina==4} ">
+    <div :class="{fondo:true, 'fondo-montana':true} ">
         <img src="/img/fondo-montana.png" />
     </div>
     <div class="fondo fondo-oscurecer"></div>
@@ -16,7 +19,8 @@
     </div>
     <div class="degradado degradado_izquierdo"></div>
     <div class="degradado degradado_derecho"></div>
-    <div class="fondo-redes">
+    <div :class="{'fondo-redes':true, 'fondo-redes-animation':index_pagina==13}">
+
         <div class="redes">
             <img src="../assets/footer/telegram.svg" alt="">
         </div>
@@ -40,7 +44,14 @@
 </template>
 
 <script>
-
+export default {
+    props: {
+        index_pagina: {
+            type: Number,
+            required: true,
+        },
+    },
+};
 </script>
 
 
@@ -48,6 +59,39 @@
 img {
     height: 100%;
     width: 100%;
+}
+
+.logo {
+    position: absolute;
+    top: 25%;
+    left: 43%;
+    max-width: 20rem;
+    max-height: 20rem;
+    width: 30%;
+    height: 30%;
+    z-index: 12;
+}
+
+.logo-animation {
+    animation-name: logo-animation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes logo-animation {
+    0% {
+        top: 2rem;
+        left: 2rem;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    100% {
+        top: 25%;
+        left: 43%;
+        width: 30%;
+        height: 30%;
+    }
 }
 
 .fondo {
@@ -157,16 +201,34 @@ img {
     left: 0;
     bottom: 10%;
     width: 100%;
-    height: 30rem;
+    height: 50%;
     background-color: #1A1E29;
     z-index: 5;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
+
+.fondo-redes-animation {
+    animation-name: fondo-redes-animation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes fondo-redes-animation {
+    0% {
+        bottom: -70%;
+    }
+
+    100% {
+        bottom: 10%;
+    }
+}
+
 .redes {
+    min-width: 2rem;
     width: 5rem;
     height: auto;
-    margin: 5rem;
+    margin: 5%;
 }
 </style>

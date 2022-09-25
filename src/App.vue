@@ -19,7 +19,7 @@ import Footer from "./components/Footer.vue";
 
 <template>
   <header>
-    <Header :index=index :index_pagina=index_pagina></Header>
+    <Header :index=index :isVisible=isVisibleLogo></Header>
   </header>
 
   <main>
@@ -36,6 +36,7 @@ import Footer from "./components/Footer.vue";
     </div>
 
     <div :class="{container:true,  'mostrar-container':index_pagina==2}">
+
       <Alliances />
     </div>
 
@@ -76,7 +77,7 @@ import Footer from "./components/Footer.vue";
       <Fases />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==13}">
-    <Footer></Footer>
+      <Footer :index_pagina=index_pagina></Footer>
     </div>
 
   </main>
@@ -91,7 +92,8 @@ export default {
     return {
       index: 1,
       index_pagina: 1,
-      limite: 13
+      limite: 13,
+      isVisibleLogo: false
 
     };
   },
@@ -102,7 +104,10 @@ export default {
       } else {
         if (this.index_pagina > 1) this.index_pagina = this.index_pagina - 1;
       }
-      console.log(this.index_pagina);
+      this.isVisibleLogo = true;
+      if (this.index_pagina == 1 || this.index_pagina == 13) {
+        this.isVisibleLogo = false;
+      }
       location.hash = "#" + this.index_pagina;
       window.history.pushState({}, document.title, window.location.pathname);
     }
