@@ -15,8 +15,22 @@ import Circulos from "./ComponentesCirculo.vue";
     <div class="logo">
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
+    <div class="reflector reflector-izquierdo">
+    <div class="luz-1"></div>
+    <div class="luz-2"></div>
+    <div class="luz-3"></div>
+  </div>
+  <div class="reflector reflector-derecho">
+    <div class="luz-1"></div>
+    <div class="luz-2"></div>
+    <div class="luz-3"></div>
+  </div>
     <div class="titulo">
       <h1>BENEFITS</h1>
+    </div>
+
+    <div class="gasolinera">
+      <img src="/img/Benefits/gasolinera.png" alt="">
     </div>
 
     <div class="display_flex">
@@ -24,7 +38,10 @@ import Circulos from "./ComponentesCirculo.vue";
         <Benefits />
       </div>
       <div class="circulos">
-        <Circulos />
+        <Circulos icono="/img/Benefits/monnercard.png" color="blanco" texto="MONNERCARD"/>
+        <Circulos icono="/img/Benefits/benefits.svg" color="verde" texto="BENEFITS"/>
+        <Circulos icono="/img/Benefits/minnersolar.png" color="verde" texto="MINNERSOLAR"/>
+        <Circulos icono="/img/Benefits/stanking.png" color="blanco" texto="STAKING"/>
       </div>
     </div>
     <div class="logo-redes">
@@ -49,11 +66,19 @@ import Circulos from "./ComponentesCirculo.vue";
       </div>
     </div>
   </div>
+
 </template>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
-
+.gasolinera img{
+   position: absolute;
+   top:17%;
+   left: 57%;
+  z-index: 12;
+  width: 35%;
+  margin: 0 auto;
+}
 .display_flex {
   display: flex;
   justify-content: space-evenly;
@@ -81,6 +106,8 @@ import Circulos from "./ComponentesCirculo.vue";
   color: white;
 }
 .benefits {
+  position: relative;
+  z-index: 8;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,6 +159,7 @@ import Circulos from "./ComponentesCirculo.vue";
   width: 50%;
   height: 50%;
   position: relative;
+  z-index: 12;
   top: 35%;
   left: 35%;
   transform: rotate(225deg);
@@ -152,5 +180,90 @@ import Circulos from "./ComponentesCirculo.vue";
   width: 3.5vw;
   height: auto;
   margin-left: 1rem;
+}
+
+.reflector {
+  position: absolute;
+  top: 60%;
+  bottom: 0%;
+  left: 10%;
+  width: 40%;
+  height: 90%;
+  z-index: 1;
+  
+  animation-duration: 6s;
+  animation-name: reflector;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes reflector {
+  0% {
+    opacity: 10%;
+  }
+
+  50% {
+    opacity: 30%;
+  }
+
+  100% {
+    opacity: 50%;
+  }
+}
+.reflector-derecho {
+  z-index: 0;
+  left: 50%;
+}
+.reflector-izquierdo {
+  z-index: 0;
+ 
+}
+.luz-1 {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  border-radius: 50%;
+  bottom: -30%;
+  transform: rotate(-30deg);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.5) 0%,
+    transparent 47%,
+    rgba(184, 184, 184, 0) 100%
+  );
+  filter: blur(3rem);
+  left: 30%;
+}
+.luz-2 {
+  position: absolute;
+  width: 30%;
+  height: 140%;
+  border-radius: 50%;
+  bottom: -30%;
+  left: 40%;
+  transform: rotate(0deg);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.8) 0%,
+    transparent 47%,
+    rgba(184, 184, 184, 0) 100%
+  );
+  filter: blur(3rem);
+}
+.luz-3 {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  border-radius: 50%;
+  bottom: -30%;
+  left: 55%;
+  transform: rotate(-150deg);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.8) 0%,
+    transparent 47%,
+    rgba(184, 184, 184, 0) 100%
+  );
+  filter: blur(3rem);
 }
 </style>
