@@ -3,10 +3,10 @@
     <h1>UPCOMING ALLIANCES</h1>
   </div>
   <div class="visa_img">
-    <img src="/img/Alianzas/visa.png" />
+    <img src="../assets/methodBuy/visa.svg" />
   </div>
   <div class="mastercard_img">
-    <img src="/img/Alianzas/mastercard.png" />
+    <img src="../assets/methodBuy/masterCard.svg" />
   </div>
   <div class="circulos_redes">
     <div class="semi_circle">
@@ -65,6 +65,7 @@
 img {
   height: 100%;
   width: 100%;
+  user-select: none;
 }
 
 .fondo {
