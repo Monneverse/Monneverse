@@ -13,6 +13,7 @@ import Logos_auditorias from "./components/Logos_auditorias.vue";
 import News from "./components/News.vue";
 import Tokenomics from "./components/Tokenomics.vue";
 import Fases from "./components/Fases.vue";
+import Footer from "./components/Footer.vue";
 </script>
 
 
@@ -71,8 +72,11 @@ import Fases from "./components/Fases.vue";
     <div :class="{container:true, 'mostrar-container':index_pagina==11}">
       <News />
     </div>
-    <div :class="{container:true, 'mostrar-container':index_pagina==11}">
+    <div :class="{container:true, 'mostrar-container':index_pagina==12}">
       <Fases />
+    </div>
+    <div :class="{container:true, 'mostrar-container':index_pagina==13}">
+    <Footer></Footer>
     </div>
 
   </main>
@@ -87,7 +91,7 @@ export default {
     return {
       index: 1,
       index_pagina: 1,
-      limite: 11
+      limite: 13
 
     };
   },
