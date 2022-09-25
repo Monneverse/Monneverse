@@ -17,10 +17,10 @@
   </div>
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
-  <div class="aro aro-inferior">
+  <div :class="{aro:true, 'aro-inferior':true, 'aro-superior-animation':index_pagina==8} ">
     <img src="../assets/aro.svg" alt="">
   </div>
-  <div class=" aro aro-superior">
+  <div :class="{aro:true, 'aro-superior':true, 'aro-inferior-animation':index_pagina==8}">
     <img src="../assets/aro.svg" alt="">
   </div>
   <div class="fondo">
@@ -64,36 +64,85 @@ img {
   height: 75%;
   width: auto;
 }
-.aro{
+
+.aro {
   position: absolute;
   width: 40%;
   left: 30%;
   z-index: 9;
 }
-.aro-inferior{
-  bottom: 8% ;
+
+.aro-inferior {
+  bottom: 8%;
 }
 
-.aro-superior{
+.aro-inferior-animation {
+
+  animation-duration: 1.5s;
+  animation-name: aro-inferior-animation;
+  animation-iteration-count: 1;
+}
+
+@keyframes aro-inferior-animation {
+  0% {
+    opacity: 0;
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+.aro-superior {
   width: 34%;
   left: 33%;
-  bottom: 18% ;
+  bottom: 18%;
 }
+
+.aro-superior-animation {
+
+  animation-duration: 1.5s;
+  animation-name: aro-superior-animation;
+  animation-iteration-count: 1;
+}
+
+@keyframes aro-superior-animation {
+  0% {
+    bottom: 0%;
+    left: 40%;
+    width: 20%;
+  }
+
+
+  100% {
+    bottom: 8%;
+    width: 40%;
+    left: 30%;
+  }
+}
+
 .imagen-animation {
   animation-name: bajar;
   animation-duration: 2s;
   animation-iteration-count: 1;
 }
+
 @keyframes bajar {
   0% {
     position: relative;
     top: -100%;
   }
+
   100% {
     position: relative;
     top: 0%;
   }
 }
+
 .circuito {
   position: absolute;
   z-index: 4;
@@ -202,9 +251,11 @@ img {
     opacity: 100%;
   }
 }
+
 .reflector-derecho {
   left: 40%;
 }
+
 .luz-1 {
   position: absolute;
   width: 30%;
@@ -212,15 +263,14 @@ img {
   border-radius: 50%;
   bottom: -30%;
   transform: rotate(-30deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.5) 0%,
-    transparent 47%,
-    rgba(184, 184, 184, 0) 100%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.5) 0%,
+      transparent 47%,
+      rgba(184, 184, 184, 0) 100%);
   filter: blur(3rem);
   left: 30%;
 }
+
 .luz-2 {
   position: absolute;
   width: 30%;
@@ -229,14 +279,13 @@ img {
   bottom: -30%;
   left: 40%;
   transform: rotate(0deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.8) 0%,
-    transparent 47%,
-    rgba(184, 184, 184, 0) 100%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.8) 0%,
+      transparent 47%,
+      rgba(184, 184, 184, 0) 100%);
   filter: blur(3rem);
 }
+
 .luz-3 {
   position: absolute;
   width: 30%;
@@ -245,12 +294,10 @@ img {
   bottom: -30%;
   left: 55%;
   transform: rotate(-150deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.8) 0%,
-    transparent 47%,
-    rgba(184, 184, 184, 0) 100%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.8) 0%,
+      transparent 47%,
+      rgba(184, 184, 184, 0) 100%);
   filter: blur(3rem);
 }
 </style>
