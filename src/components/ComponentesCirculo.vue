@@ -1,48 +1,32 @@
-<script>
-export default {
-  data() {
-    return {
-      values: [
-        {
-          icono: "/img/plus.svg",
-          color: "verde",
-          texto: "MONNERCARD",
-        },
-        { icono: "/img/plus.svg", color: "blanco", texto: "BENEFITS" },
-        {
-          icono: "/img/plus.svg",
-          color: "blanco",
-          texto: "MINNERSOLAR",
-        },
-        {
-          icono: "/img/plus.svg",
-          color: "verde",
-          texto: "STALKING",
-        },
-      ],
-    };
+<script setup>
+defineProps({
+  //icono imagen
+  icono: {
+    type: String,
+    required: true,
   },
-};
+  //nombre icono
+  color: {
+    type: String,
+    required: true,
+  },
+  texto: {
+    type: String,
+    required: true,
+  },
+});
 </script>
 
 <template>
-  <div v-for="value in values" class="circulo">
+  <div :class="color" class="circulo">
     <div class="contenedor">
-     
-      <h2
-        :class="{
-          blanco: value.color == 'blanco',
-          verde: value.color == 'verde',
-        }"
-      >
-        {{ value.texto }}
+      <i><img :src="icono" alt="Benefits" /></i>
+      <h2 class="texto">
+        {{ texto }}
       </h2>
-
-      <i><img alt="" /></i>
     </div>
-   </div>
+  </div>
 </template>
-
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;700&display=swap");
@@ -53,7 +37,6 @@ export default {
   z-index: 5;
   width: 15vw;
   height: 15vw;
-  background-color: aquamarine;
   margin-bottom: 5%;
   color: white;
   font-family: "Work Sans", sans-serif;
@@ -63,53 +46,42 @@ export default {
   flex-direction: column;
   align-items: center;
   transform: rotate(135deg);
+
 }
+
 .circulo h2 {
-}
-.circulo:nth-child(1) {
-  background-color: white;
-}
-.circulo:nth-child(2) {
-  background: linear-gradient(
-    90deg,
-    rgb(18, 17, 65) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
-}
-.circulo:nth-child(3) {
-  background: linear-gradient(
-    90deg,
-    rgb(18, 17, 65) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
-}
-.circulo:nth-child(4) {
-  background-color: white;
-}
-.circulo h2 {
+  position: relative;
+  z-index: 0;
   text-align: center;
-  background-color: rgb(82, 80, 80, 0.6);
 }
 .contenedor {
   display: flex;
-  justify-content: space-between;
   width: 50%;
   height: 50%;
+  justify-content: center;
+  align-content: space-around;
   align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  
 }
-.contenedor h2{
-
-
+.contenedor img {
+  position: relative;
+  z-index: 1;
+  width: 5vw;
+  
 }
 .verde {
-  color: rgba(1, 209, 88, 1);
-  border: 2px solid rgba(1, 209, 88, 1);
-  border-radius: 2rem;
+  background: linear-gradient(
+    90deg,
+    rgb(18, 17, 65) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
+  color: white;
 }
 .blanco {
-  color: white;
-  border: 2px solid rgb(219, 219, 237);
-  border-radius: 2rem;
+  background-color: white;
+  color: rgba(1, 209, 88, 1);
 }
 .gasolinera {
   position: absolute;
@@ -117,8 +89,6 @@ export default {
   height: 15vw;
   display: flex;
   justify-content: center;
-  
-
 }
 .gasolinera img {
   position: relative;
@@ -126,4 +96,28 @@ export default {
   width: 15vw;
   height: 15vw;
 }
+
+.texto {
+  opacity: 0;
+  visibility: hidden;
+ 
+  background-color: none;
+  border-radius: 3px;
+}
+.circulo:hover .contenedor img {
+  transition: 0.5s ease-in-out;
+  transform: translate(-20px, -40px) rotate(-25deg) scale(1.2);
+  opacity: 1;
+  visibility: visible;
+
+
+}
+.circulo:hover .contenedor .texto{
+
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s linear;
+
+}
+
 </style>

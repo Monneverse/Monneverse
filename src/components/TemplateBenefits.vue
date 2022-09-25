@@ -39,7 +39,6 @@ export default {
   <div v-for="valor in valores" class="benefit">
     <i><img class="icon-discord" :src="valor.icono" alt="" /></i>
     <div class="content_price">
-      <h1></h1>
       <h1>
         <b class="dolar">{{ valor.symbol }}</b
         >{{ valor.precio }}<span>{{ valor.moneda }}</span>
@@ -79,7 +78,9 @@ export default {
 }
 
 .benefit h1 {
-  width: 100%;
+ 
+  width: 80%;
+  margin: 0 auto;
   font-weight: 500;
   font-size: 6vw;
   text-align: center;
@@ -99,31 +100,41 @@ export default {
   background-color: #161431;
   border-radius: 0.5rem;
   display: grid;
-  grid-template-columns: 10% 70%;
+  display: flex;
   align-items: center;
   justify-items: center;
-  transition: 0.5s ease-in;
+
 }
+
 .content_price:hover {
-  box-shadow: 5px 5px 40px rgb(55, 243, 149, 0.2);
+  box-shadow:
+    inset 0 0 60px whitesmoke,
+    inset 20px 0 80px rgb(6, 38, 58),
+    inset -20px 0 80px rgb(7, 64, 25),
+    inset 20px 0 300px rgb(5, 12, 28),
+    inset -20px 0 300px rgb(4, 41, 10),
+    0 0 50px #fff,
+    -10px 0 80px rgb(1, 13, 37),
+    10px 0 80px rgb(1, 64, 12);
+    transition: 0.5s ease-in;
+   
 }
 
 .content_text {
-  position: relative;
-  left: 15%;
-
+  margin-left: 6vw;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: left;
+
 }
 .content_text h3 {
   font-size: 1.6vw;
   font-weight: 400;
 }
 .content_text p {
-  width: 80%;
+  width: 85%;
   font-weight: 300;
   font-size: 0.9vw;
   text-align: justify;

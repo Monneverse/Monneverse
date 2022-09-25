@@ -61,6 +61,9 @@
   <div class="puntero">
     <img src="img/puntero.svg" alt="" />
   </div>
+  
+  <div class="degradado degradado_izquierdo"></div>
+  <div class="degradado degradado_derecho"></div>
 </template>
 
 <style scoped>
@@ -271,4 +274,27 @@
   top: 82%;
   left: 40%;
 }
+.degradado {
+  background: linear-gradient(to right, #08047a 0.5%, transparent);
+  position: absolute;
+  width: 50%;
+  height: 180%;
+  z-index: 3;
+  animation-duration: 3s;
+  animation-name: luz;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  top: 0%;
+}
+
+.degradado_izquierdo {
+  transform: rotate(-60deg);
+  right: 50%;
+}
+
+.degradado_derecho {
+  transform: rotate(230deg);
+  left: 55%;
+}
+
 </style>
