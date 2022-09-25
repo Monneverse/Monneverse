@@ -3,7 +3,7 @@
   <!-- Fondo de la calculadora -->
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
-  <div class="fondo fondo-montana">
+  <div :class="{fondo:true, 'fondo-montana':true,'fondo-montana-animation':index_pagina==4} ">
     <img src="/img/fondo-montana.png" />
   </div>
   <div class="fondo fondo-oscurecer"></div>
@@ -196,6 +196,24 @@ img {
   z-index: 2;
 }
 
+.fondo-montana-animation {
+  animation-duration: 1s;
+  animation-name: fondo-montana-animation;
+  animation-iteration-count: 1;
+}
+
+@keyframes fondo-montana-animation {
+  0% {
+    height: 50%;
+    top: 50%;
+  }
+
+  100% {
+    height: 100%;
+    top: 0%;
+  }
+}
+
 .fondo-oscurecer {
   z-index: 3;
   background-color: rgb(0, 0, 0);
@@ -265,7 +283,7 @@ img {
 
 .aparecer-animation {
   animation-duration: .5s;
-  animation-name: aparecer-animation ;
+  animation-name: aparecer-animation;
   animation-iteration-count: 1;
 }
 
