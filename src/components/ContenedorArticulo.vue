@@ -79,7 +79,7 @@ export default {
         },
 
       ],
-      fechaEvento: new Date(2023, 1, 1, 1, 0, 0, 0),
+      fechaEvento: new Date(2022, 9, 2, 1, 0, 0, 0),
       diaString: "00",
       horaString: "00",
       minutoString: "00",
