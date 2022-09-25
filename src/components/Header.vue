@@ -1,6 +1,6 @@
 
 <template>
-  <div :class="{logo: true , mostrar:index_pagina!=1}">
+  <div :class="{logo: true , mostrar:isVisible}">
     <img src="/img/logo.svg" alt="logo monneverse">
   </div>
   <div id="barra" class="barra-navegacion">
@@ -38,10 +38,11 @@ export default {
       type: Number,
       required: true
     },
-    index_pagina: {
-      type: Number,
+    isVisible: {
+      type: Boolean,
       required: true
-    }
+    },
+    
   },
   methods: {
     hover_mover(id) {

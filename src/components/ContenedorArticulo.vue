@@ -16,27 +16,16 @@ import Articulo from "./Articulo.vue";
     <div class="degradado_azulderecho"></div>
   </div>
   <div class="circuitoIzquierdo">
-      <img src="/img/Articulo/circuito-izquierdo.png" alt=""/>
-    </div>
-    <div class="circuitoDerecho">
-      <img src="/img/Articulo/circuito-derecho.png" alt=""/>
-    </div>
+    <img src="/img/Articulo/circuito-izquierdo.png" alt="" />
+  </div>
+  <div class="circuitoDerecho">
+    <img src="/img/Articulo/circuito-derecho.png" alt="" />
+  </div>
   <!-- Contenedor de Tiempo -->
   <div class="container_tiempo">
     <h2>Pre Sale Time</h2>
     <div class="bloque_temporizador">
-      <div class="dias" id="dias">
-        <h1>00:</h1>
-      </div>
-      <div class="horas" id="horas">
-        <h1>00:</h1>
-      </div>
-      <div class="minutos" id="minutos">
-        <h1>00:</h1>
-      </div>
-      <div class="segundos" id="segundos">
-        <h1>00</h1>
-      </div>
+      <h1>{{diaString}}:{{horaString}}:{{minutoString}}:{{segundoString}}</h1>
     </div>
     <button class="btn_comenzar">CLICK HERE</button>
   </div>
@@ -44,12 +33,7 @@ import Articulo from "./Articulo.vue";
   <!-- Contenedor de Articulos -->
   <div class="containerArticulo">
     <div class="contenedorDeArticulo">
-      <Articulo
-        v-for="item in vectorArticulo"
-        :key="item"
-        :titulo="item.titulo"
-        :img="item.imagen"
-      />
+      <Articulo v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen" />
     </div>
   </div>
 
@@ -93,10 +77,39 @@ export default {
           imagen: "/img/Articulo/imagenArticulo3.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/why-will-monner-become-one-of-the-best-cryptocurrencies-to-invest-in",
         },
-        
+
       ],
+      fechaEvento: new Date(2022, 9, 2, 1, 0, 0, 0),
+      diaString: "00",
+      horaString: "00",
+      minutoString: "00",
+      segundoString: "00",
+
     };
   },
+  methods: {
+    AgregarCero(numero) {
+      if (numero > 9)
+        return numero
+      else
+        return "0" + numero
+    },
+    ObtenerFechaActual() {
+      var distance = this.fechaEvento - Date.now();
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      this.diaString = this.AgregarCero(days)
+      this.horaString = this.AgregarCero(hours)
+      this.minutoString = this.AgregarCero(minutes)
+      this.segundoString = this.AgregarCero(seconds)
+    }
+  }, mounted() {
+    setInterval(this.ObtenerFechaActual, 500)
+  }
 };
 </script>
 
@@ -113,14 +126,13 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 0;
 }
+
 .fondoArticulo {
   position: absolute;
   top: 0;
@@ -178,29 +190,30 @@ img {
   width: 55%;
   min-width: 30rem;
 }
+
 .degradado_azulizquierdo {
-    background: linear-gradient(to right, #08047A 0.5%, transparent);
-    position: absolute;
-    transform: rotate(-60deg);
-    top: 0%;
-    z-index: 3;
-    right: 50%;
-    width: 50%;
-    height: 180%;
-    opacity: 70%;
+  background: linear-gradient(to right, #08047A 0.5%, transparent);
+  position: absolute;
+  transform: rotate(-60deg);
+  top: 0%;
+  z-index: 3;
+  right: 50%;
+  width: 50%;
+  height: 180%;
+  opacity: 70%;
 
 }
 
 .degradado_azulderecho {
-    background: linear-gradient(to right, #08047A 0.5%, transparent);
-    position: absolute;
-    transform: rotate(230deg);
-    top: -12%;
-    left: 50%;
-    width: 50%;
-    height: 180%;
-    opacity: 70%;
-    z-index: 3;
+  background: linear-gradient(to right, #08047A 0.5%, transparent);
+  position: absolute;
+  transform: rotate(230deg);
+  top: -12%;
+  left: 50%;
+  width: 50%;
+  height: 180%;
+  opacity: 70%;
+  z-index: 3;
 }
 
 /* contendero de Articulo */
@@ -237,7 +250,7 @@ h2 {
   z-index: 7;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 .container_tiempo {
@@ -252,7 +265,7 @@ h2 {
   width: 30rem;
   height: 15rem;
   z-index: 5;
-  
+
 }
 
 .bloque_temporizador {
@@ -268,8 +281,9 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
 }
+
 .btn_comenzar {
   display: flex;
   justify-content: center;
@@ -304,14 +318,16 @@ h2 {
 }
 
 
-.contenedorDeArticulo > * {
-  
+.contenedorDeArticulo>* {
+
   animation: mover 10s normal infinite;
 }
+
 @keyframes mover {
   0% {
     transform: translateX(10rem);
   }
+
   100% {
     transform: rotate(50rem);
   }

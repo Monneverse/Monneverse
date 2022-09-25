@@ -13,12 +13,13 @@ import Logos_auditorias from "./components/Logos_auditorias.vue";
 import News from "./components/News.vue";
 import Tokenomics from "./components/Tokenomics.vue";
 import Fases from "./components/Fases.vue";
+import Footer from "./components/Footer.vue";
 </script>
 
 
 <template>
   <header>
-    <Header :index=index :index_pagina=index_pagina></Header>
+    <Header :index=index :isVisible=isVisibleLogo></Header>
   </header>
 
   <main>
@@ -35,6 +36,7 @@ import Fases from "./components/Fases.vue";
     </div>
 
     <div :class="{container:true,  'mostrar-container':index_pagina==2}">
+
       <Alliances />
     </div>
 
@@ -74,6 +76,9 @@ import Fases from "./components/Fases.vue";
     <div :class="{container:true, 'mostrar-container':index_pagina==12}">
       <Fases />
     </div>
+    <div :class="{container:true, 'mostrar-container':index_pagina==13}">
+      <Footer :index_pagina=index_pagina></Footer>
+    </div>
 
   </main>
 </template>
@@ -87,7 +92,8 @@ export default {
     return {
       index: 1,
       index_pagina: 1,
-      limite: 12
+      limite: 13,
+      isVisibleLogo: false
 
     };
   },
@@ -98,7 +104,10 @@ export default {
       } else {
         if (this.index_pagina > 1) this.index_pagina = this.index_pagina - 1;
       }
-      console.log(this.index_pagina);
+      this.isVisibleLogo = true;
+      if (this.index_pagina == 1 || this.index_pagina == 13) {
+        this.isVisibleLogo = false;
+      }
       location.hash = "#" + this.index_pagina;
       window.history.pushState({}, document.title, window.location.pathname);
     }
