@@ -17,6 +17,12 @@
   </div>
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
+  <div class="aro aro-inferior">
+    <img src="../assets/aro.svg" alt="">
+  </div>
+  <div class=" aro aro-superior">
+    <img src="../assets/aro.svg" alt="">
+  </div>
   <div class="fondo">
     <div :class="{imagen:true, 'imagen-animation':index_pagina==8}">
       <img src="/img/certificado.png" alt="" />
@@ -57,6 +63,21 @@ img {
 .imagen {
   height: 75%;
   width: auto;
+}
+.aro{
+  position: absolute;
+  width: 40%;
+  left: 30%;
+  z-index: 9;
+}
+.aro-inferior{
+  bottom: 8% ;
+}
+
+.aro-superior{
+  width: 34%;
+  left: 33%;
+  bottom: 18% ;
 }
 .imagen-animation {
   animation-name: bajar;
