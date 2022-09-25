@@ -22,22 +22,38 @@
     <div :class="{'fondo-redes':true, 'fondo-redes-animation':index_pagina==13}">
 
         <div class="redes">
-            <img src="../assets/footer/telegram.svg" alt="">
+            <a href="https://t.me/monnerversecommunity">
+                <img src="../assets/footer/telegram.svg" alt="">
+            </a>
+
         </div>
         <div class="redes">
-            <img src="../assets/footer/facebook.svg" alt="">
+            <a href="https://www.facebook.com/Monnerverse-community-101148059377702/?ref=page_internal">
+                <img src="../assets/footer/facebook.svg" alt="">
+            </a>
+
         </div>
         <div class="redes">
-            <img src="../assets/footer/reddit.svg" alt="">
+            <a href="https://www.reddit.com/user/monnerverse">
+                <img src="../assets/footer/reddit.svg" alt="">
+            </a>
+
         </div>
         <div class="redes">
-            <img src="../assets/footer/twitter.svg" alt="">
+            <a href="https://twitter.com/monnerverse">
+                <img src="../assets/footer/twitter.svg" alt="" />
+            </a>
+
         </div>
         <div class="redes">
-            <img src="../assets/footer/instagram.svg" alt="">
+            <a href="https://t.me/monnerverse_community"> <img src="../assets/footer/instagram.svg" alt=""></a>
+
         </div>
         <div class="redes">
-            <img src="../assets/footer/discord.svg" alt="">
+            <a href="https://discord.com/invite/h7fRvek9dn">
+                <img src="../assets/footer/discord.svg" alt="">
+            </a>
+
         </div>
 
     </div>
