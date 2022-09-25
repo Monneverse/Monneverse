@@ -71,7 +71,7 @@ import Fases from "./components/Fases.vue";
     <div :class="{container:true, 'mostrar-container':index_pagina==11}">
       <News />
     </div>
-    <div :class="{container:true, 'mostrar-container':index_pagina==11}">
+    <div :class="{container:true, 'mostrar-container':index_pagina==12}">
       <Fases />
     </div>
 
@@ -87,7 +87,7 @@ export default {
     return {
       index: 1,
       index_pagina: 1,
-      limite: 11
+      limite: 12
 
     };
   },

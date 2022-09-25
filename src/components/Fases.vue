@@ -1,3 +1,7 @@
+<script setup>
+import fasesComponentes from './fasesComponentes.vue';
+</script>
+
 <template>
 
     <!--FONDO-->
@@ -21,6 +25,15 @@
             <p>Development of the entire monneverse ecosystem, website, spanish and english discord, telegram,
                 twitter and facebook</p>
         </div>
+    </div>
+
+    <div class="circulos">
+        <img src="/img/aros1.png">
+    </div>
+
+    <div class="componentes">
+        <fasesComponentes title="development"
+            description="Development of the entire Monnerverse ecosystem Website,Spanish and English Discord, telegram, twitter and facebook." />
     </div>
 
 </template>
@@ -95,19 +108,19 @@ img {
 /* FIN ESTILO FONDO */
 
 .Fases {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 35%;
-    left: 24%;
     justify-content: center;
     text-align: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
     z-index: 6;
+    left: 25%;
+    top: 35%;
 }
 
 .titulo {
     color: white;
-    right: 24%;
+    right: 28%;
     bottom: 15%;
     width: 100%;
     height: 100%;
@@ -118,6 +131,24 @@ img {
 
 .description {
     color: white;
-    width: 55%;
+    width: 45%;
+    font-size: 1.4vw;
+}
+
+.circulos {
+    position: absolute;
+    left: 22%;
+    bottom: 44%;
+    width: 50%;
+    height: 25%;
+    z-index: 7;
+}
+
+.componentes {
+    position: absolute;
+    left: 0%;
+    bottom: 30%;
+    width: 30%;
+    height: 50%;
 }
 </style>
