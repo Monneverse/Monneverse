@@ -1,5 +1,5 @@
 <template>
-    <!-- Fondo de la calculadora -->
+    <!-- Fondo de la footer -->
     <div class="fondo fondo-footer"></div>
     <div class="fondo filtro-superior"></div>
     <div :class="{fondo:true, 'fondo-montana':true,'fondo-montana-animation':index_pagina==4} ">
@@ -16,6 +16,27 @@
     </div>
     <div class="degradado degradado_izquierdo"></div>
     <div class="degradado degradado_derecho"></div>
+    <div class="fondo-redes">
+        <div class="redes">
+            <img src="../assets/footer/telegram.svg" alt="">
+        </div>
+        <div class="redes">
+            <img src="../assets/footer/facebook.svg" alt="">
+        </div>
+        <div class="redes">
+            <img src="../assets/footer/reddit.svg" alt="">
+        </div>
+        <div class="redes">
+            <img src="../assets/footer/twitter.svg" alt="">
+        </div>
+        <div class="redes">
+            <img src="../assets/footer/instagram.svg" alt="">
+        </div>
+        <div class="redes">
+            <img src="../assets/footer/discord.svg" alt="">
+        </div>
+
+    </div>
 </template>
 
 <script>
@@ -129,5 +150,23 @@ img {
         right: 0%;
     }
 
+}
+
+.fondo-redes {
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    width: 100%;
+    height: 30rem;
+    background-color: #1A1E29;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.redes {
+    width: 5rem;
+    height: auto;
+    margin: 5rem;
 }
 </style>
