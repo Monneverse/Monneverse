@@ -17,7 +17,7 @@ defineProps({
     <div class="componentes">
         <div class="divDesc">
             <p>
-                <b>{{title}}</b><br>
+                <button>{{title}}</button><br>
                 {{description}}
             </p>
         </div>
@@ -28,44 +28,44 @@ defineProps({
 
 
 <style scoped >
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+
 img {
     width: 100%;
     height: 100%;
 }
 
 .componentes {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    justify-content: center;
-    position: absolute;
-    text-align: center;
-    font-size: 1.5vw;
-    height: 100%;
+    font-family: 'Work Sans', sans-serif;
+    position: relative;
     z-index: 7;
-    width: 72%;
-    left: 10%;
-    top: 40%;
 }
 
 .divDesc {
-    background: red;
     flex-direction: column;
     position: relative;
-    min-height: 100%;
-    min-width: 30%;
+    text-align: center;
+    text-transform: capitalize;
     display: flex;
     z-index: 4;
-    left: 0;
-    top: 0;
+    margin: 10px;
+    color: white;
 }
 
-.divDesc p b {
-    background: linear-gradient(to right,
+.divDesc p {
+    font-size: 1.5vw;
+}
+
+.divDesc p button {
+    background: linear-gradient(to left,
             #029F50 0%,
             #0A664E 50%,
             #0E444D 100%);
-    justify-content: center;
-    text-align: center;
-    border-radius: 15%;
+    border-radius: 0.5rem;
+    margin-bottom: 15px;
+    padding: 0.7rem;
     font-size: 2vw;
+    color: white;
+    text-transform: uppercase;
 }
 </style>
