@@ -530,7 +530,7 @@ img {
 .informacion {
   position: absolute;
   top: 40%;
-  margin-left: 6rem;
+  left: 6rem;
   max-width: 30rem;
   z-index: 9;
   font-family: 'Work Sans', sans-serif;
