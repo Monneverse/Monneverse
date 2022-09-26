@@ -1,13 +1,17 @@
 <template>
-
   <!-- Fondo de la calculadora -->
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
-  <div :class="{fondo:true, 'fondo-montana':true,'fondo-montana-animation':index_pagina==4} ">
+  <div
+    :class="{
+      fondo: true,
+      'fondo-montana': true,
+      'fondo-montana-animation': index_pagina == 4,
+    }"
+  >
     <img src="/img/fondo-montana.png" />
   </div>
   <div class="fondo fondo-oscurecer"></div>
-
 
   <div class="circuito circuito-izquierdo">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
@@ -20,82 +24,115 @@
 
   <div class="contenido">
     <div class="calculadora">
-      <div :class="{circulo:true,  'aparecer-animation':index_pagina==4}">
-        <img src="../assets/circulo-blanco.svg" srcset="">
+      <div :class="{ circulo: true, 'aparecer-animation': index_pagina == 4 }">
+        <img src="../assets/circulo-blanco.svg" srcset="" />
       </div>
 
-      <div :class="{circulo:true,  'circulo-superior-animation':index_pagina==4}">
-        <img src="../assets/circulo-colores.svg" alt="" srcset="">
+      <div
+        :class="{
+          circulo: true,
+          'circulo-superior-animation': index_pagina == 4,
+        }"
+      >
+        <img src="../assets/circulo-colores.svg" alt="" srcset="" />
       </div>
-      <div :class="{circulo:true, indicador:true, 'indicador-animacion':index_pagina==4}">
-
-        <img id="indicador-img" class="hour48" src="../assets/indicador.svg">
+      <div
+        :class="{
+          circulo: true,
+          indicador: true,
+          'indicador-animacion': index_pagina == 4,
+        }"
+      >
+        <img id="indicador-img" class="hour48" src="../assets/indicador.svg" />
         <div id="indicador" @click="CambiarMonth" class="descripcion">
           <p id="cantidad">0</p>
           <p id="medida">HOURS</p>
         </div>
       </div>
-      <div :class="{'indicador-texto':true, 'aparecer-animation':index_pagina==4}">
+      <div
+        :class="{
+          'indicador-texto': true,
+          'aparecer-animation': index_pagina == 4,
+        }"
+      >
         <p id="month-1">24 h</p>
         <p id="month-2">48 h</p>
-        <div :class="{'circulo-indicador':true, 'circulo-indicador-animation':index_pagina==4}"></div>
+        <div
+          :class="{
+            'circulo-indicador': true,
+            'circulo-indicador-animation': index_pagina == 4,
+          }"
+        ></div>
       </div>
-      <div :class="{'form-controles':true,  'aparecer-animation':index_pagina==4} ">
+      <div
+        :class="{
+          'form-controles': true,
+          'aparecer-animation': index_pagina == 4,
+        }"
+      >
         <div class="control">
-          <input type="number" min="0" @input="Calculator" name="inversion" id="inversion" v-model="inversion"
-            placeholder="$ 100">
+          <input
+            type="number"
+            min="0"
+            @input="Calculator"
+            name="inversion"
+            id="inversion"
+            v-model="inversion"
+            placeholder="$ 100"
+          />
           <label for="inversion">Invert</label>
         </div>
         <div class="porcentaje">
-          <p>{{porcentajeInteres}}%</p>
+          <p>{{ porcentajeInteres }}%</p>
         </div>
         <div class="control">
-          <input type="number" name="interes" id="interes" v-model="interes" placeholder="$ 100" disabled>
+          <input
+            type="number"
+            name="interes"
+            id="interes"
+            v-model="interes"
+            placeholder="$ 100"
+            disabled
+          />
           <label for="interes">Interest</label>
-
         </div>
       </div>
     </div>
   </div>
 
-
-
-  <div :class="{informacion:true,  'aparecer-animation':index_pagina==4} ">
+  <div :class="{ informacion: true, 'aparecer-animation': index_pagina == 4 }">
     <div class="titulo-imagen">
-      <img src="../assets/add.svg" alt="">
+      <img src="../assets/add.svg" alt="" />
       <p id="title">12%<span>*</span>48h</p>
     </div>
 
-    <p id="descripcion">FIRST TWO MONTHS EVERY 48 HOURS
-      THE MONNER WILL RETURN 12.6% INTEREST
+    <p id="descripcion">
+      FIRST TWO MONTHS EVERY 48 HOURS THE MONNER WILL RETURN 12.6% INTEREST
     </p>
   </div>
 
-
-
-  <div :class="{'logo-redes':true, 'logo-redes-animation':index_pagina==4} ">
+  <div
+    :class="{ 'logo-redes': true, 'logo-redes-animation': index_pagina == 4 }"
+  >
     <div class="icon icon-telegram">
       <a href="https://t.me/monnerversecommunity" target="_blank">
-        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
       </a>
     </div>
     <div class="icon icon-reddit">
       <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
       </a>
     </div>
-    <div class="icon icon-discord ">
+    <div class="icon icon-discord">
       <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-        <img src="../assets/discord.svg" alt="logo discord" srcset="">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
       </a>
     </div>
   </div>
-
 </template>
 
 <script>
-
-
 const State = Object.freeze({ Hour0: 1, Hour24: 2, Hour48: 3 });
 export default {
   props: {
@@ -110,26 +147,30 @@ export default {
       porcentajeInteres: 12.6,
       interes: 0,
       meses: State.Hour0,
-      cantidadMes: 30
+      cantidadMes: 30,
     };
   },
   methods: {
     Calculator() {
-
       if (this.meses == State.Hour0) {
         this.interes = 0;
       } else if (this.meses == State.Hour24) {
-        this.interes = ((this.inversion * (this.porcentajeInteres / 100)) / 2).toFixed(2);;
+        this.interes = (
+          (this.inversion * (this.porcentajeInteres / 100)) /
+          2
+        ).toFixed(2);
       } else {
-        this.interes = ((this.inversion * (this.porcentajeInteres / 100))).toFixed(2);
+        this.interes = (
+          this.inversion *
+          (this.porcentajeInteres / 100)
+        ).toFixed(2);
       }
-
     },
     CambiarMonth() {
       let imgIndicador = document.getElementById("indicador-img");
       let txtCantidad = document.getElementById("cantidad");
       let txtMedida = document.getElementById("medida");
-      imgIndicador.classList.forEach(x => imgIndicador.classList.remove(x));
+      imgIndicador.classList.forEach((x) => imgIndicador.classList.remove(x));
       console.log(imgIndicador);
       if (this.meses < 3) {
         this.meses++;
@@ -139,28 +180,28 @@ export default {
       if (this.meses == State.Hour0) {
         txtCantidad.innerText = "0";
         txtMedida.innerText = "HOURS";
-        imgIndicador.classList.add("hour48")
+        imgIndicador.classList.add("hour48");
       } else if (this.meses == State.Hour24) {
         txtCantidad.innerText = "24";
         txtMedida.innerText = "HOURS";
-        imgIndicador.classList.add("month1")
+        imgIndicador.classList.add("month1");
       } else {
-        imgIndicador.classList.add("month2")
+        imgIndicador.classList.add("month2");
         txtCantidad.innerText = "48";
         txtMedida.innerText = "HOURS";
       }
       this.Calculator();
-    }
+    },
   },
   mounted() {
     this.Calculator();
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
 
 img {
   height: 100%;
@@ -177,18 +218,22 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
 }
 
 .filtro-superior {
   z-index: 1;
-  background: radial-gradient(circle at center,
-      #f9f9fa 0%,
-      #c8ced4 50%,
-      #a8aaaf 100%);
+  background: radial-gradient(
+    circle at center,
+    #f9f9fa 0%,
+    #c8ced4 50%,
+    #a8aaaf 100%
+  );
   mix-blend-mode: multiply;
 }
 
@@ -228,7 +273,6 @@ img {
   width: 40%;
   min-width: 30rem;
   top: 20%;
-
 }
 
 .circuito-izquierdo {
@@ -247,7 +291,6 @@ img {
   100% {
     left: 0%;
   }
-
 }
 
 .circuito-derecho {
@@ -266,7 +309,6 @@ img {
   100% {
     right: 0%;
   }
-
 }
 
 .contenido {
@@ -282,7 +324,7 @@ img {
 }
 
 .aparecer-animation {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-name: aparecer-animation;
   animation-iteration-count: 1;
 }
@@ -313,7 +355,6 @@ img {
   justify-content: center;
 }
 
-
 .circulo {
   position: absolute;
   left: 0;
@@ -325,7 +366,6 @@ img {
   justify-content: center;
   align-items: center;
 }
-
 
 .circulo img {
   height: 60%;
@@ -370,8 +410,16 @@ img {
   pointer-events: none;
   transition: transform 0.4s ease-in 0s;
 }
-
-
+@media only screen and (min-width: 1200px) {
+  .indicador img {
+    max-width: 12rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .indicador img {
+    max-width: 15rem;
+  }
+}
 .form-controles {
   position: absolute;
   top: 82%;
@@ -390,10 +438,10 @@ img {
   align-items: center;
 }
 
-.control>input {
-  font-family: 'Work Sans', sans-serif;
+.control > input {
+  font-family: "Work Sans", sans-serif;
   font-size: 1.5rem;
-  color: #067F4E;
+  color: #067f4e;
   padding-right: 1rem;
   padding-left: 1rem;
   width: 8rem;
@@ -404,26 +452,31 @@ img {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-
+@media only screen and (min-width: 1400px) {
+  .control > input {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+}
 #interes:disabled {
   background-color: white;
   user-select: none;
   pointer-events: none;
 }
 
-.control>label {
-  font-family: 'Work Sans', sans-serif;
+.control > label {
+  font-family: "Work Sans", sans-serif;
   font-size: 1.5rem;
   color: white;
   padding: 0rem;
   text-align: center;
   width: 5rem;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.porcentaje>p {
-  font-family: 'Work Sans', sans-serif;
+.porcentaje > p {
+  font-family: "Work Sans", sans-serif;
   font-size: 1.5rem;
   color: white;
 }
@@ -434,8 +487,8 @@ img {
   justify-content: center;
 }
 
-.indicador-texto>p {
-  font-family: 'Work Sans', sans-serif;
+.indicador-texto > p {
+  font-family: "Work Sans", sans-serif;
   color: white;
   font-size: 1.5rem;
   position: absolute;
@@ -460,7 +513,18 @@ img {
   top: 15%;
   z-index: 10;
 }
-
+@media only screen and (min-width: 900px) {
+  .circulo-indicador {
+  height: 3rem;
+  top: 15%;
+}
+}
+@media only screen and (min-width: 1400px) {
+  .circulo-indicador {
+  height: 3rem;
+  top: 17%;
+}
+}
 .circulo-indicador-animation {
   animation-duration: 1s;
   animation-name: circulo-indicador-animation;
@@ -492,27 +556,23 @@ img {
   top: 48%;
   width: 7rem;
   left: calc(50%-4rem);
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 3.5vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.descripcion>p {
+.descripcion > p {
   width: 100%;
   text-align: center;
   user-select: none;
 }
 
 .descripcion :first-child {
-  color: #01C28D;
+  color: #01c28d;
   font-size: 3rem;
 }
-
-
-
-
 
 /* Clases de animaciones */
 .hour48 {
@@ -533,24 +593,23 @@ img {
   left: 6rem;
   max-width: 30rem;
   z-index: 9;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   color: white;
-
 }
 
 .informacion #title {
   font-size: 10vh;
 }
 
-@media(max-width: 1400px) {
+@media (max-width: 1400px) {
   .informacion #title {
     font-size: 8vh;
   }
 }
 
 .informacion #title span {
-  color: #01C28D;
-  font-family: 'Work Sans', sans-serif;
+  color: #01c28d;
+  font-family: "Work Sans", sans-serif;
 }
 
 .informacion #descripcion {
@@ -558,7 +617,6 @@ img {
   text-align: start;
   font-size: 1.6rem;
   text-transform: uppercase;
-
 }
 
 .titulo-imagen {
@@ -567,11 +625,10 @@ img {
   align-items: center;
 }
 
-.titulo-imagen>img {
+.titulo-imagen > img {
   width: 3rem;
   height: auto;
   margin-right: 1rem;
-
 }
 
 .logo-redes {
@@ -601,7 +658,6 @@ img {
   }
 }
 
-
 .icon {
   width: 3rem;
   height: auto;
@@ -609,7 +665,7 @@ img {
 }
 
 .degradado {
-  background: linear-gradient(to right, #08047A 0.5%, transparent);
+  background: linear-gradient(to right, #08047a 0.5%, transparent);
   position: absolute;
   width: 50%;
   height: 180%;
@@ -643,7 +699,6 @@ img {
   100% {
     opacity: 100%;
   }
-
 }
 </style>
 
