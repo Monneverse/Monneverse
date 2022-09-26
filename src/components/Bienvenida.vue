@@ -37,6 +37,8 @@
   <div class="fondo-mundial">
     <img src="/img/fondo-mundial.png" alt="" srcset="" />
   </div>
+  <div class="degradado degradado_izquierdo"></div>
+  <div class="degradado degradado_derecho"></div>
   <!-- <div class="semi-circle rotateOutUpRight animated">
     <img src="/public/img/semi_circulo.png" alt="" />
   </div> -->
@@ -167,5 +169,25 @@ img {
 .animated.hinge {
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
+}
+
+.degradado {
+  background: linear-gradient(to right, #08047A 0.5%, transparent);
+  position: absolute;
+  width: 50%;
+  height: 180%;
+  z-index: 5;
+  top: 0%;
+  opacity: 90%;
+}
+
+.degradado_izquierdo {
+  transform: rotate(-60deg);
+  right: 50%;
+}
+
+.degradado_derecho {
+  transform: rotate(230deg);
+  left: 55%;
 }
 </style>
