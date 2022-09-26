@@ -530,8 +530,8 @@ img {
 .informacion {
   position: absolute;
   top: 40%;
-  left: 3%;
-  max-width: 20rem;
+  margin-left: 6rem;
+  max-width: 30rem;
   z-index: 9;
   font-family: 'Work Sans', sans-serif;
   color: white;
@@ -565,7 +565,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 6rem;
 }
 
 .titulo-imagen>img {
