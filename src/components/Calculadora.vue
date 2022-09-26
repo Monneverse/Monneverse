@@ -401,8 +401,8 @@ img {
   border-radius: 2rem;
   max-width: 8rem;
   text-align: center;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 #interes:disabled {
