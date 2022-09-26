@@ -13,12 +13,30 @@ export default {
         },
         {
           icono: "/img/plus.svg",
+          symbol: "",
+          precio: "Phase 1",
+          moneda: "",
+          sale_price: "Sale Price",
+          texto:
+            "The price on Pancakeswap for purchases and sales will be $22,6 one day after the pre-sale of our first 2,000,000 Monners to the public ends",
+        },
+        {
+          icono: "/img/plus.svg",
           symbol: "$",
           precio: "22,5",
           moneda: "USD",
           sale_price: "Sale Price",
           texto:
-            "The price on Pancakeswap for purchases and sales will be $22,6 one day after the pre-sale of our first 2,000,000 Monners to the public ends",
+            "Enter our first phase os staking buying in pre-sale and earn 12.6% every 48 hours of your total capital in Monnercoins after the launch in Pancakeswap",
+        },
+        {
+          icono: "/img/plus.svg",
+          symbol: "",
+          precio: "1500%",
+          moneda: "",
+          sale_price: "Sale Price",
+          texto:
+            "Enter our first phase os staking buying in pre-sale and earn 12.6% every 48 hours of your total capital in Monnercoins after the launch in Pancakeswap",
         },
         {
           icono: "/img/plus.svg",
@@ -59,40 +77,35 @@ export default {
 .benefit {
   width: 50%;
   height: 15%;
-
   margin-bottom: 5%;
-
   color: white;
   display: flex;
   flex-wrap: wrap;
   font-family: "Work Sans", sans-serif;
 }
 
-.benefit:nth-child(2) {
-  width: 58%;
-  margin-bottom: 10%;
+.benefit:nth-child(5){
+  width: 60%;
 }
-.benefit:nth-child(3) {
-  margin: 0;
-  width: 75%;
-}
+
+
 
 .benefit h1 {
  
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   font-weight: 500;
-  font-size: 6vw;
-  text-align: center;
+  font-size: 4.5vw;
+  text-align: left;
 }
 
 
 .benefit span {
-  font-size: 1.5vw;
+  font-size: 1vw;
 }
 .dolar {
   color: rgb(55, 243, 149);
-  font-size: 6vw;
+  font-size: 4.5vw;
 }
 .content_price {
   width: 70%;
@@ -121,7 +134,7 @@ export default {
 }
 
 .content_text {
-  margin-left: 6vw;
+  margin-left: 4.5vw;
   width: 100%;
   height: 100%;
   display: flex;
@@ -134,7 +147,7 @@ export default {
   font-weight: 400;
 }
 .content_text p {
-  width: 85%;
+  width: 90%;
   font-weight: 300;
   font-size: 0.9vw;
   text-align: justify;

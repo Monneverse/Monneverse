@@ -9,9 +9,6 @@ import Circulos from "./ComponentesCirculo.vue";
     <div class="fondo_rayos">
       <img src="img/rayos.png" alt="" />
     </div>
-    <div class="circuito circuito-derecho">
-    <img src="/img/calculadora/circuito-derecho.png" alt="" />
-  </div>
     <div class="rectangulo">
       <img src="img/rectangulo.svg" alt="" />
     </div>
@@ -32,9 +29,13 @@ import Circulos from "./ComponentesCirculo.vue";
       <h1>BENEFITS</h1>
     </div>
 
+    <div class="gasolinera">
+      <img src="/img/Benefits/gasolinera.png" alt="">
+    </div>
+
     <div class="display_flex">
       <div class="benefits">
-        <Benefits />
+        
       </div>
       <div class="circulos">
         <Circulos icono="/img/Benefits/monnercard.png" color="blanco" texto="MONNERCARD"/>
@@ -70,7 +71,14 @@ import Circulos from "./ComponentesCirculo.vue";
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
-
+.gasolinera img{
+   position: absolute;
+   top:17%;
+   left: 57%;
+  z-index: 12;
+  width: 35%;
+  margin: 0 auto;
+}
 .display_flex {
   display: flex;
   justify-content: space-evenly;
@@ -99,14 +107,14 @@ import Circulos from "./ComponentesCirculo.vue";
 }
 .benefits {
   position: relative;
-  z-index: 14;
+  z-index: 8;
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
   width: 55%;
-  height: 70%;
+  height: 80%;
   position: absolute;
-  top: 25%;
+  top: 15%;
   left: 15%;
 }
 .fondo {
@@ -121,28 +129,9 @@ import Circulos from "./ComponentesCirculo.vue";
 .fondo_rayos {
   position: absolute;
 
-  left: -30%;
+  left: -10%;
   width: 100%;
   height: 100%;
-}
-.circuito {
-  position: absolute;
-  z-index: 4;
-  height: 80%;
-  width: 50%;
-  min-width: 30rem;
-  top: 20%;
-  left: 65%;
-  
-
-}
-.circuito img {
-  transform: rotate(180deg);
-  z-index: 12;
-  width: 80%;
- 
-
-
 }
 
 .fondo-oscurecer {
@@ -172,7 +161,7 @@ import Circulos from "./ComponentesCirculo.vue";
   position: relative;
   z-index: 12;
   top: 35%;
-  left: 37%;
+  left: 35%;
   transform: rotate(225deg);
 
 }

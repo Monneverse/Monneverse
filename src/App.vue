@@ -7,6 +7,8 @@ import Alliances from "./components/Alliances.vue";
 import Certificado from "./components/Certificado.vue";
 import ContenedorArticulo from "./components/ContenedorArticulo.vue";
 import Benefits from "./components/Benefits.vue";
+import Benefits_2 from "./components/Benefits_2.vue";
+import Benefits_3 from "./components/Benefits_3.vue";
 import Alianzas from "./components/Alianzas.vue";
 import Exchanges from "./components/Exchanges.vue";
 import Logos_auditorias from "./components/Logos_auditorias.vue";
@@ -68,15 +70,21 @@ import Footer from "./components/Footer.vue";
       <Benefits />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==10}">
-      <Tokenomics />
+      <Benefits_2/>
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==11}">
-      <News />
+      <Benefits_3/>
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==12}">
-      <Fases />
+      <Tokenomics />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==13}">
+      <News />
+    </div>
+    <div :class="{container:true, 'mostrar-container':index_pagina==14}">
+      <Fases />
+    </div>
+    <div :class="{container:true, 'mostrar-container':index_pagina==15}">
       <Footer :index_pagina=index_pagina></Footer>
     </div>
 
@@ -92,7 +100,7 @@ export default {
     return {
       index: 1,
       index_pagina: 1,
-      limite: 13,
+      limite: 15,
       isVisibleLogo: false
 
     };
