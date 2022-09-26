@@ -28,7 +28,7 @@
             <a href=""><img src="/img/News/cryptoPotato.png"></a>
         </div>
         <div class="coinrepublic">
-            <a href=""><img src="/img/News/thecoinrepublic1.png"></a>
+            <a href=""><img src="/img/News/thcr.png"></a>
         </div>
     </div>
     <div class="contenedor_monedaR">

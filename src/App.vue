@@ -1,6 +1,5 @@
 <script setup>
 import Header from "./components/Header.vue";
-import Info from "./components/Informacion.vue";
 import Bienvenida from "./components/Bienvenida.vue";
 import Calculadora from "./components/Calculadora.vue";
 import Alliances from "./components/Alliances.vue";
@@ -34,7 +33,6 @@ import Footer from "./components/Footer.vue";
     -->
     <div :class="{container:true,  'mostrar-container':index_pagina==1}">
       <Bienvenida />
-      <Info />
     </div>
 
     <div :class="{container:true,  'mostrar-container':index_pagina==2}">
