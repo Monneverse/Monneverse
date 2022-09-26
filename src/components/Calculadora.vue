@@ -361,10 +361,10 @@ img {
 
 .indicador img {
   position: relative;
-  top: 2rem;
+  top: 1.5rem;
   right: 0rem;
   width: 40%;
-  max-width: 15rem;
+  max-width: 10rem;
   height: auto;
   user-select: none;
   pointer-events: none;
@@ -457,7 +457,7 @@ img {
   border-radius: 50%;
   background-color: white;
   height: 3rem;
-  top: 17%;
+  top: 15%;
   z-index: 10;
 }
 
@@ -563,7 +563,7 @@ img {
 
 .titulo-imagen {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
