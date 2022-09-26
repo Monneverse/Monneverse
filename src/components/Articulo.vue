@@ -37,7 +37,6 @@ img {
 .container2 {
     margin-left: 10%;
     margin-top: 15%;
-
     position: relative;
     width: 18%;
     min-width: 16rem;
@@ -61,12 +60,14 @@ img {
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
-
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
 
 }
 
 h5 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
     font-size: 1rem;
 }
 
