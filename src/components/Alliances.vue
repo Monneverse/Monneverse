@@ -6,13 +6,8 @@
 
   <!--FONDO-->
   <div class="fondo-video">
-    <video
-      src="/video/video_binario.mp4"
-      autoplay="true"
-      muted="true"
-      loop="true"
-      poster="/img/fondo_binario.png"
-    ></video>
+    <video src="/video/video_binario.mp4" autoplay="true" muted="true" loop="true"
+      poster="/img/fondo_binario.png"></video>
   </div>
 
   <div class="fondo filtro-superior"></div>
@@ -26,19 +21,13 @@
   <div class="circulo">
     <div class="circulo-medio">
       <div class="alianzas">
-        <a href="#"
-          ><Span><img src="/img/Alianzas/reddit.png" /></Span>REDDIT</a
-        >
+        <a href="#"><Span><img src="/img/Alianzas/reddit.png" /></Span>REDDIT</a>
         <!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
 
-        <a href="#"
-          ><SPan><img src="/img/Alianzas/telegram.png" /></SPan>TELEGRAM</a
-        >
+        <a href="#"><SPan><img src="/img/Alianzas/telegram.png" /></SPan>TELEGRAM</a>
         <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 
-        <a href="#"
-          ><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a
-        >
+        <a href="#"><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a>
         <!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
       </div>
     </div>
@@ -61,7 +50,7 @@
   <div class="puntero">
     <img src="img/puntero.svg" alt="" />
   </div>
-  
+
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
 </template>
@@ -104,12 +93,10 @@
 .filtro-superior {
   position: absolute;
   z-index: 1;
-  background: radial-gradient(
-    circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
-  );
+  background: radial-gradient(circle at center,
+      #f9f9fa 0%,
+      #c8ced4 50%,
+      #a8aaaf 100%);
   mix-blend-mode: multiply;
 }
 
@@ -217,11 +204,9 @@
   top: 60%;
   left: 25%;
   background: rgb(8, 7, 32);
-  background: linear-gradient(
-    90deg,
-    rgba(8, 7, 32, 1) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(8, 7, 32, 1) 0%,
+      rgba(1, 209, 88, 1) 100%);
   border-radius: 2.5rem;
   text-align: center;
   z-index: 5;
@@ -259,11 +244,13 @@
   justify-content: center;
   text-align: center;
 }
+
 .mensaje p {
   font-size: 2.3vw;
   font-weight: 300;
   font-family: "Work Sans", sans-serif;
 }
+
 .puntero {
   position: absolute;
   z-index: 7;
@@ -274,6 +261,7 @@
   top: 82%;
   left: 40%;
 }
+
 .degradado {
   background: linear-gradient(to right, #08047a 0.5%, transparent);
   position: absolute;
@@ -296,5 +284,4 @@
   transform: rotate(230deg);
   left: 55%;
 }
-
 </style>

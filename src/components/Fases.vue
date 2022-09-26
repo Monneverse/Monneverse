@@ -1,3 +1,7 @@
+<script setup>
+import fasesComponentes from './fasesComponentes.vue';
+</script>
+
 <template>
 
     <!--FONDO-->
@@ -18,9 +22,28 @@
             <h1>phase 1</h1>
         </div>
         <div class="description">
-            <p>Development of the entire monneverse ecosystem, website, spanish and english discord, telegram,
+            <p>development of the entire monneverse ecosystem, website, spanish and english discord, telegram,
                 twitter and facebook</p>
         </div>
+    </div>
+
+    <div class="circulos">
+        <img src="/img/aros1.png">
+    </div>
+
+    <div class="componentes">
+        <fasesComponentes title="development" description="development of the entire monnerverse ecosystem website,
+             spanish and english, discord, telegram, twitter and facebook." />
+    </div>
+
+    <div class="componentes1">
+        <fasesComponentes title="collection" description="Collection of documents for important Exchanges:
+         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others." />
+    </div>
+
+    <div class="componentes2">
+        <fasesComponentes title="started" description="Collection of documents for important Exchanges:
+         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others." />
     </div>
 
 </template>
@@ -95,29 +118,65 @@ img {
 /* FIN ESTILO FONDO */
 
 .Fases {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 35%;
-    left: 24%;
     justify-content: center;
     text-align: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
     z-index: 6;
+    left: 27%;
+    top: 35%;
 }
 
 .titulo {
     color: white;
-    right: 24%;
+    right: 28%;
     bottom: 15%;
     width: 100%;
     height: 100%;
     position: absolute;
     opacity: 100%;
+    text-transform: uppercase;
     z-index: 6;
 }
 
 .description {
     color: white;
-    width: 55%;
+    width: 45%;
+    font-size: 1.4vw;
+    text-transform: capitalize;
+}
+
+.circulos {
+    position: absolute;
+    left: 24%;
+    bottom: 44%;
+    width: 50%;
+    height: 25%;
+    z-index: 7;
+}
+
+.componentes {
+    position: absolute;
+    bottom: 6%;
+    left: 2%;
+    width: 45%;
+    height: 64%;
+}
+
+.componentes1 {
+    position: absolute;
+    bottom: -4%;
+    left: 37%;
+    width: 43%;
+    height: 64%;
+}
+
+.componentes2 {
+    position: absolute;
+    bottom: 6%;
+    left: 73%;
+    width: 43%;
+    height: 64%;
 }
 </style>
