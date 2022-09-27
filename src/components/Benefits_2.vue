@@ -1,18 +1,18 @@
 <script setup>
-import Benefits from "./TemplateBenefits.vue";
+import Benefit from "./ComponenteBenefit.vue";
 import Circulos from "./ComponentesCirculo.vue";
 defineProps({
   index_pagina: {
-            type: Number,
-            required: true,
-        },
-})
+    type: Number,
+    required: true,
+  },
+});
 </script>
 <template>
   <!--FONDO-->
 
   <div class="fondo">
-    <div class="fondo_rayos">
+    <div :class="{ 'fondo_rayos': true, 'animacion-desplazamiento': index_pagina == 10 }">
       <img src="img/rayos.png" alt="" />
     </div>
     <div class="rectangulo">
@@ -22,28 +22,54 @@ defineProps({
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
     <div class="reflector reflector-izquierdo">
-    <div class="luz-1"></div>
-    <div class="luz-2"></div>
-    <div class="luz-3"></div>
-  </div>
-  <div class="reflector reflector-derecho">
-    <div class="luz-1"></div>
-    <div class="luz-2"></div>
-    <div class="luz-3"></div>
-  </div>
-    <div class="titulo">
-      <h1>BENEFITS</h1>
+      <div class="luz-1"></div>
+      <div class="luz-2"></div>
+      <div class="luz-3"></div>
+    </div>
+    <div class="reflector reflector-derecho">
+      <div class="luz-1"></div>
+      <div class="luz-2"></div>
+      <div class="luz-3"></div>
     </div>
 
+    <!-- <div class="titulo">
+      <h1>BENEFITS</h1>
+    </div>
+-->
     <div class="display_flex">
-      <div class="benefits">
-        
+      <div :class="{ benefits: true, 'animacion-aparecer': index_pagina == 10 }">
+        <Benefit
+          titulo="STAKING"
+          texto="12.6% EVERY 48 HOURS"
+          segundoTitulo="PAYMENTS"
+          segundoTexto="Will be released as soon as the pre-sale phase ends. There will be 30 enable payments of 12.6% every 48 hours, directly to the holder’s Metamask Wallet"
+        />
       </div>
-      <div :class="{'circulos':true, 'animacion-rotar':index_pagina==10}">
-        <Circulos icono="/img/Benefits/monnercard.png" color="blanco" texto="MONNERCARD"/>
-        <Circulos icono="/img/Benefits/benefits.svg" color="verde" texto="BENEFITS"/>
-        <Circulos icono="/img/Benefits/minnersolar.png" color="verde" texto="MINNERSOLAR"/>
-        <Circulos icono="/img/Benefits/stanking.png" color="blanco" texto="STAKING"/>
+      <div :class="{ circulos: true, 'animacion-rotar': index_pagina == 10 }">
+        <Circulos
+          icono="/img/Benefits/monnercard.png"
+          color="blanco"
+          texto="MONNERCARD"
+          rotar="rotar"
+        />
+        <Circulos
+          icono="/img/Benefits/benefits.svg"
+          color="verde"
+          texto="BENEFITS"
+          rotar="rotar"
+        />
+        <Circulos
+          icono="/img/Benefits/minnersolar.png"
+          color="verde"
+          texto="MINNERSOLAR"
+          rotar="rotar"
+        />
+        <Circulos
+          icono="/img/Benefits/stanking.png"
+          color="blanco"
+          texto="STAKING"
+          rotar="rotar"
+        />
       </div>
     </div>
     <div class="logo-redes">
@@ -68,19 +94,11 @@ defineProps({
       </div>
     </div>
   </div>
-
 </template>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
-.gasolinera img{
-   position: absolute;
-   top:17%;
-   left: 57%;
-  z-index: 12;
-  width: 35%;
-  margin: 0 auto;
-}
+
 .display_flex {
   display: flex;
   justify-content: space-evenly;
@@ -96,28 +114,33 @@ defineProps({
   height: 5rem;
   z-index: 12;
 }
-.titulo {
-  position: absolute;
-  top: 15%;
-  left: 18%;
-}
-.titulo h1 {
-  font-size: 4vw;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 600;
-  color: white;
-}
+
 .benefits {
   position: relative;
   z-index: 8;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 55%;
+  width: 50%;
   height: 80%;
   position: absolute;
   top: 15%;
   left: 15%;
+}
+.animacion-aparecer {
+  animation-duration: 1s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }
 .fondo {
   position: absolute;
@@ -131,9 +154,24 @@ defineProps({
 .fondo_rayos {
   position: absolute;
 
-  left: -10%;
+  left: -5%;
   width: 100%;
   height: 100%;
+}
+.animacion-desplazamiento {
+  animation-duration: 1s;
+  animation-name: desplazamiento;
+  animation-iteration-count: 1;
+}
+@keyframes desplazamiento{
+  0% {
+    left: -10%;
+   
+  }
+
+  100% {
+    left: -5%;
+  }
 }
 
 .fondo-oscurecer {
@@ -165,25 +203,21 @@ defineProps({
   top: 32%;
   left: 43%;
   transform: rotate(135deg);
-
 }
-.animacion-rotar{
-
-  animation-duration: 2s;
-    animation-name: dezplazamiento;
-    animation-iteration-count: 1;
+.animacion-rotar {
+  animation-duration: 1s;
+  animation-name: rotar;
+  animation-iteration-count: 1;
 }
-@keyframes dezplazamiento{
-    0% {
-      transform: rotate(225deg);
-    }
-
-
-    100% {
-      transform: rotate(135deg);
-
-    }
+@keyframes rotar {
+  0% {
+    transform: rotate(225deg);
   }
+
+  100% {
+    transform: rotate(135deg);
+  }
+}
 .logo-redes {
   position: absolute;
   bottom: 0%;
@@ -195,7 +229,7 @@ defineProps({
   justify-content: start;
 }
 
-.icon  img{
+.icon img {
   width: 3.5vw;
   height: auto;
   margin-left: 1rem;
@@ -209,7 +243,7 @@ defineProps({
   width: 40%;
   height: 90%;
   z-index: 1;
-  
+
   animation-duration: 6s;
   animation-name: reflector;
   animation-iteration-count: infinite;
@@ -235,7 +269,6 @@ defineProps({
 }
 .reflector-izquierdo {
   z-index: 0;
- 
 }
 .luz-1 {
   position: absolute;
