@@ -17,16 +17,30 @@ export default {
       type: String,
       required: true,
     },
+    index_pagina: {
+      type: Number,
+      required: true,
+    },
+    mostrarBtn: {
+      type: Boolean,
+      required: true,
+    },
     ruta: {
       type: String,
       required: true,
     },
+   
+  },
+  data() {
+    return {
+        
+    };
   },
 };
 </script>
 
 <template>
-  <div class="benefit">
+  <div :class="index_pagina == 13  ?  'transparente':'fondo-oscuro' " class="benefit">
     <div class="div titulo_1">
       <h2>
         {{ titulo }}
@@ -44,7 +58,7 @@ export default {
         {{ segundoTexto }}
       </p>
     </div>
-    <div class="div">
+    <div  v-show=mostrarBtn class="div">
       <a class="btn" :href="ruta">READ MORE</a>
     </div>
   </div>
@@ -56,15 +70,16 @@ export default {
 .benefit {
   width: 70%;
   height: 65%;
-  background-color: #161431;
   border-radius: 4%;
   color: white;
   display: flex;
   flex-wrap: wrap;
   font-family: "Work Sans", sans-serif;
 }
-.benefit
-.div {
+.fondo-oscuro{
+  background-color: #161431;
+}
+.benefit .div {
   width: 90%;
   margin: 0 auto;
 }
@@ -75,11 +90,10 @@ export default {
   justify-content: center;
 }
 .div h2 {
-
-    font-size: 1.5vw;
-    font-weight: 600;
+  font-size: 1.5vw;
+  font-weight: 600;
 }
-.div p{
+.div p {
   font-weight: 300;
   font-size: 1.2vw;
 }
@@ -95,19 +109,16 @@ export default {
   padding: 2% 5%;
   border-radius: 1.5vw;
   cursor: pointer;
-  
 }
 .btn:hover {
-  box-shadow:
-    inset 0 0 60px whitesmoke,
-    inset 20px 0 80px rgb(6, 38, 58),
-    inset -20px 0 80px rgb(7, 64, 25),
-    inset 20px 0 300px rgb(5, 12, 28),
-    inset -20px 0 300px rgb(4, 41, 10),
-    0 0 50px #fff,
-    -10px 0 80px rgb(1, 13, 37),
-    10px 0 80px rgb(1, 64, 12);
-    transition: 0.5s ease-out;
-   
+  box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px rgb(6, 38, 58),
+    inset -20px 0 80px rgb(7, 64, 25), inset 20px 0 300px rgb(5, 12, 28),
+    inset -20px 0 300px rgb(4, 41, 10), 0 0 50px #fff,
+    -10px 0 80px rgb(1, 13, 37), 10px 0 80px rgb(1, 64, 12);
+  transition: 0.5s ease-out;
+}
+.transparente{
+  background-color: rgb(22, 20, 49, 0.6);
+
 }
 </style>

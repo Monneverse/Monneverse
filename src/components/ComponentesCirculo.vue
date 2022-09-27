@@ -1,12 +1,12 @@
 <script>
 export default {
   props: {
-    //icono imagen
+ 
     icono: {
       type: String,
       required: true,
     },
-    //nombre icono
+    
     color: {
       type: String,
       required: true,
@@ -21,11 +21,7 @@ export default {
     },
   },
 
-  data() {
-    return {
-    
-    };
-  },
+
 };
 </script>
 

@@ -42,7 +42,10 @@ defineProps({
         <Benefit_4
           segundoTitulo="MonnerCard"
           segundoTexto="Is supported by VISA and MASTERCARD, and relies on our MonnerWallet, MonnerSwap and MonnerTrading technologies. Holders are free to use their"
-        />
+          index_pagina="12"
+          mostrarBtn="true"
+          
+          />
       </div>
       <div :class="{ circulos: true, 'animacion-rotar': index_pagina == 12 }">
         <Circulos

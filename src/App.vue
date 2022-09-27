@@ -9,6 +9,7 @@ import Benefits from "./components/Benefits.vue";
 import Benefits_2 from "./components/Benefits_2.vue";
 import Benefits_3 from "./components/Benefits_3.vue";
 import Benefits_4 from "./components/Benefits_4.vue";
+import Benefits_5 from "./components/Benefits_5.vue";
 import Alianzas from "./components/Alianzas.vue";
 import Exchanges from "./components/Exchanges.vue";
 import Logos_auditorias from "./components/Logos_auditorias.vue";
@@ -78,15 +79,18 @@ import Footer from "./components/Footer.vue";
       <Benefits_4 :index_pagina=index_pagina />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==13}">
-      <Tokenomics :index_pagina=index_pagina />
+      <Benefits_5 :index_pagina=index_pagina />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==14}">
-      <News />
+      <Tokenomics :index_pagina=index_pagina />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==15}">
-      <Fases />
+      <News />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==16}">
+      <Fases />
+    </div>
+    <div :class="{container:true, 'mostrar-container':index_pagina==17}">
       <Footer :index_pagina=index_pagina></Footer>
     </div>
 
@@ -102,7 +106,7 @@ export default {
     return {
       index: 1,
       index_pagina: 1,
-      limite: 16,
+      limite: 17,
       isVisibleLogo: false,
       scroll: true
 

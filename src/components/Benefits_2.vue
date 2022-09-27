@@ -43,7 +43,8 @@ defineProps({
           texto="12.6% EVERY 48 HOURS"
           segundoTitulo="PAYMENTS"
           segundoTexto="Will be released as soon as the pre-sale phase ends. There will be 30 enable payments of 12.6% every 48 hours, directly to the holder’s Metamask Wallet"
-        />
+          mostrarBtn="false"
+          />
       </div>
       <div :class="{ circulos: true, 'animacion-rotar': index_pagina == 10 }">
         <Circulos
