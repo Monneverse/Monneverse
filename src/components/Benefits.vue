@@ -1,18 +1,25 @@
 <script setup>
 import Benefits from "./TemplateBenefits.vue";
 import Circulos from "./ComponentesCirculo.vue";
+defineProps({
+  index_pagina: {
+            type: Number,
+            required: true,
+        },
+})
+
 </script>
 <template>
   <!--FONDO-->
 
   <div class="fondo">
-    <div class="fondo_rayos">
+    <div  :class="{'fondo_rayos':true, 'animacion-aparecer':index_pagina==9}">
       <img src="img/rayos.png" alt="" />
     </div>
     <div class="circuito circuito-derecho">
     <img src="/img/calculadora/circuito-derecho.png" alt="" />
   </div>
-    <div class="rectangulo">
+    <div  :class="{'rectangulo':true, 'animacion-aparecer':index_pagina==9}">
       <img src="img/rectangulo.svg" alt="" />
     </div>
     <div class="logo">
@@ -28,12 +35,12 @@ import Circulos from "./ComponentesCirculo.vue";
     <div class="luz-2"></div>
     <div class="luz-3"></div>
   </div>
-    <div class="titulo">
+    <div  :class="{'titulo':true, 'animacion-aparecer':index_pagina==9}">
       <h1>BENEFITS</h1>
     </div>
 
-    <div class="display_flex">
-      <div class="benefits">
+    <div  :class="{'display_flex':true, 'animacion-aparecer':index_pagina==9}">
+      <div  class="benefits">
         <Benefits />
       </div>
       <div class="circulos">
@@ -43,7 +50,7 @@ import Circulos from "./ComponentesCirculo.vue";
         <Circulos icono="/img/Benefits/stanking.png" color="blanco" texto="STAKING"/>
       </div>
     </div>
-    <div class="logo-redes">
+    <div :class="{'logo-redes':true, 'animacion-desplazamiento':index_pagina==9}">
       <div class="icon icon-telegram">
         <a href="https://t.me/monnerversecommunity" target="_blank">
           <img
@@ -179,7 +186,7 @@ import Circulos from "./ComponentesCirculo.vue";
 .logo-redes {
   position: absolute;
   bottom: 0%;
-  left: 1rem;
+  left: 3rem;
   width: 20rem;
   height: 5rem;
   z-index: 14;
@@ -276,5 +283,41 @@ import Circulos from "./ComponentesCirculo.vue";
     rgba(184, 184, 184, 0) 100%
   );
   filter: blur(3rem);
+}
+.animacion-aparecer {
+    animation-duration: 1s;
+    animation-name: aparecer;
+    animation-iteration-count: 1;
+}
+
+@keyframes aparecer{
+    0% {
+      opacity: 0%;
+    }
+ 
+    100% {
+      opacity: 100%;
+    }
+}
+.animacion-dezplazamiento{
+    animation-duration: 3s;
+    animation-name: dezplazamiento;
+    animation-iteration-count: 2;
+}
+@keyframes dezplazamiento{
+    0% {
+     
+     left: 0;
+    }
+    50%{
+      
+     left: 0.5rem;
+
+    }
+
+    100% {
+      left: 3rem;
+
+    }
 }
 </style>

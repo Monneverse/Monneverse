@@ -1,6 +1,12 @@
 <script setup>
 import Benefits from "./TemplateBenefits.vue";
 import Circulos from "./ComponentesCirculo.vue";
+defineProps({
+  index_pagina: {
+            type: Number,
+            required: true,
+        },
+})
 </script>
 <template>
   <!--FONDO-->
@@ -29,15 +35,11 @@ import Circulos from "./ComponentesCirculo.vue";
       <h1>BENEFITS</h1>
     </div>
 
-    <div class="gasolinera">
-      <img src="/img/Benefits/gasolinera.png" alt="">
-    </div>
-
     <div class="display_flex">
       <div class="benefits">
         
       </div>
-      <div class="circulos">
+      <div :class="{'circulos':true, 'animacion-rotar':index_pagina==10}">
         <Circulos icono="/img/Benefits/monnercard.png" color="blanco" texto="MONNERCARD"/>
         <Circulos icono="/img/Benefits/benefits.svg" color="verde" texto="BENEFITS"/>
         <Circulos icono="/img/Benefits/minnersolar.png" color="verde" texto="MINNERSOLAR"/>
@@ -160,11 +162,28 @@ import Circulos from "./ComponentesCirculo.vue";
   height: 50%;
   position: relative;
   z-index: 12;
-  top: 35%;
-  left: 35%;
-  transform: rotate(225deg);
+  top: 32%;
+  left: 43%;
+  transform: rotate(135deg);
 
 }
+.animacion-rotar{
+
+  animation-duration: 2s;
+    animation-name: dezplazamiento;
+    animation-iteration-count: 1;
+}
+@keyframes dezplazamiento{
+    0% {
+      transform: rotate(225deg);
+    }
+
+
+    100% {
+      transform: rotate(135deg);
+
+    }
+  }
 .logo-redes {
   position: absolute;
   bottom: 0%;

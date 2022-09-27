@@ -67,10 +67,10 @@ import Footer from "./components/Footer.vue";
     </div>
 
     <div :class="{container:true,  'mostrar-container':index_pagina==9}">
-      <Benefits />
+      <Benefits :index_pagina=index_pagina />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==10}">
-      <Benefits_2/>
+      <Benefits_2 :index_pagina=index_pagina />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==11}">
       <Benefits_3/>
