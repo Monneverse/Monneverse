@@ -46,7 +46,7 @@ import Articulo from "./Articulo.vue";
           <h4>Segundos</h4>
         </div>
       </div>
-      <button class="btn_comenzar">CLICK HERE</button>
+      <a class="btn_comenzar" href="https://mailchi.mp/8ae2d866d909/reservation-form" target="_blank">CLICK HERE</a>
     </div>
   </div>
 
@@ -58,6 +58,7 @@ import Articulo from "./Articulo.vue";
         :key="item"
         :titulo="item.titulo"
         :img="item.imagen"
+        :url="item.link"
       />
     </div>
   </div>
@@ -314,11 +315,9 @@ h1, h2, h4  {
 
 
 .bloque_temporizador {
-  top: 10%;
-  left: 0;
+  top: 15%;
+  left: 2rem;
   position: relative;
-  margin-left: 2rem;
-  margin-top: 2rem;
   height: 4rem;
   width: 25rem;
   z-index: 6;
@@ -413,7 +412,7 @@ h1, h2, h4  {
 .tercerPunto {
   z-index: 5;
   position: relative;
-  left: 22%;
+  left: 23%;
 }
 
 .logo_redes {
