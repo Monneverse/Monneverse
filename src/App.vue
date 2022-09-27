@@ -74,7 +74,7 @@ import Footer from "./components/Footer.vue";
       <Benefits_3 />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==12}">
-      <Tokenomics />
+      <Tokenomics :index_pagina=index_pagina />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==13}">
       <News />
@@ -122,7 +122,7 @@ export default {
 
         setTimeout(() => {
           this.scroll = true;
-        }, 2000)
+        }, 20)
         location.hash = "#" + this.index_pagina;
         window.history.pushState({}, document.title, window.location.pathname);
       }
