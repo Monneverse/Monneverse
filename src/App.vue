@@ -115,7 +115,7 @@ export default {
           if (this.index_pagina > 1) this.index_pagina = this.index_pagina - 1;
         }
         this.isVisibleLogo = true;
-        if (this.index_pagina == 1 || this.index_pagina == 13) {
+        if (this.index_pagina == 1 || this.index_pagina == this.limite) {
           this.isVisibleLogo = false;
         }
         this.scroll = false;
