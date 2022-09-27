@@ -130,4 +130,9 @@ export default {
 transform: rotate(90deg);
   
 }
+.rotar_180{
+
+transform: rotate(180deg);
+  
+}
 </style>

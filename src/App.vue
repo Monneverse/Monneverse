@@ -71,7 +71,7 @@ import Footer from "./components/Footer.vue";
       <Benefits_2 :index_pagina=index_pagina />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==11}">
-      <Benefits_3 />
+      <Benefits_3 :index_pagina=index_pagina />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==12}">
       <Tokenomics />

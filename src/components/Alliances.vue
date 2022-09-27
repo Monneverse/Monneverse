@@ -105,8 +105,8 @@ defineProps({
     }"
   >
     <div class="mensaje">
-      <p>Join our community and get our</p>
-      <p>latest news</p>
+      <img src="../assets/methodBuy/visa.svg" alt="">
+      <img src="../assets/methodBuy/masterCard.svg" alt="">
     </div>
   </div>
   <div
@@ -371,15 +371,18 @@ defineProps({
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-evenly;
+
 }
 
-.mensaje p {
-  font-size: 2.3vw;
-  font-weight: 300;
-  font-family: "Work Sans", sans-serif;
+
+.mensaje img {
+  width:  12vw;
+ 
+}
+.mensaje img:last-child{
+
+  width:  9.5vw;
 }
 
 .puntero {
