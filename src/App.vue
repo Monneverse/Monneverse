@@ -105,12 +105,7 @@ export default {
     };
   },
   methods: {
-    setScroll() {
-
-      setTimeout(function () {
-        this.scroll = true;
-      }, 3000)
-    },
+   
     Navegar() {
       console.log(this.scroll);
       if (this.scroll) {
