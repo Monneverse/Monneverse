@@ -86,7 +86,7 @@ defineProps({
   <!--UPCOMING ALLIANCES-->
   <div
     :class="{
-      rectangulo: true,
+      'rectangulo': true,
       'animacion-aparecer': index_pagina == 2,
     }"
   >
@@ -275,7 +275,7 @@ defineProps({
   height: 85%;
   padding: 0;
   margin: 0;
-  top: 15.5%;
+  top: 15%;
   left: 0%;
   
 }
