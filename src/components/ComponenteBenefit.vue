@@ -63,6 +63,7 @@ export default {
   flex-wrap: wrap;
   font-family: "Work Sans", sans-serif;
 }
+.benefit
 .div {
   width: 90%;
   margin: 0 auto;
@@ -94,5 +95,19 @@ export default {
   padding: 2% 5%;
   border-radius: 1.5vw;
   cursor: pointer;
+  
+}
+.btn:hover {
+  box-shadow:
+    inset 0 0 60px whitesmoke,
+    inset 20px 0 80px rgb(6, 38, 58),
+    inset -20px 0 80px rgb(7, 64, 25),
+    inset 20px 0 300px rgb(5, 12, 28),
+    inset -20px 0 300px rgb(4, 41, 10),
+    0 0 50px #fff,
+    -10px 0 80px rgb(1, 13, 37),
+    10px 0 80px rgb(1, 64, 12);
+    transition: 0.5s ease-out;
+   
 }
 </style>
