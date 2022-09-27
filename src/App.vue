@@ -68,10 +68,10 @@ import Footer from "./components/Footer.vue";
       <Benefits />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==10}">
-      <Benefits_2/>
+      <Benefits_2 />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==11}">
-      <Benefits_3/>
+      <Benefits_3 />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==12}">
       <Tokenomics />
@@ -99,23 +99,39 @@ export default {
       index: 1,
       index_pagina: 1,
       limite: 15,
-      isVisibleLogo: false
+      isVisibleLogo: false,
+      scroll: true
 
     };
   },
   methods: {
+    setScroll() {
+
+      setTimeout(function () {
+        this.scroll = true;
+      }, 3000)
+    },
     Navegar() {
-      if (event.deltaY > 0) {
-        if (this.index_pagina < this.limite) this.index_pagina = this.index_pagina + 1;
-      } else {
-        if (this.index_pagina > 1) this.index_pagina = this.index_pagina - 1;
+      console.log(this.scroll);
+      if (this.scroll) {
+        if (event.deltaY > 0) {
+          if (this.index_pagina < this.limite) this.index_pagina = this.index_pagina + 1;
+        } else {
+          if (this.index_pagina > 1) this.index_pagina = this.index_pagina - 1;
+        }
+        this.isVisibleLogo = true;
+        if (this.index_pagina == 1 || this.index_pagina == 13) {
+          this.isVisibleLogo = false;
+        }
+        this.scroll = false;
+
+        setTimeout(() => {
+          this.scroll = true;
+        }, 1000)
+        location.hash = "#" + this.index_pagina;
+        window.history.pushState({}, document.title, window.location.pathname);
       }
-      this.isVisibleLogo = true;
-      if (this.index_pagina == 1 || this.index_pagina == 13) {
-        this.isVisibleLogo = false;
-      }
-      location.hash = "#" + this.index_pagina;
-      window.history.pushState({}, document.title, window.location.pathname);
+
     }
   },
   mounted() {
