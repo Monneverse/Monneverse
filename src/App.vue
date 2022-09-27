@@ -21,7 +21,7 @@ import Footer from "./components/Footer.vue";
 
 <template>
   <header>
-    <Header :index=index :isVisible=isVisibleLogo></Header>
+    <Header :index=index :isVisible=isVisibleLogo :setPage=setOnPage></Header>
   </header>
 
   <main>
@@ -109,7 +109,32 @@ export default {
     };
   },
   methods: {
-   
+    setOnPage(id) {
+      this.index = id;
+
+      switch (this.index) {
+        case 1:
+          this.index_pagina = 5;
+          break;
+        case 2:
+          this.index_pagina = 9;
+          break;
+        case 3:
+          this.index_pagina = 13;
+          break;
+        case 4:
+          this.index_pagina = 14;
+          break;
+        case 5:
+          this.index_pagina = 15;
+          break;
+        default:
+          break;
+      }
+
+      location.hash = "#" + this.index_pagina;
+      window.history.pushState({}, document.title, window.location.pathname);
+    },
     Navegar() {
       console.log(this.scroll);
       if (this.scroll) {
