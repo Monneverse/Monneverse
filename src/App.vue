@@ -37,7 +37,7 @@ import Footer from "./components/Footer.vue";
 
     <div :class="{container:true,  'mostrar-container':index_pagina==2}">
 
-      <Alliances />
+      <Alliances :index_pagina=index_pagina />
     </div>
 
     <div :class="{container:true,  'mostrar-container':index_pagina==3}">

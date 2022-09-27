@@ -415,5 +415,5 @@ defineProps({
     top: 20%;
     left: 65%;
   }
-}
+ }
 </style>
