@@ -31,17 +31,17 @@ import fasesComponentes from './fasesComponentes.vue';
         <img src="/img/aros1.png">
     </div>
 
-    <div class="componentes">
+    <div class="componentes1">
         <fasesComponentes title="development" description="development of the entire monnerverse ecosystem website,
              spanish and english, discord, telegram, twitter and facebook." />
     </div>
 
-    <div class="componentes1">
+    <div class="componentes2">
         <fasesComponentes title="collection" description="Collection of documents for important Exchanges:
          CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others." />
     </div>
 
-    <div class="componentes2">
+    <div class="componentes3">
         <fasesComponentes title="started" description="Collection of documents for important Exchanges:
          CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others." />
     </div>
@@ -125,13 +125,13 @@ img {
     width: 100%;
     z-index: 6;
     left: 27%;
-    top: 35%;
+    top: 25%;
 }
 
 .titulo {
     color: white;
     right: 28%;
-    bottom: 15%;
+    bottom: 10%;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -150,33 +150,33 @@ img {
 .circulos {
     position: absolute;
     left: 24%;
-    bottom: 44%;
+    bottom: 54%;
     width: 50%;
     height: 25%;
     z-index: 7;
 }
 
-.componentes {
-    position: absolute;
-    bottom: 6%;
-    left: 2%;
-    width: 45%;
-    height: 64%;
-}
-
 .componentes1 {
     position: absolute;
-    bottom: -4%;
-    left: 37%;
-    width: 43%;
+    top: 45%;
+    left: 0%;
+    width: 25%;
     height: 64%;
 }
 
 .componentes2 {
     position: absolute;
-    bottom: 6%;
-    left: 73%;
-    width: 43%;
+    top: 55%;
+    left: 36%;
+    width: 25%;
+    height: 64%;
+}
+
+.componentes3 {
+    position: absolute;
+    top: 45%;
+    right: 0%;
+    width: 25%;
     height: 64%;
 }
 </style>
