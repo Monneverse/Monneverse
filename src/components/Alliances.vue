@@ -7,7 +7,12 @@ defineProps({
 });
 </script>
 <template>
-  <div class="logo">
+  <div
+    :class="{
+      logo: true,
+      'animacion-logo': index_pagina == 2,
+    }"
+  >
     <img src="/img/logo.svg" alt="logo monneverse" />
   </div>
 
@@ -86,7 +91,7 @@ defineProps({
   <!--UPCOMING ALLIANCES-->
   <div
     :class="{
-      'rectangulo': true,
+      rectangulo: true,
       'animacion-aparecer': index_pagina == 2,
     }"
   >
@@ -121,14 +126,39 @@ defineProps({
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
 .logo {
-  position: relative;
+  position: absolute;
   top: 2rem;
   left: 2rem;
   width: 5rem;
   height: 5rem;
-  z-index: 12;
+  z-index:12;
+}
+.animacion-logo {
+  animation-name: animar-logo;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
 }
 
+@keyframes animar-logo {
+  0% {
+    position: absolute;
+    top: 10rem;
+    left: 25rem;
+    width: 25rem;
+    height: 5rem;
+    z-index: 1;
+    opacity: 10%;
+  }
+  100% {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 5rem;
+    height: 5rem;
+    z-index:12;
+    opacity: 100%;
+  }
+}
 .fondo {
   top: 0;
   left: 0;
@@ -268,7 +298,7 @@ defineProps({
   margin: auto auto;
 }
 
-.semi_circulo img{
+.semi_circulo img {
   position: absolute;
   z-index: 7;
   width: 100%;
@@ -277,7 +307,6 @@ defineProps({
   margin: 0;
   top: 15%;
   left: 0%;
-  
 }
 .animacion-arco img {
   animation-name: animacion-arco;
@@ -295,7 +324,6 @@ defineProps({
     top: 15.5%;
     transform: rotateZ(0deg);
   }
- 
 }
 
 .rectangulo {
