@@ -8,7 +8,7 @@ import ContenedorArticulo from "./components/ContenedorArticulo.vue";
 import Benefits from "./components/Benefits.vue";
 import Benefits_2 from "./components/Benefits_2.vue";
 import Benefits_3 from "./components/Benefits_3.vue";
-import Benefits_4 from "./components/Benefits_3.vue";
+import Benefits_4 from "./components/Benefits_4.vue";
 import Alianzas from "./components/Alianzas.vue";
 import Exchanges from "./components/Exchanges.vue";
 import Logos_auditorias from "./components/Logos_auditorias.vue";

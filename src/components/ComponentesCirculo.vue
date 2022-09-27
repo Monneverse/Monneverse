@@ -135,4 +135,9 @@ transform: rotate(90deg);
 transform: rotate(180deg);
   
 }
+.rotar_360{
+
+transform: rotate(270deg);
+  
+}
 </style>
