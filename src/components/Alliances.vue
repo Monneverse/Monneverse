@@ -33,7 +33,7 @@
     </div>
   </div>
   <div class="semi_circulo">
-    <!--<img src="img/semi_circulo.png" alt="">-->
+    <img src="../assets/aro-iluminado-brillante.svg" alt="">
   </div>
 
   <!--UPCOMING ALLIANCES-->
@@ -189,12 +189,12 @@
 .semi_circulo {
   position: absolute;
   z-index: 7;
-  width: 40%;
-  height: 80%;
+  width: 48%;
+  height: 20%;
   padding: 0;
   margin: 0;
-  top: 23%;
-  left: 30%;
+  top: 16%;
+  left: 26%;
 }
 
 .rectangulo {
