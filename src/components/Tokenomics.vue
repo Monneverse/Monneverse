@@ -1,26 +1,40 @@
+<script>
+import ContenedorTokenomics from "./ContenedorTokenomics.vue"
+
+</script>
+
+
 <template>
-    <!-- Fondos -->
-    <div class="fondo ">
-        <div class="fondoTokenomics">
-        <img src="/img/fondo_Tokenomics.png" alt="">
-        </div>
+  <!-- Fondos -->
+  <div class="fondo">
+    <div class="fondoTokenomics">
+      <img src="/img/fondo_Tokenomics.png" alt="" />
+    </div>
+  </div>
+
+  <div class="contenedor_Tokenomics">
+    <contenedor-tokenomics/>
+  </div>
+
+  <div class="fondo_Derecho">
+    <h2>hsdlksdlsjljsjldsjdljsj</h2>
+  </div>
+
+  <div class="fondo_Proximalianza">
+    <div class="nombre_Alianza"><h1>UPCOMING ALLIANCES</h1></div>
+    <div class="imagen_Proximalianza">
+      <img src="/img/Alianzas/visa.svg" alt="" />
     </div>
 
-    <div class="fondo_Proximalianza">
-        <h1>UPCOMING ALLIANCES</h1>
-        <div class="imagen_Proximalianza" >
-            <img src="/img/Alianzas/visa.svg" alt="" > 
-        </div>
-        
-        <div  class="imagen_Proximalianza2">
-            <img src="/img/Alianzas/masterCard.svg" alt="">
-        </div>
-        
+    <div class="imagen_Proximalianza2">
+      <img src="/img/Alianzas/masterCard.svg" alt="" />
     </div>
-
+  </div>
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+
 img {
   height: 100%;
   width: 100%;
@@ -64,6 +78,15 @@ h1 {
   margin-left: 5%;
   margin-top: 6%;
   color: white;
+  font-family: 'Work Sans', sans-serif;
+  
+}
+
+h2 {
+  font-size: 150%;
+  position: relative;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .imagen_Proximalianza {
@@ -77,12 +100,45 @@ h1 {
 .imagen_Proximalianza2 {
   position: absolute;
   top: 0;
-  left: 75%;
+  right: 5%;
   width: 20%;
   height: 100%;
 }
+
+
+.fondo_Derecho{
+position: absolute;
+  top: 30%;
+  right:20%;
+  width: 25%;
+  height: 45%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border: 1px solid red;
+  background-color: white;
+  z-index: 3;
+}
+
+.nombre_Alianza{
+position: absolute;
+  top: 0;
+  left: 0;
+  width: 54%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor_Tokenomics{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  border: 1px solid red;
+}
+
+
 </style>
 
-<script>
-
-</script>
