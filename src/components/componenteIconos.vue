@@ -17,55 +17,63 @@ defineProps({
   <div class="contenedor_icono">
     <div class="icono">
       <img :src=iconos class="icon_coin" />
-      <div class="name_coin">
-        <p>{{iconname}}</p>
-      </div>
+    </div>
+    <div class="name_coin">
+      <p>{{iconname}}</p>
     </div>
   </div>
 </template>
 
 <style scoped>
 .contenedor_icono {
-  background: linear-gradient(to left, #48d0ab 0%, #097561 50%, #505863 100%);
-  justify-content: space-between;
+  background: linear-gradient(to left, #48d0ab 10%, #097561 50%, #111111 70%, black 100%);
   border-radius: 8px;
   position: absolute;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
-  margin: 4.5%;
+  margin: 0%;
   height: 70%;
   z-index: 7;
-  left: -4%;
-  width: 25%;
-  top: -4%;
+  width: 80%;
+  top: 0%;
 }
 
-.contenedor_icono:hover {
+.contenedor_icono .icono .icon_coin {
+  position: absolute;
+  display: absolute;
+  width: 32%;
+  height: 100%;
+  background-color: #19612E;
+  border-radius: 20%;
+}
+
+/* .contenedor_icono:hover {
   width: 88%;
   transition: 0.5s;
 }
 
 .contenedor_icono:hover .icono {
   width: 100%;
-}
+} */
 
-.icono {
+/* .icono {
   transition: transform 0.75s;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  background-color: grey;
   display: flex;
   height: 100%;
-  width: 100%;
-}
+  width: 30%;
+} */
 
 .icon_coin {
   position: relative;
   border-radius: 40%;
-  overflow: hidden;
-  min-width: 4.5vw;
+  overflow: visible;
+  min-width: 4.4vw;
   height: 95%;
   padding: 0%;
-  left: 4%;
+  left: 0%;
 }
 
 .icon_coin img {
@@ -78,15 +86,21 @@ defineProps({
 }
 
 .name_coin {
+  position: absolute;
   font-family: "Work Sans", sans-serif;
   text-transform: uppercase;
+  left: 34%;
   justify-content: center;
   align-content: center;
   text-align: center;
   white-space: nowrap;
   font-weight: bold;
   font-size: 1.3vw;
-  float: left;
-  margin: 8%;
+  float: center;
+}
+
+.name_coin {
+  color: white;
+  text-align: center;
 }
 </style>

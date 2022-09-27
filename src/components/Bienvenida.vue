@@ -39,9 +39,17 @@
   </div>
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
-  <!-- <div class="semi-circle rotateOutUpRight animated">
-    <img src="/public/img/semi_circulo.png" alt="" />
-  </div> -->
+  <div class="welcome fadeInLeft animated">
+    <p>welcome to <b>monneverse</b></p>
+  </div>
+  <div class="welcome_text fadeInRight animated">
+    <p>
+      <span>Utilities DeFi</span>
+      <br>
+      Take advantage of this opportunity and <b>reserve</b> your spot in our
+      pre-sale
+    </p>
+  </div>
 </template>
 
 <script>
@@ -49,6 +57,8 @@ export default {};
 </script>
 
 <style scoped>
+@import url("http://fonts.cdnfonts.com/css/bahnschrift");
+
 img {
   width: 100%;
   height: 100%;
@@ -189,5 +199,54 @@ img {
 .degradado_derecho {
   transform: rotate(230deg);
   left: 55%;
+}
+
+.welcome {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 30%;
+  left: 5%;
+  width: 30%;
+  z-index: 6;
+}
+
+.welcome p {
+  font-size: 3.4vw;
+  font-family: "Bahnschrift", sans-serif;
+  color: white;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.welcome p b {
+  text-decoration: bold;
+}
+
+.welcome_text {
+  position: fixed;
+  display: flex;
+  top: 50%;
+  left: 5%;
+  justify-content: center;
+  width: 40%;
+  z-index: 6;
+}
+
+.welcome_text p {
+  font-size: 2vw;
+  font-family: "Bahnschrift", sans-serif;
+  color: white;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.welcome_text p b {
+  text-transform: uppercase;
+}
+
+.welcome_text p span {
+  color: #FFC000;
+  font-size: 3.5vw;
 }
 </style>

@@ -31,7 +31,7 @@ import ComponenteIconos from "./componenteIconos.vue";
       <ComponenteIconos iconos="/img/Exchanges/bunny-color.svg" iconname="pancakeswap" />
     </div>
     <div class="kucoin">
-      <ComponenteIconos iconos="/img/Exchanges/Kucoin.svg" iconname="kucoin" />
+      <ComponenteIconos iconos="/img/Exchanges/Kucoin.svg" iconname="kucoin.svg" />
     </div>
     <div class="gateio">
       <ComponenteIconos iconos="/img/Exchanges/Gatebw.svg" iconname="gate.io" />
@@ -55,7 +55,7 @@ import ComponenteIconos from "./componenteIconos.vue";
       <ComponenteIconos iconos="/img/Exchanges/Poloniex.svg" iconname="poloniex" />
     </div>
     <div class="hotbit">
-      <ComponenteIconos iconos="/img/Exchanges/hotbit.png" iconname="hotbit" />
+      <ComponenteIconos iconos="/img/Exchanges/hotbit1.png" iconname="hotbit" />
     </div>
     <div class="coinmarket">
       <ComponenteIconos iconos="/img/Exchanges/coinmarket.svg" iconname="coinmarket" />
@@ -132,7 +132,7 @@ img {
 }
 
 .icon {
-  width: 3rem;
+  width: 2rem;
   height: auto;
   z-index: 18;
   margin-left: 1rem;
@@ -142,7 +142,7 @@ img {
 
 /*ICONOS EXCHANGES*/
 .contenedor_moneda {
-  width: 60%;
+  width: 58%;
   height: 75%;
   position: absolute;
   top: 20%;
@@ -150,15 +150,13 @@ img {
   display: grid;
   grid-template-columns: 33% 33% 31%;
   grid-template-rows: 18% 18% 18% 18% 18%;
-  gap: 1%;
+  gap: 3.5%;
   z-index: 7;
 }
 
 .contenedor_moneda>div {
   position: relative;
   display: grid;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100%;
   top: 0;
