@@ -18,12 +18,12 @@ export default {
     </div>
   </div>
 
-    <div :class="{'Titulo':true, 'animacion_titulo': index_pagina == 12}" >
+    <div :class="{'Titulo':true, 'animacion_titulo': index_pagina == 13}" >
       <h1>TOKENOMICS</h1>
     </div>
 
   <!-- Contenedor de Contenido -->
-  <div :class="{'primerTitulo':true, 'animacion_titulo2': index_pagina == 12}">
+  <div :class="{'primerTitulo':true, 'animacion_titulo2': index_pagina == 13}">
     <h2 >Purchase Tax</h2>
   </div>
 
