@@ -6,6 +6,8 @@ import Alliances from "./components/Alliances.vue";
 import Certificado from "./components/Certificado.vue";
 import ContenedorArticulo from "./components/ContenedorArticulo.vue";
 import Benefits from "./components/Benefits.vue";
+import Benefits_2 from "./components/Benefits_2.vue";
+import Benefits_3 from "./components/Benefits_3.vue";
 import Alianzas from "./components/Alianzas.vue";
 import Exchanges from "./components/Exchanges.vue";
 import Logos_auditorias from "./components/Logos_auditorias.vue";
@@ -35,7 +37,7 @@ import Footer from "./components/Footer.vue";
 
     <div :class="{container:true,  'mostrar-container':index_pagina==2}">
 
-      <Alliances />
+      <Alliances :index_pagina=index_pagina />
     </div>
 
     <div :class="{container:true,  'mostrar-container':index_pagina==3}">
@@ -63,18 +65,24 @@ import Footer from "./components/Footer.vue";
     </div>
 
     <div :class="{container:true,  'mostrar-container':index_pagina==9}">
-      <Benefits />
+      <Benefits :index_pagina=index_pagina />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==10}">
-      <Tokenomics />
+      <Benefits_2 :index_pagina=index_pagina />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==11}">
-      <News />
+      <Benefits_3 />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==12}">
-      <Fases />
+      <Tokenomics />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==13}">
+      <News />
+    </div>
+    <div :class="{container:true, 'mostrar-container':index_pagina==14}">
+      <Fases />
+    </div>
+    <div :class="{container:true, 'mostrar-container':index_pagina==15}">
       <Footer :index_pagina=index_pagina></Footer>
     </div>
 
@@ -90,24 +98,35 @@ export default {
     return {
       index: 1,
       index_pagina: 1,
-      limite: 13,
-      isVisibleLogo: false
+      limite: 15,
+      isVisibleLogo: false,
+      scroll: true
 
     };
   },
   methods: {
+   
     Navegar() {
-      if (event.deltaY > 0) {
-        if (this.index_pagina < this.limite) this.index_pagina = this.index_pagina + 1;
-      } else {
-        if (this.index_pagina > 1) this.index_pagina = this.index_pagina - 1;
+      console.log(this.scroll);
+      if (this.scroll) {
+        if (event.deltaY > 0) {
+          if (this.index_pagina < this.limite) this.index_pagina = this.index_pagina + 1;
+        } else {
+          if (this.index_pagina > 1) this.index_pagina = this.index_pagina - 1;
+        }
+        this.isVisibleLogo = true;
+        if (this.index_pagina == 1 || this.index_pagina == this.limite) {
+          this.isVisibleLogo = false;
+        }
+        this.scroll = false;
+
+        setTimeout(() => {
+          this.scroll = true;
+        }, 2000)
+        location.hash = "#" + this.index_pagina;
+        window.history.pushState({}, document.title, window.location.pathname);
       }
-      this.isVisibleLogo = true;
-      if (this.index_pagina == 1 || this.index_pagina == 13) {
-        this.isVisibleLogo = false;
-      }
-      location.hash = "#" + this.index_pagina;
-      window.history.pushState({}, document.title, window.location.pathname);
+
     }
   },
   mounted() {

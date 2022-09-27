@@ -12,8 +12,8 @@ import Articulo from "./Articulo.vue";
       <img src="/img/circulo_Fondo.png" alt="" class="circuloFondo1" />
       <img src="/img/circuloImagen.png" alt="" class="circuloFondo2" />
     </div>
-    <div class="degradado_azulizquierdo"></div>
-    <div class="degradado_azulderecho"></div>
+    <div class="degradado degradado_izquierdo"></div>
+    <div class="degradado degradado_derecho"></div>
   </div>
   <div class="circuitoIzquierdo">
     <img src="/img/Articulo/circuito-izquierdo.png" alt="" />
@@ -22,18 +22,43 @@ import Articulo from "./Articulo.vue";
     <img src="/img/Articulo/circuito-derecho.png" alt="" />
   </div>
   <!-- Contenedor de Tiempo -->
-  <div class="container_tiempo">
-    <h2>Pre Sale Time</h2>
-    <div class="bloque_temporizador">
-      <h1>{{diaString}}:{{horaString}}:{{minutoString}}:{{segundoString}}</h1>
+  <div class="container_time">
+    <div class="time">
+      <h2>Pre Sale Time</h2>
+      <div class="bloque_temporizador">
+        <div class="temporizadorDias">
+          <h1>{{ diaString }}</h1>
+          <h4>Días</h4>
+        </div>
+        <div class="primerPunto"><h1>:</h1></div>
+        <div class="temporizadorHoras">
+          <h1>{{ horaString }}</h1>
+          <h4>Horas</h4>
+        </div>
+        <div class="segundoPunto"><h1>:</h1></div>
+        <div class="temporizadorMinutos">
+          <h1>{{ minutoString }}</h1>
+          <h4>Minutos</h4>
+        </div>
+        <div class="tercerPunto"><h1>:</h1></div>
+        <div class="temporizadorSegundos">
+          <h1>{{ segundoString }}</h1>
+          <h4>Segundos</h4>
+        </div>
+      </div>
+      <button class="btn_comenzar">CLICK HERE</button>
     </div>
-    <button class="btn_comenzar">CLICK HERE</button>
   </div>
 
   <!-- Contenedor de Articulos -->
   <div class="containerArticulo">
     <div class="contenedorDeArticulo">
-      <Articulo v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen" />
+      <Articulo
+        v-for="item in vectorArticulo"
+        :key="item"
+        :titulo="item.titulo"
+        :img="item.imagen"
+      />
     </div>
   </div>
 
@@ -41,17 +66,17 @@ import Articulo from "./Articulo.vue";
   <div class="logo_redes">
     <div class="icon icon-telegram">
       <a href="https://t.me/monnerversecommunity" target="_blank">
-        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
       </a>
     </div>
     <div class="icon icon-reddit">
       <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
       </a>
     </div>
-    <div class="icon icon-discord ">
+    <div class="icon icon-discord">
       <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-        <img src="../assets/discord.svg" alt="logo discord" srcset="">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
       </a>
     </div>
   </div>
@@ -73,47 +98,49 @@ export default {
           link: "https://sites.google.com/view/blog-monnerverse/home/how-to-avoid-being-scammed-by-investing-in-monner-coin",
         },
         {
-          titulo: "Why will monner become one of the best cryptocurrencies to investin?",
+          titulo:
+            "Why will monner become one of the best cryptocurrencies to investin?",
           imagen: "/img/Articulo/imagenArticulo3.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/why-will-monner-become-one-of-the-best-cryptocurrencies-to-invest-in",
         },
-
       ],
       fechaEvento: new Date(2022, 9, 2, 1, 0, 0, 0),
       diaString: "00",
       horaString: "00",
       minutoString: "00",
       segundoString: "00",
-
     };
   },
   methods: {
     AgregarCero(numero) {
-      if (numero > 9)
-        return numero
-      else
-        return "0" + numero
+      if (numero > 9) return numero;
+      else return "0" + numero;
     },
     ObtenerFechaActual() {
       var distance = this.fechaEvento - Date.now();
 
       // Time calculations for days, hours, minutes and seconds
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      this.diaString = this.AgregarCero(days)
-      this.horaString = this.AgregarCero(hours)
-      this.minutoString = this.AgregarCero(minutes)
-      this.segundoString = this.AgregarCero(seconds)
-    }
-  }, mounted() {
-    setInterval(this.ObtenerFechaActual, 500)
-  }
+      this.diaString = this.AgregarCero(days);
+      this.horaString = this.AgregarCero(hours);
+      this.minutoString = this.AgregarCero(minutes);
+      this.segundoString = this.AgregarCero(seconds);
+    },
+  },
+  mounted() {
+    setInterval(this.ObtenerFechaActual, 500);
+  },
 };
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+
 img {
   height: 100%;
   width: 100%;
@@ -126,10 +153,12 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
   z-index: 0;
 }
 
@@ -144,6 +173,47 @@ img {
   opacity: 60%;
   mix-blend-mode: multiply;
 }
+/* container time */
+.container_time{
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.time {
+  top: 10%;
+  position: absolute;
+  display:block;
+  justify-content: center;
+  align-items: center;
+
+  width: 30rem;
+  height: 15rem;
+  z-index: 5;
+}
+.time h2 {
+  text-align: center;
+}
+
+.btn_comenzar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
+  border-radius: 7px;
+  height: 3rem;
+  font-family: "Courier New", Courier, monospace;
+  width: 15rem;
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 7rem;
+  margin-left: 7rem;
+}
+
 
 .circuloFondo1 {
   top: 25%;
@@ -191,29 +261,23 @@ img {
   min-width: 30rem;
 }
 
-.degradado_azulizquierdo {
-  background: linear-gradient(to right, #08047A 0.5%, transparent);
+.degradado {
+  background: linear-gradient(to right, #08047a 0.5%, transparent);
   position: absolute;
-  transform: rotate(-60deg);
-  top: 0%;
-  z-index: 3;
-  right: 50%;
   width: 50%;
   height: 180%;
-  opacity: 70%;
-
+  z-index: 3;
+  top: 0%;
 }
 
-.degradado_azulderecho {
-  background: linear-gradient(to right, #08047A 0.5%, transparent);
-  position: absolute;
+.degradado_izquierdo {
+  transform: rotate(-60deg);
+  right: 50%;
+}
+
+.degradado_derecho {
   transform: rotate(230deg);
-  top: -12%;
-  left: 50%;
-  width: 50%;
-  height: 180%;
-  opacity: 70%;
-  z-index: 3;
+  left: 55%;
 }
 
 /* contendero de Articulo */
@@ -239,64 +303,117 @@ img {
 }
 
 h1 {
-  color: #40fb2b;
-
+  font-weight: bold;
 }
 
-h2 {
-  text-transform: uppercase;
-  margin-left: 10rem;
+h1, h2, h4  {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
   color: white;
-  z-index: 7;
-  justify-content: center;
-  align-items: center;
-
 }
 
-.container_tiempo {
-  top: 10%;
-  left: 0;
-  position: absolute;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  margin-left: 35%;
-  margin-top: 3rem;
-  width: 30rem;
-  height: 15rem;
-  z-index: 5;
-
-}
 
 .bloque_temporizador {
   top: 10%;
   left: 0;
-  position: absolute;
+  position: relative;
   margin-left: 2rem;
   margin-top: 2rem;
   height: 4rem;
   width: 25rem;
-  background-color: black;
   z-index: 6;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
+  padding: 1rem;
 }
 
-.btn_comenzar {
+.temporizadorDias {
+  position: absolute;
+  z-index: 4;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
-  border-radius: 7px;
-  height: 3rem;
-  font-family: "Courier New", Courier, monospace;
-  width: 15rem;
-  color: white;
-  font-size: 1.5rem;
-  margin-top: 7rem;
-  margin-left: 7rem;
+  width: 20%;
+  height: 90%;
+  left: 4%;
+  border-radius: 10%;
+  -webkit-box-shadow: 0px 20px 20px 8px #08047a;
+  -moz-box-shadow: 0px 20px 20px 8px #08047a;
+  box-shadow: -10px 10px 10px 2px #08047a;
+}
+
+.temporizadorHoras {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
+  width: 20%;
+  height: 90%;
+  left: 28%;
+  border-radius: 10%;
+  -webkit-box-shadow: 0px 20px 20px 8px #08047a;
+  -moz-box-shadow: 0px 20px 20px 8px #08047a;
+  box-shadow: -10px 10px 10px 2px #08047a;
+}
+
+.temporizadorMinutos {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
+  width: 20%;
+  height: 90%;
+  left: 52%;
+  border-radius: 10%;
+  -webkit-box-shadow: 0px 20px 20px 8px #08047a;
+  -moz-box-shadow: 0px 20px 20px 8px #08047a;
+  box-shadow: -10px 10px 10px 2px #08047a;
+}
+
+.temporizadorSegundos {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
+  width: 20%;
+  height: 90%;
+  right: 5%;
+  border-radius: 10%;
+  -webkit-box-shadow: 0px 20px 20px 8px #08047a;
+  -moz-box-shadow: 0px 20px 20px 8px #08047a;
+  box-shadow: -10px 10px 10px 2px #08047a;
+}
+
+.primerPunto {
+  z-index: 5;
+  position: relative;
+  left: -23%;
+}
+
+.segundoPunto {
+  z-index: 5;
+  position: relative;
+  left: 0%;
+}
+
+.tercerPunto {
+  z-index: 5;
+  position: relative;
+  left: 22%;
 }
 
 .logo_redes {
@@ -317,9 +434,7 @@ h2 {
   margin-left: 1rem;
 }
 
-
-.contenedorDeArticulo>* {
-
+.contenedorDeArticulo > * {
   animation: mover 10s normal infinite;
 }
 

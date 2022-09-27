@@ -53,6 +53,7 @@ defineProps({
   position: relative;
   z-index: 0;
   text-align: center;
+  font-size: 1.5vw;
 }
 .contenedor {
   display: flex;

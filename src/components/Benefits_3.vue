@@ -1,95 +1,50 @@
 <script setup>
 import Benefits from "./TemplateBenefits.vue";
 import Circulos from "./ComponentesCirculo.vue";
-defineProps({
-  index_pagina: {
-    type: Number,
-    required: true,
-  },
-});
 </script>
 <template>
   <!--FONDO-->
 
   <div class="fondo">
-    <div
-      :class="{ fondo_rayos: true, 'animacion-aparecer': index_pagina == 9 }"
-    >
+    <div class="fondo_rayos">
       <img src="img/rayos.png" alt="" />
     </div>
-    <div
-      :class="{ circuito: true, 'animacion-circuito': index_pagina == 9 }"
-      class=""
-    >
-      <img src="/img/calculadora/circuito-derecho.png" alt="" />
-    </div>
-    <div :class="{ rectangulo: true, 'animacion-aparecer': index_pagina == 9 }">
+    <div class="rectangulo">
       <img src="img/rectangulo.svg" alt="" />
     </div>
     <div class="logo">
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
-    <div
-      :class="{
-        'reflector-izquierdo': true,
-        'animacion-dezplazamiento-reflector-izquierdo': index_pagina == 9,
-      }"
-      class="reflector"
-    >
-      <div class="luz-1"></div>
-      <div class="luz-2"></div>
-      <div class="luz-3"></div>
-    </div>
-    <div
-      :class="{
-        'reflector-derecho': true,
-        'animacion-dezplazamiento-reflector-derecho': index_pagina == 9,
-      }"
-      class="reflector"
-    >
-      <div class="luz-1"></div>
-      <div class="luz-2"></div>
-      <div class="luz-3"></div>
-    </div>
-    <div :class="{ titulo: true, 'animacion-aparecer': index_pagina == 9 }">
+    <div class="reflector reflector-izquierdo">
+    <div class="luz-1"></div>
+    <div class="luz-2"></div>
+    <div class="luz-3"></div>
+  </div>
+  <div class="reflector reflector-derecho">
+    <div class="luz-1"></div>
+    <div class="luz-2"></div>
+    <div class="luz-3"></div>
+  </div>
+    <div class="titulo">
       <h1>BENEFITS</h1>
     </div>
 
-    <div
-      :class="{ display_flex: true, 'animacion-aparecer': index_pagina == 9 }"
-    >
+    <div class="gasolinera">
+      <img src="/img/Benefits/gasolinera.png" alt="">
+    </div>
+
+    <div class="display_flex">
       <div class="benefits">
-        <Benefits />
+        
       </div>
       <div class="circulos">
-        <Circulos
-          icono="/img/Benefits/monnercard.png"
-          color="blanco"
-          texto="MONNERCARD"
-        />
-        <Circulos
-          icono="/img/Benefits/benefits.svg"
-          color="verde"
-          texto="BENEFITS"
-        />
-        <Circulos
-          icono="/img/Benefits/minnersolar.png"
-          color="verde"
-          texto="MINNERSOLAR"
-        />
-        <Circulos
-          icono="/img/Benefits/stanking.png"
-          color="blanco"
-          texto="STAKING"
-        />
+        <Circulos icono="/img/Benefits/benefits.svg" color="verde" texto="BENEFITS"/>
+        <Circulos icono="../assets/benefits/staking.svg" color="blanco" texto="STAKING"/>
+        <Circulos icono="/img/Benefits/minnersolar.png" color="verde" texto="MINNERSOLAR"/>
+        <Circulos icono="/img/Benefits/stanking.png" color="blanco" texto="STAKING"/>
       </div>
     </div>
-    <div
-      :class="{
-        'logo-redes': true,
-        'animacion-dezplazamiento': index_pagina == 9,
-      }"
-    >
+    <div class="logo-redes">
       <div class="icon icon-telegram">
         <a href="https://t.me/monnerversecommunity" target="_blank">
           <img
@@ -111,11 +66,19 @@ defineProps({
       </div>
     </div>
   </div>
+
 </template>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
-
+.gasolinera img{
+   position: absolute;
+   top:17%;
+   left: 57%;
+  z-index: 12;
+  width: 35%;
+  margin: 0 auto;
+}
 .display_flex {
   display: flex;
   justify-content: space-evenly;
@@ -144,14 +107,14 @@ defineProps({
 }
 .benefits {
   position: relative;
-  z-index: 14;
+  z-index: 8;
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
   width: 55%;
-  height: 70%;
+  height: 80%;
   position: absolute;
-  top: 25%;
+  top: 15%;
   left: 15%;
 }
 .fondo {
@@ -166,23 +129,9 @@ defineProps({
 .fondo_rayos {
   position: absolute;
 
-  left: -30%;
+  left: -10%;
   width: 100%;
   height: 100%;
-}
-.circuito {
-  position: absolute;
-  z-index: 4;
-  height: 80%;
-  width: 50%;
-  min-width: 30rem;
-  top: 20%;
-  left: 65%;
-}
-.circuito img {
-  transform: rotate(180deg);
-  z-index: 12;
-  width: 80%;
 }
 
 .fondo-oscurecer {
@@ -212,13 +161,14 @@ defineProps({
   position: relative;
   z-index: 12;
   top: 35%;
-  left: 37%;
+  left: 35%;
   transform: rotate(225deg);
+
 }
 .logo-redes {
   position: absolute;
   bottom: 0%;
-  left: 3rem;
+  left: 1rem;
   width: 20rem;
   height: 5rem;
   z-index: 14;
@@ -226,7 +176,7 @@ defineProps({
   justify-content: start;
 }
 
-.icon img {
+.icon  img{
   width: 3.5vw;
   height: auto;
   margin-left: 1rem;
@@ -240,7 +190,7 @@ defineProps({
   width: 40%;
   height: 90%;
   z-index: 1;
-
+  
   animation-duration: 6s;
   animation-name: reflector;
   animation-iteration-count: infinite;
@@ -261,20 +211,12 @@ defineProps({
   }
 }
 .reflector-derecho {
-  position: absolute;
-  top: 65%;
-  bottom: 0%;
+  z-index: 0;
   left: 50%;
-  width: 40%;
-  height: 90%;
 }
 .reflector-izquierdo {
-  position: absolute;
-  top: 65%;
-  bottom: 0%;
-  left: 10%;
-  width: 40%;
-  height: 90%;
+  z-index: 0;
+ 
 }
 .luz-1 {
   position: absolute;
@@ -324,96 +266,4 @@ defineProps({
   );
   filter: blur(3rem);
 }
-.animacion-aparecer {
-  animation-duration: 1s;
-  animation-name: aparecer;
-  animation-iteration-count: 1;
-}
-
-@keyframes aparecer {
-  0% {
-    opacity: 0%;
-  }
-
-  100% {
-    opacity: 100%;
-  }
-}
-.animacion-dezplazamiento {
-  animation-name: dezplazamiento;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-}
-@keyframes dezplazamiento {
-  0% {
-    left: 0.2rem;
-  }
-
-  100% {
-    left: 3rem;
-  }
-}
-.animacion-dezplazamiento-reflector-derecho {
-  animation-duration: 1s;
-  animation-name: dezplazar_reflector_derecho;
-  animation-iteration-count: 1;
-}
-@keyframes dezplazar_reflector_derecho {
-  0% {
-    position: absolute;
-    top: 30%;
-    left: 40%;
-    width: 20%;
-    height: 50%;
-  }
-
-  100% {
-    position: absolute;
-    top: 65%;
-    bottom: 0%;
-    left: 50%;
-    width: 40%;
-    height: 90%;
-  }
-}
-.animacion-dezplazamiento-reflector-izquierdo {
-  animation-duration: 1s;
-  animation-name: dezplazar_reflector_izquierdo;
-  animation-iteration-count: 1;
-}
-@keyframes dezplazar_reflector_izquierdo {
-  0% {
-    position: absolute;
-    top: 30%;
-    left: 40%;
-    width: 20%;
-    height: 50%;
-  }
-
-  100% {
-    position: absolute;
-    top: 65%;
-    bottom: 0%;
-    left: 10%;
-    width: 40%;
-    height: 90%;
-  }
-}
-.animacion-circuito {
-  animation-duration: 1s;
-  animation-name: dezplazar_circuito;
-  animation-iteration-count: 1;
-}
-@keyframes dezplazar_circuito {
-  0% {
-    position: absolute;
-    top: 30%;
-    left: 80%;
-  }
-  100% {
-    position: absolute;
-    top: 20%;
-    left: 65%;
-  }
- }
 </style>

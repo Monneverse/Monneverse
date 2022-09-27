@@ -1,53 +1,120 @@
-<script setup></script>
+<script setup>
+defineProps({
+  index_pagina: {
+    type: Number,
+    required: true,
+  },
+});
+</script>
 <template>
-  <div class="logo">
+  <div
+    :class="{
+      logo: true,
+      'animacion-logo': index_pagina == 2,
+    }"
+  >
     <img src="/img/logo.svg" alt="logo monneverse" />
   </div>
 
   <!--FONDO-->
   <div class="fondo-video">
-    <video src="/video/video_binario.mp4" autoplay="true" muted="true" loop="true"
-      poster="/img/fondo_binario.png"></video>
+    <video
+      src="/video/video_binario.mp4"
+      autoplay="true"
+      muted="true"
+      loop="true"
+      poster="/img/fondo_binario.png"
+    ></video>
   </div>
 
   <div class="fondo filtro-superior"></div>
-  <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
+  <div
+    :class="{
+      'fondo-montana': true,
+      'fondo-montana-animation': index_pagina == 2,
+    }"
+    class="fondo"
+  >
+    <img src="/img/fondo-montana.png" />
+  </div>
   <div class="fondo fondo-oscurecer"></div>
-  <div class="fondo fondo-red">
+  <div
+    :class="{
+      'fondo-red': true,
+      'animacion-aparecer': index_pagina == 2,
+    }"
+    class="fondo"
+  >
     <img src="img/red.png" alt="" />
   </div>
 
   <!--CIRCULOS-->
-  <div class="circulo">
-    <div class="circulo-medio">
+  <div
+    :class="{
+      circulo: true,
+      'animacion-aparecer': index_pagina == 2,
+    }"
+  >
+    <div
+      :class="{
+        'circulo-medio': true,
+        'animacion-aparecer': index_pagina == 2,
+      }"
+    >
       <div class="alianzas">
-        <a href="#"><Span><img src="/img/Alianzas/reddit.png" /></Span>REDDIT</a>
+        <a href="#"
+          ><Span><img src="/img/Alianzas/reddit.png" /></Span>REDDIT</a
+        >
         <!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
 
-        <a href="#"><SPan><img src="/img/Alianzas/telegram.png" /></SPan>TELEGRAM</a>
+        <a href="#"
+          ><SPan><img src="/img/Alianzas/telegram.png" /></SPan>TELEGRAM</a
+        >
         <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 
-        <a href="#"><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a>
+        <a href="#"
+          ><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a
+        >
         <!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
       </div>
     </div>
   </div>
-  <div class="semi_circulo">
-    <!--<img src="img/semi_circulo.png" alt="">-->
+  <div
+    :class="{
+      semi_circulo: true,
+      'animacion-arco': index_pagina == 2,
+    }"
+  >
+    <img src="../assets/aro-iluminado-brillante.svg" alt="" />
   </div>
 
   <!--UPCOMING ALLIANCES-->
-  <div class="rectangulo">
+  <div
+    :class="{
+      rectangulo: true,
+      'animacion-aparecer': index_pagina == 2,
+    }"
+  >
     <p>UPCOMING ALLIANCES</p>
   </div>
   <!-- VISA MASTERD CARD -->
-  <div class="rectangulo-medio">
+  <div
+    :class="{
+      'rectangulo-medio': true,
+      'animacion-aparecer': index_pagina == 2,
+    }"
+  >
     <div class="mensaje">
       <p>Join our community and get our</p>
       <p>latest news</p>
     </div>
   </div>
-  <div class="puntero">
+  <div
+    :class="{
+      puntero: true,
+      'animacion-aparecer': index_pagina == 2,
+    }"
+  >
     <img src="img/puntero.svg" alt="" />
   </div>
 
@@ -59,14 +126,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
 .logo {
-  position: relative;
+  position: absolute;
   top: 2rem;
   left: 2rem;
   width: 5rem;
   height: 5rem;
-  z-index: 12;
+  z-index:12;
+}
+.animacion-logo {
+  animation-name: animar-logo;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
 }
 
+@keyframes animar-logo {
+  0% {
+    position: absolute;
+    top: 10rem;
+    left: 25rem;
+    width: 25rem;
+    height: 5rem;
+    z-index: 1;
+    opacity: 10%;
+  }
+  100% {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 5rem;
+    height: 5rem;
+    z-index:12;
+    opacity: 100%;
+  }
+}
 .fondo {
   top: 0;
   left: 0;
@@ -93,10 +185,12 @@
 .filtro-superior {
   position: absolute;
   z-index: 1;
-  background: radial-gradient(circle at center,
-      #f9f9fa 0%,
-      #c8ced4 50%,
-      #a8aaaf 100%);
+  background: radial-gradient(
+    circle at center,
+    #f9f9fa 0%,
+    #c8ced4 50%,
+    #a8aaaf 100%
+  );
   mix-blend-mode: multiply;
 }
 
@@ -106,6 +200,24 @@
   width: 100%;
   height: 75%;
   z-index: 2;
+}
+.fondo-montana-animation img {
+  animation-duration: 1s;
+  animation-name: fondo-montana-animation;
+  animation-iteration-count: 1;
+}
+
+@keyframes fondo-montana-animation {
+  0% {
+    height: 50%;
+    top: 50%;
+  }
+
+  100% {
+    top: 30%;
+    width: 100%;
+    height: 75%;
+  }
 }
 
 .fondo-oscurecer {
@@ -137,7 +249,7 @@
 }
 
 .circulo-medio {
-  width: 90%;
+  width: 89%;
   height: 90%;
   margin: 0 auto;
   border-radius: 100%;
@@ -186,15 +298,32 @@
   margin: auto auto;
 }
 
-.semi_circulo {
+.semi_circulo img {
   position: absolute;
   z-index: 7;
-  width: 40%;
-  height: 80%;
+  width: 100%;
+  height: 85%;
   padding: 0;
   margin: 0;
-  top: 23%;
-  left: 30%;
+  top: 15%;
+  left: 0%;
+}
+.animacion-arco img {
+  animation-name: animacion-arco;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes animacion-arco {
+  0% {
+    top: 70%;
+    transform: rotateZ(-180deg);
+  }
+
+  100% {
+    top: 15.5%;
+    transform: rotateZ(0deg);
+  }
 }
 
 .rectangulo {
@@ -204,9 +333,11 @@
   top: 60%;
   left: 25%;
   background: rgb(8, 7, 32);
-  background: linear-gradient(90deg,
-      rgba(8, 7, 32, 1) 0%,
-      rgba(1, 209, 88, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(8, 7, 32, 1) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
   border-radius: 2.5rem;
   text-align: center;
   z-index: 5;
@@ -283,5 +414,20 @@
 .degradado_derecho {
   transform: rotate(230deg);
   left: 55%;
+}
+.animacion-aparecer {
+  animation-duration: 1s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }
 </style>
