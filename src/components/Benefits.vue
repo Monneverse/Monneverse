@@ -326,7 +326,7 @@ defineProps({
   filter: blur(3rem);
 }
 .animacion-aparecer {
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
@@ -342,7 +342,7 @@ defineProps({
 }
 .animacion-dezplazamiento {
   animation-name: dezplazamiento;
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-iteration-count: 1;
 }
 @keyframes dezplazamiento {
@@ -355,7 +355,7 @@ defineProps({
   }
 }
 .animacion-dezplazamiento-reflector-derecho {
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-name: dezplazar_reflector_derecho;
   animation-iteration-count: 1;
 }
@@ -378,7 +378,7 @@ defineProps({
   }
 }
 .animacion-dezplazamiento-reflector-izquierdo {
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-name: dezplazar_reflector_izquierdo;
   animation-iteration-count: 1;
 }
@@ -401,7 +401,7 @@ defineProps({
   }
 }
 .animacion-circuito {
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-name: dezplazar_circuito;
   animation-iteration-count: 1;
 }

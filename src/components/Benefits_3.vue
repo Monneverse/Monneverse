@@ -132,7 +132,7 @@ defineProps({
   left: 15%;
 }
 .aparecer {
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-name: arriba;
   animation-iteration-count: 1;
 }
@@ -165,7 +165,7 @@ defineProps({
   height: 100%;
 }
 .animacion-desplazamiento {
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-name: desplazamiento;
   animation-iteration-count: 1;
 }
@@ -210,7 +210,7 @@ defineProps({
   transform: rotate(50grad);
 }
 .animacion-rotar {
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-name: rotar;
   animation-iteration-count: 1;
 }
