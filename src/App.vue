@@ -8,6 +8,8 @@ import ContenedorArticulo from "./components/ContenedorArticulo.vue";
 import Benefits from "./components/Benefits.vue";
 import Benefits_2 from "./components/Benefits_2.vue";
 import Benefits_3 from "./components/Benefits_3.vue";
+import Benefits_4 from "./components/Benefits_4.vue";
+import Benefits_5 from "./components/Benefits_5.vue";
 import Alianzas from "./components/Alianzas.vue";
 import Exchanges from "./components/Exchanges.vue";
 import Logos_auditorias from "./components/Logos_auditorias.vue";
@@ -20,7 +22,7 @@ import Footer from "./components/Footer.vue";
 
 <template>
   <header>
-    <Header :index=index :isVisible=isVisibleLogo></Header>
+    <Header :index=index :isVisible=isVisibleLogo :setPage=setOnPage></Header>
   </header>
 
   <main>
@@ -71,18 +73,24 @@ import Footer from "./components/Footer.vue";
       <Benefits_2 :index_pagina=index_pagina />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==11}">
-      <Benefits_3 />
+      <Benefits_3 :index_pagina=index_pagina />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==12}">
-      <Tokenomics />
+      <Benefits_4 :index_pagina=index_pagina />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==13}">
-      <News />
+      <Benefits_5 :index_pagina=index_pagina />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==14}">
-      <Fases />
+      <Tokenomics :index_pagina=index_pagina />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==15}">
+      <News />
+    </div>
+    <div :class="{container:true, 'mostrar-container':index_pagina==16}">
+      <Fases />
+    </div>
+    <div :class="{container:true, 'mostrar-container':index_pagina==17}">
       <Footer :index_pagina=index_pagina></Footer>
     </div>
 
@@ -98,16 +106,69 @@ export default {
     return {
       index: 1,
       index_pagina: 1,
-      limite: 15,
+      limite: 17,
       isVisibleLogo: false,
       scroll: true
 
     };
   },
   methods: {
-   
+    setOnPage(id) {
+      this.index = id;
+
+      switch (this.index) {
+        case 1:
+          this.index_pagina = 5;
+          break;
+        case 2:
+          this.index_pagina = 9;
+          break;
+        case 3:
+          this.index_pagina = 14;
+          break;
+        case 4:
+          this.index_pagina = 15;
+          break;
+        case 5:
+          this.index_pagina = 16;
+          break;
+        default:
+          break;
+      }
+
+      location.hash = "#" + this.index_pagina;
+      window.history.pushState({}, document.title, window.location.pathname);
+    },
+    UpdateNav(id) {
+      switch (id) {
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+          this.index = 1;
+          break;
+        case 9:
+        case 10:
+        case 11:
+        case 12:
+        case 13:
+          this.index = 2;
+          break;
+        case 14:
+          this.index = 3;
+          break;
+        case 15:
+          this.index = 4;
+          break;
+        case 16:
+          this.index = 5;
+          break;
+        default:
+          break;
+      }
+
+    },
     Navegar() {
-      console.log(this.scroll);
       if (this.scroll) {
         if (event.deltaY > 0) {
           if (this.index_pagina < this.limite) this.index_pagina = this.index_pagina + 1;
@@ -122,9 +183,11 @@ export default {
 
         setTimeout(() => {
           this.scroll = true;
-        }, 2000)
+        }, 20)
+    
         location.hash = "#" + this.index_pagina;
         window.history.pushState({}, document.title, window.location.pathname);
+        this.UpdateNav(this.index_pagina)
       }
 
     }

@@ -242,7 +242,7 @@ img {
 }
 
 .fondo-montana-animation {
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-name: fondo-montana-animation;
   animation-iteration-count: 1;
 }
@@ -374,13 +374,13 @@ img {
 
 .circulo-superior-animation {
   animation-name: circulo-superior-animation;
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-iteration-count: 1;
 }
 
 .indicador-animacion {
   animation-name: circulo-superior-animation;
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-iteration-count: 1;
 }
 
@@ -526,7 +526,7 @@ img {
 }
 }
 .circulo-indicador-animation {
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-name: circulo-indicador-animation;
   animation-direction: normal;
   animation-iteration-count: 1;
@@ -644,7 +644,7 @@ img {
 
 .logo-redes-animation {
   animation-name: redes_animation;
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-iteration-count: 1;
 }
 
@@ -670,7 +670,7 @@ img {
   width: 50%;
   height: 180%;
   z-index: 3;
-  animation-duration: 1s;
+  animation-duration: 5s;
   animation-name: luz;
   animation-iteration-count: infinite;
   animation-direction: alternate;

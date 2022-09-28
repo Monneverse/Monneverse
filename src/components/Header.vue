@@ -6,15 +6,15 @@
   <div id="barra" class="barra-navegacion">
 
     <nav class="barra" @mouseout="exit_mouse">
-      <a id="a1" :class="{home:index==1}" href="#" @mouseover="hover_mover('a1')"
-        @click="leave_mouse('a1')">articles</a>
-      <a id="a2" :class="{home:index==2}" href="#" @mouseover="hover_mover('a2')"
-        @click="leave_mouse('a2')">benefits</a>
-      <a id="a3" :class="{home:index==3}" href="#" @mouseover="hover_mover('a3')"
-        @click="leave_mouse('a3')">tokenomics</a>
-      <a id="a4" :class="{home:index==4}" href="#" @mouseover="hover_mover('a4')" @click="leave_mouse('a4')">news</a>
-      <a id="a5" :class="{home:index==5}" href="#" @mouseover="hover_mover('a5')"
-        @click="leave_mouse('a5')">roadmaps</a>
+      <a id="a1" :class="{link:true,home:indexF==1}" @mouseover="hover_mover('a1')"
+        @click="this.setPage(1)">articles</a>
+      <a id="a2" :class="{link:true,home:indexF==2}" @mouseover="hover_mover('a2')"
+        @click="this.setPage(2)">benefits</a>
+      <a id="a3" :class="{link:true,home:indexF==3}" @mouseover="hover_mover('a3')"
+        @click="this.setPage(3)">tokenomics</a>
+      <a id="a4" :class="{link:true,home:indexF==4}" @mouseover="hover_mover('a4')" @click="this.setPage(4)">news</a>
+      <a id="a5" :class="{link:true,home:indexF==5}" @mouseover="hover_mover('a5')"
+        @click="this.setPage(5)">roadmaps</a>
       <div id="animacion" class="animacion traslado_animacion"></div>
     </nav>
 
@@ -36,13 +36,33 @@ export default {
 
     index: {
       type: Number,
-      required: true
+      required: false
     },
     isVisible: {
       type: Boolean,
       required: true
     },
-    
+    setPage: {
+      type: Function,
+      required: true
+    },
+
+  },
+  computed: {
+    indexF: {
+      get() {
+        try {
+          var anim = document.getElementById("animacion");
+        var link = document.getElementsByClassName("link")[this.index-1];
+        anim.style.minWidth = link.offsetWidth + "px";
+        anim.style.left = this.getOffset(link).left + "px";
+        } catch (error) {
+          
+        }
+ 
+        return this.index
+      }
+    }
   },
   methods: {
     hover_mover(id) {
@@ -57,13 +77,6 @@ export default {
       anim.style.minWidth = link.offsetWidth + "px";
       anim.style.left = this.getOffset(link).left + "px";
     },
-    leave_mouse(id) {
-      var anim = document.getElementById("animacion");
-      var activo = document.getElementsByClassName("home")[0];
-      let link = document.getElementById(id);
-      activo.classList.remove("home");
-      link.classList.add("home");
-    },
     getOffset(el) {
       var _x = 0;
       var _y = 0;
@@ -75,15 +88,25 @@ export default {
       return { top: _y, left: _x };
     },
     recargar() {
-      var anim = document.getElementById("animacion");
-      var link = document.getElementsByClassName("home")[0];
-      anim.style.minWidth = link.offsetWidth + "px";
-      anim.style.left = this.getOffset(link).left + "px";
+      try {
+        var anim = document.getElementById("animacion");
+        var link = document.getElementsByClassName("home")[0];
+        anim.style.minWidth = link.offsetWidth + "px";
+        anim.style.left = this.getOffset(link).left + "px";
+      } catch (error) {
+        console.log("EL ERROR ES " + error);
+      }
+
     }
   },
   mounted() {
     this.recargar();
     window.addEventListener("resize", this.recargar);
+    let links = document.getElementsByClassName("link")
+    for (var i = 0; i < links.length; i++) {
+      //Añades un evento a cada elemento
+      links[i].classList.add
+    }
   },
 };
 </script>
@@ -143,6 +166,7 @@ export default {
   padding: 0.6rem;
   border-radius: 0.4rem;
   z-index: 1;
+  cursor: pointer;
 }
 
 .animacion {

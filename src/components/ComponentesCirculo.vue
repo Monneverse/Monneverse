@@ -1,25 +1,33 @@
-<script setup>
-defineProps({
-  //icono imagen
-  icono: {
-    type: String,
-    required: true,
+<script>
+export default {
+  props: {
+ 
+    icono: {
+      type: String,
+      required: true,
+    },
+    
+    color: {
+      type: String,
+      required: true,
+    },
+    texto: {
+      type: String,
+      required: true,
+    },
+    rotar: {
+      type: String,
+      required: true,
+    },
   },
-  //nombre icono
-  color: {
-    type: String,
-    required: true,
-  },
-  texto: {
-    type: String,
-    required: true,
-  },
-});
+
+
+};
 </script>
 
 <template>
   <div :class="color" class="circulo">
-    <div class="contenedor">
+    <div :class="rotar" class="contenedor">
       <i><img :src="icono" alt="Benefits" /></i>
       <h2 class="texto">
         {{ texto }}
@@ -46,7 +54,6 @@ defineProps({
   flex-direction: column;
   align-items: center;
   transform: rotate(135deg);
-
 }
 
 .circulo h2 {
@@ -64,13 +71,11 @@ defineProps({
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: column;
-  
 }
 .contenedor img {
   position: relative;
   z-index: 1;
   width: 5vw;
-  
 }
 .verde {
   background: linear-gradient(
@@ -101,7 +106,7 @@ defineProps({
 .texto {
   opacity: 0;
   visibility: hidden;
- 
+
   background-color: none;
   border-radius: 3px;
 }
@@ -110,15 +115,25 @@ defineProps({
   transform: translate(-20px, -40px) rotate(-25deg) scale(1.2);
   opacity: 1;
   visibility: visible;
-
-
 }
-.circulo:hover .contenedor .texto{
-
+.circulo:hover .contenedor .texto {
   opacity: 1;
   visibility: visible;
   transition: 0.5s linear;
-
 }
+.rotar{
 
+transform: rotate(90deg);
+  
+}
+.rotar_180{
+
+transform: rotate(180deg);
+  
+}
+.rotar_360{
+
+transform: rotate(270deg);
+  
+}
 </style>
