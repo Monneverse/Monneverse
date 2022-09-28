@@ -6,12 +6,15 @@
   <div id="barra" class="barra-navegacion">
 
     <nav class="barra" @mouseout="exit_mouse">
-      <a id="a1" :class="{link:true,home:index==1}" @mouseover="hover_mover('a1')" @click="this.setPage(1)">articles</a>
-      <a id="a2" :class="{link:true,home:index==2}" @mouseover="hover_mover('a2')" @click="this.setPage(2)">benefits</a>
-      <a id="a3" :class="{link:true,home:index==3}" @mouseover="hover_mover('a3')"
+      <a id="a1" :class="{link:true,home:indexF==1}" @mouseover="hover_mover('a1')"
+        @click="this.setPage(1)">articles</a>
+      <a id="a2" :class="{link:true,home:indexF==2}" @mouseover="hover_mover('a2')"
+        @click="this.setPage(2)">benefits</a>
+      <a id="a3" :class="{link:true,home:indexF==3}" @mouseover="hover_mover('a3')"
         @click="this.setPage(3)">tokenomics</a>
-      <a id="a4" :class="{link:true,home:index==4}" @mouseover="hover_mover('a4')" @click="this.setPage(4)">news</a>
-      <a id="a5" :class="{link:true,home:index==5}" @mouseover="hover_mover('a5')" @click="this.setPage(5)">roadmaps</a>
+      <a id="a4" :class="{link:true,home:indexF==4}" @mouseover="hover_mover('a4')" @click="this.setPage(4)">news</a>
+      <a id="a5" :class="{link:true,home:indexF==5}" @mouseover="hover_mover('a5')"
+        @click="this.setPage(5)">roadmaps</a>
       <div id="animacion" class="animacion traslado_animacion"></div>
     </nav>
 
@@ -45,6 +48,22 @@ export default {
     },
 
   },
+  computed: {
+    indexF: {
+      get() {
+        try {
+          var anim = document.getElementById("animacion");
+        var link = document.getElementsByClassName("link")[this.index-1];
+        anim.style.minWidth = link.offsetWidth + "px";
+        anim.style.left = this.getOffset(link).left + "px";
+        } catch (error) {
+          
+        }
+ 
+        return this.index
+      }
+    }
+  },
   methods: {
     hover_mover(id) {
       let anim = document.getElementById("animacion");
@@ -69,14 +88,18 @@ export default {
       return { top: _y, left: _x };
     },
     recargar() {
-      var anim = document.getElementById("animacion");
-      var link = document.getElementsByClassName("home")[0];
-      anim.style.minWidth = link.offsetWidth + "px";
-      anim.style.left = this.getOffset(link).left + "px";
+      try {
+        var anim = document.getElementById("animacion");
+        var link = document.getElementsByClassName("home")[0];
+        anim.style.minWidth = link.offsetWidth + "px";
+        anim.style.left = this.getOffset(link).left + "px";
+      } catch (error) {
+        console.log("EL ERROR ES " + error);
+      }
+
     }
   },
   mounted() {
-
     this.recargar();
     window.addEventListener("resize", this.recargar);
     let links = document.getElementsByClassName("link")
