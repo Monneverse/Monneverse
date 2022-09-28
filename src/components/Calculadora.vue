@@ -670,7 +670,7 @@ img {
   width: 50%;
   height: 180%;
   z-index: 3;
-  animation-duration: .5s;
+  animation-duration: 5s;
   animation-name: luz;
   animation-iteration-count: infinite;
   animation-direction: alternate;
