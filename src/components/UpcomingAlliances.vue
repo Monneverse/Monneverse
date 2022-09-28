@@ -227,8 +227,8 @@ img {
 
 .logo-redes {
   position: absolute;
-  bottom: 11%;
-  left: 42.5%;
+  bottom: 8%;
+  left: 41.8%;
   width: 20rem;
   height: 7rem;
   display: flex;
