@@ -6,16 +6,12 @@
   <div id="barra" class="barra-navegacion">
 
     <nav class="barra" @mouseout="exit_mouse">
-      <a id="a1" :class="{home:index==1}"  @mouseover="hover_mover('a1')"
-        @click="this.setPage(1)">articles</a>
-      <a id="a2" :class="{home:index==2}" @mouseover="hover_mover('a2')"
-        @click="this.setPage(2)">benefits</a>
-      <a id="a3" :class="{home:index==3}"  @mouseover="hover_mover('a3')"
+      <a id="a1" :class="{link:true,home:index==1}" @mouseover="hover_mover('a1')" @click="this.setPage(1)">articles</a>
+      <a id="a2" :class="{link:true,home:index==2}" @mouseover="hover_mover('a2')" @click="this.setPage(2)">benefits</a>
+      <a id="a3" :class="{link:true,home:index==3}" @mouseover="hover_mover('a3')"
         @click="this.setPage(3)">tokenomics</a>
-      <a id="a4" :class="{home:index==4}"  @mouseover="hover_mover('a4')"
-       @click="this.setPage(4)">news</a>
-      <a id="a5" :class="{home:index==5}"  @mouseover="hover_mover('a5')"
-        @click="this.setPage(5)">roadmaps</a>
+      <a id="a4" :class="{link:true,home:index==4}" @mouseover="hover_mover('a4')" @click="this.setPage(4)">news</a>
+      <a id="a5" :class="{link:true,home:index==5}" @mouseover="hover_mover('a5')" @click="this.setPage(5)">roadmaps</a>
       <div id="animacion" class="animacion traslado_animacion"></div>
     </nav>
 
@@ -37,7 +33,7 @@ export default {
 
     index: {
       type: Number,
-      required: true
+      required: false
     },
     isVisible: {
       type: Boolean,
@@ -47,7 +43,7 @@ export default {
       type: Function,
       required: true
     },
-    
+
   },
   methods: {
     hover_mover(id) {
@@ -80,8 +76,14 @@ export default {
     }
   },
   mounted() {
+
     this.recargar();
     window.addEventListener("resize", this.recargar);
+    let links = document.getElementsByClassName("link")
+    for (var i = 0; i < links.length; i++) {
+      //Añades un evento a cada elemento
+      links[i].classList.add
+    }
   },
 };
 </script>

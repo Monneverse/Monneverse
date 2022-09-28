@@ -135,8 +135,29 @@ export default {
       location.hash = "#" + this.index_pagina;
       window.history.pushState({}, document.title, window.location.pathname);
     },
+    UpdateNav(id) {
+      switch (id) {
+        case 5:
+          this.index = 1;
+          break;
+        case 9:
+          this.index = 2;
+          break;
+        case 13:
+          this.index = 3;
+          break;
+        case 14:
+          this.index = 4;
+          break;
+        case 15:
+          this.index = 5;
+          break;
+        default:
+          break;
+      }
+
+    },
     Navegar() {
-      console.log(this.scroll);
       if (this.scroll) {
         if (event.deltaY > 0) {
           if (this.index_pagina < this.limite) this.index_pagina = this.index_pagina + 1;
@@ -152,8 +173,10 @@ export default {
         setTimeout(() => {
           this.scroll = true;
         }, 20)
+    
         location.hash = "#" + this.index_pagina;
         window.history.pushState({}, document.title, window.location.pathname);
+        this.UpdateNav(this.index_pagina)
       }
 
     }
