@@ -124,13 +124,13 @@ export default {
           this.index_pagina = 9;
           break;
         case 3:
-          this.index_pagina = 13;
-          break;
-        case 4:
           this.index_pagina = 14;
           break;
-        case 5:
+        case 4:
           this.index_pagina = 15;
+          break;
+        case 5:
+          this.index_pagina = 16;
           break;
         default:
           break;
@@ -151,15 +151,16 @@ export default {
         case 10:
         case 11:
         case 12:
+        case 13:
           this.index = 2;
           break;
-        case 13:
+        case 14:
           this.index = 3;
           break;
-        case 14:
+        case 15:
           this.index = 4;
           break;
-        case 15:
+        case 16:
           this.index = 5;
           break;
         default:
