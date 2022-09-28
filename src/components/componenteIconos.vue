@@ -31,15 +31,18 @@ defineProps({
   position: absolute;
   overflow: visible;
   display: flex;
+  align-items: center;
   margin: 0%;
   height: 70%;
   z-index: 7;
   width: 80%;
   top: 0%;
+  gap: 2rem;
 }
 
 .contenedor_icono .icono .icon_coin {
   position: absolute;
+  top: 0%;
   display: absolute;
   width: 32%;
   height: 100%;

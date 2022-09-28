@@ -66,6 +66,7 @@ defineProps({
           icono="/img/Benefits/monnercard.png"
           color="blanco"
           texto="MONNERCARD"
+          
         />
         <Circulos
           icono="/img/Benefits/benefits.svg"

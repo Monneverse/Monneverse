@@ -1,5 +1,5 @@
 <script setup>
-import Benefit_3 from "./ComponenteBenefit.vue";
+import Benefit_4 from "./ComponenteBenefit.vue";
 import Circulos from "./ComponentesCirculo.vue";
 defineProps({
   index_pagina: {
@@ -15,7 +15,7 @@ defineProps({
     <div
       :class="{
         fondo_rayos: true,
-        'animacion-desplazamiento': index_pagina == 11,
+        'animacion-desplazamiento': index_pagina == 12,
       }"
     >
       <img src="img/rayos.png" alt="" />
@@ -37,42 +37,40 @@ defineProps({
       <div class="luz-3"></div>
     </div>
 
-    <!-- <div class="titulo">
-        <h1>BENEFITS</h1>
-      </div>
-  -->
     <div class="display_flex">
-      <div :class="{ benefits: true, aparecer: index_pagina == 11 }">
-        <Benefit_3
-          titulo="MonnerMinner"
-          segundoTexto="Is  one of the most innovative projects we have on our list. We will create solar-powered industrial mining camps backed by the US"
-          mostrarBtn="true" 
+      <div :class="{ benefits: true, arriba: index_pagina == 12 }">
+        <Benefit_4
+          segundoTitulo="MonnerCard"
+          segundoTexto="Is supported by VISA and MASTERCARD, and relies on our MonnerWallet, MonnerSwap and MonnerTrading technologies. Holders are free to use their"
+          index_pagina="12"
+          mostrarBtn="true"
+          
           />
       </div>
-      <div :class="{ circulos: true, 'animacion-rotar': index_pagina == 11 }">
+      <div :class="{ circulos: true, 'animacion-rotar': index_pagina == 12 }">
         <Circulos
           icono="/img/Benefits/monnercard.png"
           color="blanco"
           texto="MONNERCARD"
-          rotar="rotar_180"
+          rotar="rotar_360"
         />
         <Circulos
           icono="/img/Benefits/benefits.svg"
           color="verde"
           texto="BENEFITS"
-          rotar="rotar_180"
+          rotar="rotar_360"
         />
         <Circulos
           icono="/img/Benefits/minnersolar.png"
           color="verde"
           texto="MINNERSOLAR"
-          rotar="rotar_180"
+          rotar="rotar_360"
         />
         <Circulos
           icono="/img/Benefits/stanking.png"
           color="blanco"
           texto="STAKING"
-          rotar="rotar_180"
+          rotar="rotar_360"
         />
       </div>
     </div>
@@ -126,12 +124,12 @@ defineProps({
   flex-direction: column;
   justify-content: center;
   width: 50%;
-  height: 60%;
+  height: 50%;
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 15%;
 }
-.aparecer {
+.arriba {
   animation-duration: 1s;
   animation-name: arriba;
   animation-iteration-count: 1;
@@ -144,7 +142,7 @@ defineProps({
   }
 
   100% {
-    top: 25%;
+    top: 30%;
     opacity: 100%;
   }
 }
@@ -160,7 +158,7 @@ defineProps({
 .fondo_rayos {
   position: absolute;
 
-  left: -10%;
+  left: -5%;
   width: 100%;
   height: 100%;
 }
@@ -171,11 +169,11 @@ defineProps({
 }
 @keyframes desplazamiento {
   0% {
-    left: -5%;
+    left: -10%;
   }
 
   100% {
-    left: -10%;
+    left: -5%;
   }
 }
 
@@ -205,9 +203,9 @@ defineProps({
   height: 50%;
   position: relative;
   z-index: 12;
-  top: 20%;
-  left: 41%;
-  transform: rotate(50grad);
+  top: 25%;
+  left: 35%;
+  transform: rotate(-50grad);
 }
 .animacion-rotar {
   animation-duration: 1s;
@@ -216,11 +214,11 @@ defineProps({
 }
 @keyframes rotar {
   0% {
-    transform: rotate(95deg);
+    transform: rotate(50grad);
   }
 
   100% {
-    transform: rotate(50grad);
+    transform: rotate(-50grad);
   }
 }
 .logo-redes {

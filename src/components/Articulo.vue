@@ -7,6 +7,10 @@ defineProps({
     img: {
         type: String,
         required: true
+    },
+    url: {
+        type: String,
+        required: true
     }
 })
 </script>
@@ -20,7 +24,7 @@ defineProps({
         <div class="imagenDeArticulo">
             <img :src=img alt="" class="imagenArticulo01" />
         </div>
-        <button class="btn">Read More</button>
+        <a class="leer_Mas"  target="_blank" :href=url>READ MORE</a>
     </div>
 
 
@@ -29,14 +33,17 @@ defineProps({
 
 
 <style scoped >
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+
 img {
     width: 100%;
     height: 100%;
 }
 
 .container2 {
-    margin-left: 10%;
-    margin-top: 15%;
+    left: 10%;
+    top: 15%;
+    margin: 5%;
     position: relative;
     width: 18%;
     min-width: 16rem;
@@ -60,14 +67,12 @@ img {
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 600;
+
 
 }
 
 h5 {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 600;
+    font-family: "Work Sans", sans-serif;
     font-size: 1rem;
 }
 
@@ -79,7 +84,7 @@ h5 {
 
 }
 
-.btn {
+.leer_Mas {
     color: white;
     margin-left: -30%;
     width: 60%;
@@ -89,6 +94,11 @@ h5 {
             #029F50 0%,
             #0A664E 50%,
             #0E444D 100%);
+    font-family: "Work Sans", sans-serif;
+    font-size: 120%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 img {

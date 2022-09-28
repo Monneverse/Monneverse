@@ -1,5 +1,5 @@
 <script setup>
-import Benefit_3 from "./ComponenteBenefit.vue";
+import Benefit_5 from "./ComponenteBenefit.vue";
 import Circulos from "./ComponentesCirculo.vue";
 defineProps({
   index_pagina: {
@@ -37,45 +37,17 @@ defineProps({
       <div class="luz-3"></div>
     </div>
 
-    <!-- <div class="titulo">
-        <h1>BENEFITS</h1>
-      </div>
-  -->
-    <div class="display_flex">
-      <div :class="{ benefits: true, aparecer: index_pagina == 11 }">
-        <Benefit_3
-          titulo="MonnerMinner"
-          segundoTexto="Is  one of the most innovative projects we have on our list. We will create solar-powered industrial mining camps backed by the US"
-          mostrarBtn="true" 
-          />
-      </div>
-      <div :class="{ circulos: true, 'animacion-rotar': index_pagina == 11 }">
-        <Circulos
-          icono="/img/Benefits/monnercard.png"
-          color="blanco"
-          texto="MONNERCARD"
-          rotar="rotar_180"
-        />
-        <Circulos
-          icono="/img/Benefits/benefits.svg"
-          color="verde"
-          texto="BENEFITS"
-          rotar="rotar_180"
-        />
-        <Circulos
-          icono="/img/Benefits/minnersolar.png"
-          color="verde"
-          texto="MINNERSOLAR"
-          rotar="rotar_180"
-        />
-        <Circulos
-          icono="/img/Benefits/stanking.png"
-          color="blanco"
-          texto="STAKING"
-          rotar="rotar_180"
-        />
-      </div>
+     <div class="titulo">
+            <h1>BENEFITS</h1>
     </div>
+   
+    <div class="benefits">
+      <Benefit_5
+        segundoTexto="Our staking platform is safe and reliable. We offer you a system that works by phases, backed up by Bank Security, where the Monnercoin will be your entry-ticket to a much-wider world! We want Monner to become one of the main 25 cryptocurrencies in the world! To do that, we rely on a limited and privileged supply of 10.000.000 Monnercoin and scheduled burns what are you waiting for? A universe full of opportunities is expecting you to unravel it"
+        index_pagina="13"
+      />
+    </div>
+
     <div class="logo-redes">
       <div class="icon icon-telegram">
         <a href="https://t.me/monnerversecommunity" target="_blank">
@@ -118,18 +90,34 @@ defineProps({
   height: 5rem;
   z-index: 12;
 }
+.titulo {
+  position: absolute;
+  width: 100%;
+  top:20%;
+
+  display: flex;
+  justify-content: center;
+}
+.titulo h1 {
+  font-size: 4vw;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  color: white;
+ 
+}
 
 .benefits {
   position: relative;
   z-index: 8;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 50%;
+  width: 100%;
   height: 60%;
-  position: absolute;
-  top: 25%;
-  left: 15%;
+  top: 35%;
+  display: flex;
+  justify-content: center;
+}
+.benefits p {
+
+    font-size: 15vw!important;
 }
 .aparecer {
   animation-duration: 1s;
