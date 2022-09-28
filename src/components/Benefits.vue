@@ -186,13 +186,6 @@ defineProps({
   width: 80%;
 }
 
-.fondo-oscurecer {
-  position: absolute;
-  z-index: 4;
-  opacity: 60%;
-  mix-blend-mode: multiply;
-}
-
 .rectangulo {
   position: absolute;
   z-index: 3;
