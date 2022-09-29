@@ -115,8 +115,8 @@ img {
 
 .texto_auditoria {
     position: absolute;
-    top: 25%;
-    left: 30%;
+    top: 20%;
+    left: 25%;
     color: white;
     text-align: center;
     justify-content: center;
@@ -125,9 +125,9 @@ img {
 }
 
 .texto_auditoria p {
-    font-size: 2.5vw;
+    font-size: 3vw;
     font-family: 'Work Sans', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
 }
 

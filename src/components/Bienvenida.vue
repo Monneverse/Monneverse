@@ -1,5 +1,5 @@
 <template>
-  <video src="/video/video_binario.mp4" autoplay="true" muted="true" loop="true" class="video-fondo"
+  <video src="/video/video_binariov2.mp4" autoplay="true" muted="true" loop="true" class="video-fondo"
     poster="/img/fondo_binario.png"></video>
 
   <div class="fondo-oscuro"></div>
@@ -40,7 +40,7 @@
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
   <div class="welcome fadeInLeft animated">
-    <p>welcome to <b>monneverse</b></p>
+    <p>Welcome to <b>Monnerverse</b></p>
   </div>
   <div class="welcome_text fadeInRight animated">
     <p>
@@ -57,6 +57,7 @@ export default {};
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
 @import url("http://fonts.cdnfonts.com/css/bahnschrift");
 
 img {
@@ -71,6 +72,7 @@ img {
   scale: 2;
   height: 100%;
   z-index: 0;
+  opacity: 25%;
 }
 
 .fondo-oscuro {
@@ -78,47 +80,28 @@ img {
       #48d0ab 0%,
       #097561 50%,
       #505863 100%);
-  z-index: 10;
+  z-index: 1;
   opacity: 70%;
 }
 
 .logo {
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   opacity: 40%;
 }
 
-#logo-1 {
-  left: 3rem;
-  top: 3rem;
-}
-
-#logo-2 {
-  left: 18rem;
-  top: 3rem;
-}
-
-#logo-3 {
-  left: 3.5rem;
-  top: 12rem;
-  transform: rotate(-30deg);
-}
-
-#logo-4 {
-  left: 18rem;
-  top: 12rem;
-  transform: rotate(-30deg);
-}
 
 #logo-5 {
-  max-width: 30rem;
-  max-height: 25rem;
+  max-width: 28rem;
+  max-height: 20rem;
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  left: 0%;
+  right: 8%;
+  bottom: 25%;
   margin: auto;
+  z-index: 6;
+  opacity: 50%;
 }
 
 #logo-6 {
@@ -126,11 +109,7 @@ img {
   top: 3rem;
 }
 
-#logo-7 {
-  right: 18rem;
-  top: 12rem;
-  transform: rotate(-30deg);
-}
+
 
 .fondo-suave {
   position: absolute;
@@ -141,11 +120,11 @@ img {
 
 .fondo-montana {
   position: absolute;
-  top: 60%;
+  top: 27%;
   left: 0%;
   width: 100%;
-  z-index: 4;
-  opacity: 70%;
+  z-index: 6;
+  opacity: 100%;
 }
 
 .fondo-oscuro-superior {
@@ -158,10 +137,10 @@ img {
 
 .fondo-mundial {
   position: fixed;
-  left: 32%;
-  top: 20%;
-  width: 80%;
-  height: 95%;
+  left: 17%;
+  top: 7%;
+  width: 85%;
+  height: 100%;
   z-index: 6;
   opacity: 100%;
 }
@@ -186,7 +165,7 @@ img {
   position: absolute;
   width: 50%;
   height: 180%;
-  z-index: 5;
+  z-index: 7;
   top: 0%;
   opacity: 90%;
 }
@@ -205,18 +184,17 @@ img {
   position: fixed;
   display: flex;
   justify-content: center;
-  top: 30%;
+  top: 25%;
   left: 5%;
   width: 30%;
   z-index: 6;
 }
 
 .welcome p {
-  font-size: 3.4vw;
+  font-size: 4.8vw;
   font-family: "Bahnschrift", sans-serif;
   color: white;
   text-align: left;
-  text-transform: uppercase;
 }
 
 .welcome p b {
@@ -226,7 +204,7 @@ img {
 .welcome_text {
   position: fixed;
   display: flex;
-  top: 50%;
+  top: 50.8%;
   left: 5%;
   justify-content: center;
   width: 40%;

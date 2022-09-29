@@ -3,10 +3,10 @@
     <h1>UPCOMING ALLIANCES</h1>
   </div>
   <div class="visa_img">
-    <img src="../assets/methodBuy/visa.svg" />
+    <img src="/img/Alianzas/visa.png" />
   </div>
   <div class="mastercard_img">
-    <img src="../assets/methodBuy/masterCard.svg" />
+    <img src="/img/Alianzas/masterCard.png" />
   </div>
   <div class="circulos_redes">
     <div class="semi_circle">
@@ -27,8 +27,10 @@
   <div class="circuito-derecho">
     <img src="/img/calculadora/circuito-derecho.png" alt="" />
   </div>
-  <div class="degradado_azuliz"></div>
-  <div class="degradado_azulde"></div>
+  <div class="degradado degradado_izquierdo"></div>
+  <div class="degradado degradado_derecho"></div>
+  <div class="rectangulo"></div>
+  <div class="rectangulo-medio"></div>
   <!--FIN FONDO-->
 
   <div class="logo-redes">
@@ -127,26 +129,27 @@ img {
   min-width: 30rem;
 }
 
-.degradado_azuliz {
-  background: linear-gradient(to right, #08047A 0.5%, transparent);
-  position: absolute;
-  transform: rotate(-60deg);
-  top: 0%;
-  right: 50%;
-  width: 50%;
-  height: 180%;
-  z-index: 3;
+.circuito-derecho img {
+  transform: rotateX(-180grad);
 }
 
-.degradado_azulde {
-  background: linear-gradient(to right, #08047A 0.5%, transparent);
+.degradado {
+  background: linear-gradient(to right, #08047a 0.5%, transparent);
   position: absolute;
-  transform: rotate(230deg);
-  top: -12%;
-  left: 50%;
   width: 50%;
   height: 180%;
   z-index: 3;
+  top: 0%;
+}
+
+.degradado_izquierdo {
+  transform: rotate(-60deg);
+  right: 50%;
+}
+
+.degradado_derecho {
+  transform: rotate(230deg);
+  left: 55%;
 }
 
 /*FIN ESTILO FONDO*/
@@ -158,7 +161,6 @@ img {
 
 .upcoming_alliance h1 {
   position: absolute;
-  display: flex;
   top: 17%;
   right: 24%;
   color: white;
@@ -169,11 +171,10 @@ img {
 
 .visa_img {
   position: absolute;
-  display: flex;
-  width: 17.9%;
+  width: 20%;
   height: 31%;
   top: 37%;
-  left: 18%;
+  left: 21%;
   z-index: 5;
 }
 
@@ -183,11 +184,10 @@ img {
 
 .mastercard_img {
   position: absolute;
-  display: flex;
-  width: 17.9%;
-  height: 31%;
+  width: 16%;
+  height: 32%;
   top: 37%;
-  right: 22%;
+  right: 25%;
   z-index: 5;
 }
 
@@ -196,20 +196,19 @@ img {
 }
 
 .circulos_redes {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 0%;
   left: 0%;
-  border: 1px solid yellowgreen;
 }
 
 .semi_circle {
-  position: fixed;
-  right: 30%;
-  top: 71%;
-  width: 40%;
-  height: 80%;
+  position: absolute;
+  right: 26.3%;
+  top: 74%;
+  width: 50%;
+  height: 100%;
   z-index: 6;
   opacity: 100%;
   rotate: 180deg;
@@ -217,18 +216,47 @@ img {
 
 .circle {
   position: fixed;
-  right: 29.5%;
+  right: 26%;
   top: 82%;
-  width: 40%;
-  height: 80%;
+  width: 50%;
+  height: 100%;
   z-index: 7;
   opacity: 100%;
 }
 
+.rectangulo {
+  width: 50%;
+  height: 35%;
+  position: absolute;
+  top: -29%;
+  left: 25%;
+  background: rgb(8, 7, 32);
+  background: linear-gradient(90deg,
+      rgba(8, 7, 32, 1) 0%,
+      rgba(1, 209, 88, 1) 100%);
+  border-radius: 2.5rem;
+  text-align: center;
+  z-index: 5;
+}
+
+.rectangulo-medio {
+  width: 44%;
+  height: 20%;
+  background-color: white;
+  position: absolute;
+  top: -18%;
+  left: 28%;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
+  z-index: 6;
+}
+
 .logo-redes {
   position: absolute;
-  bottom: 8%;
-  left: 41.8%;
+  bottom: 5.6%;
+  left: 41%;
   width: 20rem;
   height: 7rem;
   display: flex;
@@ -237,9 +265,13 @@ img {
 }
 
 .icon {
-  width: 4vw;
+  width: 3.2vw;
   height: auto;
   margin-left: 1rem;
   z-index: 8;
+}
+
+.icon:hover {
+  transform: scale(1.2);
 }
 </style>

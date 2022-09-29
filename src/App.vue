@@ -10,12 +10,13 @@ import Benefits_2 from "./components/Benefits_2.vue";
 import Benefits_3 from "./components/Benefits_3.vue";
 import Benefits_4 from "./components/Benefits_4.vue";
 import Benefits_5 from "./components/Benefits_5.vue";
-import Alianzas from "./components/Alianzas.vue";
+import Alianzas from "./components/UpcomingAlliances.vue";
 import Exchanges from "./components/Exchanges.vue";
 import Logos_auditorias from "./components/Logos_auditorias.vue";
 import News from "./components/News.vue";
 import Tokenomics from "./components/Tokenomics.vue";
-import Fases from "./components/Fases.vue";
+import Fase from "./components/Phases.vue";
+import Fase2 from "./components/Phase2.vue";
 import Footer from "./components/Footer.vue";
 </script>
 
@@ -88,9 +89,12 @@ import Footer from "./components/Footer.vue";
       <News />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==16}">
-      <Fases />
+      <Fase />
     </div>
-    <div :class="{container:true, 'mostrar-container':index_pagina==17}">
+    <div :class="{container:true,'mostrar-container':index_pagina == 17}">
+      <Fase2 />
+    </div>
+    <div :class="{container:true, 'mostrar-container':index_pagina==18}">
       <Footer :index_pagina=index_pagina></Footer>
     </div>
 
@@ -106,7 +110,7 @@ export default {
     return {
       index: 1,
       index_pagina: 1,
-      limite: 17,
+      limite: 18,
       isVisibleLogo: false,
       scroll: true
 
@@ -184,7 +188,7 @@ export default {
         setTimeout(() => {
           this.scroll = true;
         }, 20)
-    
+
         location.hash = "#" + this.index_pagina;
         window.history.pushState({}, document.title, window.location.pathname);
         this.UpdateNav(this.index_pagina)

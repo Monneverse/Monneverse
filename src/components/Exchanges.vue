@@ -31,7 +31,7 @@ import ComponenteIconos from "./componenteIconos.vue";
       <ComponenteIconos iconos="/img/Exchanges/bunny-color.svg" iconname="pancakeswap" />
     </div>
     <div class="kucoin">
-      <ComponenteIconos iconos="/img/Exchanges/Kucoin.svg" iconname="kucoin.svg" />
+      <ComponenteIconos iconos="/img/Exchanges/Kucoin.svg" iconname="kucoin" />
     </div>
     <div class="gateio">
       <ComponenteIconos iconos="/img/Exchanges/Gatebw.svg" iconname="gate.io" />
