@@ -174,15 +174,15 @@ export default {
         this.beforeAnimation = true
         this.scroll = false;
 
-        let newPosition = 0
+        let newPosition = this.index_pagina;
         if (event.deltaY > 0) {
-          if (this.index_pagina < this.limite)
-            newPosition = this.index_pagina + 1;
+          if (this.index_pagina < this.limite) newPosition = this.index_pagina + 1;
         } else {
-          if (this.index_pagina > 1)
-            newPosition = this.index_pagina - 1;
+          if (this.index_pagina > 1) newPosition = this.index_pagina - 1;
         }
-
+        if (newPosition > this.limite) {
+          newPosition = this.limite
+        }
         setTimeout(() => {
           this.index_pagina = newPosition
           this.isVisibleLogo = true;
