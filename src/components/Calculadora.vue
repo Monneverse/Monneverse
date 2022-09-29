@@ -1,4 +1,6 @@
 <template>
+  <p class="ocultar" id="cantidad">0</p>
+  <p class="ocultar" id="medida">HOURS</p>
   <!-- Fondo de la calculadora -->
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
@@ -21,7 +23,7 @@
   <div class="degradado degradado_derecho"></div>
   <div class="contenido">
     <div class="calculadora">
-    <img class="circulo circulo-verde" src="../assets/circulo-verde.svg" alt="">
+      <img class="circulo circulo-verde" src="../assets/circulo-verde.svg" alt="">
     </div>
   </div>
   <div class="contenido">
@@ -45,8 +47,8 @@
 
         <img id="indicador-img" class="hour48" src="../assets/indicador.svg" />
         <div id="indicador" @click="CambiarMonth" class="descripcion">
-          <p id="cantidad">0</p>
-          <p id="medida">HOURS</p>
+          <p>{{porcentajeInteres}}%</p>
+
         </div>
       </div>
       <div :class="{
@@ -70,7 +72,7 @@
           <label for="inversion">Invert</label>
         </div>
         <div class="porcentaje">
-          <p>{{ porcentajeInteres }}%</p>
+          <!-- <p>{{ porcentajeInteres }}%</p> -->
         </div>
         <div class="control">
           <input type="number" name="interes" id="interes" v-model="interes" placeholder="$ 100" disabled />
@@ -121,7 +123,7 @@ export default {
   },
   data() {
     return {
-      inversion: 100,
+      inversion: 1000,
       porcentajeInteres: 12.6,
       interes: 0,
       meses: State.Hour0,
@@ -192,6 +194,10 @@ img {
   left: 0;
   height: 100%;
   width: 100%;
+}
+
+.ocultar {
+  visibility: hidden;
 }
 
 .fondo-calculadora {
@@ -350,7 +356,7 @@ img {
 }
 
 .circulo img {
-  
+
   height: 60%;
   width: 70%;
 }
@@ -547,12 +553,14 @@ img {
   position: absolute;
   top: 48%;
   width: 7rem;
+  height: 7rem;
   left: calc(50%-4rem);
-  font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans";
   font-size: 3.5vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .descripcion>p {
@@ -585,7 +593,7 @@ img {
   left: 6rem;
   max-width: 30rem;
   z-index: 9;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans";
   color: white;
 }
 
@@ -601,7 +609,7 @@ img {
 
 .informacion #title span {
   color: #01c28d;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans";
 }
 
 .informacion #descripcion {

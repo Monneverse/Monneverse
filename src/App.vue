@@ -115,6 +115,7 @@ export default {
       scroll: true,
       exitAnimation: false,
       enterAnimation: false,
+      isRevert: false,
       listaPaginaDondeSeOcultaLogo: [1, 2]
 
     };
@@ -181,9 +182,15 @@ export default {
 
         let newPosition = this.index_pagina;
         if (event.deltaY > 0) {
-          if (this.index_pagina < this.limite) newPosition = this.index_pagina + 1;
+          if (this.index_pagina < this.limite) {
+            newPosition = this.index_pagina + 1;
+            this.isRevert = false;
+          }
         } else {
-          if (this.index_pagina > 1) newPosition = this.index_pagina - 1;
+          if (this.index_pagina > 1) {
+            newPosition = this.index_pagina - 1;
+            this.isRevert = true;
+          }
         }
         setTimeout(() => {
           this.index_pagina = newPosition

@@ -83,7 +83,7 @@ img {
 
 .logo {
     position: absolute;
-    top: 25%;
+    top: 15%;
     left: 43%;
     max-width: 20rem;
     max-height: 20rem;
@@ -221,12 +221,13 @@ img {
     left: 0;
     bottom: 10%;
     width: 100%;
-    height: 50%;
+    height: 60%;
     background-color: #1A1E29;
     z-index: 5;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    opacity: 70%;
 }
 
 .fondo-redes-animation {
