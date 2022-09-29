@@ -184,7 +184,7 @@ export default {
 
         setTimeout(() => {
           this.scroll = true;
-        }, 20)
+        }, 500)
     
         location.hash = "#" + this.index_pagina;
         window.history.pushState({}, document.title, window.location.pathname);
