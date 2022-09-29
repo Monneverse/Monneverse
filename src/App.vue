@@ -108,7 +108,8 @@ export default {
       index_pagina: 1,
       limite: 17,
       isVisibleLogo: false,
-      scroll: true
+      scroll: true,
+      listaPaginaDondeSeOcultaLogo : [1,2, this.limite]
 
     };
   },
@@ -176,7 +177,7 @@ export default {
           if (this.index_pagina > 1) this.index_pagina = this.index_pagina - 1;
         }
         this.isVisibleLogo = true;
-        if (this.index_pagina == 1 || this.index_pagina == this.limite) {
+        if (this.listaPaginaDondeSeOcultaLogo.filter(x=> x == this.index_pagina).length > 0) {
           this.isVisibleLogo = false;
         }
         this.scroll = false;
