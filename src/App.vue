@@ -113,6 +113,8 @@ export default {
       limite: 18,
       isVisibleLogo: false,
       scroll: true,
+      exitAnimation: false,
+      enterAnimation: false,
       listaPaginaDondeSeOcultaLogo: [1, 2, 17]
 
     };
@@ -173,25 +175,35 @@ export default {
     },
     Navegar() {
       if (this.scroll) {
-        if (event.deltaY > 0) {
-          if (this.index_pagina < this.limite) this.index_pagina = this.index_pagina + 1;
-        } else {
-          if (this.index_pagina > 1) this.index_pagina = this.index_pagina - 1;
-        }
-        this.isVisibleLogo = true;
-        if (this.listaPaginaDondeSeOcultaLogo.filter(x => x == this.index_pagina).length > 0) {
-          this.isVisibleLogo = false;
-        }
-
+        this.exitAnimation = true
         this.scroll = false;
+
+        let newPosition = this.index_pagina;
+        if (event.deltaY > 0) {
+          if (this.index_pagina < this.limite) newPosition = this.index_pagina + 1;
+        } else {
+          if (this.index_pagina > 1) newPosition = this.index_pagina - 1;
+        }
+        setTimeout(() => {
+          this.index_pagina = newPosition
+          this.isVisibleLogo = true;
+          if (this.listaPaginaDondeSeOcultaLogo.filter(x => x == this.index_pagina).length > 0) {
+            this.isVisibleLogo = false;
+          }
+
+          location.hash = "#" + this.index_pagina;
+          window.history.pushState({}, document.title, window.location.pathname);
+          this.UpdateNav(this.index_pagina)
+          this.exitAnimation = false
+          this.enterAnimation = true
+        }, 500)
 
         setTimeout(() => {
           this.scroll = true;
-        }, 20)
+          this.enterAnimation = false
+        }, 1000)
 
-        location.hash = "#" + this.index_pagina;
-        window.history.pushState({}, document.title, window.location.pathname);
-        this.UpdateNav(this.index_pagina)
+
       }
 
     }

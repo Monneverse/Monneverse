@@ -181,7 +181,7 @@ defineProps({
   left: 65%;
 }
 .circuito img {
-  transform: rotate(180deg);
+  transform: rotateX(-180grad);
   z-index: 12;
   width: 80%;
 }
