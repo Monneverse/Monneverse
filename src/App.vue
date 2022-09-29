@@ -109,7 +109,9 @@ export default {
       limite: 17,
       isVisibleLogo: false,
       scroll: true,
-      listaPaginaDondeSeOcultaLogo : [1,2, 17]
+      beforeAnimation: false,
+      afterAnimation: false,
+      listaPaginaDondeSeOcultaLogo: [1, 2, 17]
 
     };
   },
@@ -169,25 +171,34 @@ export default {
     },
     Navegar() {
       if (this.scroll) {
+        this.beforeAnimation = true
+        this.scroll = false;
+
         if (event.deltaY > 0) {
           if (this.index_pagina < this.limite) this.index_pagina = this.index_pagina + 1;
         } else {
           if (this.index_pagina > 1) this.index_pagina = this.index_pagina - 1;
         }
         this.isVisibleLogo = true;
-        if (this.listaPaginaDondeSeOcultaLogo.filter(x=> x == this.index_pagina).length > 0) {
+        if (this.listaPaginaDondeSeOcultaLogo.filter(x => x == this.index_pagina).length > 0) {
           this.isVisibleLogo = false;
         }
-       
-        this.scroll = false;
+
+
+        setTimeout(() => {
+          location.hash = "#" + this.index_pagina;
+          window.history.pushState({}, document.title, window.location.pathname);
+          this.UpdateNav(this.index_pagina)
+          this.beforeAnimation = false
+          this.afterAnimation = true
+        }, 500)
 
         setTimeout(() => {
           this.scroll = true;
-        }, 500)
-    
-        location.hash = "#" + this.index_pagina;
-        window.history.pushState({}, document.title, window.location.pathname);
-        this.UpdateNav(this.index_pagina)
+          this.afterAnimation = false
+        }, 1000)
+
+
       }
 
     }
