@@ -143,9 +143,6 @@ export default {
     UpdateNav(id) {
       switch (id) {
         case 5:
-        case 6:
-        case 7:
-        case 8:
           this.index = 1;
           break;
         case 9:
