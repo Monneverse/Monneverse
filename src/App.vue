@@ -109,8 +109,8 @@ export default {
       limite: 17,
       isVisibleLogo: false,
       scroll: true,
-      beforeAnimation: false,
-      afterAnimation: false,
+      exitAnimation: false,
+      enterAnimation: false,
       listaPaginaDondeSeOcultaLogo: [1, 2, 17]
 
     };
