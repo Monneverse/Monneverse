@@ -94,8 +94,8 @@ import Footer from "./components/Footer.vue";
     <div :class="{container:true,'mostrar-container':index_pagina == 17}">
       <Fase2 />
     </div>
-    <div :class="{container:true, 'mostrar-container':index_pagina==18}">
-      <Footer :index_pagina=index_pagina></Footer>
+    <div :class="{container:true, 'mostrar-container':index_pagina==limite}">
+      <Footer :index_pagina=index_pagina :limite=limite></Footer>
     </div>
 
   </main>
@@ -115,7 +115,7 @@ export default {
       scroll: true,
       exitAnimation: false,
       enterAnimation: false,
-      listaPaginaDondeSeOcultaLogo: [1, 2, 17]
+      listaPaginaDondeSeOcultaLogo: [1, 2]
 
     };
   },
@@ -165,6 +165,7 @@ export default {
           this.index = 4;
           break;
         case 16:
+        case 17:
           this.index = 5;
           break;
         default:
@@ -211,6 +212,7 @@ export default {
   mounted() {
     this.index_pagina = 1;
     document.addEventListener("wheel", this.Navegar);
+    this.listaPaginaDondeSeOcultaLogo.push(this.limite)
   },
 };
 </script>

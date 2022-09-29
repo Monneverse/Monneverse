@@ -1,6 +1,6 @@
 <template>
     <!-- Fondo de la footer -->
-    <div :class="{logo: true , 'logo-animation':index_pagina==17}">
+    <div :class="{logo: true , 'logo-animation':index_pagina==this.limite}">
         <img src="/img/logo.svg" alt="logo monneverse">
     </div>
     <div class="fondo fondo-footer"></div>
@@ -19,7 +19,7 @@
     </div>
     <div class="degradado degradado_izquierdo"></div>
     <div class="degradado degradado_derecho"></div>
-    <div :class="{'fondo-redes':true, 'fondo-redes-animation':index_pagina==17}">
+    <div :class="{'fondo-redes':true, 'fondo-redes-animation':index_pagina==this.limite}">
 
         <div class="redes">
             <a href="https://t.me/monnerversecommunity">
@@ -63,6 +63,10 @@
 export default {
     props: {
         index_pagina: {
+            type: Number,
+            required: true,
+        },
+        limite: {
             type: Number,
             required: true,
         },
