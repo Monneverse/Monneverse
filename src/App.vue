@@ -174,14 +174,17 @@ export default {
         this.beforeAnimation = true
         this.scroll = false;
 
-
+        let newPosition = 0
+        if (event.deltaY > 0) {
+          if (this.index_pagina < this.limite)
+            newPosition = this.index_pagina + 1;
+        } else {
+          if (this.index_pagina > 1)
+            newPosition = this.index_pagina - 1;
+        }
 
         setTimeout(() => {
-          if (event.deltaY > 0) {
-            if (this.index_pagina < this.limite) this.index_pagina = this.index_pagina + 1;
-          } else {
-            if (this.index_pagina > 1) this.index_pagina = this.index_pagina - 1;
-          }
+          this.index_pagina = newPosition
           this.isVisibleLogo = true;
           if (this.listaPaginaDondeSeOcultaLogo.filter(x => x == this.index_pagina).length > 0) {
             this.isVisibleLogo = false;
