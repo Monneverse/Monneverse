@@ -21,10 +21,14 @@ import Articulo from "./Articulo.vue";
   <div class="circuitoDerecho">
     <img src="/img/Articulo/circuito-derecho.png" alt="" />
   </div>
+
   <!-- Contenedor de Tiempo -->
   <div class="container_time">
     <div class="time">
-      <h2>Pre Sale Time</h2>
+      <div class="titulo_Tiempo">
+        <h2>Pre Sale Time</h2>
+      </div>
+
       <div class="bloque_temporizador">
         <div class="temporizadorDias">
           <h1>{{ diaString }}</h1>
@@ -46,7 +50,13 @@ import Articulo from "./Articulo.vue";
           <h4>Segundos</h4>
         </div>
       </div>
-      <a class="btn_comenzar" href="https://mailchi.mp/8ae2d866d909/reservation-form" target="_blank">CLICK HERE</a>
+      <div class="btn_comenzar">
+        <a
+          href="https://mailchi.mp/8ae2d866d909/reservation-form"
+          target="_blank"
+          >CLICK HERE</a
+        >
+      </div>
     </div>
   </div>
 
@@ -174,47 +184,6 @@ img {
   opacity: 60%;
   mix-blend-mode: multiply;
 }
-/* container time */
-.container_time{
-  position: absolute;
-  top: 10%;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.time {
-  top: 10%;
-  position: absolute;
-  display:block;
-  justify-content: center;
-  align-items: center;
-
-  width: 30rem;
-  height: 15rem;
-  z-index: 5;
-}
-.time h2 {
-  text-align: center;
-}
-
-.btn_comenzar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
-  border-radius: 7px;
-  height: 3rem;
-  font-family: "Courier New", Courier, monospace;
-  width: 15rem;
-  color: white;
-  font-size: 1.5rem;
-  margin-top: 7rem;
-  margin-left: 7rem;
-}
-
 
 .circuloFondo1 {
   top: 25%;
@@ -224,20 +193,20 @@ img {
   justify-content: center;
   align-items: center;
   z-index: 2;
-  width: 30rem;
-  height: 30rem;
+  width: 25%;
+  height: 50%;
 }
 
 .circuloFondo2 {
   top: 18%;
-  left: 31%;
+  left: 30%;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2;
-  width: 40rem;
-  height: 40rem;
+  width: 35%;
+  height: 65%;
 }
 
 .circuitoIzquierdo {
@@ -247,19 +216,19 @@ img {
   top: 15%;
   height: 80%;
   width: 50%;
-  min-width: 30rem;
   opacity: 100%;
 }
-
+.circuitoIzquierdo img {
+  transform: rotateX(180deg);
+}
 .circuitoDerecho {
   position: absolute;
   z-index: 7;
   right: -10%;
   top: 15%;
-  right: -5%;
+  right: -9%;
   height: 80%;
   width: 55%;
-  min-width: 30rem;
 }
 
 .degradado {
@@ -281,13 +250,64 @@ img {
   left: 55%;
 }
 
+/* container time */
+.container_time {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.time {
+  top: 10%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  height: 15rem;
+  z-index: 5;
+  
+}
+.time h2 {
+  text-align: center;
+}
+
+.btn_comenzar {
+  left: 0%;
+  width: 100%;
+  height: 20%;
+  bottom: 0%;
+  margin-top: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_comenzar a {
+  height: 100%;
+  width: 50%;
+  border-radius: 0.5rem;
+  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  font-size: 150%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 /* contendero de Articulo */
 .containerArticulo {
   position: absolute;
   bottom: 10%;
   left: 0;
-  margin-left: 20%;
-  width: 50%;
+  width: 100%;
   height: 50%;
   display: flex;
   justify-content: center;
@@ -307,19 +327,20 @@ h1 {
   font-weight: bold;
 }
 
-h1, h2, h4  {
+h1,
+h2,
+h4 {
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
   color: white;
 }
 
-
 .bloque_temporizador {
   top: 15%;
-  left: 2rem;
+  left: 0%;
   position: relative;
-  height: 4rem;
-  width: 25rem;
+  height: 25%;
+  width: 80%;
   z-index: 6;
   display: flex;
   flex-direction: row;
@@ -418,23 +439,24 @@ h1, h2, h4  {
 .logo_redes {
   position: absolute;
   bottom: 0%;
-  left: 1rem;
-  width: 20rem;
-  height: 5rem;
+  left: 1%;
+  width: 10%;
+  height: 7%;
   z-index: 14;
   display: flex;
   justify-content: start;
+  
 }
 
 .icon {
-  width: 3rem;
+  width: 30%;
   height: auto;
   z-index: 18;
-  margin-left: 1rem;
+  margin-left: 7%;
 }
 
 .contenedorDeArticulo > * {
-  animation: mover 10s normal infinite;
+  animation: mover 10s normal ;
 }
 
 @keyframes mover {
