@@ -53,13 +53,13 @@ export default {
       get() {
         try {
           var anim = document.getElementById("animacion");
-        var link = document.getElementsByClassName("link")[this.index-1];
-        anim.style.minWidth = link.offsetWidth + "px";
-        anim.style.left = this.getOffset(link).left + "px";
+          var link = document.getElementsByClassName("link")[this.index - 1];
+          anim.style.minWidth = link.offsetWidth + "px";
+          anim.style.left = this.getOffset(link).left + "px";
         } catch (error) {
-          
+
         }
- 
+
         return this.index
       }
     }
@@ -67,6 +67,7 @@ export default {
   methods: {
     hover_mover(id) {
       let anim = document.getElementById("animacion");
+      anim.classList.remove("invisible");
       let link = document.getElementById(id);
       anim.style.minWidth = link.offsetWidth + "px";
       anim.style.left = this.getOffset(link).left + "px";
@@ -74,6 +75,9 @@ export default {
     exit_mouse() {
       var anim = document.getElementById("animacion");
       var link = document.getElementsByClassName("home")[0];
+      if(this.indexF==0){
+        anim.classList.add("invisible");
+      }
       anim.style.minWidth = link.offsetWidth + "px";
       anim.style.left = this.getOffset(link).left + "px";
     },
@@ -113,9 +117,11 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
+
 .invisible {
-  opacity:0;
+  opacity: 0;
 }
+
 .logo {
   position: absolute;
   top: 2rem;
