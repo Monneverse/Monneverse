@@ -15,7 +15,7 @@
       <a id="a4" :class="{link:true,home:indexF==4}" @mouseover="hover_mover('a4')" @click="this.setPage(4)">news</a>
       <a id="a5" :class="{link:true,home:indexF==5}" @mouseover="hover_mover('a5')"
         @click="this.setPage(5)">roadmaps</a>
-      <div id="animacion" class="animacion traslado_animacion"></div>
+      <div id="animacion" :class="{animacion:true, 'traslado_animacion':true ,invisible:indexF==0}"></div>
     </nav>
 
     <button class="btn">WHITEPAPER</button>
@@ -113,7 +113,9 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
-
+.invisible {
+  opacity:0;
+}
 .logo {
   position: absolute;
   top: 2rem;

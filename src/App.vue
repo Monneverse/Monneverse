@@ -104,7 +104,7 @@ import Footer from "./components/Footer.vue";
 export default {
   data() {
     return {
-      index: 1,
+      index: 0,
       index_pagina: 1,
       limite: 17,
       isVisibleLogo: false,
@@ -165,6 +165,7 @@ export default {
           this.index = 5;
           break;
         default:
+          this.index = 0;
           break;
       }
 
@@ -180,6 +181,7 @@ export default {
         if (this.listaPaginaDondeSeOcultaLogo.filter(x=> x == this.index_pagina).length > 0) {
           this.isVisibleLogo = false;
         }
+       
         this.scroll = false;
 
         setTimeout(() => {
