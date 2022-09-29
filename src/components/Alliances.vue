@@ -135,7 +135,7 @@ defineProps({
 }
 .animacion-logo {
   animation-name: animar-logo;
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-iteration-count: 1;
 }
 
@@ -202,7 +202,7 @@ defineProps({
   z-index: 2;
 }
 .fondo-montana-animation img {
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-name: fondo-montana-animation;
   animation-iteration-count: 1;
 }
@@ -310,7 +310,7 @@ defineProps({
 }
 .animacion-arco img {
   animation-name: animacion-arco;
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-iteration-count: 1;
 }
 
@@ -419,7 +419,7 @@ defineProps({
   left: 55%;
 }
 .animacion-aparecer {
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-name: aparecer;
   animation-iteration-count: 1;
 }

@@ -2,13 +2,11 @@
   <!-- Fondo de la calculadora -->
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
-  <div
-    :class="{
-      fondo: true,
-      'fondo-montana': true,
-      'fondo-montana-animation': index_pagina == 4,
-    }"
-  >
+  <div :class="{
+    fondo: true,
+    'fondo-montana': true,
+    'fondo-montana-animation': index_pagina == 4,
+  }">
     <img src="/img/fondo-montana.png" />
   </div>
   <div class="fondo fondo-oscurecer"></div>
@@ -21,79 +19,61 @@
   </div>
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
-
+  <div class="contenido">
+    <div class="calculadora">
+    <img class="circulo circulo-verde" src="../assets/circulo-verde.svg" alt="">
+    </div>
+  </div>
   <div class="contenido">
     <div class="calculadora">
       <div :class="{ circulo: true, 'aparecer-animation': index_pagina == 4 }">
         <img src="../assets/circulo-blanco.svg" srcset="" />
       </div>
 
-      <div
-        :class="{
-          circulo: true,
-          'circulo-superior-animation': index_pagina == 4,
-        }"
-      >
+      <div :class="{
+        circulo: true,
+        'circulo-superior-animation': index_pagina == 4,
+      }">
         <img src="../assets/circulo-colores.svg" alt="" srcset="" />
       </div>
-      <div
-        :class="{
-          circulo: true,
-          indicador: true,
-          'indicador-animacion': index_pagina == 4,
-        }"
-      >
+
+      <div :class="{
+        circulo: true,
+        indicador: true,
+        'indicador-animacion': index_pagina == 4,
+      }">
+
         <img id="indicador-img" class="hour48" src="../assets/indicador.svg" />
         <div id="indicador" @click="CambiarMonth" class="descripcion">
           <p id="cantidad">0</p>
           <p id="medida">HOURS</p>
         </div>
       </div>
-      <div
-        :class="{
-          'indicador-texto': true,
-          'aparecer-animation': index_pagina == 4,
-        }"
-      >
+      <div :class="{
+        'indicador-texto': true,
+        'aparecer-animation': index_pagina == 4,
+      }">
         <p id="month-1">24 h</p>
         <p id="month-2">48 h</p>
-        <div
-          :class="{
-            'circulo-indicador': true,
-            'circulo-indicador-animation': index_pagina == 4,
-          }"
-        ></div>
+        <div :class="{
+          'circulo-indicador': true,
+          'circulo-indicador-animation': index_pagina == 4,
+        }"></div>
       </div>
-      <div
-        :class="{
-          'form-controles': true,
-          'aparecer-animation': index_pagina == 4,
-        }"
-      >
+      <div :class="{
+        'form-controles': true,
+        'aparecer-animation': index_pagina == 4,
+      }">
         <div class="control">
-          <input
-            type="number"
-            min="0"
-            @input="Calculator"
-            name="inversion"
-            id="inversion"
-            v-model="inversion"
-            placeholder="$ 100"
-          />
+          <input type="number" min="0" @input="Calculator" name="inversion" id="inversion" v-model="inversion"
+            placeholder="$ 100" />
           <label for="inversion">Invert</label>
         </div>
         <div class="porcentaje">
           <p>{{ porcentajeInteres }}%</p>
         </div>
         <div class="control">
-          <input
-            type="number"
-            name="interes"
-            id="interes"
-            v-model="interes"
-            placeholder="$ 100"
-            disabled
-          />
+          <input type="number" name="interes" id="interes" v-model="interes" placeholder="$ 100" disabled />
           <label for="interes">Interest</label>
         </div>
       </div>
@@ -111,9 +91,7 @@
     </p>
   </div>
 
-  <div
-    :class="{ 'logo-redes': true, 'logo-redes-animation': index_pagina == 4 }"
-  >
+  <div :class="{ 'logo-redes': true, 'logo-redes-animation': index_pagina == 4 }">
     <div class="icon icon-telegram">
       <a href="https://t.me/monnerversecommunity" target="_blank">
         <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
@@ -218,22 +196,18 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
 }
 
 .filtro-superior {
   z-index: 1;
-  background: radial-gradient(
-    circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
-  );
+  background: radial-gradient(circle at center,
+      #f9f9fa 0%,
+      #c8ced4 50%,
+      #a8aaaf 100%);
   mix-blend-mode: multiply;
 }
 
@@ -350,6 +324,7 @@ img {
   height: 90%;
   width: 90%;
   max-width: 60rem;
+  z-index: 8;
   user-select: none;
   display: flex;
   justify-content: center;
@@ -367,7 +342,15 @@ img {
   align-items: center;
 }
 
+.circulo-verde {
+  top: 18%;
+  left: 15%;
+  height: 70%;
+  width: 70%;
+}
+
 .circulo img {
+  
   height: 60%;
   width: 70%;
 }
@@ -401,25 +384,29 @@ img {
 
 .indicador img {
   position: relative;
-  top: 1.5rem;
+  top: 2.2rem;
   right: 0rem;
   width: 40%;
   max-width: 10rem;
+
   height: auto;
   user-select: none;
   pointer-events: none;
   transition: transform 0.4s ease-in 0s;
 }
+
 @media only screen and (min-width: 1200px) {
   .indicador img {
     max-width: 12rem;
   }
 }
+
 @media only screen and (min-width: 1400px) {
   .indicador img {
     max-width: 15rem;
   }
 }
+
 .form-controles {
   position: absolute;
   top: 82%;
@@ -438,7 +425,7 @@ img {
   align-items: center;
 }
 
-.control > input {
+.control>input {
   font-family: "Work Sans", sans-serif;
   font-size: 1.5rem;
   color: #067f4e;
@@ -452,19 +439,21 @@ img {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+
 @media only screen and (min-width: 1400px) {
-  .control > input {
-  margin-left: 3rem;
-  margin-right: 3rem;
+  .control>input {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
 }
-}
+
 #interes:disabled {
   background-color: white;
   user-select: none;
   pointer-events: none;
 }
 
-.control > label {
+.control>label {
   font-family: "Work Sans", sans-serif;
   font-size: 1.5rem;
   color: white;
@@ -475,7 +464,7 @@ img {
   margin-bottom: 0.5rem;
 }
 
-.porcentaje > p {
+.porcentaje>p {
   font-family: "Work Sans", sans-serif;
   font-size: 1.5rem;
   color: white;
@@ -487,7 +476,7 @@ img {
   justify-content: center;
 }
 
-.indicador-texto > p {
+.indicador-texto>p {
   font-family: "Work Sans", sans-serif;
   color: white;
   font-size: 1.5rem;
@@ -513,18 +502,21 @@ img {
   top: 15%;
   z-index: 10;
 }
+
 @media only screen and (min-width: 900px) {
   .circulo-indicador {
-  height: 3rem;
-  top: 15%;
+    height: 3rem;
+    top: 15%;
+  }
 }
-}
+
 @media only screen and (min-width: 1400px) {
   .circulo-indicador {
-  height: 3rem;
-  top: 17%;
+    height: 3rem;
+    top: 17%;
+  }
 }
-}
+
 .circulo-indicador-animation {
   animation-duration: .5s;
   animation-name: circulo-indicador-animation;
@@ -563,7 +555,7 @@ img {
   justify-content: center;
 }
 
-.descripcion > p {
+.descripcion>p {
   width: 100%;
   text-align: center;
   user-select: none;
@@ -625,7 +617,7 @@ img {
   align-items: center;
 }
 
-.titulo-imagen > img {
+.titulo-imagen>img {
   width: 3rem;
   height: auto;
   margin-right: 1rem;

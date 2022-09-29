@@ -243,8 +243,19 @@ img {
 
 .redes {
     min-width: 2rem;
-    width: 5rem;
+    width: 8rem;
     height: auto;
     margin: 5%;
+    padding: 1rem;
+}
+
+.redes a img {
+    width: 5rem;
+    height: auto;
+}
+
+.redes:hover a img  {
+    transition: 0.5s ease-in-out;
+    transform: translate(-20px, -40px) rotate(-25deg) scale(1.2);
 }
 </style>
