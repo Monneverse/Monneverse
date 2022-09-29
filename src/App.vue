@@ -109,7 +109,7 @@ export default {
       limite: 17,
       isVisibleLogo: false,
       scroll: true,
-      listaPaginaDondeSeOcultaLogo : [1,2, this.limite]
+      listaPaginaDondeSeOcultaLogo : [1,2, 17]
 
     };
   },
