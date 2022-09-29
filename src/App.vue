@@ -104,11 +104,12 @@ import Footer from "./components/Footer.vue";
 export default {
   data() {
     return {
-      index: 1,
+      index: 0,
       index_pagina: 1,
       limite: 17,
       isVisibleLogo: false,
-      scroll: true
+      scroll: true,
+      listaPaginaDondeSeOcultaLogo : [1,2, 17]
 
     };
   },
@@ -142,9 +143,6 @@ export default {
     UpdateNav(id) {
       switch (id) {
         case 5:
-        case 6:
-        case 7:
-        case 8:
           this.index = 1;
           break;
         case 9:
@@ -164,6 +162,7 @@ export default {
           this.index = 5;
           break;
         default:
+          this.index = 0;
           break;
       }
 
@@ -176,14 +175,15 @@ export default {
           if (this.index_pagina > 1) this.index_pagina = this.index_pagina - 1;
         }
         this.isVisibleLogo = true;
-        if (this.index_pagina == 1 || this.index_pagina == this.limite) {
+        if (this.listaPaginaDondeSeOcultaLogo.filter(x=> x == this.index_pagina).length > 0) {
           this.isVisibleLogo = false;
         }
+       
         this.scroll = false;
 
         setTimeout(() => {
           this.scroll = true;
-        }, 20)
+        }, 500)
     
         location.hash = "#" + this.index_pagina;
         window.history.pushState({}, document.title, window.location.pathname);

@@ -15,7 +15,7 @@ defineProps({
     <div
       :class="{
         fondo_rayos: true,
-        'animacion-desplazamiento': index_pagina == 11,
+        'animacion-desplazamiento': index_pagina == 13,
       }"
     >
       <img src="img/rayos.png" alt="" />
@@ -37,11 +37,16 @@ defineProps({
       <div class="luz-3"></div>
     </div>
 
-     <div class="titulo">
-            <h1>BENEFITS</h1>
+    <div class="titulo">
+      <h1>BENEFITS</h1>
     </div>
-   
-    <div class="benefits">
+
+    <div
+      :class="{
+        benefits: true,
+        aparecer: index_pagina == 13,
+      }"
+    >
       <Benefit_5
         segundoTexto="Our staking platform is safe and reliable. We offer you a system that works by phases, backed up by Bank Security, where the Monnercoin will be your entry-ticket to a much-wider world! We want Monner to become one of the main 25 cryptocurrencies in the world! To do that, we rely on a limited and privileged supply of 10.000.000 Monnercoin and scheduled burns what are you waiting for? A universe full of opportunities is expecting you to unravel it"
         index_pagina="13"
@@ -93,7 +98,7 @@ defineProps({
 .titulo {
   position: absolute;
   width: 100%;
-  top:20%;
+  top: 20%;
 
   display: flex;
   justify-content: center;
@@ -103,7 +108,6 @@ defineProps({
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
   color: white;
- 
 }
 
 .benefits {
@@ -116,11 +120,10 @@ defineProps({
   justify-content: center;
 }
 .benefits p {
-
-    font-size: 15vw!important;
+  font-size: 15vw !important;
 }
 .aparecer {
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-name: arriba;
   animation-iteration-count: 1;
 }
@@ -132,7 +135,7 @@ defineProps({
   }
 
   100% {
-    top: 25%;
+    top: 35%;
     opacity: 100%;
   }
 }
@@ -153,7 +156,7 @@ defineProps({
   height: 100%;
 }
 .animacion-desplazamiento {
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-name: desplazamiento;
   animation-iteration-count: 1;
 }
@@ -166,14 +169,6 @@ defineProps({
     left: -10%;
   }
 }
-
-.fondo-oscurecer {
-  position: absolute;
-  z-index: 4;
-  opacity: 60%;
-  mix-blend-mode: multiply;
-}
-
 .rectangulo {
   position: absolute;
   z-index: 3;
@@ -185,32 +180,7 @@ defineProps({
   width: 20%;
   min-height: 15%;
 }
-.circulos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 50%;
-  height: 50%;
-  position: relative;
-  z-index: 12;
-  top: 20%;
-  left: 41%;
-  transform: rotate(50grad);
-}
-.animacion-rotar {
-  animation-duration: 1s;
-  animation-name: rotar;
-  animation-iteration-count: 1;
-}
-@keyframes rotar {
-  0% {
-    transform: rotate(95deg);
-  }
 
-  100% {
-    transform: rotate(50grad);
-  }
-}
 .logo-redes {
   position: absolute;
   bottom: 0%;

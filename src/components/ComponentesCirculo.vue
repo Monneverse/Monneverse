@@ -20,8 +20,6 @@ export default {
       required: true,
     },
   },
-
-
 };
 </script>
 
@@ -88,19 +86,6 @@ export default {
 .blanco {
   background-color: white;
   color: rgba(1, 209, 88, 1);
-}
-.gasolinera {
-  position: absolute;
-  width: 15vw;
-  height: 15vw;
-  display: flex;
-  justify-content: center;
-}
-.gasolinera img {
-  position: relative;
-  z-index: -4;
-  width: 15vw;
-  height: 15vw;
 }
 
 .texto {
