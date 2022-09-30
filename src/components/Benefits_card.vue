@@ -12,24 +12,8 @@ defineProps({
   <!--FONDO-->
 
   <div class="fondo">
-    <div :class="{ 'fondo_rayos': true, 'animacion-desplazamiento': index_pagina == 10 }">
-      <img src="img/rayos.png" alt="" />
-    </div>
-    <div class="rectangulo">
-      <img src="img/rectangulo.svg" alt="" />
-    </div>
     <div class="logo">
       <img src="/img/logo.svg" alt="logo monneverse" />
-    </div>
-    <div class="reflector reflector-izquierdo">
-      <div class="luz-1"></div>
-      <div class="luz-2"></div>
-      <div class="luz-3"></div>
-    </div>
-    <div class="reflector reflector-derecho">
-      <div class="luz-1"></div>
-      <div class="luz-2"></div>
-      <div class="luz-3"></div>
     </div>
 
     <!-- <div class="titulo">
@@ -37,30 +21,31 @@ defineProps({
     </div>
 -->
     <div class="contenedor-benefits">
-      <div :class="{ benefits: true, 'animacion-aparecer': index_pagina == 10 }">
+      <div
+        :class="{ benefits: true, 'animacion-aparecer': index_pagina == 10 }"
+      >
         <Benefit
-          titulo="STAKING"
-          texto="12.6% EVERY 48 HOURS"
-          segundoTitulo="PAYMENTS"
-          segundoTexto="Will be released as soon as the pre-sale phase ends. There will be 30 enable payments of 12.6% every 48 hours, directly to the holder’s Metamask Wallet"
+          titulo="Bank Segurity"
+          texto=""
+          segundoTitulo=""
+          segundoTexto="A bank that will shield the stability of our prices and supports the financial security of our holders, protects our system"
           mostrarBtn="false"
-          />
-          <Benefit
-          titulo="STAKING"
-          texto="12.6% EVERY 48 HOURS"
-          segundoTitulo="PAYMENTS"
-          segundoTexto="Will be released as soon as the pre-sale phase ends. There will be 30 enable payments of 12.6% every 48 hours, directly to the holder’s Metamask Wallet"
+        />
+        <Benefit
+          titulo="MonnerHosting and MonnerBlockchain"
+          texto=""
+          segundoTitulo=""
+          segundoTexto="Open a window of possibilities for all those creators who wish to design their"
           mostrarBtn="false"
-          />
-          <Benefit
-          titulo="STAKING"
-          texto="12.6% EVERY 48 HOURS"
-          segundoTitulo="PAYMENTS"
-          segundoTexto="Will be released as soon as the pre-sale phase ends. There will be 30 enable payments of 12.6% every 48 hours, directly to the holder’s Metamask Wallet"
+        />
+        <Benefit
+          titulo="The universe in the pocket of your Wallet!"
+          texto=""
+          segundoTitulo=""
+          segundoTexto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
           mostrarBtn="false"
-          />
+        />
       </div>
-     
     </div>
     <div class="logo-redes">
       <div class="icon icon-telegram">
@@ -89,7 +74,6 @@ defineProps({
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
-
 .logo {
   position: absolute;
   top: 2rem;
@@ -99,10 +83,8 @@ defineProps({
   z-index: 12;
 }
 .contenedor-benefits {
-
-width: 100%;
-height: 100%;
-
+  width: 100%;
+  height: 100%;
 }
 .benefits {
   position: relative;
@@ -112,11 +94,11 @@ height: 100%;
   height: 90%;
   top: 25%;
   display: flex;
-  justify-content: space-evenly
+  justify-content: space-evenly;
 }
 
 .animacion-aparecer {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
@@ -139,22 +121,14 @@ height: 100%;
   width: 100%;
   background-color: #121026;
 }
-.fondo_rayos {
-  position: absolute;
-
-  left: -5%;
-  width: 100%;
-  height: 100%;
-}
 .animacion-desplazamiento {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-name: desplazamiento;
   animation-iteration-count: 1;
 }
-@keyframes desplazamiento{
+@keyframes desplazamiento {
   0% {
     left: -10%;
-   
   }
 
   100% {
@@ -162,31 +136,8 @@ height: 100%;
   }
 }
 
-.rectangulo {
-  position: absolute;
-  z-index: 3;
-  top: 50%;
-  left: -15%;
-  width: 100%;
-}
-.rectangulo img {
-  width: 20%;
-  min-height: 15%;
-}
-.circulos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 50%;
-  height: 50%;
-  position: relative;
-  z-index: 12;
-  top: 32%;
-  left: 43%;
-  transform: rotate(135deg);
-}
 .animacion-rotar {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-name: rotar;
   animation-iteration-count: 1;
 }
@@ -214,89 +165,5 @@ height: 100%;
   width: 3.5vw;
   height: auto;
   margin-left: 1rem;
-}
-
-.reflector {
-  position: absolute;
-  top: 60%;
-  bottom: 0%;
-  left: 10%;
-  width: 40%;
-  height: 90%;
-  z-index: 1;
-
-  animation-duration: 6s;
-  animation-name: reflector;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes reflector {
-  0% {
-    opacity: 10%;
-  }
-
-  50% {
-    opacity: 30%;
-  }
-
-  100% {
-    opacity: 50%;
-  }
-}
-.reflector-derecho {
-  z-index: 0;
-  left: 50%;
-}
-.reflector-izquierdo {
-  z-index: 0;
-}
-.luz-1 {
-  position: absolute;
-  width: 30%;
-  height: 100%;
-  border-radius: 50%;
-  bottom: -30%;
-  transform: rotate(-30deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.5) 0%,
-    transparent 47%,
-    rgba(184, 184, 184, 0) 100%
-  );
-  filter: blur(3rem);
-  left: 30%;
-}
-.luz-2 {
-  position: absolute;
-  width: 30%;
-  height: 140%;
-  border-radius: 50%;
-  bottom: -30%;
-  left: 40%;
-  transform: rotate(0deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.8) 0%,
-    transparent 47%,
-    rgba(184, 184, 184, 0) 100%
-  );
-  filter: blur(3rem);
-}
-.luz-3 {
-  position: absolute;
-  width: 30%;
-  height: 100%;
-  border-radius: 50%;
-  bottom: -30%;
-  left: 55%;
-  transform: rotate(-150deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.8) 0%,
-    transparent 47%,
-    rgba(184, 184, 184, 0) 100%
-  );
-  filter: blur(3rem);
 }
 </style>

@@ -29,6 +29,10 @@ export default {
       type: String,
       required: true,
     },
+    centrar: {
+      type: String,
+      required: true,
+    },
   },
   data() {
     return {
@@ -41,7 +45,7 @@ export default {
 <template>
   <div :class="index_pagina == 13  ?  'transparente':'fondo-oscuro' " class="benefit">
     <div class="div titulo_1">
-      <h2>
+      <h2 class="centrar">
         {{ titulo }}
       </h2>
       <p>
@@ -50,15 +54,15 @@ export default {
     </div>
 
     <div class="div titulo_2">
-      <h2>
+      <h2 class="centrar">
         {{ segundoTitulo }}
       </h2>
-      <p>
+      <p class="centrar">
         {{ segundoTexto }}
       </p>
     </div>
     <div  v-show=mostrarBtn class="div">
-      <a class="btn" :href="ruta">READ MORE</a>
+      <a  class="btn centrar" :href="ruta">READ MORE</a>
     </div>
   </div>
 </template>
@@ -89,6 +93,13 @@ export default {
   align-items: left;
   justify-content: center;
 }
+.titulo_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  height: 40%;
+}
 .div h2 {
   font-size: 1.5vw;
   font-weight: 600;
@@ -101,6 +112,7 @@ export default {
   text-align: justify;
 }
 .btn {
+  position: relative;
   background: linear-gradient(
     90deg,
     rgb(18, 17, 65) 0%,
@@ -109,7 +121,11 @@ export default {
   padding: 2% 5%;
   border-radius: 1.5vw;
   cursor: pointer;
+  width: 40%;
+  font-size: 1.2vw;
+  font-family: "Work Sans", sans-serif;
 }
+
 .btn:hover {
   box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px rgb(6, 38, 58),
     inset -20px 0 80px rgb(7, 64, 25), inset 20px 0 300px rgb(5, 12, 28),
@@ -119,6 +135,12 @@ export default {
 }
 .transparente{
   background-color: rgb(22, 20, 49, 0.6);
+
+}
+.centrar{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 
 }
 </style>

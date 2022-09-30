@@ -12,25 +12,10 @@
     <!--FONDO-->
   
     <div class="fondo">
-      <div :class="{ 'fondo_rayos': true, 'animacion-desplazamiento': index_pagina == 10 }">
-        <img src="img/rayos.png" alt="" />
-      </div>
-      <div class="rectangulo">
-        <img src="img/rectangulo.svg" alt="" />
-      </div>
       <div class="logo">
         <img src="/img/logo.svg" alt="logo monneverse" />
       </div>
-      <div class="reflector reflector-izquierdo">
-        <div class="luz-1"></div>
-        <div class="luz-2"></div>
-        <div class="luz-3"></div>
-      </div>
-      <div class="reflector reflector-derecho">
-        <div class="luz-1"></div>
-        <div class="luz-2"></div>
-        <div class="luz-3"></div>
-      </div>
+   
   
       <!-- <div class="titulo">
         <h1>BENEFITS</h1>
@@ -39,24 +24,25 @@
       <div class="contenedor-benefits">
         <div :class="{ benefits: true, 'animacion-aparecer': index_pagina == 10 }">
           <Benefit
-            titulo="STAKING"
-            texto="12.6% EVERY 48 HOURS"
-            segundoTitulo="PAYMENTS"
-            segundoTexto="Will be released as soon as the pre-sale phase ends. There will be 30 enable payments of 12.6% every 48 hours, directly to the holder’s Metamask Wallet"
+            titulo="MonnerSwap"
+            texto=""
+            segundoTitulo=""
+            segundoTexto="One of the main assets of our MonnerWallet is MonnerSwap. MonnerSwap is an integrated function that allows every user to exchange its currency for the most popular tokens in the market"
+            mostrarBtn="false"
+            centrar="centrar"
+            />
+            <Benefit
+            titulo="MonnerTrading"
+            texto=""
+            segundoTitulo=""
+            segundoTexto="Will dispose from the best tools for the most advanced traders of Monnercoin, so they can operate with the biggest currency pairs, cryptocurrencies"
             mostrarBtn="false"
             />
             <Benefit
-            titulo="STAKING"
-            texto="12.6% EVERY 48 HOURS"
-            segundoTitulo="PAYMENTS"
-            segundoTexto="Will be released as soon as the pre-sale phase ends. There will be 30 enable payments of 12.6% every 48 hours, directly to the holder’s Metamask Wallet"
-            mostrarBtn="false"
-            />
-            <Benefit
-            titulo="STAKING"
-            texto="12.6% EVERY 48 HOURS"
-            segundoTitulo="PAYMENTS"
-            segundoTexto="Will be released as soon as the pre-sale phase ends. There will be 30 enable payments of 12.6% every 48 hours, directly to the holder’s Metamask Wallet"
+            titulo="MonnerGames"
+            texto=""
+            segundoTitulo=""
+            segundoTexto="Will soon be our AR Gambling site, generating profits for our liquidity. Every player will choose their favorite game (e.g Monner Poker, MonnerBlackJack) and compete with other users in lively bets."
             mostrarBtn="false"
             />
         </div>
