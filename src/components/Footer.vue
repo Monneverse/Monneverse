@@ -1,6 +1,7 @@
 <template>
     <!-- Fondo de la footer -->
-    <div :class="{logo: true , 'logo-animation':index_pagina==this.limite}">
+    <div
+        :class="{logo: true , 'logo-animation':index_pagina==this.limite&&enter, 'logo-animation-revert':index_pagina==this.limite&&exit}">
         <img src="/img/logo.svg" alt="logo monneverse">
     </div>
     <div class="fondo fondo-footer"></div>
@@ -10,50 +11,48 @@
     </div>
     <div class="fondo fondo-oscurecer"></div>
 
-
+    <!-- Circuitos -->
     <div class="circuito circuito-izquierdo">
         <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
     </div>
     <div class="circuito circuito-derecho">
         <img src="/img/calculadora/circuito-derecho.png" alt="" />
     </div>
+    <!-- Filtros azul -->
     <div class="degradado degradado_izquierdo"></div>
     <div class="degradado degradado_derecho"></div>
-    <div :class="{'fondo-redes':true, 'fondo-redes-animation':index_pagina==this.limite}">
+
+    <!-- redes sociales -->
+    <div
+        :class="{'fondo-redes':true, 'fondo-redes-animation':index_pagina==this.limite&&enter,'fondo-redes-animation-revert':index_pagina==this.limite&&exit}">
 
         <div class="redes">
             <a href="https://t.me/monnerversecommunity">
                 <img src="../assets/footer/telegram.svg" alt="">
             </a>
-
         </div>
         <div class="redes">
             <a href="https://www.facebook.com/Monnerverse-community-101148059377702/?ref=page_internal">
                 <img src="../assets/footer/facebook.svg" alt="">
             </a>
-
         </div>
         <div class="redes">
             <a href="https://www.reddit.com/user/monnerverse">
                 <img src="../assets/footer/reddit.svg" alt="">
             </a>
-
         </div>
         <div class="redes">
             <a href="https://twitter.com/monnerverse">
                 <img src="../assets/footer/twitter.svg" alt="" />
             </a>
-
         </div>
         <div class="redes">
             <a href="https://t.me/monnerverse_community"> <img src="../assets/footer/instagram.svg" alt=""></a>
-
         </div>
         <div class="redes">
             <a href="https://discord.com/invite/h7fRvek9dn">
                 <img src="../assets/footer/discord.svg" alt="">
             </a>
-
         </div>
 
     </div>
@@ -70,6 +69,14 @@ export default {
             type: Number,
             required: true,
         },
+        enter: {
+            type: Boolean,
+            required: true,
+        },
+        exit: {
+            type: Boolean,
+            required: true,
+        }
     },
 };
 </script>
@@ -81,21 +88,32 @@ img {
     width: 100%;
 }
 
+/* logo */
 .logo {
     position: absolute;
     top: 15%;
     left: 43%;
-    max-width: 20rem;
-    max-height: 20rem;
     width: 30%;
     height: 30%;
-    z-index: 12;
+    z-index: 9;
+    max-width: 20rem;
+    max-height: 20rem;
 }
 
 .logo-animation {
     animation-name: logo-animation;
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.logo-animation-revert {
+    animation-name: logo-animation;
+    animation-direction: reverse;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    /* para que las animaciones se queden donde se terminaron de animar */
+    animation-fill-mode: forwards;
 }
 
 @keyframes logo-animation {
@@ -107,13 +125,14 @@ img {
     }
 
     100% {
-        top: 25%;
+        top: 15%;
         left: 43%;
         width: 30%;
         height: 30%;
     }
 }
 
+/* fondo */
 .fondo {
     position: absolute;
     top: 0;
@@ -143,23 +162,7 @@ img {
     z-index: 2;
 }
 
-.fondo-montana-animation {
-    animation-duration: 1s;
-    animation-name: fondo-montana-animation;
-    animation-iteration-count: 1;
-}
 
-@keyframes fondo-montana-animation {
-    0% {
-        height: 50%;
-        top: 50%;
-    }
-
-    100% {
-        height: 100%;
-        top: 0%;
-    }
-}
 
 .fondo-oscurecer {
     z-index: 3;
@@ -168,6 +171,7 @@ img {
     mix-blend-mode: multiply;
 }
 
+/* circuito */
 .circuito {
     position: absolute;
     z-index: 4;
@@ -203,6 +207,7 @@ img {
     animation-duration: 5s;
     animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
 
 @keyframes mover_derecho {
@@ -216,24 +221,33 @@ img {
 
 }
 
+/* redes */
 .fondo-redes {
     position: absolute;
     left: 0;
     bottom: 10%;
     width: 100%;
     height: 60%;
-    background-color: #1A1E29;
+    background-color: #1a1e2957;
     z-index: 5;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    opacity: 70%;
 }
 
 .fondo-redes-animation {
     animation-name: fondo-redes-animation;
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fondo-redes-animation-revert {
+    animation-name: fondo-redes-animation;
+    animation-direction: reverse;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 @keyframes fondo-redes-animation {
@@ -259,7 +273,7 @@ img {
     height: auto;
 }
 
-.redes:hover a img  {
+.redes:hover a img {
     transition: 0.5s ease-in-out;
     transform: translate(-20px, -40px) rotate(-25deg) scale(1.2);
 }
