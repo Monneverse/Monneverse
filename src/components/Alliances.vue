@@ -63,12 +63,12 @@ defineProps({
     >
       <div class="alianzas">
         <a href="#"
-          ><Span><img src="/img/Alianzas/reddit.png" /></Span>REDDIT</a
+          ><span><img src="/img/Alianzas/reddit.png" /></span>REDDIT</a
         >
         <!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
 
         <a href="#"
-          ><SPan><img src="/img/Alianzas/telegram.png" /></SPan>TELEGRAM</a
+          ><span><img src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a
         >
         <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 

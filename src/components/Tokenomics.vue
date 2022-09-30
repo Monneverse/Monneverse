@@ -205,7 +205,23 @@ h2 {
   height: 70%;
   width: 40%;
   z-index: 0;
+  /*animation-duration: 4s;
+  animation-name: moverCentro;
+  animation-iteration-count: infinite;*/
 }
+
+/*@keyframes moverCentro {
+  0% {
+
+  }
+  100%{
+    left: 50%;
+    top: 40%;
+    height:30%;
+    width: 10%;
+  }
+} 
+*/
 
 /* Fondo izquierdo Contenido */
 
@@ -227,7 +243,7 @@ h2 {
   justify-content: right;
   align-items: center;
   text-align: right;
-  width: 40%;
+  width: 35%;
   height: 100%;
 }
 
@@ -245,7 +261,7 @@ h2 {
   justify-content: left;
   align-items: center;
   text-align: left;
-  width: 40%;
+  width: 35%;
   height: 100%;
 }
 
@@ -388,7 +404,7 @@ h2 {
 .primerTitulo {
   position: absolute;
   top: 27%;
-  left: 25%;
+  left: 20%;
   background: linear-gradient(to left, #01aa50 0%, #0a684e 50%, #10354c 100%);
   width: 20%;
   height: 5%;
@@ -400,7 +416,7 @@ h2 {
 .animacion_titulo2 {
   animation-duration: 1s;
   animation-name: titulo2;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
 }
 
 @keyframes titulo2 {
@@ -426,14 +442,28 @@ h2 {
 .segundoTitulo {
   position: absolute;
   top: 27%;
-  right: 25%;
+  right: 20%;
   background: linear-gradient(to right, #01aa50 0%, #0a684e 50%, #10354c 100%);
   width: 20%;
   height: 5%;
   z-index: 4;
   text-align: left;
   border-radius: 1rem;
+  /*animation-duration: 4s;
+  animation-name: mover;
+  animation-iteration-count: infinite;*/
 }
+
+/*@keyframes mover {
+  0%{
+    
+  }
+  100%{
+    rotate: 360deg;
+    top: -50%;
+  }
+  
+}*/
 
 /* Fondo Alianzas */
 
@@ -486,5 +516,6 @@ h2 {
   width: 20%;
   height: 100%;
 }
+
 </style>
 
