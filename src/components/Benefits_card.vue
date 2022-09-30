@@ -20,10 +20,13 @@ defineProps({
       <h1>BENEFITS</h1>
     </div>
 -->
-    <div class="contenedor-benefits">
-      <div
-        :class="{ benefits: true, 'animacion-aparecer': index_pagina == 10 }"
-      >
+
+    <div :class="{ benefits: true, 'animacion-aparecer': index_pagina == 10 }">
+      <div class="cards">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
         <Benefit
           titulo="Bank Segurity"
           texto=""
@@ -31,6 +34,12 @@ defineProps({
           segundoTexto="A bank that will shield the stability of our prices and supports the financial security of our holders, protects our system"
           mostrarBtn="false"
         />
+      </div>
+      <div class="cards">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
         <Benefit
           titulo="MonnerHosting and MonnerBlockchain"
           texto=""
@@ -38,6 +47,9 @@ defineProps({
           segundoTexto="Open a window of possibilities for all those creators who wish to design their"
           mostrarBtn="false"
         />
+      </div>
+      <div class="cards">
+        <span></span><span></span><span></span><span></span>
         <Benefit
           titulo="The universe in the pocket of your Wallet!"
           texto=""
@@ -47,26 +59,22 @@ defineProps({
         />
       </div>
     </div>
-    <div class="logo-redes">
-      <div class="icon icon-telegram">
-        <a href="https://t.me/monnerversecommunity" target="_blank">
-          <img
-            src="../assets/Telegram_logo.svg"
-            alt="logo telegram"
-            srcset=""
-          />
-        </a>
-      </div>
-      <div class="icon icon-reddit">
-        <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-          <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
-        </a>
-      </div>
-      <div class="icon icon-discord">
-        <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-          <img src="../assets/discord.svg" alt="logo discord" srcset="" />
-        </a>
-      </div>
+  </div>
+  <div class="logo-redes">
+    <div class="icon icon-telegram">
+      <a href="https://t.me/monnerversecommunity" target="_blank">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+      </a>
+    </div>
+    <div class="icon icon-reddit">
+      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
+      </a>
+    </div>
+    <div class="icon icon-discord">
+      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+      </a>
     </div>
   </div>
 </template>
@@ -82,19 +90,115 @@ defineProps({
   height: 5rem;
   z-index: 12;
 }
-.contenedor-benefits {
-  width: 100%;
+.cards {
+  position: relative;
+  width: 25%;
+  height: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.cards span {
+  transition: 0.5s;
+  opacity: 0;
+  box-shadow: inset 0 0 5px whitesmoke, inset 0px 0 6px rgb(6, 38, 58),
+    inset 10px 0 20px rgb(7, 64, 25), inset 10px 0 0px rgb(5, 12, 28),
+    inset 10px 0 20px rgb(4, 41, 10), 0 0 50px #fff, -10px 0 80px rgb(1, 13, 37),
+    10px 0 80px rgb(1, 64, 12);
+}
+.cards:hover span{
+
+  opacity: 1;
+}
+.cards:hover {
+  transform: translateY(-3%);
+   
+  transition: 0.5s ease-out;
+}
+.cards span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 3px;
+  animation: animacion1 2s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animacion1 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+.cards span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3PX;
   height: 100%;
+  animation: animacion2 2s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animacion2 {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+.cards span:nth-child(3) {
+  position: absolute;
+  
+  top: 99%;
+  left: 0;
+  
+  width: 120%;
+  height: 3px;
+  animation: animacion3 2s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animacion3 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.cards span:nth-child(4) {
+  position: absolute;
+  
+  top: 0%;
+  left: 99%;
+  
+  width: 3px;
+  height: 100%;
+  animation: animacion4 2s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animacion4 {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
 }
 .benefits {
   position: relative;
   margin: 0 auto;
   z-index: 8;
-  width: 70%;
-  height: 90%;
-  top: 25%;
+  width: 80%;
+  height: 100%;
+  top: 20%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .animacion-aparecer {

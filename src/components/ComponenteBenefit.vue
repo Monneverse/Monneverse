@@ -37,58 +37,48 @@ export default {
 </script>
 
 <template>
-  <div
-    :class="index_pagina == 13 ? 'transparente' : 'fondo-oscuro'"
-    class="benefit"
-  >
-    <div class="div titulo_1">
-      <h2 class="centrar">
-        {{ titulo }}
-      </h2>
-      <p>
-        {{ texto }}
-      </p>
+
+    <div
+      :class="index_pagina == 13 ? 'transparente' : 'fondo-oscuro'"
+      class="benefit"
+    >
+      <div class="div titulo_1">
+        <h2 class="centrar">
+          {{ titulo }}
+        </h2>
+        <p>
+          {{ texto }}
+        </p>
+      </div>
+
+      <div class="div titulo_2">
+        <h2 class="centrar">
+          {{ segundoTitulo }}
+        </h2>
+        <p class="centrar">
+          {{ segundoTexto }}
+        </p>
+      </div>
+      <div v-show="mostrarBtn" class="div">
+        <a class="btn centrar" :href="ruta">READ MORE</a>
+      </div>
     </div>
 
-    <div class="div titulo_2">
-      <h2 class="centrar">
-        {{ segundoTitulo }}
-      </h2>
-      <p class="centrar">
-        {{ segundoTexto }}
-      </p>
-    </div>
-    <div v-show="mostrarBtn" class="div">
-      <a class="btn centrar" :href="ruta">READ MORE</a>
-    </div>
-  </div>
 </template>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;700&display=swap");
 
 .benefit {
-  width: 50%;
-  height: 65%;
-  border-radius: 4%;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
   color: white;
   display: flex;
   flex-wrap: wrap;
   font-family: "Work Sans", sans-serif;
-  margin-right: 5%;
 }
-.benefit:hover {
-  transform: translateY(-3%);
-  box-shadow: inset 0 0 0px whitesmoke, inset 0px 0 0px rgb(6, 38, 58),
-    inset 0px 0 0px rgb(7, 64, 25), 
-    inset 0px 0 0px rgb(5, 12, 28),
-    inset 0px 0 0px rgb(4, 41, 10), 0 0 50px #fff,
-    -10px 0 80px rgb(1, 13, 37), 10px 0 80px rgb(1, 64, 12);
-  transition: 0.5s ease-out;
-}
-.benefit:last-child {
-  margin-right: 0;
-}
+
 .fondo-oscuro {
   background-color: #161431;
 }
