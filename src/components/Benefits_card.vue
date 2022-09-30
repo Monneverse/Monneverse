@@ -100,10 +100,10 @@ defineProps({
 .cards span {
   transition: 0.5s;
   opacity: 0;
-  box-shadow: inset 0 0 5px whitesmoke, inset 0px 0 6px rgb(6, 38, 58),
-    inset 10px 0 20px rgb(7, 64, 25), inset 10px 0 0px rgb(5, 12, 28),
-    inset 10px 0 20px rgb(4, 41, 10), 0 0 50px #fff, -10px 0 80px rgb(1, 13, 37),
-    10px 0 80px rgb(1, 64, 12);
+  box-shadow: inset 0 0 5px whitesmoke, inset 0px 0 6px rgb(8, 212, 83),
+    inset 10px 0 20px rgb(1, 255, 81), inset 10px 0 0px rgb(5, 12, 28),
+    inset 10px 0 20px rgb(0, 243, 40), 0 0 50px rgb(254, 254, 254), -10px 0 80px rgb(1, 13, 37),
+    10px 0 80px rgb(4, 224, 40);
 }
 .cards:hover span{
 
