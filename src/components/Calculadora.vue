@@ -1,17 +1,14 @@
 <template>
-  <p class="ocultar" id="cantidad">0</p>
-  <p class="ocultar" id="medida">HOURS</p>
   <!-- Fondo de la calculadora -->
+
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
-  <div :class="{
-    fondo: true,
-    'fondo-montana': true,
+  <div :class="{ fondo: true,'fondo-montana': true,
     'fondo-montana-animation': index_pagina == 4,
-  }">
-    <img src="/img/fondo-montana.png" />
-  </div>
+  }"><img src="/img/fondo-montana.png" /> </div>
   <div class="fondo fondo-oscurecer"></div>
+
+  <!-- circuitos -->
 
   <div class="circuito circuito-izquierdo">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
@@ -19,49 +16,39 @@
   <div class="circuito circuito-derecho">
     <img src="/img/calculadora/circuito-derecho.png" alt="" />
   </div>
+
+  <!-- filtro azul -->
+
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
-  <div class="contenido">
-    <div class="calculadora">
-      <img class="circulo circulo-verde" src="../assets/circulo-verde.svg" alt="">
-    </div>
-  </div>
+
+  <!-- Contenido -->
   <div class="contenido">
     <div class="calculadora">
       <div :class="{ circulo: true, 'aparecer-animation': index_pagina == 4 }">
-        <img src="../assets/circulo-blanco.svg" srcset="" />
+        <img src="../assets/circulo-blanco.svg" srcset="aro white" />
       </div>
 
       <div :class="{
         circulo: true,
         'circulo-superior-animation': index_pagina == 4,
       }">
-        <img src="../assets/circulo-colores.svg" alt="" srcset="" />
+        <img src="../assets/circulo-colores.svg" alt="aro multikolor" />
       </div>
 
+      <img class="circulo circulo-verde" src="../assets/circulo-verde.svg" alt="circle green">
+      <img @click="CambiarMonth" id="indicador-img" :class="{'indicador-calculadora':true, hour48:classindicador==1, month1:classindicador==2,month2:classindicador==3 }"
+        src="../assets/indicador.svg" alt="index calculator">
+
+      <div @click="CambiarMonth" class="descripcion">
+        <p>{{porcentajeInteres}}%</p>
+      </div>
+      <p id="month-1">24 h</p>
+      <p id="month-2">48 h</p>
       <div :class="{
-        circulo: true,
-        indicador: true,
-        'indicador-animacion': index_pagina == 4,
-      }">
-
-        <img id="indicador-img" class="hour48" src="../assets/indicador.svg" />
-        <div id="indicador" @click="CambiarMonth" class="descripcion">
-          <p>{{porcentajeInteres}}%</p>
-
-        </div>
-      </div>
-      <div :class="{
-        'indicador-texto': true,
-        'aparecer-animation': index_pagina == 4,
-      }">
-        <p id="month-1">24 h</p>
-        <p id="month-2">48 h</p>
-        <div :class="{
-          'circulo-indicador': true,
-          'circulo-indicador-animation': index_pagina == 4,
-        }"></div>
-      </div>
+        'circulo-indicador': true,
+        'circulo-indicador-animation': index_pagina == 4,
+      }"></div>
       <div :class="{
         'form-controles': true,
         'aparecer-animation': index_pagina == 4,
@@ -71,9 +58,6 @@
             placeholder="$ 100" />
           <label for="inversion">Invert</label>
         </div>
-        <div class="porcentaje">
-          <!-- <p>{{ porcentajeInteres }}%</p> -->
-        </div>
         <div class="control">
           <input type="number" name="interes" id="interes" v-model="interes" placeholder="$ 100" disabled />
           <label for="interes">Interest</label>
@@ -82,33 +66,34 @@
     </div>
   </div>
 
-  <div :class="{ informacion: true, 'aparecer-animation': index_pagina == 4 }">
+  <!-- Informacion -->
+  <article :class="{ informacion: true, 'aparecer-animation': index_pagina == 4 }">
     <div class="titulo-imagen">
       <img src="../assets/add.svg" alt="" />
-      <p id="title">12%<span>*</span>48h</p>
+      <p id="title">{{porcentajeInteres}}%<span>*</span>48h</p>
     </div>
 
     <p id="descripcion">
-      FIRST TWO MONTHS EVERY 48 HOURS THE MONNER WILL RETURN 12.6% INTEREST
+      FIRST TWO MONTHS EVERY 48 HOURS THE MONNER WILL RETURN {{porcentajeInteres}}% INTEREST
     </p>
-  </div>
+  </article>
 
+  <!-- redes sociales -->
   <div :class="{ 'logo-redes': true, 'logo-redes-animation': index_pagina == 4 }">
-    <div class="icon icon-telegram">
-      <a href="https://t.me/monnerversecommunity" target="_blank">
-        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
-      </a>
-    </div>
-    <div class="icon icon-reddit">
-      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
-      </a>
-    </div>
-    <div class="icon icon-discord">
-      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
-      </a>
-    </div>
+
+    <a class="icon" href="https://t.me/monnerversecommunity" target="_blank">
+      <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+    </a>
+
+    <a class="icon" href="https://www.reddit.com/user/monnerverse" target="_blank">
+      <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
+    </a>
+
+
+    <a class="icon" href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+      <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+    </a>
+
   </div>
 </template>
 
@@ -121,20 +106,40 @@ export default {
       required: true,
     },
   },
+  computed: {
+    classindicador: {
+      get() {
+        switch (this.indicador) {
+          case State.Hour0:
+            return 1
+            break;
+          case State.Hour24:
+            return 2
+            break;
+          case State.Hour48:
+            return 3
+            break;
+          default:
+            return 1
+            break;
+        }
+
+      }
+    }
+  },
   data() {
     return {
       inversion: 1000,
       porcentajeInteres: 12.6,
       interes: 0,
-      meses: State.Hour0,
-      cantidadMes: 30,
+      indicador: State.Hour0
     };
   },
   methods: {
     Calculator() {
-      if (this.meses == State.Hour0) {
+      if (this.indicador == State.Hour0) {
         this.interes = 0;
-      } else if (this.meses == State.Hour24) {
+      } else if (this.indicador == State.Hour24) {
         this.interes = (
           (this.inversion * (this.porcentajeInteres / 100)) /
           2
@@ -147,47 +152,31 @@ export default {
       }
     },
     CambiarMonth() {
-      let imgIndicador = document.getElementById("indicador-img");
-      let txtCantidad = document.getElementById("cantidad");
-      let txtMedida = document.getElementById("medida");
-      imgIndicador.classList.forEach((x) => imgIndicador.classList.remove(x));
-      console.log(imgIndicador);
-      if (this.meses < 3) {
-        this.meses++;
+      if (this.indicador < 3) {
+        this.indicador++;
       } else {
-        this.meses = State.Hour0;
-      }
-      if (this.meses == State.Hour0) {
-        txtCantidad.innerText = "0";
-        txtMedida.innerText = "HOURS";
-        imgIndicador.classList.add("hour48");
-      } else if (this.meses == State.Hour24) {
-        txtCantidad.innerText = "24";
-        txtMedida.innerText = "HOURS";
-        imgIndicador.classList.add("month1");
-      } else {
-        imgIndicador.classList.add("month2");
-        txtCantidad.innerText = "48";
-        txtMedida.innerText = "HOURS";
+        this.indicador = State.Hour0;
       }
       this.Calculator();
     },
   },
   mounted() {
     this.Calculator();
+    this.indicador = State.Hour0
   },
 };
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
-
+/* estilos generales */
 img {
   height: 100%;
   width: 100%;
 }
 
+
+
+/* Fondo de la calculadora */
 .fondo {
   position: absolute;
   top: 0;
@@ -196,16 +185,16 @@ img {
   width: 100%;
 }
 
-.ocultar {
-  visibility: hidden;
-}
-
 .fondo-calculadora {
   z-index: 0;
   background: radial-gradient(circle at center,
       #48d0ab 0%,
       #097561 50%,
       #505863 100%);
+}
+
+.fondo-montana {
+  z-index: 2;
 }
 
 .filtro-superior {
@@ -217,9 +206,14 @@ img {
   mix-blend-mode: multiply;
 }
 
-.fondo-montana {
-  z-index: 2;
+.fondo-oscurecer {
+  z-index: 3;
+  background-color: rgb(0, 0, 0);
+  opacity: 60%;
+  mix-blend-mode: multiply;
 }
+
+/* Fondo calculadora animacion */
 
 .fondo-montana-animation {
   animation-duration: .5s;
@@ -239,13 +233,8 @@ img {
   }
 }
 
-.fondo-oscurecer {
-  z-index: 3;
-  background-color: rgb(0, 0, 0);
-  opacity: 60%;
-  mix-blend-mode: multiply;
-}
 
+/* Circuito */
 .circuito {
   position: absolute;
   z-index: 4;
@@ -257,40 +246,54 @@ img {
 
 .circuito-izquierdo {
   left: -10%;
-  animation-name: mover_izquierdo;
-  animation-duration: 5s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-}
-
-@keyframes mover_izquierdo {
-  0% {
-    left: -10%;
-  }
-
-  100% {
-    left: 0%;
-  }
 }
 
 .circuito-derecho {
   right: -10%;
-  animation-name: mover_derecho;
-  animation-duration: 5s;
-  animation-direction: alternate-reverse;
-  animation-iteration-count: infinite;
+  transform: scaleY(-1);
 }
 
-@keyframes mover_derecho {
+/* Filtro azul */
+
+
+.degradado {
+  background: linear-gradient(to right, #08047a 0.5%, transparent);
+  position: absolute;
+  width: 50%;
+  height: 180%;
+  z-index: 3;
+  animation-duration: 5s;
+  animation-name: luz;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  top: 0%;
+}
+
+.degradado_izquierdo {
+  transform: rotate(-60deg);
+  right: 50%;
+}
+
+.degradado_derecho {
+  transform: rotate(230deg);
+  left: 55%;
+}
+
+@keyframes luz {
   0% {
-    right: -10%;
+    opacity: 20%;
+  }
+
+  50% {
+    opacity: 50%;
   }
 
   100% {
-    right: 0%;
+    opacity: 100%;
   }
 }
 
+/* contenido principal y calculadora */
 .contenido {
   position: absolute;
   top: 0;
@@ -301,6 +304,19 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.calculadora {
+  position: relative;
+  top: 0%;
+  left: 15%;
+  height: 90%;
+  width: 90%;
+  max-width: 60rem;
+  z-index: 8;
+  user-select: none;
+  display: flex;
+  justify-content: center;
 }
 
 .aparecer-animation {
@@ -323,18 +339,6 @@ img {
   }
 }
 
-.calculadora {
-  position: relative;
-  top: 0%;
-  left: 15%;
-  height: 90%;
-  width: 90%;
-  max-width: 60rem;
-  z-index: 8;
-  user-select: none;
-  display: flex;
-  justify-content: center;
-}
 
 .circulo {
   position: absolute;
@@ -388,30 +392,12 @@ img {
   }
 }
 
-.indicador img {
-  position: relative;
-  top: 2.2rem;
-  right: 0rem;
-  width: 40%;
-  max-width: 10rem;
-
-  height: auto;
-  user-select: none;
-  pointer-events: none;
+.indicador-calculadora {
+  scale: 0.3;
+  margin-top: 1.8%;
   transition: transform 0.4s ease-in 0s;
 }
 
-@media only screen and (min-width: 1200px) {
-  .indicador img {
-    max-width: 12rem;
-  }
-}
-
-@media only screen and (min-width: 1400px) {
-  .indicador img {
-    max-width: 15rem;
-  }
-}
 
 .form-controles {
   position: absolute;
@@ -442,16 +428,11 @@ img {
   border-radius: 2rem;
   max-width: 8rem;
   text-align: center;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
-@media only screen and (min-width: 1400px) {
-  .control>input {
-    margin-left: 3rem;
-    margin-right: 3rem;
-  }
-}
+
 
 #interes:disabled {
   background-color: white;
@@ -470,33 +451,24 @@ img {
   margin-bottom: 0.5rem;
 }
 
-.porcentaje>p {
-  font-family: "Work Sans", sans-serif;
-  font-size: 1.5rem;
-  color: white;
-}
 
-.indicador-texto {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
 
-.indicador-texto>p {
-  font-family: "Work Sans", sans-serif;
-  color: white;
-  font-size: 1.5rem;
-  position: absolute;
-  z-index: 9;
-}
 
 #month-1 {
+  position: absolute;
   top: 23%;
+  z-index: 20;
+  color: white;
+  font-size: 4vh;
 }
 
 #month-2 {
+  position: absolute;
   top: 75%;
   left: 75%;
+  z-index: 20;
+  color: white;
+  font-size: 4vh;
 }
 
 .circulo-indicador {
@@ -505,23 +477,11 @@ img {
   border-radius: 50%;
   background-color: white;
   height: 3rem;
-  top: 15%;
+  top: 17%;
   z-index: 10;
 }
 
-@media only screen and (min-width: 900px) {
-  .circulo-indicador {
-    height: 3rem;
-    top: 15%;
-  }
-}
 
-@media only screen and (min-width: 1400px) {
-  .circulo-indicador {
-    height: 3rem;
-    top: 17%;
-  }
-}
 
 .circulo-indicador-animation {
   animation-duration: .5s;
@@ -551,42 +511,50 @@ img {
 .descripcion {
   color: white;
   position: absolute;
-  top: 48%;
-  width: 7rem;
-  height: 7rem;
-  left: calc(50%-4rem);
-  font-family: "Work Sans";
-  font-size: 3.5vh;
+  width: 100%;
+  top: 1.7%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 17;
 }
+
 
 .descripcion>p {
   width: 100%;
   text-align: center;
   user-select: none;
+
+  font-family: "Work Sans";
+  color: #c27e01;
+  font-size: 6vh;
+  font-weight: 500;
 }
 
-.descripcion :first-child {
-  color: #01c28d;
-  font-size: 3rem;
-}
+
 
 /* Clases de animaciones */
 .hour48 {
   transform: rotate(-80deg);
+  scale: 0.3;
+  margin-top: 1.8%
 }
 
 .month1 {
   transform: rotate(65deg);
+  scale: 0.3;
+  margin-top: 1.8%
 }
 
 .month2 {
   transform: rotate(200deg);
+  scale: 0.3;
+  margin-top: 1.8%
 }
 
+/* Informacion*/
 .informacion {
   position: absolute;
   top: 40%;
@@ -601,11 +569,7 @@ img {
   font-size: 10vh;
 }
 
-@media (max-width: 1400px) {
-  .informacion #title {
-    font-size: 8vh;
-  }
-}
+
 
 .informacion #title span {
   color: #01c28d;
@@ -631,6 +595,7 @@ img {
   margin-right: 1rem;
 }
 
+/* redes sociales */
 .logo-redes {
   position: absolute;
   bottom: 1rem;
@@ -662,43 +627,6 @@ img {
   width: 3rem;
   height: auto;
   margin-left: 1rem;
-}
-
-.degradado {
-  background: linear-gradient(to right, #08047a 0.5%, transparent);
-  position: absolute;
-  width: 50%;
-  height: 180%;
-  z-index: 3;
-  animation-duration: 5s;
-  animation-name: luz;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  top: 0%;
-}
-
-.degradado_izquierdo {
-  transform: rotate(-60deg);
-  right: 50%;
-}
-
-.degradado_derecho {
-  transform: rotate(230deg);
-  left: 55%;
-}
-
-@keyframes luz {
-  0% {
-    opacity: 20%;
-  }
-
-  50% {
-    opacity: 50%;
-  }
-
-  100% {
-    opacity: 100%;
-  }
 }
 </style>
 
