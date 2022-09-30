@@ -70,28 +70,20 @@ import Footer from "./components/Footer.vue";
     <div :class="{container:true,  'mostrar-container':index_pagina==9}">
       <Benefits :index_pagina=index_pagina />
     </div>
+
     <div :class="{container:true, 'mostrar-container':index_pagina==10}">
-      <Benefits_2 :index_pagina=index_pagina />
-    </div>
-    <div :class="{container:true, 'mostrar-container':index_pagina==11}">
-      <Benefits_3 :index_pagina=index_pagina />
-    </div>
-    <div :class="{container:true, 'mostrar-container':index_pagina==12}">
-      <Benefits_4 :index_pagina=index_pagina />
-    </div>
-    <div :class="{container:true, 'mostrar-container':index_pagina==13}">
       <Benefits_5 :index_pagina=index_pagina />
     </div>
-    <div :class="{container:true, 'mostrar-container':index_pagina==14}">
+    <div :class="{container:true, 'mostrar-container':index_pagina==11}">
       <Tokenomics :index_pagina=index_pagina />
     </div>
-    <div :class="{container:true, 'mostrar-container':index_pagina==15}">
+    <div :class="{container:true, 'mostrar-container':index_pagina==12}">
       <News />
     </div>
-    <div :class="{container:true, 'mostrar-container':index_pagina==16}">
+    <div :class="{container:true, 'mostrar-container':index_pagina==13}">
       <Fase />
     </div>
-    <div :class="{container:true,'mostrar-container':index_pagina == 17}">
+    <div :class="{container:true,'mostrar-container':index_pagina == 14}">
       <Fase2 />
     </div>
     <div :class="{container:true, 'mostrar-container':index_pagina==limite}">
@@ -110,7 +102,7 @@ export default {
     return {
       index: 0,
       index_pagina: 1,
-      limite: 18,
+      limite: 15,
       isVisibleLogo: false,
       scroll: true,
       exitAnimation: false,
@@ -132,13 +124,13 @@ export default {
           this.index_pagina = 9;
           break;
         case 3:
-          this.index_pagina = 14;
+          this.index_pagina = 11;
           break;
         case 4:
-          this.index_pagina = 15;
+          this.index_pagina = 12;
           break;
         case 5:
-          this.index_pagina = 16;
+          this.index_pagina = 13;
           break;
         default:
           break;
@@ -154,19 +146,17 @@ export default {
           break;
         case 9:
         case 10:
-        case 11:
-        case 12:
-        case 13:
+  
           this.index = 2;
           break;
-        case 14:
+        case 11:
           this.index = 3;
           break;
-        case 15:
+        case 12:
           this.index = 4;
           break;
-        case 16:
-        case 17:
+        case 13:
+        case 14:
           this.index = 5;
           break;
         default:
