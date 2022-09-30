@@ -15,7 +15,7 @@ defineProps({
     <div
       :class="{
         fondo_rayos: true,
-        'animacion-desplazamiento': index_pagina == 13,
+        'animacion-desplazamiento': index_pagina == 10,
       }"
     >
       <img src="img/rayos.png" alt="" />
@@ -44,13 +44,20 @@ defineProps({
     <div
       :class="{
         benefits: true,
-        aparecer: index_pagina == 13,
+        aparecer: index_pagina == 10,
       }"
     >
-      <Benefit_5
-        segundoTexto="Our staking platform is safe and reliable. We offer you a system that works by phases, backed up by Bank Security, where the Monnercoin will be your entry-ticket to a much-wider world! We want Monner to become one of the main 25 cryptocurrencies in the world! To do that, we rely on a limited and privileged supply of 10.000.000 Monnercoin and scheduled burns what are you waiting for? A universe full of opportunities is expecting you to unravel it"
-        index_pagina="13"
-      />
+    
+      <div class="contenedor">
+        <p>
+
+          Our staking platform is safe and reliable. We offer you a system that works by phases, backed up by Bank Security, where the Monnercoin will be your entry-ticket to a much-wider world! We want Monner to become one of the main 25 cryptocurrencies in the world! To do that, we rely on a limited and privileged supply of 10.000.000 Monnercoin and scheduled burns what are you waiting for? A universe full of opportunities is expecting you to unravel it!
+
+        </p>
+
+
+      </div>
+
     </div>
 
     <div class="logo-redes">
@@ -119,8 +126,23 @@ defineProps({
   display: flex;
   justify-content: center;
 }
-.benefits p {
-  font-size: 15vw !important;
+.contenedor{
+  width: 80%;
+  height: 70%;
+  background-color: rgba(32, 29, 64, 0.2);
+  margin: 0 auto;
+  border-radius: 1vw;
+}
+.contenedor p {
+
+  font-size: 2vw;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 200;
+  width: 90%;
+  margin: 4% auto;
+  text-align: center;
+  color: white;
+
 }
 .aparecer {
   animation-duration: 0.5s;
@@ -131,7 +153,7 @@ defineProps({
 @keyframes arriba {
   0% {
     top: 65%;
-    opacity: 50%;
+    opacity: 10%;
   }
 
   100% {

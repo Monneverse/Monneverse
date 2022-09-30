@@ -29,7 +29,7 @@
             segundoTitulo=""
             segundoTexto="One of the main assets of our MonnerWallet is MonnerSwap. MonnerSwap is an integrated function that allows every user to exchange its currency for the most popular tokens in the market"
             mostrarBtn="false"
-            centrar="centrar"
+            
             />
             <Benefit
             titulo="MonnerTrading"
