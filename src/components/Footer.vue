@@ -1,6 +1,7 @@
 <template>
     <!-- Fondo de la footer -->
-    <div :class="{logo: true , 'logo-animation':index_pagina==this.limite}">
+    <div
+        :class="{logo: true , 'logo-animation':index_pagina==this.limite&&enter, 'logo-animation-revert':index_pagina==this.limite&&exit}">
         <img src="/img/logo.svg" alt="logo monneverse">
     </div>
     <div class="fondo fondo-footer"></div>
@@ -22,7 +23,8 @@
     <div class="degradado degradado_derecho"></div>
 
     <!-- redes sociales -->
-    <div :class="{'fondo-redes':true, 'fondo-redes-animation':index_pagina==this.limite}">
+    <div
+        :class="{'fondo-redes':true, 'fondo-redes-animation':index_pagina==this.limite&&enter,'fondo-redes-animation-revert':index_pagina==this.limite&&exit}">
 
         <div class="redes">
             <a href="https://t.me/monnerversecommunity">
@@ -67,6 +69,14 @@ export default {
             type: Number,
             required: true,
         },
+        enter: {
+            type: Boolean,
+            required: true,
+        },
+        exit: {
+            type: Boolean,
+            required: true,
+        }
     },
 };
 </script>
@@ -77,6 +87,7 @@ img {
     height: 100%;
     width: 100%;
 }
+
 /* logo */
 .logo {
     position: absolute;
@@ -91,8 +102,18 @@ img {
 
 .logo-animation {
     animation-name: logo-animation;
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.logo-animation-revert {
+    animation-name: logo-animation;
+    animation-direction: reverse;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    /* para que las animaciones se queden donde se terminaron de animar */
+    animation-fill-mode: forwards;
 }
 
 @keyframes logo-animation {
@@ -110,6 +131,7 @@ img {
         height: 30%;
     }
 }
+
 /* fondo */
 .fondo {
     position: absolute;
@@ -140,23 +162,7 @@ img {
     z-index: 2;
 }
 
-.fondo-montana-animation {
-    animation-duration: 1s;
-    animation-name: fondo-montana-animation;
-    animation-iteration-count: 1;
-}
 
-@keyframes fondo-montana-animation {
-    0% {
-        height: 50%;
-        top: 50%;
-    }
-
-    100% {
-        height: 100%;
-        top: 0%;
-    }
-}
 
 .fondo-oscurecer {
     z-index: 3;
@@ -164,6 +170,7 @@ img {
     opacity: 60%;
     mix-blend-mode: multiply;
 }
+
 /* circuito */
 .circuito {
     position: absolute;
@@ -200,6 +207,7 @@ img {
     animation-duration: 5s;
     animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
 
 @keyframes mover_derecho {
@@ -212,6 +220,7 @@ img {
     }
 
 }
+
 /* redes */
 .fondo-redes {
     position: absolute;
@@ -228,8 +237,17 @@ img {
 
 .fondo-redes-animation {
     animation-name: fondo-redes-animation;
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fondo-redes-animation-revert {
+    animation-name: fondo-redes-animation;
+    animation-direction: reverse;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 @keyframes fondo-redes-animation {

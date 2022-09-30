@@ -96,7 +96,7 @@ import Footer from "./components/Footer.vue";
     <div
       :class="{ container: true, 'mostrar-container': index_pagina == limite }"
     >
-      <Footer :index_pagina="index_pagina" :limite="limite"></Footer>
+      <Footer :index_pagina="index_pagina" :limite="limite" :enter="enterAnimation" :exit="exitAnimation"></Footer>
     </div>
   </main>
 </template>
