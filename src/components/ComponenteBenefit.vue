@@ -74,6 +74,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   font-family: "Work Sans", sans-serif;
+  margin-left: 3%;
 }
 .fondo-oscuro{
   background-color: #161431;

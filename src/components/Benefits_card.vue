@@ -1,5 +1,5 @@
 <script setup>
-import Benefit_3 from "./ComponenteBenefit.vue";
+import Benefit from "./ComponenteBenefit.vue";
 import Circulos from "./ComponentesCirculo.vue";
 defineProps({
   index_pagina: {
@@ -12,12 +12,7 @@ defineProps({
   <!--FONDO-->
 
   <div class="fondo">
-    <div
-      :class="{
-        fondo_rayos: true,
-        'animacion-desplazamiento': index_pagina == 11,
-      }"
-    >
+    <div :class="{ 'fondo_rayos': true, 'animacion-desplazamiento': index_pagina == 10 }">
       <img src="img/rayos.png" alt="" />
     </div>
     <div class="rectangulo">
@@ -38,43 +33,34 @@ defineProps({
     </div>
 
     <!-- <div class="titulo">
-        <h1>BENEFITS</h1>
-      </div>
-  -->
-    <div class="display_flex">
-      <div :class="{ benefits: true, aparecer: index_pagina == 11 }">
-        <Benefit_3
-          titulo="MonnerMinner"
-          segundoTexto="Is  one of the most innovative projects we have on our list. We will create solar-powered industrial mining camps backed by the US"
-          mostrarBtn="true" 
+      <h1>BENEFITS</h1>
+    </div>
+-->
+    <div class="contenedor-benefits">
+      <div :class="{ benefits: true, 'animacion-aparecer': index_pagina == 10 }">
+        <Benefit
+          titulo="STAKING"
+          texto="12.6% EVERY 48 HOURS"
+          segundoTitulo="PAYMENTS"
+          segundoTexto="Will be released as soon as the pre-sale phase ends. There will be 30 enable payments of 12.6% every 48 hours, directly to the holder’s Metamask Wallet"
+          mostrarBtn="false"
+          />
+          <Benefit
+          titulo="STAKING"
+          texto="12.6% EVERY 48 HOURS"
+          segundoTitulo="PAYMENTS"
+          segundoTexto="Will be released as soon as the pre-sale phase ends. There will be 30 enable payments of 12.6% every 48 hours, directly to the holder’s Metamask Wallet"
+          mostrarBtn="false"
+          />
+          <Benefit
+          titulo="STAKING"
+          texto="12.6% EVERY 48 HOURS"
+          segundoTitulo="PAYMENTS"
+          segundoTexto="Will be released as soon as the pre-sale phase ends. There will be 30 enable payments of 12.6% every 48 hours, directly to the holder’s Metamask Wallet"
+          mostrarBtn="false"
           />
       </div>
-      <div :class="{ circulos: true, 'animacion-rotar': index_pagina == 11 }">
-        <Circulos
-          icono="/img/Benefits/monnercard.png"
-          color="blanco"
-          texto="MONNERCARD"
-          rotar="rotar_180"
-        />
-        <Circulos
-          icono="/img/Benefits/benefits.svg"
-          color="verde"
-          texto="BENEFITS"
-          rotar="rotar_180"
-        />
-        <Circulos
-          icono="/img/Benefits/minnersolar.png"
-          color="verde"
-          texto="MINNERSOLAR"
-          rotar="rotar_180"
-        />
-        <Circulos
-          icono="/img/Benefits/stanking.png"
-          color="blanco"
-          texto="STAKING"
-          rotar="rotar_180"
-        />
-      </div>
+     
     </div>
     <div class="logo-redes">
       <div class="icon icon-telegram">
@@ -103,13 +89,7 @@ defineProps({
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
-.display_flex {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-}
+
 .logo {
   position: absolute;
   top: 2rem;
@@ -118,33 +98,35 @@ defineProps({
   height: 5rem;
   z-index: 12;
 }
+.contenedor-benefits {
 
+width: 100%;
+height: 100%;
+
+}
 .benefits {
   position: relative;
+  margin: 0 auto;
   z-index: 8;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 50%;
-  height: 60%;
-  position: absolute;
+  width: 70%;
+  height: 90%;
   top: 25%;
-  left: 15%;
+  display: flex;
+  justify-content: space-evenly
 }
-.aparecer {
+
+.animacion-aparecer {
   animation-duration: .5s;
-  animation-name: arriba;
+  animation-name: aparecer;
   animation-iteration-count: 1;
 }
 
-@keyframes arriba {
+@keyframes aparecer {
   0% {
-    top: 65%;
-    opacity: 50%;
+    opacity: 0%;
   }
 
   100% {
-    top: 25%;
     opacity: 100%;
   }
 }
@@ -160,7 +142,7 @@ defineProps({
 .fondo_rayos {
   position: absolute;
 
-  left: -10%;
+  left: -5%;
   width: 100%;
   height: 100%;
 }
@@ -169,13 +151,14 @@ defineProps({
   animation-name: desplazamiento;
   animation-iteration-count: 1;
 }
-@keyframes desplazamiento {
+@keyframes desplazamiento{
   0% {
-    left: -5%;
+    left: -10%;
+   
   }
 
   100% {
-    left: -10%;
+    left: -5%;
   }
 }
 
@@ -198,9 +181,9 @@ defineProps({
   height: 50%;
   position: relative;
   z-index: 12;
-  top: 20%;
-  left: 41%;
-  transform: rotate(50grad);
+  top: 32%;
+  left: 43%;
+  transform: rotate(135deg);
 }
 .animacion-rotar {
   animation-duration: .5s;
@@ -209,11 +192,11 @@ defineProps({
 }
 @keyframes rotar {
   0% {
-    transform: rotate(95deg);
+    transform: rotate(225deg);
   }
 
   100% {
-    transform: rotate(50grad);
+    transform: rotate(135deg);
   }
 }
 .logo-redes {
