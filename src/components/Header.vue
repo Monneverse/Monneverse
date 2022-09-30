@@ -106,11 +106,7 @@ export default {
   mounted() {
     this.recargar();
     window.addEventListener("resize", this.recargar);
-    let links = document.getElementsByClassName("link")
-    for (var i = 0; i < links.length; i++) {
-      //Añades un evento a cada elemento
-      links[i].classList.add
-    }
+  
   },
 };
 </script>
