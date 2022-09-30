@@ -1,36 +1,16 @@
 <template>
   <video src="/video/video_binariov2.mp4" autoplay="true" muted="true" loop="true" class="video-fondo"
-    poster="/img/fondo_binario.png"></video>
-
-  <div class="fondo-oscuro"></div>
-
-  <div id="logo-1" class="logo">
-    <img src="/img/logo_empresa.png" alt="" />
-  </div>
-  <div id="logo-2" class="logo">
-    <img src="/img/logo_empresa.png" alt="" />
-  </div>
-  <div id="logo-3" class="logo">
-    <img src="/img/logo_empresa.png" alt="" />
-  </div>
-  <div id="logo-4" class="logo">
-    <img src="/img/logo_empresa.png" alt="" />
-  </div>
+    poster="/img/fondo_binario.png" />
   <div id="logo-5" class="logo">
     <img src="/img/logo_empresa.png" alt="" />
   </div>
   <div id="logo-6" class="logo">
     <img src="/img/logo_empresa.png" alt="" />
   </div>
-  <div id="logo-7" class="logo">
-    <img src="/img/logo_empresa.png" alt="" />
-  </div>
-  <div class="fondo-suave">
-    <img src="/img/fondo-suave.png" alt="" srcset="" />
-  </div>
   <div class="fondo-montana">
     <img src="/img/fondo-montana.png" alt="" srcset="" />
   </div>
+  <div class="fondo-oscuro"></div>
   <div class="fondo-oscuro-superior">
     <img src="/img/fondo-oscuro-superior.png" alt="" srcset="" />
   </div>
@@ -72,15 +52,20 @@ img {
   scale: 2;
   height: 100%;
   z-index: 0;
-  opacity: 25%;
+  opacity: 100%;
 }
 
 .fondo-oscuro {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: radial-gradient(circle at center,
-      #48d0ab 0%,
+      #48d0ab 100%,
       #097561 50%,
-      #505863 100%);
-  z-index: 1;
+      #505863 0%);
+  z-index: 3;
   opacity: 70%;
 }
 
@@ -89,7 +74,6 @@ img {
   z-index: 5;
   opacity: 40%;
 }
-
 
 #logo-5 {
   max-width: 28rem;
@@ -105,11 +89,10 @@ img {
 }
 
 #logo-6 {
-  right: 18rem;
-  top: 3rem;
+  right: 26%;
+  top: 8%;
+  z-index: 5;
 }
-
-
 
 .fondo-suave {
   position: absolute;
@@ -124,7 +107,6 @@ img {
   left: 0%;
   width: 100%;
   z-index: 6;
-  opacity: 100%;
 }
 
 .fondo-oscuro-superior {

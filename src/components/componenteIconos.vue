@@ -25,29 +25,40 @@ defineProps({
 </template>
 
 <style scoped>
+img {
+  width: 100%;
+  height: 100%;
+}
+
 .contenedor_icono {
-  background: linear-gradient(to left, #48d0ab 10%, #097561 50%, #111111 70%, black 100%);
-  border-radius: 8px;
+  background: linear-gradient(to right,
+      #029F50 0%,
+      #0A664E 50%,
+      #0E444D 100%);
+  border-radius: 1.3rem;
   position: absolute;
-  overflow: visible;
   display: flex;
   align-items: center;
+  text-align: center;
   margin: 0%;
+  left: 20%;
   height: 70%;
   z-index: 7;
-  width: 80%;
+  width: 65%;
   top: 0%;
   gap: 2rem;
 }
 
-.contenedor_icono .icono .icon_coin {
+.icon_coin {
   position: absolute;
   top: 0%;
-  display: absolute;
+  right: 15%;
   width: 32%;
   height: 100%;
-  background-color: #19612E;
-  border-radius: 20%;
+  background: linear-gradient(to left,
+      #029F50 0%,
+      #0A664E 50%,
+      #0E444D 100%);
 }
 
 /* .contenedor_icono:hover {
@@ -59,50 +70,33 @@ defineProps({
   width: 100%;
 } */
 
-/* .icono {
+.icono {
   transition: transform 0.75s;
   position: relative;
-  overflow: visible;
-  background-color: grey;
   display: flex;
   height: 100%;
   width: 30%;
-} */
-
-.icon_coin {
-  position: relative;
-  border-radius: 40%;
-  overflow: visible;
-  min-width: 4.4vw;
-  height: 95%;
-  padding: 0%;
-  left: 0%;
 }
 
-.icon_coin img {
-  object-fit: contain;
+.icon_coin {
   position: absolute;
+  border-radius: 1rem;
+  overflow: visible;
+  min-width: 4.3vw;
   height: 100%;
-  width: 100%;
-  left: 0%;
-  top: 0%;
+  padding: 0%;
+  right: 120%;
 }
 
 .name_coin {
   position: absolute;
   font-family: "Work Sans", sans-serif;
   text-transform: uppercase;
-  left: 34%;
-  justify-content: center;
-  align-content: center;
   text-align: center;
-  white-space: nowrap;
+  left: 14%;
   font-weight: bold;
   font-size: 1.3vw;
   float: center;
-}
-
-.name_coin {
   color: white;
   text-align: center;
 }
