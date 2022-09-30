@@ -94,9 +94,51 @@ import Articulo from "./Articulo.vue";
 </template>
 
 <script>
+
+
+
+
+
 export default {
   data() {
     return {
+      vectorTodo:[
+      {
+          titulo: "Presale and benefits For investors",
+          imagen: "/img/Articulo/imagenArticulo1.png",
+          link: "https://sites.google.com/view/blog-monnerverse/home/presale-and-its-benefits-for-investors",
+        },
+        {
+          titulo: "How to avoid being scammed by investing in monner coin?",
+          imagen: "/img/Articulo/imagenArticulo2.png",
+          link: "https://sites.google.com/view/blog-monnerverse/home/how-to-avoid-being-scammed-by-investing-in-monner-coin",
+        },
+        {
+          titulo:
+            "Why will monner become one of the best cryptocurrencies to investin?",
+          imagen: "/img/Articulo/imagenArticulo3.png",
+          link: "https://sites.google.com/view/blog-monnerverse/home/why-will-monner-become-one-of-the-best-cryptocurrencies-to-invest-in",
+        },
+        {
+          titulo: "Why invest in monner and how to secure your investment?",
+          imagen: "/img/Articulo/imagenArticulo4.png",
+          link: "https://sites.google.com/view/blog-monnerverse/home/why-invest-in-monner-and-how-to-secure-your-investment",
+        },
+        {
+          titulo: "What to do to not miss any Monner news?",
+          imagen: "/img/Articulo/imagenArticulo5.png",
+          link: "https://sites.google.com/view/blog-monnerverse/home/what-to-do-to-not-miss-any-monner-news",
+        },
+        {
+          titulo: "The monner coin and it’s benefits",
+          imagen: "/img/Articulo/imagenArticulo6.png",
+          link: "https://sites.google.com/view/blog-monnerverse/home/the-monner-coin-and-its-benefits",
+        },
+
+      ],
+      
+      
+      
       vectorArticulo: [
         {
           titulo: "Presale and benefits For investors",
@@ -114,6 +156,7 @@ export default {
           imagen: "/img/Articulo/imagenArticulo3.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/why-will-monner-become-one-of-the-best-cryptocurrencies-to-invest-in",
         },
+        
       ],
       fechaEvento: new Date(2022, 9, 2, 1, 0, 0, 0),
       diaString: "00",
@@ -145,6 +188,16 @@ export default {
   },
   mounted() {
     setInterval(this.ObtenerFechaActual, 500);
+    this.vectorArticulo = this.vectorTodo.slice(0,3)
+    var myfunction = this.vectorTodo.slice(0,3)
+
+    setTimeout(()=> {
+      this.vectorArticulo = this.vectorTodo.slice(3,6)
+          setTimeout(()=> {
+          this.vectorArticulo = this.vectorTodo.slice(0,3)
+          
+        }, 5000)
+    }, 5000)
   },
 };
 </script>
@@ -226,7 +279,7 @@ img {
   z-index: 7;
   right: -10%;
   top: 15%;
-  right: -9%;
+  right: -13%;
   height: 80%;
   width: 55%;
 }
@@ -271,8 +324,9 @@ img {
   width: 30rem;
   height: 15rem;
   z-index: 5;
-  
 }
+
+
 .time h2 {
   text-align: center;
 }
@@ -352,7 +406,7 @@ h4 {
 
 .temporizadorDias {
   position: absolute;
-  z-index: 4;
+  z-index: 9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -365,11 +419,12 @@ h4 {
   -webkit-box-shadow: 0px 20px 20px 8px #08047a;
   -moz-box-shadow: 0px 20px 20px 8px #08047a;
   box-shadow: -10px 10px 10px 2px #08047a;
+  transition: box-shadow 3s ease;
 }
 
 .temporizadorHoras {
   position: absolute;
-  z-index: 4;
+  z-index: 9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -382,11 +437,12 @@ h4 {
   -webkit-box-shadow: 0px 20px 20px 8px #08047a;
   -moz-box-shadow: 0px 20px 20px 8px #08047a;
   box-shadow: -10px 10px 10px 2px #08047a;
+  transition: box-shadow 3s ease;
 }
 
 .temporizadorMinutos {
   position: absolute;
-  z-index: 4;
+  z-index: 9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -399,11 +455,12 @@ h4 {
   -webkit-box-shadow: 0px 20px 20px 8px #08047a;
   -moz-box-shadow: 0px 20px 20px 8px #08047a;
   box-shadow: -10px 10px 10px 2px #08047a;
+  transition: box-shadow 3s ease;
 }
 
 .temporizadorSegundos {
   position: absolute;
-  z-index: 4;
+  z-index: 9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -416,22 +473,31 @@ h4 {
   -webkit-box-shadow: 0px 20px 20px 8px #08047a;
   -moz-box-shadow: 0px 20px 20px 8px #08047a;
   box-shadow: -10px 10px 10px 2px #08047a;
+  transition: box-shadow 3s ease;
 }
 
+.temporizadorDias:hover,.temporizadorHoras:hover, .temporizadorMinutos:hover, .temporizadorSegundos:hover{
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  
+}
+
+
 .primerPunto {
-  z-index: 5;
+  z-index: 10;
   position: relative;
   left: -23%;
 }
 
 .segundoPunto {
-  z-index: 5;
+  z-index: 10;
   position: relative;
   left: 0%;
 }
 
 .tercerPunto {
-  z-index: 5;
+  z-index: 10;
   position: relative;
   left: 23%;
 }
@@ -456,7 +522,7 @@ h4 {
 }
 
 .contenedorDeArticulo > * {
-  animation: mover 10s normal ;
+  animation: mover 10s normal infinite ;
 }
 
 @keyframes mover {
