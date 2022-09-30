@@ -33,7 +33,7 @@ defineProps({
             texto=""
             segundoTitulo=""
             segundoTexto="One of the main assets of our MonnerWallet is MonnerSwap. MonnerSwap is an integrated function that allows every user to exchange its currency for the most popular tokens in the market"
-            mostrarBtn="false"
+            mostrarBtn="true"
           />
         </div>
         <div class="cards">
@@ -46,7 +46,7 @@ defineProps({
           texto=""
           segundoTitulo=""
           segundoTexto="Will dispose from the best tools for the most advanced traders of Monnercoin, so they can operate with the biggest currency pairs, cryptocurrencies"
-          mostrarBtn="false"
+          mostrarBtn="true"
         />
       </div>
         <div class="cards">
@@ -59,7 +59,7 @@ defineProps({
           texto=""
           segundoTitulo=""
           segundoTexto="Will soon be our AR Gambling site, generating profits for our liquidity. Every player will choose their favorite game (e.g Monner Poker, MonnerBlackJack) and compete with other users in lively bets."
-          mostrarBtn="false"
+          mostrarBtn="true"
         />
       </div>
     </div>

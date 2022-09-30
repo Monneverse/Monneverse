@@ -32,7 +32,7 @@ defineProps({
           texto=""
           segundoTitulo=""
           segundoTexto="A bank that will shield the stability of our prices and supports the financial security of our holders, protects our system"
-          mostrarBtn="false"
+          mostrarBtn="true"
         />
       </div>
       <div class="cards">
@@ -45,7 +45,7 @@ defineProps({
           texto=""
           segundoTitulo=""
           segundoTexto="Open a window of possibilities for all those creators who wish to design their"
-          mostrarBtn="false"
+          mostrarBtn="true"
         />
       </div>
       <div class="cards">
@@ -55,7 +55,7 @@ defineProps({
           texto=""
           segundoTitulo=""
           segundoTexto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
-          mostrarBtn="false"
+          mostrarBtn="true"
         />
       </div>
     </div>
