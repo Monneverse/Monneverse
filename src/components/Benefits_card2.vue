@@ -21,7 +21,7 @@ defineProps({
       </div>
   -->
       <div
-        :class="{ benefits: true, 'animacion-aparecer': index_pagina == 10 }"
+        :class="{ benefits: true, 'animacion-desplazamiento': index_pagina == 12 }"
       >
         <div class="cards">
           <span></span>
@@ -248,11 +248,11 @@ defineProps({
 }
 @keyframes desplazamiento {
   0% {
-    left: -10%;
+    left: 100%;
   }
 
   100% {
-    left: -5%;
+    left: 0;
   }
 }
 
