@@ -63,12 +63,12 @@ defineProps({
     >
       <div class="alianzas">
         <a href="#"
-          ><Span><img src="/img/Alianzas/reddit.png" /></Span>REDDIT</a
+          ><span><img src="/img/Alianzas/reddit.png" /></span>REDDIT</a
         >
         <!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
 
         <a href="#"
-          ><SPan><img src="/img/Alianzas/telegram.png" /></SPan>TELEGRAM</a
+          ><span><img src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a
         >
         <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 
@@ -237,8 +237,9 @@ defineProps({
 }
 
 .circulo {
-  width: 40%;
-  height: 80%;
+  width: 40vw;
+  height: 80vh;
+  min-width: 500px;
   margin: 0 auto;
   background-color: rgb(238, 236, 234, 0.4);
   position: absolute;
@@ -251,6 +252,7 @@ defineProps({
 .circulo-medio {
   width: 89%;
   height: 90%;
+  min-width: 450px;
   margin: 0 auto;
   border-radius: 100%;
   background-color: rgba(248, 248, 247, 0.4);
@@ -303,10 +305,12 @@ defineProps({
   z-index: 7;
   width: 100%;
   height: 85%;
+  min-width: 850px;
   padding: 0;
   margin: 0;
   top: 15%;
   left: 0%;
+  
 }
 .animacion-arco img {
   animation-name: animacion-arco;
@@ -341,6 +345,7 @@ defineProps({
   border-radius: 2.5rem;
   text-align: center;
   z-index: 5;
+  min-width: 600px;
 }
 
 .rectangulo p {
@@ -365,6 +370,7 @@ defineProps({
   -moz-box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
   z-index: 6;
+  min-width: 540px;
 }
 
 .mensaje {

@@ -61,7 +61,10 @@ defineProps({
       <div class="benefits">
         <Benefits />
       </div>
-      <div class="circulos">
+      <div :class="{
+        'circulos': true,
+        'animacion-rotar': index_pagina == 9,
+      }">
         <Circulos
           icono="/img/Benefits/monnercard.png"
           color="blanco"
@@ -208,6 +211,20 @@ defineProps({
   top: 35%;
   left: 37%;
   transform: rotate(225deg);
+}
+.animacion-rotar {
+  animation-duration: .5s;
+  animation-name: rotar;
+  animation-iteration-count: 1;
+}
+@keyframes rotar {
+  0% {
+    transform: rotate(180grad);
+  }
+
+  100% {
+    transform: rotate(225deg);
+  }
 }
 .logo-redes {
   position: absolute;

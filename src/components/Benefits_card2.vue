@@ -1,5 +1,5 @@
 <script setup>
-import Benefit_3 from "./ComponenteBenefit.vue";
+import Benefit from "./ComponenteBenefit.vue";
 import Circulos from "./ComponentesCirculo.vue";
 defineProps({
   index_pagina: {
@@ -12,67 +12,54 @@ defineProps({
   <!--FONDO-->
 
   <div class="fondo">
-    <div
-      :class="{
-        fondo_rayos: true,
-        'animacion-desplazamiento': index_pagina == 11,
-      }"
-    >
-      <img src="img/rayos.png" alt="" />
-    </div>
-    <div class="rectangulo">
-      <img src="img/rectangulo.svg" alt="" />
-    </div>
     <div class="logo">
       <img src="/img/logo.svg" alt="logo monneverse" />
-    </div>
-    <div class="reflector reflector-izquierdo">
-      <div class="luz-1"></div>
-      <div class="luz-2"></div>
-      <div class="luz-3"></div>
-    </div>
-    <div class="reflector reflector-derecho">
-      <div class="luz-1"></div>
-      <div class="luz-2"></div>
-      <div class="luz-3"></div>
     </div>
 
     <!-- <div class="titulo">
         <h1>BENEFITS</h1>
       </div>
   -->
-    <div class="display_flex">
-      <div :class="{ benefits: true, aparecer: index_pagina == 11 }">
-        <Benefit_3
-          titulo="MonnerMinner"
-          segundoTexto="Is  one of the most innovative projects we have on our list. We will create solar-powered industrial mining camps backed by the US"
-          mostrarBtn="true" 
+      <div
+        :class="{ benefits: true, 'animacion-desplazamiento': index_pagina == 12 }"
+      >
+        <div class="cards">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <Benefit
+            titulo="MonnerSwap"
+            texto=""
+            segundoTitulo=""
+            segundoTexto="One of the main assets of our MonnerWallet is MonnerSwap. MonnerSwap is an integrated function that allows every user to exchange its currency for the most popular tokens in the market"
+            mostrarBtn="true"
           />
+        </div>
+        <div class="cards">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        <Benefit
+          titulo="MonnerTrading"
+          texto=""
+          segundoTitulo=""
+          segundoTexto="Will dispose from the best tools for the most advanced traders of Monnercoin, so they can operate with the biggest currency pairs, cryptocurrencies"
+          mostrarBtn="true"
+        />
       </div>
-      <div :class="{ circulos: true, 'animacion-rotar': index_pagina == 11 }">
-        <Circulos
-          icono="/img/Benefits/monnercard.png"
-          color="blanco"
-          texto="MONNERCARD"
-          rotar="rotar_180"
-        />
-        <Circulos
-          icono="/img/Benefits/benefits.svg"
-          color="verde"
-          texto="BENEFITS"
-          rotar="rotar_180"
-        />
-        <Circulos
-          icono="/img/Benefits/minnersolar.png"
-          color="verde"
-          texto="MINNERSOLAR"
-          rotar="rotar_180"
-        />
-        <Circulos
-          icono="/img/Benefits/stanking.png"
-          color="blanco"
-          texto="STAKING"
-          rotar="rotar_180"
+        <div class="cards">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        <Benefit
+          titulo="MonnerGames"
+          texto=""
+          segundoTitulo=""
+          segundoTexto="Will soon be our AR Gambling site, generating profits for our liquidity. Every player will choose their favorite game (e.g Monner Poker, MonnerBlackJack) and compete with other users in lively bets."
+          mostrarBtn="true"
         />
       </div>
     </div>
@@ -103,13 +90,6 @@ defineProps({
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
-.display_flex {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-}
 .logo {
   position: absolute;
   top: 2rem;
@@ -118,33 +98,130 @@ defineProps({
   height: 5rem;
   z-index: 12;
 }
-
-.benefits {
+.cards {
   position: relative;
-  z-index: 8;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 50%;
+  width: 25%;
   height: 60%;
-  position: absolute;
-  top: 25%;
-  left: 15%;
+  margin: 0 auto;
+  overflow: hidden;
 }
-.aparecer {
-  animation-duration: .5s;
-  animation-name: arriba;
-  animation-iteration-count: 1;
+.cards span {
+  transition: 0.5s;
+  opacity: 0;
+  box-shadow: inset 0 0 5px whitesmoke, inset 0px 0 6px rgb(8, 212, 83),
+    inset 10px 0 20px rgb(1, 255, 81), inset 10px 0 0px rgb(5, 12, 28),
+    inset 10px 0 20px rgb(0, 243, 40), 0 0 50px rgb(254, 254, 254), -10px 0 80px rgb(1, 13, 37),
+    10px 0 80px rgb(4, 224, 40);
 }
+.cards:hover span{
 
-@keyframes arriba {
+  opacity: 1;
+}
+.cards:hover {
+  transform: translateY(-3%);
+   
+  transition: 0.5s ease-out;
+}
+.cards span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 3px;
+  animation: animacion1 2s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animacion1 {
   0% {
-    top: 65%;
-    opacity: 50%;
+    transform: translateX(-100%);
   }
 
   100% {
-    top: 25%;
+    transform: translateX(100%);
+  }
+}
+.cards span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3PX;
+  height: 100%;
+  animation: animacion2 2s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animacion2 {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+.cards span:nth-child(3) {
+  position: absolute;
+  
+  top: 99%;
+  left: 0;
+  
+  width: 120%;
+  height: 3px;
+  animation: animacion3 2s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animacion3 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.cards span:nth-child(4) {
+  position: absolute;
+  
+  top: 0%;
+  left: 99%;
+  
+  width: 3px;
+  height: 100%;
+  animation: animacion4 2s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animacion4 {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+.benefits {
+  position: relative;
+  margin: 0 auto;
+  z-index: 8;
+  width: 80%;
+  height: 100%;
+  top: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.animacion-aparecer {
+  animation-duration: 0.5s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
     opacity: 100%;
   }
 }
@@ -160,22 +237,22 @@ defineProps({
 .fondo_rayos {
   position: absolute;
 
-  left: -10%;
+  left: -5%;
   width: 100%;
   height: 100%;
 }
 .animacion-desplazamiento {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-name: desplazamiento;
   animation-iteration-count: 1;
 }
 @keyframes desplazamiento {
   0% {
-    left: -5%;
+    left: 100%;
   }
 
   100% {
-    left: -10%;
+    left: 0;
   }
 }
 
@@ -198,22 +275,22 @@ defineProps({
   height: 50%;
   position: relative;
   z-index: 12;
-  top: 20%;
-  left: 41%;
-  transform: rotate(50grad);
+  top: 32%;
+  left: 43%;
+  transform: rotate(135deg);
 }
 .animacion-rotar {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-name: rotar;
   animation-iteration-count: 1;
 }
 @keyframes rotar {
   0% {
-    transform: rotate(95deg);
+    transform: rotate(225deg);
   }
 
   100% {
-    transform: rotate(50grad);
+    transform: rotate(135deg);
   }
 }
 .logo-redes {

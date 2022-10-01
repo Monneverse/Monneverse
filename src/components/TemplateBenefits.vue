@@ -16,9 +16,9 @@ export default {
           symbol: "",
           precio: "Phase 1",
           moneda: "",
-          sale_price: "Sale Price",
+          sale_price: "",
           texto:
-            "The price on Pancakeswap for purchases and sales will be $22,6 one day after the pre-sale of our first 2,000,000 Monners to the public ends",
+            "Phase 1 of staking only for users who buy in pre-sale",
         },
         {
           icono: "/img/plus.svg",
@@ -27,16 +27,16 @@ export default {
           moneda: "USD",
           sale_price: "Sale Price",
           texto:
-            "Enter our first phase os staking buying in pre-sale and earn 12.6% every 48 hours of your total capital in Monnercoins after the launch in Pancakeswap",
+            "The price on Pancakeswap for purchases and sales will be $22,6 one day after the pre-sale of our first 2,000,000 Monners to the public ends",
         },
         {
           icono: "/img/plus.svg",
           symbol: "",
           precio: "1500%",
           moneda: "",
-          sale_price: "Sale Price",
+          sale_price: "",
           texto:
-            "Enter our first phase os staking buying in pre-sale and earn 12.6% every 48 hours of your total capital in Monnercoins after the launch in Pancakeswap",
+            "The price increase is made in order to reward our first headlines. You can earn up to 1500% of your initial investment at the end of the pre-sale",
         },
         {
           icono: "/img/plus.svg",
@@ -77,7 +77,6 @@ export default {
 .benefit {
   width: 50%;
   height: 15%;
-  margin-bottom: 5%;
   color: white;
   display: flex;
   flex-wrap: wrap;
@@ -135,6 +134,7 @@ export default {
 
 .content_text {
   margin-left: 4.5vw;
+  margin-bottom: 0;
   width: 100%;
   height: 100%;
   display: flex;
