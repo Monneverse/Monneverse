@@ -12,12 +12,16 @@
     <div class="luces">
         <img src="/img/luz.png" alt="" />
     </div>
+
     <div class="logos_auditoria">
         <a href="https://solidity.finance/audits/MONNERVERSE/" target="_blank"><img src="/img/Exchanges/mesa1.png"
                 class="auditoria1"></a>
         <a><img src="/img/Exchanges/mesa2.png" class="auditoria2"></a>
+        <button class="btn_registro">registro EEUU</button>
     </div>
-
+    <div class="circulos">
+        <img src="/img/imagen1.png">
+    </div>
     <div class="logo-redes">
         <div class="icon icon-telegram">
             <a href="https://t.me/monnerversecommunity" target="_blank">
@@ -62,11 +66,11 @@ img {
 
 .luces {
     position: absolute;
-    bottom: -12%;
+    bottom: -18%;
     left: -9%;
     width: 120%;
-    height: 110%;
-    z-index: 1;
+    height: 140%;
+    z-index: 4;
 }
 
 .degradado_azuliz {
@@ -167,6 +171,34 @@ img {
     -webkit-box-shadow: 0px 22px 28px 5px #08047A;
     -moz-box-shadow: 0px 22px 28px 5px #08047A;
     box-shadow: 22px 22px 28px 5px #08047A;
+}
+
+.btn_registro {
+    position: absolute;
+    bottom: 20%;
+    right: 44%;
+    width: 14%;
+    height: 8%;
+    z-index: 5;
+    text-transform: capitalize;
+    font-size: 2vw;
+    font-weight: 600;
+    font-family: Calibri;
+    color: white;
+    background: linear-gradient(to right,
+            #029F50 0%,
+            #0A664E 50%,
+            #0E444D 100%);
+    border-radius: 0.6rem;
+}
+
+.circulos {
+    position: absolute;
+    left: 40%;
+    bottom: 14%;
+    width: 18%;
+    height: 16%;
+    z-index: 7;
 }
 
 .logo-redes {
