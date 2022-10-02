@@ -381,6 +381,7 @@ h1 {
 
 h1,
 h2,
+
 h4 {
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
