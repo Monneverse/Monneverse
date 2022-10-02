@@ -66,17 +66,17 @@ defineProps({
   </div>
 
   <div class="alianzas">
-    <a href="#"
+    <a href="https://www.reddit.com/user/monnerverse"
       ><span><img src="/img/Alianzas/reddit.png" /></span>REDDIT</a
     >
     <!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
 
-    <a href="#"
+    <a href="https://t.me/monnerversecommunity"
       ><span><img src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a
     >
     <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 
-    <a href="#"
+    <a href="https://discord.com/invite/h7fRvek9dn"
       ><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a
     >
     <!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
@@ -261,9 +261,11 @@ defineProps({
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
   font-size: 1.3vw;
+
 }
 
 .alianzas a span {
+ 
   padding: 0;
   margin: 0 auto;
   width: 4rem;
@@ -282,6 +284,10 @@ defineProps({
   width: 3rem;
   height: 3rem;
   margin: auto auto;
+}
+.alianzas a span:hover
+{
+  cursor: pointer;
 }
 
 .semi_circulo img {
