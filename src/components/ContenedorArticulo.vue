@@ -357,9 +357,9 @@ img {
 /* contendero de Articulo */
 .containerArticulo {
   position: absolute;
-  bottom: 10%;
+  bottom: -2%;
   left: 0;
-  width: 100%;
+  width: 90%;
   height: 50%;
   display: flex;
   justify-content: center;
@@ -371,8 +371,8 @@ img {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 70rem;
-  height: 30rem;
+  width: 80%;
+  height: 80%;
 }
 
 h1 {

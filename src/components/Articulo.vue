@@ -42,57 +42,57 @@ img {
 
 .container2 {
     left: 0%;
-    bottom: -10%;
     margin: 3%;
-    position: relative;
-    width: 33%;
-    height: 70%;
+    width: 100%;
+    height: 100%;
     z-index: 3;
-    border-radius: 10%;
+    border-radius: 1.5vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #252850;
+    background-color: #161431;
     padding: 1%;
 
 }
 
 .titulo1 {
-
+    height: 10%;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
+
 
 
 }
 
 h5 {
+    width: 100%;
+    height: 20%;
+    
     font-family: "Work Sans", sans-serif;
-    font-size: 1rem;
+    font-size: 1.2vw;
+    font-weight: 300;
+    text-align: center;
 }
 
 .imagenDeArticulo {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 1%;
-
-
+    width: 80%;
+    height: 60%;
 }
 
 .leer_Mas {
     color: white;
-    margin-left: -30%;
-    width: 60%;
-    border-radius: 3rem;
-    padding: 1rem;
+    width: 55%;
+    height: 20%;
+    border-radius: 1vw;
     background: linear-gradient(to left,
             #029F50 0%,
             #0A664E 50%,
             #0E444D 100%);
     font-family: "Work Sans", sans-serif;
+    font-size: 1vw;
     font-size: 100%;
     display: flex;
     justify-content: center;
