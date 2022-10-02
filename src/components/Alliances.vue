@@ -49,18 +49,7 @@ defineProps({
   </div>
 
   <!--CIRCULOS-->
-  <div
-    :class="{
-      circulo: true,
-      'animacion-aparecer': index_pagina == 2,
-    }"
-  >
-    <div
-      :class="{
-        'circulo-medio': true,
-        'animacion-aparecer': index_pagina == 2,
-      }"
-    >
+
       <div class="alianzas">
         <a href="#"
           ><span><img src="/img/Alianzas/reddit.png" /></span>REDDIT</a
@@ -77,8 +66,7 @@ defineProps({
         >
         <!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
       </div>
-    </div>
-  </div>
+  
   <div
     :class="{
       semi_circulo: true,
@@ -89,26 +77,11 @@ defineProps({
   </div>
 
   <!--UPCOMING ALLIANCES-->
-  <div
-    :class="{
-      rectangulo: true,
-      'animacion-aparecer': index_pagina == 2,
-    }"
-  >
-    <p>UPCOMING ALLIANCES</p>
-  </div>
-  <!-- VISA MASTERD CARD -->
-  <div
-    :class="{
-      'rectangulo-medio': true,
-      'animacion-aparecer': index_pagina == 2,
-    }"
-  >
-    <div class="mensaje">
+
+
       <img src="../assets/methodBuy/visa.svg" alt="">
       <img src="../assets/methodBuy/masterCard.svg" alt="">
-    </div>
-  </div>
+
   <div
     :class="{
       puntero: true,
