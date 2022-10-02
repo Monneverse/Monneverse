@@ -28,6 +28,7 @@ import Articulo from "./Articulo.vue";
       <div class="titulo_Tiempo">
         <h2>Pre Sale Time</h2>
       </div>
+      <div class="temporizador">
 
       <div class="bloque_temporizador">
         <div class="temporizadorDias">
@@ -50,6 +51,7 @@ import Articulo from "./Articulo.vue";
           <h4>Segundos</h4>
         </div>
       </div>
+    </div>
       <div class="btn_comenzar">
         <a
           href="https://mailchi.mp/8ae2d866d909/reservation-form"
@@ -315,28 +317,24 @@ img {
   align-items: center;
 }
 .time {
-  top: 10%;
+  top: 15%;
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30rem;
-  height: 15rem;
+  grid-template-rows: 33% 33% 33%;
+  width: 40%;
+  height: 30%;
   z-index: 5;
 }
-
-
 .time h2 {
   text-align: center;
+  text-transform: uppercase;
 }
 
 .btn_comenzar {
   left: 0%;
   width: 100%;
-  height: 20%;
-  bottom: 0%;
-  margin-top: 15%;
+    height: 40%;
+    bottom: 0%;
+  margin-top: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -402,6 +400,7 @@ h4 {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  margin: 0 auto;
 }
 
 .temporizadorDias {
