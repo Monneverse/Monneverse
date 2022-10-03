@@ -474,10 +474,10 @@ img {
 
 .circulo-indicador {
   position: absolute;
-  width: 3rem;
+  width: 2rem;
   border-radius: 50%;
   background-color: white;
-  height: 3rem;
+  height: 2rem;
   top: 17%;
   z-index: 10;
 }
@@ -513,7 +513,7 @@ img {
   color: white;
   position: absolute;
   width: 100%;
-  top: 1.7%;
+  top: 3%;
   height: 100%;
   display: flex;
   flex-direction: column;
