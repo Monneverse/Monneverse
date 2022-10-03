@@ -21,7 +21,11 @@ import Footer from "./components/Footer.vue";
 
 <template>
   <header>
-    <Header :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage"></Header>
+    <Header
+      :index="index"
+      :isVisible="isVisibleLogo"
+      :setPage="setOnPage"
+    ></Header>
   </header>
 
   <main>
@@ -86,10 +90,15 @@ import Footer from "./components/Footer.vue";
     <div :class="{ container: true, 'mostrar-container': index_pagina == 15 }">
       <Fase2 />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 16 }">
-    </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == limite }">
-      <Footer :index_pagina="index_pagina" :limite="limite" :enter="enterAnimation" :exit="exitAnimation"></Footer>
+    <div
+      :class="{ container: true, 'mostrar-container': index_pagina == limite }"
+    >
+      <Footer
+        :index_pagina="index_pagina"
+        :limite="limite"
+        :enter="enterAnimation"
+        :exit="exitAnimation"
+      ></Footer>
     </div>
   </main>
 </template>
@@ -99,7 +108,7 @@ export default {
     return {
       index: 0,
       index_pagina: 1,
-      limite: 17,
+      limite: 16,
       isVisibleLogo: false,
       scroll: true,
       exitAnimation: false,
@@ -117,16 +126,16 @@ export default {
           this.index_pagina = 5;
           break;
         case 2:
-          this.index_pagina = 9;
+          this.index_pagina = 8;
           break;
         case 3:
-          this.index_pagina = 13;
+          this.index_pagina = 12;
           break;
         case 4:
-          this.index_pagina = 14;
+          this.index_pagina = 13;
           break;
         case 5:
-          this.index_pagina = 15;
+          this.index_pagina = 14;
           break;
         default:
           break;
@@ -140,20 +149,20 @@ export default {
         case 5:
           this.index = 1;
           break;
+        case 8:
         case 9:
         case 10:
         case 11:
-        case 12:
           this.index = 2;
           break;
-        case 13:
+        case 12:
           this.index = 3;
           break;
-        case 14:
+        case 13:
           this.index = 4;
           break;
+        case 14:
         case 15:
-        case 16:
           this.index = 5;
           break;
         default:
@@ -265,17 +274,21 @@ main {
 }
 
 .orange {
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
 }
 
 .red {
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
 }
 
 ::-webkit-scrollbar {
