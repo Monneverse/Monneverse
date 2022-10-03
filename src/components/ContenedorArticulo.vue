@@ -30,34 +30,36 @@ import Articulo from "./Articulo.vue";
       </div>
       <div class="temporizador">
 
-      <div class="bloque_temporizador">
-        <div class="temporizadorDias">
-          <h1>{{ diaString }}</h1>
-          <h4>Días</h4>
-        </div>
-        <div class="primerPunto"><h1>:</h1></div>
-        <div class="temporizadorHoras">
-          <h1>{{ horaString }}</h1>
-          <h4>Horas</h4>
-        </div>
-        <div class="segundoPunto"><h1>:</h1></div>
-        <div class="temporizadorMinutos">
-          <h1>{{ minutoString }}</h1>
-          <h4>Minutos</h4>
-        </div>
-        <div class="tercerPunto"><h1>:</h1></div>
-        <div class="temporizadorSegundos">
-          <h1>{{ segundoString }}</h1>
-          <h4>Segundos</h4>
+        <div class="bloque_temporizador">
+          <div class="temporizadorDias">
+            <h1>{{ diaString }}</h1>
+            <h4>Días</h4>
+          </div>
+          <div class="primerPunto">
+            <h1>:</h1>
+          </div>
+          <div class="temporizadorHoras">
+            <h1>{{ horaString }}</h1>
+            <h4>Horas</h4>
+          </div>
+          <div class="segundoPunto">
+            <h1>:</h1>
+          </div>
+          <div class="temporizadorMinutos">
+            <h1>{{ minutoString }}</h1>
+            <h4>Minutos</h4>
+          </div>
+          <div class="tercerPunto">
+            <h1>:</h1>
+          </div>
+          <div class="temporizadorSegundos">
+            <h1>{{ segundoString }}</h1>
+            <h4>Segundos</h4>
+          </div>
         </div>
       </div>
-    </div>
       <div class="btn_comenzar">
-        <a
-          href="https://mailchi.mp/8ae2d866d909/reservation-form"
-          target="_blank"
-          >CLICK HERE</a
-        >
+        <a href="https://mailchi.mp/8ae2d866d909/reservation-form" target="_blank">CLICK HERE</a>
       </div>
     </div>
   </div>
@@ -65,13 +67,7 @@ import Articulo from "./Articulo.vue";
   <!-- Contenedor de Articulos -->
   <div class="containerArticulo">
     <div class="contenedorDeArticulo">
-      <Articulo
-        v-for="item in vectorArticulo"
-        :key="item"
-        :titulo="item.titulo"
-        :img="item.imagen"
-        :url="item.link"
-      />
+      <Articulo v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen" :url="item.link" />
     </div>
   </div>
 
@@ -104,8 +100,8 @@ import Articulo from "./Articulo.vue";
 export default {
   data() {
     return {
-      vectorTodo:[
-      {
+      vectorTodo: [
+        {
           titulo: "Presale and benefits For investors",
           imagen: "/img/Articulo/imagenArticulo1.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/presale-and-its-benefits-for-investors",
@@ -138,9 +134,9 @@ export default {
         },
 
       ],
-      
-      
-      
+
+
+
       vectorArticulo: [
         {
           titulo: "Presale and benefits For investors",
@@ -158,9 +154,9 @@ export default {
           imagen: "/img/Articulo/imagenArticulo3.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/why-will-monner-become-one-of-the-best-cryptocurrencies-to-invest-in",
         },
-        
+
       ],
-      fechaEvento: new Date(2022, 9, 2, 1, 0, 0, 0),
+      fechaEvento: new Date(2022, 9, 13, 0, 0, 0, 0),
       diaString: "00",
       horaString: "00",
       minutoString: "00",
@@ -190,15 +186,15 @@ export default {
   },
   mounted() {
     setInterval(this.ObtenerFechaActual, 500);
-    this.vectorArticulo = this.vectorTodo.slice(0,3)
-    var myfunction = this.vectorTodo.slice(0,3)
+    this.vectorArticulo = this.vectorTodo.slice(0, 3)
+    var myfunction = this.vectorTodo.slice(0, 3)
 
-    setTimeout(()=> {
-      this.vectorArticulo = this.vectorTodo.slice(3,6)
-          setTimeout(()=> {
-          this.vectorArticulo = this.vectorTodo.slice(0,3)
-          
-        }, 5000)
+    setTimeout(() => {
+      this.vectorArticulo = this.vectorTodo.slice(3, 6)
+      setTimeout(() => {
+        this.vectorArticulo = this.vectorTodo.slice(0, 3)
+
+      }, 5000)
     }, 5000)
   },
 };
@@ -219,12 +215,10 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 0;
 }
 
@@ -273,9 +267,11 @@ img {
   width: 50%;
   opacity: 100%;
 }
+
 .circuitoIzquierdo img {
   transform: rotateX(180deg);
 }
+
 .circuitoDerecho {
   position: absolute;
   z-index: 7;
@@ -316,6 +312,7 @@ img {
   justify-content: center;
   align-items: center;
 }
+
 .time {
   top: 15%;
   position: absolute;
@@ -324,6 +321,7 @@ img {
   height: 30%;
   z-index: 5;
 }
+
 .time h2 {
   text-align: center;
   text-transform: uppercase;
@@ -332,8 +330,8 @@ img {
 .btn_comenzar {
   left: 0%;
   width: 100%;
-    height: 40%;
-    bottom: 0%;
+  height: 40%;
+  bottom: 0%;
   margin-top: 5%;
   display: flex;
   justify-content: center;
@@ -476,11 +474,14 @@ h4 {
   transition: box-shadow 3s ease;
 }
 
-.temporizadorDias:hover,.temporizadorHoras:hover, .temporizadorMinutos:hover, .temporizadorSegundos:hover{
+.temporizadorDias:hover,
+.temporizadorHoras:hover,
+.temporizadorMinutos:hover,
+.temporizadorSegundos:hover {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  
+
 }
 
 
@@ -511,7 +512,7 @@ h4 {
   z-index: 14;
   display: flex;
   justify-content: start;
-  
+
 }
 
 .icon {
@@ -521,8 +522,8 @@ h4 {
   margin-left: 7%;
 }
 
-.contenedorDeArticulo > * {
-  animation: mover 10s normal infinite ;
+.contenedorDeArticulo>* {
+  animation: mover 10s normal infinite;
 }
 
 @keyframes mover {

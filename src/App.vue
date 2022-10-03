@@ -21,11 +21,7 @@ import Footer from "./components/Footer.vue";
 
 <template>
   <header>
-    <Header
-      :index="index"
-      :isVisible="isVisibleLogo"
-      :setPage="setOnPage"
-    ></Header>
+    <Header :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage"></Header>
   </header>
 
   <main>
@@ -65,37 +61,34 @@ import Footer from "./components/Footer.vue";
     </div>
 
     <div :class="{ container: true, 'mostrar-container': index_pagina == 8 }">
-      <Certificado :index_pagina="index_pagina" />
-    </div>
-
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 9 }">
       <Benefits :index_pagina="index_pagina" />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 10 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 9 }">
       <Beneficio :index_pagina="index_pagina" />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 11 }">
+
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 10 }">
       <Benefits_card :index_pagina="index_pagina" />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 12 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 11 }">
       <Benefits_card2 :index_pagina="index_pagina" />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 13 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 12 }">
       <Tokenomics :index_pagina="index_pagina" />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 14 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 13 }">
       <News />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 15 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 14 }">
       <Fase />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 16 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 15 }">
       <Fase2 />
     </div>
-    <div
-      :class="{ container: true, 'mostrar-container': index_pagina == limite }"
-    >
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 16 }">
+    </div>
+    <div :class="{ container: true, 'mostrar-container': index_pagina == limite }">
       <Footer :index_pagina="index_pagina" :limite="limite" :enter="enterAnimation" :exit="exitAnimation"></Footer>
     </div>
   </main>
@@ -225,6 +218,7 @@ export default {
 /* Fuentes Aquí */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
+
 /*  */
 * {
   margin: 0;
@@ -271,21 +265,17 @@ main {
 }
 
 .orange {
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
 }
 
 .red {
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
 }
 
 ::-webkit-scrollbar {

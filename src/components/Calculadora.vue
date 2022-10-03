@@ -37,7 +37,8 @@
       </div>
 
       <img class="circulo circulo-verde" src="../assets/circulo-verde.svg" alt="circle green">
-      <img @click="CambiarMonth" id="indicador-img" :class="{'indicador-calculadora':true, hour48:classindicador==1, month1:classindicador==2,month2:classindicador==3 }"
+      <img @click="CambiarMonth" id="indicador-img"
+        :class="{'indicador-calculadora':true, hour48:classindicador==1, month1:classindicador==2,month2:classindicador==3 }"
         src="../assets/indicador.svg" alt="index calculator">
 
       <div @click="CambiarMonth" class="descripcion">
@@ -129,8 +130,8 @@ export default {
   },
   data() {
     return {
-      inversion: 1000,
-      porcentajeInteres: 12.6,
+      inversion: 1500,
+      porcentajeInteres: 6.9,
       interes: 0,
       indicador: State.Hour0
     };

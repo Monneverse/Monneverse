@@ -9,10 +9,10 @@ import fasesComponentes from './fasesComponentes.vue';
     <div class="fondo filtro-superior"></div>
     <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
     <div class="fondo fondo-oscurecer"></div>
-    <div class="circuito-izquierdo">
+    <div class="circuito circuito-izquierdo">
         <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
     </div>
-    <div class="circuito-derecho">
+    <div class="circuito circuito-derecho">
         <img src="/img/calculadora/circuito-derecho.png" alt="" />
     </div>
     <!--FIN FONDO-->
@@ -22,7 +22,7 @@ import fasesComponentes from './fasesComponentes.vue';
             <h1>phase 2</h1>
         </div>
         <div class="description">
-            <p>official pre-sale of 2,000,000 monners. at $1.5. publication on www.monneverse.com of the portafolios
+            <p>Official pre-sale of 2,000,000 monners at $1.5 publication on www.monneverse.com of the portafolios
                 by monnerstaking at the end of the pre-sale.
             </p>
         </div>
@@ -33,18 +33,16 @@ import fasesComponentes from './fasesComponentes.vue';
     </div>
 
     <div class="componentes1">
-        <fasesComponentes title="development" description="development of the entire monnerverse ecosystem website,
-                 spanish and english, discord, telegram, twitter and facebook." />
+        <fasesComponentes title="development" description="enlist on Pancakeswap one day after our pre-sale" />
     </div>
 
     <div class="componentes2">
-        <fasesComponentes title="collection" description="Collection of documents for important Exchanges:
-             CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others." />
+        <fasesComponentes title="collection"
+            description="MonnerStaking start one day after pre-sale ends, payouts of 12,6% of total capital every 48 hours" />
     </div>
 
     <div class="componentes3">
-        <fasesComponentes title="started" description="Collection of documents for important Exchanges:
-             CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others." />
+        <fasesComponentes title="started" description="schedule burning, liquid lock, certick audit," />
     </div>
 
 </template>
@@ -96,24 +94,22 @@ img {
     mix-blend-mode: multiply;
 }
 
-.circuito-izquierdo {
+.circuito {
     position: absolute;
-    left: -12%;
-    top: 18%;
+    z-index: 4;
     height: 80%;
     width: 40%;
     min-width: 30rem;
-    z-index: 5;
+    top: 20%;
+}
+
+.circuito-izquierdo {
+    left: -14%;
 }
 
 .circuito-derecho {
-    position: absolute;
-    right: -12%;
-    top: 18%;
-    height: 80%;
-    width: 40%;
-    min-width: 30rem;
-    z-index: 5;
+    right: -14%;
+    transform: scaleY(-1);
 }
 
 /* FIN ESTILO FONDO */
@@ -144,8 +140,7 @@ img {
 .description {
     color: white;
     width: 45%;
-    font-size: 1.4vw;
-    text-transform: capitalize;
+    font-size: 1.3vw;
 }
 
 .circulos {
@@ -154,7 +149,7 @@ img {
     bottom: 54%;
     width: 50%;
     height: 25%;
-    z-index: 7;
+    z-index: 5;
 }
 
 .componentes1 {
