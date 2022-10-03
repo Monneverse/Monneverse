@@ -21,7 +21,7 @@ defineProps({
       </div>
   -->
       <div
-        :class="{ benefits: true, 'animacion-desplazamiento': index_pagina == 12 }"
+        :class="{ benefits: true, 'animacion-desplazamiento': index_pagina == 11 }"
       >
         <div class="cards">
           <span></span>

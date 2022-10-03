@@ -15,7 +15,7 @@ defineProps({
     <div
       :class="{
         fondo_rayos: true,
-        'animacion-desplazamiento': index_pagina == 10,
+        'animacion-desplazamiento': index_pagina == 9,
       }"
     >
       <img src="img/rayos.png" alt="" />
@@ -44,7 +44,7 @@ defineProps({
     <div
       :class="{
         benefits: true,
-        aparecer: index_pagina == 10,
+        aparecer: index_pagina == 9,
       }"
     >
     
@@ -127,6 +127,9 @@ defineProps({
   justify-content: center;
 }
 .contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80%;
   height: 70%;
   background-color: rgba(32, 29, 64, 0.2);
@@ -139,7 +142,6 @@ defineProps({
   font-family: 'Work Sans', sans-serif;
   font-weight: 200;
   width: 90%;
-  margin: 4% auto;
   text-align: center;
   color: white;
 

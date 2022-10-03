@@ -13,17 +13,17 @@ defineProps({
 
   <div class="fondo">
     <div
-      :class="{ fondo_rayos: true, 'animacion-aparecer': index_pagina == 9 }"
+      :class="{ fondo_rayos: true, 'animacion-aparecer': index_pagina == 8 }"
     >
       <img src="img/rayos.png" alt="" />
     </div>
     <div
-      :class="{ circuito: true, 'animacion-circuito': index_pagina == 9 }"
+      :class="{ circuito: true, 'animacion-circuito': index_pagina == 8 }"
       class=""
     >
       <img src="/img/calculadora/circuito-derecho.png" alt="" />
     </div>
-    <div :class="{ rectangulo: true, 'animacion-aparecer': index_pagina == 9 }">
+    <div :class="{ rectangulo: true, 'animacion-aparecer': index_pagina == 8 }">
       <img src="img/rectangulo.svg" alt="" />
     </div>
     <div class="logo">
@@ -32,7 +32,7 @@ defineProps({
     <div
       :class="{
         'reflector-izquierdo': true,
-        'animacion-dezplazamiento-reflector-izquierdo': index_pagina == 9,
+        'animacion-dezplazamiento-reflector-izquierdo': index_pagina == 8,
       }"
       class="reflector"
     >
@@ -43,7 +43,7 @@ defineProps({
     <div
       :class="{
         'reflector-derecho': true,
-        'animacion-dezplazamiento-reflector-derecho': index_pagina == 9,
+        'animacion-dezplazamiento-reflector-derecho': index_pagina == 8,
       }"
       class="reflector"
     >
@@ -51,19 +51,19 @@ defineProps({
       <div class="luz-2"></div>
       <div class="luz-3"></div>
     </div>
-    <div :class="{ titulo: true, 'animacion-aparecer': index_pagina == 9 }">
+    <div :class="{ titulo: true, 'animacion-aparecer': index_pagina == 8 }">
       <h1>BENEFITS</h1>
     </div>
 
     <div
-      :class="{ display_flex: true, 'animacion-aparecer': index_pagina == 9 }"
+      :class="{ display_flex: true, 'animacion-aparecer': index_pagina == 8 }"
     >
       <div class="benefits">
         <Benefits />
       </div>
       <div :class="{
         'circulos': true,
-        'animacion-rotar': index_pagina == 9,
+        'animacion-rotar': index_pagina == 8,
       }">
         <Circulos
           icono="/img/Benefits/monnercard.png"
