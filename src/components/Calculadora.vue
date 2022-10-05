@@ -131,7 +131,7 @@ export default {
   data() {
     return {
       inversion: 1500,
-      porcentajeInteres: 6.9,
+      porcentajeInteres: 6.2,
       interes: 0,
       indicador: State.Hour0
     };
