@@ -505,10 +505,10 @@ h4 {
 
 .logo_redes {
   position: absolute;
-  bottom: 0%;
+  bottom: 1%;
   left: 1%;
-  width: 10%;
-  height: 7%;
+  width: 20%;
+  height: 5%;
   z-index: 14;
   display: flex;
   justify-content: start;
@@ -516,10 +516,10 @@ h4 {
 }
 
 .icon {
-  width: 30%;
+  width: 3rem;
   height: auto;
   z-index: 18;
-  margin-left: 7%;
+  margin-left: 1%;
 }
 
 .contenedorDeArticulo>* {
