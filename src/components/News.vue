@@ -21,7 +21,7 @@
         <p>news</p>
     </div>
     <div class="cryptopotato">
-        <a href=""><img src="/img/News/cryptoPotato.png"></a>
+        <a href=""><img src="/img/News/criptopotato.svg"></a>
     </div>
     <div class="coinquora">
         <a href=""><img src="/img/News/coinquora1.png"></a>

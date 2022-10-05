@@ -223,6 +223,34 @@ defineProps({
   height: 75%;
   z-index: 3;
 }
+@media screen and (max-width: 768px) {
+  .fondo-montana {
+    display: none;
+  }
+  .fondo-oscurecer {
+    display: none;
+  }
+  .fondo-red {
+    display: none;
+  }
+  .fondo-video {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .fondo-montana {
+    display: none;
+  }
+  .fondo-oscurecer {
+    display: none;
+  }
+  .fondo-red {
+    display: none;
+  }
+  .fondo-video {
+    display: none;
+  }
+}
 
 .circulo img {
   width: 80%;
@@ -232,6 +260,20 @@ defineProps({
   left: 10%;
   z-index: 5;
 }
+@media screen and (max-width: 768px) {
+  .circulo img {
+    width: 70%;
+    height: 70%;
+    top: 20%;
+    left: 17%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .circulo img {
+    top: 22%;
+    left: 10%;
+  }
+}
 
 .circulo-medio img {
   width: 70%;
@@ -240,6 +282,20 @@ defineProps({
   top: 27%;
   left: 15%;
   z-index: 7;
+}
+@media (max-width: 768px) {
+  .circulo-medio img {
+    width: 60%;
+    height: 62%;
+    top: 25%;
+    left: 22%;
+  }
+}
+@media (max-width: 480px) {
+  .circulo-medio img {
+    top: 27%;
+    left: 15%;
+  }
 }
 
 .alianzas {
@@ -261,11 +317,9 @@ defineProps({
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
   font-size: 1.3vw;
-
 }
 
 .alianzas a span {
- 
   padding: 0;
   margin: 0 auto;
   width: 4rem;
@@ -285,9 +339,62 @@ defineProps({
   height: 3rem;
   margin: auto auto;
 }
-.alianzas a span:hover
-{
+.alianzas a span:hover {
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .alianzas {
+    margin: 0;
+    position: absolute;
+    z-index: 14;
+    top: 34%;
+    left: 32%;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .alianzas img {
+    top: 15%;
+    width: 7vw;
+    height: 7vw;
+  }
+
+  .alianzas a {
+    font-size: 2vw;
+  }
+  .alianzas a span {
+    padding: 0;
+    margin: 0 auto;
+    width: 9vw;
+    height: 9vw;
+  }
+}
+@media (max-width: 480px) {
+  .alianzas {
+    margin: 0;
+    position: absolute;
+    z-index: 14;
+    top: 40%;
+    left: 38.5%;
+    width: 24%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .alianzas img {
+    top: 15%;
+    width: 7vw;
+    height: 7vw;
+  }
+
+  .alianzas a {
+    font-size: 2vw;
+  }
+  .alianzas a span {
+    padding: 0;
+    margin: 0 auto;
+    width: 9vw;
+    height: 9vw;
+  }
 }
 
 .semi_circulo img {
@@ -300,6 +407,21 @@ defineProps({
   top: 15%;
   left: 0%;
 }
+@media screen and (max-width: 768px) {
+  .semi_circulo img {
+    width: 73%;
+    height: 73%;
+    top: 15%;
+    left: 15.5%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .semi_circulo img {
+    top: 15%;
+    left: 5%;
+  }
+}
+
 .animacion-arco img {
   animation-name: animacion-arco;
   animation-duration: 0.5s;
@@ -326,19 +448,42 @@ defineProps({
   left: 12%;
   z-index: 8;
 }
-.rectangulo p{
 
+.rectangulo p {
   top: 76%;
   left: 35.5%;
   position: absolute;
   z-index: 15;
   color: #ffffff;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 2.6vw;
   font-weight: 400;
-
 }
-
+@media screen and (max-width: 768px) {
+  .rectangulo img {
+    top: 51%;
+    left: 14.5%;
+  }
+  .rectangulo p {
+    font-size: 3.5vw;
+    top: 70%;
+    left: 32.5%;
+  }
+}
+@media (max-width: 480px) {
+  .rectangulo img {
+    width: 95%;
+    height: 95%;
+    top: 25%;
+    left: 2.5%;
+    display: none;
+  }
+  .rectangulo p {
+    font-size: 4vw;
+    top: 72%;
+    left: 28%;
+  }
+}
 
 .rectangulo-medio img {
   width: 70%;
@@ -347,6 +492,24 @@ defineProps({
   top: 43%;
   left: 15%;
   z-index: 11;
+}
+@media screen and (max-width: 768px) {
+  .rectangulo-medio img {
+    width: 85%;
+    height: 43%;
+    top: 38%;
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .rectangulo-medio img {
+    width: 100%;
+    height: 43%;
+    display: none;
+    top: 43%;
+    left: 0%;
+  }
 }
 
 .imagenes {
@@ -359,7 +522,6 @@ defineProps({
   height: 20%;
   display: flex;
   justify-content: space-between;
-  
 }
 
 .imagenes img {
@@ -367,6 +529,19 @@ defineProps({
 }
 .imagenes img:last-child {
   width: 9.5vw;
+}
+@media screen and (max-width: 768px) {
+  .imagenes {
+    top: 50%;
+    left: 31%;
+    width: 40%;
+  }
+  .imagenes img {
+    width: 15vw;
+  }
+  .imagenes img:last-child {
+    width: 12vw;
+  }
 }
 
 .puntero {
@@ -378,6 +553,16 @@ defineProps({
   margin: 0;
   top: 84%;
   left: 40%;
+}
+@media screen and (max-width: 768px) {
+  .puntero {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .puntero {
+    display: none;
+  }
 }
 
 .degradado {
