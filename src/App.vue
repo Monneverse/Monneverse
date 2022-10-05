@@ -5,6 +5,7 @@ import Calculadora from "./components/Calculadora.vue";
 import Alliances from "./components/Alliances.vue";
 import Certificado from "./components/Certificado.vue";
 import ContenedorArticulo from "./components/ContenedorArticulo.vue";
+import Coins from "./components/Coins.vue";
 import Benefits from "./components/Benefits.vue";
 import Benefits_card from "./components/Benefits_card.vue";
 import Benefits_card2 from "./components/Benefits_card2.vue";
@@ -63,39 +64,43 @@ import Footer from "./components/Footer.vue";
       <Logos_auditorias />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 8 }">
-      <Benefits :index_pagina="index_pagina" />
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 8}">
+      <Coins />
     </div>
 
     <div :class="{ container: true, 'mostrar-container': index_pagina == 9 }">
-      <Beneficio :index_pagina="index_pagina" />
+      <Benefits :index_pagina="index_pagina" />
     </div>
 
     <div :class="{ container: true, 'mostrar-container': index_pagina == 10 }">
+      <Beneficio :index_pagina="index_pagina" />
+    </div>
+
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 11 }">
       <Benefits_card :index_pagina="index_pagina" />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 11 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 12 }">
       <Benefits_card2 :index_pagina="index_pagina" />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 12 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 13 }">
       <Tokenomics :index_pagina="index_pagina" />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 13 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 14 }">
       <News />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 14 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 15 }">
       <Fase />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 15 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 16 }">
       <Fase2 />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 16 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 17 }">
       <Fase3 />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 17 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 18 }">
       <Fase4 />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 18 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 19 }">
       <Fase5 />
     </div>
     <div :class="{ container: true, 'mostrar-container': index_pagina == limite }">
@@ -109,7 +114,7 @@ export default {
     return {
       index: 0,
       index_pagina: 1,
-      limite: 19,
+      limite: 20,
       isVisibleLogo: false,
       scroll: true,
       exitAnimation: false,
@@ -127,16 +132,16 @@ export default {
           this.index_pagina = 5;
           break;
         case 2:
-          this.index_pagina = 8;
+          this.index_pagina = 9;
           break;
         case 3:
-          this.index_pagina = 12;
-          break;
-        case 4:
           this.index_pagina = 13;
           break;
-        case 5:
+        case 4:
           this.index_pagina = 14;
+          break;
+        case 5:
+          this.index_pagina = 15;
           break;
         default:
           break;
