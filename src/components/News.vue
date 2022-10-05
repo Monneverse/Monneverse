@@ -25,10 +25,10 @@
             <a href=""><img src="/img/News/CoinQuora.svg"></a>
         </div>
         <div class="cryptopotato">
-            <a href=""><img src="/img/News/cryptoPotato.png"></a>
+            <a href=""><img src="/img/News/criptopotato.svg"></a>
         </div>
         <div class="coinrepublic">
-            <a href=""><img src="/img/News/thcr.png"></a>
+            <a href=""><img src="/img/News/coinrepublic.svg"></a>
         </div>
     </div>
     <div class="contenedor_monedaR">
