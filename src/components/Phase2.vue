@@ -29,24 +29,67 @@ import fasesComponentes from './fasesComponentes.vue';
     </div>
 
     <div class="circulos">
-        <img src="/img/aros1.png">
+        <img src="/img/imagen1.png">
+    </div>
+
+    <button class="readMore" @click="reDirect">
+        Learn More
+    </button>
+
+    <div class="circulos1">
+        <img src="/img/imagen1.png">
     </div>
 
     <div class="componentes1">
-        <fasesComponentes title="development" description="enlist on Pancakeswap one day after our pre-sale" />
+        <fasesComponentes title="Enlisting" description="enlist on Pancakeswap one day after our pre-sale" />
     </div>
 
     <div class="componentes2">
-        <fasesComponentes title="collection"
-            description="MonnerStaking start one day after pre-sale ends, payouts of 12,6% of total capital every 48 hours" />
+        <fasesComponentes title="MonnerStaking" description="MonnerStaking start one day after pre-sale ends,
+             payouts of 12,6% of total capital every 48 hours" />
     </div>
 
     <div class="componentes3">
-        <fasesComponentes title="started" description="schedule burning, liquid lock, certick audit," />
+        <fasesComponentes title="Liquidity" description="liquid lock" />
     </div>
 
+    <div class="componentes4">
+        <fasesComponentes title="Schedule" description="schedule burning" />
+    </div>
+
+    <div class="componentes5">
+        <fasesComponentes title="Certick" description="certick audit" />
+    </div>
+
+    <div class="componentes8">
+        <fasesComponentes title="Official enlistment:" description="coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
+        MEXC global" />
+    </div>
+
+    <div class="componentes7">
+        <fasesComponentes title="Increase x5" description="Budget increase x5 of our advertising campaign" />
+    </div>
+
+    <div class="componentes6">
+        <fasesComponentes title="Holders" description="10.000 holders" />
+    </div>
 </template>
     
+<script>
+export default {
+    data() {
+        return {
+            event: "click"
+        }
+    },
+    methods: {
+        reDirect() {
+            location.replace("https://sites.google.com/view/community-monnerverse/p%C3%A1gina-principal");
+        }
+    }
+}
+</script>
+
 <style scoped>
 img {
     width: 100%;
@@ -114,6 +157,8 @@ img {
 
 /* FIN ESTILO FONDO */
 
+
+
 .Fases {
     justify-content: center;
     text-align: center;
@@ -122,7 +167,7 @@ img {
     width: 100%;
     z-index: 6;
     left: 27%;
-    top: 25%;
+    top: 45%;
 }
 
 .titulo {
@@ -146,15 +191,43 @@ img {
 .circulos {
     position: absolute;
     left: 24%;
-    bottom: 54%;
+    bottom: 40%;
     width: 50%;
     height: 25%;
     z-index: 5;
 }
 
+.circulos1 {
+    position: absolute;
+    left: 22%;
+    bottom: 30%;
+    width: 55%;
+    height: 30%;
+    z-index: 5;
+}
+
+.readMore {
+    position: absolute;
+    top: 60.5%;
+    left: 44%;
+    border-radius: 1rem;
+    margin-bottom: 15px;
+    width: 10%;
+    height: 7%;
+    font-size: 1vw;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    z-index: 999;
+    background: linear-gradient(to left,
+            #029F50 0%,
+            #0A664E 50%,
+            #0E444D 100%);
+}
+
 .componentes1 {
     position: absolute;
-    top: 45%;
+    top: 30%;
     left: 0%;
     width: 25%;
     height: 64%;
@@ -162,17 +235,57 @@ img {
 
 .componentes2 {
     position: absolute;
-    top: 55%;
-    left: 36%;
-    width: 25%;
-    height: 64%;
+    top: 70%;
+    left: 0%;
+    width: 28%;
+    height: 55%;
 }
 
 .componentes3 {
     position: absolute;
-    top: 45%;
-    right: 0%;
-    width: 25%;
+    top: 24%;
+    left: 23%;
+    width: 18%;
     height: 64%;
+}
+
+.componentes4 {
+    position: absolute;
+    top: 80%;
+    left: 28%;
+    width: 18%;
+    height: 64%;
+}
+
+.componentes5 {
+    position: absolute;
+    top: 24%;
+    right: 25%;
+    width: 18%;
+    height: 64%;
+}
+
+.componentes6 {
+    position: absolute;
+    top: 80%;
+    right: 28%;
+    width: 21%;
+    height: 64%;
+}
+
+.componentes7 {
+    position: absolute;
+    top: 30%;
+    right: 3%;
+    width: 21%;
+    height: 64%;
+}
+
+.componentes8 {
+    position: absolute;
+    top: 70%;
+    right: 0%;
+    width: 28%;
+    height: 55%;
 }
 </style>

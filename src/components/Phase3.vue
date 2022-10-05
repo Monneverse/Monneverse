@@ -1,28 +1,28 @@
 <script setup>
 import fasesComponentes from './fasesComponentes.vue';
 </script>
-
+        
 <template>
+
     <!--FONDO-->
     <div class="fondo fondo-calculadora"></div>
     <div class="fondo filtro-superior"></div>
     <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
     <div class="fondo fondo-oscurecer"></div>
-    <div class="circuito-izquierdo">
+    <div class="circuito circuito-izquierdo">
         <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
     </div>
-    <div class="circuito-derecho">
+    <div class="circuito circuito-derecho">
         <img src="/img/calculadora/circuito-derecho.png" alt="" />
     </div>
     <!--FIN FONDO-->
 
     <div class="Fases">
         <div class="titulo">
-            <h1>phase 1</h1>
+            <h1>phase 3</h1>
         </div>
         <div class="description">
-            <p>development of the entire monneverse ecosystem, website, spanish and english discord, telegram,
-                twitter and facebook</p>
+            <p>Official enlistment: <br> LAKATOKEN, Poloniex, Probit, XT.com, OKX, Bitrue</p>
         </div>
     </div>
 
@@ -39,22 +39,20 @@ import fasesComponentes from './fasesComponentes.vue';
     </div>
 
     <div class="componentes1">
-        <fasesComponentes title="development" description="development of the entire monnerverse ecosystem website,
-             spanish and english, discord, telegram, twitter and facebook." />
+        <fasesComponentes title="Launch"
+            description="Official launch of MonnerWallet, MonnerSwap and MonnerCardwith Visa and Mastercard." />
     </div>
 
     <div class="componentes2">
-        <fasesComponentes title="collection" description="Collection of documents for important Exchanges:
-         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others." />
+        <fasesComponentes title="Solidity" description="Solidity Finance Audit." />
     </div>
 
     <div class="componentes3">
-        <fasesComponentes title="started" description="Collection of documents for important Exchanges:
-         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others." />
+        <fasesComponentes title="Exhibition"
+            description="exhibition of our team from my solar powered industrial mining in New York City" />
     </div>
-
 </template>
-
+        
 <script>
 export default {
     data() {
@@ -69,7 +67,7 @@ export default {
     }
 }
 </script>
-
+    
 <style scoped>
 img {
     width: 100%;
@@ -117,27 +115,27 @@ img {
     mix-blend-mode: multiply;
 }
 
-.circuito-izquierdo {
+.circuito {
     position: absolute;
-    left: -12%;
-    top: 18%;
+    z-index: 4;
     height: 80%;
     width: 40%;
     min-width: 30rem;
-    z-index: 5;
+    top: 20%;
+}
+
+.circuito-izquierdo {
+    left: -14%;
 }
 
 .circuito-derecho {
-    position: absolute;
-    right: -12%;
-    top: 18%;
-    height: 80%;
-    width: 40%;
-    min-width: 30rem;
-    z-index: 5;
+    right: -14%;
+    transform: scaleY(-1);
 }
 
 /* FIN ESTILO FONDO */
+
+
 
 .Fases {
     justify-content: center;
@@ -165,24 +163,24 @@ img {
 .description {
     color: white;
     width: 45%;
-    font-size: 1.4vw;
-    text-transform: capitalize;
+    font-size: 1.3vw;
 }
 
 .circulos {
     position: absolute;
-    left: 27%;
+    left: 28%;
     bottom: 58%;
-    width: 45%;
+    width: 43%;
     height: 25%;
     z-index: 5;
 }
 
 .circulos1 {
     position: absolute;
-    left: 22%;
+    align-items: center;
+    left: 24.5%;
     bottom: 48%;
-    width: 55%;
+    width: 50%;
     height: 30%;
     z-index: 5;
 }
