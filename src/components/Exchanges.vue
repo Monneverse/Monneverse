@@ -46,31 +46,31 @@ import ComponenteIconos from "./componenteIconos.vue";
       <ComponenteIconos iconos="/img/Exchanges/CoinGecko.svg " iconname="coingecko" />
     </div>
     <div class="mexcglobal">
-      <ComponenteIconos iconos="/img/Exchanges/mexclogo.png" iconname="mexc global" />
+      <ComponenteIconos iconos="/img/Exchanges/mexcglobal.svg" iconname="mexc global" />
     </div>
     <div class="xtcom">
-      <ComponenteIconos iconos="/img/Exchanges/xtcom.png" iconname="xt.com" />
+      <ComponenteIconos iconos="/img/Exchanges/xtcom.svg" iconname="xt.com" />
     </div>
     <div class="poloniex">
       <ComponenteIconos iconos="/img/Exchanges/Poloniex.svg" iconname="poloniex" />
     </div>
     <div class="hotbit">
-      <ComponenteIconos iconos="/img/Exchanges/hotbit1.png" iconname="hotbit" />
+      <ComponenteIconos iconos="/img/Exchanges/hotbit.svg" iconname="hotbit" />
     </div>
     <div class="coinmarket">
       <ComponenteIconos iconos="/img/Exchanges/coinmarket.svg" iconname="coinmarket" />
     </div>
     <div class="ftx">
-      <ComponenteIconos iconos="/img/Exchanges/ftx.ico" iconname="ftx" />
+      <ComponenteIconos iconos="/img/Exchanges/ftx.svg" iconname="ftx" />
     </div>
     <div class="latoken">
       <ComponenteIconos iconos="/img/Exchanges/latoken.svg" iconname="latoken" />
     </div>
     <div class="bitrue">
-      <ComponenteIconos iconos="/img/Exchanges/bitrue-coin.png" iconname="bitrue" />
+      <ComponenteIconos iconos="/img/Exchanges/bitrue.svg" iconname="bitrue" />
     </div>
     <div class="favicon">
-      <ComponenteIconos iconos="/img/Exchanges/favicon.ico" iconname="favicon" />
+      <ComponenteIconos iconos="/img/Exchanges/favicon.svg" iconname="favicon" />
     </div>
   </div>
 
