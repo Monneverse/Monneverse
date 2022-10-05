@@ -18,18 +18,18 @@
       <div id="animacion" :class="{animacion:true, 'traslado_animacion':true ,invisible:indexF==0}"></div>
     </nav>
 
-    <button class="btn">WHITEPAPER</button>
+    <button class="btn" @click="reDirect">WHITEPAPER</button>
   </div>
 </template>
 
 <script>
-
 
 export default {
   data() {
     return {
       distancia: 0,
       animando: false,
+      event: "click"
     };
   },
   props: {
@@ -75,7 +75,7 @@ export default {
     exit_mouse() {
       var anim = document.getElementById("animacion");
       var link = document.getElementsByClassName("home")[0];
-      if(this.indexF==0){
+      if (this.indexF == 0) {
         anim.classList.add("invisible");
       }
       anim.style.minWidth = link.offsetWidth + "px";
@@ -101,12 +101,15 @@ export default {
         console.log("EL ERROR ES " + error);
       }
 
+    },
+    reDirect() {
+      location.replace("https://sites.google.com/view/whiterpaper-monnerverse/p%C3%A1gina-principal");
     }
   },
   mounted() {
     this.recargar();
     window.addEventListener("resize", this.recargar);
-  
+
   },
 };
 </script>

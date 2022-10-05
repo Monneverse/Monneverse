@@ -16,8 +16,10 @@ defineProps({
 <template>
     <div class="componentes">
         <div class="divDesc">
+            <div class="circulo-indicador"></div>
             <p>
-                <button>{{title}}</button><br>
+                <b>{{title}}</b>
+                <br>
                 {{description}}
             </p>
         </div>
@@ -53,19 +55,25 @@ img {
 }
 
 .divDesc p {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
 }
 
-.divDesc p button {
+.divDesc b {
+    font-size: 1.8vw;
+}
+
+.circulo-indicador {
+    position: absolute;
+    width: 3rem;
+    border-radius: 50%;
     background: linear-gradient(to left,
             #029F50 0%,
             #0A664E 50%,
-            #0E444D 100%);
-    border-radius: 0.5rem;
-    margin-bottom: 15px;
-    padding: 0.7rem;
-    font-size: 2vw;
-    color: white;
-    text-transform: uppercase;
+            #0E444D 80%);
+    height: 3rem;
+    bottom: 100%;
+    left: 41%;
+    align-items: center;
+    z-index: 10;
 }
 </style>

@@ -1,28 +1,28 @@
 <script setup>
 import fasesComponentes from './fasesComponentes.vue';
 </script>
-
+        
 <template>
+
     <!--FONDO-->
     <div class="fondo fondo-calculadora"></div>
     <div class="fondo filtro-superior"></div>
     <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
     <div class="fondo fondo-oscurecer"></div>
-    <div class="circuito-izquierdo">
+    <div class="circuito circuito-izquierdo">
         <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
     </div>
-    <div class="circuito-derecho">
+    <div class="circuito circuito-derecho">
         <img src="/img/calculadora/circuito-derecho.png" alt="" />
     </div>
     <!--FIN FONDO-->
 
     <div class="Fases">
         <div class="titulo">
-            <h1>phase 1</h1>
+            <h1>phase 4</h1>
         </div>
         <div class="description">
-            <p>development of the entire monneverse ecosystem, website, spanish and english discord, telegram,
-                twitter and facebook</p>
+            <p>Start of Staking phase 2</p>
         </div>
     </div>
 
@@ -39,22 +39,45 @@ import fasesComponentes from './fasesComponentes.vue';
     </div>
 
     <div class="componentes1">
-        <fasesComponentes title="development" description="development of the entire monnerverse ecosystem website,
-             spanish and english, discord, telegram, twitter and facebook." />
+        <fasesComponentes title="Development"
+            description="Development of MonnerTrading, MonnerHosting, and MonnerBlockchaine." />
     </div>
 
     <div class="componentes2">
-        <fasesComponentes title="collection" description="Collection of documents for important Exchanges:
-         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others." />
+        <fasesComponentes title="Conference" description="Official <b>CEO</b> conference for the public." />
     </div>
 
     <div class="componentes3">
-        <fasesComponentes title="started" description="Collection of documents for important Exchanges:
-         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others." />
+        <fasesComponentes title="Presentation"
+            description="Development and presentation of MonnerMetaverse-MonnerGame in augmented virtual reality." />
     </div>
 
-</template>
+    <div class="componentes4">
+        <fasesComponentes title="Holders" description="15.000 holders Phase 4." />
+    </div>
 
+    <div class="componentes5">
+        <fasesComponentes title="MonnerTrading" description="MonnerTrading official Launch." />
+    </div>
+
+    <div class="componentes6">
+        <fasesComponentes title="MonnerMetaverse-MonnerGame"
+            description="Official MonnerMetaverse-MonnerGame in argumented reality." />
+    </div>
+
+    <div class="componentes7">
+        <fasesComponentes title="Staking" description="Phase 3 Staking Programming." />
+    </div>
+
+    <div class="componentes8">
+        <fasesComponentes title="Scheduled" description="Scheduled burning." />
+    </div>
+
+    <div class="componentes9">
+        <fasesComponentes title="Enlistment" description="Enlistment in other High Recognition Exchanges" />
+    </div>
+</template>
+        
 <script>
 export default {
     data() {
@@ -69,7 +92,7 @@ export default {
     }
 }
 </script>
-
+    
 <style scoped>
 img {
     width: 100%;
@@ -117,27 +140,27 @@ img {
     mix-blend-mode: multiply;
 }
 
-.circuito-izquierdo {
+.circuito {
     position: absolute;
-    left: -12%;
-    top: 18%;
+    z-index: 4;
     height: 80%;
     width: 40%;
     min-width: 30rem;
-    z-index: 5;
+    top: 20%;
+}
+
+.circuito-izquierdo {
+    left: -14%;
 }
 
 .circuito-derecho {
-    position: absolute;
-    right: -12%;
-    top: 18%;
-    height: 80%;
-    width: 40%;
-    min-width: 30rem;
-    z-index: 5;
+    right: -14%;
+    transform: scaleY(-1);
 }
 
 /* FIN ESTILO FONDO */
+
+
 
 .Fases {
     justify-content: center;
@@ -147,13 +170,13 @@ img {
     width: 100%;
     z-index: 6;
     left: 27%;
-    top: 25%;
+    top: 50%;
 }
 
 .titulo {
     color: white;
-    right: 28%;
-    bottom: 10%;
+    right: 27%;
+    bottom: 8%;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -165,32 +188,31 @@ img {
 .description {
     color: white;
     width: 45%;
-    font-size: 1.4vw;
-    text-transform: capitalize;
+    font-size: 1.2vw;
 }
 
 .circulos {
     position: absolute;
-    left: 27%;
-    bottom: 58%;
-    width: 45%;
-    height: 25%;
+    left: 35%;
+    bottom: 40%;
+    width: 30%;
+    height: 20%;
     z-index: 5;
 }
 
 .circulos1 {
     position: absolute;
-    left: 22%;
-    bottom: 48%;
-    width: 55%;
+    left: 32.5%;
+    bottom: 30%;
+    width: 35%;
     height: 30%;
     z-index: 5;
 }
 
 .readMore {
     position: absolute;
-    top: 42.5%;
-    left: 44%;
+    top: 60.5%;
+    left: 45%;
     border-radius: 1rem;
     margin-bottom: 15px;
     width: 10%;
@@ -208,25 +230,73 @@ img {
 
 .componentes1 {
     position: absolute;
-    top: 60%;
+    top: 30%;
     left: 0%;
-    width: 25%;
+    width: 20%;
     height: 64%;
 }
 
 .componentes2 {
     position: absolute;
     top: 70%;
-    left: 36%;
-    width: 25%;
-    height: 64%;
+    left: 0%;
+    width: 20%;
+    height: 55%;
 }
 
 .componentes3 {
     position: absolute;
-    top: 60%;
-    right: 0%;
-    width: 25%;
+    top: 20%;
+    left: 24%;
+    width: 27%;
+    height: 55%;
+}
+
+.componentes4 {
+    position: absolute;
+    top: 80%;
+    left: 18%;
+    width: 18%;
     height: 64%;
+}
+
+.componentes5 {
+    position: absolute;
+    top: 20%;
+    right: 30%;
+    width: 18%;
+    height: 64%;
+}
+
+.componentes6 {
+    position: absolute;
+    top: 30%;
+    right: 0%;
+    width: 27%;
+    height: 64%;
+}
+
+.componentes7 {
+    position: absolute;
+    top: 80%;
+    right: 19%;
+    width: 18%;
+    height: 64%;
+}
+
+.componentes8 {
+    position: absolute;
+    top: 70%;
+    right: -1%;
+    width: 28%;
+    height: 55%;
+}
+
+.componentes9 {
+    position: absolute;
+    top: 80%;
+    right: 35%;
+    width: 28%;
+    height: 55%;
 }
 </style>

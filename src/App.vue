@@ -16,16 +16,15 @@ import News from "./components/News.vue";
 import Tokenomics from "./components/Tokenomics.vue";
 import Fase from "./components/Phases.vue";
 import Fase2 from "./components/Phase2.vue";
+import Fase3 from "./components/Phase3.vue";
+import Fase4 from "./components/Phase4.vue"
+import Fase5 from "./components/Phase5.vue"
 import Footer from "./components/Footer.vue";
 </script>
 
 <template>
   <header>
-    <Header
-      :index="index"
-      :isVisible="isVisibleLogo"
-      :setPage="setOnPage"
-    ></Header>
+    <Header :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage"></Header>
   </header>
 
   <main>
@@ -90,15 +89,17 @@ import Footer from "./components/Footer.vue";
     <div :class="{ container: true, 'mostrar-container': index_pagina == 15 }">
       <Fase2 />
     </div>
-    <div
-      :class="{ container: true, 'mostrar-container': index_pagina == limite }"
-    >
-      <Footer
-        :index_pagina="index_pagina"
-        :limite="limite"
-        :enter="enterAnimation"
-        :exit="exitAnimation"
-      ></Footer>
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 16 }">
+      <Fase3 />
+    </div>
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 17 }">
+      <Fase4 />
+    </div>
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 18 }">
+      <Fase5 />
+    </div>
+    <div :class="{ container: true, 'mostrar-container': index_pagina == limite }">
+      <Footer :index_pagina="index_pagina" :limite="limite" :enter="enterAnimation" :exit="exitAnimation"></Footer>
     </div>
   </main>
 </template>
@@ -108,7 +109,7 @@ export default {
     return {
       index: 0,
       index_pagina: 1,
-      limite: 16,
+      limite: 19,
       isVisibleLogo: false,
       scroll: true,
       exitAnimation: false,
@@ -274,21 +275,17 @@ main {
 }
 
 .orange {
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
 }
 
 .red {
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
 }
 
 ::-webkit-scrollbar {

@@ -1,28 +1,29 @@
 <script setup>
 import fasesComponentes from './fasesComponentes.vue';
 </script>
-
+            
 <template>
+
     <!--FONDO-->
     <div class="fondo fondo-calculadora"></div>
     <div class="fondo filtro-superior"></div>
     <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
     <div class="fondo fondo-oscurecer"></div>
-    <div class="circuito-izquierdo">
+    <div class="circuito circuito-izquierdo">
         <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
     </div>
-    <div class="circuito-derecho">
+    <div class="circuito circuito-derecho">
         <img src="/img/calculadora/circuito-derecho.png" alt="" />
     </div>
     <!--FIN FONDO-->
 
     <div class="Fases">
         <div class="titulo">
-            <h1>phase 1</h1>
+            <h1>phase 5</h1>
         </div>
         <div class="description">
-            <p>development of the entire monneverse ecosystem, website, spanish and english discord, telegram,
-                twitter and facebook</p>
+            <p>Official launch of MonnerBlockchaine and MonnerHosting <br> with a vision to transform investments in
+                cryptocurrencies so that they are safer for the public, avoiding Scam tokens.</p>
         </div>
     </div>
 
@@ -39,22 +40,15 @@ import fasesComponentes from './fasesComponentes.vue';
     </div>
 
     <div class="componentes1">
-        <fasesComponentes title="development" description="development of the entire monnerverse ecosystem website,
-             spanish and english, discord, telegram, twitter and facebook." />
+        <fasesComponentes title="Disclosure" description="Disclosure of our second phase of the project." />
     </div>
 
     <div class="componentes2">
-        <fasesComponentes title="collection" description="Collection of documents for important Exchanges:
-         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others." />
+        <fasesComponentes title="Holders" description="40.000 holders MONNERVERSE will remain at the forefront with new high innovation projects
+             in 2023." />
     </div>
-
-    <div class="componentes3">
-        <fasesComponentes title="started" description="Collection of documents for important Exchanges:
-         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others." />
-    </div>
-
 </template>
-
+            
 <script>
 export default {
     data() {
@@ -69,7 +63,7 @@ export default {
     }
 }
 </script>
-
+        
 <style scoped>
 img {
     width: 100%;
@@ -117,27 +111,27 @@ img {
     mix-blend-mode: multiply;
 }
 
-.circuito-izquierdo {
+.circuito {
     position: absolute;
-    left: -12%;
-    top: 18%;
+    z-index: 4;
     height: 80%;
     width: 40%;
     min-width: 30rem;
-    z-index: 5;
+    top: 20%;
+}
+
+.circuito-izquierdo {
+    left: -14%;
 }
 
 .circuito-derecho {
-    position: absolute;
-    right: -12%;
-    top: 18%;
-    height: 80%;
-    width: 40%;
-    min-width: 30rem;
-    z-index: 5;
+    right: -14%;
+    transform: scaleY(-1);
 }
 
 /* FIN ESTILO FONDO */
+
+
 
 .Fases {
     justify-content: center;
@@ -165,24 +159,24 @@ img {
 .description {
     color: white;
     width: 45%;
-    font-size: 1.4vw;
-    text-transform: capitalize;
+    font-size: 1.3vw;
 }
 
 .circulos {
     position: absolute;
-    left: 27%;
+    left: 23%;
     bottom: 58%;
-    width: 45%;
+    width: 54%;
     height: 25%;
     z-index: 5;
 }
 
 .circulos1 {
     position: absolute;
-    left: 22%;
+    align-items: center;
+    left: 24.5%;
     bottom: 48%;
-    width: 55%;
+    width: 50%;
     height: 30%;
     z-index: 5;
 }
@@ -208,8 +202,8 @@ img {
 
 .componentes1 {
     position: absolute;
-    top: 60%;
-    left: 0%;
+    top: 70%;
+    left: 20%;
     width: 25%;
     height: 64%;
 }
@@ -217,15 +211,7 @@ img {
 .componentes2 {
     position: absolute;
     top: 70%;
-    left: 36%;
-    width: 25%;
-    height: 64%;
-}
-
-.componentes3 {
-    position: absolute;
-    top: 60%;
-    right: 0%;
+    right: 24%;
     width: 25%;
     height: 64%;
 }

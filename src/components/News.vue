@@ -4,10 +4,10 @@
     <div class="fondo filtro-superior"></div>
     <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
     <div class="fondo fondo-oscurecer"></div>
-    <div class="circuito-izquierdo">
+    <div class="circuito circuito-izquierdo">
         <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
     </div>
-    <div class="circuito-derecho">
+    <div class="circuito circuito-derecho">
         <img src="/img/calculadora/circuito-derecho.png" alt="" />
     </div>
     <div class="luces">
@@ -20,31 +20,28 @@
     <div class="titulo">
         <p>news</p>
     </div>
-    <div class="contenedor_moneda">
-        <div class="coinquora">
-            <a href=""><img src="/img/News/CoinQuora.svg"></a>
-        </div>
-        <div class="cryptopotato">
-            <a href=""><img src="/img/News/criptopotato.svg"></a>
-        </div>
-        <div class="coinrepublic">
-            <a href=""><img src="/img/News/coinrepublic.svg"></a>
-        </div>
+    <div class="cryptopotato">
+        <a href=""><img src="/img/News/criptopotato.svg"></a>
     </div>
-    <div class="contenedor_monedaR">
-        <div class="criptotendencia">
-            <a
-                href="https://criptotendencia.com/2022/08/03/por-que-monner-puede-convertirse-en-una-de-las-mejores-criptomonedas-para-invertir/"><img
-                    src="/img/News/CriptoTendencia.png"></a>
-        </div>
-        <div class="coinspeaker">
-            <a href="https://www.coinspeaker.com/monner-coin-revolutionize-crypto/"><img
-                    src="/img/News/CoinSpeaker.png"></a>
-        </div>
-        <div class="territoriobitcoin">
-            <a href="https://www.territoriobitcoin.com/una-nueva-criptomoneda-en-tendencia/"><img
-                    src="/img/News/TerritorioBitcoin.png"></a>
-        </div>
+    <div class="coinquora">
+        <a href=""><img src="/img/News/coinquora1.png"></a>
+    </div>
+    <div class="coinrepublic">
+        <a href=""><img src="/img/News/thcr.png"></a>
+    </div>
+
+    <div class="criptotendencia">
+        <a
+            href="https://criptotendencia.com/2022/08/03/por-que-monner-puede-convertirse-en-una-de-las-mejores-criptomonedas-para-invertir/"><img
+                src="/img/News/CriptoTendencia.png"></a>
+    </div>
+    <div class="coinspeaker">
+        <a href="https://www.coinspeaker.com/monner-coin-revolutionize-crypto/"><img
+                src="/img/News/CoinSpeaker.png"></a>
+    </div>
+    <div class="territoriobitcoin">
+        <a href="https://www.territoriobitcoin.com/una-nueva-criptomoneda-en-tendencia/"><img
+                src="/img/News/TerritorioBitcoin.png"></a>
     </div>
 </template>
 
@@ -136,24 +133,22 @@ img {
     z-index: 6;
 }
 
-.circuito-izquierdo {
+.circuito {
     position: absolute;
-    z-index: 7;
-    left: -20%;
-    top: 18%;
+    z-index: 4;
     height: 80%;
     width: 40%;
     min-width: 30rem;
+    top: 20%;
+}
+
+.circuito-izquierdo {
+    left: -10%;
 }
 
 .circuito-derecho {
-    position: absolute;
-    z-index: 7;
-    right: -20%;
-    top: 18%;
-    height: 80%;
-    width: 40%;
-    min-width: 30rem;
+    right: -10%;
+    transform: scaleY(-1);
 }
 
 /* FIN ESTILO FONDO */
@@ -176,61 +171,62 @@ img {
     font-family: 'Work Sans', sans-serif;
 }
 
-.contenedor_moneda {
-    grid-template-rows: 20% 20% 20%;
-    grid-template-columns: 28%;
+.cryptopotato {
     position: absolute;
-    display: grid;
-    height: 80%;
-    z-index: 7;
-    width: 60%;
-    left: 16%;
-    top: 21%;
-    gap: 10%;
+    top: 22%;
+    left: 15%;
+    width: 20%;
+    height: 20%;
+    z-index: 9;
 }
 
-.contenedor_moneda>img {
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    display: grid;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-}
-
-.contenedor_monedaR {
-    grid-template-rows: 20% 20% 20%;
-    grid-template-columns: 28%;
+.coinquora {
     position: absolute;
-    display: grid;
-    height: 80%;
-    z-index: 7;
-    width: 60%;
-    right: -28%;
-    top: 21%;
-    gap: 10%;
+    top: 50%;
+    left: 15%;
+    width: 18%;
+    height: 8%;
+    z-index: 9;
 }
 
-.contenedor_monedaR>img {
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    display: grid;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
+.coinrepublic {
+    position: absolute;
+    top: 64%;
+    left: 15%;
+    width: 20%;
+    height: 25%;
+    z-index: 9;
 }
 
-.contenedor_monedaR img:hover {
+img:hover {
     transform: scale(1.5);
     transition: transform 0.3s;
 }
 
-.contenedor_moneda img:hover {
-    transform: scale(1.5);
-    transition: transform 0.3s;
+.criptotendencia {
+    position: absolute;
+    top: 44%;
+    right: 15%;
+    width: 20%;
+    height: 25%;
+    z-index: 9;
+}
+
+.coinspeaker {
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    width: 20%;
+    height: 30%;
+    z-index: 9;
+}
+
+.territoriobitcoin {
+    position: absolute;
+    top: 70%;
+    right: 15%;
+    width: 20%;
+    height: 18%;
+    z-index: 9;
 }
 </style>

@@ -3,10 +3,10 @@
     <div class="texto_auditoria">
         <p>audited by the <br>most reliable companies</p>
     </div>
-    <div class="circuito-izquierdo">
+    <div class="circuito circuito-izquierdo">
         <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
     </div>
-    <div class="circuito-derecho">
+    <div class="circuito circuito-derecho">
         <img src="/img/calculadora/circuito-derecho.png" alt="" />
     </div>
     <div class="luces">
@@ -17,7 +17,7 @@
         <a href="https://solidity.finance/audits/MONNERVERSE/" target="_blank"><img src="/img/Exchanges/mesa1.png"
                 class="auditoria1"></a>
         <a><img src="/img/Exchanges/mesa2.png" class="auditoria2"></a>
-        <button class="btn_registro">registro EEUU</button>
+        <button class="btn_registro" @click="reDirect">registro EEUU</button>
     </div>
     <div class="circulos">
         <img src="/img/imagen1.png">
@@ -44,7 +44,20 @@
 
 </template>
 
-<script></script>
+<script>
+export default {
+    data() {
+        return {
+            event: "click"
+        }
+    },
+    methods: {
+        reDirect() {
+            location.replace("https://sites.google.com/view/whiterpaper-monnerverse/p%C3%A1gina-principal");
+        }
+    }
+}
+</script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
@@ -95,26 +108,22 @@ img {
     z-index: 2;
 }
 
-.circuito-izquierdo {
+.circuito {
     position: absolute;
     z-index: 4;
-    left: -10%;
-    top: 20%;
     height: 80%;
     width: 40%;
     min-width: 30rem;
-    z-index: 3;
+    top: 20%;
+}
+
+.circuito-izquierdo {
+    left: -10%;
 }
 
 .circuito-derecho {
-    position: absolute;
-    z-index: 4;
     right: -10%;
-    top: 20%;
-    height: 80%;
-    width: 40%;
-    min-width: 30rem;
-    z-index: 3;
+    transform: scaleY(-1);
 }
 
 .texto_auditoria {
@@ -185,6 +194,7 @@ img {
     font-weight: 600;
     font-family: Calibri;
     color: white;
+    z-index: 999;
     background: linear-gradient(to right,
             #029F50 0%,
             #0A664E 50%,
@@ -203,7 +213,7 @@ img {
 
 .logo-redes {
     position: absolute;
-    bottom: 0%;
+    bottom: 1rem;
     left: 1rem;
     width: 20rem;
     height: 5rem;
