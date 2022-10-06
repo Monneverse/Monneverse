@@ -14,9 +14,7 @@ import coin from "./componentesCoins.vue";
   <div class="circuito circuito-derecho">
     <img src="/img/calculadora/circuito-derecho.png" alt="" />
   </div>
-  <div class="luces">
-    <img src="/img/luz.png" alt="" />
-  </div>
+
   <div class="degradado_azuliz"></div>
   <div class="degradado_azulde"></div>
   <!--FIN FONDO-->
@@ -30,7 +28,8 @@ import coin from "./componentesCoins.vue";
         capitalizacion="900 M USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of KuCoin token (KCS) would have a value of"
         logo="/img/logo.svg"
-        precio="$ 90.00"
+        precio="90.000"
+        caja="/img/coins/caja.png"
       />
     </div>
     <div class="card_coin">
@@ -42,7 +41,8 @@ import coin from "./componentesCoins.vue";
         capitalizacion="1.05 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of AXIE INFINITY (AXS) would have a value of"
         logo="/img/logo.svg"
-        precio="$ 90.00"
+        precio="105.000"
+        caja="/img/coins/caja.png"
       />
     </div>
     <div class="card_coin">
@@ -54,7 +54,8 @@ import coin from "./componentesCoins.vue";
         capitalizacion="1.30 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of Decentraland (MANA) would have a value of"
         logo="/img/logo.svg"
-        precio="$ 90.00"
+        precio="130.000"
+        caja="/img/coins/caja.png"
       />
     </div>
 
@@ -67,7 +68,8 @@ import coin from "./componentesCoins.vue";
         capitalizacion="2.68 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of  Monero (XRM) would have a value of"
         logo="/img/logo.svg"
-        precio="$ 90.00"
+        precio="268.000"
+        caja="/img/coins/caja.png"
       />
     </div>
     <div class="card_coin">
@@ -79,16 +81,27 @@ import coin from "./componentesCoins.vue";
         capitalizacion="3.72 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of Chainlink (LINK) would have a value of"
         logo="/img/coins/logo.svg"
-        precio="$ 90.00"
+        precio="372.000"
         caja="/img/coins/caja.png"
       />
     </div>
+  </div>
+
+  <div class="cuadros-derecho">
+    <img src="/img/coins/cuadros.svg" alt="" />
+  </div>
+  <div class="cuadros-izquierdo">
+    <img src="/img/coins/cuadros.svg" alt="" />
+  </div>
+  <div class="monner">
+    <h3>MONNER’S TOTAL SUPPLY:</h3>
+    <h1>10.000 (MNR)</h1>
   </div>
 </template>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;400;500;600&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;400;500;600&family=Work+Sans:wght@300;400;500;600;700&display=swap");
 img {
   width: 100%;
   height: 100%;
@@ -127,7 +140,7 @@ img {
 
 .fondo-montana {
   height: 100%;
-  top: 10%;
+  top: 0%;
   left: 0;
   z-index: 3;
 }
@@ -139,16 +152,6 @@ img {
   mix-blend-mode: multiply;
 }
 
-.luces {
-  position: absolute;
-  bottom: -12%;
-  left: -9%;
-  width: 120%;
-  height: 110%;
-  z-index: 5;
-  opacity: 100%;
-}
-
 .degradado_azuliz {
   background: linear-gradient(to right, #08047a 0.5%, transparent);
   position: absolute;
@@ -158,7 +161,6 @@ img {
   right: 50%;
   width: 50%;
   height: 180%;
-  opacity: 70%;
 }
 
 .degradado_azulde {
@@ -169,7 +171,6 @@ img {
   left: 50%;
   width: 50%;
   height: 180%;
-  opacity: 70%;
   z-index: 7;
 }
 
@@ -188,22 +189,62 @@ img {
 
 .circuito-derecho {
   right: -10%;
-  transform: scaleY(-1);
 }
 
 /* FIN ESTILO FONDO */
 
 .contenedor_coins {
   position: absolute;
-  width: 100%;
+  z-index: 14;
+  width: 95%;
   height: 90%;
-  bottom: 0;
-  margin: 0 auto;
-  z-index: 17;
-  display: flex;
-  justify-content: center;
+  left: 2.5%;
+  bottom: -2%;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
+  align-items: stretch;
 }
-.contenedor_coins .card_coin {
+
+.cuadros-derecho {
   width: 20%;
+  position: absolute;
+  top: 90%;
+  z-index: 18;
+  transform: rotate(600grad);
+}
+.cuadros-izquierdo {
+  width: 20%;
+  position: absolute;
+  top: 90%;
+  right: 0;
+  z-index: 18;
+}
+.monner {
+  position: absolute;
+  top: 88%;
+  left: 35%;
+  z-index: 456;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  height: 20%;
+
+}
+.monner h3{
+  color: rgb(18, 225, 142);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 600;
+
+}
+
+.monner h1{
+  color: #ffffff;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 3vw;
+  font-weight: 600;
+
 }
 </style>
