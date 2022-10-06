@@ -1,12 +1,13 @@
 <template>
   <video src="/video/video_binariov2.mp4" autoplay="true" muted="true" loop="true" class="video-fondo"
     poster="/img/fondo_binario.png" />
-  <div id="logo-5" class="logo">
+  <div id="logo-1" class="logo">
     <img src="/img/logo_empresa.png" alt="" />
   </div>
-  <div id="logo-6" class="logo">
+  <div id="logo-2" class="logo">
     <img src="/img/logo_empresa.png" alt="" />
   </div>
+
   <div class="fondo-montana">
     <img src="/img/fondo-montana.png" alt="" srcset="" />
   </div>
@@ -75,7 +76,7 @@ img {
   opacity: 40%;
 }
 
-#logo-5 {
+#logo-1 {
   max-width: 28rem;
   max-height: 20rem;
   position: absolute;
@@ -88,7 +89,7 @@ img {
   opacity: 50%;
 }
 
-#logo-6 {
+#logo-2 {
   right: 26%;
   top: 8%;
   z-index: 5;
@@ -162,6 +163,77 @@ img {
   left: 55%;
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+
+  .video-fondo {
+    width: 100em;
+    height: 100em;
+  }
+
+  .fondo-mundial {
+    position: absolute;
+    top: 11em;
+    left: -10em;
+    width: 50em;
+    height: 40em;
+    z-index: 7;
+    opacity: 90%;
+  }
+
+  .fondo-montana {
+    display: none;
+  }
+
+  .fondo-oscuro {
+    position: absolute;
+    top: 0;
+    left: -15em;
+    width: 50em;
+    height: 80em;
+    background: radial-gradient(circle at center,
+        #48d0ab 10%,
+        #097561 30%,
+        #0F161C 100%);
+    z-index: 3;
+    opacity: 70%;
+  }
+
+  .degradado {
+    position: absolute;
+    top: 0em;
+  }
+
+  .degradado_derecho {
+    width: 50em;
+    opacity: 100%;
+  }
+
+  .degradado_izquierdo {
+    display: none;
+  }
+
+  #logo-1 {
+    width: 17em;
+    max-height: 14rem;
+    position: absolute;
+    top: 0;
+    left: -1em;
+    right: 50%;
+    bottom: -58%;
+    z-index: 6;
+    opacity: 60%;
+  }
+
+  #logo-2 {
+    width: 14em;
+    left: 10em;
+    top: 10em;
+    z-index: 5;
+    opacity: 70%;
+  }
+
+}
+
 .welcome {
   position: fixed;
   display: flex;
@@ -208,5 +280,49 @@ img {
 .welcome_text p span {
   color: #FFC000;
   font-size: 3.5vw;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .welcome {
+    position: absolute;
+    justify-content: center;
+    top: 5em;
+    left: 0.6em;
+    width: 100%;
+    z-index: 6;
+  }
+
+  .welcome p {
+    font-size: 16.2vw;
+    font-family: "Bahnschrift", sans-serif;
+    color: white;
+    text-align: left;
+  }
+
+  .welcome_text {
+    position: absolute;
+    top: 16em;
+    left: 1em;
+    justify-content: center;
+    width: 83%;
+    z-index: 9;
+  }
+
+  .welcome_text p {
+    font-size: 6vw;
+    font-family: "Bahnschrift", sans-serif;
+    color: white;
+    text-align: left;
+    text-transform: capitalize;
+  }
+
+  .welcome_text p b {
+    text-transform: uppercase;
+  }
+
+  .welcome_text p span {
+    color: #FFC000;
+    font-size: 14.5vw;
+  }
 }
 </style>
