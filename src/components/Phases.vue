@@ -30,7 +30,7 @@ import fasesComponentes from './fasesComponentes.vue';
         <img src="/img/imagen1.png">
     </div>
 
-    <button class="readMore" @click="reDirect">
+    <button class="readMore" @click="LearnMore">
         Learn More
     </button>
 
@@ -63,7 +63,8 @@ export default {
         }
     },
     methods: {
-        reDirect() {
+        LearnMore() {
+            var btn = document.getElementsByClassName("readMore");
             location.replace("https://sites.google.com/view/community-monnerverse/p%C3%A1gina-principal");
         }
     }
