@@ -210,4 +210,19 @@ export default {
 .btn:hover {
   background-color: #b48700;
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+
+  .barra {
+    display: none;
+  }
+
+  .btn {
+    position: absolute;
+    top: 31em;
+    left: 11em;
+    padding: 1.3rem;
+    font-size: 4.8vw;
+  }
+}
 </style>
