@@ -21,6 +21,15 @@
   <div class="fondo filtro-superior"></div>
   <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
   <div class="fondo fondo-oscurecer"></div>
+  <div class="fondo-mundial">
+    <img src="/img/fondo-mundial.png" alt="" srcset="" />
+  </div>
+  <div id="logo-1" class="logo">
+    <img src="/img/logo_empresa.png" alt="" />
+  </div>
+  <div id="logo-2" class="logo">
+    <img src="/img/logo_empresa.png" alt="" />
+  </div>
   <div class="circuito-izquierdo">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
   </div>
@@ -154,9 +163,50 @@ img {
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
   .degradado {
-    top: 2em;
+    top: -3em;
+    left: 5.5em;
   }
 
+  .degradado_izquierdo {
+    display: none
+  }
+
+  .fondo-montana {
+    width: 40em;
+    height: 35em;
+    left: -10em;
+    top: 10em;
+  }
+
+  .circuito-derecho {
+    display: none;
+  }
+
+  .circuito-izquierdo {
+    display: none;
+  }
+
+  .fondo-mundial {
+    position: absolute;
+    top: 5em;
+    left: -15em;
+    width: 50em;
+    height: 40em;
+    opacity: 100%;
+    z-index: 3;
+  }
+
+  .semi-circle {
+    display: none;
+  }
+
+  #logo-1 {
+    position: absolute;
+    top: 28em;
+    left: -4%;
+    opacity: 50%;
+    z-index: 4;
+  }
 }
 
 /*FIN ESTILO FONDO*/
@@ -200,6 +250,31 @@ img {
 
 .mastercard_img img:hover {
   transform: scale(1.2);
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .mastercard_img {
+    position: absolute;
+    width: 9em;
+    height: 9em;
+    top: 12em;
+    left: 12em;
+  }
+
+  .visa_img {
+    position: absolute;
+    width: 9em;
+    height: 9em;
+    top: 12em;
+    left: 1em;
+  }
+
+  .upcoming_alliance {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    font-size: 12vw;
+  }
 }
 
 .circulos_redes {
