@@ -6,14 +6,14 @@
     <img src="/img/Alianzas/visa.png" />
   </div>
   <div class="mastercard_img">
-    <img src="/img/Alianzas/masterCard.png" />
+    <img src="/img/Alianzas/mastercard.png" />
   </div>
   <div class="circulos_redes">
     <div class="semi_circle">
       <img src="/img/semi_circulo.png" />
     </div>
     <div class="circle">
-      <img src="/img/Semi_circulo1.png" />
+      <img src="/img/semi_circulo1.png" />
     </div>
   </div>
   <!--FONDO-->
