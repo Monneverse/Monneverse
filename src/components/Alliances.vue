@@ -45,7 +45,7 @@ defineProps({
     }"
     class="fondo"
   >
-    <img src="img/red.png" alt="" />
+    <img src="/img/red.png" alt="" />
   </div>
 
   <!--CIRCULOS-->
@@ -103,7 +103,7 @@ defineProps({
       'animacion-aparecer': index_pagina == 2,
     }"
   >
-    <img src="img/puntero.svg" alt="" />
+    <img src="/img/puntero.svg" alt="" />
   </div>
 
   <div class="degradado degradado_izquierdo"></div>

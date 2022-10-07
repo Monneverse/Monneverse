@@ -18,10 +18,10 @@ defineProps({
         'animacion-desplazamiento': index_pagina == 12,
       }"
     >
-      <img src="img/rayos.png" alt="" />
+      <img src="/img/rayos.png" alt="" />
     </div>
     <div class="rectangulo">
-      <img src="img/rectangulo.svg" alt="" />
+      <img src="/img/rectangulo.svg" alt="" />
     </div>
     <div class="logo">
       <img src="/img/logo.svg" alt="logo monneverse" />

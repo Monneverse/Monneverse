@@ -15,7 +15,7 @@ defineProps({
     <div
       :class="{ fondo_rayos: true, 'animacion-aparecer': index_pagina == 8 }"
     >
-      <img src="img/rayos.png" alt="" />
+      <img src="/img/rayos.png" alt="" />
     </div>
     <div
       :class="{ circuito: true, 'animacion-circuito': index_pagina == 8 }"
@@ -24,7 +24,7 @@ defineProps({
       <img src="/img/calculadora/circuito-derecho.png" alt="" />
     </div>
     <div :class="{ rectangulo: true, 'animacion-aparecer': index_pagina == 8 }">
-      <img src="img/rectangulo.svg" alt="" />
+      <img src="/img/rectangulo.svg" alt="" />
     </div>
     <div class="logo">
       <img src="/img/logo.svg" alt="logo monneverse" />

@@ -26,14 +26,14 @@
   <div class="contenido">
     <div class="calculadora">
       <div :class="{ circulo: true, 'aparecer-animation': index_pagina == 4 }">
-        <img src="../assets/circulo-blanco.svg" srcset="aro white" />
+        <img src="../assets/circulo-blanco.svg" />
       </div>
 
       <div :class="{
         circulo: true,
         'circulo-superior-animation': index_pagina == 4,
       }">
-        <img src="../assets/circulo-colores.svg" alt="aro multikolor" />
+        <img src="../assets/circulo-colores.svg" alt="aro-multikolor" />
       </div>
 
       <img class="circulo circulo-verde" src="../assets/circulo-verde.svg" alt="circle green">
