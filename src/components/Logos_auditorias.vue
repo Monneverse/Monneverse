@@ -20,7 +20,7 @@
         <button class="btn_registro" @click="reDirect">registro EEUU</button>
     </div>
     <div class="circulos">
-        <img src="/img/imagen1.png">
+        <img src="/img/Imagen1.png">
     </div>
     <div class="logo-redes">
         <div class="icon icon-telegram">

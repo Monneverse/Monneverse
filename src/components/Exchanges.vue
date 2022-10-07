@@ -52,7 +52,7 @@ import ComponenteIconos from "./componenteIconos.vue";
       <ComponenteIconos iconos="/img/Exchanges/xtcom.svg" iconname="xt.com" />
     </div>
     <div class="poloniex">
-      <ComponenteIconos iconos="/img/Exchanges/Poloniex.svg" iconname="poloniex" />
+      <ComponenteIconos iconos="/img/Exchanges/poloniex.svg" iconname="poloniex" />
     </div>
     <div class="hotbit">
       <ComponenteIconos iconos="/img/Exchanges/hotbit.svg" iconname="hotbit" />

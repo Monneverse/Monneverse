@@ -28,7 +28,7 @@ import fasesComponentes from './fasesComponentes.vue';
     </div>
 
     <div class="circulos">
-        <img src="/img/imagen1.png">
+        <img src="/img/Imagen1.png">
     </div>
 
     <button class="readMore" @click="reDirect">
@@ -36,7 +36,7 @@ import fasesComponentes from './fasesComponentes.vue';
     </button>
 
     <div class="circulos1">
-        <img src="/img/imagen1.png">
+        <img src="/img/Imagen1.png">
     </div>
 
     <div class="componentes1">
