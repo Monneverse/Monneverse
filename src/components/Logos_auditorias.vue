@@ -62,6 +62,11 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
 
+@font-face {
+    font-family: "Bahn";
+    src: url("/../../public/Fonts/BAHNSCHRIFT.TTF");
+}
+
 img {
     height: 100%;
     width: 100%;
@@ -93,7 +98,7 @@ img {
     top: 0%;
     right: 50%;
     width: 50%;
-    height: 180%;
+    height: 200%;
     z-index: 2;
 }
 
@@ -104,7 +109,7 @@ img {
     top: -12%;
     left: 50%;
     width: 50%;
-    height: 180%;
+    height: 200%;
     z-index: 2;
 }
 
@@ -129,7 +134,7 @@ img {
 .texto_auditoria {
     position: absolute;
     top: 20%;
-    left: 25%;
+    left: 28%;
     color: white;
     text-align: center;
     justify-content: center;
@@ -139,7 +144,7 @@ img {
 
 .texto_auditoria p {
     font-size: 3vw;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Bahn";
     font-weight: 500;
     text-transform: uppercase;
 }

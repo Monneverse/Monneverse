@@ -7,44 +7,31 @@ defineProps({
 });
 </script>
 <template>
-  <div
-    :class="{
-      logo: true,
-      'animacion-logo': index_pagina == 2,
-    }"
-  >
+  <div :class="{
+    logo: true,
+    'animacion-logo': index_pagina == 2,
+  }">
     <img src="/img/logo.svg" alt="logo monneverse" />
   </div>
 
   <!--FONDO-->
   <div class="fondo-video">
-    <video
-      src="/video/video_binario.mp4"
-      autoplay="true"
-      muted="true"
-      loop="true"
-      poster="/img/fondo_binario.png"
-    ></video>
+    <video src="/video/video_binario.mp4" autoplay="true" muted="true" loop="true"
+      poster="/img/fondo_binario.png"></video>
   </div>
 
   <div class="fondo filtro-superior"></div>
-  <div
-    :class="{
-      'fondo-montana': true,
-      'fondo-montana-animation': index_pagina == 2,
-    }"
-    class="fondo"
-  >
+  <div :class="{
+    'fondo-montana': true,
+    'fondo-montana-animation': index_pagina == 2,
+  }" class="fondo">
     <img src="/img/fondo-montana.png" />
   </div>
   <div class="fondo fondo-oscurecer"></div>
-  <div
-    :class="{
-      'fondo-red': true,
-      'animacion-aparecer': index_pagina == 2,
-    }"
-    class="fondo"
-  >
+  <div :class="{
+    'fondo-red': true,
+    'animacion-aparecer': index_pagina == 2,
+  }" class="fondo">
     <img src="/img/red.png" alt="" />
   </div>
 
@@ -66,28 +53,20 @@ defineProps({
   </div>
 
   <div class="alianzas">
-    <a href="https://www.reddit.com/user/monnerverse"
-      ><span><img src="/img/Alianzas/reddit.png" /></span>REDDIT</a
-    >
+    <a href="https://www.reddit.com/user/monnerverse"><span><img src="/img/Alianzas/reddit.png" /></span>REDDIT</a>
     <!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
 
-    <a href="https://t.me/monnerversecommunity"
-      ><span><img src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a
-    >
+    <a href="https://t.me/monnerversecommunity"><span><img src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a>
     <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 
-    <a href="https://discord.com/invite/h7fRvek9dn"
-      ><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a
-    >
+    <a href="https://discord.com/invite/h7fRvek9dn"><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a>
     <!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
   </div>
 
-  <div
-    :class="{
-      semi_circulo: true,
-      'animacion-arco': index_pagina == 2,
-    }"
-  >
+  <div :class="{
+    semi_circulo: true,
+    'animacion-arco': index_pagina == 2,
+  }">
     <img src="../assets/aro-iluminado-brillante.svg" alt="" />
   </div>
 
@@ -97,12 +76,10 @@ defineProps({
     <img src="../assets/methodBuy/masterCard.svg" alt="" />
   </div>
 
-  <div
-    :class="{
-      puntero: true,
-      'animacion-aparecer': index_pagina == 2,
-    }"
-  >
+  <div :class="{
+    puntero: true,
+    'animacion-aparecer': index_pagina == 2,
+  }">
     <img src="/img/puntero.svg" alt="" />
   </div>
 
@@ -121,6 +98,7 @@ defineProps({
   height: 5rem;
   z-index: 12;
 }
+
 .animacion-logo {
   animation-name: animar-logo;
   animation-duration: 0.5s;
@@ -137,6 +115,7 @@ defineProps({
     z-index: 1;
     opacity: 10%;
   }
+
   100% {
     position: absolute;
     top: 2rem;
@@ -147,6 +126,7 @@ defineProps({
     opacity: 100%;
   }
 }
+
 .fondo {
   top: 0;
   left: 0;
@@ -173,12 +153,10 @@ defineProps({
 .filtro-superior {
   position: absolute;
   z-index: 1;
-  background: radial-gradient(
-    circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
-  );
+  background: radial-gradient(circle at center,
+      #f9f9fa 0%,
+      #c8ced4 50%,
+      #a8aaaf 100%);
   mix-blend-mode: multiply;
 }
 
@@ -189,6 +167,7 @@ defineProps({
   height: 75%;
   z-index: 2;
 }
+
 .fondo-montana-animation img {
   animation-duration: 0.5s;
   animation-name: fondo-montana-animation;
@@ -223,30 +202,38 @@ defineProps({
   height: 75%;
   z-index: 3;
 }
+
 @media screen and (max-width: 768px) {
   .fondo-montana {
     display: none;
   }
+
   .fondo-oscurecer {
     display: none;
   }
+
   .fondo-red {
     display: none;
   }
+
   .fondo-video {
     display: none;
   }
 }
+
 @media screen and (max-width: 480px) {
   .fondo-montana {
     display: none;
   }
+
   .fondo-oscurecer {
     display: none;
   }
+
   .fondo-red {
     display: none;
   }
+
   .fondo-video {
     display: none;
   }
@@ -260,6 +247,7 @@ defineProps({
   left: 10%;
   z-index: 5;
 }
+
 @media screen and (max-width: 768px) {
   .circulo img {
     width: 70%;
@@ -268,6 +256,7 @@ defineProps({
     left: 17%;
   }
 }
+
 @media screen and (max-width: 480px) {
   .circulo img {
     top: 22%;
@@ -283,6 +272,7 @@ defineProps({
   left: 15%;
   z-index: 7;
 }
+
 @media (max-width: 768px) {
   .circulo-medio img {
     width: 60%;
@@ -291,6 +281,7 @@ defineProps({
     left: 22%;
   }
 }
+
 @media (max-width: 480px) {
   .circulo-medio img {
     top: 27%;
@@ -314,8 +305,8 @@ defineProps({
   color: black;
   display: flex;
   flex-direction: column;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 400;
+  font-family: Calibri;
+  font-weight: 600;
   font-size: 1.3vw;
 }
 
@@ -339,9 +330,11 @@ defineProps({
   height: 3rem;
   margin: auto auto;
 }
+
 .alianzas a span:hover {
   cursor: pointer;
 }
+
 @media (max-width: 768px) {
   .alianzas {
     margin: 0;
@@ -353,6 +346,7 @@ defineProps({
     display: flex;
     justify-content: space-between;
   }
+
   .alianzas img {
     top: 15%;
     width: 7vw;
@@ -362,6 +356,7 @@ defineProps({
   .alianzas a {
     font-size: 2vw;
   }
+
   .alianzas a span {
     padding: 0;
     margin: 0 auto;
@@ -369,6 +364,7 @@ defineProps({
     height: 9vw;
   }
 }
+
 @media (max-width: 480px) {
   .alianzas {
     margin: 0;
@@ -380,6 +376,7 @@ defineProps({
     display: flex;
     justify-content: space-between;
   }
+
   .alianzas img {
     top: 15%;
     width: 7vw;
@@ -389,6 +386,7 @@ defineProps({
   .alianzas a {
     font-size: 2vw;
   }
+
   .alianzas a span {
     padding: 0;
     margin: 0 auto;
@@ -407,6 +405,7 @@ defineProps({
   top: 15%;
   left: 0%;
 }
+
 @media screen and (max-width: 768px) {
   .semi_circulo img {
     width: 73%;
@@ -415,6 +414,7 @@ defineProps({
     left: 15.5%;
   }
 }
+
 @media screen and (max-width: 480px) {
   .semi_circulo img {
     top: 15%;
@@ -451,25 +451,28 @@ defineProps({
 
 .rectangulo p {
   top: 76%;
-  left: 35.5%;
+  left: 37.5%;
   position: absolute;
   z-index: 15;
   color: #ffffff;
-  font-family: "Work Sans", sans-serif;
+  font-family: Calibri;
   font-size: 2.6vw;
   font-weight: 400;
 }
+
 @media screen and (max-width: 768px) {
   .rectangulo img {
     top: 51%;
     left: 14.5%;
   }
+
   .rectangulo p {
     font-size: 3.5vw;
     top: 70%;
     left: 32.5%;
   }
 }
+
 @media (max-width: 480px) {
   .rectangulo img {
     width: 95%;
@@ -478,6 +481,7 @@ defineProps({
     left: 2.5%;
     display: none;
   }
+
   .rectangulo p {
     font-size: 4vw;
     top: 72%;
@@ -493,6 +497,7 @@ defineProps({
   left: 15%;
   z-index: 11;
 }
+
 @media screen and (max-width: 768px) {
   .rectangulo-medio img {
     width: 85%;
@@ -527,18 +532,22 @@ defineProps({
 .imagenes img {
   width: 12vw;
 }
+
 .imagenes img:last-child {
   width: 9.5vw;
 }
+
 @media screen and (max-width: 768px) {
   .imagenes {
     top: 50%;
     left: 31%;
     width: 40%;
   }
+
   .imagenes img {
     width: 15vw;
   }
+
   .imagenes img:last-child {
     width: 12vw;
   }
@@ -554,11 +563,13 @@ defineProps({
   top: 84%;
   left: 40%;
 }
+
 @media screen and (max-width: 768px) {
   .puntero {
     display: none;
   }
 }
+
 @media screen and (max-width: 480px) {
   .puntero {
     display: none;
@@ -587,6 +598,7 @@ defineProps({
   transform: rotate(230deg);
   left: 55%;
 }
+
 .animacion-aparecer {
   animation-duration: 0.5s;
   animation-name: aparecer;

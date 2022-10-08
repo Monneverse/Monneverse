@@ -39,7 +39,11 @@ export default {};
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
-@import url("http://fonts.cdnfonts.com/css/bahnschrift");
+
+@font-face {
+  font-family: "Bahn";
+  src: url("/../../public/Fonts/BAHNSCHRIFT.TTF");
+}
 
 img {
   width: 100%;
@@ -241,12 +245,13 @@ img {
   top: 25%;
   left: 5%;
   width: 30%;
-  z-index: 6;
+  z-index: 7;
 }
 
 .welcome p {
   font-size: 4.8vw;
-  font-family: "Bahnschrift", sans-serif;
+  font-weight: 600;
+  font-family: "Bahn";
   color: white;
   text-align: left;
 }
@@ -261,13 +266,13 @@ img {
   top: 50.8%;
   left: 5%;
   justify-content: center;
-  width: 40%;
-  z-index: 6;
+  width: 32%;
+  z-index: 7;
 }
 
 .welcome_text p {
+  font-family: Calibri;
   font-size: 2vw;
-  font-family: "Bahnschrift", sans-serif;
   color: white;
   text-align: left;
   text-transform: capitalize;
@@ -280,6 +285,7 @@ img {
 .welcome_text p span {
   color: #FFC000;
   font-size: 3.5vw;
+  font-family: "Bahn";
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
@@ -294,7 +300,7 @@ img {
 
   .welcome p {
     font-size: 16.2vw;
-    font-family: "Bahnschrift", sans-serif;
+    font-family: "Bahn";
     color: white;
     text-align: left;
   }
@@ -310,7 +316,7 @@ img {
 
   .welcome_text p {
     font-size: 6vw;
-    font-family: "Bahnschrift", sans-serif;
+    font-family: "Bahn";
     color: white;
     text-align: left;
     text-transform: capitalize;

@@ -56,10 +56,12 @@ img {
 
 .divDesc p {
     font-size: 1.3vw;
+    font-family: Roboto;
 }
 
 .divDesc b {
     font-size: 1.8vw;
+    font-family: "Work Sans";
 }
 
 .circulo-indicador {

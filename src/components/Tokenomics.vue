@@ -40,7 +40,9 @@ export default {
         </div>
       </div>
 
-      <div class=""><p>To buy 9% slip</p></div>
+      <div class="">
+        <p>To buy 9% slip</p>
+      </div>
       <div class="">
         <p>Automatic LP 3% of order fees go back into liquidity</p>
       </div>
@@ -67,9 +69,13 @@ export default {
     </div>
     <div class="sale-tax">
       <div class="">
-        <div class="titulo2"><h2>Sale Tax</h2></div>
+        <div class="titulo2">
+          <h2>Sale Tax</h2>
+        </div>
       </div>
-      <div class=""><p>To buy 10% slip</p></div>
+      <div class="">
+        <p>To buy 10% slip</p>
+      </div>
       <div class="">
         <p>Automatic LP 3% of order fees go back into liquidity</p>
       </div>
@@ -121,12 +127,14 @@ img {
   display: flex;
   justify-content: center;
 }
+
 .titulo h1 {
   color: white;
   font-family: "Work Sans", sans-serif;
   font-size: 3.5vw;
   font-weight: 500;
 }
+
 .fondo {
   position: absolute;
   top: 0;
@@ -136,6 +144,7 @@ img {
   background-color: black;
   z-index: 0;
 }
+
 .fondo-oscurecer {
   position: absolute;
   z-index: 42;
@@ -152,6 +161,7 @@ img {
   height: 100%;
   z-index: 1;
 }
+
 .imagen_Eclipse {
   position: absolute;
   z-index: 34;
@@ -182,19 +192,21 @@ img {
   position: relative;
   left: 30%;
   display: grid;
-  grid-template-rows: 16% 16% 16% 16% 16% 16%;
-  font-family: "Work Sans", sans-serif;
+  grid-template-rows: 15% 15% 15% 15% 15% 15%;
+  font-family: Calibri;
   color: white;
   width: 70%;
 }
+
 .purchase-tax h2 {
   text-align: right;
   font-size: 2vw;
   font-weight: 500;
 }
+
 .purchase-tax p {
   text-align: right;
-  font-size: 1.4vw;
+  font-size: 1.5vw;
 }
 
 .titulo1 {
@@ -205,53 +217,59 @@ img {
   align-items: center;
   height: 50%;
   width: 77%;
-  background: linear-gradient(
-    90deg,
-    rgb(33, 32, 85) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%);
   border-radius: 0.5vw;
 }
+
 .titulo1 h2 {
   padding-right: 10%;
+  font-family: Calibri;
 }
+
 .plus {
   display: grid;
-  grid-template-rows: 16% 16% 16% 16% 16% 16%;
+  grid-template-rows: 15% 15% 15% 15% 15% 15%;
 }
+
 .plus img {
   margin: 0 auto;
   height: 50%;
 }
+
 .sale-tax {
   position: relative;
   display: grid;
-  grid-template-rows: 16% 16% 16% 16% 16% 16%;
-  font-family: "Work Sans", sans-serif;
+  grid-template-rows: 15% 15% 15% 15% 15% 15%;
+  font-family: Calibri;
   color: white;
   width: 70%;
 }
+
 .sale-tax h2 {
   font-size: 2vw;
   font-weight: 500;
 }
+
 .sale-tax p {
-  font-size: 1.4vw;
+  font-size: 1.5vw;
 }
+
 .titulo2 {
   display: flex;
   align-items: center;
   height: 50%;
   width: 77%;
-  background: linear-gradient(
-    90deg,
-    rgb(1, 209, 88) 0%,
-    rgba(33, 32, 85, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(1, 209, 88) 0%,
+      rgba(33, 32, 85, 1) 100%);
   border-radius: 0.5vw;
 }
+
 .titulo2 h2 {
   padding-left: 10%;
+  font-family: Calibri;
 }
 
 .container-alianza {
@@ -260,7 +278,6 @@ img {
   bottom: 0%;
   width: 100%;
   height: 10%;
-
   z-index: 50;
   display: flex;
   justify-content: center;
@@ -274,15 +291,17 @@ img {
   align-items: center;
   opacity: 70%;
 }
+
 .nombre_Alianza {
   width: 100%;
   display: flex;
 }
+
 .nombre_Alianza h1 {
   text-align: center;
   width: 100%;
   color: white;
-  font-family: "Work Sans", sans-serif;
+  font-family: Calibri;
   font-size: 2.5vw;
   font-weight: 500;
 }
@@ -292,7 +311,8 @@ img {
   align-items: center;
   width: 100%;
 }
-.imagen-alianza img:first-of-type{
+
+.imagen-alianza img:first-of-type {
 
   width: 6vw;
 }

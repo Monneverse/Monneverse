@@ -527,11 +527,10 @@ img {
   width: 100%;
   text-align: center;
   user-select: none;
-
-  font-family: "Work Sans";
+  font-family: "Work Sans", sans-serif;
   color: #c27e01;
   font-size: 6vh;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 
@@ -562,19 +561,21 @@ img {
   left: 6rem;
   max-width: 30rem;
   z-index: 9;
-  font-family: "Work Sans";
+  font-family: "Work Sans", sans-serif;
   color: white;
 }
 
 .informacion #title {
   font-size: 10vh;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
 }
 
 
 
 .informacion #title span {
   color: #01c28d;
-  font-family: "Work Sans";
+  font-family: "Work Sans", sans-serif;
 }
 
 .informacion #descripcion {
