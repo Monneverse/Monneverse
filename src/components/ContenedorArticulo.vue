@@ -27,6 +27,8 @@ import Articulo from "./Articulo.vue";
     <div class="time">
       <div class="titulo_Tiempo">
         <h2>Pre Sale Time</h2>
+        <br>
+        <br>
       </div>
       <div class="temporizador">
 
@@ -205,12 +207,12 @@ export default {
 
 @font-face {
   font-family: LCDFONT;
-  src: url("/../../Fonts/LCDFONT.TTF")
+  src: url("/Fonts/LCDFONT.TTF")
 }
 
 @font-face {
   font-family: "Bahn";
-  src: url("/../../public/Fonts/BAHNSCHRIFT.TTF");
+  src: url("/Fonts/BAHNSCHRIFT.TTF");
 }
 
 img {
@@ -246,7 +248,7 @@ img {
 
 .circuloFondo1 {
   top: 25%;
-  left: 35%;
+  left: 39%;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -258,7 +260,7 @@ img {
 
 .circuloFondo2 {
   top: 18%;
-  left: 30%;
+  left: 34%;
   position: absolute;
   display: flex;
   justify-content: center;

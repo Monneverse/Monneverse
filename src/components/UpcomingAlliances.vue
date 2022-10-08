@@ -143,7 +143,7 @@ img {
 }
 
 .degradado {
-  background: linear-gradient(to right, #08047a 0.5%, transparent);
+  background: linear-gradient(to right, #040077 50%, transparent);
   position: absolute;
   width: 50%;
   height: 180%;
@@ -153,7 +153,7 @@ img {
 
 .degradado_izquierdo {
   transform: rotate(-60deg);
-  right: 50%;
+  right: 55%;
 }
 
 .degradado_derecho {
@@ -219,7 +219,7 @@ img {
 .upcoming_alliance h1 {
   position: absolute;
   top: 17%;
-  right: 24%;
+  right: 23%;
   color: white;
   font-size: 5vw;
   font-family: Custom;
@@ -232,7 +232,7 @@ img {
   height: 31%;
   top: 37%;
   left: 21%;
-  z-index: 5;
+  z-index: 7;
 }
 
 .visa_img img:hover {
@@ -241,11 +241,11 @@ img {
 
 .mastercard_img {
   position: absolute;
-  width: 16%;
+  width: 18%;
   height: 32%;
   top: 37%;
-  right: 25%;
-  z-index: 5;
+  right: 23%;
+  z-index: 7;
 }
 
 .mastercard_img img:hover {
