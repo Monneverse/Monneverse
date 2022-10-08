@@ -1,5 +1,5 @@
 <script setup>
-import fasesComponentes from './fasesComponentes.vue';
+import fasesComponentes from './ComponentsPhases.vue';
 </script>
         
 <template>
@@ -183,12 +183,14 @@ img {
     opacity: 100%;
     text-transform: uppercase;
     z-index: 6;
+    font-family: "work Sans";
 }
 
 .description {
     color: white;
     width: 45%;
     font-size: 1.2vw;
+    font-family: Roboto;
 }
 
 .circulos {

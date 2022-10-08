@@ -36,21 +36,21 @@ import Articulo from "./Articulo.vue";
             <h4>Días</h4>
           </div>
           <div class="primerPunto">
-            <h1>:</h1>
+            <h2>:</h2>
           </div>
           <div class="temporizadorHoras">
             <h1>{{ horaString }}</h1>
             <h4>Horas</h4>
           </div>
           <div class="segundoPunto">
-            <h1>:</h1>
+            <h2>:</h2>
           </div>
           <div class="temporizadorMinutos">
             <h1>{{ minutoString }}</h1>
             <h4>Minutos</h4>
           </div>
           <div class="tercerPunto">
-            <h1>:</h1>
+            <h2>:</h2>
           </div>
           <div class="temporizadorSegundos">
             <h1>{{ segundoString }}</h1>
@@ -156,7 +156,7 @@ export default {
         },
 
       ],
-      fechaEvento: new Date(2022, 9, 8, 1, 0, 0, 0),
+      fechaEvento: new Date(2022, 9, 12, 4, 0, 0, 0),
       diaString: "00",
       horaString: "00",
       minutoString: "00",
@@ -202,6 +202,16 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: LCDFONT;
+  src: url("/../../public/Fonts/LCDFONT.TTF")
+}
+
+@font-face {
+  font-family: "Bahn";
+  src: url("/../../public/Fonts/BAHNSCHRIFT.TTF");
+}
 
 img {
   height: 100%;
@@ -344,7 +354,7 @@ img {
   border-radius: 0.5rem;
   background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
   color: white;
-  font-family: "Work Sans", sans-serif;
+  font-family: Calibri;
   font-size: 150%;
   display: flex;
   justify-content: center;
@@ -373,17 +383,22 @@ img {
   height: 80%;
 }
 
-h1 {
-  font-weight: bold;
+.titulo_Tiempo h2 {
+  font-family: "Bahn";
+  color: white;
 }
 
 h1,
 h2,
-
 h4 {
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
   color: white;
+}
+
+.bloque_temporizador h1 {
+  font-family: "LCDFONT";
+  font-weight: 300;
 }
 
 .bloque_temporizador {
@@ -401,6 +416,7 @@ h4 {
   padding: 1rem;
   margin: 0 auto;
 }
+
 
 .temporizadorDias {
   position: absolute;

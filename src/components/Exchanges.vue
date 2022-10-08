@@ -98,7 +98,7 @@ img {
   top: 28%;
   left: 5%;
   height: 20%;
-  width: 30%;
+  width: 20%;
   text-align: space-between;
   font-size: 4vw;
   text-transform: uppercase;
@@ -112,7 +112,7 @@ img {
       #38a6b7 40%,
       #5884bb 60%,
       #11334e 100%);
-  font-family: "Work Sans", sans-serif;
+  font-family: Calibri;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

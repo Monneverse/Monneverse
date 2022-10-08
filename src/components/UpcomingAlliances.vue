@@ -222,7 +222,7 @@ img {
   right: 24%;
   color: white;
   font-size: 5vw;
-  font-family: "Work Sans", sans-serif;
+  font-family: Custom;
   z-index: 5;
 }
 

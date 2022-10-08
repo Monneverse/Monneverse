@@ -12,12 +12,10 @@ defineProps({
   <!--FONDO-->
 
   <div class="fondo">
-    <div
-      :class="{
-        fondo_rayos: true,
-        'animacion-desplazamiento': index_pagina == 9,
-      }"
-    >
+    <div :class="{
+      fondo_rayos: true,
+      'animacion-desplazamiento': index_pagina == 9,
+    }">
       <img src="/img/rayos.png" alt="" />
     </div>
     <div class="rectangulo">
@@ -41,17 +39,19 @@ defineProps({
       <h1>BENEFITS</h1>
     </div>
 
-    <div
-      :class="{
-        benefits: true,
-        aparecer: index_pagina == 9,
-      }"
-    >
-    
+    <div :class="{
+      benefits: true,
+      aparecer: index_pagina == 9,
+    }">
+
       <div class="contenedor">
         <p>
 
-          Our staking platform is safe and reliable. We offer you a system that works by phases, backed up by Bank Security, where the Monnercoin will be your entry-ticket to a much-wider world! We want Monner to become one of the main 25 cryptocurrencies in the world! To do that, we rely on a limited and privileged supply of 10.000.000 Monnercoin and scheduled burns what are you waiting for? A universe full of opportunities is expecting you to unravel it!
+          Our staking platform is safe and reliable. We offer you a system that works by phases, backed up by Bank
+          Security, where the Monnercoin will be your entry-ticket to a much-wider world! We want Monner to become one
+          of the main 25 cryptocurrencies in the world! To do that, we rely on a limited and privileged supply of
+          10.000.000 Monnercoin and scheduled burns what are you waiting for? A universe full of opportunities is
+          expecting you to unravel it!
 
         </p>
 
@@ -63,11 +63,7 @@ defineProps({
     <div class="logo-redes">
       <div class="icon icon-telegram">
         <a href="https://t.me/monnerversecommunity" target="_blank">
-          <img
-            src="../assets/Telegram_logo.svg"
-            alt="logo telegram"
-            srcset=""
-          />
+          <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
         </a>
       </div>
       <div class="icon icon-reddit">
@@ -94,6 +90,7 @@ defineProps({
   height: 100%;
   margin: 0 auto;
 }
+
 .logo {
   position: absolute;
   top: 2rem;
@@ -102,6 +99,7 @@ defineProps({
   height: 5rem;
   z-index: 12;
 }
+
 .titulo {
   position: absolute;
   width: 100%;
@@ -110,6 +108,7 @@ defineProps({
   display: flex;
   justify-content: center;
 }
+
 .titulo h1 {
   font-size: 4vw;
   font-family: "Work Sans", sans-serif;
@@ -126,7 +125,8 @@ defineProps({
   display: flex;
   justify-content: center;
 }
-.contenedor{
+
+.contenedor {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,16 +136,17 @@ defineProps({
   margin: 0 auto;
   border-radius: 1vw;
 }
+
 .contenedor p {
 
   font-size: 2vw;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 200;
+  font-family: Calibri;
   width: 90%;
   text-align: center;
   color: white;
 
 }
+
 .aparecer {
   animation-duration: 0.5s;
   animation-name: arriba;
@@ -163,6 +164,7 @@ defineProps({
     opacity: 100%;
   }
 }
+
 .fondo {
   position: absolute;
   z-index: 1;
@@ -172,6 +174,7 @@ defineProps({
   width: 100%;
   background-color: #121026;
 }
+
 .fondo_rayos {
   position: absolute;
 
@@ -179,11 +182,13 @@ defineProps({
   width: 100%;
   height: 100%;
 }
+
 .animacion-desplazamiento {
   animation-duration: 0.5s;
   animation-name: desplazamiento;
   animation-iteration-count: 1;
 }
+
 @keyframes desplazamiento {
   0% {
     left: -5%;
@@ -193,6 +198,7 @@ defineProps({
     left: -10%;
   }
 }
+
 .rectangulo {
   position: absolute;
   z-index: 3;
@@ -200,6 +206,7 @@ defineProps({
   left: -15%;
   width: 100%;
 }
+
 .rectangulo img {
   width: 20%;
   min-height: 15%;
@@ -250,13 +257,16 @@ defineProps({
     opacity: 50%;
   }
 }
+
 .reflector-derecho {
   z-index: 0;
   left: 50%;
 }
+
 .reflector-izquierdo {
   z-index: 0;
 }
+
 .luz-1 {
   position: absolute;
   width: 30%;
@@ -264,15 +274,14 @@ defineProps({
   border-radius: 50%;
   bottom: -30%;
   transform: rotate(-30deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.5) 0%,
-    transparent 47%,
-    rgba(184, 184, 184, 0) 100%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.5) 0%,
+      transparent 47%,
+      rgba(184, 184, 184, 0) 100%);
   filter: blur(3rem);
   left: 30%;
 }
+
 .luz-2 {
   position: absolute;
   width: 30%;
@@ -281,14 +290,13 @@ defineProps({
   bottom: -30%;
   left: 40%;
   transform: rotate(0deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.8) 0%,
-    transparent 47%,
-    rgba(184, 184, 184, 0) 100%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.8) 0%,
+      transparent 47%,
+      rgba(184, 184, 184, 0) 100%);
   filter: blur(3rem);
 }
+
 .luz-3 {
   position: absolute;
   width: 30%;
@@ -297,12 +305,10 @@ defineProps({
   bottom: -30%;
   left: 55%;
   transform: rotate(-150deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.8) 0%,
-    transparent 47%,
-    rgba(184, 184, 184, 0) 100%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.8) 0%,
+      transparent 47%,
+      rgba(184, 184, 184, 0) 100%);
   filter: blur(3rem);
 }
 </style>
