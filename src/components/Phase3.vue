@@ -199,7 +199,8 @@ img {
     color: white;
     text-transform: uppercase;
     text-decoration: none;
-    z-index: 999;
+    cursor: pointer;
+    z-index: 9;
     background: linear-gradient(to left,
             #029F50 0%,
             #0A664E 50%,

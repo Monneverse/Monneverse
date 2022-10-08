@@ -169,6 +169,11 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: "WorkSans";
+  src: url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap")
+}
+
 /* estilos generales */
 img {
   height: 100%;
@@ -258,7 +263,7 @@ img {
 
 
 .degradado {
-  background: linear-gradient(to right, #08047a 0.5%, transparent);
+  background: linear-gradient(to right, #040077 50%, transparent);
   position: absolute;
   width: 50%;
   height: 180%;
@@ -272,7 +277,7 @@ img {
 
 .degradado_izquierdo {
   transform: rotate(-60deg);
-  right: 50%;
+  right: 55%;
 }
 
 .degradado_derecho {
@@ -419,7 +424,7 @@ img {
 }
 
 .control>input {
-  font-family: "Work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
   font-size: 1.5rem;
   color: #067f4e;
   padding-right: 1rem;
@@ -442,7 +447,7 @@ img {
 }
 
 .control>label {
-  font-family: "Work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
   font-size: 1.5rem;
   color: white;
   padding: 0rem;
@@ -527,7 +532,7 @@ img {
   width: 100%;
   text-align: center;
   user-select: none;
-  font-family: "Work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
   color: #c27e01;
   font-size: 6vh;
   font-weight: 600;
@@ -561,13 +566,13 @@ img {
   left: 6rem;
   max-width: 30rem;
   z-index: 9;
-  font-family: "Work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
   color: white;
 }
 
 .informacion #title {
   font-size: 10vh;
-  font-family: "Work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
   font-weight: 500;
 }
 
@@ -575,7 +580,7 @@ img {
 
 .informacion #title span {
   color: #01c28d;
-  font-family: "Work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
 }
 
 .informacion #descripcion {

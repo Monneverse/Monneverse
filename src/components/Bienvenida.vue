@@ -82,15 +82,15 @@ img {
 
 #logo-1 {
   max-width: 28rem;
-  max-height: 20rem;
+  max-height: 21rem;
   position: absolute;
   top: 0;
   left: 0%;
-  right: 8%;
+  right: 10%;
   bottom: 25%;
   margin: auto;
   z-index: 6;
-  opacity: 50%;
+  opacity: 80%;
 }
 
 #logo-2 {
@@ -148,7 +148,7 @@ img {
 }
 
 .degradado {
-  background: linear-gradient(to right, #08047A 0.5%, transparent);
+  background: linear-gradient(to right, #040077 50%, transparent);
   position: absolute;
   width: 50%;
   height: 180%;
@@ -159,7 +159,7 @@ img {
 
 .degradado_izquierdo {
   transform: rotate(-60deg);
-  right: 50%;
+  right: 55%;
 }
 
 .degradado_derecho {
@@ -265,13 +265,13 @@ img {
   display: flex;
   top: 50.8%;
   left: 5%;
-  justify-content: center;
-  width: 32%;
+  justify-content: left;
+  width: 35%;
   z-index: 7;
 }
 
 .welcome_text p {
-  font-family: Calibri;
+  font-family: "Bahn";
   font-size: 2vw;
   color: white;
   text-align: left;
