@@ -92,7 +92,7 @@ img {
 .logo {
     position: absolute;
     top: 15%;
-    left: 43%;
+    left: 38%;
     width: 30%;
     height: 30%;
     z-index: 9;
