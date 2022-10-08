@@ -272,7 +272,6 @@ img {
   display: grid;
   grid-template-columns: 60% 20% 20%;
   align-items: center;
-  z-index: 2;
   opacity: 70%;
 }
 .nombre_Alianza {
