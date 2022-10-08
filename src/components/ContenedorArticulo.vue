@@ -205,7 +205,7 @@ export default {
 
 @font-face {
   font-family: LCDFONT;
-  src: url("/../../public/Fonts/LCDFONT.TTF")
+  src: url("/../../Fonts/LCDFONT.TTF")
 }
 
 @font-face {
