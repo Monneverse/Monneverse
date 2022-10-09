@@ -111,7 +111,10 @@ export default {
 </template>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "WorkSans";
+  src: url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap")
+}
 
 /* Fondo de la pagina*/
 img {
@@ -130,7 +133,7 @@ img {
 
 .titulo h1 {
   color: white;
-  font-family: "Work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
   font-size: 3.5vw;
   font-weight: 500;
 }
@@ -190,12 +193,12 @@ img {
 
 .purchase-tax {
   position: relative;
-  left: 30%;
+  left: 26%;
   display: grid;
-  grid-template-rows: 15% 15% 15% 15% 15% 15%;
-  font-family: Calibri;
+  grid-template-rows: 16% 16% 16% 16% 16% 16%;
+  font-family: "WorkSans", sans-serif;
   color: white;
-  width: 70%;
+  width: 75%;
 }
 
 .purchase-tax h2 {
@@ -206,7 +209,7 @@ img {
 
 .purchase-tax p {
   text-align: right;
-  font-size: 1.5vw;
+  font-size: 1.29vw;
 }
 
 .titulo1 {
@@ -230,7 +233,7 @@ img {
 
 .plus {
   display: grid;
-  grid-template-rows: 15% 15% 15% 15% 15% 15%;
+  grid-template-rows: 16% 16% 16% 16% 16% 16%;
 }
 
 .plus img {
@@ -241,10 +244,10 @@ img {
 .sale-tax {
   position: relative;
   display: grid;
-  grid-template-rows: 15% 15% 15% 15% 15% 15%;
-  font-family: Calibri;
+  grid-template-rows: 16% 16% 16% 16% 16% 16%;
+  font-family: "WorkSans", sans-serif;
   color: white;
-  width: 70%;
+  width: 75%;
 }
 
 .sale-tax h2 {
@@ -253,7 +256,7 @@ img {
 }
 
 .sale-tax p {
-  font-size: 1.5vw;
+  font-size: 1.29vw;
 }
 
 .titulo2 {
@@ -301,7 +304,7 @@ img {
   text-align: center;
   width: 100%;
   color: white;
-  font-family: Calibri;
+  font-family: "WorkSans", sans-serif;
   font-size: 2.5vw;
   font-weight: 500;
 }
@@ -318,7 +321,7 @@ img {
 }
 
 .degradado_azuliz {
-  background: linear-gradient(to right, #08047a 0.5%, transparent);
+  background: linear-gradient(to right, #08047a 50%, transparent);
   position: absolute;
   transform: rotate(-60deg);
   top: 0%;
@@ -330,7 +333,7 @@ img {
 }
 
 .degradado_azulde {
-  background: linear-gradient(to right, #08047a 0.9%, transparent);
+  background: linear-gradient(to right, #08047a 50%, transparent);
   position: absolute;
   transform: rotate(230deg);
   top: -5%;

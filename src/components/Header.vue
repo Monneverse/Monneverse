@@ -1,7 +1,8 @@
 
 <template>
   <div :class="{logo: true , mostrar:isVisible}">
-    <img src="/img/logo.svg" alt="logo monneverse">
+    <a href="" :class="{link:true,home:indexF==6}" @mouseover="hover_mover('a0')" @click="this.setPage(0)">
+      <img src="/img/logo.svg" alt="logo monneverse"></a>
   </div>
   <div id="barra" class="barra-navegacion">
 

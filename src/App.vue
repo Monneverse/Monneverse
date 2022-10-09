@@ -146,6 +146,9 @@ export default {
         case 5:
           this.index_pagina = 15;
           break;
+        case 6:
+          this.index_pagina = 1;
+          break;
         default:
           break;
       }

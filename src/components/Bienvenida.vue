@@ -1,5 +1,5 @@
 <template>
-  <video src="/video/video_binariov2.mp4" autoplay="true" muted="true" loop="true" class="video-fondo"
+  <video src="/video/VideoBinario.m4v" autoplay="true" muted="true" loop="true" class="video-fondo"
     poster="/img/fondo_binario.png" />
   <div id="logo-1" class="logo">
     <img src="/img/logo_empresa.png" alt="" />
@@ -42,7 +42,7 @@ export default {};
 
 @font-face {
   font-family: "Bahn";
-  src: url("/../../public/Fonts/BAHNSCHRIFT.TTF");
+  src: url("/Fonts/BAHNSCHRIFT.TTF");
 }
 
 img {
