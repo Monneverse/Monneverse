@@ -16,7 +16,7 @@ defineProps({
 
   <!--FONDO-->
   <div class="fondo-video">
-    <video src="/video/VideoBinario.m4v" autoplay="true" muted="true" loop="true"
+    <video src="/../video/VideoBinario.m4v" autoplay="true" muted="true" loop="true"
       poster="/img/fondo_binario.png"></video>
   </div>
 
