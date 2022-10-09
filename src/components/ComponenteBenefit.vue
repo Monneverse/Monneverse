@@ -64,7 +64,10 @@ export default {
 </template>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;700&display=swap");
+@font-face {
+  font-family: "WorkSans";
+  src: url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap")
+}
 
 .benefit {
   width: 100%;
@@ -73,7 +76,7 @@ export default {
   color: white;
   display: flex;
   flex-wrap: wrap;
-  font-family: Calibri;
+  font-family: "WorkSans", sans-serif;
 }
 
 .fondo-oscuro {
@@ -126,7 +129,7 @@ export default {
   cursor: pointer;
   width: 45%;
   font-size: 1.1vw;
-  font-family: "Work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
 }
 
 .btn:hover {

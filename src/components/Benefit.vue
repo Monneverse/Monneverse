@@ -81,7 +81,10 @@ defineProps({
 </template>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "WorkSans";
+  src: url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap")
+}
 
 .display_flex {
   display: flex;
@@ -111,7 +114,7 @@ defineProps({
 
 .titulo h1 {
   font-size: 4vw;
-  font-family: "Work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
   font-weight: 600;
   color: white;
 }
@@ -139,8 +142,8 @@ defineProps({
 
 .contenedor p {
 
-  font-size: 2vw;
-  font-family: Calibri;
+  font-size: 1.5vw;
+  font-family: "WorkSans", sans-serif;
   width: 90%;
   text-align: center;
   color: white;
