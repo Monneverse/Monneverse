@@ -248,13 +248,13 @@ img {
 
 .circuloFondo1 {
   top: 25%;
-  left: 39%;
+  left: 37%;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2;
-  width: 25%;
+  width: 23%;
   height: 50%;
 }
 
@@ -266,7 +266,7 @@ img {
   justify-content: center;
   align-items: center;
   z-index: 2;
-  width: 35%;
+  width: 30%;
   height: 65%;
 }
 
@@ -356,7 +356,8 @@ img {
   border-radius: 0.5rem;
   background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
   color: white;
-  font-family: Calibri;
+  font-family: "WorkSans", sans-serif;
+  font-weight: 500;
   font-size: 150%;
   display: flex;
   justify-content: center;

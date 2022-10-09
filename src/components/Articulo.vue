@@ -59,11 +59,12 @@ img {
 }
 
 .titulo1 {
-    height: 10%;
+    height: 15%;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 h5 {
@@ -91,7 +92,7 @@ h5 {
             #0E444D 100%);
     font-family: "WorkSans", sans-serif;
     font-size: 1vw;
-    font-size: 100%;
+    font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
