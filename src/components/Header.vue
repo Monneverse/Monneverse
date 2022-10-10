@@ -212,7 +212,7 @@ export default {
   text-align: center;
   background-color: #ffc000;
   padding: 0.8rem;
-  min-width: 8rem;
+  min-width: 10rem;
 }
 
 .btn:hover {
