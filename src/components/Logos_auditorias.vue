@@ -151,16 +151,16 @@ img {
 
 .auditoria1 {
     position: absolute;
-    top: 45%;
+    top: 35%;
     left: 14%;
-    width: 24%;
-    height: 20%;
+    width: 29%;
+    height: 29%;
     z-index: 5;
 }
 
 .auditoria1:hover {
     position: absolute;
-    width: 25%;
+    width: 32%;
     border: 2px solid #121026;
     border-radius: 2%;
     -webkit-box-shadow: 0px 22px 28px 5px #08047A;
@@ -170,16 +170,16 @@ img {
 
 .auditoria2 {
     position: absolute;
-    top: 45%;
+    top: 35%;
     right: 14%;
-    width: 24%;
-    height: 20%;
+    width: 29%;
+    height: 29%;
     z-index: 5;
 }
 
 .auditoria2:hover {
     position: absolute;
-    width: 25%;
+    width: 32%;
     border: 2px solid #121026;
     border-radius: 2%;
     -webkit-box-shadow: 0px 22px 28px 5px #08047A;

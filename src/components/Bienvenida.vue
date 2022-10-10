@@ -7,6 +7,9 @@
   <div id="logo-2" class="logo">
     <img src="/img/logo.svg" alt="" />
   </div>
+  <div class="semi-circle ">
+    <img src="../../public/img/semi_circulo.png" alt="" />
+  </div>
 
   <div class="fondo-montana">
     <img src="/img/fondo-montana.png" alt="" srcset="" />
@@ -149,7 +152,7 @@ img {
   top: 75%;
   width: 30%;
   height: 60%;
-  z-index: 8;
+  z-index: 7;
   opacity: 100%;
 }
 
