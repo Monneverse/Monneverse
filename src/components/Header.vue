@@ -1,53 +1,57 @@
-
 <template>
-  <div :class="{logo: true , mostrar:isVisible}">
-    <a href="" :class="{link:true,home:indexF==6}" @mouseover="hover_mover('a0')" @click="this.setPage(0)">
-      <img src="/img/logo.svg" alt="logo monneverse"></a>
+  <div :class="{ logo: true, mostrar: isVisible }">
+    <a href="" :class="{ link: true, home: indexF == 6 }" @mouseover="hover_mover('a0')" @click="this.setPage(0)">
+      <img src="/img/logo.svg" alt="logo monneverse" /></a>
   </div>
   <div id="barra" class="barra-navegacion">
-
+    <div class="content-nav">
+    </div>
     <nav class="barra" @mouseout="exit_mouse">
-      <a id="a1" :class="{link:true,home:indexF==1}" @mouseover="hover_mover('a1')"
+      <a id="a1" :class="{ link: true, home: indexF == 1 }" @mouseover="hover_mover('a1')"
         @click="this.setPage(1)">articles</a>
-      <a id="a2" :class="{link:true,home:indexF==2}" @mouseover="hover_mover('a2')"
+      <a id="a2" :class="{ link: true, home: indexF == 2 }" @mouseover="hover_mover('a2')"
         @click="this.setPage(2)">benefits</a>
-      <a id="a3" :class="{link:true,home:indexF==3}" @mouseover="hover_mover('a3')"
+      <a id="a3" :class="{ link: true, home: indexF == 3 }" @mouseover="hover_mover('a3')"
         @click="this.setPage(3)">tokenomics</a>
-      <a id="a4" :class="{link:true,home:indexF==4}" @mouseover="hover_mover('a4')" @click="this.setPage(4)">news</a>
-      <a id="a5" :class="{link:true,home:indexF==5}" @mouseover="hover_mover('a5')"
+      <a id="a4" :class="{ link: true, home: indexF == 4 }" @mouseover="hover_mover('a4')"
+        @click="this.setPage(4)">news</a>
+      <a id="a5" :class="{ link: true, home: indexF == 5 }" @mouseover="hover_mover('a5')"
         @click="this.setPage(5)">roadmaps</a>
-      <div id="animacion" :class="{animacion:true, 'traslado_animacion':true ,invisible:indexF==0}"></div>
+      <div id="animacion" :class="{
+        animacion: true,
+        traslado_animacion: true,
+        invisible: indexF == 0,
+      }"></div>
     </nav>
+  </div>
 
+  <div class="container-whitepaper">
     <button class="btn" @click="reDirect">WHITEPAPER</button>
   </div>
 </template>
 
 <script>
-
 export default {
   data() {
     return {
       distancia: 0,
       animando: false,
-      event: "click"
+      event: "click",
     };
   },
   props: {
-
     index: {
       type: Number,
-      required: false
+      required: false,
     },
     isVisible: {
       type: Boolean,
-      required: true
+      required: true,
     },
     setPage: {
       type: Function,
-      required: true
+      required: true,
     },
-
   },
   computed: {
     indexF: {
@@ -57,13 +61,11 @@ export default {
           var link = document.getElementsByClassName("link")[this.index - 1];
           anim.style.minWidth = link.offsetWidth + "px";
           anim.style.left = this.getOffset(link).left + "px";
-        } catch (error) {
+        } catch (error) { }
 
-        }
-
-        return this.index
-      }
-    }
+        return this.index;
+      },
+    },
   },
   methods: {
     hover_mover(id) {
@@ -101,16 +103,16 @@ export default {
       } catch (error) {
         console.log("EL ERROR ES " + error);
       }
-
     },
     reDirect() {
-      location.replace("https://sites.google.com/view/whiterpaper-monnerverse/p%C3%A1gina-principal");
-    }
+      location.replace(
+        "https://sites.google.com/view/whiterpaper-monnerverse/p%C3%A1gina-principal"
+      );
+    },
   },
   mounted() {
     this.recargar();
     window.addEventListener("resize", this.recargar);
-
   },
 };
 </script>
@@ -140,7 +142,7 @@ export default {
   position: fixed;
   top: 0%;
   background-color: transparent;
-  width: 100%;
+  width: 96%;
   height: 3rem;
   margin-top: 2rem;
   display: flex;
@@ -155,11 +157,11 @@ export default {
   width: 70%;
   height: 100%;
   max-width: 40rem;
-  margin-right: 3rem;
 }
 
+
 .barra a {
-  position: relative;
+
   left: 0%;
   display: flex;
   justify-content: center;
@@ -195,9 +197,15 @@ export default {
   transition: all 0.4s ease 0s;
 }
 
+.container-whitepaper {
+  position: fixed;
+  width: 30%;
+  top: 5%;
+  left: 77%;
+
+}
+
 .btn {
-  position: relative;
-  left: 12%;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: bold;
@@ -207,25 +215,28 @@ export default {
   text-align: center;
   background-color: #ffc000;
   padding: 0.8rem;
-  min-width: 10rem;
+  width: 42%;
+  height: 15%;
+  min-width: 8rem;
 }
 
 .btn:hover {
   background-color: #b48700;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
-
-  .barra {
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  #barra {
     display: none;
   }
 
   .btn {
-    position: absolute;
-    top: 31em;
-    left: 11em;
-    padding: 1.3rem;
-    font-size: 4.8vw;
+    position: fixed;
+    top: 25%;
+    left: 18%;
+    width: 10%;
+    height: 3%;
+    padding: 0.1rem;
+    font-size: 5vw;
   }
 }
 </style>

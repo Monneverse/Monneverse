@@ -315,16 +315,20 @@ img {
   width: 100%;
 }
 
-.imagen-alianza img:first-of-type {
+.imagen-alianza:nth-child(2) {
 
-  width: 6vw;
+  width: 8vw;
+}
+.imagen-alianza:nth-child(3) {
+
+width: 6.5vw;
 }
 
 .degradado_azuliz {
   background: linear-gradient(to right, #08047a 50%, transparent);
   position: absolute;
   transform: rotate(-60deg);
-  top: 0%;
+  top: 15%;
   z-index: 43;
   right: 50%;
   width: 50%;
@@ -335,8 +339,8 @@ img {
 .degradado_azulde {
   background: linear-gradient(to right, #08047a 50%, transparent);
   position: absolute;
-  transform: rotate(230deg);
-  top: -5%;
+  transform: rotate(235deg);
+  top: 55%;
   left: 50%;
   width: 60%;
   height: 180%;

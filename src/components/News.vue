@@ -204,16 +204,16 @@ img {
     position: absolute;
     top: 22%;
     left: 15%;
-    width: 20%;
-    height: 20%;
+    width: 22%;
+    height: 22%;
     z-index: 9;
 }
 
 .coinquora {
     position: absolute;
     top: 50%;
-    left: 15%;
-    width: 18%;
+    left: 16%;
+    width: 20%;
     height: 8%;
     z-index: 9;
 }
@@ -234,10 +234,10 @@ img:hover {
 
 .criptotendencia {
     position: absolute;
-    top: 44%;
+    top: 42%;
     right: 15%;
     width: 20%;
-    height: 25%;
+    height: 28%;
     z-index: 9;
 }
 

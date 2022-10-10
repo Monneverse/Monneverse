@@ -41,8 +41,8 @@ export default {
   margin-left: 5%;
   border-radius: 100%;
   z-index: 5;
-  width: 15vw;
-  height: 15vw;
+  width: 12vw;
+  height: 12vw;
   margin-bottom: 5%;
   color: white;
   font-family: "Work Sans", sans-serif;
@@ -58,7 +58,7 @@ export default {
   position: relative;
   z-index: 0;
   text-align: center;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
 }
 
 .contenedor {
@@ -109,23 +109,5 @@ export default {
   opacity: 1;
   visibility: visible;
   transition: 0.5s linear;
-}
-
-.rotar {
-
-  transform: rotate(90deg);
-
-}
-
-.rotar_180 {
-
-  transform: rotate(180deg);
-
-}
-
-.rotar_360 {
-
-  transform: rotate(270deg);
-
 }
 </style>
