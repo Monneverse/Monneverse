@@ -581,13 +581,13 @@ defineProps({
   position: absolute;
   width: 50%;
   height: 180%;
-  z-index: 9;
+  z-index: 4;
   animation-duration: 3s;
   animation-name: luz;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  top: 0%;
-  opacity: 90%;
+  top: 10%;
+  opacity: 80%;
 }
 
 .degradado_izquierdo {
