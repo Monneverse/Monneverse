@@ -6,6 +6,11 @@
   </div>
   <div id="barra" class="barra-navegacion">
 
+    
+      
+    <div class="content-nav">
+      
+    </div>
     <nav class="barra" @mouseout="exit_mouse">
       <a id="a1" :class="{link:true,home:indexF==1}" @mouseover="hover_mover('a1')"
         @click="this.setPage(1)">articles</a>
@@ -155,7 +160,7 @@ export default {
   width: 70%;
   height: 100%;
   max-width: 40rem;
-  margin-right: 3rem;
+
 }
 
 .barra a {
@@ -196,6 +201,8 @@ export default {
 }
 
 .btn {
+  position: relative;
+  left: 12%;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: bold;

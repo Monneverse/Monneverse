@@ -124,7 +124,7 @@ img {
 
 .fondo-mundial {
   position: fixed;
-  left: 17%;
+  left: 26%;
   top: 7%;
   width: 85%;
   height: 100%;
