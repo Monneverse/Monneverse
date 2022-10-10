@@ -577,7 +577,7 @@ defineProps({
 }
 
 .degradado {
-  background: linear-gradient(to right, #08047a 0.5%, transparent);
+  background: linear-gradient(to right, #090380 55%, transparent);
   position: absolute;
   width: 50%;
   height: 180%;
@@ -587,6 +587,7 @@ defineProps({
   animation-iteration-count: infinite;
   animation-direction: alternate;
   top: 0%;
+  opacity: 90%;
 }
 
 .degradado_izquierdo {

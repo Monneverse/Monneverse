@@ -104,6 +104,9 @@ defineProps({
   height: 60%;
   margin: 0 auto;
   overflow: hidden;
+  -webkit-box-shadow: 2px 4px 39px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 4px 39px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 4px 39px -1px rgba(0, 0, 0, 0.75);
 }
 .cards span {
   transition: 0.5s;
@@ -118,6 +121,7 @@ defineProps({
   opacity: 1;
 }
 .cards:hover {
+  
   transform: translateY(-3%);
    
   transition: 0.5s ease-out;
