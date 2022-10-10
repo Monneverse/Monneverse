@@ -181,25 +181,48 @@ img {
   left: 55%;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  img {
+    width: 100%;
+    height: 100%;
+  }
 
   .video-fondo {
-    width: 100em;
-    height: 100em;
+    top: -7.5%;
+    width: 45.7%;
+    height: 42.9%;
+    z-index: 0;
+  }
+
+  .fondo-oscuro {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center,
+        #48d0ab 0%,
+        #097561 50%,
+        #505863 100%);
+    z-index: 1;
   }
 
   .fondo-mundial {
     position: fixed;
-    top: 11em;
+    top: 10em;
     left: -10em;
     width: 50em;
     height: 40em;
-    z-index: 7;
-    opacity: 90%;
+    z-index: 8;
+    opacity: 100%;
   }
 
   .fondo-montana {
-    display: none;
+    position: fixed;
+    top: 15%;
+    left: 0%;
+    width: 30em;
+    height: 20em;
   }
 
   .fondo-oscuro {
@@ -218,12 +241,15 @@ img {
 
   .degradado {
     position: fixed;
-    top: 0em;
+    top: -60%;
+    left: -15%;
+    z-index: 9;
   }
 
   .degradado_derecho {
-    width: 50em;
+    width: 60em;
     opacity: 100%;
+    opacity: 80%;
   }
 
   .degradado_izquierdo {
@@ -234,22 +260,31 @@ img {
     width: 17em;
     max-height: 14rem;
     position: fixed;
-    top: 0;
-    left: -1em;
+    top: -114%;
+    left: -27em;
     right: 50%;
     bottom: -58%;
-    z-index: 6;
-    opacity: 60%;
+    z-index: 9;
+    opacity: 70%;
   }
 
   #logo-2 {
-    width: 14em;
-    left: 10em;
-    top: 10em;
+    width: 8em;
+    left: 12em;
+    top: 5em;
     z-index: 5;
     opacity: 70%;
   }
 
+  .semi-circle {
+    position: fixed;
+    left: 0%;
+    top: 24%;
+    width: 18%;
+    height: 16%;
+    z-index: 10;
+    opacity: 100%;
+  }
 }
 
 .welcome {
@@ -321,18 +356,35 @@ img {
   font-family: "Bahn";
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .welcome {
     position: fixed;
     justify-content: center;
-    top: 5em;
-    left: 0.6em;
-    width: 100%;
+    top: 3%;
+    left: -17%;
+    width: 60%;
+    z-index: 99;
+  }
+
+  .welcome1 {
+    position: fixed;
+    justify-content: center;
+    top: 8em;
+    left: -12.4em;
+    width: 60%;
     z-index: 6;
+
   }
 
   .welcome p {
-    font-size: 16.2vw;
+    font-size: 15vw;
+    font-family: "Bahn";
+    color: white;
+    text-align: left;
+  }
+
+  .welcome1 p {
+    font-size: 15vw;
     font-family: "Bahn";
     color: white;
     text-align: left;
@@ -340,15 +392,16 @@ img {
 
   .welcome_text {
     position: fixed;
-    top: 16em;
-    left: 1em;
+    top: 14em;
+    left: 2em;
     justify-content: center;
-    width: 83%;
+    width: 18%;
     z-index: 9;
+
   }
 
   .welcome_text p {
-    font-size: 6vw;
+    font-size: 5vw;
     font-family: "Bahn";
     color: white;
     text-align: left;
@@ -357,11 +410,13 @@ img {
 
   .welcome_text p b {
     text-transform: uppercase;
+
   }
 
   .welcome_text p span {
     color: #FFC000;
-    font-size: 14.5vw;
+    font-size: 10vw;
+
   }
 }
 </style>
