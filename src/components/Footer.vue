@@ -125,10 +125,10 @@ img {
     }
 
     100% {
-        top: 15%;
-        left: 43%;
-        width: 30%;
-        height: 30%;
+        top: 20%;
+        left: 38%;
+        width: 40%;
+        height: 40%;
     }
 }
 
