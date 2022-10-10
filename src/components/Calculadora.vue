@@ -75,7 +75,7 @@
     </div>
 
     <p id="descripcion">
-      FIRST TWO MONTHS EVERY 48 HOURS THE MONNER WILL RETURN {{porcentajeInteres}}% INTEREST
+      FIRST TWO MONTHS EVERY 48 <br> HOURS THE MONNER WILL RETURN {{porcentajeInteres}}% INTEREST
     </p>
   </article>
 
@@ -586,7 +586,8 @@ img {
 .informacion #descripcion {
   margin-top: 2rem;
   text-align: start;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  width: 130%;
   text-transform: uppercase;
 }
 
