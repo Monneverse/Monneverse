@@ -236,7 +236,6 @@ export default {
   width: 30%;
   top: 5%;
   left: 77%;
-  height: 40%;
   
 }
 .btn {
