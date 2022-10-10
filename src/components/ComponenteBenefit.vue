@@ -37,8 +37,9 @@ export default {
 </script>
 
 <template>
-
-  <div :class="index_pagina == 13 ? 'transparente' : 'fondo-oscuro'" class="benefit">
+  <div
+    class="benefit fondo-oscuro"
+  >
     <div class="div titulo_1">
       <h2 class="centrar">
         {{ titulo }}
@@ -60,13 +61,12 @@ export default {
       <a class="btn centrar" :href="ruta">READ MORE</a>
     </div>
   </div>
-
 </template>
 
 <style scoped>
 @font-face {
   font-family: "WorkSans";
-  src: url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap")
+  src: url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
 }
 
 .benefit {
@@ -77,10 +77,13 @@ export default {
   display: flex;
   flex-wrap: wrap;
   font-family: "WorkSans", sans-serif;
+  
+ 
 }
 
 .fondo-oscuro {
   background-color: #161431;
+ 
 }
 
 .benefit .div {
@@ -121,9 +124,11 @@ export default {
 
 .btn {
   position: relative;
-  background: linear-gradient(90deg,
-      rgb(18, 17, 65) 0%,
-      rgba(1, 209, 88, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(18, 17, 65) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
   padding: 2% 5%;
   border-radius: 1.5vw;
   cursor: pointer;
