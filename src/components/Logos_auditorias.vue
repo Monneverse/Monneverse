@@ -62,6 +62,11 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
 
+@font-face {
+    font-family: "Bahn";
+    src: url("/../../public/Fonts/BAHNSCHRIFT.TTF");
+}
+
 img {
     height: 100%;
     width: 100%;
@@ -93,7 +98,7 @@ img {
     top: 0%;
     right: 50%;
     width: 50%;
-    height: 180%;
+    height: 200%;
     z-index: 2;
 }
 
@@ -104,7 +109,7 @@ img {
     top: -12%;
     left: 50%;
     width: 50%;
-    height: 180%;
+    height: 200%;
     z-index: 2;
 }
 
@@ -129,7 +134,7 @@ img {
 .texto_auditoria {
     position: absolute;
     top: 20%;
-    left: 25%;
+    left: 28%;
     color: white;
     text-align: center;
     justify-content: center;
@@ -139,23 +144,23 @@ img {
 
 .texto_auditoria p {
     font-size: 3vw;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Bahn";
     font-weight: 500;
     text-transform: uppercase;
 }
 
 .auditoria1 {
     position: absolute;
-    top: 45%;
+    top: 35%;
     left: 14%;
-    width: 24%;
-    height: 20%;
+    width: 29%;
+    height: 29%;
     z-index: 5;
 }
 
 .auditoria1:hover {
     position: absolute;
-    width: 25%;
+    width: 32%;
     border: 2px solid #121026;
     border-radius: 2%;
     -webkit-box-shadow: 0px 22px 28px 5px #08047A;
@@ -165,16 +170,16 @@ img {
 
 .auditoria2 {
     position: absolute;
-    top: 45%;
+    top: 35%;
     right: 14%;
-    width: 24%;
-    height: 20%;
+    width: 29%;
+    height: 29%;
     z-index: 5;
 }
 
 .auditoria2:hover {
     position: absolute;
-    width: 25%;
+    width: 32%;
     border: 2px solid #121026;
     border-radius: 2%;
     -webkit-box-shadow: 0px 22px 28px 5px #08047A;

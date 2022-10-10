@@ -40,7 +40,9 @@ export default {
         </div>
       </div>
 
-      <div class=""><p>To buy 9% slip</p></div>
+      <div class="">
+        <p>To buy 9% slip</p>
+      </div>
       <div class="">
         <p>Automatic LP 3% of order fees go back into liquidity</p>
       </div>
@@ -67,9 +69,13 @@ export default {
     </div>
     <div class="sale-tax">
       <div class="">
-        <div class="titulo2"><h2>Sale Tax</h2></div>
+        <div class="titulo2">
+          <h2>Sale Tax</h2>
+        </div>
       </div>
-      <div class=""><p>To buy 10% slip</p></div>
+      <div class="">
+        <p>To buy 10% slip</p>
+      </div>
       <div class="">
         <p>Automatic LP 3% of order fees go back into liquidity</p>
       </div>
@@ -105,7 +111,10 @@ export default {
 </template>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "WorkSans";
+  src: url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap")
+}
 
 /* Fondo de la pagina*/
 img {
@@ -121,12 +130,14 @@ img {
   display: flex;
   justify-content: center;
 }
+
 .titulo h1 {
   color: white;
-  font-family: "Work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
   font-size: 3.5vw;
   font-weight: 500;
 }
+
 .fondo {
   position: absolute;
   top: 0;
@@ -136,6 +147,7 @@ img {
   background-color: black;
   z-index: 0;
 }
+
 .fondo-oscurecer {
   position: absolute;
   z-index: 42;
@@ -152,6 +164,7 @@ img {
   height: 100%;
   z-index: 1;
 }
+
 .imagen_Eclipse {
   position: absolute;
   z-index: 34;
@@ -180,21 +193,23 @@ img {
 
 .purchase-tax {
   position: relative;
-  left: 30%;
+  left: 26%;
   display: grid;
   grid-template-rows: 16% 16% 16% 16% 16% 16%;
-  font-family: "Work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
   color: white;
-  width: 70%;
+  width: 75%;
 }
+
 .purchase-tax h2 {
   text-align: right;
   font-size: 2vw;
   font-weight: 500;
 }
+
 .purchase-tax p {
   text-align: right;
-  font-size: 1.4vw;
+  font-size: 1.29vw;
 }
 
 .titulo1 {
@@ -205,53 +220,59 @@ img {
   align-items: center;
   height: 50%;
   width: 77%;
-  background: linear-gradient(
-    90deg,
-    rgb(33, 32, 85) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%);
   border-radius: 0.5vw;
 }
+
 .titulo1 h2 {
   padding-right: 10%;
+  font-family: Calibri;
 }
+
 .plus {
   display: grid;
   grid-template-rows: 16% 16% 16% 16% 16% 16%;
 }
+
 .plus img {
   margin: 0 auto;
   height: 50%;
 }
+
 .sale-tax {
   position: relative;
   display: grid;
   grid-template-rows: 16% 16% 16% 16% 16% 16%;
-  font-family: "Work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
   color: white;
-  width: 70%;
+  width: 75%;
 }
+
 .sale-tax h2 {
   font-size: 2vw;
   font-weight: 500;
 }
+
 .sale-tax p {
-  font-size: 1.4vw;
+  font-size: 1.29vw;
 }
+
 .titulo2 {
   display: flex;
   align-items: center;
   height: 50%;
   width: 77%;
-  background: linear-gradient(
-    90deg,
-    rgb(1, 209, 88) 0%,
-    rgba(33, 32, 85, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(1, 209, 88) 0%,
+      rgba(33, 32, 85, 1) 100%);
   border-radius: 0.5vw;
 }
+
 .titulo2 h2 {
   padding-left: 10%;
+  font-family: Calibri;
 }
 
 .container-alianza {
@@ -260,7 +281,6 @@ img {
   bottom: 0%;
   width: 100%;
   height: 10%;
-
   z-index: 50;
   display: flex;
   justify-content: center;
@@ -274,15 +294,17 @@ img {
   align-items: center;
   opacity: 70%;
 }
+
 .nombre_Alianza {
   width: 100%;
   display: flex;
 }
+
 .nombre_Alianza h1 {
   text-align: center;
   width: 100%;
   color: white;
-  font-family: "Work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
   font-size: 2.5vw;
   font-weight: 500;
 }
@@ -292,16 +314,21 @@ img {
   align-items: center;
   width: 100%;
 }
-.imagen-alianza img:first-of-type{
 
-  width: 6vw;
+.imagen-alianza:nth-child(2) {
+
+  width: 8vw;
+}
+.imagen-alianza:nth-child(3) {
+
+width: 6.5vw;
 }
 
 .degradado_azuliz {
-  background: linear-gradient(to right, #08047a 0.5%, transparent);
+  background: linear-gradient(to right, #08047a 50%, transparent);
   position: absolute;
   transform: rotate(-60deg);
-  top: 0%;
+  top: 15%;
   z-index: 43;
   right: 50%;
   width: 50%;
@@ -310,10 +337,10 @@ img {
 }
 
 .degradado_azulde {
-  background: linear-gradient(to right, #08047a 0.9%, transparent);
+  background: linear-gradient(to right, #08047a 50%, transparent);
   position: absolute;
-  transform: rotate(230deg);
-  top: -5%;
+  transform: rotate(235deg);
+  top: 55%;
   left: 50%;
   width: 60%;
   height: 180%;

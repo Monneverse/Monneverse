@@ -1,13 +1,22 @@
 <template>
-  <video src="/video/video_binariov2.mp4" autoplay="true" muted="true" loop="true" class="video-fondo"
+  <video src="/public/video/Multimedia1.mp4" autoplay="true" muted="true" loop="true" class="video-fondo"
     poster="/img/fondo_binario.png" />
   <div id="logo-1" class="logo">
-    <img src="/img/logo_empresa.png" alt="" />
+    <img src="/img/logo_Grande.png" alt="" />
   </div>
   <div id="logo-2" class="logo">
-    <img src="/img/logo_empresa.png" alt="" />
+    <img src="/img/logo.svg" alt="" />
+  </div>
+  <div class="semi-circle ">
+    <img src="../../public/img/semi_circulo.png" alt="" />
   </div>
 
+  <div class="fondo-montana">
+    <img src="/img/fondo-montana.png" alt="" srcset="" />
+  </div>
+  <div class="fondo-montana">
+    <img src="/img/fondo-montana.png" alt="" srcset="" />
+  </div>
   <div class="fondo-montana">
     <img src="/img/fondo-montana.png" alt="" srcset="" />
   </div>
@@ -15,15 +24,19 @@
   <div class="fondo-oscuro-superior">
     <img src="/img/fondo-oscuro-superior.png" alt="" srcset="" />
   </div>
+  <div class="iluminacionLogo"></div>
   <div class="fondo-mundial">
-    <img src="/img/fondo-mundial.png" alt="" srcset="" />
+    <img src="/img/fondo_Cel.png" alt="" srcset="" />
   </div>
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
-  <div class="welcome fadeInLeft animated">
-    <p>Welcome to <b>Monnerverse</b></p>
+  <div class="welcome">
+    <p> Welcome to</p>
   </div>
-  <div class="welcome_text fadeInRight animated">
+  <div class="welcome1">
+    <p>Monnerverse</p>
+  </div>
+  <div class="welcome_text">
     <p>
       <span>Utilities DeFi</span>
       <br>
@@ -39,7 +52,11 @@ export default {};
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
-@import url("http://fonts.cdnfonts.com/css/bahnschrift");
+
+@font-face {
+  font-family: "Bahn";
+  src: url("/Fonts/BAHNSCHRIFT.TTF");
+}
 
 img {
   width: 100%;
@@ -57,15 +74,15 @@ img {
 }
 
 .fondo-oscuro {
-  position: absolute;
+  position: fixed;
   top: 0%;
   left: 0;
   width: 100%;
   height: 100%;
   background: radial-gradient(circle at center,
-      #48d0ab 100%,
+      #48d0ab 0%,
       #097561 50%,
-      #505863 0%);
+      #505863 100%);
   z-index: 3;
   opacity: 70%;
 }
@@ -77,35 +94,36 @@ img {
 }
 
 #logo-1 {
-  max-width: 28rem;
-  max-height: 20rem;
-  position: absolute;
+  width: 34%;
+  height: 56%;
+  position: fixed;
   top: 0;
   left: 0%;
-  right: 8%;
+  right: -2%;
   bottom: 25%;
   margin: auto;
   z-index: 6;
-  opacity: 50%;
+  opacity: 90%;
 }
 
 #logo-2 {
-  right: 26%;
-  top: 8%;
-  z-index: 5;
+  width: 12%;
+  right: 18%;
+  top: 10%;
+  z-index: 6;
 }
 
 .fondo-suave {
-  position: absolute;
+  position: fixed;
   top: 70%;
   z-index: 2;
   opacity: 70%;
 }
 
 .fondo-montana {
-  position: absolute;
+  position: fixed;
   top: 27%;
-  left: 0%;
+  left: 1%;
   width: 100%;
   z-index: 6;
 }
@@ -120,8 +138,8 @@ img {
 
 .fondo-mundial {
   position: fixed;
-  left: 17%;
-  top: 7%;
+  left: 26%;
+  top: 10%;
   width: 85%;
   height: 100%;
   z-index: 6;
@@ -134,7 +152,7 @@ img {
   top: 75%;
   width: 30%;
   height: 60%;
-  z-index: 8;
+  z-index: 7;
   opacity: 100%;
 }
 
@@ -144,8 +162,8 @@ img {
 }
 
 .degradado {
-  background: linear-gradient(to right, #08047A 0.5%, transparent);
-  position: absolute;
+  background: linear-gradient(to right, #090380 55%, transparent);
+  position: fixed;
   width: 50%;
   height: 180%;
   z-index: 7;
@@ -155,7 +173,7 @@ img {
 
 .degradado_izquierdo {
   transform: rotate(-60deg);
-  right: 50%;
+  right: 55%;
 }
 
 .degradado_derecho {
@@ -163,7 +181,7 @@ img {
   left: 55%;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 1) {
 
   .video-fondo {
     width: 100em;
@@ -171,7 +189,7 @@ img {
   }
 
   .fondo-mundial {
-    position: absolute;
+    position: fixed;
     top: 11em;
     left: -10em;
     width: 50em;
@@ -185,7 +203,7 @@ img {
   }
 
   .fondo-oscuro {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -15em;
     width: 50em;
@@ -199,7 +217,7 @@ img {
   }
 
   .degradado {
-    position: absolute;
+    position: fixed;
     top: 0em;
   }
 
@@ -215,7 +233,7 @@ img {
   #logo-1 {
     width: 17em;
     max-height: 14rem;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -1em;
     right: 50%;
@@ -238,36 +256,56 @@ img {
   position: fixed;
   display: flex;
   justify-content: center;
-  top: 25%;
-  left: 5%;
-  width: 30%;
-  z-index: 6;
+  top: 21%;
+  left: -0.2%;
+  width: 38%;
+  z-index: 7;
+}
+
+.welcome1 {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 33.5%;
+  left: 4%;
+  width: 33%;
+  z-index: 7;
 }
 
 .welcome p {
-  font-size: 4.8vw;
-  font-family: "Bahnschrift", sans-serif;
+  font-size: 6.5vw;
+  font-weight: 600;
+  font-family: "Bahn";
+  color: white;
+  text-align: left;
+}
+
+.welcome1 p {
+  font-size: 6vw;
+  font-weight: 600;
+  font-family: "Bahn";
   color: white;
   text-align: left;
 }
 
 .welcome p b {
   text-decoration: bold;
+  font-weight: 600;
 }
 
 .welcome_text {
   position: fixed;
   display: flex;
   top: 50.8%;
-  left: 5%;
-  justify-content: center;
-  width: 40%;
-  z-index: 6;
+  left: 3%;
+  justify-content: left;
+  width: 35%;
+  z-index: 7;
 }
 
 .welcome_text p {
+  font-family: "Bahn";
   font-size: 2vw;
-  font-family: "Bahnschrift", sans-serif;
   color: white;
   text-align: left;
   text-transform: capitalize;
@@ -280,11 +318,12 @@ img {
 .welcome_text p span {
   color: #FFC000;
   font-size: 3.5vw;
+  font-family: "Bahn";
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 1) {
   .welcome {
-    position: absolute;
+    position: fixed;
     justify-content: center;
     top: 5em;
     left: 0.6em;
@@ -294,13 +333,13 @@ img {
 
   .welcome p {
     font-size: 16.2vw;
-    font-family: "Bahnschrift", sans-serif;
+    font-family: "Bahn";
     color: white;
     text-align: left;
   }
 
   .welcome_text {
-    position: absolute;
+    position: fixed;
     top: 16em;
     left: 1em;
     justify-content: center;
@@ -310,7 +349,7 @@ img {
 
   .welcome_text p {
     font-size: 6vw;
-    font-family: "Bahnschrift", sans-serif;
+    font-family: "Bahn";
     color: white;
     text-align: left;
     text-transform: capitalize;

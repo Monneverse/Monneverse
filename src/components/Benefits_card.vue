@@ -27,36 +27,24 @@ defineProps({
         <span></span>
         <span></span>
         <span></span>
-        <Benefit
-          titulo="Bank Segurity"
-          texto=""
-          segundoTitulo=""
+        <Benefit titulo="Bank Segurity" texto="" segundoTitulo=""
           segundoTexto="A bank that will shield the stability of our prices and supports the financial security of our holders, protects our system"
-          mostrarBtn="true"
-        />
+          mostrarBtn="true" />
       </div>
       <div class="cards">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        <Benefit
-          titulo="MonnerHosting and MonnerBlockchain"
-          texto=""
-          segundoTitulo=""
+        <Benefit titulo="MonnerHosting and MonnerBlockchain" texto="" segundoTitulo=""
           segundoTexto="Open a window of possibilities for all those creators who wish to design their"
-          mostrarBtn="true"
-        />
+          mostrarBtn="true" />
       </div>
       <div class="cards">
         <span></span><span></span><span></span><span></span>
-        <Benefit
-          titulo="The universe in the pocket of your Wallet!"
-          texto=""
-          segundoTitulo=""
+        <Benefit titulo="The universe in the pocket of your Wallet!" texto="" segundoTitulo=""
           segundoTexto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
-          mostrarBtn="true"
-        />
+          mostrarBtn="true" />
       </div>
     </div>
   </div>
@@ -90,13 +78,18 @@ defineProps({
   height: 5rem;
   z-index: 12;
 }
+
 .cards {
   position: relative;
   width: 25%;
   height: 60%;
   margin: 0 auto;
   overflow: hidden;
+  -webkit-box-shadow: 2px 4px 39px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 4px 39px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 4px 39px -1px rgba(0, 0, 0, 0.75);
 }
+
 .cards span {
   transition: 0.5s;
   opacity: 0;
@@ -105,15 +98,18 @@ defineProps({
     inset 10px 0 20px rgb(0, 243, 40), 0 0 50px rgb(254, 254, 254), -10px 0 80px rgb(1, 13, 37),
     10px 0 80px rgb(4, 224, 40);
 }
-.cards:hover span{
+
+.cards:hover span {
 
   opacity: 1;
 }
+
 .cards:hover {
   transform: translateY(-3%);
-   
+
   transition: 0.5s ease-out;
 }
+
 .cards span:nth-child(1) {
   position: absolute;
   top: 0;
@@ -123,6 +119,7 @@ defineProps({
   animation: animacion1 2s linear infinite;
   animation-delay: 1s;
 }
+
 @keyframes animacion1 {
   0% {
     transform: translateX(-100%);
@@ -132,6 +129,7 @@ defineProps({
     transform: translateX(100%);
   }
 }
+
 .cards span:nth-child(2) {
   position: absolute;
   top: 0;
@@ -141,6 +139,7 @@ defineProps({
   animation: animacion2 2s linear infinite;
   animation-delay: 1s;
 }
+
 @keyframes animacion2 {
   0% {
     transform: translateY(100%);
@@ -150,17 +149,19 @@ defineProps({
     transform: translateY(-100%);
   }
 }
+
 .cards span:nth-child(3) {
   position: absolute;
-  
+
   top: 99%;
   left: 0;
-  
+
   width: 120%;
   height: 3px;
   animation: animacion3 2s linear infinite;
   animation-delay: 1s;
 }
+
 @keyframes animacion3 {
   0% {
     transform: translateX(100%);
@@ -170,17 +171,19 @@ defineProps({
     transform: translateX(-100%);
   }
 }
+
 .cards span:nth-child(4) {
   position: absolute;
-  
+
   top: 0%;
   left: 99%;
-  
+
   width: 3px;
   height: 100%;
   animation: animacion4 2s linear infinite;
   animation-delay: 1s;
 }
+
 @keyframes animacion4 {
   0% {
     transform: translateY(-100%);
@@ -190,6 +193,7 @@ defineProps({
     transform: translateY(100%);
   }
 }
+
 .benefits {
   position: relative;
   margin: 0 auto;
@@ -216,6 +220,7 @@ defineProps({
     opacity: 100%;
   }
 }
+
 .fondo {
   position: absolute;
   z-index: 1;
@@ -225,11 +230,13 @@ defineProps({
   width: 100%;
   background-color: #121026;
 }
+
 .animacion-desplazamiento {
   animation-duration: 0.5s;
   animation-name: desplazamiento;
   animation-iteration-count: 1;
 }
+
 @keyframes desplazamiento {
   0% {
     top: 100%;
@@ -245,6 +252,7 @@ defineProps({
   animation-name: rotar;
   animation-iteration-count: 1;
 }
+
 @keyframes rotar {
   0% {
     transform: rotate(225deg);
@@ -254,6 +262,7 @@ defineProps({
     transform: rotate(135deg);
   }
 }
+
 .logo-redes {
   position: absolute;
   bottom: 0%;

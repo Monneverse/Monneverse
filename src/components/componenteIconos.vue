@@ -90,7 +90,7 @@ img {
 
 .name_coin {
   position: absolute;
-  font-family: "Work Sans", sans-serif;
+  font-family: Calibri;
   text-transform: uppercase;
   text-align: center;
   left: 14%;

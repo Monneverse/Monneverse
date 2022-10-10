@@ -1,12 +1,12 @@
 <script>
 export default {
   props: {
- 
+
     icono: {
       type: String,
       required: true,
     },
-    
+
     color: {
       type: String,
       required: true,
@@ -41,8 +41,8 @@ export default {
   margin-left: 5%;
   border-radius: 100%;
   z-index: 5;
-  width: 15vw;
-  height: 15vw;
+  width: 12vw;
+  height: 12vw;
   margin-bottom: 5%;
   color: white;
   font-family: "Work Sans", sans-serif;
@@ -58,8 +58,9 @@ export default {
   position: relative;
   z-index: 0;
   text-align: center;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
 }
+
 .contenedor {
   display: flex;
   width: 50%;
@@ -70,19 +71,20 @@ export default {
   flex-wrap: nowrap;
   flex-direction: column;
 }
+
 .contenedor img {
   position: relative;
   z-index: 1;
   width: 5vw;
 }
+
 .verde {
-  background: linear-gradient(
-    90deg,
-    rgb(18, 17, 65) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(18, 17, 65) 0%,
+      rgba(1, 209, 88, 1) 100%);
   color: white;
 }
+
 .blanco {
   background-color: white;
   color: rgba(1, 209, 88, 1);
@@ -95,30 +97,17 @@ export default {
   background-color: none;
   border-radius: 3px;
 }
+
 .circulo:hover .contenedor img {
   transition: 0.5s ease-in-out;
   transform: translate(-20px, -40px) rotate(-25deg) scale(1.2);
   opacity: 1;
   visibility: visible;
 }
+
 .circulo:hover .contenedor .texto {
   opacity: 1;
   visibility: visible;
   transition: 0.5s linear;
-}
-.rotar{
-
-transform: rotate(90deg);
-  
-}
-.rotar_180{
-
-transform: rotate(180deg);
-  
-}
-.rotar_360{
-
-transform: rotate(270deg);
-  
 }
 </style>

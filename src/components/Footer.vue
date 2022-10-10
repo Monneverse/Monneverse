@@ -91,10 +91,10 @@ img {
 /* logo */
 .logo {
     position: absolute;
-    top: 15%;
-    left: 43%;
-    width: 30%;
-    height: 30%;
+    top: 20%;
+    left: 38%;
+    width: 40%;
+    height: 40%;
     z-index: 9;
     max-width: 20rem;
     max-height: 20rem;
@@ -125,10 +125,10 @@ img {
     }
 
     100% {
-        top: 15%;
-        left: 43%;
-        width: 30%;
-        height: 30%;
+        top: 20%;
+        left: 38%;
+        width: 40%;
+        height: 40%;
     }
 }
 
@@ -227,12 +227,13 @@ img {
     left: 0;
     bottom: 10%;
     width: 100%;
-    height: 60%;
+    height: 30%;
     background-color: #1a1e2957;
     z-index: 5;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+
 }
 
 .fondo-redes-animation {

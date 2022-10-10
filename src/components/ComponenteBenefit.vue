@@ -37,37 +37,37 @@ export default {
 </script>
 
 <template>
-
-    <div
-      :class="index_pagina == 13 ? 'transparente' : 'fondo-oscuro'"
-      class="benefit"
-    >
-      <div class="div titulo_1">
-        <h2 class="centrar">
-          {{ titulo }}
-        </h2>
-        <p>
-          {{ texto }}
-        </p>
-      </div>
-
-      <div class="div titulo_2">
-        <h2 class="centrar">
-          {{ segundoTitulo }}
-        </h2>
-        <p class="centrar">
-          {{ segundoTexto }}
-        </p>
-      </div>
-      <div v-show="mostrarBtn" class="div">
-        <a class="btn centrar" :href="ruta">READ MORE</a>
-      </div>
+  <div
+    class="benefit fondo-oscuro"
+  >
+    <div class="div titulo_1">
+      <h2 class="centrar">
+        {{ titulo }}
+      </h2>
+      <p>
+        {{ texto }}
+      </p>
     </div>
 
+    <div class="div titulo_2">
+      <h2 class="centrar">
+        {{ segundoTitulo }}
+      </h2>
+      <p class="centrar">
+        {{ segundoTexto }}
+      </p>
+    </div>
+    <div v-show="mostrarBtn" class="div">
+      <a class="btn centrar" :href="ruta">READ MORE</a>
+    </div>
+  </div>
 </template>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;700&display=swap");
+@font-face {
+  font-family: "WorkSans";
+  src: url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
+}
 
 .benefit {
   width: 100%;
@@ -76,17 +76,22 @@ export default {
   color: white;
   display: flex;
   flex-wrap: wrap;
-  font-family: "Work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
+  
+ 
 }
 
 .fondo-oscuro {
   background-color: #161431;
+ 
 }
+
 .benefit .div {
   width: 90%;
   height: 20%;
   margin: 0 auto;
 }
+
 .titulo_1 {
   display: flex;
   flex-direction: column;
@@ -94,6 +99,7 @@ export default {
   height: 30%;
   text-transform: uppercase;
 }
+
 .titulo_2 {
   display: flex;
   flex-direction: column;
@@ -101,17 +107,21 @@ export default {
   justify-content: center;
   height: 50%;
 }
+
 .div h2 {
   font-size: 1.5vw;
   font-weight: 600;
 }
+
 .div p {
-  font-weight: 300;
+  font-weight: 600;
   font-size: 1.2vw;
 }
+
 .titulo_2 p {
   text-align: justify;
 }
+
 .btn {
   position: relative;
   background: linear-gradient(
@@ -124,7 +134,7 @@ export default {
   cursor: pointer;
   width: 45%;
   font-size: 1.1vw;
-  font-family: "Work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
 }
 
 .btn:hover {
@@ -134,6 +144,7 @@ export default {
     -10px 0 80px rgb(1, 13, 37), 10px 0 80px rgb(1, 64, 12);
   transition: 0.5s ease-out;
 }
+
 .transparente {
   background-color: rgb(22, 20, 49, 0.6);
   margin: 0 auto;
@@ -142,6 +153,7 @@ export default {
   justify-content: center;
   width: 75%;
 }
+
 .centrar {
   margin: 0 auto;
   display: flex;

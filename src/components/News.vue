@@ -30,6 +30,9 @@
         <a href=""><img src="/img/News/thcr.png"></a>
     </div>
 
+    <div class="circulo"></div>
+    <div class="indicador"></div>
+
     <div class="criptotendencia">
         <a
             href="https://criptotendencia.com/2022/08/03/por-que-monner-puede-convertirse-en-una-de-las-mejores-criptomonedas-para-invertir/"><img
@@ -58,6 +61,32 @@ img {
 }
 
 /* INICIO ESTILO FONDO */
+
+.indicador {
+    position: absolute;
+    top: 45%;
+    left: 46%;
+    width: 5%;
+    height: 20%;
+    border-radius: 2rem;
+    background: linear-gradient(to top,
+            #029F50 0%,
+            #0A664E 50%,
+            #0E444D 100%);
+    z-index: 8;
+}
+
+.circulo {
+    position: absolute;
+    top: 31%;
+    left: 46%;
+    width: 4.7%;
+    height: 10%;
+    border-radius: 5rem;
+    z-index: 8;
+    background: #1A1E29;
+}
+
 .fondo {
     position: absolute;
     height: 100%;
@@ -156,7 +185,7 @@ img {
 .titulo {
     position: absolute;
     top: 15%;
-    left: 42.5%;
+    left: 44.5%;
     color: white;
     text-align: center;
     justify-content: center;
@@ -175,16 +204,16 @@ img {
     position: absolute;
     top: 22%;
     left: 15%;
-    width: 20%;
-    height: 20%;
+    width: 22%;
+    height: 22%;
     z-index: 9;
 }
 
 .coinquora {
     position: absolute;
     top: 50%;
-    left: 15%;
-    width: 18%;
+    left: 16%;
+    width: 20%;
     height: 8%;
     z-index: 9;
 }
@@ -205,10 +234,10 @@ img:hover {
 
 .criptotendencia {
     position: absolute;
-    top: 44%;
+    top: 42%;
     right: 15%;
     width: 20%;
-    height: 25%;
+    height: 28%;
     z-index: 9;
 }
 

@@ -35,6 +35,9 @@ import Footer from "./components/Footer.vue";
     si el ultimo div tiene el id 5, entonces el que usted cree, debe ser el id 6
     y dentro de su div van los componentes, puede eliminar las clases 
     guiese del ejemplo div 1
+
+    Fonts para el proyecto calibri, Bahnschrift semibold semiconden, work sans, work sans Semibold
+     LCD, LCD MOno, Roboto
     -->
     <div :class="{ container: true, 'mostrar-container': index_pagina == 1 }">
       <Bienvenida />
@@ -142,6 +145,9 @@ export default {
           break;
         case 5:
           this.index_pagina = 15;
+          break;
+        case 6:
+          this.index_pagina = 1;
           break;
         default:
           break;

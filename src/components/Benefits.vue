@@ -214,12 +214,12 @@ defineProps({
   display: none;
   flex-wrap: wrap;
   justify-content: center;
-  width: 50%;
-  height: 50%;
+  width: 30%;
+  height: 30%;
   position: relative;
   z-index: 12;
-  top: 35%;
-  left: 37%;
+  top: 45%;
+  left: 30%;
   transform: rotate(225deg);
 }
 .animacion-rotar {
