@@ -93,7 +93,7 @@ export default {
  
   width: 85%;
   margin: 0 auto;
-  font-weight: 4  00;
+  font-weight: 400;
   font-size: 4.5vw;
   text-align: left;
 }
