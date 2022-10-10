@@ -142,7 +142,7 @@ export default {
   position: fixed;
   top: 0%;
   background-color: transparent;
-  width: 107%;
+  width: 96%;
   height: 3rem;
   margin-top: 2rem;
   display: flex;
