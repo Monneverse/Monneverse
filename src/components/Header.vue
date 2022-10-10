@@ -4,7 +4,8 @@
       <img src="/img/logo.svg" alt="logo monneverse" /></a>
   </div>
   <div id="barra" class="barra-navegacion">
-    <div class="content-nav"></div>
+    <div class="content-nav">
+    </div>
     <nav class="barra" @mouseout="exit_mouse">
       <a id="a1" :class="{ link: true, home: indexF == 1 }" @mouseover="hover_mover('a1')"
         @click="this.setPage(1)">articles</a>
@@ -141,7 +142,7 @@ export default {
   position: fixed;
   top: 0%;
   background-color: transparent;
-  width: 100%;
+  width: 107%;
   height: 3rem;
   margin-top: 2rem;
   display: flex;
@@ -201,7 +202,7 @@ export default {
   width: 30%;
   top: 5%;
   left: 77%;
-  
+
 }
 
 .btn {
