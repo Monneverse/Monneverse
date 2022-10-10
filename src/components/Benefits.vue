@@ -61,15 +61,16 @@ defineProps({
       <div class="benefits">
         <Benefits />
       </div>
-      <div :class="{
-        'circulos': true,
-        'animacion-rotar': index_pagina == 8,
-      }">
+      <div
+        :class="{
+          circulos: true,
+          'animacion-rotar': index_pagina == 8,
+        }"
+      >
         <Circulos
           icono="/img/Benefits/monnercard.png"
           color="blanco"
           texto="MONNERCARD"
-          
         />
         <Circulos
           icono="/img/Benefits/benefits.svg"
@@ -120,6 +121,7 @@ defineProps({
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
+
 .display_flex {
   display: flex;
   justify-content: space-evenly;
@@ -134,6 +136,7 @@ defineProps({
   width: 5rem;
   height: 5rem;
   z-index: 12;
+  display: none;
 }
 .titulo {
   position: absolute;
@@ -141,10 +144,15 @@ defineProps({
   left: 18%;
 }
 .titulo h1 {
-  font-size: 4vw;
+  font-size: 12vw;
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
   color: white;
+}
+@media screen and (min-width: 768px) {
+  .titulo h1 {
+    font-size: 4vw;
+  }
 }
 .benefits {
   position: relative;
@@ -187,6 +195,7 @@ defineProps({
   transform: rotateX(-180grad);
   z-index: 12;
   width: 80%;
+  display: none;
 }
 
 .rectangulo {
@@ -202,6 +211,7 @@ defineProps({
 }
 .circulos {
   display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
   width: 50%;
@@ -213,7 +223,7 @@ defineProps({
   transform: rotate(225deg);
 }
 .animacion-rotar {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-name: rotar;
   animation-iteration-count: 1;
 }
@@ -251,7 +261,7 @@ defineProps({
   width: 40%;
   height: 90%;
   z-index: 1;
-
+  display: none;
   animation-duration: 6s;
   animation-name: reflector;
   animation-iteration-count: infinite;
@@ -336,7 +346,7 @@ defineProps({
   filter: blur(3rem);
 }
 .animacion-aparecer {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
@@ -352,7 +362,7 @@ defineProps({
 }
 .animacion-dezplazamiento {
   animation-name: dezplazamiento;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-iteration-count: 1;
 }
 @keyframes dezplazamiento {
@@ -365,7 +375,7 @@ defineProps({
   }
 }
 .animacion-dezplazamiento-reflector-derecho {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-name: dezplazar_reflector_derecho;
   animation-iteration-count: 1;
 }
@@ -388,7 +398,7 @@ defineProps({
   }
 }
 .animacion-dezplazamiento-reflector-izquierdo {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-name: dezplazar_reflector_izquierdo;
   animation-iteration-count: 1;
 }
@@ -411,7 +421,7 @@ defineProps({
   }
 }
 .animacion-circuito {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-name: dezplazar_circuito;
   animation-iteration-count: 1;
 }
@@ -426,5 +436,5 @@ defineProps({
     top: 20%;
     left: 65%;
   }
- }
+}
 </style>
