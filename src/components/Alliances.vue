@@ -16,7 +16,7 @@ defineProps({
 
   <!--FONDO-->
   <div class="fondo-video">
-    <video src="/public/video/VideoBinario.mp4" autoplay="true" muted="true" loop="true"
+    <video src="/public/video/Multimedia1.mp4" autoplay="true" muted="true" loop="true"
       poster="/img/fondo_binario.png"></video>
   </div>
 
@@ -581,7 +581,7 @@ defineProps({
   position: absolute;
   width: 50%;
   height: 180%;
-  z-index: 3;
+  z-index: 9;
   animation-duration: 3s;
   animation-name: luz;
   animation-iteration-count: infinite;
@@ -592,7 +592,7 @@ defineProps({
 
 .degradado_izquierdo {
   transform: rotate(-60deg);
-  right: 50%;
+  right: 55%;
 }
 
 .degradado_derecho {

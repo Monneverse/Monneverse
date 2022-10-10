@@ -67,7 +67,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
 
 @font-face {
-  font-family: "Custom";
+  font-family: "WorkSans", serif;
   src: url("../assets/fonts/Work+Sans:wght@700&display=swap");
 }
 
@@ -222,6 +222,7 @@ img {
   right: 23%;
   color: white;
   font-size: 5vw;
+  font-weight: 500;
   font-family: Custom;
   z-index: 5;
 }
