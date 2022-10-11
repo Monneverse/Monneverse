@@ -141,31 +141,40 @@ defineProps({
 .titulo {
   position: absolute;
   top: 15%;
-  left: 18%;
+  left: 10%;
 }
 .titulo h1 {
+<<<<<<< Updated upstream
   font-size: 12vw;
+=======
+  font-size: 8vw;
+>>>>>>> Stashed changes
   font-family: "Work Sans", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   color: white;
 }
+<<<<<<< Updated upstream
 @media screen and (min-width: 768px) {
   .titulo h1 {
     font-size: 4vw;
   }
 }
+=======
+
+>>>>>>> Stashed changes
 .benefits {
   position: relative;
   z-index: 14;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   flex-wrap: wrap;
-  width: 55%;
-  height: 70%;
-  position: absolute;
-  top: 25%;
-  left: 15%;
+  flex-direction: column;
+  width: 100%;
+  height: 45%;
+  top: 20%;
+  left: 5%;
 }
+
 .fondo {
   position: absolute;
   z-index: 1;
@@ -181,7 +190,9 @@ defineProps({
   left: -30%;
   width: 100%;
   height: 100%;
+  display: none;
 }
+
 .circuito {
   position: absolute;
   z-index: 4;
@@ -190,6 +201,7 @@ defineProps({
   min-width: 30rem;
   top: 20%;
   left: 65%;
+  display: none;
 }
 .circuito img {
   transform: rotateX(-180grad);
@@ -204,6 +216,7 @@ defineProps({
   top: 50%;
   left: -15%;
   width: 100%;
+  display: none;
 }
 .rectangulo img {
   width: 20%;
@@ -221,6 +234,32 @@ defineProps({
   top: 45%;
   left: 30%;
   transform: rotate(225deg);
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .benefits {
+    top: 30%;
+    left: 12%;
+    justify-content: flex-start;
+    flex-direction: initial;
+    width: 80%;
+    height: 60%;
+  }
+  .titulo {
+    left: 15%;
+  }
+  .titulo h1 {
+    font-size: 4.5vw;
+  }
+  .fondo_rayos {
+    display: block;
+  }
+  .circuito {
+    display: block;
+  }
+  .circulos {
+    display: block;
+  }
 }
 .animacion-rotar {
   animation-duration: 0.5s;
@@ -245,6 +284,7 @@ defineProps({
   z-index: 14;
   display: flex;
   justify-content: start;
+  display: none;
 }
 
 .icon img {
@@ -266,6 +306,14 @@ defineProps({
   animation-name: reflector;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+@media screen and (min-width: 768px) {
+  .logo-redes {
+    display: flex;
+  }
+  .reflector {
+    display: flex;
+  }
 }
 
 @keyframes reflector {

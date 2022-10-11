@@ -307,6 +307,7 @@ main {
   visibility: hidden;
   padding: 0%;
   margin: 0%;
+  width: 480px;
   height: 100%;
 }
 

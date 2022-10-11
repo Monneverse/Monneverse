@@ -8,7 +8,7 @@ export default {
           symbol: "$",
           precio: "1,5",
           moneda: "USD",
-          sale_price: "Pre-sale Price",
+          sale_price: "Minimun purchase 1,5 USD Pre-sale Price",
           texto: "",
         },
         {
@@ -17,8 +17,7 @@ export default {
           precio: "Phase 1",
           moneda: "",
           sale_price: "",
-          texto:
-            "Phase 1 of staking only for users who buy in pre-sale",
+          texto: "Phase 1 of staking only for users who buy in pre-sale",
         },
         {
           icono: "/img/plus.svg",
@@ -83,80 +82,109 @@ export default {
   font-family: "Work Sans", sans-serif;
 }
 
-.benefit:nth-child(5){
-  width: 60%;
+.benefit:nth-child(5) {
+  width: 50%;
+}
+.benefit:nth-child(2) {
+  display: none;
+}
+.benefit:nth-child(4) {
+  display: none;
 }
 
-
-
 .benefit h1 {
- 
   width: 85%;
   margin: 0 auto;
   font-weight: 400;
-  font-size: 4.5vw;
+  font-size: 9vw;
   text-align: left;
 }
-
+@media screen and (min-width: 768px) {
+  .benefit {
+    width: 40%;
+    height: 25%;
+  }
+  .benefit h1 {
+    font-size: 4.5vw;
+  }
+  .benefit:nth-child(2) {
+    display: flex;
+  }
+  .benefit:nth-child(4) {
+    display: flex;
+  }
+  .benefit:nth-child(5) {
+    width: 45%;
+  }
+}
 
 .benefit span {
-  font-size: 1vw;
+  font-size: 2vw;
 }
 .dolar {
   color: rgb(55, 243, 149);
-  font-size: 4.5vw;
+  font-size: 9vw;
 }
 .content_price {
   width: 70%;
   height: 100%;
   background-color: #161431;
   border-radius: 0.5rem;
-  display: grid;
   display: flex;
   align-items: center;
   justify-items: center;
-
 }
 
 .content_price:hover {
-  box-shadow:
-    inset 0 0 60px whitesmoke,
-    inset 20px 0 80px rgb(6, 38, 58),
-    inset -20px 0 80px rgb(7, 64, 25),
-    inset 20px 0 300px rgb(5, 12, 28),
-    inset -20px 0 300px rgb(4, 41, 10),
-    0 0 50px #fff,
-    -10px 0 80px rgb(1, 13, 37),
-    10px 0 80px rgb(1, 64, 12);
-    transition: 0.5s ease-in;
-   
+  box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px rgb(6, 38, 58),
+    inset -20px 0 80px rgb(7, 64, 25), inset 20px 0 300px rgb(5, 12, 28),
+    inset -20px 0 300px rgb(4, 41, 10), 0 0 50px #fff,
+    -10px 0 80px rgb(1, 13, 37), 10px 0 80px rgb(1, 64, 12);
+  transition: 0.5s ease-in;
+}
+@media screen and (min-width: 768px) {
+  .benefit span {
+    font-size: 1vw;
+  }
+  .dolar {
+    color: rgb(55, 243, 149);
+    font-size: 4.5vw;
+  }
+  .content_price {
+    width: 70%;
+    height: 60%;
+    background-color: #161431;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
 }
 
 .content_text {
-  margin-left: 4.5vw;
-  margin-bottom: 0;
+  position: relative;
+  margin-left: 8vw;
+  margin-bottom: 20%;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   text-align: left;
-
 }
 .content_text h3 {
-  font-size: 1.6vw;
+  font-size: 3.6vw;
   font-weight: 400;
 }
 .content_text p {
-  width: 90%;
+  width: 70%;
   font-weight: 300;
-  font-size: 0.9vw;
+  font-size: 1.5vw;
   text-align: justify;
   align-items: left;
 }
 i {
   position: relative;
   left: 4%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -165,6 +193,31 @@ i img {
   align-items: flex-start;
   top: 0;
   right: 4%;
-  height: 50%;
+  height: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .content_text {
+    top: 0%;
+    margin-left: 15%;
+    height: 0;
+  }
+  .content_text h3 {
+    font-size: 1.2vw;
+    font-weight: 400;
+  }
+  .content_text p {
+    width: 90%;
+    height: 10%;
+    font-weight: 300;
+    font-size: 1vw;
+    text-align: justify;
+    align-items: left;
+  }
+  i img {
+    align-items: flex-start;
+    top: 0;
+    right: 4%;
+    height: 2rem;
+  }
 }
 </style>
