@@ -144,24 +144,16 @@ defineProps({
   left: 10%;
 }
 .titulo h1 {
-<<<<<<< Updated upstream
   font-size: 12vw;
-=======
-  font-size: 8vw;
->>>>>>> Stashed changes
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
   color: white;
 }
-<<<<<<< Updated upstream
 @media screen and (min-width: 768px) {
   .titulo h1 {
     font-size: 4vw;
   }
 }
-=======
-
->>>>>>> Stashed changes
 .benefits {
   position: relative;
   z-index: 14;
