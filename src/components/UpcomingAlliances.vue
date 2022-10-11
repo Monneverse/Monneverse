@@ -164,8 +164,10 @@ img {
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .degradado {
     position: fixed;
-    top: -60%;
-    left: -15%;
+    height: 30%;
+    width: 50%;
+    top: 14%;
+    left: -4%;
     z-index: 9;
   }
 
