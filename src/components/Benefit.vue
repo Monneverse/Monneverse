@@ -173,7 +173,7 @@ defineProps({
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
+  width: 480px;
   background-color: #121026;
 }
 
@@ -182,6 +182,11 @@ defineProps({
 
   left: -10%;
   width: 100%;
+  height: 100%;
+}
+.fondo_rayos img{
+  background-size: contain;
+  width:420px;
   height: 100%;
 }
 

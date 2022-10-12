@@ -307,9 +307,11 @@ main {
   visibility: hidden;
   padding: 0%;
   margin: 0%;
-  width: 480px;
+  width: 100%;
   height: 100%;
-}
+  overflow-x: hidden;
+
+} 
 
 .mostrar-container {
   visibility: visible;
