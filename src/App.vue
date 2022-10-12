@@ -305,9 +305,18 @@ main {
 
 .container {
   visibility: hidden;
+  position: relative;
   padding: 0%;
   margin: 0%;
+  width: 480%;
   height: 100%;
+  border: 1px solid yellowgreen;
+}
+
+@media screen and (max-device-width: 1024px) {
+  .container {
+    position: none;
+  }
 }
 
 .mostrar-container {

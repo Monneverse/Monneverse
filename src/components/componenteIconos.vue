@@ -100,4 +100,14 @@ img {
   color: white;
   text-align: center;
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .name_coin {
+    font-size: 8vw;
+  }
+
+  .icon_coin {
+    width: 18vw;
+  }
+}
 </style>

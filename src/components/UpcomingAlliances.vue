@@ -80,7 +80,7 @@ img {
 }
 
 .fondo {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
@@ -119,7 +119,7 @@ img {
 }
 
 .circuito-izquierdo {
-  position: absolute;
+  position: fixed;
   z-index: 4;
   left: -25%;
   top: 20%;
@@ -129,7 +129,7 @@ img {
 }
 
 .circuito-derecho {
-  position: absolute;
+  position: fixed;
   z-index: 4;
   right: -25%;
   top: 20%;
@@ -144,7 +144,7 @@ img {
 
 .degradado {
   background: linear-gradient(to right, #040077 50%, transparent);
-  position: absolute;
+  position: fixed;
   width: 50%;
   height: 180%;
   z-index: 3;
@@ -161,21 +161,31 @@ img {
   left: 55%;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .degradado {
-    top: -3em;
-    left: 5.5em;
+    position: fixed;
+    height: 30%;
+    width: 50%;
+    top: 14%;
+    left: -4%;
+    z-index: 9;
   }
 
   .degradado_izquierdo {
-    display: none
+    display: none;
   }
 
   .fondo-montana {
-    width: 40em;
-    height: 35em;
-    left: -10em;
-    top: 10em;
+    position: fixed;
+    top: 16%;
+    left: -5%;
+    width: 30em;
+    height: 20em;
+  }
+
+  .fondo-calculadora {
+    width: 28.6%;
+    height: 28.6%;
   }
 
   .circuito-derecho {
@@ -183,20 +193,6 @@ img {
   }
 
   .circuito-izquierdo {
-    display: none;
-  }
-
-  .fondo-mundial {
-    position: absolute;
-    top: 5em;
-    left: -15em;
-    width: 50em;
-    height: 40em;
-    opacity: 100%;
-    z-index: 3;
-  }
-
-  .semi-circle {
     display: none;
   }
 
@@ -217,7 +213,7 @@ img {
 }
 
 .upcoming_alliance h1 {
-  position: absolute;
+  position: fixed;
   top: 17%;
   right: 23%;
   color: white;
@@ -228,7 +224,7 @@ img {
 }
 
 .visa_img {
-  position: absolute;
+  position: fixed;
   width: 20%;
   height: 31%;
   top: 37%;
@@ -241,7 +237,7 @@ img {
 }
 
 .mastercard_img {
-  position: absolute;
+  position: fixed;
   width: 18%;
   height: 32%;
   top: 37%;
@@ -253,12 +249,12 @@ img {
   transform: scale(1.2);
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .mastercard_img {
-    position: absolute;
+    position: fixed;
     width: 9em;
     height: 9em;
-    top: 12em;
+    top: 14em;
     left: 12em;
   }
 
@@ -266,33 +262,40 @@ img {
     position: absolute;
     width: 9em;
     height: 9em;
-    top: 12em;
+    top: 14em;
     left: 1em;
   }
 
   .upcoming_alliance {
-    position: absolute;
-    top: 0;
-    left: 0%;
-    font-size: 12vw;
+    position: fixed;
+    top: 0%;
+    left: -20%;
+  }
+
+  .upcoming_alliance h1 {
+    font-size: 8vw;
+    width: 12em;
+    top: 6%;
+    left: 2%;
   }
 }
 
 .circulos_redes {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
-  top: 0%;
+  bottom: 20%;
   left: 0%;
+  z-index: 4;
 }
 
 .semi_circle {
-  position: absolute;
+  position: fixed;
   right: 26.3%;
   top: 74%;
   width: 50%;
   height: 100%;
-  z-index: 6;
+  z-index: 4;
   opacity: 100%;
   rotate: 180deg;
 }
@@ -303,14 +306,14 @@ img {
   top: 82%;
   width: 50%;
   height: 100%;
-  z-index: 7;
+  z-index: 4;
   opacity: 100%;
 }
 
 .rectangulo {
   width: 50%;
   height: 35%;
-  position: absolute;
+  position: fixed;
   top: -29%;
   left: 25%;
   background: rgb(8, 7, 32);
@@ -326,7 +329,7 @@ img {
   width: 44%;
   height: 20%;
   background-color: white;
-  position: absolute;
+  position: fixed;
   top: -18%;
   left: 28%;
   border-radius: 1.5rem;
@@ -337,7 +340,7 @@ img {
 }
 
 .logo-redes {
-  position: absolute;
+  position: fixed;
   bottom: 6.7%;
   left: 41.9%;
   width: 20rem;
@@ -352,6 +355,64 @@ img {
   height: auto;
   margin-left: 1rem;
   z-index: 8;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .circulos_redes {
+    position: fixed;
+    top: 10%;
+    left: -10%;
+  }
+
+  .semi_circle {
+    position: fixed;
+    right: 83%;
+    top: 24.5%;
+    width: 15%;
+    height: 9%;
+    z-index: 4;
+    opacity: 100%;
+    rotate: 180deg;
+    display: none;
+  }
+
+  .circle {
+    position: fixed;
+    right: 83%;
+    top: 25%;
+    width: 15%;
+    height: 20%;
+    z-index: 4;
+    opacity: 100%;
+    display: none;
+  }
+
+  .logo-redes {
+    position: fixed;
+    top: 24.8%;
+    left: 0%;
+    z-index: 9;
+  }
+
+  .icon {
+    width: 14%;
+  }
+
+  .rectangulo {
+    position: fixed;
+    top: -8.5%;
+    left: 1%;
+    width: 26%;
+    height: 10%;
+  }
+
+  .rectangulo-medio {
+    position: fixed;
+    top: -9.2%;
+    left: 2.2%;
+    width: 24%;
+    height: 10%;
+  }
 }
 
 .icon:hover {
