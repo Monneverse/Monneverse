@@ -305,7 +305,7 @@ main {
 
 .container {
   visibility: hidden;
-  /* position: relative; */
+  position: relative;
   padding: 0%;
   margin: 0%;
   width: 480%;
