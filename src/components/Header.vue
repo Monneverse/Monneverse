@@ -231,12 +231,16 @@ export default {
 
   .btn {
     position: fixed;
-    top: 25%;
-    left: 18%;
-    width: 10%;
-    height: 3%;
-    padding: 0.1rem;
+    top: 91%;
+    left: 57%;
+    width: 40%;
+    height: 8%;
+    padding: 0rem;
     font-size: 5vw;
+  }
+
+  .logo {
+    display: none;
   }
 }
 </style>

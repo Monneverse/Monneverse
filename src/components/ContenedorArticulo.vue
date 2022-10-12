@@ -94,11 +94,6 @@ import Articulo from "./Articulo.vue";
 </template>
 
 <script>
-
-
-
-
-
 export default {
   data() {
     return {
