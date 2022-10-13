@@ -10,7 +10,6 @@
   <div class="semi-circle ">
     <img src="../../public/img/semi_circulo.png" alt="" />
   </div>
-
   <div class="fondo-montana">
     <img src="/img/fondo-montana.png" alt="" srcset="" />
   </div>
@@ -188,9 +187,9 @@ img {
   }
 
   .video-fondo {
-    top: -7.5%;
-    width: 45.7%;
-    height: 42.9%;
+    top: 0%;
+    width: 100em;
+    height: 100em;
     z-index: 0;
   }
 
@@ -198,8 +197,8 @@ img {
     position: absolute;
     top: 0%;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100em;
+    height: 100em;
     background: radial-gradient(circle at center,
         #48d0ab 0%,
         #097561 50%,
@@ -209,8 +208,8 @@ img {
 
   .fondo-mundial {
     position: fixed;
-    top: 10em;
-    left: -10em;
+    top: 8em;
+    left: -12em;
     width: 50em;
     height: 40em;
     z-index: 8;
@@ -219,7 +218,7 @@ img {
 
   .fondo-montana {
     position: fixed;
-    top: 15%;
+    top: 22em;
     left: 0%;
     width: 30em;
     height: 20em;
@@ -241,8 +240,8 @@ img {
 
   .degradado {
     position: fixed;
-    top: -60%;
-    left: -15%;
+    top: 10%;
+    left: -26%;
     z-index: 9;
   }
 
@@ -260,8 +259,8 @@ img {
     width: 17em;
     max-height: 14rem;
     position: fixed;
-    top: -114%;
-    left: -27em;
+    top: 0em;
+    left: 0em;
     right: 50%;
     bottom: -58%;
     z-index: 9;
@@ -279,9 +278,9 @@ img {
   .semi-circle {
     position: fixed;
     left: 0%;
-    top: 24%;
-    width: 18%;
-    height: 16%;
+    top: 36em;
+    width: 13em;
+    height: 14em;
     z-index: 10;
     opacity: 100%;
   }
@@ -360,9 +359,9 @@ img {
   .welcome {
     position: fixed;
     justify-content: center;
-    top: 3%;
-    left: -17%;
-    width: 60%;
+    top: 4em;
+    left: -2%;
+    width: 100%;
     z-index: 99;
   }
 
@@ -370,21 +369,21 @@ img {
     position: fixed;
     justify-content: center;
     top: 8em;
-    left: -12.4em;
-    width: 60%;
+    left: 0.2em;
+    width: 100%;
     z-index: 6;
 
   }
 
   .welcome p {
-    font-size: 15vw;
+    font-size: 18vw;
     font-family: "Bahn";
     color: white;
     text-align: left;
   }
 
   .welcome1 p {
-    font-size: 15vw;
+    font-size: 16vw;
     font-family: "Bahn";
     color: white;
     text-align: left;
@@ -393,15 +392,15 @@ img {
   .welcome_text {
     position: fixed;
     top: 14em;
-    left: 2em;
+    left: 0.5em;
     justify-content: center;
-    width: 18%;
+    width: 65%;
     z-index: 9;
 
   }
 
   .welcome_text p {
-    font-size: 5vw;
+    font-size: 7vw;
     font-family: "Bahn";
     color: white;
     text-align: left;

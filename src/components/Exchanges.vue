@@ -3,7 +3,34 @@ import ComponenteIconos from "./componenteIconos.vue";
 </script>
 
 <template>
+  <!-- FONDO -->
   <div class="fondo"></div>
+  <div class="fondo-oscuro1"></div>
+  <div class="fondo-oscuro"></div>
+  <div class="fondo-oscuro-superior">
+    <img src="/img/fondo-oscuro-superior.png" alt="" srcset="" />
+  </div>
+  <div class="fondo-montana">
+    <img src="/img/fondo-montana.png" alt="" srcset="" />
+  </div>
+  <div class="fondo-montana">
+    <img src="/img/fondo-montana.png" alt="" srcset="" />
+  </div>
+  <div class="fondo-montana">
+    <img src="/img/fondo-montana.png" alt="" srcset="" />
+  </div>
+  <div class="degradado degradado_izquierdo"></div>
+  <div class="degradado degradado_derecho"></div>
+  <div class="fondo-mundial">
+    <img src="/img/fondo_Cel.png" alt="" srcset="" />
+  </div>
+  <div class="degradado degradado_izquierdo"></div>
+  <div class="degradado degradado_derecho"></div>
+  <div id="logo-1" class="logo">
+    <img src="/img/logo_Grande.png" alt="" />
+  </div>
+  <!-- FIN FONDO -->
+  <!-- CONTENIDO -->
   <div class="exchange_text">
     <p>first exchanges after our pre-sale</p>
   </div>
@@ -74,6 +101,64 @@ import ComponenteIconos from "./componenteIconos.vue";
     </div>
   </div>
 
+  <div class="contenedor_monedaMovil">
+    <div class="primeros">
+      <div class="pancake">
+        <ComponenteIconos iconos="/img/Exchanges/bunny-color.svg" iconname="pancakeswap" />
+      </div>
+      <div class="kucoin">
+        <ComponenteIconos iconos="/img/Exchanges/Kucoin.svg" iconname="kucoin" />
+      </div>
+      <div class="gateio">
+        <ComponenteIconos iconos="/img/Exchanges/Gatebw.svg" iconname="gate.io" />
+      </div>
+    </div>
+    <div class="segundos">
+      <div class="lbank">
+        <ComponenteIconos iconos="/img/Exchanges/lbank2.svg" iconname="LBank" />
+      </div>
+      <div class="okx">
+        <ComponenteIconos iconos="/img/Exchanges/okxlogo.svg" iconname="okx" />
+      </div>
+      <div class="coingecko">
+        <ComponenteIconos iconos="/img/Exchanges/CoinGecko.svg " iconname="coingecko" />
+      </div>
+    </div>
+    <div class="terceros">
+      <div class="mexcglobal">
+        <ComponenteIconos iconos="/img/Exchanges/mexcglobal.svg" iconname="mexc global" />
+      </div>
+      <div class="xtcom">
+        <ComponenteIconos iconos="/img/Exchanges/xtcom.svg" iconname="xt.com" />
+      </div>
+      <div class="poloniex">
+        <ComponenteIconos iconos="/img/Exchanges/poloniex.svg" iconname="poloniex" />
+      </div>
+    </div>
+    <div class="cuartos">
+      <div class="hotbit">
+        <ComponenteIconos iconos="/img/Exchanges/hotbit.svg" iconname="hotbit" />
+      </div>
+      <div class="coinmarket">
+        <ComponenteIconos iconos="/img/Exchanges/coinmarket.svg" iconname="coinmarket" />
+      </div>
+      <div class="ftx">
+        <ComponenteIconos iconos="/img/Exchanges/ftx.svg" iconname="ftx" />
+      </div>
+    </div>
+    <div class="quintos">
+      <div class="latoken">
+        <ComponenteIconos iconos="/img/Exchanges/latoken.svg" iconname="latoken" />
+      </div>
+      <div class="bitrue">
+        <ComponenteIconos iconos="/img/Exchanges/bitrue.svg" iconname="bitrue" />
+      </div>
+      <div class="favicon">
+        <ComponenteIconos iconos="/img/Exchanges/favicon.svg" iconname="favicon" />
+      </div>
+    </div>
+  </div>
+  <!-- FIN CONTENIDO -->
 </template>
 
 <style scoped>
@@ -82,6 +167,7 @@ img {
   width: 100%;
 }
 
+/* FONDO */
 .fondo {
   position: absolute;
   top: 0;
@@ -92,9 +178,110 @@ img {
   display: flex;
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #121026;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    opacity: 30%;
+    z-index: 3;
+  }
+
+
+  .fondo-oscuro {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center,
+        #48d0ab 0%,
+        #097561 50%,
+        #505863 100%);
+    z-index: 1;
+  }
+
+  .fondo-mundial {
+    position: fixed;
+    top: 12em;
+    left: -16em;
+    width: 50em;
+    height: 35em;
+    z-index: 3;
+    opacity: 70%;
+  }
+
+  .fondo-montana {
+    position: fixed;
+    top: 6%;
+    left: -40%;
+    width: 70em;
+    height: 40em;
+    z-index: 3;
+    opacity: 20%;
+  }
+
+  .fondo-oscuro {
+    position: fixed;
+    top: 0;
+    left: 0em;
+    width: 24em;
+    height: 52em;
+    background: radial-gradient(circle at center,
+        #48d0ab 10%,
+        #097561 30%,
+        #0F161C 100%);
+    z-index: 1;
+    opacity: 70%;
+  }
+
+  .degradado {
+    background: linear-gradient(to right, #090380 55%, transparent);
+    position: fixed;
+    width: 50%;
+    height: 180%;
+    z-index: 4;
+    top: -85%;
+    opacity: 90%;
+  }
+
+  .degradado_izquierdo {
+    transform: rotate(-60deg);
+    right: 55%;
+    visibility: hidden;
+
+  }
+
+  .degradado_derecho {
+    transform: rotate(230deg);
+    left: 55%;
+  }
+
+  #logo-1 {
+    width: 17em;
+    max-height: 14rem;
+    position: fixed;
+    top: 18%;
+    left: -2%;
+    z-index: 3;
+    opacity: 50%;
+  }
+}
+
+/* CONTENIDO */
 .exchange_text {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 28%;
   left: 5%;
   height: 20%;
@@ -119,28 +306,23 @@ img {
   z-index: 2;
 }
 
-/* REDES SOCIALES */
-.logo-redes {
-  position: absolute;
-  bottom: 0%;
-  left: 1rem;
-  width: 20rem;
-  height: 5rem;
-  z-index: 14;
-  display: flex;
-  justify-content: start;
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .exchange_text {
+    top: 1%;
+    left: 5%;
+    width: 20%;
+    height: 10.5%;
+    font-size: 14vw;
+    z-index: 999;
+  }
 }
-
-.icon {
-  width: 2rem;
-  height: auto;
-  z-index: 18;
-  margin-left: 1rem;
-}
-
-/* FIN REDES SOCIALES */
 
 /*ICONOS EXCHANGES*/
+
+.contenedor_monedaMovil {
+  display: none;
+}
+
 .contenedor_moneda {
   width: 58%;
   height: 75%;
@@ -170,5 +352,74 @@ img {
   top: 10%;
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 768px) {
+  .contenedor_moneda {
+    visibility: hidden;
+  }
+
+  .contenedor_monedaMovil .primeros .pancake {
+    top: 13%;
+    left: 1%;
+    width: 28%;
+    height: 4%;
+    display: grid;
+    position: fixed;
+    z-index: 4;
+  }
+
+  .contenedor_monedaMovil .primeros .kucoin {
+    top: 17%;
+    left: 1%;
+    width: 28%;
+    height: 4%;
+    display: grid;
+    position: fixed;
+    z-index: 4;
+  }
+
+  .contenedor_monedaMovil .primeros .gateio {
+    top: 21%;
+    left: 1%;
+    width: 28%;
+    height: 4%;
+    display: grid;
+    position: fixed;
+    z-index: 4;
+  }
+
+  .contenedor_monedaMovil {
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+  }
+}
+
 /* FIN ICONOS EXCHANGES */
+
+/* REDES SOCIALES */
+.logo-redes {
+  position: absolute;
+  bottom: 0%;
+  left: 1rem;
+  width: 20rem;
+  height: 5rem;
+  z-index: 14;
+  display: flex;
+  justify-content: start;
+}
+
+.icon {
+  width: 2rem;
+  height: auto;
+  z-index: 18;
+  margin-left: 1rem;
+}
+
+/* FIN REDES SOCIALES */
+
+/* FIN CONTENIDO */
 </style>

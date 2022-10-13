@@ -313,12 +313,11 @@ main {
 .container{
   position: absolute;
   visibility: hidden;
+  position: relative;
   padding: 0%;
   margin: 0%;
   width: 100%;
   height: 100%;
-
-
 }
 
 .mostrar-container {
