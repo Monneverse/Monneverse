@@ -277,6 +277,7 @@ Header {
 
 main {
   z-index: 0;
+  position: relative;
 }
 
 /* Style cambiar de div */
@@ -305,10 +306,10 @@ main {
 
 .container {
   visibility: hidden;
-  /* position: relative; */
+  position: absolute;
   padding: 0%;
   margin: 0%;
-  width: 480%;
+  width: 100%;
   height: 100%;
 }
 

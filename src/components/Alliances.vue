@@ -7,31 +7,44 @@ defineProps({
 });
 </script>
 <template>
-  <div :class="{
-    logo: true,
-    'animacion-logo': index_pagina == 2,
-  }">
+  <div
+    :class="{
+      logo: true,
+      'animacion-logo': index_pagina == 2,
+    }"
+  >
     <img src="/img/logo.svg" alt="logo monneverse" />
   </div>
 
   <!--FONDO-->
   <div class="fondo-video">
-    <video src="/public/video/Multimedia1.mp4" autoplay="true" muted="true" loop="true"
-      poster="/img/fondo_binario.png"></video>
+    <video
+      src="/public/video/Multimedia1.mp4"
+      autoplay="true"
+      muted="true"
+      loop="true"
+      poster="/img/fondo_binario.png"
+    ></video>
   </div>
 
   <div class="fondo filtro-superior"></div>
-  <div :class="{
-    'fondo-montana': true,
-    'fondo-montana-animation': index_pagina == 2,
-  }" class="fondo">
+  <div
+    :class="{
+      'fondo-montana': true,
+      'fondo-montana-animation': index_pagina == 2,
+    }"
+    class="fondo"
+  >
     <img src="/img/fondo-montana.png" />
   </div>
   <div class="fondo fondo-oscurecer"></div>
-  <div :class="{
-    'fondo-red': true,
-    'animacion-aparecer': index_pagina == 2,
-  }" class="fondo">
+  <div
+    :class="{
+      'fondo-red': true,
+      'animacion-aparecer': index_pagina == 2,
+    }"
+    class="fondo"
+  >
     <img src="/img/red.png" alt="" />
   </div>
 
@@ -41,7 +54,13 @@ defineProps({
   </div>
 
   <div class="rectangulo-medio">
+    <div class="contenido">
     <img src="../assets/rectangulo-medio.svg" alt="" />
+    <div class="imagenes">
+      <img src="../assets/methodBuy/visa.svg" alt="" />
+      <img src="../assets/methodBuy/masterCard.svg" alt="" />
+    </div>
+  </div>
   </div>
   <div class="rectangulo">
     <img src="../assets/rectangulo-verde.svg" alt="" />
@@ -53,33 +72,39 @@ defineProps({
   </div>
 
   <div class="alianzas">
-    <a href="https://www.reddit.com/user/monnerverse"><span><img src="/img/Alianzas/reddit.png" /></span>REDDIT</a>
+    <a href="https://www.reddit.com/user/monnerverse"
+      ><span><img src="/img/Alianzas/reddit.png" /></span>REDDIT</a
+    >
     <!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
 
-    <a href="https://t.me/monnerversecommunity"><span><img src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a>
+    <a href="https://t.me/monnerversecommunity"
+      ><span><img src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a
+    >
     <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 
-    <a href="https://discord.com/invite/h7fRvek9dn"><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a>
+    <a href="https://discord.com/invite/h7fRvek9dn"
+      ><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a
+    >
     <!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
   </div>
 
-  <div :class="{
-    semi_circulo: true,
-    'animacion-arco': index_pagina == 2,
-  }">
+  <div
+    :class="{
+      semi_circulo: true,
+      'animacion-arco': index_pagina == 2,
+    }"
+  >
     <img src="../assets/aro-iluminado-brillante.svg" alt="" />
   </div>
 
   <!--UPCOMING ALLIANCES-->
-  <div class="imagenes">
-    <img src="../assets/methodBuy/visa.svg" alt="" />
-    <img src="../assets/methodBuy/masterCard.svg" alt="" />
-  </div>
 
-  <div :class="{
-    puntero: true,
-    'animacion-aparecer': index_pagina == 2,
-  }">
+  <div
+    :class="{
+      puntero: true,
+      'animacion-aparecer': index_pagina == 2,
+    }"
+  >
     <img src="/img/puntero.svg" alt="" />
   </div>
 
@@ -150,6 +175,7 @@ defineProps({
   z-index: 0;
 }
 
+/*
 .filtro-superior {
   position: absolute;
   z-index: 1;
@@ -159,7 +185,7 @@ defineProps({
       #a8aaaf 100%);
   mix-blend-mode: multiply;
 }
-
+*/
 .fondo-montana img {
   position: absolute;
   top: 30%;
@@ -240,53 +266,21 @@ defineProps({
 }
 
 .circulo img {
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 70%;
   position: absolute;
-  top: 22%;
-  left: 10%;
+  top: 20%;
+  left: 17%;
   z-index: 5;
 }
 
-@media screen and (max-width: 768px) {
-  .circulo img {
-    width: 70%;
-    height: 70%;
-    top: 20%;
-    left: 17%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .circulo img {
-    top: 22%;
-    left: 10%;
-  }
-}
-
 .circulo-medio img {
-  width: 70%;
-  height: 72%;
+  width: 60%;
+  height: 62%;
   position: absolute;
-  top: 27%;
-  left: 15%;
+  top: 25%;
+  left: 22%;
   z-index: 7;
-}
-
-@media (max-width: 768px) {
-  .circulo-medio img {
-    width: 60%;
-    height: 62%;
-    top: 25%;
-    left: 22%;
-  }
-}
-
-@media (max-width: 480px) {
-  .circulo-medio img {
-    top: 27%;
-    left: 15%;
-  }
 }
 
 .alianzas {
@@ -298,6 +292,7 @@ defineProps({
   width: 24%;
   display: flex;
   justify-content: space-between;
+  display: none;
 }
 
 .alianzas a {
@@ -335,93 +330,6 @@ defineProps({
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .alianzas {
-    margin: 0;
-    position: absolute;
-    z-index: 14;
-    top: 34%;
-    left: 32%;
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .alianzas img {
-    top: 15%;
-    width: 7vw;
-    height: 7vw;
-  }
-
-  .alianzas a {
-    font-size: 2vw;
-  }
-
-  .alianzas a span {
-    padding: 0;
-    margin: 0 auto;
-    width: 9vw;
-    height: 9vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .alianzas {
-    margin: 0;
-    position: absolute;
-    z-index: 14;
-    top: 40%;
-    left: 38.5%;
-    width: 24%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .alianzas img {
-    top: 15%;
-    width: 7vw;
-    height: 7vw;
-  }
-
-  .alianzas a {
-    font-size: 2vw;
-  }
-
-  .alianzas a span {
-    padding: 0;
-    margin: 0 auto;
-    width: 9vw;
-    height: 9vw;
-  }
-}
-
-.semi_circulo img {
-  position: absolute;
-  z-index: 14;
-  width: 100%;
-  height: 85%;
-  padding: 0;
-  margin: 0;
-  top: 15%;
-  left: 0%;
-}
-
-@media screen and (max-width: 768px) {
-  .semi_circulo img {
-    width: 73%;
-    height: 73%;
-    top: 15%;
-    left: 15.5%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .semi_circulo img {
-    top: 15%;
-    left: 5%;
-  }
-}
-
 .animacion-arco img {
   animation-name: animacion-arco;
   animation-duration: 0.5s;
@@ -441,116 +349,59 @@ defineProps({
 }
 
 .rectangulo img {
-  width: 75%;
+  width: 85%;
   height: 35%;
   position: absolute;
-  top: 58%;
-  left: 12%;
+  top: 45%;
+  left: 8.5%;
   z-index: 8;
 }
 
 .rectangulo p {
-  top: 76%;
-  left: 37.5%;
+  top: 62%;
+  left: 27%;
   position: absolute;
   z-index: 15;
   color: #ffffff;
   font-family: Calibri;
-  font-size: 2.6vw;
+  font-size: 5.5vw;
   font-weight: 400;
 }
-
-@media screen and (max-width: 768px) {
-  .rectangulo img {
-    top: 51%;
-    left: 14.5%;
-  }
-
-  .rectangulo p {
-    font-size: 3.5vw;
-    top: 70%;
-    left: 32.5%;
-  }
-}
-
-@media (max-width: 480px) {
-  .rectangulo img {
-    width: 95%;
-    height: 95%;
-    top: 25%;
-    left: 2.5%;
-    display: none;
-  }
-
-  .rectangulo p {
-    font-size: 4vw;
-    top: 72%;
-    left: 28%;
-  }
-}
-
-.rectangulo-medio img {
-  width: 70%;
-  height: 43%;
+.rectangulo-medio{
   position: absolute;
-  top: 43%;
-  left: 15%;
-  z-index: 11;
-}
+  top: 50%;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 33;
 
-@media screen and (max-width: 768px) {
-  .rectangulo-medio img {
-    width: 85%;
-    height: 43%;
-    top: 38%;
-    left: 10%;
-  }
 }
-
-@media screen and (max-width: 480px) {
-  .rectangulo-medio img {
-    width: 100%;
-    height: 43%;
-    display: none;
-    top: 43%;
-    left: 0%;
-  }
+.contenido{
+  margin: 0 auto;
+  width: 95%;
+}
+.contenido img {
+  margin: 0 auto;
+  width: 100%;
+  height: 43%;
 }
 
 .imagenes {
-  position: absolute;
-  top: 55%;
-  left: 36%;
-
-  z-index: 23;
-  width: 28%;
-  height: 20%;
+  position: relative;
+  top: -26.5vw;
+  width: 70%;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .imagenes img {
-  width: 12vw;
+  width: 25vw;
 }
 
 .imagenes img:last-child {
-  width: 9.5vw;
-}
-
-@media screen and (max-width: 768px) {
-  .imagenes {
-    top: 50%;
-    left: 31%;
-    width: 40%;
-  }
-
-  .imagenes img {
-    width: 15vw;
-  }
-
-  .imagenes img:last-child {
-    width: 12vw;
-  }
+  width: 19.5vw;
 }
 
 .puntero {
@@ -562,18 +413,7 @@ defineProps({
   margin: 0;
   top: 84%;
   left: 40%;
-}
-
-@media screen and (max-width: 768px) {
-  .puntero {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .puntero {
-    display: none;
-  }
+  display: none;
 }
 
 .degradado {
