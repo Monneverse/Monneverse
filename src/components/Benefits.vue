@@ -60,6 +60,14 @@ defineProps({
     >
       <div class="benefits">
         <Benefits />
+        <div
+          :class="{
+            monner: true,
+            'animacion-logo': index_pagina == 2,
+          }"
+        >
+          <img src="/img/logo.svg" alt="logo monneverse" />
+        </div>
       </div>
       <div
         :class="{
@@ -121,7 +129,6 @@ defineProps({
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
-
 .display_flex {
   display: flex;
   justify-content: space-evenly;
@@ -138,6 +145,23 @@ defineProps({
   z-index: 12;
   display: none;
 }
+.monner{
+  
+  width: 100%;
+  height: 100%; 
+  display: flex;
+  justify-content: center;
+
+}
+.monner img{
+
+  
+  width: 30%;
+
+
+
+}
+
 .titulo {
   position: absolute;
   top: 15%;
@@ -216,7 +240,6 @@ defineProps({
 }
 .circulos {
   display: flex;
-  display: none;
   flex-wrap: wrap;
   justify-content: center;
   width: 30%;
@@ -224,21 +247,28 @@ defineProps({
   position: relative;
   z-index: 12;
   top: 45%;
-  left: 30%;
+  left: 0%;
   transform: rotate(225deg);
   display: none;
 }
 @media screen and (min-width: 768px) {
   .benefits {
-    top: 30%;
-    left: 12%;
-    justify-content: flex-start;
-    flex-direction: initial;
-    width: 80%;
+    top: 26%;
+    left: 10%;
+    width: 55%;
     height: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f";
   }
   .titulo {
-    left: 15%;
+    left: 16%;
   }
   .titulo h1 {
     font-size: 4.5vw;
@@ -246,11 +276,11 @@ defineProps({
   .fondo_rayos {
     display: block;
   }
-  .circuito {
-    display: block;
+  .circuitos {
+    display: flex;
   }
   .circulos {
-    display: block;
+    display: flex;
   }
 }
 .animacion-rotar {
