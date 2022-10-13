@@ -39,74 +39,74 @@ import Footer from "./components/Footer.vue";
     Fonts para el proyecto calibri, Bahnschrift semibold semiconden, work sans, work sans Semibold
      LCD, LCD MOno, Roboto
     -->
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 1 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 1 }">
       <Bienvenida />
     </div>
 
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 2 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 2 }">
       <Alliances :index_pagina="index_pagina" />
     </div>
 
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 3 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 3 }">
       <Alianzas />
     </div>
 
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 4 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 4 }">
       <Calculadora :index_pagina="index_pagina" />
     </div>
 
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 5 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 5 }">
       <ContenedorArticulo />
     </div>
 
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 6 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 6 }">
       <Exchanges />
     </div>
 
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 7 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 7 }">
       <Logos_auditorias />
     </div>
 
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 8}">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 8}">
       <Coins />
     </div>
 
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 9 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 9 }">
       <Benefits :index_pagina="index_pagina" />
     </div>
 
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 10 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 10 }">
       <Beneficio :index_pagina="index_pagina" />
     </div>
 
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 11 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 11 }">
       <Benefits_card :index_pagina="index_pagina" />
     </div>
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 12 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 12 }">
       <Benefits_card2 :index_pagina="index_pagina" />
     </div>
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 13 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 13 }">
       <Tokenomics :index_pagina="index_pagina" />
     </div>
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 14 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 14 }">
       <News />
     </div>
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 15 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 15 }">
       <Fase />
     </div>
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 16 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 16 }">
       <Fase2 />
     </div>
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 17 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 17 }">
       <Fase3 />
     </div>
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 18 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 18 }">
       <Fase4 />
     </div>
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == 19 }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == 19 }">
       <Fase5 />
     </div>
-    <div id="div" :class="{ container: true, 'mostrar-container': index_pagina == limite }">
+    <div :class="{ container: true, 'mostrar-container': index_pagina == limite }">
       <Footer :index_pagina="index_pagina" :limite="limite" :enter="enterAnimation" :exit="exitAnimation"></Footer>
     </div>
   </main>
@@ -250,15 +250,8 @@ export default {
   outline: none;
 }
 
-#app{
-
-  width: 100%;
-  height: 100%;
- 
-
-}
+#app,
 main {
-  width: 100%;
   height: 100%;
 }
 
@@ -283,8 +276,8 @@ Header {
 }
 
 main {
-  position: relative;
   z-index: 0;
+  position: relative;
 }
 
 /* Style cambiar de div */
@@ -310,16 +303,16 @@ main {
 ::-webkit-scrollbar {
   display: none;
 }
-.container{
-  position: absolute;
+
+.container {
   visibility: hidden;
-  position: relative;
+  position: absolute;
   padding: 0%;
   margin: 0%;
   width: 100%;
   height: 100%;
-}
 
+}
 .mostrar-container {
   visibility: visible;
 }
