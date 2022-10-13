@@ -1,6 +1,5 @@
 <script setup>
-import Benefit_5 from "./ComponenteBenefit.vue";
-import Circulos from "./ComponentesCirculo.vue";
+
 defineProps({
   index_pagina: {
     type: Number,
@@ -16,13 +15,13 @@ defineProps({
       fondo_rayos: true,
       'animacion-desplazamiento': index_pagina == 9,
     }">
-      <img src="/img/rayos.png" alt="" />
+    <!--<img src="/img/rayos.png" alt="" />-->  
     </div>
     <div class="rectangulo">
-      <img src="/img/rectangulo.svg" alt="" />
+      <!--<img src="/img/rectangulo.svg" alt="" />-->
     </div>
     <div class="logo">
-      <img src="/img/logo.svg" alt="logo monneverse" />
+      <!--<img src="/img/logo.svg" alt="logo monneverse" />-->
     </div>
     <div class="reflector reflector-izquierdo">
       <div class="luz-1"></div>
@@ -60,7 +59,7 @@ defineProps({
 
     </div>
 
-    <div class="logo-redes">
+   <!-- <div class="logo-redes">
       <div class="icon icon-telegram">
         <a href="https://t.me/monnerversecommunity" target="_blank">
           <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
@@ -77,6 +76,7 @@ defineProps({
         </a>
       </div>
     </div>
+  -->
   </div>
 </template>
 
@@ -84,6 +84,14 @@ defineProps({
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
   
 
+.fondo{
+
+  z-index: 4543;
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+}
+/*
 .display_flex {
   display: flex;
   justify-content: space-evenly;
@@ -118,7 +126,7 @@ defineProps({
 }
 
 .benefits {
-  position: relative;
+ 
   z-index: 8;
   width: 100%;
   height: 60%;
@@ -168,12 +176,12 @@ defineProps({
 }
 
 .fondo {
-  position: absolute;
+
   z-index: 1;
   top: 0;
   left: 0;
   height: 100%;
-  width: 480px;
+  width: 400px;
   background-color: #121026;
 }
 
@@ -244,7 +252,7 @@ defineProps({
   width: 40%;
   height: 90%;
   z-index: 1;
-
+  display: none;
   animation-duration: 6s;
   animation-name: reflector;
   animation-iteration-count: infinite;
@@ -318,4 +326,5 @@ defineProps({
       rgba(184, 184, 184, 0) 100%);
   filter: blur(3rem);
 }
+*/
 </style>
