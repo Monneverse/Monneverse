@@ -15,7 +15,7 @@ defineProps({
       fondo_rayos: true,
       'animacion-desplazamiento': index_pagina == 9,
     }">
-    <!--<img src="/img/rayos.png" alt="" />-->  
+    <img src="/img/rayos.png" alt="" />
     </div>
     <div class="rectangulo">
       <!--<img src="/img/rectangulo.svg" alt="" />-->
@@ -86,19 +86,12 @@ defineProps({
 
 .fondo{
 
-  z-index: 4543;
+  z-index: 43;
   width: 100%;
   height: 100%;
-  background-color: aqua;
+
 }
-/*
-.display_flex {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-}
+
 
 .logo {
   position: absolute;
@@ -110,16 +103,17 @@ defineProps({
 }
 
 .titulo {
-  position: absolute;
+  padding-top: 30%;
   width: 100%;
-  top: 20%;
+  height: 10%;
 
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .titulo h1 {
-  font-size: 4vw;
+  font-size: 15vw;
   font-family: "WorkSans", sans-serif;
   font-weight: 400;
   color: white;
@@ -130,7 +124,7 @@ defineProps({
   z-index: 8;
   width: 100%;
   height: 60%;
-  top: 35%;
+
   display: flex;
   justify-content: center;
 }
@@ -140,17 +134,17 @@ defineProps({
   justify-content: center;
   align-items: center;
   width: 80%;
-  height: 70%;
+  height: 100%;
   background-color: rgba(32, 29, 64, 0.2);
   margin: 0 auto;
-  border-radius: 1vw;
+  border-radius: 3vw;
 }
 
 .contenedor p {
 
-  font-size: 1.5vw;
+  font-size: 5.5vw;
   font-family: "WorkSans", sans-serif;
-  font-weight: 300;
+  font-weight: 100;
   width: 90%;
   text-align: center;
   color: white;
@@ -175,26 +169,17 @@ defineProps({
   }
 }
 
-.fondo {
-
-  z-index: 1;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 400px;
-  background-color: #121026;
-}
 
 .fondo_rayos {
   position: absolute;
-
-  left: -10%;
+  left: -80%;
   width: 100%;
   height: 100%;
+  z-index: -23;
 }
 .fondo_rayos img{
-  background-size: contain;
-  width:420px;
+  
+
   height: 100%;
 }
 
@@ -326,5 +311,5 @@ defineProps({
       rgba(184, 184, 184, 0) 100%);
   filter: blur(3rem);
 }
-*/
+
 </style>

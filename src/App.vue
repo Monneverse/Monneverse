@@ -18,17 +18,21 @@ import Tokenomics from "./components/Tokenomics.vue";
 import Fase from "./components/Phases.vue";
 import Fase2 from "./components/Phase2.vue";
 import Fase3 from "./components/Phase3.vue";
-import Fase4 from "./components/Phase4.vue"
-import Fase5 from "./components/Phase5.vue"
+import Fase4 from "./components/Phase4.vue";
+import Fase5 from "./components/Phase5.vue";
 import Footer from "./components/Footer.vue";
 </script>
 
 <template>
   <header>
-    <Header :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage"></Header>
+    <Header
+      :index="index"
+      :isVisible="isVisibleLogo"
+      :setPage="setOnPage"
+    ></Header>
   </header>
 
-  <main>
+  <main class="scroll-main">
     <!-- 
     para agregar una pantalla agreguela dentro de uno de los div libre
     sino hay div libre, cree uno con el siguiente #Id respetando la secuencia, por ejemplo
@@ -39,75 +43,140 @@ import Footer from "./components/Footer.vue";
     Fonts para el proyecto calibri, Bahnschrift semibold semiconden, work sans, work sans Semibold
      LCD, LCD MOno, Roboto
     -->
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 1 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 1 }"
+    >
       <Bienvenida />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 2 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 2 }"
+    >
       <Alliances :index_pagina="index_pagina" />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 3 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 3 }"
+    >
       <Alianzas />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 4 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 4 }"
+    >
       <Calculadora :index_pagina="index_pagina" />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 5 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 5 }"
+    >
       <ContenedorArticulo />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 6 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 6 }"
+    >
       <Exchanges />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 7 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 7 }"
+    >
       <Logos_auditorias />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 8}">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 8 }"
+    >
       <Coins />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 9 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 9 }"
+    >
       <Benefits :index_pagina="index_pagina" />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 10 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 10 }"
+    >
       <Beneficio :index_pagina="index_pagina" />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 11 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 11 }"
+    >
       <Benefits_card :index_pagina="index_pagina" />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 12 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 12 }"
+    >
       <Benefits_card2 :index_pagina="index_pagina" />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 13 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 13 }"
+    >
       <Tokenomics :index_pagina="index_pagina" />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 14 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 14 }"
+    >
       <News />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 15 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 15 }"
+    >
       <Fase />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 16 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 16 }"
+    >
       <Fase2 />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 17 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 17 }"
+    >
       <Fase3 />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 18 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 18 }"
+    >
       <Fase4 />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 19 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 19 }"
+    >
       <Fase5 />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == limite }">
-      <Footer :index_pagina="index_pagina" :limite="limite" :enter="enterAnimation" :exit="exitAnimation"></Footer>
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == limite }"
+    >
+      <Footer
+        :index_pagina="index_pagina"
+        :limite="limite"
+        :enter="enterAnimation"
+        :exit="exitAnimation"
+      ></Footer>
     </div>
   </main>
 </template>
@@ -124,6 +193,12 @@ export default {
       enterAnimation: false,
       isRevert: false,
       listaPaginaDondeSeOcultaLogo: [1, 2],
+      isDragging: false,
+      startX: 0,
+      startY: 0,
+      moveX: 0,
+      moveY: 0,
+      position: 0,
     };
   },
   methods: {
@@ -182,6 +257,27 @@ export default {
           break;
       }
     },
+
+    touchStart() {
+      this.startX = this.touchPositionX();
+      this.startY = this.touchPositionY();
+    },
+
+    touchMove() {
+      this.moveX = this.touchPositionX();
+      this.moveY = this.touchPositionY();
+    },
+    touchEnd() {
+      if (this.startX + 100 < this.moveX) {
+        console.log("derecha");
+      } else if (this.startX - 100 > this.moveX) {
+        console.log("izquierda");
+      } else if (this.startY - 100 > this.moveY) {
+        this.NavegarDown();
+      } else if (this.startY + 100 < this.moveY) {
+        this.NavegarUp();
+      }
+    },
     Navegar() {
       if (this.scroll) {
         this.exitAnimation = true;
@@ -227,11 +323,118 @@ export default {
         }, 1000);
       }
     },
+    NavegarDown() {
+      if (this.scroll) {
+        this.exitAnimation = true;
+        this.scroll = false;
+
+        let newPosition = this.index_pagina;
+        if (this.position > 0) {
+          if (this.index_pagina < this.limite) {
+            newPosition = this.index_pagina + 1;
+            this.isRevert = false;
+          }
+        } 
+        console.log(this.position)
+        setTimeout(() => {
+          this.index_pagina = newPosition;
+          this.isVisibleLogo = true;
+          if (
+            this.listaPaginaDondeSeOcultaLogo.filter(
+              (x) => x == this.index_pagina
+            ).length > 0
+          ) {
+            this.isVisibleLogo = false;
+          }
+
+          location.hash = "#" + this.index_pagina;
+          window.history.pushState(
+            {},
+            document.title,
+            window.location.pathname
+          );
+          this.UpdateNav(this.index_pagina);
+          this.exitAnimation = false;
+          this.enterAnimation = true;
+        }, 500);
+
+        setTimeout(() => {
+          this.scroll = true;
+          this.enterAnimation = false;
+        }, 1000);
+      }
+    },
+    NavegarUp() {
+      if (this.scroll) {
+        this.exitAnimation = true;
+        this.scroll = false;
+
+        let newPosition = this.index_pagina;
+        if (this.position > 0) {
+          if (this.index_pagina > 1) {
+            newPosition = this.index_pagina - 1;
+            this.isRevert = true;
+          }
+        } 
+        console.log(this.position)
+        setTimeout(() => {
+          this.index_pagina = newPosition;
+          this.isVisibleLogo = true;
+          if (
+            this.listaPaginaDondeSeOcultaLogo.filter(
+              (x) => x == this.index_pagina
+            ).length > 0
+          ) {
+            this.isVisibleLogo = false;
+          }
+
+          location.hash = "#" + this.index_pagina;
+          window.history.pushState(
+            {},
+            document.title,
+            window.location.pathname
+          );
+          this.UpdateNav(this.index_pagina);
+          this.exitAnimation = false;
+          this.enterAnimation = true;
+        }, 500);
+
+        setTimeout(() => {
+          this.scroll = true;
+          this.enterAnimation = false;
+        }, 1000);
+      }
+
+
+    },
+    returnMethods() {
+      const scrolls = Array.from(document.querySelectorAll("div"));
+
+      scrolls.forEach((scroll) => {
+        scroll.addEventListener("touchstart", this.touchStart);
+        scroll.addEventListener("touchend", this.touchEnd);
+        scroll.addEventListener("touchmove", this.touchMove);
+      });
+      window.oncontextmenu = () => {
+        event.preventDefault();
+        event.stopPropagation();
+        return false;
+      };
+    },
+    touchPositionX() {
+      return (this.position = event.touches[0].clientX);
+    },
+    touchPositionY() {
+      return (this.position = event.touches[0].clientY);
+    },
   },
   mounted() {
     this.index_pagina = 1;
     document.addEventListener("wheel", this.Navegar);
     this.listaPaginaDondeSeOcultaLogo.push(this.limite);
+
+    this.returnMethods();
+    document.addEventListener("drag", this.returnMethods);
   },
 };
 </script>
@@ -248,6 +451,9 @@ export default {
   text-decoration: none;
   border: none;
   outline: none;
+}
+.grabbing {
+  cursor: grabbing;
 }
 
 #app,
@@ -287,17 +493,21 @@ main {
 }
 
 .orange {
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
 }
 
 .red {
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
 }
 
 ::-webkit-scrollbar {
