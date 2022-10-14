@@ -206,7 +206,7 @@ export default {
 }
 
 .btn {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   font-size: 16px;
   font-weight: bold;
   border-radius: 8px;
@@ -214,7 +214,7 @@ export default {
   border-color: transparent;
   text-align: center;
   background-color: #ffc000;
-  padding: 0.8rem;
+  padding: 0.6rem;
   width: 42%;
   height: 15%;
   min-width: 8rem;
