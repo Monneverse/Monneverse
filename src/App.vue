@@ -18,17 +18,21 @@ import Tokenomics from "./components/Tokenomics.vue";
 import Fase from "./components/Phases.vue";
 import Fase2 from "./components/Phase2.vue";
 import Fase3 from "./components/Phase3.vue";
-import Fase4 from "./components/Phase4.vue"
-import Fase5 from "./components/Phase5.vue"
+import Fase4 from "./components/Phase4.vue";
+import Fase5 from "./components/Phase5.vue";
 import Footer from "./components/Footer.vue";
 </script>
 
 <template>
   <header>
-    <Header :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage"></Header>
+    <Header
+      :index="index"
+      :isVisible="isVisibleLogo"
+      :setPage="setOnPage"
+    ></Header>
   </header>
 
-  <main>
+  <main class="scroll-main">
     <!-- 
     para agregar una pantalla agreguela dentro de uno de los div libre
     sino hay div libre, cree uno con el siguiente #Id respetando la secuencia, por ejemplo
@@ -39,75 +43,140 @@ import Footer from "./components/Footer.vue";
     Fonts para el proyecto calibri, Bahnschrift semibold semiconden, work sans, work sans Semibold
      LCD, LCD MOno, Roboto
     -->
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 1 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 1 }"
+    >
       <Bienvenida />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 2 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 2 }"
+    >
       <Alliances :index_pagina="index_pagina" />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 3 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 3 }"
+    >
       <Alianzas />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 4 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 4 }"
+    >
       <Calculadora :index_pagina="index_pagina" />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 5 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 5 }"
+    >
       <ContenedorArticulo />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 6 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 6 }"
+    >
       <Exchanges />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 7 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 7 }"
+    >
       <Logos_auditorias />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 8}">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 8 }"
+    >
       <Coins />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 9 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 9 }"
+    >
       <Benefits :index_pagina="index_pagina" />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 10 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 10 }"
+    >
       <Beneficio :index_pagina="index_pagina" />
     </div>
 
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 11 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 11 }"
+    >
       <Benefits_card :index_pagina="index_pagina" />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 12 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 12 }"
+    >
       <Benefits_card2 :index_pagina="index_pagina" />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 13 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 13 }"
+    >
       <Tokenomics :index_pagina="index_pagina" />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 14 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 14 }"
+    >
       <News />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 15 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 15 }"
+    >
       <Fase />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 16 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 16 }"
+    >
       <Fase2 />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 17 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 17 }"
+    >
       <Fase3 />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 18 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 18 }"
+    >
       <Fase4 />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == 19 }">
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == 19 }"
+    >
       <Fase5 />
     </div>
-    <div :class="{ container: true, 'mostrar-container': index_pagina == limite }">
-      <Footer :index_pagina="index_pagina" :limite="limite" :enter="enterAnimation" :exit="exitAnimation"></Footer>
+    <div
+      id="container"
+      :class="{ container: true, 'mostrar-container': index_pagina == limite }"
+    >
+      <Footer
+        :index_pagina="index_pagina"
+        :limite="limite"
+        :enter="enterAnimation"
+        :exit="exitAnimation"
+      ></Footer>
     </div>
   </main>
 </template>
@@ -124,6 +193,13 @@ export default {
       enterAnimation: false,
       isRevert: false,
       listaPaginaDondeSeOcultaLogo: [1, 2],
+      isDragging: false,
+      startPos: 0,
+      currentTranslate: 0,
+      prevTranslate: 0,
+      animationID: 0,
+      currentIndex: 0,
+      position: 0,
     };
   },
   methods: {
@@ -227,11 +303,80 @@ export default {
         }, 1000);
       }
     },
+    touchStart(index_pagina) {
+      const scrollDown = document.querySelector(".scroll-main");
+      return (event) => {
+        this.currentIndex = index_pagina;
+        this.startPos = this.cursorPositionY(event);
+        this.isDragging = true;
+
+        this.animationID = requestAnimationFrame(this.animation);
+      };
+    },
+    touchEnd() {
+      this.isDragging = false;
+      cancelAnimationFrame(this.animacionID);
+      const moveBy = this.currentTranslate - this.prevTranslate;
+      if (moveBy < -100 && this.currenIndex < this.limite - 1) {
+        this.currentIndex += 1;
+      }
+      if (moveBy > 100 && this.currenIndex > 0) {
+        this.currentIndex += 1;
+      }
+      this.setPositionByIndex
+    },
+    touchMove(event) {
+      if (this.isDragging) {
+        const currentposition = this.cursorPositionY(event);
+        this.currentTranslate =
+          this.prevTranslate + this.currentposition - this.startPos;
+      }
+    },
+    cursorPositionY(event) {
+      return (this.position = event.touches[0].clientY);
+    },
+    animation() {
+      this.setPositionScroll();
+
+      if (this.isDragging) {
+        requestAnimationFrame(this.animation);
+      }
+    },
+    setPositionScroll() {
+      const scrollDown = document.querySelector(".scroll-main");
+      scrollDown.style.transform = `tranlate(${this.currentTranslate}px)`;
+    },
+    setPositionByIndex(){
+        this.currentTranslate = this.currentIndex * -window.innerWidth
+        this.prevTranslate = currentTranslate
+        this.setPositionScroll();
+    },
+    returnMethods() {
+      const scrolls = Array.from(document.querySelectorAll("div"));
+
+      scrolls.forEach((scroll, index_pagina) => {
+        const container = scroll.querySelector(".container");
+
+        container?.addEventListener("dragstart", (e) => e.preventDefault());
+
+        scroll.addEventListener("touchstart", this.touchStart(index_pagina));
+        scroll.addEventListener("touchend", this.touchEnd);
+        scroll.addEventListener("touchmove", this.touchMove);
+      });
+      window.oncontextmenu = () => {
+        event.preventDefault();
+        event.stopPropagation();
+        return false;
+      };
+    },
   },
   mounted() {
     this.index_pagina = 1;
     document.addEventListener("wheel", this.Navegar);
     this.listaPaginaDondeSeOcultaLogo.push(this.limite);
+
+    this.returnMethods();
+    document.addEventListener("drag", this.returnMethods);
   },
 };
 </script>
@@ -248,6 +393,9 @@ export default {
   text-decoration: none;
   border: none;
   outline: none;
+}
+.grabbing {
+  cursor: grabbing;
 }
 
 #app,
@@ -287,17 +435,21 @@ main {
 }
 
 .orange {
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
 }
 
 .red {
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
 }
 
 ::-webkit-scrollbar {
@@ -311,7 +463,6 @@ main {
   margin: 0%;
   width: 100%;
   height: 100%;
-
 }
 .mostrar-container {
   visibility: visible;
