@@ -28,23 +28,16 @@ export default {
           texto:
             "The price on Pancakeswap for purchases and sales will be $22,6 one day after the pre-sale of our first 2,000,000 Monners to the public ends",
         },
+       
+       
         {
           icono: "/img/plus.svg",
           symbol: "",
-          precio: "1500%",
-          moneda: "",
-          sale_price: "",
-          texto:
-            "The price increase is made in order to reward our first headlines. You can earn up to 1500% of your initial investment at the end of the pre-sale",
-        },
-        {
-          icono: "/img/plus.svg",
-          symbol: "",
-          precio: "12%*48h",
+          precio: "6.2%*48h",
           moneda: "",
           sale_price: "Sale Price",
           texto:
-            "Enter our first phase os staking buying in pre-sale and earn 12.6% every 48 hours of your total capital in Monnercoins after the launch in Pancakeswap",
+            "Our PancakeSwap price will range from $8,200 to $10,000 thanks to:    - Our limited supply of 10,000 MNR.    - Scheduled Burns.    -Our sponsors.    - The GREAT injection of liquidity made by our team with its line of credit from the USA and private investors.     We will take into account all the tools that allow us to make our prices grow exponentially.    As we grow further into PancakeSwap, it is less likely that we will hit our presale prices again.  Our goal is to be the highest value token thanks to our limited supply of 10,000 MNR.  ",
         },
       ],
     };
@@ -101,8 +94,8 @@ export default {
 }
 @media screen and (min-width: 768px) {
   .benefit {
-    width: 40%;
-    height: 25%;
+    width: 100%;
+    height: 100%;
   }
   .benefit h1 {
     font-size: 4.5vw;
@@ -112,9 +105,10 @@ export default {
   }
   .benefit:nth-child(4) {
     display: flex;
+    grid-area: e;
   }
   .benefit:nth-child(5) {
-    width: 45%;
+    width: 60%;
   }
 }
 
@@ -151,8 +145,9 @@ export default {
     font-size: 4.5vw;
   }
   .content_price {
-    width: 70%;
-    height: 60%;
+    width: 88%;
+    height: 50%;
+    margin: 0 auto;
     background-color: #161431;
     border-radius: 0.5rem;
     display: flex;
@@ -209,13 +204,13 @@ i img {
     width: 90%;
     height: 10%;
     font-weight: 300;
-    font-size: 1vw;
+    font-size: .9vw;
     text-align: justify;
     align-items: left;
   }
   i img {
     align-items: flex-start;
-    top: 0;
+    top: 10%;
     right: 4%;
     height: 2rem;
   }
