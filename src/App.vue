@@ -194,11 +194,10 @@ export default {
       isRevert: false,
       listaPaginaDondeSeOcultaLogo: [1, 2],
       isDragging: false,
-      startPos: 0,
-      currentTranslate: 0,
-      prevTranslate: 0,
-      animationID: 0,
-      currentIndex: 0,
+      startX: 0,
+      startY: 0,
+      moveX: 0,
+      moveY: 0,
       position: 0,
     };
   },
@@ -258,6 +257,27 @@ export default {
           break;
       }
     },
+
+    touchStart() {
+      this.startX = this.touchPositionX();
+      this.startY = this.touchPositionY();
+    },
+
+    touchMove() {
+      this.moveX = this.touchPositionX();
+      this.moveY = this.touchPositionY();
+    },
+    touchEnd() {
+      if (this.startX + 100 < this.moveX) {
+        console.log("derecha");
+      } else if (this.startX - 100 > this.moveX) {
+        console.log("izquierda");
+      } else if (this.startY - 100 > this.moveY) {
+        this.NavegarDown();
+      } else if (this.startY + 100 < this.moveY) {
+        this.NavegarUp();
+      }
+    },
     Navegar() {
       if (this.scroll) {
         this.exitAnimation = true;
@@ -303,63 +323,95 @@ export default {
         }, 1000);
       }
     },
-    touchStart(index_pagina) {
-      const scrollDown = document.querySelector(".scroll-main");
-      return (event) => {
-        this.currentIndex = index_pagina;
-        this.startPos = this.cursorPositionY(event);
-        this.isDragging = true;
+    NavegarDown() {
+      if (this.scroll) {
+        this.exitAnimation = true;
+        this.scroll = false;
 
-        this.animationID = requestAnimationFrame(this.animation);
-      };
-    },
-    touchEnd() {
-      this.isDragging = false;
-      cancelAnimationFrame(this.animacionID);
-      const moveBy = this.currentTranslate - this.prevTranslate;
-      if (moveBy < -100 && this.currenIndex < this.limite - 1) {
-        this.currentIndex += 1;
-      }
-      if (moveBy > 100 && this.currenIndex > 0) {
-        this.currentIndex += 1;
-      }
-      this.setPositionByIndex
-    },
-    touchMove(event) {
-      if (this.isDragging) {
-        const currentposition = this.cursorPositionY(event);
-        this.currentTranslate =
-          this.prevTranslate + this.currentposition - this.startPos;
-      }
-    },
-    cursorPositionY(event) {
-      return (this.position = event.touches[0].clientY);
-    },
-    animation() {
-      this.setPositionScroll();
+        let newPosition = this.index_pagina;
+        if (this.position > 0) {
+          if (this.index_pagina < this.limite) {
+            newPosition = this.index_pagina + 1;
+            this.isRevert = false;
+          }
+        } 
+        console.log(this.position)
+        setTimeout(() => {
+          this.index_pagina = newPosition;
+          this.isVisibleLogo = true;
+          if (
+            this.listaPaginaDondeSeOcultaLogo.filter(
+              (x) => x == this.index_pagina
+            ).length > 0
+          ) {
+            this.isVisibleLogo = false;
+          }
 
-      if (this.isDragging) {
-        requestAnimationFrame(this.animation);
+          location.hash = "#" + this.index_pagina;
+          window.history.pushState(
+            {},
+            document.title,
+            window.location.pathname
+          );
+          this.UpdateNav(this.index_pagina);
+          this.exitAnimation = false;
+          this.enterAnimation = true;
+        }, 500);
+
+        setTimeout(() => {
+          this.scroll = true;
+          this.enterAnimation = false;
+        }, 1000);
       }
     },
-    setPositionScroll() {
-      const scrollDown = document.querySelector(".scroll-main");
-      scrollDown.style.transform = `tranlate(${this.currentTranslate}px)`;
-    },
-    setPositionByIndex(){
-        this.currentTranslate = this.currentIndex * -window.innerWidth
-        this.prevTranslate = currentTranslate
-        this.setPositionScroll();
+    NavegarUp() {
+      if (this.scroll) {
+        this.exitAnimation = true;
+        this.scroll = false;
+
+        let newPosition = this.index_pagina;
+        if (this.position > 0) {
+          if (this.index_pagina > 1) {
+            newPosition = this.index_pagina - 1;
+            this.isRevert = true;
+          }
+        } 
+        console.log(this.position)
+        setTimeout(() => {
+          this.index_pagina = newPosition;
+          this.isVisibleLogo = true;
+          if (
+            this.listaPaginaDondeSeOcultaLogo.filter(
+              (x) => x == this.index_pagina
+            ).length > 0
+          ) {
+            this.isVisibleLogo = false;
+          }
+
+          location.hash = "#" + this.index_pagina;
+          window.history.pushState(
+            {},
+            document.title,
+            window.location.pathname
+          );
+          this.UpdateNav(this.index_pagina);
+          this.exitAnimation = false;
+          this.enterAnimation = true;
+        }, 500);
+
+        setTimeout(() => {
+          this.scroll = true;
+          this.enterAnimation = false;
+        }, 1000);
+      }
+
+
     },
     returnMethods() {
       const scrolls = Array.from(document.querySelectorAll("div"));
 
-      scrolls.forEach((scroll, index_pagina) => {
-        const container = scroll.querySelector(".container");
-
-        container?.addEventListener("dragstart", (e) => e.preventDefault());
-
-        scroll.addEventListener("touchstart", this.touchStart(index_pagina));
+      scrolls.forEach((scroll) => {
+        scroll.addEventListener("touchstart", this.touchStart);
         scroll.addEventListener("touchend", this.touchEnd);
         scroll.addEventListener("touchmove", this.touchMove);
       });
@@ -368,6 +420,12 @@ export default {
         event.stopPropagation();
         return false;
       };
+    },
+    touchPositionX() {
+      return (this.position = event.touches[0].clientX);
+    },
+    touchPositionY() {
+      return (this.position = event.touches[0].clientY);
     },
   },
   mounted() {
