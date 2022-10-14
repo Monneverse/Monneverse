@@ -54,7 +54,7 @@ export default {};
 
 @font-face {
   font-family: "Bahn";
-  src: url("/Fonts/BAHNSCHRIFT.TTF");
+  src: url("/Fonts/BAHNSCHRIFT9.ttf");
 }
 
 img {
@@ -208,7 +208,7 @@ img {
 
   .fondo-mundial {
     position: fixed;
-    top: 8em;
+    top: 30%;
     left: -12em;
     width: 50em;
     height: 40em;
@@ -218,10 +218,10 @@ img {
 
   .fondo-montana {
     position: fixed;
-    top: 22em;
-    left: 0%;
-    width: 30em;
-    height: 20em;
+    top: 25%;
+    left: -59%;
+    width: 200%;
+    height: 100%;
   }
 
   .fondo-oscuro {
@@ -300,15 +300,15 @@ img {
   position: fixed;
   display: flex;
   justify-content: center;
-  top: 33.5%;
-  left: 4%;
-  width: 33%;
+  top: 32.4%;
+  left: 2.5%;
+  width: 35%;
   z-index: 7;
 }
 
 .welcome p {
   font-size: 6.5vw;
-  font-weight: 600;
+  font-weight: 100;
   font-family: "Bahn";
   color: white;
   text-align: left;
@@ -316,7 +316,7 @@ img {
 
 .welcome1 p {
   font-size: 6vw;
-  font-weight: 600;
+  font-weight: 100;
   font-family: "Bahn";
   color: white;
   text-align: left;
@@ -324,7 +324,7 @@ img {
 
 .welcome p b {
   text-decoration: bold;
-  font-weight: 600;
+  font-weight: 100;
 }
 
 .welcome_text {

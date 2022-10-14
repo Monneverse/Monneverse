@@ -164,10 +164,10 @@ img {
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .degradado {
     position: fixed;
-    height: 30%;
-    width: 50%;
-    top: 14%;
-    left: -4%;
+    height: 100%;
+    width: 100%;
+    top: 35%;
+    left: 55%;
     z-index: 9;
   }
 
@@ -177,15 +177,15 @@ img {
 
   .fondo-montana {
     position: fixed;
-    top: 16%;
-    left: -5%;
-    width: 30em;
-    height: 20em;
+    top: 56%;
+    left: 0%;
+    width: 100%;
+    height: 50%;
   }
 
   .fondo-calculadora {
-    width: 28.6%;
-    height: 28.6%;
+    width: 100%;
+    height: 100%;
   }
 
   .circuito-derecho {
@@ -198,7 +198,7 @@ img {
 
   #logo-1 {
     position: absolute;
-    top: 28em;
+    top: 78%;
     left: -4%;
     opacity: 50%;
     z-index: 4;
@@ -219,7 +219,7 @@ img {
   color: white;
   font-size: 5vw;
   font-weight: 500;
-  font-family: Custom;
+  font-family: WorkSans;
   z-index: 5;
 }
 
@@ -252,18 +252,18 @@ img {
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .mastercard_img {
     position: fixed;
-    width: 9em;
-    height: 9em;
-    top: 14em;
-    left: 12em;
+    width: 45%;
+    height: 20%;
+    top: 34%;
+    left: 50%;
   }
 
   .visa_img {
     position: absolute;
-    width: 9em;
-    height: 9em;
-    top: 14em;
-    left: 1em;
+    width: 45%;
+    height: 20%;
+    top: 34%;
+    left: 1%;
   }
 
   .upcoming_alliance {
@@ -275,8 +275,8 @@ img {
   .upcoming_alliance h1 {
     font-size: 8vw;
     width: 12em;
-    top: 6%;
-    left: 2%;
+    top: 23%;
+    left: 6%;
   }
 }
 
@@ -389,7 +389,7 @@ img {
 
   .logo-redes {
     position: fixed;
-    top: 24.8%;
+    top: 88%;
     left: 0%;
     z-index: 9;
   }
@@ -400,17 +400,17 @@ img {
 
   .rectangulo {
     position: fixed;
-    top: -8.5%;
+    top: -6%;
     left: 1%;
-    width: 26%;
+    width: 90%;
     height: 10%;
   }
 
   .rectangulo-medio {
     position: fixed;
-    top: -9.2%;
-    left: 2.2%;
-    width: 24%;
+    top: -8%;
+    left: 4%;
+    width: 85%;
     height: 10%;
   }
 }
