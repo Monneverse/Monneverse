@@ -78,16 +78,32 @@ defineProps({
   height: 5rem;
   z-index: 12;
 }
+.benefits {
+  position: relative;
+  margin: 0 auto;
+  z-index: 8;
+  width: 70%;
+  height: 70%;
+  top: 15%;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  column-gap: 20%;
+  color: #fff;
+}
+
 
 .cards {
-  position: relative;
-  width: 25%;
-  height: 60%;
+
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   overflow: hidden;
   -webkit-box-shadow: 2px 4px 39px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 4px 39px -1px rgba(0, 0, 0, 0.75);
   box-shadow: 2px 4px 39px -1px rgba(0, 0, 0, 0.75);
+  scroll-snap-type: center;
+  flex: none;
 }
 
 .cards span {
@@ -194,16 +210,6 @@ defineProps({
   }
 }
 
-.benefits {
-  position: relative;
-  margin: 0 auto;
-  z-index: 8;
-  width: 80%;
-  height: 100%;
-  top: 20%;
-  display: flex;
-  justify-content: center;
-}
 
 .animacion-aparecer {
   animation-duration: 0.5s;

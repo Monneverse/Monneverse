@@ -79,7 +79,7 @@ defineProps({
           <img src="../assets/aro-iluminado-brillante.svg" alt="" />
         </div>
       </section>
-      <section class="alianzas">
+      <section class="Alianzas">
         <div class="alianzas">
           <a href="https://www.reddit.com/user/monnerverse"
             ><span><img src="/img/Alianzas/reddit.png" /></span>REDDIT</a
@@ -132,44 +132,39 @@ defineProps({
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
-
-section{
+section {
   width: 80%;
   height: 100%;
-
 }
 .contenido-general {
   width: 100%;
   height: 100%;
+
   background: linear-gradient(to right, #0b092e 100%, transparent);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.texto{
+.texto {
   width: 100%;
-  height: 30%;
+  height: 15%;
   display: flex;
   align-items: flex-end;
-
 }
-.texto > section{
+.texto > section {
   width: 60%;
-  height: 50%;
-
 }
-.texto > section p{
+.texto > section p {
   width: 80%;
   float: right;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 4.5vw;
   text-align: left;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 .content-forms {
-  background: linear-gradient(to right, #4f4c7b 100%, transparent);
   width: 100%;
   height: 40%;
   display: flex;
@@ -179,7 +174,29 @@ section{
   justify-content: center;
   position: relative;
 }
+@media screen and (min-width: 490px) {
+  .texto {
+    display: none;
+  }
 
+  .content-forms {
+    position: absolute;
+    top: 20%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .texto {
+    display: none;
+  }
+
+  .content-forms {
+    position: absolute;
+    top: 20%;
+    height: 100%;
+  }
+}
 .logo {
   position: absolute;
   top: 2rem;
@@ -248,6 +265,7 @@ section{
 .fondo-montana img {
   position: absolute;
   top: 30%;
+  left: 0;
   width: 100%;
   height: 75%;
   z-index: 2;
@@ -283,27 +301,10 @@ section{
 .fondo-red img {
   position: absolute;
   top: 35%;
+  left: 0;
   width: 100%;
   height: 75%;
-  z-index: 3;
-}
-
-@media screen and (max-width: 768px) {
-  .fondo-montana {
-    display: none;
-  }
-
-  .fondo-oscurecer {
-    display: none;
-  }
-
-  .fondo-red {
-    display: none;
-  }
-
-  .fondo-video {
-    display: none;
-  }
+  z-index: 1;
 }
 
 @media screen and (max-width: 480px) {
@@ -323,7 +324,7 @@ section{
     display: none;
   }
 }
-.circulos{
+.circulos {
   position: absolute;
   width: 100%;
 }
@@ -335,49 +336,77 @@ section{
   justify-content: center;
 }
 .circulo img {
-  width: 70%;
+  width: 18rem;
 }
 
 .circulo-medio {
   position: absolute;
-  top: 5%;
+  top: 2rem;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 .circulo-medio img {
-  width: 60%;
+  width: 16rem;
 }
-.arco{
+.arco {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 .semi_circulo {
   position: relative;
-  top: 0;
-  width: 70%;
+  top: 0.5rem;
+  width: 18.5rem;
   height: 100%;
   display: flex;
   justify-content: center;
-
+  z-index: 44;
 }
-.semi_circulo img{
+.semi_circulo img {
   position: absolute;
   scale: 1.15;
-
 }
-
+@media screen and (min-width: 769px) {
+  .circulos {
+    top: 0;
+    position: absolute;
+    width: 100%;
+  }
+  .circulo img {
+    width: 30rem;
+  }
+  .circulo-medio img {
+    width: 28rem;
+  }
+  .semi_circulo {
+    position: relative;
+    top: -0.5rem;
+    width: 32rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 44;
+  }
+}
+.Alianzas {
+  position: absolute;
+  top: 1rem;
+  width: 90%;
+  display: flex;
+  height: 30%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
 .alianzas {
   margin: 0;
   position: absolute;
-  z-index: 14;
-  top: 40%;
-  left: 38.5%;
-  width: 24%;
+  top: 3.5rem;
+  z-index: 34;
+  width: 50%;
   display: flex;
   justify-content: space-between;
-  display: none;
 }
 
 .alianzas a {
@@ -387,14 +416,14 @@ section{
   flex-direction: column;
   font-family: Calibri;
   font-weight: 600;
-  font-size: 1.3vw;
+  font-size: 3vw;
 }
 
 .alianzas a span {
   padding: 0;
   margin: 0 auto;
-  width: 4rem;
-  height: 4rem;
+  width: 2rem;
+  height: 2rem;
   background-color: #ecf3f2;
   border-radius: 100%;
   text-align: center;
@@ -406,13 +435,34 @@ section{
 .alianzas img {
   position: relative;
   top: 10%;
-  width: 3rem;
-  height: 3rem;
+  width: 1.5rem;
+  height: 1.5rem;
   margin: auto auto;
 }
 
 .alianzas a span:hover {
   cursor: pointer;
+}
+@media screen and (min-width: 769px) {
+  .Alianzas {
+    top: 3rem;
+    width: 45%;
+  }
+  .alianzas {
+    top: 3.5rem;
+  }
+  .alianzas a {
+    font-size: 1.5vw;
+  }
+  .alianzas a span {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .alianzas img {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 .animacion-arco img {
@@ -432,25 +482,22 @@ section{
     transform: rotateZ(0deg);
   }
 }
-.rectangulos{
-  
+.rectangulos {
+  position: absolute;
+  width: 95%;
+  top: 2.5rem;
   display: flex;
   justify-content: center;
-
 }
 .rectangulo {
-
   position: absolute;
-
-  width: 100%;
-  height: 35%;
-
+  top: 7rem;
   z-index: 8;
   display: flex;
   justify-content: center;
 }
 .rectangulo img {
-  width: 90%;
+  width: 22rem;
 }
 
 .rectangulo p {
@@ -464,25 +511,52 @@ section{
 }
 .rectangulo-medio {
   position: absolute;
+  top: 3rem;
   width: 100%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+
   z-index: 33;
+}
+@media screen and (min-width: 769px) {
+  .rectangulo {
+    top: 12rem;
+  }
+  .rectangulo img {
+    width: 36rem;
+  }
+  .rectangulo p {
+    top: 49%;
+
+    font-size: 3vw;
+  }
+  .rectangulo-medio {
+    top: 13rem;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+
+    z-index: 33;
+  }
+  .contenido img {
+    width: 30rem;
+  }
 }
 .contenido {
   margin: 0 auto;
   width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .contenido img {
-  margin: 0 auto;
-  width: 100%;
-  height: 43%;
+  width: 24rem;
 }
 
 .imagenes {
   position: relative;
-  top: -26.5vw;
+  top: -6.2rem;
   width: 70%;
   margin: 0 auto;
   display: flex;
@@ -490,13 +564,38 @@ section{
 }
 
 .imagenes img {
-  width: 25vw;
+  width: 6rem;
 }
 
 .imagenes img:last-child {
-  width: 19.5vw;
+  width: 4.7rem;
 }
-
+@media screen and (min-width: 769px) {
+  .rectangulo-medio {
+    top: 7rem;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    z-index: 33;
+  }
+  .contenido img {
+    width: 40rem;
+  }
+  .imagenes {
+    position: relative;
+    top: -10.7rem;
+    width: 45%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  .imagenes img {
+    width: 10rem;
+  }
+  .imagenes img:last-child {
+    width: 9rem;
+  }
+}
 .puntero {
   position: absolute;
   z-index: 14;
