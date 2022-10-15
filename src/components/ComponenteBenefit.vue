@@ -86,7 +86,7 @@ export default {
 
 .benefit .div {
   width: 90%;
-  height: 20%;
+
   margin: 0 auto;
 }
 
@@ -95,7 +95,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   height: 30%;
-  text-transform: uppercase;
+  
 }
 
 .titulo_2 {
@@ -107,13 +107,13 @@ export default {
 }
 
 .div h2 {
-  font-size: 1.5vw;
+  font-size: 6vw;
   font-weight: 600;
 }
 
 .div p {
   font-weight: 400;
-  font-size: 1.1vw;
+  font-size: 6vw;
 }
 
 .titulo_2 p {
@@ -129,7 +129,7 @@ export default {
   border-radius: 1.5vw;
   cursor: pointer;
   width: 45%;
-  font-size: 1.1vw;
+  font-size: 4vw;
   font-family: "WorkSans", sans-serif;
 }
 
