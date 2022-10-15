@@ -307,7 +307,7 @@ section {
   z-index: 1;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .fondo-montana {
     display: none;
   }
