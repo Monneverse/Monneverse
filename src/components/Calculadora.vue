@@ -16,6 +16,9 @@
   <div class="circuito circuito-derecho">
     <img src="/img/calculadora/circuito-derecho.png" alt="" />
   </div>
+  <div class="fondoTokenomics">
+    <img src="/img/fondo_Tokenomics.png" alt="" />
+  </div>
 
   <!-- filtro azul -->
 
@@ -200,6 +203,9 @@ img {
 }
 
 .fondo-montana {
+  top: -38%;
+  opacity: 20%;
+  height: 150%;
   z-index: 2;
 }
 
@@ -245,25 +251,35 @@ img {
   position: absolute;
   z-index: 4;
   height: 80%;
-  width: 40%;
+  width: 50%;
   min-width: 30rem;
-  top: 20%;
+  top: 12%;
 }
 
 .circuito-izquierdo {
-  left: -10%;
+  left: -3%;
 }
 
 .circuito-derecho {
   right: -10%;
+  visibility: hidden;
   transform: scaleY(-1);
+}
+
+.fondoTokenomics {
+  position: absolute;
+  top: -8.3%;
+  width: 100%;
+  height: 120%;
+  z-index: 3;
+  opacity: 60%;
 }
 
 /* Filtro azul */
 
 
 .degradado {
-  background: linear-gradient(to right, #040077 50%, transparent);
+  background: linear-gradient(to right, #040077 0%, transparent);
   position: absolute;
   width: 50%;
   height: 180%;
@@ -273,6 +289,7 @@ img {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   top: 0%;
+  visibility: hidden;
 }
 
 .degradado_izquierdo {

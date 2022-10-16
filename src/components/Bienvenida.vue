@@ -55,6 +55,8 @@ export default {};
 @font-face {
   font-family: "Bahn";
   src: url("/Fonts/BAHNSCHRIFT9.ttf");
+  font-style: semibold;
+  font-stretch: semi-condensed;
 }
 
 img {
@@ -291,7 +293,7 @@ img {
   display: flex;
   justify-content: center;
   top: 21%;
-  left: -0.2%;
+  left: -3%;
   width: 38%;
   z-index: 7;
 }
@@ -301,23 +303,25 @@ img {
   display: flex;
   justify-content: center;
   top: 32.4%;
-  left: 2.5%;
+  left: -.2%;
   width: 35%;
   z-index: 7;
 }
 
 .welcome p {
   font-size: 6.5vw;
-  font-weight: 100;
   font-family: "Bahn";
+  font-stretch: semi-condensed;
+  font-style: semibold;
   color: white;
   text-align: left;
 }
 
 .welcome1 p {
   font-size: 6vw;
-  font-weight: 100;
   font-family: "Bahn";
+  font-stretch: semi-condensed;
+  font-style: semibold;
   color: white;
   text-align: left;
 }
@@ -331,7 +335,7 @@ img {
   position: fixed;
   display: flex;
   top: 50.8%;
-  left: 3%;
+  left: 2%;
   justify-content: left;
   width: 35%;
   z-index: 7;
@@ -339,6 +343,8 @@ img {
 
 .welcome_text p {
   font-family: "Bahn";
+  font-stretch: semi-condensed;
+  font-style: semibold;
   font-size: 2vw;
   color: white;
   text-align: left;
