@@ -14,10 +14,10 @@
     </div>
 
     <div class="logos_auditoria">
-        <a href="https://solidity.finance/audits/MONNERVERSE/" target="_blank"><img src="/img/Exchanges/mesa1.png"
-                class="auditoria1"></a>
+        <a href="https://solidity.finance/audits/MONNERVERSE/" target="_blank">
+            <img src="/img/Exchanges/Solidity.svg" class="auditoria1"></a>
         <a><img src="/img/Exchanges/mesa2.png" class="auditoria2"></a>
-        <button class="btn_registro" @click="reDirect">registro EEUU</button>
+        <button class="btn_registro" @click="reDirect">register EEUU</button>
     </div>
     <div class="circulos">
         <img src="/img/Imagen1.png">
@@ -151,7 +151,7 @@ img {
 
 .auditoria1 {
     position: absolute;
-    top: 35%;
+    top: 42%;
     left: 14%;
     width: 29%;
     height: 29%;
@@ -170,7 +170,7 @@ img {
 
 .auditoria2 {
     position: absolute;
-    top: 35%;
+    top: 42%;
     right: 14%;
     width: 29%;
     height: 29%;
@@ -189,7 +189,7 @@ img {
 
 .btn_registro {
     position: absolute;
-    bottom: 20%;
+    bottom: 8%;
     right: 44%;
     width: 14%;
     height: 8%;
@@ -210,7 +210,7 @@ img {
 .circulos {
     position: absolute;
     left: 40%;
-    bottom: 14%;
+    bottom: 2%;
     width: 18%;
     height: 16%;
     z-index: 7;
