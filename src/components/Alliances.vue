@@ -181,6 +181,7 @@ section {
 
   .content-forms {
     position: absolute;
+    z-index: 33;
     top: 20%;
     height: 100%;
   }
@@ -251,24 +252,25 @@ section {
   z-index: 0;
 }
 
-/*
 .filtro-superior {
   position: absolute;
   z-index: 1;
-  background: radial-gradient(circle at center,
-      #f9f9fa 0%,
-      #c8ced4 50%,
-      #a8aaaf 100%);
+  background: radial-gradient(
+    circle at center,
+    #f9f9fa 0%,
+    #c8ced4 50%,
+    #a8aaaf 100%
+  );
   mix-blend-mode: multiply;
 }
-*/
+
 .fondo-montana img {
   position: absolute;
   top: 30%;
   left: 0;
   width: 100%;
   height: 75%;
-  z-index: 2;
+  z-index: 1;
 }
 
 .fondo-montana-animation img {
@@ -400,11 +402,11 @@ section {
   justify-content: center;
 }
 .alianzas {
-  margin: 0;
+  margin: 0 auto;
   position: absolute;
   top: 3.5rem;
   z-index: 34;
-  width: 50%;
+  width: 12rem;
   display: flex;
   justify-content: space-between;
 }
@@ -416,7 +418,7 @@ section {
   flex-direction: column;
   font-family: Calibri;
   font-weight: 600;
-  font-size: 3vw;
+  font-size: 2vw;
 }
 
 .alianzas a span {
@@ -446,13 +448,15 @@ section {
 @media screen and (min-width: 769px) {
   .Alianzas {
     top: 3rem;
-    width: 45%;
+    width: 22rem;
   }
   .alianzas {
     top: 3.5rem;
+    width: 19rem;
   }
   .alianzas a {
     font-size: 1.5vw;
+    font-weight: 400;
   }
   .alianzas a span {
     width: 4rem;
@@ -506,7 +510,7 @@ section {
   z-index: 12;
   color: #ffffff;
   font-family: Calibri;
-  font-size: 5vw;
+  font-size: 3.5vw;
   font-weight: 400;
 }
 .rectangulo-medio {
@@ -526,9 +530,9 @@ section {
     width: 36rem;
   }
   .rectangulo p {
-    top: 49%;
+    top: 7rem;
 
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
   .rectangulo-medio {
     top: 13rem;
@@ -598,16 +602,19 @@ section {
 }
 .puntero {
   position: absolute;
-  z-index: 14;
-  width: 20%;
+  z-index: 34;
+  width: 15%;
   height: 40%;
   padding: 0;
   margin: 0;
-  top: 84%;
-  left: 40%;
-  display: none;
+  top: 32rem;
+  left: 43%;
 }
-
+@media screen and (max-width: 769px) {
+  .puntero {
+    display: none;
+  }
+}
 .degradado {
   background: linear-gradient(to right, #090380 55%, transparent);
   position: absolute;
