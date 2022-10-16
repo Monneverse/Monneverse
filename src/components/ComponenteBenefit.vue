@@ -75,13 +75,10 @@ export default {
   display: flex;
   flex-wrap: wrap;
   font-family: "WorkSans", sans-serif;
-
-
 }
 
 .fondo-oscuro {
   background-color: #161431;
-
 }
 
 .benefit .div {
@@ -95,7 +92,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   height: 30%;
-  
 }
 
 .titulo_2 {
@@ -117,14 +113,28 @@ export default {
 }
 
 .titulo_2 p {
-  text-align: center
+  text-align: center;
+}
+@media screen and (min-width: 769px) {
+  .benefit {
+  }
+  .div h2 {
+    font-size: 2vw;
+    font-weight: 600;
+  }
+  .div p {
+    font-weight: 400;
+    font-size: 1.5vw;
+  }
 }
 
 .btn {
   position: relative;
-  background: linear-gradient(90deg,
-      rgb(18, 17, 65) 0%,
-      rgba(1, 209, 88, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(18, 17, 65) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
   padding: 2% 5%;
   border-radius: 1.5vw;
   cursor: pointer;
@@ -139,6 +149,16 @@ export default {
     inset -20px 0 300px rgb(4, 41, 10), 0 0 50px #fff,
     -10px 0 80px rgb(1, 13, 37), 10px 0 80px rgb(1, 64, 12);
   transition: 0.5s ease-out;
+}
+
+@media screen and (min-width: 769px) {
+  .btn {
+    
+
+    width: 60%;
+    font-size: 1.5vw;
+  
+  }
 }
 
 .transparente {

@@ -21,30 +21,47 @@ defineProps({
     </div>
 -->
 
-    <div :class="{ benefits: true, 'animacion-desplazamiento': index_pagina == 10 }">
+    <div
+      :class="{
+        benefits: true,
+        'animacion-desplazamiento': index_pagina == 10,
+      }"
+    >
       <div class="cards">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        <Benefit titulo="Bank Segurity" texto="" segundoTitulo=""
+        <Benefit
+          titulo="Bank Segurity"
+          texto=""
+          segundoTitulo=""
           segundoTexto="A bank that will shield the stability of our prices and supports the financial security of our holders, protects our system"
-          mostrarBtn="true" />
+          mostrarBtn="true"
+        />
       </div>
       <div class="cards">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        <Benefit titulo="MonnerHosting and MonnerBlockchain" texto="" segundoTitulo=""
+        <Benefit
+          titulo="MonnerHosting and MonnerBlockchain"
+          texto=""
+          segundoTitulo=""
           segundoTexto="Open a window of possibilities for all those creators who wish to design their"
-          mostrarBtn="true" />
+          mostrarBtn="true"
+        />
       </div>
       <div class="cards">
         <span></span><span></span><span></span><span></span>
-        <Benefit titulo="The universe in the pocket of your Wallet!" texto="" segundoTitulo=""
+        <Benefit
+          titulo="The universe in the pocket of your Wallet!"
+          texto=""
+          segundoTitulo=""
           segundoTexto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
-          mostrarBtn="true" />
+          mostrarBtn="true"
+        />
       </div>
     </div>
   </div>
@@ -92,9 +109,7 @@ defineProps({
   color: #fff;
 }
 
-
 .cards {
-
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -102,21 +117,20 @@ defineProps({
   -webkit-box-shadow: 2px 4px 39px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 4px 39px -1px rgba(0, 0, 0, 0.75);
   box-shadow: 2px 4px 39px -1px rgba(0, 0, 0, 0.75);
-  scroll-snap-type: center;
+  border-radius: 1em;
   flex: none;
 }
 
 .cards span {
   transition: 0.5s;
-  opacity: 0;
+  opacity: 0%;
   box-shadow: inset 0 0 5px whitesmoke, inset 0px 0 6px rgb(8, 212, 83),
     inset 10px 0 20px rgb(1, 255, 81), inset 10px 0 0px rgb(5, 12, 28),
-    inset 10px 0 20px rgb(0, 243, 40), 0 0 50px rgb(254, 254, 254), -10px 0 80px rgb(1, 13, 37),
-    10px 0 80px rgb(4, 224, 40);
+    inset 10px 0 20px rgb(0, 243, 40), 0 0 50px rgb(254, 254, 254),
+    -10px 0 80px rgb(1, 13, 37), 10px 0 80px rgb(4, 224, 40);
 }
 
 .cards:hover span {
-
   opacity: 1;
 }
 
@@ -131,7 +145,7 @@ defineProps({
   top: 0;
   left: 0;
   width: 120%;
-  height: 3px;
+  height: 5px;
   animation: animacion1 2s linear infinite;
   animation-delay: 1s;
 }
@@ -150,7 +164,7 @@ defineProps({
   position: absolute;
   top: 0;
   left: 0;
-  width: 3PX;
+  width: 5px;
   height: 100%;
   animation: animacion2 2s linear infinite;
   animation-delay: 1s;
@@ -173,7 +187,7 @@ defineProps({
   left: 0;
 
   width: 120%;
-  height: 3px;
+  height: 5px;
   animation: animacion3 2s linear infinite;
   animation-delay: 1s;
 }
@@ -194,7 +208,7 @@ defineProps({
   top: 0%;
   left: 99%;
 
-  width: 3px;
+  width: 5px;
   height: 100%;
   animation: animacion4 2s linear infinite;
   animation-delay: 1s;
@@ -210,7 +224,6 @@ defineProps({
   }
 }
 
-
 .animacion-aparecer {
   animation-duration: 0.5s;
   animation-name: aparecer;
@@ -224,6 +237,20 @@ defineProps({
 
   100% {
     opacity: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .benefits {
+    column-gap: 0;
+    overflow-x: initial;
+    scroll-snap-type: none;
+    
+  }
+  .cards {
+    position: relative;
+    width: 30%;
+    height: 100%;
   }
 }
 
