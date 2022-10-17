@@ -194,9 +194,7 @@ export default {
       isRevert: false,
       listaPaginaDondeSeOcultaLogo: [1, 2],
       isDragging: false,
-      startX: 0,
       startY: 0,
-      moveX: 0,
       moveY: 0,
       position: 0,
     };
@@ -259,20 +257,13 @@ export default {
     },
 
     touchStart() {
-      this.startX = this.touchPositionX();
       this.startY = this.touchPositionY();
     },
-
     touchMove() {
-      this.moveX = this.touchPositionX();
       this.moveY = this.touchPositionY();
     },
     touchEnd() {
-      if (this.startX + 100 < this.moveX) {
-        console.log("derecha");
-      } else if (this.startX - 100 > this.moveX) {
-        console.log("izquierda");
-      } else if (this.startY - 100 > this.moveY) {
+      if (this.startY - 100 > this.moveY) {
         this.NavegarDown();
       } else if (this.startY + 100 < this.moveY) {
         this.NavegarUp();
@@ -335,7 +326,6 @@ export default {
             this.isRevert = false;
           }
         }
-        console.log(this.position);
         setTimeout(() => {
           this.index_pagina = newPosition;
           this.isVisibleLogo = true;
@@ -376,7 +366,6 @@ export default {
             this.isRevert = true;
           }
         }
-        console.log(this.position);
         setTimeout(() => {
           this.index_pagina = newPosition;
           this.isVisibleLogo = true;
@@ -405,13 +394,11 @@ export default {
         }, 1000);
       }
     },
-    touchPositionX() {
-      return (this.position = event.touches[0].clientX);
-    },
+
     touchPositionY() {
       return (this.position = event.touches[0].clientY);
     },
-     returnMethods() {
+    returnMethods() {
       const scrolls = Array.from(document.querySelectorAll("div"));
 
       scrolls.forEach((scroll) => {
@@ -425,13 +412,11 @@ export default {
         return false;
       };
     },
-
   },
   mounted() {
     this.index_pagina = 1;
     document.addEventListener("wheel", this.Navegar);
     this.listaPaginaDondeSeOcultaLogo.push(this.limite);
-
 
     document.addEventListener("drag", this.returnMethods());
   },
