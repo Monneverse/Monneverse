@@ -25,7 +25,7 @@ import Articulo from "./Articulo.vue";
   </div>
 
   <!-- CONTENEDOR DE BOTON METATASK -->
-  <div class="btn_buyMonner">
+  <div class="btn_buyMonner" @click="addTokenFunction">
     <button class="buyNow">
       <div class="contrato"><b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span></div>
       <div class="texto1">BUY MONNER</div>
@@ -187,6 +187,39 @@ export default {
       this.horaString = this.AgregarCero(hours);
       this.minutoString = this.AgregarCero(minutes);
       this.segundoString = this.AgregarCero(seconds);
+    },
+    addTokenFunction() {
+      const tokenAddress = '0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893';
+      const tokenSymbol = 'MNR';
+      const tokenDecimals = 18;
+      const tokenImage = 'https://i.postimg.cc/xCHLP8sw/icon-32x32.png';
+
+      async function addTokenFunction() {
+
+        try {
+
+          const wasAdded = await ethereum.request({
+            method: 'wallet_watchAsset',
+            params: {
+              type: 'ERC20',
+              options: {
+                address: tokenAddress,
+                symbol: tokenSymbol,
+                decimals: tokenDecimals,
+                image: tokenImage,
+              },
+            },
+          });
+
+          if (wasAdded) {
+            console.log('Thanks for your interest!');
+          } else {
+            console.log('HelloWorld Coin has not been added');
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      }
     },
   },
   mounted() {
