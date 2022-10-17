@@ -98,43 +98,61 @@ defineProps({
   height: 5rem;
   z-index: 12;
 }
-.cards {
+.benefits {
   position: relative;
-  width: 25%;
-  height: 60%;
+  margin: 0 auto;
+  z-index: 8;
+  width: 70%;
+  height: 70%;
+  top: 15%;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  column-gap: 20%;
+  color: #fff;
+}
+
+.cards {
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   overflow: hidden;
   -webkit-box-shadow: 2px 4px 39px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 4px 39px -1px rgba(0, 0, 0, 0.75);
   box-shadow: 2px 4px 39px -1px rgba(0, 0, 0, 0.75);
+  border-radius: 1em;
+  flex: none;
 }
+
 .cards span {
   transition: 0.5s;
-  opacity: 0;
+  opacity: 0%;
   box-shadow: inset 0 0 5px whitesmoke, inset 0px 0 6px rgb(8, 212, 83),
     inset 10px 0 20px rgb(1, 255, 81), inset 10px 0 0px rgb(5, 12, 28),
-    inset 10px 0 20px rgb(0, 243, 40), 0 0 50px rgb(254, 254, 254), -10px 0 80px rgb(1, 13, 37),
-    10px 0 80px rgb(4, 224, 40);
+    inset 10px 0 20px rgb(0, 243, 40), 0 0 50px rgb(254, 254, 254),
+    -10px 0 80px rgb(1, 13, 37), 10px 0 80px rgb(4, 224, 40);
 }
-.cards:hover span{
 
+.cards:hover span {
   opacity: 1;
 }
+
 .cards:hover {
-  
   transform: translateY(-3%);
-   
+
   transition: 0.5s ease-out;
 }
+
 .cards span:nth-child(1) {
   position: absolute;
   top: 0;
   left: 0;
   width: 120%;
-  height: 3px;
+  height: 5px;
   animation: animacion1 2s linear infinite;
   animation-delay: 1s;
 }
+
 @keyframes animacion1 {
   0% {
     transform: translateX(-100%);
@@ -144,15 +162,17 @@ defineProps({
     transform: translateX(100%);
   }
 }
+
 .cards span:nth-child(2) {
   position: absolute;
   top: 0;
   left: 0;
-  width: 3PX;
+  width: 5px;
   height: 100%;
   animation: animacion2 2s linear infinite;
   animation-delay: 1s;
 }
+
 @keyframes animacion2 {
   0% {
     transform: translateY(100%);
@@ -162,17 +182,19 @@ defineProps({
     transform: translateY(-100%);
   }
 }
+
 .cards span:nth-child(3) {
   position: absolute;
-  
+
   top: 99%;
   left: 0;
-  
+
   width: 120%;
-  height: 3px;
+  height: 5px;
   animation: animacion3 2s linear infinite;
   animation-delay: 1s;
 }
+
 @keyframes animacion3 {
   0% {
     transform: translateX(100%);
@@ -182,17 +204,19 @@ defineProps({
     transform: translateX(-100%);
   }
 }
+
 .cards span:nth-child(4) {
   position: absolute;
-  
+
   top: 0%;
   left: 99%;
-  
-  width: 3px;
+
+  width: 5px;
   height: 100%;
   animation: animacion4 2s linear infinite;
   animation-delay: 1s;
 }
+
 @keyframes animacion4 {
   0% {
     transform: translateY(-100%);
@@ -202,17 +226,6 @@ defineProps({
     transform: translateY(100%);
   }
 }
-.benefits {
-  position: relative;
-  margin: 0 auto;
-  z-index: 8;
-  width: 80%;
-  height: 100%;
-  top: 20%;
-  display: flex;
-  justify-content: center;
-}
-
 
 .animacion-aparecer {
   animation-duration: 0.5s;
@@ -229,6 +242,21 @@ defineProps({
     opacity: 100%;
   }
 }
+
+@media screen and (min-width: 769px) {
+  .benefits {
+    column-gap: 0;
+    overflow-x: initial;
+    scroll-snap-type: none;
+    
+  }
+  .cards {
+    position: relative;
+    width: 30%;
+    height: 100%;
+  }
+}
+
 .fondo {
   position: absolute;
   z-index: 1;
@@ -238,56 +266,29 @@ defineProps({
   width: 100%;
   background-color: #121026;
 }
-.fondo_rayos {
-  position: absolute;
 
-  left: -5%;
-  width: 100%;
-  height: 100%;
-}
 .animacion-desplazamiento {
   animation-duration: 0.5s;
   animation-name: desplazamiento;
   animation-iteration-count: 1;
 }
+
 @keyframes desplazamiento {
   0% {
-    left: 100%;
+    top: 100%;
   }
 
   100% {
-    left: 0;
+    top: 20%;
   }
 }
 
-.rectangulo {
-  position: absolute;
-  z-index: 3;
-  top: 50%;
-  left: -15%;
-  width: 100%;
-}
-.rectangulo img {
-  width: 20%;
-  min-height: 15%;
-}
-.circulos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 50%;
-  height: 50%;
-  position: relative;
-  z-index: 12;
-  top: 32%;
-  left: 43%;
-  transform: rotate(135deg);
-}
 .animacion-rotar {
   animation-duration: 0.5s;
   animation-name: rotar;
   animation-iteration-count: 1;
 }
+
 @keyframes rotar {
   0% {
     transform: rotate(225deg);
@@ -297,6 +298,7 @@ defineProps({
     transform: rotate(135deg);
   }
 }
+
 .logo-redes {
   position: absolute;
   bottom: 0%;
@@ -312,89 +314,5 @@ defineProps({
   width: 3.5vw;
   height: auto;
   margin-left: 1rem;
-}
-
-.reflector {
-  position: absolute;
-  top: 60%;
-  bottom: 0%;
-  left: 10%;
-  width: 40%;
-  height: 90%;
-  z-index: 1;
-
-  animation-duration: 6s;
-  animation-name: reflector;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes reflector {
-  0% {
-    opacity: 10%;
-  }
-
-  50% {
-    opacity: 30%;
-  }
-
-  100% {
-    opacity: 50%;
-  }
-}
-.reflector-derecho {
-  z-index: 0;
-  left: 50%;
-}
-.reflector-izquierdo {
-  z-index: 0;
-}
-.luz-1 {
-  position: absolute;
-  width: 30%;
-  height: 100%;
-  border-radius: 50%;
-  bottom: -30%;
-  transform: rotate(-30deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.5) 0%,
-    transparent 47%,
-    rgba(184, 184, 184, 0) 100%
-  );
-  filter: blur(3rem);
-  left: 30%;
-}
-.luz-2 {
-  position: absolute;
-  width: 30%;
-  height: 140%;
-  border-radius: 50%;
-  bottom: -30%;
-  left: 40%;
-  transform: rotate(0deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.8) 0%,
-    transparent 47%,
-    rgba(184, 184, 184, 0) 100%
-  );
-  filter: blur(3rem);
-}
-.luz-3 {
-  position: absolute;
-  width: 30%;
-  height: 100%;
-  border-radius: 50%;
-  bottom: -30%;
-  left: 55%;
-  transform: rotate(-150deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.8) 0%,
-    transparent 47%,
-    rgba(184, 184, 184, 0) 100%
-  );
-  filter: blur(3rem);
 }
 </style>

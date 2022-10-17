@@ -334,8 +334,8 @@ export default {
             newPosition = this.index_pagina + 1;
             this.isRevert = false;
           }
-        } 
-        console.log(this.position)
+        }
+        console.log(this.position);
         setTimeout(() => {
           this.index_pagina = newPosition;
           this.isVisibleLogo = true;
@@ -375,8 +375,8 @@ export default {
             newPosition = this.index_pagina - 1;
             this.isRevert = true;
           }
-        } 
-        console.log(this.position)
+        }
+        console.log(this.position);
         setTimeout(() => {
           this.index_pagina = newPosition;
           this.isVisibleLogo = true;
@@ -404,10 +404,14 @@ export default {
           this.enterAnimation = false;
         }, 1000);
       }
-
-
     },
-    returnMethods() {
+    touchPositionX() {
+      return (this.position = event.touches[0].clientX);
+    },
+    touchPositionY() {
+      return (this.position = event.touches[0].clientY);
+    },
+     returnMethods() {
       const scrolls = Array.from(document.querySelectorAll("div"));
 
       scrolls.forEach((scroll) => {
@@ -421,20 +425,15 @@ export default {
         return false;
       };
     },
-    touchPositionX() {
-      return (this.position = event.touches[0].clientX);
-    },
-    touchPositionY() {
-      return (this.position = event.touches[0].clientY);
-    },
+
   },
   mounted() {
     this.index_pagina = 1;
     document.addEventListener("wheel", this.Navegar);
     this.listaPaginaDondeSeOcultaLogo.push(this.limite);
 
-    this.returnMethods();
-    document.addEventListener("drag", this.returnMethods);
+
+    document.addEventListener("drag", this.returnMethods());
   },
 };
 </script>
