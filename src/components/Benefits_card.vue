@@ -34,10 +34,24 @@ defineProps({
         <span></span>
         <Benefit
           titulo="Bank Segurity"
-          texto=""
-          segundoTitulo=""
-          segundoTexto="A bank that will shield the stability of our prices and supports the financial security of our holders, protects our system"
-          mostrarBtn="true"
+          texto="A bank that will shield the stability of our prices and supports the financial security of our holders, protects our system"
+          textOculto="Between the many protections
+measures Bank Security offers to
+us, we can find a reliable anti-
+whale system, anti-Rug Pulls
+mechanisms, purchase values that
+don't exceed 10% and a massive-
+selling ban. Monnerverse prices
+will NEVER decrease to their pre-
+sale version.Out first goal is to
+reach at least a 998 USD price in
+three months. Phase Two:
+MonnerHosting, MonnerTrading
+and MonnerBlockChain, as so
+many other add-ons to the
+MonnerMetaverse will be
+developed.
+"
         />
       </div>
       <div class="cards">
@@ -47,20 +61,16 @@ defineProps({
         <span></span>
         <Benefit
           titulo="MonnerHosting and MonnerBlockchain"
-          texto=""
-          segundoTitulo=""
-          segundoTexto="Open a window of possibilities for all those creators who wish to design their"
-          mostrarBtn="true"
+          texto="Open a window of possibilities for all those creators who wish to design their"
+          textOculto="own token from scratch and sell it worldwide with fees never seen before. Our goal is to create a safe environment on which every token fulfills a series of standards of qualification such as the KYC Verification, residential addres and back-up liquidity. this way we can protect you from any scam. MonnerBlockchain will handle the lowest fees of the hest market beside one of the best times of execution. this will bring more liquidity, stability and exponential growing"
         />
       </div>
       <div class="cards">
         <span></span><span></span><span></span><span></span>
         <Benefit
           titulo="The universe in the pocket of your Wallet!"
-          texto=""
-          segundoTitulo=""
-          segundoTexto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
-          mostrarBtn="true"
+          texto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
+          textOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
         />
       </div>
     </div>
@@ -122,6 +132,7 @@ defineProps({
 }
 
 .cards span {
+  display: none;
   transition: 0.5s;
   opacity: 0%;
   box-shadow: inset 0 0 5px whitesmoke, inset 0px 0 6px rgb(8, 212, 83),
@@ -134,93 +145,97 @@ defineProps({
   opacity: 1;
 }
 
-.cards:hover {
-  transform: translateY(-3%);
+@media screen and (min-width: 769px) {
+  .cards span {
+    display: block;
+  }
+  .cards:hover {
+    transform: translateY(-3%);
 
-  transition: 0.5s ease-out;
-}
-
-.cards span:nth-child(1) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 120%;
-  height: 5px;
-  animation: animacion1 2s linear infinite;
-  animation-delay: 1s;
-}
-
-@keyframes animacion1 {
-  0% {
-    transform: translateX(-100%);
+    transition: 0.5s ease-out;
+  }
+  .cards span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 5px;
+    animation: animacion1 2s linear infinite;
+    animation-delay: 1s;
   }
 
-  100% {
-    transform: translateX(100%);
-  }
-}
+  @keyframes animacion1 {
+    0% {
+      transform: translateX(-100%);
+    }
 
-.cards span:nth-child(2) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 100%;
-  animation: animacion2 2s linear infinite;
-  animation-delay: 1s;
-}
-
-@keyframes animacion2 {
-  0% {
-    transform: translateY(100%);
+    100% {
+      transform: translateX(100%);
+    }
   }
 
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-.cards span:nth-child(3) {
-  position: absolute;
-
-  top: 99%;
-  left: 0;
-
-  width: 120%;
-  height: 5px;
-  animation: animacion3 2s linear infinite;
-  animation-delay: 1s;
-}
-
-@keyframes animacion3 {
-  0% {
-    transform: translateX(100%);
+  .cards span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    animation: animacion2 2s linear infinite;
+    animation-delay: 1s;
   }
 
-  100% {
-    transform: translateX(-100%);
-  }
-}
+  @keyframes animacion2 {
+    0% {
+      transform: translateY(100%);
+    }
 
-.cards span:nth-child(4) {
-  position: absolute;
-
-  top: 0%;
-  left: 99%;
-
-  width: 5px;
-  height: 100%;
-  animation: animacion4 2s linear infinite;
-  animation-delay: 1s;
-}
-
-@keyframes animacion4 {
-  0% {
-    transform: translateY(-100%);
+    100% {
+      transform: translateY(-100%);
+    }
   }
 
-  100% {
-    transform: translateY(100%);
+  .cards span:nth-child(3) {
+    position: absolute;
+
+    top: 99%;
+    left: 0;
+
+    width: 120%;
+    height: 5px;
+    animation: animacion3 2s linear infinite;
+    animation-delay: 1s;
+  }
+
+  @keyframes animacion3 {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .cards span:nth-child(4) {
+    position: absolute;
+
+    top: 0%;
+    left: 99%;
+
+    width: 5px;
+    height: 100%;
+    animation: animacion4 2s linear infinite;
+    animation-delay: 1s;
+  }
+
+  @keyframes animacion4 {
+    0% {
+      transform: translateY(-100%);
+    }
+
+    100% {
+      transform: translateY(100%);
+    }
   }
 }
 
@@ -245,7 +260,6 @@ defineProps({
     column-gap: 0;
     overflow-x: initial;
     scroll-snap-type: none;
-    
   }
   .cards {
     position: relative;
