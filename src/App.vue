@@ -234,20 +234,23 @@ export default {
         case 5:
           this.index = 1;
           break;
-        case 8:
         case 9:
         case 10:
         case 11:
+        case 12:
           this.index = 2;
           break;
-        case 12:
+        case 13:
           this.index = 3;
           break;
-        case 13:
+        case 14:
           this.index = 4;
           break;
-        case 14:
         case 15:
+        case 16:
+        case 17:
+        case 18:
+        case 19:
           this.index = 5;
           break;
         default:
