@@ -12,6 +12,8 @@ import Articulo from "./Articulo.vue";
       <img src="/img/circulo_Fondo.png" alt="" class="circuloFondo1" />
       <img src="/img/circuloImagen.png" alt="" class="circuloFondo2" />
     </div>
+    <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
+    <div class="fondo-oscuro"> </div>
     <div class="degradado degradado_izquierdo"></div>
     <div class="degradado degradado_derecho"></div>
   </div>
@@ -22,14 +24,23 @@ import Articulo from "./Articulo.vue";
     <img src="/img/Articulo/circuito-derecho.png" alt="" />
   </div>
 
+  <!-- CONTENEDOR DE BOTON METATASK -->
+  <div class="btn_buyMonner" :click="addTokenFunction()">
+    <button class="buyNow">
+      <div class="contrato"><b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span></div>
+      <div class="texto1">BUY MONNER</div>
+      <div class="logos"><img src="/./img/Articulo/BNC.svg" class="binance">
+        <img src="/./img/Articulo/Meta.svg" class="meta">
+      </div>
+    </button>
+  </div>
+
   <!-- Contenedor de Tiempo -->
+  <div class="titulo_Tiempo">
+    <h2>Pre Sale Time</h2>
+  </div>
   <div class="container_time">
     <div class="time">
-      <div class="titulo_Tiempo">
-        <h2>Pre Sale Time</h2>
-        <br>
-        <br>
-      </div>
       <div class="temporizador">
 
         <div class="bloque_temporizador">
@@ -131,9 +142,6 @@ export default {
         },
 
       ],
-
-
-
       vectorArticulo: [
         {
           titulo: "Presale and benefits For investors",
@@ -180,6 +188,36 @@ export default {
       this.minutoString = this.AgregarCero(minutes);
       this.segundoString = this.AgregarCero(seconds);
     },
+    async addTokenFunction() {
+      const tokenAddress = '0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893';
+      const tokenSymbol = 'MNR';
+      const tokenDecimals = 18;
+      const tokenImage = 'https://i.postimg.cc/xCHLP8sw/icon-32x32.png';
+
+      try {
+
+        const wasAdded = await ethereum.request({
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20',
+            options: {
+              address: tokenAddress,
+              symbol: tokenSymbol,
+              decimals: tokenDecimals,
+              image: tokenImage,
+            },
+          },
+        });
+
+        if (wasAdded) {
+          alert('Thanks for your interest!');
+        } else {
+          alert('HelloWorld Coin has not been added');
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
   },
   mounted() {
     setInterval(this.ObtenerFechaActual, 500);
@@ -208,6 +246,8 @@ export default {
 @font-face {
   font-family: "Bahn";
   src: url("/Fonts/BAHNSCHRIFT.TTF");
+  font-stretch: semi-condensed;
+  font-style: semibold;
 }
 
 img {
@@ -229,6 +269,23 @@ img {
   z-index: 0;
 }
 
+.fondo-montana {
+  top: -45%;
+  opacity: 20%;
+  height: 150%;
+  z-index: 2;
+}
+
+.fondo-oscuro {
+  background-color: rgb(0, 0, 0);
+  z-index: 10;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  opacity: 50%;
+}
+
 .fondoArticulo {
   position: absolute;
   top: 0;
@@ -242,9 +299,9 @@ img {
 }
 
 .circuloFondo1 {
-  top: 25%;
-  left: 37%;
-  position: absolute;
+  top: 15%;
+  left: 38%;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -254,7 +311,7 @@ img {
 }
 
 .circuloFondo2 {
-  top: 18%;
+  top: 10%;
   left: 34%;
   position: absolute;
   display: flex;
@@ -327,6 +384,7 @@ img {
   width: 40%;
   height: 30%;
   z-index: 5;
+
 }
 
 .time h2 {
@@ -343,6 +401,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  visibility: hidden;
 }
 
 .btn_comenzar a {
@@ -359,6 +418,72 @@ img {
   align-items: center;
 }
 
+/* CONTENEDOR BOTON BUYNOW */
+.btn_buyMonner {
+  position: fixed;
+  top: 30%;
+  left: 37.5%;
+  width: 23%;
+  height: auto;
+}
+
+.buyNow {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right,
+      #029F50 0%,
+      #0A664E 50%,
+      #0E444D 100%);
+  border: 1.2px solid black;
+  border-radius: .5rem;
+  transition: ease-in all .5s;
+  animation: button infinite alternate 5s;
+  -webkit-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px px 5px rgba(0, 0, 0, 0.75);
+}
+
+.texto1 {
+  font-size: 3vw;
+  color: white;
+  font-family: "Bahn";
+  font-stretch: semi-condensed;
+  font-style: semibold;
+  height: auto;
+  width: auto;
+}
+
+.contrato {
+  padding-top: 1%;
+  font-size: .7vw;
+  color: white;
+  height: auto;
+  width: auto;
+}
+
+.contrato span {
+  font-size: .67vw;
+}
+
+.logos {
+  position: relative;
+  height: auto;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.binance {
+  position: relative;
+  justify-content: center;
+  width: 15%;
+}
+
+.meta {
+  position: relative;
+  padding-left: 2%;
+  width: 10%;
+}
 
 /* contendero de Articulo */
 .containerArticulo {
@@ -382,8 +507,14 @@ img {
 }
 
 .titulo_Tiempo h2 {
+  position: fixed;
+  left: 38.2%;
+  top: 16%;
   font-family: "Bahn";
+  font-stretch: semi-condensed;
+  font-style: semibold;
   color: white;
+  font-size: 4vw;
 }
 
 h1,
@@ -413,6 +544,7 @@ h4 {
   align-items: center;
   padding: 1rem;
   margin: 0 auto;
+  visibility: hidden;
 }
 
 

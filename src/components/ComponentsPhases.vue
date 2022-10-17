@@ -1,11 +1,11 @@
 <script setup>
 defineProps({
-    //icono imagen
+    //Titulo
     title: {
         type: String,
         required: true,
     },
-    //nombre icono
+    //Description
     description: {
         type: String,
         required: true,
@@ -68,13 +68,14 @@ img {
     position: absolute;
     width: 3rem;
     border-radius: 50%;
+    border: 5px solid white;
     background: linear-gradient(to left,
             #029F50 0%,
             #0A664E 50%,
             #0E444D 80%);
     height: 3rem;
     bottom: 100%;
-    left: 41%;
+    left: 40%;
     align-items: center;
     z-index: 10;
 }

@@ -1,5 +1,4 @@
 <script setup>
-
 defineProps({
   index_pagina: {
     type: Number,
@@ -11,11 +10,16 @@ defineProps({
   <!--FONDO-->
 
   <div class="fondo">
-    <div :class="{
-      fondo_rayos: true,
-      'animacion-desplazamiento': index_pagina == 9,
-    }">
-    <img src="/img/rayos.png" alt="" />
+    <div
+      :class="{
+        fondo_rayos: true,
+        'animacion-desplazamiento': index_pagina == 9,
+      }"
+    >
+      <img src="/img/rayos.png" alt="" />
+    </div>
+    <div class="fondo-benefit">
+      <img src="/img/fondo-benefit.png" alt="" />
     </div>
     <div class="rectangulo">
       <!--<img src="/img/rectangulo.svg" alt="" />-->
@@ -34,32 +38,29 @@ defineProps({
       <div class="luz-3"></div>
     </div>
 
-    <div class="titulo">
-      <h1>BENEFITS</h1>
-    </div>
-
-    <div :class="{
-      benefits: true,
-      aparecer: index_pagina == 9,
-    }">
-
+    <div
+      :class="{
+        benefits: true,
+        aparecer: index_pagina == 9,
+      }"
+    >
+      <div class="titulo">
+        <h1>BENEFITS</h1>
+      </div>
       <div class="contenedor">
         <p>
-
-          Our staking platform is safe and reliable. We offer you a system that works by phases, backed up by Bank
-          Security, where the Monnercoin will be your entry-ticket to a much-wider world! We want Monner to become one
-          of the main 25 cryptocurrencies in the world! To do that, we rely on a limited and privileged supply of
-          10.000.000 Monnercoin and scheduled burns what are you waiting for? A universe full of opportunities is
-          expecting you to unravel it!
-
+          Our staking platform is safe and reliable. We offer you a system that
+          works by phases, backed up by Bank Security, where the Monnercoin will
+          be your entry-ticket to a much-wider world! We want Monner to become
+          one of the main 25 cryptocurrencies in the world! To do that, we rely
+          on a limited and privileged supply of 10.000.000 Monnercoin and
+          scheduled burns what are you waiting for? A universe full of
+          opportunities is expecting you to unravel it!
         </p>
-
-
       </div>
-
     </div>
 
-   <!-- <div class="logo-redes">
+    <!-- <div class="logo-redes">
       <div class="icon icon-telegram">
         <a href="https://t.me/monnerversecommunity" target="_blank">
           <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
@@ -76,22 +77,20 @@ defineProps({
         </a>
       </div>
     </div>
-  -->
-  </div>
+  --></div>
 </template>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
-  
 
-.fondo{
-
+.fondo {
+  position: absolute;
   z-index: 43;
   width: 100%;
   height: 100%;
-
+  background-color: rgba(32, 29, 64, 0.2);
+  background-color: rgba(32, 29, 64, 0.2);
 }
-
 
 .logo {
   position: absolute;
@@ -103,7 +102,6 @@ defineProps({
 }
 
 .titulo {
-  padding-top: 30%;
   width: 100%;
   height: 10%;
 
@@ -113,20 +111,22 @@ defineProps({
 }
 
 .titulo h1 {
-  font-size: 15vw;
+  font-size: 10vw;
   font-family: "WorkSans", sans-serif;
   font-weight: 400;
   color: white;
 }
 
 .benefits {
- 
+  position: absolute;
+  top: 10%;
   z-index: 8;
   width: 100%;
-  height: 60%;
-
+  height: 80%;
+  row-gap: 5%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .contenedor {
@@ -134,23 +134,45 @@ defineProps({
   justify-content: center;
   align-items: center;
   width: 80%;
-  height: 100%;
+  height: 80%;
   background-color: rgba(32, 29, 64, 0.2);
   margin: 0 auto;
   border-radius: 3vw;
 }
 
 .contenedor p {
-
-  font-size: 5.5vw;
+  font-size: 4vw;
   font-family: "WorkSans", sans-serif;
   font-weight: 100;
   width: 90%;
   text-align: center;
   color: white;
-
 }
+@media screen and (min-width: 769px) {
+  .benefits {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 80%;
+  }
+  .titulo {
+    padding: 0;
+  }
+  .titulo h1 {
+    font-size: 5vw;
+    font-family: "WorkSans", sans-serif;
+    font-weight: 400;
+    color: white;
+  }
 
+  .contenedor {
+    width: 80%;
+    height: 40%;
+  }
+  .contenedor p {
+    font-size: 2vw;
+  }
+}
 .aparecer {
   animation-duration: 0.5s;
   animation-name: arriba;
@@ -169,18 +191,36 @@ defineProps({
   }
 }
 
-
 .fondo_rayos {
   position: absolute;
-  left: -80%;
+  left: -50%;
   width: 100%;
   height: 100%;
   z-index: -23;
+  background-size: no-repeat center center fixed;
 }
-.fondo_rayos img{
-  
 
+.fondo_rayos img {
   height: 100%;
+}
+.fondo-benefit {
+  background-size: no-repeat center center fixed;
+  z-index: 45;
+}
+.fondo-benefit > img {
+  height: 100vh;
+}
+@media screen and (min-width: 769px) {
+  .fondo_rayos {
+    left: 0%;
+  }
+  .fondo-benefit > img {
+    width: 100%;
+    height: 115vh;
+  }
+  .fondo_rayos img {
+    width: 100%;
+  }
 }
 
 .animacion-desplazamiento {
@@ -274,10 +314,12 @@ defineProps({
   border-radius: 50%;
   bottom: -30%;
   transform: rotate(-30deg);
-  background: radial-gradient(ellipse at center,
-      rgba(255, 255, 255, 0.5) 0%,
-      transparent 47%,
-      rgba(184, 184, 184, 0) 100%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.5) 0%,
+    transparent 47%,
+    rgba(184, 184, 184, 0) 100%
+  );
   filter: blur(3rem);
   left: 30%;
 }
@@ -290,10 +332,12 @@ defineProps({
   bottom: -30%;
   left: 40%;
   transform: rotate(0deg);
-  background: radial-gradient(ellipse at center,
-      rgba(255, 255, 255, 0.8) 0%,
-      transparent 47%,
-      rgba(184, 184, 184, 0) 100%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.8) 0%,
+    transparent 47%,
+    rgba(184, 184, 184, 0) 100%
+  );
   filter: blur(3rem);
 }
 
@@ -305,11 +349,12 @@ defineProps({
   bottom: -30%;
   left: 55%;
   transform: rotate(-150deg);
-  background: radial-gradient(ellipse at center,
-      rgba(255, 255, 255, 0.8) 0%,
-      transparent 47%,
-      rgba(184, 184, 184, 0) 100%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.8) 0%,
+    transparent 47%,
+    rgba(184, 184, 184, 0) 100%
+  );
   filter: blur(3rem);
 }
-
 </style>

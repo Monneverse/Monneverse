@@ -146,7 +146,7 @@ img {
   background: linear-gradient(to right, #040077 50%, transparent);
   position: fixed;
   width: 50%;
-  height: 180%;
+  height: 190%;
   z-index: 3;
   top: 0%;
 }

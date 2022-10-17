@@ -10,8 +10,18 @@
     <div class="circuito circuito-derecho">
         <img src="/img/calculadora/circuito-derecho.png" alt="" />
     </div>
-    <div class="luces">
+    <!-- <div class="luces">
         <img src="/img/luz.png" alt="" />
+    </div> -->
+    <div class="reflector reflector-izquierdo">
+        <div class="luz-1"></div>
+        <div class="luz-2"></div>
+        <div class="luz-3"></div>
+    </div>
+    <div class="reflector reflector-derecho">
+        <div class="luz-1"></div>
+        <div class="luz-2"></div>
+        <div class="luz-3"></div>
     </div>
     <div class="degradado_azuliz"></div>
     <div class="degradado_azulde"></div>
@@ -24,10 +34,10 @@
         <a href=""><img src="/img/News/criptopotato.svg"></a>
     </div>
     <div class="coinquora">
-        <a href=""><img src="/img/News/coinquora1.png"></a>
+        <a href=""><img src="/img/Exchanges/Coinquora.png"></a>
     </div>
     <div class="coinrepublic">
-        <a href=""><img src="/img/News/thcr.png"></a>
+        <a href=""><img src="/img/News/TheCoinRepublic.png"></a>
     </div>
 
     <div class="circulo"></div>
@@ -36,15 +46,15 @@
     <div class="criptotendencia">
         <a
             href="https://criptotendencia.com/2022/08/03/por-que-monner-puede-convertirse-en-una-de-las-mejores-criptomonedas-para-invertir/"><img
-                src="/img/News/CriptoTendencia.png"></a>
+                src="/img/Exchanges/criptotend.png"></a>
     </div>
     <div class="coinspeaker">
         <a href="https://www.coinspeaker.com/monner-coin-revolutionize-crypto/"><img
-                src="/img/News/CoinSpeaker.png"></a>
+                src="/img/Exchanges/coinspeaker.png"></a>
     </div>
     <div class="territoriobitcoin">
         <a href="https://www.territoriobitcoin.com/una-nueva-criptomoneda-en-tendencia/"><img
-                src="/img/News/TerritorioBitcoin.png"></a>
+                src="/img/Exchanges/territoriobtc.png"></a>
     </div>
 </template>
 
@@ -129,11 +139,11 @@ img {
 
 .luces {
     position: absolute;
-    bottom: -12%;
+    bottom: -16%;
     left: -9%;
     width: 120%;
-    height: 110%;
-    z-index: 5;
+    height: 160%;
+    z-index: 99;
     opacity: 100%;
 }
 
@@ -202,29 +212,37 @@ img {
 
 .cryptopotato {
     position: absolute;
-    top: 22%;
+    top: 18%;
     left: 15%;
-    width: 22%;
-    height: 22%;
+    width: auto;
+    height: auto;
     z-index: 9;
 }
 
 .coinquora {
     position: absolute;
-    top: 50%;
-    left: 16%;
-    width: 20%;
-    height: 8%;
+    top: 42%;
+    left: 12%;
+    width: auto;
+    height: auto;
     z-index: 9;
 }
 
 .coinrepublic {
-    position: absolute;
-    top: 64%;
-    left: 15%;
-    width: 20%;
-    height: 25%;
+    position: fixed;
+    top: 70%;
+    left: 12%;
+    width: 30%;
+    height: 30%;
     z-index: 9;
+}
+
+.coinrepublic img {
+    position: fixed;
+    top: 60%;
+    left: 15%;
+    width: 25%;
+    height: 30%;
 }
 
 img:hover {
@@ -234,28 +252,118 @@ img:hover {
 
 .criptotendencia {
     position: absolute;
-    top: 42%;
+    top: 65%;
     right: 15%;
-    width: 20%;
-    height: 28%;
+    width: auto;
+    height: auto;
     z-index: 9;
 }
 
 .coinspeaker {
     position: absolute;
-    top: 20%;
-    right: 15%;
-    width: 20%;
-    height: 30%;
+    top: 14%;
+    right: 13%;
+    width: auto;
+    height: auto;
     z-index: 9;
 }
 
 .territoriobitcoin {
     position: absolute;
-    top: 70%;
-    right: 15%;
-    width: 20%;
-    height: 18%;
+    top: 42%;
+    right: 9%;
+    width: auto;
+    height: auto;
     z-index: 9;
+}
+
+@keyframes luz {
+    0% {
+        opacity: 40%;
+    }
+
+    50% {
+        opacity: 80%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.reflector {
+    position: absolute;
+    bottom: 0%;
+    left: 5%;
+    width: 40%;
+    height: 100%;
+    z-index: 7;
+    animation-duration: 3s;
+    animation-name: reflector;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.reflector-derecho {
+    left: 55%;
+}
+
+@keyframes reflector {
+    0% {
+        opacity: 40%;
+    }
+
+    50% {
+        opacity: 80%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.luz-1 {
+    position: absolute;
+    width: 30%;
+    height: 130%;
+    border-radius: 50%;
+    bottom: -30%;
+    transform: rotate(-30deg);
+    background: radial-gradient(ellipse at center,
+            rgba(255, 255, 255, 1) 0%,
+            transparent 55%,
+            rgba(184, 184, 184, 0) 100%);
+    filter: blur(3rem);
+    left: 30%;
+}
+
+.luz-2 {
+    position: absolute;
+    width: 30%;
+    height: 160%;
+    border-radius: 50%;
+    bottom: -30%;
+    left: 40%;
+    transform: rotate(0deg);
+    background: radial-gradient(ellipse at center,
+            rgba(255, 255, 255, 1) 0%,
+            transparent 55%,
+            rgba(184, 184, 184, 0) 100%);
+    filter: blur(3rem);
+}
+
+.luz-3 {
+    position: absolute;
+    width: 30%;
+    height: 130%;
+    border-radius: 50%;
+    bottom: -30%;
+    left: 55%;
+    transform: rotate(-150deg);
+    background: radial-gradient(ellipse at center,
+            rgba(255, 255, 255, 1) 0%,
+            transparent 55%,
+            rgba(184, 184, 184, 0) 100%);
+    filter: blur(3rem);
 }
 </style>
