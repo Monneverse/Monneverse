@@ -1,6 +1,6 @@
 <template>
   <div :class="{ logo: true, mostrar: isVisible }">
-    <a href="" :class="{home: indexF == 6 }">
+    <a href=""  @click="this.setPage(1)" >
       <img src="/img/logo.svg" alt="logo monneverse" /></a>
   </div>
   <div id="barra" class="barra-navegacion">
