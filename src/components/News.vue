@@ -243,8 +243,6 @@ img {
     left: 15%;
     width: 25%;
     height: 30%;
-    border: 1px solid white;
-
 }
 
 img:hover {
@@ -299,7 +297,7 @@ img:hover {
     left: 5%;
     width: 40%;
     height: 100%;
-    z-index: 10;
+    z-index: 7;
     animation-duration: 3s;
     animation-name: reflector;
     animation-iteration-count: infinite;

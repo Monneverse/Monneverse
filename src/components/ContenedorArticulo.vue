@@ -188,39 +188,36 @@ export default {
       this.minutoString = this.AgregarCero(minutes);
       this.segundoString = this.AgregarCero(seconds);
     },
-    addTokenFunction() {
+    async addTokenFunction() {
       const tokenAddress = '0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893';
       const tokenSymbol = 'MNR';
       const tokenDecimals = 18;
       const tokenImage = 'https://i.postimg.cc/xCHLP8sw/icon-32x32.png';
 
-      async function addTokenFunction() {
+      try {
 
-        try {
-
-          const wasAdded = await ethereum.request({
-            method: 'wallet_watchAsset',
-            params: {
-              type: 'ERC20',
-              options: {
-                address: tokenAddress,
-                symbol: tokenSymbol,
-                decimals: tokenDecimals,
-                image: tokenImage,
-              },
+        const wasAdded = await ethereum.request({
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20',
+            options: {
+              address: tokenAddress,
+              symbol: tokenSymbol,
+              decimals: tokenDecimals,
+              image: tokenImage,
             },
-          });
+          },
+        });
 
-          if (wasAdded) {
-            console.log('Thanks for your interest!');
-          } else {
-            console.log('HelloWorld Coin has not been added');
-          }
-        } catch (error) {
-          console.log(error);
+        if (wasAdded) {
+          alert('Thanks for your interest!');
+        } else {
+          alert('HelloWorld Coin has not been added');
         }
+      } catch (error) {
+        console.log(error);
       }
-    },
+    }
   },
   mounted() {
     setInterval(this.ObtenerFechaActual, 500);
@@ -439,6 +436,8 @@ img {
       #0E444D 100%);
   border: 1.2px solid black;
   border-radius: .5rem;
+  transition: ease-in all .5s;
+  animation: button infinite alternate 5s;
   -webkit-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px px 5px rgba(0, 0, 0, 0.75);
