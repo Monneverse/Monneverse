@@ -25,7 +25,7 @@ import Articulo from "./Articulo.vue";
   </div>
 
   <!-- CONTENEDOR DE BOTON METATASK -->
-  <div class="btn_buyMonner" @click="addTokenFunction">
+  <div class="btn_buyMonner" @click="addTokenFunction()">
     <button class="buyNow">
       <div class="contrato"><b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span></div>
       <div class="texto1">BUY MONNER</div>
