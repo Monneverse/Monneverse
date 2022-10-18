@@ -200,9 +200,9 @@ export default {
     };
   },
   methods: {
-    setOnPage(id) {
+    setOnPage(id, visible = true) {
       this.index = id;
-
+      this.isVisibleLogo = visible;
       switch (this.index) {
         case 1:
           this.index_pagina = 5;
