@@ -26,8 +26,8 @@ import Articulo from "./Articulo.vue";
 
   <!-- CONTENEDOR DE BOTON METATASK -->
   <div class="btn_buyMonner" click="addTokenFunction()">
+    <div class="contrato"><b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span></div>
     <button class="buyNow">
-      <div class="contrato"><b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span></div>
       <div class="texto1">BUY MONNER</div>
       <div class="logos"><img src="/./img/Articulo/BNC.svg" class="binance">
         <img src="/./img/Articulo/Meta.svg" class="meta">
@@ -166,8 +166,8 @@ export default {
       horaString: "00",
       minutoString: "00",
       segundoString: "00",
-      tokenAddress:'0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893',
-      tokenSymbol : 'MNR',
+      tokenAddress: '0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893',
+      tokenSymbol: 'MNR',
       tokenDecimals: 18,
       tokenImage: 'https://i.postimg.cc/xCHLP8sw/icon-32x32.png',
     };
@@ -195,7 +195,7 @@ export default {
     async addTokenFunction() {
 
 
-  
+
 
       try {
         console.log('metamask')
@@ -457,15 +457,17 @@ img {
 }
 
 .contrato {
-  padding-top: 1%;
-  font-size: .7vw;
+  position: fixed;
+  top: 26%;
+  left: 35%;
+  font-size: 1vw;
   color: white;
   height: auto;
-  width: auto;
+  width: 29%;
 }
 
 .contrato span {
-  font-size: .67vw;
+  font-size: .9vw;
 }
 
 .logos {
