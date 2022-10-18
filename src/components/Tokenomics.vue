@@ -248,6 +248,7 @@ img {
   font-family: "WorkSans", sans-serif;
   color: white;
   width: 75%;
+  color: #000;
 }
 
 .sale-tax h2 {

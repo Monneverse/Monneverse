@@ -117,6 +117,7 @@ developed.
   overflow-x: scroll;
   column-gap: 20%;
   color: #fff;
+  border-radius: 1em;
 }
 
 .cards {
