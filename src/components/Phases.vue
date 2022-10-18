@@ -30,26 +30,22 @@ import fasesComponentes from './ComponentsPhases.vue';
         <img src="/img/Imagen1.png">
     </div>
 
-    <button class="readMore" @click="LearnMore">
-        Learn More
-    </button>
-
     <div class="circulos1">
         <img src="/img/Imagen1.png">
     </div>
 
     <div class="componentes1">
-        <fasesComponentes title="development" description="development of the entire monnerverse ecosystem website,
+        <fasesComponentes title="development" textOculto="development of the entire monnerverse ecosystem website,
              spanish and english, discord, telegram, twitter and facebook." />
     </div>
 
     <div class="componentes2">
-        <fasesComponentes title="collection" description="Collection of documents for important Exchanges:
+        <fasesComponentes title="collection" textOculto="Collection of documents for important Exchanges:
          CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others." />
     </div>
 
     <div class="componentes3">
-        <fasesComponentes title="started" description="Collection of documents for important Exchanges:
+        <fasesComponentes title="started" textOculto="Collection of documents for important Exchanges:
          CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others." />
     </div>
 
