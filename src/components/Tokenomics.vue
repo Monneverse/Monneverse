@@ -235,6 +235,8 @@ img {
     width: 100%;
     height: 57%;
     margin: 0 auto;
+    overflow-x: initial;
+    scroll-snap-type: none;
   }
   .content::-webkit-scrollbar {
     display: none;
