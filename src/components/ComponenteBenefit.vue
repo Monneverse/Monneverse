@@ -9,54 +9,54 @@ export default {
       type: String,
       required: true,
     },
-    segundoTitulo: {
+    textOculto: {
       type: String,
       required: true,
     },
-    segundoTexto: {
-      type: String,
-      required: true,
-    },
+
     index_pagina: {
       type: Number,
       required: true,
     },
-    mostrarBtn: {
-      type: Boolean,
-      required: true,
-    },
-    ruta: {
+    ocultar: {
       type: String,
       required: true,
     },
   },
   data() {
-    return {};
+    return {
+      look: false,
+    };
+  },
+  methods: {
+    mostrarTexto() {
+      this.look = !this.look;
+    },
   },
 };
 </script>
 
 <template>
   <div class="benefit fondo-oscuro">
-    <div class="div titulo_1">
+    <div class="contenido">
       <h2 class="centrar">
         {{ titulo }}
       </h2>
-      <p>
+
+      <p class="centrar">
         {{ texto }}
       </p>
-    </div>
 
-    <div class="div titulo_2">
-      <h2 class="centrar">
-        {{ segundoTitulo }}
-      </h2>
-      <p class="centrar">
-        {{ segundoTexto }}
-      </p>
-    </div>
-    <div v-show="mostrarBtn" class="div">
-      <a class="btn centrar" :href="ruta">READ MORE</a>
+      <div class="linea"></div>
+      <transition name="fade">
+        <p v-show="look" class="texto-oculto" transition="fade">
+          {{ textOculto }}
+        </p>
+      </transition>
+
+      <buttom :class="ocultar" v-on:click="mostrarTexto" class="btn centrar"
+        >READ {{ look ? "LESS" : "MORE" }}</buttom
+      >
     </div>
   </div>
 </template>
@@ -81,50 +81,86 @@ export default {
   background-color: #161431;
 }
 
-.benefit .div {
-  width: 90%;
+.benefit .contenido {
 
+  align-items: center;
+  width: 90%;
   margin: 0 auto;
 }
 
-.titulo_1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 30%;
-}
-
-.titulo_2 {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  height: 50%;
-}
-
-.div h2 {
+.contenido h2 {
+  align-items: center;
+  height: 10%;
   font-size: 6vw;
   font-weight: 600;
 }
 
-.div p {
-  font-weight: 400;
-  font-size: 6vw;
+.contenido .linea {
+  margin: 2% auto;
+  width: 60%;
+  height: 0.2%;
+  background-color: rgb(21, 199, 137);
 }
 
-.titulo_2 p {
-  text-align: center;
+.contenido p {
+  height: 38%;
+  align-items: center;
+  font-weight: 400;
+  font-size: 5vw;
+}
+
+.texto-oculto{
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;  
+  cursor: grab;
+  text-align: justify;
+  scroll-snap-type: y mandatory;
+  overflow-x: scroll;
+}
+
+
+.fade-enter-active
+ {
+  animation: opacity 0.5s linear;
+}
+@keyframes opacity {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  animation: opacity2 0.5s linear;
+}
+@keyframes opacity2 {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 0%;
+  }
 }
 @media screen and (min-width: 769px) {
-  .benefit {
-  }
-  .div h2 {
-    font-size: 2vw;
-    font-weight: 600;
-  }
-  .div p {
-    font-weight: 400;
+  .contenido h2 {
     font-size: 1.5vw;
+    font-weight: 600;
+    text-align: center;
+  }
+  .contenido p {
+    font-weight: 400;
+    font-size: 1.2vw;
   }
 }
 
@@ -139,8 +175,10 @@ export default {
   border-radius: 1.5vw;
   cursor: pointer;
   width: 45%;
+  height: 5%;
   font-size: 4vw;
   font-family: "WorkSans", sans-serif;
+  align-items: center;
 }
 
 .btn:hover {
@@ -153,11 +191,8 @@ export default {
 
 @media screen and (min-width: 769px) {
   .btn {
-    
-
     width: 60%;
     font-size: 1.5vw;
-  
   }
 }
 
@@ -175,5 +210,8 @@ export default {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+.ocultar{
+  display: none;
 }
 </style>

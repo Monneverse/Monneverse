@@ -24,6 +24,9 @@
   <div class="fondo-mundial">
     <img src="/img/fondo-mundial.png" alt="" srcset="" />
   </div>
+  <div class="fondoTokenomics">
+    <img src="/img/fondo_Tokenomics.png" alt="" />
+  </div>
   <div id="logo-1" class="logo">
     <img src="/img/logo_empresa.png" alt="" />
   </div>
@@ -116,6 +119,15 @@ img {
   background-color: rgb(0, 0, 0);
   opacity: 60%;
   mix-blend-mode: multiply;
+}
+
+.fondoTokenomics {
+  position: absolute;
+  top: -8.3%;
+  width: 100%;
+  height: 120%;
+  z-index: 3;
+  opacity: 70%;
 }
 
 .circuito-izquierdo {
