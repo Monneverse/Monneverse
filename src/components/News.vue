@@ -4,6 +4,9 @@
     <div class="fondo filtro-superior"></div>
     <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
     <div class="fondo fondo-oscurecer"></div>
+    <div id="logo-2" class="logo">
+        <img src="/img/logo.svg" alt="" />
+    </div>
     <div class="circuito circuito-izquierdo">
         <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
     </div>
@@ -135,6 +138,23 @@ img {
     background-color: rgb(0, 0, 0);
     opacity: 60%;
     mix-blend-mode: multiply;
+}
+
+.logo {
+    position: fixed;
+    z-index: 5;
+    opacity: 40%;
+}
+
+#logo-2 {
+    width: 34%;
+    height: 56%;
+    position: fixed;
+    top: 10%;
+    left: 31.5%;
+    margin: auto;
+    z-index: 5;
+    opacity: 10%;
 }
 
 .luces {

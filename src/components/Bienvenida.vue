@@ -25,7 +25,7 @@
   </div>
   <div class="iluminacionLogo"></div>
   <div class="fondo-mundial">
-    <img src="/img/fondo_Cel.png" alt="" srcset="" />
+    <img src="/../img/celFondo.svg" alt="" srcset="" />
   </div>
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
@@ -144,7 +144,6 @@ img {
   width: 85%;
   height: 100%;
   z-index: 6;
-  opacity: 100%;
 }
 
 .semi-circle {

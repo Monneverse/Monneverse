@@ -20,46 +20,45 @@ defineProps({
         <h1>BENEFITS</h1>
       </div>
   -->
-      <div
-        :class="{ benefits: true, 'animacion-desplazamiento': index_pagina == 11 }"
-      >
-        <div class="cards">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <Benefit
-            titulo="MonnerSwap"
-            texto=""
-            segundoTitulo=""
-            segundoTexto="One of the main assets of our MonnerWallet is MonnerSwap. MonnerSwap is an integrated function that allows every user to exchange its currency for the most popular tokens in the market"
-            mostrarBtn="true"
-          />
-        </div>
-        <div class="cards">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+    <div
+      :class="{
+        benefits: true,
+        'animacion-desplazamiento': index_pagina == 11,
+      }"
+    >
+      <div class="cards">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
         <Benefit
-          titulo="MonnerTrading"
-          texto=""
-          segundoTitulo=""
-          segundoTexto="Will dispose from the best tools for the most advanced traders of Monnercoin, so they can operate with the biggest currency pairs, cryptocurrencies"
+          titulo="MonnerSwap"
+          texto="One of the main assets of our MonnerWallet is MonnerSwap. MonnerSwap is an integrated function that allows every user to exchange its currency for the most popular tokens in the market"
+          textOculto="using a comfortable and intuitive interface that will bring greater fluidity to their transactions. MonnerSwap is the bridge that will ease the burning of our supplies and decrease the tokens in circulation."
           mostrarBtn="true"
         />
       </div>
-        <div class="cards">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+      <div class="cards">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <Benefit
+          titulo="MonnerTrading"
+          texto="Will dispose from the best tools for the most advanced traders of Monnercoin, so they can operate with the biggest currency pairs, cryptocurrencies"
+          textOculto="holdings, shares and indexes worldwide. With MonnerTrading, we bring the Crypto world within the reach of all enthusiasts who want to join the stock investment business. MonnerTrading holds the best standards, audited by CertiK."
+          mostrarBtn="true"
+        />
+      </div>
+      <div class="cards">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
         <Benefit
           titulo="MonnerGames"
-          texto=""
-          segundoTitulo=""
-          segundoTexto="Will soon be our AR Gambling site, generating profits for our liquidity. Every player will choose their favorite game (e.g Monner Poker, MonnerBlackJack) and compete with other users in lively bets."
-          mostrarBtn="true"
+          texto="Will soon be our AR Gambling site, generating profits for our liquidity. Every player will choose their favorite game (e.g Monner Poker, MonnerBlackJack) and compete with other users in lively bets."
+          ocultar="ocultar"
         />
       </div>
     </div>
@@ -125,6 +124,7 @@ defineProps({
 }
 
 .cards span {
+  display: none;
   transition: 0.5s;
   opacity: 0%;
   box-shadow: inset 0 0 5px whitesmoke, inset 0px 0 6px rgb(8, 212, 83),
@@ -137,101 +137,100 @@ defineProps({
   opacity: 1;
 }
 
-.cards:hover {
-  transform: translateY(-3%);
+@media screen and (min-width: 769px) {
+  .cards span {
+    display: block;
+  }
+  .cards:hover {
+    transform: translateY(-3%);
 
-  transition: 0.5s ease-out;
-}
-
-.cards span:nth-child(1) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 120%;
-  height: 5px;
-  animation: animacion1 2s linear infinite;
-  animation-delay: 1s;
-}
-
-@keyframes animacion1 {
-  0% {
-    transform: translateX(-100%);
+    transition: 0.5s ease-out;
+  }
+  .cards span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 5px;
+    animation: animacion1 2s linear infinite;
+    animation-delay: 1s;
   }
 
-  100% {
-    transform: translateX(100%);
+  @keyframes animacion1 {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .cards span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    animation: animacion2 2s linear infinite;
+    animation-delay: 1s;
+  }
+
+  @keyframes animacion2 {
+    0% {
+      transform: translateY(100%);
+    }
+
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  .cards span:nth-child(3) {
+    position: absolute;
+
+    top: 99%;
+    left: 0;
+
+    width: 120%;
+    height: 5px;
+    animation: animacion3 2s linear infinite;
+    animation-delay: 1s;
+  }
+
+  @keyframes animacion3 {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .cards span:nth-child(4) {
+    position: absolute;
+
+    top: 0%;
+    left: 99%;
+
+    width: 5px;
+    height: 100%;
+    animation: animacion4 2s linear infinite;
+    animation-delay: 1s;
+  }
+
+  @keyframes animacion4 {
+    0% {
+      transform: translateY(-100%);
+    }
+
+    100% {
+      transform: translateY(100%);
+    }
   }
 }
 
-.cards span:nth-child(2) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 100%;
-  animation: animacion2 2s linear infinite;
-  animation-delay: 1s;
-}
-
-@keyframes animacion2 {
-  0% {
-    transform: translateY(100%);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-.cards span:nth-child(3) {
-  position: absolute;
-
-  top: 99%;
-  left: 0;
-
-  width: 120%;
-  height: 5px;
-  animation: animacion3 2s linear infinite;
-  animation-delay: 1s;
-}
-
-@keyframes animacion3 {
-  0% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.cards span:nth-child(4) {
-  position: absolute;
-
-  top: 0%;
-  left: 99%;
-
-  width: 5px;
-  height: 100%;
-  animation: animacion4 2s linear infinite;
-  animation-delay: 1s;
-}
-
-@keyframes animacion4 {
-  0% {
-    transform: translateY(-100%);
-  }
-
-  100% {
-    transform: translateY(100%);
-  }
-}
-
-.animacion-aparecer {
-  animation-duration: 0.5s;
-  animation-name: aparecer;
-  animation-iteration-count: 1;
-}
 
 @keyframes aparecer {
   0% {
@@ -248,7 +247,6 @@ defineProps({
     column-gap: 0;
     overflow-x: initial;
     scroll-snap-type: none;
-    
   }
   .cards {
     position: relative;

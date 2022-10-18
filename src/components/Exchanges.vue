@@ -19,13 +19,20 @@ import ComponenteIconos from "./componenteIconos.vue";
   <div class="fondo-montana">
     <img src="/img/fondo-montana.png" alt="" srcset="" />
   </div>
+  <div class="circuito circuito-izquierdo">
+    <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
+  </div>
+  <div class="circuito circuito-derecho">
+    <img src="/img/calculadora/circuito-derecho.png" alt="" />
+  </div>
+  <div class="fondoTokenomics">
+    <img src="/img/fondo_Tokenomics.png" alt="" />
+  </div>
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
   <div class="fondo-mundial">
     <img src="/img/fondo_Cel.png" alt="" srcset="" />
   </div>
-  <div class="degradado degradado_izquierdo"></div>
-  <div class="degradado degradado_derecho"></div>
   <div id="logo-1" class="logo">
     <img src="/img/logo_Grande.png" alt="" />
   </div>
@@ -176,6 +183,34 @@ img {
   height: 100%;
   width: 100%;
   display: flex;
+}
+
+.fondoTokenomics {
+  position: absolute;
+  top: -8.3%;
+  width: 100%;
+  height: 120%;
+  z-index: 1;
+  opacity: 60%;
+}
+
+.circuito {
+  position: absolute;
+  z-index: 1;
+  height: 80%;
+  width: 50%;
+  min-width: 30rem;
+  top: 11%;
+}
+
+.circuito-izquierdo {
+  left: -14%;
+}
+
+.circuito-derecho {
+  right: -10%;
+  visibility: hidden;
+  transform: scaleY(-1);
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {

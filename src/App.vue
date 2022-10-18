@@ -125,17 +125,15 @@ export default {
       isRevert: false,
       listaPaginaDondeSeOcultaLogo: [1, 2],
       isDragging: false,
-      startX: 0,
       startY: 0,
-      moveX: 0,
       moveY: 0,
       position: 0,
     };
   },
   methods: {
-    setOnPage(id) {
+    setOnPage(id, visible = true) {
       this.index = id;
-
+      this.isVisibleLogo = visible;
       switch (this.index) {
         case 1:
           this.index_pagina = 5;
@@ -167,20 +165,23 @@ export default {
         case 5:
           this.index = 1;
           break;
-        case 8:
         case 9:
         case 10:
         case 11:
+        case 12:
           this.index = 2;
           break;
-        case 12:
+        case 13:
           this.index = 3;
           break;
-        case 13:
+        case 14:
           this.index = 4;
           break;
-        case 14:
         case 15:
+        case 16:
+        case 17:
+        case 18:
+        case 19:
           this.index = 5;
           break;
         default:
@@ -190,20 +191,13 @@ export default {
     },
 
     touchStart() {
-      this.startX = this.touchPositionX();
       this.startY = this.touchPositionY();
     },
-
     touchMove() {
-      this.moveX = this.touchPositionX();
       this.moveY = this.touchPositionY();
     },
     touchEnd() {
-      if (this.startX + 100 < this.moveX) {
-        console.log("derecha");
-      } else if (this.startX - 100 > this.moveX) {
-        console.log("izquierda");
-      } else if (this.startY - 100 > this.moveY) {
+      if (this.startY - 100 > this.moveY) {
         this.NavegarDown();
       } else if (this.startY + 100 < this.moveY) {
         this.NavegarUp();
@@ -266,7 +260,6 @@ export default {
             this.isRevert = false;
           }
         }
-        console.log(this.position);
         setTimeout(() => {
           this.index_pagina = newPosition;
           this.isVisibleLogo = true;
@@ -307,7 +300,6 @@ export default {
             this.isRevert = true;
           }
         }
-        console.log(this.position)
         setTimeout(() => {
           this.index_pagina = newPosition;
           this.isVisibleLogo = true;
@@ -336,9 +328,7 @@ export default {
         }, 1000);
       }
     },
-    touchPositionX() {
-      return (this.position = event.touches[0].clientX);
-    },
+
     touchPositionY() {
       return (this.position = event.touches[0].clientY);
     },
@@ -356,15 +346,14 @@ export default {
         return false;
       };
     },
-
   },
   mounted() {
     this.index_pagina = 1;
     document.addEventListener("wheel", this.Navegar);
     this.listaPaginaDondeSeOcultaLogo.push(this.limite);
 
-    this.returnMethods();
-    document.addEventListener("drag", this.returnMethods);
+
+    document.addEventListener("drag", this.returnMethods());
   },
 };
 </script>

@@ -25,9 +25,9 @@ import Articulo from "./Articulo.vue";
   </div>
 
   <!-- CONTENEDOR DE BOTON METATASK -->
-  <div class="btn_buyMonner" :click="addTokenFunction()">
+  <div class="btn_buyMonner" click="addTokenFunction()">
+    <div class="contrato"><b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span></div>
     <button class="buyNow">
-      <div class="contrato"><b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span></div>
       <div class="texto1">BUY MONNER</div>
       <div class="logos"><img src="/./img/Articulo/BNC.svg" class="binance">
         <img src="/./img/Articulo/Meta.svg" class="meta">
@@ -166,6 +166,10 @@ export default {
       horaString: "00",
       minutoString: "00",
       segundoString: "00",
+      tokenAddress: '0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893',
+      tokenSymbol: 'MNR',
+      tokenDecimals: 18,
+      tokenImage: 'https://i.postimg.cc/xCHLP8sw/icon-32x32.png',
     };
   },
   methods: {
@@ -189,22 +193,21 @@ export default {
       this.segundoString = this.AgregarCero(seconds);
     },
     async addTokenFunction() {
-      const tokenAddress = '0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893';
-      const tokenSymbol = 'MNR';
-      const tokenDecimals = 18;
-      const tokenImage = 'https://i.postimg.cc/xCHLP8sw/icon-32x32.png';
+
+
+
 
       try {
-
+        console.log('metamask')
         const wasAdded = await ethereum.request({
           method: 'wallet_watchAsset',
           params: {
             type: 'ERC20',
             options: {
-              address: tokenAddress,
-              symbol: tokenSymbol,
-              decimals: tokenDecimals,
-              image: tokenImage,
+              address: this.tokenAddress,
+              symbol: this.tokenSymbol,
+              decimals: this.tokenDecimals,
+              image: this.tokenImage,
             },
           },
         });
@@ -454,15 +457,17 @@ img {
 }
 
 .contrato {
-  padding-top: 1%;
-  font-size: .7vw;
+  position: fixed;
+  top: 26%;
+  left: 35%;
+  font-size: 1vw;
   color: white;
   height: auto;
-  width: auto;
+  width: 29%;
 }
 
 .contrato span {
-  font-size: .67vw;
+  font-size: .9vw;
 }
 
 .logos {
