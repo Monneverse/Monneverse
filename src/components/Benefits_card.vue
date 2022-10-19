@@ -117,6 +117,31 @@ developed.
   overflow-x: scroll;
   column-gap: 20%;
   color: #fff;
+  border-radius: 1em;
+}
+.benefits::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.benefits::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.benefits::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    90deg,
+    rgb(33, 32, 85) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.benefits::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+.benefits::-webkit-scrollbar {
+    display: block;
 }
 
 .cards {

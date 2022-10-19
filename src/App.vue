@@ -75,7 +75,7 @@ import Footer from "./components/Footer.vue";
       id="container"
       :class="{ container: true, 'mostrar-container': index_pagina == 5 }"
     >
-      <ContenedorArticulo />
+      <ContenedorArticulo :index_pagina="index_pagina" />
     </div>
 
     <div
