@@ -13,17 +13,17 @@ defineProps({
 
   <div class="fondo">
     <div
-      :class="{ fondo_rayos: true, 'animacion-aparecer': index_pagina == 8 }"
+      :class="{ fondo_rayos: true, 'animacion-aparecer': index_pagina == 9 }"
     >
       <img src="/img/rayos.png" alt="" />
     </div>
     <div
-      :class="{ circuito: true, 'animacion-circuito': index_pagina == 8 }"
-      class=""
+      :class="{ circuito: true, 'animacion-circuito': index_pagina == 9 }"
+    
     >
       <img src="/img/calculadora/circuito-derecho.png" alt="" />
     </div>
-    <div :class="{ rectangulo: true, 'animacion-aparecer': index_pagina == 8 }">
+    <div :class="{ rectangulo: true, 'animacion-aparecer': index_pagina == 9 }">
       <img src="/img/rectangulo.svg" alt="" />
     </div>
     <div class="logo">
@@ -32,7 +32,7 @@ defineProps({
     <div
       :class="{
         'reflector-izquierdo': true,
-        'animacion-dezplazamiento-reflector-izquierdo': index_pagina == 8,
+        'animacion-dezplazamiento-reflector-izquierdo': index_pagina == 9,
       }"
       class="reflector"
     >
@@ -43,7 +43,7 @@ defineProps({
     <div
       :class="{
         'reflector-derecho': true,
-        'animacion-dezplazamiento-reflector-derecho': index_pagina == 8,
+        'animacion-dezplazamiento-reflector-derecho': index_pagina == 9,
       }"
       class="reflector"
     >
@@ -51,12 +51,12 @@ defineProps({
       <div class="luz-2"></div>
       <div class="luz-3"></div>
     </div>
-    <div :class="{ titulo: true, 'animacion-aparecer': index_pagina == 8 }">
+    <div :class="{ titulo: true, 'animacion-aparecer': index_pagina == 9 }">
       <h1>BENEFITS</h1>
     </div>
 
     <div
-      :class="{ display_flex: true, 'animacion-aparecer': index_pagina == 8 }"
+      :class="{ display_flex: true, 'animacion-aparecer': index_pagina == 9 }"
     >
       <div class="benefits">
         <Benefits />
@@ -72,7 +72,7 @@ defineProps({
       <div
         :class="{
           circulos: true,
-          'animacion-rotar': index_pagina == 8,
+          'animacion-rotar': index_pagina == 9,
         }"
       >
         <Circulos
@@ -220,10 +220,12 @@ defineProps({
   display: none;
 }
 .circuito img {
+  position: absolute;
+  top: 0;
   transform: rotateX(-180grad);
   z-index: 12;
   width: 80%;
-  display: none;
+
 }
 
 .rectangulo {
@@ -274,13 +276,16 @@ defineProps({
     font-size: 4.5vw;
   }
   .fondo_rayos {
-    display: block;
+    display: initial;
   }
-  .circuitos {
-    display: flex;
+  .circuito {
+    display: block;
   }
   .circulos {
     display: flex;
+  }
+  .rectangulo{
+    display: initial;
   }
 }
 .animacion-rotar {
