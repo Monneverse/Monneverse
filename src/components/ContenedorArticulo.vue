@@ -31,7 +31,7 @@ defineProps({
   </div>
 
   <!-- CONTENEDOR DE BOTON METATASK -->
-  <div class="btn_buyMonner" :click="addTokenFunction()">
+  <div class="btn_buyMonner" click="addTokenFunction()">
     <button class="buyNow">
       <div class="contrato"><b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span></div>
       <div class="texto1">BUY MONNER</div>
@@ -44,8 +44,8 @@ defineProps({
 
   <!-- Contenedor de Articulos -->
   <div class="containerArticulo">
-    <transition name="slicefade">
-      <div v-show="index_pagina=5" class="contenedorDeArticulo">
+    <transition name="slide-fade">
+      <div v-if="index_pagina==5" class="contenedorDeArticulo">
         <Articulo v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen"
           :url="item.link" />
       </div>
@@ -455,12 +455,12 @@ h4 {
 }
 
 .slide-fade-enter-active {
-
-  transition: all 0.3s ease-out;
+  transform: translateY(-2440px);
+  transition: all 2s ease-out;
 }
 
 .slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 5s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
 .slide-fade-enter-from,
