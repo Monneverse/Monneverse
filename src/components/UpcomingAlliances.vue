@@ -231,7 +231,7 @@ img {
   color: white;
   font-size: 5vw;
   font-weight: 500;
-  font-family: WorkSans;
+  font-family: "Work Sans";
   z-index: 5;
 }
 
