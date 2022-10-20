@@ -37,6 +37,10 @@ export default {
       type: String,
       required: true,
     },
+    index: {
+      type: Number,
+      required: true,
+    },
   },
   data() {
     return {};
@@ -46,9 +50,15 @@ export default {
 
 <template>
   <div class="coin">
-    <div class="icono">
-      <img :src="icono" alt="" />
+    <div    :class="{
+        icono: true,
+        'animacion-desplazamiento': index == 8,
+      }">
+
+        <img  :src="icono" alt="" />
+          
     </div>
+
     <div class="container-titulo">
       <h2 class="titulo">{{ titulo }}</h2>
       <p class="sigla">{{ sigla }}</p>
@@ -98,9 +108,10 @@ export default {
   font-family: "Work Sans", sans-serif;
 }
 
+
 .icono {
   width: 30%;
-  height: 10%;
+  height:4rem;
   margin: 2% auto;
   display: flex;
   justify-content: center;
@@ -143,8 +154,7 @@ export default {
   letter-spacing: 0.3vw;
   font-size: 3vw;
 }
-.sigla{
-
+.sigla {
   font-family: "Barlow Semi Condensed", sans-serif;
 }
 .container-text2 {
@@ -191,7 +201,6 @@ export default {
   flex-direction: column;
 }
 
-
 .caja img {
   width: 100%;
 }
@@ -221,5 +230,21 @@ export default {
   font-size: 1.5vw;
   font-weight: 500;
   text-align: center;
+}
+.animacion-desplazamiento {
+  animation-duration: 5s;
+  animation-name: desplazamiento;
+  animation-iteration-count: 1;
+}
+
+@keyframes desplazamiento {
+  0% {
+   position: absolute;
+   top: 100%;
+  }
+
+  100% {
+    left: 0%;
+  }
 }
 </style>

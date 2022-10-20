@@ -50,7 +50,11 @@ export default {};
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
+@font-face {
+  font-family: "Work Sans", serif;
+  src: url("/Fonts/WorkSans.ttf");
+  font-style: semibold;
+}
 
 @font-face {
   font-family: "Bahn";

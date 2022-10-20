@@ -24,7 +24,7 @@ defineProps({
     <div
       :class="{
         benefits: true,
-        'animacion-desplazamiento': index_pagina == 10,
+        'animacion-desplazamiento': index_pagina == 11,
       }"
     >
       <div class="cards">
@@ -135,14 +135,14 @@ developed.
   display: none;
   transition: 0.5s;
   opacity: 0%;
-  box-shadow: inset 0 0 5px whitesmoke, inset 0px 0 6px rgb(8, 212, 83),
-    inset 10px 0 20px rgb(1, 255, 81), inset 10px 0 0px rgb(5, 12, 28),
-    inset 10px 0 20px rgb(0, 243, 40), 0 0 50px rgb(254, 254, 254),
-    -10px 0 80px rgb(1, 13, 37), 10px 0 80px rgb(4, 224, 40);
+  background: linear-gradient(#80f99e 1%, transparent);
+  -webkit-box-shadow: 7px 3px 29px 4px rgba(219, 219, 219, 1);
+  -moz-box-shadow: 7px 3px 29px 4px rgba(219, 219, 219, 1);
+  box-shadow: 7px 3px 29px 4px rgba(219, 219, 219, 1);
 }
 
 .cards:hover span {
-  opacity: 1;
+  opacity: 60%;
 }
 
 @media screen and (min-width: 769px) {
@@ -159,8 +159,8 @@ developed.
     top: 0;
     left: 0;
     width: 120%;
-    height: 5px;
-    animation: animacion1 2s linear infinite;
+    height: 3px;
+    animation: animacion1 4s linear infinite;
     animation-delay: 1s;
   }
 
@@ -178,9 +178,9 @@ developed.
     position: absolute;
     top: 0;
     left: 0;
-    width: 5px;
+    width: 3px;
     height: 100%;
-    animation: animacion2 2s linear infinite;
+    animation: animacion2 4s linear infinite;
     animation-delay: 1s;
   }
 
@@ -201,8 +201,8 @@ developed.
     left: 0;
 
     width: 120%;
-    height: 5px;
-    animation: animacion3 2s linear infinite;
+    height: 3px;
+    animation: animacion3 4s linear infinite;
     animation-delay: 1s;
   }
 
@@ -222,9 +222,9 @@ developed.
     top: 0%;
     left: 99%;
 
-    width: 5px;
+    width: 3px;
     height: 100%;
-    animation: animacion4 2s linear infinite;
+    animation: animacion4 4s linear infinite;
     animation-delay: 1s;
   }
 
@@ -290,7 +290,6 @@ developed.
   }
 
   100% {
-    top: 20%;
   }
 }
 

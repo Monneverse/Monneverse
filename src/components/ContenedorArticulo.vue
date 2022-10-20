@@ -2,6 +2,12 @@
 <script setup>
 import { text } from "@fortawesome/fontawesome-svg-core";
 import Articulo from "./Articulo.vue";
+defineProps({
+  index_pagina: {
+    type: Number,
+    required: true,
+  },
+});
 </script>
 
 
@@ -26,8 +32,8 @@ import Articulo from "./Articulo.vue";
 
   <!-- CONTENEDOR DE BOTON METATASK -->
   <div class="btn_buyMonner" click="addTokenFunction()">
-    <div class="contrato"><b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span></div>
     <button class="buyNow">
+      <div class="contrato"><b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span></div>
       <div class="texto1">BUY MONNER</div>
       <div class="logos"><img src="/./img/Articulo/BNC.svg" class="binance">
         <img src="/./img/Articulo/Meta.svg" class="meta">
@@ -35,54 +41,17 @@ import Articulo from "./Articulo.vue";
     </button>
   </div>
 
-  <!-- Contenedor de Tiempo -->
-  <div class="titulo_Tiempo">
-    <h2>Pre Sale Time</h2>
-  </div>
-  <div class="container_time">
-    <div class="time">
-      <div class="temporizador">
-
-        <div class="bloque_temporizador">
-          <div class="temporizadorDias">
-            <h1>{{ diaString }}</h1>
-            <h4>Días</h4>
-          </div>
-          <div class="primerPunto">
-            <h2>:</h2>
-          </div>
-          <div class="temporizadorHoras">
-            <h1>{{ horaString }}</h1>
-            <h4>Horas</h4>
-          </div>
-          <div class="segundoPunto">
-            <h2>:</h2>
-          </div>
-          <div class="temporizadorMinutos">
-            <h1>{{ minutoString }}</h1>
-            <h4>Minutos</h4>
-          </div>
-          <div class="tercerPunto">
-            <h2>:</h2>
-          </div>
-          <div class="temporizadorSegundos">
-            <h1>{{ segundoString }}</h1>
-            <h4>Segundos</h4>
-          </div>
-        </div>
-      </div>
-      <div class="btn_comenzar">
-        <a href="https://mailchi.mp/8ae2d866d909/reservation-form" target="_blank">CLICK HERE</a>
-      </div>
-    </div>
-  </div>
 
   <!-- Contenedor de Articulos -->
   <div class="containerArticulo">
-    <div class="contenedorDeArticulo">
-      <Articulo v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen" :url="item.link" />
-    </div>
+    <transition name="slide-fade">
+      <div v-if="index_pagina==5" class="contenedorDeArticulo">
+        <Articulo v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen"
+          :url="item.link" />
+      </div>
+    </transition>
   </div>
+
 
   <!-- Contenedor de Redes Sociales -->
   <div class="logo_redes">
@@ -166,10 +135,6 @@ export default {
       horaString: "00",
       minutoString: "00",
       segundoString: "00",
-      tokenAddress: '0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893',
-      tokenSymbol: 'MNR',
-      tokenDecimals: 18,
-      tokenImage: 'https://i.postimg.cc/xCHLP8sw/icon-32x32.png',
     };
   },
   methods: {
@@ -193,21 +158,22 @@ export default {
       this.segundoString = this.AgregarCero(seconds);
     },
     async addTokenFunction() {
-
-
-
+      const tokenAddress = '0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893';
+      const tokenSymbol = 'MNR';
+      const tokenDecimals = 18;
+      const tokenImage = 'https://i.postimg.cc/xCHLP8sw/icon-32x32.png';
 
       try {
-        console.log('metamask')
+
         const wasAdded = await ethereum.request({
           method: 'wallet_watchAsset',
           params: {
             type: 'ERC20',
             options: {
-              address: this.tokenAddress,
-              symbol: this.tokenSymbol,
-              decimals: this.tokenDecimals,
-              image: this.tokenImage,
+              address: tokenAddress,
+              symbol: tokenSymbol,
+              decimals: tokenDecimals,
+              image: tokenImage,
             },
           },
         });
@@ -222,6 +188,8 @@ export default {
       }
     }
   },
+
+
   mounted() {
     setInterval(this.ObtenerFechaActual, 500);
     this.vectorArticulo = this.vectorTodo.slice(0, 3)
@@ -360,66 +328,14 @@ img {
 
 .degradado_izquierdo {
   transform: rotate(-60deg);
-  right: 50%;
+  right: 55%;
 }
 
 .degradado_derecho {
   transform: rotate(230deg);
-  left: 55%;
+  left: 58%;
 }
 
-/* container time */
-.container_time {
-  position: absolute;
-  top: 10%;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.time {
-  top: 15%;
-  position: absolute;
-  grid-template-rows: 33% 33% 33%;
-  width: 40%;
-  height: 30%;
-  z-index: 5;
-
-}
-
-.time h2 {
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.btn_comenzar {
-  left: 0%;
-  width: 100%;
-  height: 40%;
-  bottom: 0%;
-  margin-top: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-}
-
-.btn_comenzar a {
-  height: 100%;
-  width: 50%;
-  border-radius: 0.5rem;
-  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
-  color: white;
-  font-family: "WorkSans", sans-serif;
-  font-weight: 500;
-  font-size: 150%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 /* CONTENEDOR BOTON BUYNOW */
 .btn_buyMonner {
@@ -457,17 +373,15 @@ img {
 }
 
 .contrato {
-  position: fixed;
-  top: 26%;
-  left: 35%;
-  font-size: 1vw;
+  padding-top: 1%;
+  font-size: .7vw;
   color: white;
   height: auto;
-  width: 29%;
+  width: auto;
 }
 
 .contrato span {
-  font-size: .9vw;
+  font-size: .67vw;
 }
 
 .logos {
@@ -490,12 +404,13 @@ img {
   width: 10%;
 }
 
-/* contendero de Articulo */
+
+/* contendero de Articulo*/
 .containerArticulo {
   position: absolute;
-  bottom: -2%;
+  bottom: 5%;
   left: 0;
-  width: 90%;
+  width: 100%;
   height: 50%;
   display: flex;
   justify-content: center;
@@ -507,20 +422,10 @@ img {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 80%;
+  width: 70%;
   height: 80%;
 }
 
-.titulo_Tiempo h2 {
-  position: fixed;
-  left: 38.2%;
-  top: 16%;
-  font-family: "Bahn";
-  font-stretch: semi-condensed;
-  font-style: semibold;
-  color: white;
-  font-size: 4vw;
-}
 
 h1,
 h2,
@@ -528,130 +433,6 @@ h4 {
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
   color: white;
-}
-
-.bloque_temporizador h1 {
-  font-family: "LCDFONT";
-  font-weight: 300;
-}
-
-.bloque_temporizador {
-  top: 15%;
-  left: 0%;
-  position: relative;
-  height: 25%;
-  width: 80%;
-  z-index: 6;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  margin: 0 auto;
-  visibility: hidden;
-}
-
-
-.temporizadorDias {
-  position: absolute;
-  z-index: 9;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
-  width: 20%;
-  height: 90%;
-  left: 4%;
-  border-radius: 10%;
-  -webkit-box-shadow: 0px 20px 20px 8px #08047a;
-  -moz-box-shadow: 0px 20px 20px 8px #08047a;
-  box-shadow: -10px 10px 10px 2px #08047a;
-  transition: box-shadow 3s ease;
-}
-
-.temporizadorHoras {
-  position: absolute;
-  z-index: 9;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
-  width: 20%;
-  height: 90%;
-  left: 28%;
-  border-radius: 10%;
-  -webkit-box-shadow: 0px 20px 20px 8px #08047a;
-  -moz-box-shadow: 0px 20px 20px 8px #08047a;
-  box-shadow: -10px 10px 10px 2px #08047a;
-  transition: box-shadow 3s ease;
-}
-
-.temporizadorMinutos {
-  position: absolute;
-  z-index: 9;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
-  width: 20%;
-  height: 90%;
-  left: 52%;
-  border-radius: 10%;
-  -webkit-box-shadow: 0px 20px 20px 8px #08047a;
-  -moz-box-shadow: 0px 20px 20px 8px #08047a;
-  box-shadow: -10px 10px 10px 2px #08047a;
-  transition: box-shadow 3s ease;
-}
-
-.temporizadorSegundos {
-  position: absolute;
-  z-index: 9;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
-  width: 20%;
-  height: 90%;
-  right: 5%;
-  border-radius: 10%;
-  -webkit-box-shadow: 0px 20px 20px 8px #08047a;
-  -moz-box-shadow: 0px 20px 20px 8px #08047a;
-  box-shadow: -10px 10px 10px 2px #08047a;
-  transition: box-shadow 3s ease;
-}
-
-.temporizadorDias:hover,
-.temporizadorHoras:hover,
-.temporizadorMinutos:hover,
-.temporizadorSegundos:hover {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-
-}
-
-
-.primerPunto {
-  z-index: 10;
-  position: relative;
-  left: -23%;
-}
-
-.segundoPunto {
-  z-index: 10;
-  position: relative;
-  left: 0%;
-}
-
-.tercerPunto {
-  z-index: 10;
-  position: relative;
-  left: 23%;
 }
 
 .logo_redes {
@@ -673,17 +454,40 @@ h4 {
   margin-left: 1%;
 }
 
-.contenedorDeArticulo>* {
-  animation: mover 10s normal infinite;
+.slide-fade-enter-active {
+  transform: translateY(-2440px);
+  transition: all 2s ease-out;
 }
 
-@keyframes mover {
-  0% {
-    transform: translateX(10rem);
+.slide-fade-leave-active {
+  transition: all 5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+
+/* vista de movil*/
+@media screen and (max-width: 769px) {
+
+  .btn_buyMonner {
+    top: 20%;
   }
 
-  100% {
-    transform: rotate(50rem);
+  .containerArticulo {
+    top: 30%;
+    border: 1px solid white;
+  }
+
+  .containerArticulo .contenedorDeArticulo {
+    height: 100%;
+    width: 40%;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    flex: none;
   }
 }
 </style>

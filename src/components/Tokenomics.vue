@@ -24,76 +24,96 @@ export default {
   <div class="degradado_azuliz"></div>
   <div class="degradado_azulde"></div>
 
-  <div :class="{ Titulo: true, animacion_titulo: index_pagina == 13 }">
-    <h1>TOKENOMICS</h1>
+  <div>
+    <h1>.........</h1>
   </div>
 
   <!-- Contenedor de Contenido -->
-  <div class="titulo">
+  <div
+    :class="{
+      titulo: true,
+      'animacion-desplazamiento-titulo': index_pagina == 13,
+    }"
+  >
     <h1>TOKENOMICS</h1>
   </div>
   <div class="content">
-    <div class="purchase-tax">
-      <div class="">
-        <div class="titulo1">
-          <h2>Purchase Tax</h2>
+    <div class="cards">
+      <div class="purchase-tax">
+        <div class="">
+          <div
+            :class="{
+              titulo1: true,
+              'animacion-desplazamiento-titulo1': index_pagina == 13,
+            }"
+          >
+            <h2>Purchase Tax</h2>
+          </div>
         </div>
-      </div>
 
-      <div class="">
-        <p>To buy 9% slip</p>
-      </div>
-      <div class="">
-        <p>Automatic LP 3% of order fees go back into liquidity</p>
-      </div>
-      <div class="">
-        <p>
-          Bank Security 3% of order fees are stores in BANK SECURITY for price
-          protection
-        </p>
-      </div>
-      <div class="">
-        <p>Management 1.5% of order fees go to the treasury</p>
-      </div>
-      <div class="">
-        <p>Monner Burns 1.5% is burned for stability and price increase</p>
-      </div>
-    </div>
-    <div class="plus">
-      <div class=""></div>
-      <div class=""><img src="/img/plus.svg" alt="" /></div>
-      <div class=""><img src="/img/plus.svg" alt="" /></div>
-      <div class=""><img src="/img/plus.svg" alt="" /></div>
-      <div class=""><img src="/img/plus.svg" alt="" /></div>
-      <div class=""><img src="/img/plus.svg" alt="" /></div>
-    </div>
-    <div class="sale-tax">
-      <div class="">
-        <div class="titulo2">
-          <h2>Sale Tax</h2>
+        <div class="">
+          <p>To buy 9% slip</p>
+        </div>
+        <div class="">
+          <p>Automatic LP 3% of order fees go back into liquidity</p>
+        </div>
+        <div class="">
+          <p>
+            Bank Security 3% of order fees are stores in BANK SECURITY for price
+            protection
+          </p>
+        </div>
+        <div class="">
+          <p>Management 1.5% of order fees go to the treasury</p>
+        </div>
+        <div class="">
+          <p>Monner Burns 1.5% is burned for stability and price increase</p>
         </div>
       </div>
-      <div class="">
-        <p>To buy 10% slip</p>
+    </div>
+    <div class="cards">
+      <div class="plus">
+        <div class=""></div>
+        <div class=""><img src="/img/plus.svg" alt="" /></div>
+        <div class=""><img src="/img/plus.svg" alt="" /></div>
+        <div class=""><img src="/img/plus.svg" alt="" /></div>
+        <div class=""><img src="/img/plus.svg" alt="" /></div>
+        <div class=""><img src="/img/plus.svg" alt="" /></div>
       </div>
-      <div class="">
-        <p>Automatic LP 3% of order fees go back into liquidity</p>
-      </div>
-      <div class="">
-        <p>
-          Bank Security 3% of order fees are stored in BANK SECURITY for price
-          protection
-        </p>
-      </div>
-      <div class="">
-        <p>Management 2% of order fees go to the treasury</p>
-      </div>
-      <div class="">
-        <p>Monner Burns 2% is burned for stability and price increase</p>
+    </div>
+    <div class="cards">
+      <div class="sale-tax">
+        <div class="">
+          <div
+            :class="{
+              titulo2: true,
+              'animacion-desplazamiento-titulo2': index_pagina == 13,
+            }"
+          >
+            <h2>Sale Tax</h2>
+          </div>
+        </div>
+        <div class="">
+          <p>To buy 10% slip</p>
+        </div>
+        <div class="">
+          <p>Automatic LP 3% of order fees go back into liquidity</p>
+        </div>
+        <div class="">
+          <p>
+            Bank Security 3% of order fees are stored in BANK SECURITY for price
+            protection
+          </p>
+        </div>
+        <div class="">
+          <p>Management 2% of order fees go to the treasury</p>
+        </div>
+        <div class="">
+          <p>Monner Burns 2% is burned for stability and price increase</p>
+        </div>
       </div>
     </div>
   </div>
-
   <div class="container-alianza">
     <div class="contenido">
       <div class="nombre_Alianza">
@@ -113,7 +133,7 @@ export default {
 <style scoped>
 @font-face {
   font-family: "WorkSans";
-  src: url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap")
+  src: url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
 }
 
 /* Fondo de la pagina*/
@@ -134,8 +154,16 @@ img {
 .titulo h1 {
   color: white;
   font-family: "WorkSans", sans-serif;
-  font-size: 3.5vw;
+  font-size: 7vw;
   font-weight: 500;
+}
+@media screen and (min-width: 769px) {
+  .titulo h1 {
+    color: white;
+    font-family: "WorkSans", sans-serif;
+    font-size: 4vw;
+    font-weight: 500;
+  }
 }
 
 .fondo {
@@ -179,37 +207,105 @@ img {
 }
 
 .content {
-  position: absolute;
-  z-index: 45;
-  top: 30%;
-  display: grid;
-  grid-template-rows: 30vw;
-  grid-template-columns: 45% 10% 45%;
-  width: 100%;
+  position: relative;
+  z-index: 55;
+  top: 20%;
+  display: flex;
+  width: 80%;
   height: 57%;
   margin: 0 auto;
   border-radius: 1vw;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+}
+.content::-webkit-scrollbar {
+  -webkit-appearance: none;
 }
 
+.content::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    90deg,
+    rgb(33, 32, 85) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.content::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 769px) {
+  .content {
+    top: 23%;
+    display: grid;
+    grid-template-rows: 30vw;
+    grid-template-columns: 45% 10% 45%;
+    width: 100%;
+    height: 57%;
+    margin: 0 auto;
+    overflow-x: initial;
+    scroll-snap-type: none;
+  }
+  .content::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.cards {
+  width: 100%;
+  height: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  flex: none;
+}
+
+.cards:nth-child(2) {
+  width: 20%;
+}
+@media screen and (min-width: 769px) {
+  .cards:nth-child(1) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
 .purchase-tax {
-  position: relative;
-  left: 26%;
-  display: grid;
-  grid-template-rows: 16% 16% 16% 16% 16% 16%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   font-family: "WorkSans", sans-serif;
   color: white;
-  width: 75%;
+  width: 100%;
+  height: 100%;
 }
 
 .purchase-tax h2 {
   text-align: right;
-  font-size: 2vw;
+  font-size: 10vw;
   font-weight: 500;
 }
 
 .purchase-tax p {
   text-align: right;
-  font-size: 1.29vw;
+  font-size: 1rem;
+}
+@media screen and (min-width: 769px) {
+  .purchase-tax {
+    justify-content: space-between;
+    width: 90%;
+    height: 100%;
+  }
+  .purchase-tax h2 {
+    font-size: 2.5vw;
+  }
+  .purchase-tax p {
+    font-size: 1.5vw;
+  }
 }
 
 .titulo1 {
@@ -218,11 +314,13 @@ img {
   display: flex;
   justify-content: right;
   align-items: center;
-  height: 50%;
+  height: 80%;
   width: 77%;
-  background: linear-gradient(90deg,
-      rgb(33, 32, 85) 0%,
-      rgba(1, 209, 88, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(33, 32, 85) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
   border-radius: 0.5vw;
 }
 
@@ -231,48 +329,95 @@ img {
   font-family: Calibri;
 }
 
+@media screen and (min-width: 769px) {
+  .titulo1 {
+    left: 50%;
+
+    width: 50%;
+
+    border-radius: 0.5vw;
+  }
+
+  .titulo1 h2 {
+    padding-right: 10%;
+    font-family: Calibri;
+  }
+}
+
 .plus {
-  display: grid;
-  grid-template-rows: 16% 16% 16% 16% 16% 16%;
-}
-
-.plus img {
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
-  height: 50%;
+  display: grid;
+  grid-template-rows: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
+.plus div {
+  margin: 0 auto;
+  width: 50%;
+}
+@media screen and (min-width: 769px) {
+  .plus div {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
 .sale-tax {
-  position: relative;
-  display: grid;
-  grid-template-rows: 16% 16% 16% 16% 16% 16%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   font-family: "WorkSans", sans-serif;
   color: white;
-  width: 75%;
+  width: 100%;
+  height: 100%;
 }
 
 .sale-tax h2 {
-  font-size: 2vw;
+  font-size: 10vw;
   font-weight: 500;
 }
 
 .sale-tax p {
-  font-size: 1.29vw;
+  font-size: 1rem;
+}
+@media screen and (min-width: 769px) {
+  .sale-tax {
+    justify-content: space-between;
+    width: 90%;
+    height: 100%;
+  }
+  .sale-tax h2 {
+    font-size: 2.5vw;
+  }
+  .sale-tax p {
+    font-size: 1.5vw;
+  }
 }
 
 .titulo2 {
+  position: relative;
   display: flex;
   align-items: center;
-  height: 50%;
+  height: 80%;
   width: 77%;
-  background: linear-gradient(90deg,
-      rgb(1, 209, 88) 0%,
-      rgba(33, 32, 85, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(1, 209, 88) 0%,
+    rgba(33, 32, 85, 1) 100%
+  );
   border-radius: 0.5vw;
 }
 
 .titulo2 h2 {
   padding-left: 10%;
   font-family: Calibri;
+}
+@media screen and (min-width: 769px) {
+  .titulo2 {
+    width: 50%;
+  }
 }
 
 .container-alianza {
@@ -316,12 +461,10 @@ img {
 }
 
 .imagen-alianza:nth-child(2) {
-
   width: 8vw;
 }
 .imagen-alianza:nth-child(3) {
-
-width: 6.5vw;
+  width: 6.5vw;
 }
 
 .degradado_azuliz {
@@ -346,5 +489,60 @@ width: 6.5vw;
   height: 180%;
   z-index: 43;
   opacity: 70%;
+}
+::-webkit-scrollbar {
+  display: block;
+}
+.animacion-desplazamiento-titulo {
+  animation-duration: 0.5s;
+  animation-name: desplazamiento;
+  animation-iteration-count: 1;
+}
+
+@keyframes desplazamiento {
+  0% {
+    top: -100%;
+  }
+
+  100% {
+  }
+}
+.animacion-desplazamiento-titulo1 {
+  animation-duration: 0.5s;
+  animation-name: desplazamiento2;
+  animation-iteration-count: 1;
+}
+
+@keyframes desplazamiento2 {
+  0% {
+    left: -10%;
+  }
+
+  100% {
+  }
+}
+.animacion-desplazamiento-titulo2 {
+  animation-duration: 0.35s;
+  animation-name: desplazamiento3;
+  animation-iteration-count: 1;
+}
+
+@keyframes desplazamiento3 {
+  0% {
+    left: 100%;
+  }
+  25% {
+    left: 75%;
+  }
+
+  50% {
+    left: 50%;
+  }
+  75% {
+    left: 25%;
+  }
+  100% {
+    left: 0;
+  }
 }
 </style>

@@ -56,7 +56,7 @@ import Footer from "./components/Footer.vue";
     </div>
 
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 5 }">
-      <ContenedorArticulo />
+      <ContenedorArticulo :index_pagina="index_pagina" />
     </div>
 
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 6 }">
@@ -68,7 +68,7 @@ import Footer from "./components/Footer.vue";
     </div>
 
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 8 }">
-      <Coins />
+      <Coins :index_pagina="index_pagina" />
     </div>
 
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 9 }">
@@ -360,7 +360,12 @@ export default {
 <style>
 /* Fuentes Aquí */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
+
+@font-face {
+  font-family: "Work Sans", serif;
+  src: url("/Fonts/WorkSans.ttf");
+  font-style: semibold;
+}
 
 /*  */
 * {
