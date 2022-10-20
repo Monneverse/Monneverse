@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 165.86 183.72">
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 520 574.81">
   <defs>
     <style>
       .cls-1 {
-        fill: url(#Degradado_sin_nombre_9);
+        fill: url(#Degradado_sin_nombre_6);
       }
     </style>
-    <linearGradient id="Degradado_sin_nombre_9" data-name="Degradado sin nombre 9" x1="133.88" y1="153.08" x2="36.17" y2="52.8" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#01d158"/>
-      <stop offset=".13" stop-color="#01cc56"/>
-      <stop offset=".28" stop-color="#01c053"/>
-      <stop offset=".42" stop-color="#02ab4d"/>
-      <stop offset=".56" stop-color="#038e45"/>
-      <stop offset=".71" stop-color="#04683a"/>
-      <stop offset=".86" stop-color="#063a2e"/>
-      <stop offset="1" stop-color="#080720"/>
+    <linearGradient id="Degradado_sin_nombre_6" data-name="Degradado sin nombre 6" x1="352.36" y1="392.77" x2="-19.64" y2="78.77" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#029c50"/>
+      <stop offset=".16" stop-color="#02974f"/>
+      <stop offset=".34" stop-color="#04894f"/>
+      <stop offset=".37" stop-color="#05874f"/>
+      <stop offset=".62" stop-color="#09644d"/>
+      <stop offset=".8" stop-color="#0d494d"/>
     </linearGradient>
   </defs>
-  <path class="cls-1" d="M165.86,100.79c0,45.8-37.13,82.93-82.93,82.93S0,146.59,0,100.79C0,64.39,23.46,33.46,56.08,22.31L74.34,3.2c4.19-4.38,11.46-4.24,16.22,.31l19.92,19.04c32.26,11.36,55.38,42.1,55.38,78.24Z"/>
+  <g id="Capa_1-2" data-name="Capa 1">
+    <path class="cls-1" d="M520,314.81c0,143.59-116.41,260-260,260S0,458.4,0,314.81C0,197.25,78.03,97.91,185.12,65.76L244.44,6.44c8.6-8.59,22.52-8.59,31.12,0l59.32,59.32c107.09,32.15,185.12,131.49,185.12,249.05Z"/>
+  </g>
 </svg>

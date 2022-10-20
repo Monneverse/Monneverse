@@ -26,6 +26,23 @@ defineProps({
         loop="true"
         poster="/img/fondo_binario.png"
       ></video>
+
+      <div class="logos">
+        <div class="grupo-logos">
+          <div class="grupo grupo-1">
+            <img src="/img/logo.svg" alt="logo monneverse" />
+            <img src="/img/logo.svg" alt="logo monneverse" />
+          </div>
+          <div class="grupo grupo-2">
+            <img src="/img/logo.svg" alt="logo monneverse" />
+            <img src="/img/logo.svg" alt="logo monneverse" />
+          </div>
+        </div>
+
+        <div class="logo-alone">
+          <img src="/img/logo.svg" alt="logo monneverse" />
+        </div>
+      </div>
     </div>
 
     <div class="fondo filtro-superior"></div>
@@ -48,71 +65,76 @@ defineProps({
     >
       <img src="/img/red.png" alt="" />
     </div>
-
-    <div class="texto">
-      <section>
-        <p>
-          Take advantage of this opportunity and RESERV your spot in our
-          pre-sale
-        </p>
-      </section>
+    <div class="fondo-telefono">
+      <img src="/../img/celFondo.svg" alt="" srcset="" />
     </div>
 
-    <!--UPCOMING ALLIANCES-->
-    <div class="content-forms">
-      <section class="circulos">
-        <div class="circulo">
-          <img src="../assets/circulo.svg" alt="" />
-        </div>
+    <div class="contenido-principal">
+      <div class="texto">
+        <section>
+          <p>
+            Take advantage of this opportunity and RESERV your spot in our
+            pre-sale
+          </p>
+        </section>
+      </div>
 
-        <div class="circulo-medio">
-          <img src="../assets/circulo-medio.svg" alt="" />
-        </div>
-      </section>
-      <section class="arco">
-        <div
-          :class="{
-            semi_circulo: true,
-            'animacion-arco': index_pagina == 2,
-          }"
-        >
-          <img src="../assets/aro-iluminado-brillante.svg" alt="" />
-        </div>
-      </section>
-      <section class="Alianzas">
-        <div class="alianzas">
-          <a href="https://www.reddit.com/user/monnerverse"
-            ><span><img src="/img/Alianzas/reddit.png" /></span>REDDIT</a
+      <!--UPCOMING ALLIANCES-->
+      <div class="content-forms">
+        <section class="circulos">
+          <div class="circulo">
+            <img src="../assets/circulo.svg" alt="" />
+          </div>
+
+          <div class="circulo-medio">
+            <img src="../assets/circulo-medio.svg" alt="" />
+          </div>
+        </section>
+        <section class="arco">
+          <div
+            :class="{
+              semi_circulo: true,
+              'animacion-arco': index_pagina == 2,
+            }"
           >
-          <!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
+            <img src="../assets/aro-iluminado-brillante.svg" alt="" />
+          </div>
+        </section>
+        <section class="Alianzas">
+          <div class="alianzas">
+            <a href="https://www.reddit.com/user/monnerverse"
+              ><span><img src="/img/Alianzas/reddit.png" /></span>REDDIT</a
+            >
+            <!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
 
-          <a href="https://t.me/monnerversecommunity"
-            ><span><img src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a
-          >
-          <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
+            <a href="https://t.me/monnerversecommunity"
+              ><span><img src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a
+            >
+            <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 
-          <a href="https://discord.com/invite/h7fRvek9dn"
-            ><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a
-          >
-          <!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
-        </div>
-      </section>
+            <a href="https://discord.com/invite/h7fRvek9dn"
+              ><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a
+            >
+            <!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
+          </div>
+        </section>
 
-      <section class="rectangulos">
-        <div class="rectangulo-medio">
-          <div class="contenido">
-            <img src="../assets/rectangulo-medio.svg" alt="" />
-            <div class="imagenes">
-              <img src="../assets/methodBuy/visa.svg" alt="" />
-              <img src="../assets/methodBuy/masterCard.svg" alt="" />
+        <section class="rectangulos">
+          <div class="rectangulo-medio">
+            <div class="contenido">
+              <img src="../assets/rectangulo-medio.svg" alt="" />
+              <div class="imagenes">
+                <img src="../assets/methodBuy/visa.svg" alt="" />
+                <img src="../assets/methodBuy/masterCard.svg" alt="" />
+              </div>
             </div>
           </div>
-        </div>
-        <div class="rectangulo">
-          <img src="../assets/rectangulo-verde.svg" alt="" />
-          <p>UPCOMING ALLIANCES</p>
-        </div>
-      </section>
+          <div class="rectangulo">
+            <img src="img/rectangulo.svg" alt="" />
+            <p>UPCOMING ALLIANCES</p>
+          </div>
+        </section>
+      </div>
     </div>
 
     <div
@@ -146,14 +168,26 @@ section {
   justify-content: center;
   align-items: center;
 }
+.contenido-principal {
+  position: absolute;
+  top: 6%;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .texto {
+  position: relative;
+  z-index: 45;
   width: 100%;
   height: 15%;
   display: flex;
   align-items: flex-end;
 }
 .texto > section {
-  width: 60%;
+  width: 70%;
 }
 .texto > section p {
   width: 80%;
@@ -173,16 +207,15 @@ section {
   margin: 0 auto;
   justify-content: center;
   position: relative;
+  z-index: 20;
 }
 @media screen and (min-width: 490px) {
   .texto {
+    z-index: 45;
     display: none;
   }
 
   .content-forms {
-    position: absolute;
-    z-index: 33;
-    top: 20%;
     height: 100%;
   }
 }
@@ -235,7 +268,10 @@ section {
     opacity: 100%;
   }
 }
-
+.fondo {
+  width: 100%;
+  height: 100%;
+}
 .fondo-video {
   width: 100%;
   height: 100%;
@@ -251,17 +287,75 @@ section {
   opacity: 40%;
   z-index: 0;
 }
+.logos{
+  width: 100%;
+  height: 100%;
+}
 
+.logos .grupo-logos{
+  width: 100%;
+  height: 50%;
+}
+.grupo-logos img{
+  width: 7rem;
+}
+.grupo-logos .grupo{
+
+  position: relative;
+  top: 6rem;
+  align-items: center;
+  margin: 0 auto;
+  width: 70%;
+  
+}
+
+.grupo-2 img:nth-child(1){
+  transform: rotateZ(-10deg);
+}
+.grupo-2 img:nth-child(2){
+  transform: rotateZ(-10deg);
+}
+
+.logo-alone{
+  width: 80%;
+  height: 40%;
+display: flex;
+align-items: flex-end;
+}
+
+.logo-alone img{
+  width: 80%;
+}
+@media screen and (width > 500px) {
+  .logos {
+    display: none;
+  }
+}
+
+.fondo-telefono {
+  position: fixed;
+  top: 44%;
+  left: -12em;
+  width: 50em;
+  height: 40em;
+  z-index: 4;
+  opacity: 30%;
+}
+@media screen and (width > 500px) {
+  .fondo-telefono {
+    display: none;
+  }
+}
 .filtro-superior {
   position: absolute;
-  z-index: 1;
+  z-index: 4;
   background: radial-gradient(
     circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
+    #14ec84 0%,
+    #0b5f50 50%,
+    #505863 100%
   );
-  mix-blend-mode: multiply;
+  opacity: 30%;
 }
 
 .fondo-montana img {
@@ -270,7 +364,7 @@ section {
   left: 0;
   width: 100%;
   height: 75%;
-  z-index: 1;
+  z-index: 4;
 }
 
 .fondo-montana-animation img {
@@ -294,9 +388,11 @@ section {
 
 .fondo-oscurecer {
   position: absolute;
-  z-index: 4;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
   background-color: rgb(0, 0, 0);
-  opacity: 60%;
+  opacity: 10%;
   mix-blend-mode: multiply;
 }
 
@@ -306,24 +402,25 @@ section {
   left: 0;
   width: 100%;
   height: 75%;
-  z-index: 1;
+  z-index: 4;
+  opacity: 40%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (width <= 500px) {
   .fondo-montana {
-    display: none;
-  }
-
-  .fondo-oscurecer {
     display: none;
   }
 
   .fondo-red {
     display: none;
   }
-
-  .fondo-video {
-    display: none;
+  .fondo-oscurecer {
+    opacity: 50%;
+    z-index: 4;
+  }
+  .filtro-superior {
+    position: absolute;
+    opacity: 60%;
   }
 }
 .circulos {
@@ -480,9 +577,8 @@ section {
     top: 70%;
     transform: rotateZ(-180deg);
   }
-
   100% {
-    top: 15.5%;
+    top: 0%;
     transform: rotateZ(0deg);
   }
 }
@@ -495,7 +591,7 @@ section {
 }
 .rectangulo {
   position: absolute;
-  top: 7rem;
+  top: 6.2rem;
   z-index: 8;
   display: flex;
   justify-content: center;
@@ -530,7 +626,7 @@ section {
     width: 36rem;
   }
   .rectangulo p {
-    top: 7rem;
+    top: 6.2rem;
 
     font-size: 2.5vw;
   }
@@ -587,22 +683,22 @@ section {
   }
   .imagenes {
     position: relative;
-    top: -10.7rem;
-    width: 45%;
+    top: -10rem;
+    width: 35%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   .imagenes img {
-    width: 10rem;
+    width: 8rem;
   }
   .imagenes img:last-child {
-    width: 9rem;
+    width: 6.5rem;
   }
 }
 .puntero {
   position: absolute;
-  z-index: 34;
+  z-index: 20;
   width: 15%;
   height: 40%;
   padding: 0;
@@ -618,22 +714,32 @@ section {
 .degradado {
   background: linear-gradient(to right, #090380 55%, transparent);
   position: absolute;
-  width: 50%;
+  width: 100%;
   height: 180%;
-  z-index: 4;
+  z-index: 19;
   animation-duration: 3s;
   animation-name: luz;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  top: 10%;
-  opacity: 80%;
+  top: -10%;
+  opacity: 70%;
+}
+@media screen and (width > 600px) {
+  .degradado {
+    width: 50%;
+    top: 30%;
+  }
 }
 
 .degradado_izquierdo {
   transform: rotate(-60deg);
   right: 55%;
 }
-
+@media screen and (width <= 769px) {
+  .degradado_izquierdo {
+    display: none;
+  }
+}
 .degradado_derecho {
   transform: rotate(230deg);
   left: 55%;

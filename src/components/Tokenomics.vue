@@ -99,7 +99,6 @@ export default {
       </div>
     </div>
   </div>
-
   <div class="container-alianza">
     <div class="contenido">
       <div class="nombre_Alianza">
@@ -405,7 +404,6 @@ img {
   }
 }
 
-
 .container-alianza {
   position: absolute;
   left: 0%;
@@ -479,5 +477,4 @@ img {
 ::-webkit-scrollbar {
   display: block;
 }
-
 </style>
