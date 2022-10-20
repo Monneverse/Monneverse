@@ -727,7 +727,7 @@ align-items: flex-end;
 @media screen and (width > 600px) {
   .degradado {
     width: 50%;
-    top: 30%;
+    top: 20%;
   }
 }
 

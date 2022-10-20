@@ -110,16 +110,31 @@ export default {
 }
 
 .texto-oculto{
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none;   /* Chrome/Safari/Opera */
-    -khtml-user-select: none;    /* Konqueror */
-    -moz-user-select: none;      /* Firefox */
-    -ms-user-select: none;       /* Internet Explorer/Edge */
-    user-select: none;  
-  cursor: grab;
+ 
   text-align: justify;
   scroll-snap-type: y mandatory;
-  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+.texto-oculto::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.texto-oculto::-webkit-scrollbar:vertical {
+  height: 10px;
+}
+
+.texto-oculto::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    90deg,
+    rgb(33, 32, 85) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+.texto-oculto::-webkit-scrollbar-track {
+  border-radius: 10px;
 }
 
 

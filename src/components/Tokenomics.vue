@@ -24,19 +24,29 @@ export default {
   <div class="degradado_azuliz"></div>
   <div class="degradado_azulde"></div>
 
-  <div :class="{ Titulo: true, animacion_titulo: index_pagina == 13 }">
-    <h1>TOKENOMICS</h1>
+  <div>
+    <h1>.........</h1>
   </div>
 
   <!-- Contenedor de Contenido -->
-  <div class="titulo">
+  <div
+    :class="{
+      titulo: true,
+      'animacion-desplazamiento-titulo': index_pagina == 13,
+    }"
+  >
     <h1>TOKENOMICS</h1>
   </div>
   <div class="content">
     <div class="cards">
       <div class="purchase-tax">
         <div class="">
-          <div class="titulo1">
+          <div
+            :class="{
+              titulo1: true,
+              'animacion-desplazamiento-titulo1': index_pagina == 13,
+            }"
+          >
             <h2>Purchase Tax</h2>
           </div>
         </div>
@@ -74,7 +84,12 @@ export default {
     <div class="cards">
       <div class="sale-tax">
         <div class="">
-          <div class="titulo2">
+          <div
+            :class="{
+              titulo2: true,
+              'animacion-desplazamiento-titulo2': index_pagina == 13,
+            }"
+          >
             <h2>Sale Tax</h2>
           </div>
         </div>
@@ -382,6 +397,7 @@ img {
 }
 
 .titulo2 {
+  position: relative;
   display: flex;
   align-items: center;
   height: 80%;
@@ -476,5 +492,57 @@ img {
 }
 ::-webkit-scrollbar {
   display: block;
+}
+.animacion-desplazamiento-titulo {
+  animation-duration: 0.5s;
+  animation-name: desplazamiento;
+  animation-iteration-count: 1;
+}
+
+@keyframes desplazamiento {
+  0% {
+    top: -100%;
+  }
+
+  100% {
+  }
+}
+.animacion-desplazamiento-titulo1 {
+  animation-duration: 0.5s;
+  animation-name: desplazamiento2;
+  animation-iteration-count: 1;
+}
+
+@keyframes desplazamiento2 {
+  0% {
+    left: -10%;
+  }
+
+  100% {
+  }
+}
+.animacion-desplazamiento-titulo2 {
+  animation-duration: 0.35s;
+  animation-name: desplazamiento3;
+  animation-iteration-count: 1;
+}
+
+@keyframes desplazamiento3 {
+  0% {
+    left: 100%;
+  }
+  25% {
+    left: 75%;
+  }
+
+  50% {
+    left: 50%;
+  }
+  75% {
+    left: 25%;
+  }
+  100% {
+    left: 0;
+  }
 }
 </style>

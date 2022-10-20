@@ -13,7 +13,7 @@ defineProps({
     <div
       :class="{
         fondo_rayos: true,
-        'animacion-desplazamiento': index_pagina == 9,
+        'animacion-desplazamiento': index_pagina == 10,
       }"
     >
       <img src="/img/rayos.png" alt="" />
@@ -21,12 +21,7 @@ defineProps({
     <div class="fondo-benefit">
       <img src="/img/fondo-benefit.png" alt="" />
     </div>
-    <div class="rectangulo">
-      <!--<img src="/img/rectangulo.svg" alt="" />-->
-    </div>
-    <div class="logo">
-      <!--<img src="/img/logo.svg" alt="logo monneverse" />-->
-    </div>
+   
     <div class="reflector reflector-izquierdo">
       <div class="luz-1"></div>
       <div class="luz-2"></div>
@@ -41,7 +36,7 @@ defineProps({
     <div
       :class="{
         benefits: true,
-        aparecer: index_pagina == 9,
+        aparecer: index_pagina == 10,
       }"
     >
       <div class="titulo">
@@ -85,11 +80,11 @@ defineProps({
 
 .fondo {
   position: absolute;
-  z-index: 43;
+  top: 0;
+  z-index: -1233;
   width: 100%;
   height: 100%;
-  background-color: rgba(32, 29, 64, 0.2);
-  background-color: rgba(32, 29, 64, 0.2);
+  background-color:#121026;
 }
 
 .logo {
@@ -104,7 +99,6 @@ defineProps({
 .titulo {
   width: 100%;
   height: 10%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,12 +175,12 @@ defineProps({
 
 @keyframes arriba {
   0% {
-    top: 65%;
+    top: 54%;
     opacity: 10%;
   }
 
   100% {
-    top: 35%;
+
     opacity: 100%;
   }
 }
@@ -212,6 +206,7 @@ defineProps({
 }
 @media screen and (min-width: 769px) {
   .fondo_rayos {
+    z-index: -2;
     left: 0%;
   }
   .fondo-benefit > img {
@@ -235,21 +230,8 @@ defineProps({
   }
 
   100% {
-    left: -10%;
+    left: 0%;
   }
-}
-
-.rectangulo {
-  position: absolute;
-  z-index: 3;
-  top: 50%;
-  left: -15%;
-  width: 100%;
-}
-
-.rectangulo img {
-  width: 20%;
-  min-height: 15%;
 }
 
 .logo-redes {

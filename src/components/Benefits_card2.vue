@@ -21,12 +21,12 @@ defineProps({
       </div>
   -->
     <div
-      :class="{
-        benefits: true,
-        'animacion-desplazamiento': index_pagina == 11,
-      }"
+      class="benefits"
     >
-      <div class="cards">
+      <div :class="{
+        cards: true,
+        'animacion-desplazamiento': index_pagina == 12,
+      }">
         <span></span>
         <span></span>
         <span></span>
@@ -38,7 +38,10 @@ defineProps({
           mostrarBtn="true"
         />
       </div>
-      <div class="cards">
+      <div :class="{
+        cards: true,
+        'animacion-desplazamiento': index_pagina == 12,
+      }">
         <span></span>
         <span></span>
         <span></span>
@@ -50,7 +53,10 @@ defineProps({
           mostrarBtn="true"
         />
       </div>
-      <div class="cards">
+      <div :class="{
+        cards: true,
+        'animacion-desplazamiento': index_pagina == 12,
+      }">
         <span></span>
         <span></span>
         <span></span>
@@ -124,15 +130,14 @@ defineProps({
   flex: none;
 }
 
-
 .cards span {
   display: none;
   transition: 0.5s;
   opacity: 0%;
-  background: linear-gradient( #80f99e 1%, transparent);
-  -webkit-box-shadow: 7px 3px 29px 4px rgba(219,219,219,1);
--moz-box-shadow: 7px 3px 29px 4px rgba(219,219,219,1);
-box-shadow: 7px 3px 29px 4px rgba(219,219,219,1);
+  background: linear-gradient(#80f99e 1%, transparent);
+  -webkit-box-shadow: 7px 3px 29px 4px rgba(219, 219, 219, 1);
+  -moz-box-shadow: 7px 3px 29px 4px rgba(219, 219, 219, 1);
+  box-shadow: 7px 3px 29px 4px rgba(219, 219, 219, 1);
 }
 
 .cards:hover span {
@@ -232,7 +237,6 @@ box-shadow: 7px 3px 29px 4px rgba(219,219,219,1);
   }
 }
 
-
 @keyframes aparecer {
   0% {
     opacity: 0%;
@@ -249,6 +253,7 @@ box-shadow: 7px 3px 29px 4px rgba(219,219,219,1);
     overflow-x: initial;
     scroll-snap-type: none;
   }
+
   .cards {
     position: relative;
     width: 30%;
@@ -267,37 +272,20 @@ box-shadow: 7px 3px 29px 4px rgba(219,219,219,1);
 }
 
 .animacion-desplazamiento {
-  animation-duration: 0.5s;
+  animation-duration: .5s;
   animation-name: desplazamiento;
   animation-iteration-count: 1;
 }
 
 @keyframes desplazamiento {
   0% {
-    top: 100%;
+    left: 100%;
   }
 
   100% {
-    top: 20%;
+    left: 0;
   }
 }
-
-.animacion-rotar {
-  animation-duration: 0.5s;
-  animation-name: rotar;
-  animation-iteration-count: 1;
-}
-
-@keyframes rotar {
-  0% {
-    transform: rotate(225deg);
-  }
-
-  100% {
-    transform: rotate(135deg);
-  }
-}
-
 .logo-redes {
   position: absolute;
   bottom: 0%;
