@@ -32,8 +32,8 @@ defineProps({
 
   <!-- CONTENEDOR DE BOTON METATASK -->
   <div class="btn_buyMonner" click="addTokenFunction()">
+    <div class="contrato"><b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span></div>
     <button class="buyNow">
-      <div class="contrato"><b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span></div>
       <div class="texto1">BUY MONNER</div>
       <div class="logos"><img src="/./img/Articulo/BNC.svg" class="binance">
         <img src="/./img/Articulo/Meta.svg" class="meta">
@@ -340,7 +340,7 @@ img {
 /* CONTENEDOR BOTON BUYNOW */
 .btn_buyMonner {
   position: fixed;
-  top: 30%;
+  top: 19%;
   left: 37.5%;
   width: 23%;
   height: auto;
@@ -373,15 +373,16 @@ img {
 }
 
 .contrato {
-  padding-top: 1%;
-  font-size: .7vw;
+  position: relative;
+  left: -4%;
+  font-size: .9vw;
   color: white;
-  height: auto;
-  width: auto;
+  height: 20%;
+  width: 110%;
 }
 
 .contrato span {
-  font-size: .67vw;
+  font-size: .8vw;
 }
 
 .logos {
