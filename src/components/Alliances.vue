@@ -66,7 +66,7 @@ defineProps({
       <img src="/img/red.png" alt="" />
     </div>
     <div class="fondo-telefono">
-      <img src="/../img/celFondo.svg" alt="" srcset="" />
+      <img src="/img/celFondo.svg" alt="" srcset="" />
     </div>
 
     <div class="contenido-principal">
@@ -130,7 +130,7 @@ defineProps({
             </div>
           </div>
           <div class="rectangulo">
-            <img src="img/rectangulo.svg" alt="" />
+            <img src="/img/rectangulo.svg" alt="" />
             <p>UPCOMING ALLIANCES</p>
           </div>
         </section>
