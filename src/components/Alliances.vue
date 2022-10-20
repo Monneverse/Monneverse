@@ -70,11 +70,11 @@ defineProps({
       <div class="content-forms">
         <section class="circulos">
           <div class="circulo">
-            <img src="/assets/circulo.svg" alt="" />
+            <img src="../assets/circulo.svg" alt="" />
           </div>
 
           <div class="circulo-medio">
-            <img src="/assets/circulo-medio.svg" alt="" />
+            <img src="../assets/circulo-medio.svg" alt="" />
           </div>
         </section>
         <section class="arco">
@@ -82,7 +82,7 @@ defineProps({
             semi_circulo: true,
             'animacion-arco': index_pagina == 2,
           }">
-            <img src="/assets/aro-iluminado-brillante.svg" alt="" />
+            <img src="../assets/aro-iluminado-brillante.svg" alt="" />
           </div>
         </section>
         <section class="Alianzas">
@@ -104,10 +104,10 @@ defineProps({
         <section class="rectangulos">
           <div class="rectangulo-medio">
             <div class="contenido">
-              <img src="/assets/rectangulo-medio.svg" alt="" />
+              <img src="../assets/rectangulo-medio.svg" alt="" />
               <div class="imagenes">
-                <img src="/assets/methodBuy/visa.svg" alt="" />
-                <img src="/assets/methodBuy/masterCard.svg" alt="" />
+                <img src="../assets/methodBuy/visa.svg" alt="" />
+                <img src="../assets/methodBuy/masterCard.svg" alt="" />
               </div>
             </div>
           </div>
