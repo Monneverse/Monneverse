@@ -68,7 +68,7 @@ import Footer from "./components/Footer.vue";
     </div>
 
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 8 }">
-      <Coins />
+      <Coins :index_pagina="index_pagina" />
     </div>
 
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 9 }">

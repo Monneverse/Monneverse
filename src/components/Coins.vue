@@ -1,5 +1,11 @@
 <script setup>
 import coin from "./componentesCoins.vue";
+defineProps({
+  index_pagina: {
+    type: Number,
+    required: true,
+  },
+});
 </script>
 
 <template>
@@ -14,41 +20,81 @@ import coin from "./componentesCoins.vue";
   <div class="circuito circuito-derecho">
     <img src="/img/calculadora/circuito-derecho.png" alt="" />
   </div>
-
+ 
   <div class="degradado_azuliz"></div>
   <div class="degradado_azulde"></div>
   <!--FIN FONDO-->
   <div class="contenedor_coins">
     <div class="card_coin">
-      <coin icono="/img/coins/kucoin.svg" titulo="KuCoin token " sigla="(KCS)" texto="TOP 52 approx capitalization"
+      <coin
+        icono="/img/coins/kucoin.svg"
+        titulo="KuCoin token "
+        sigla="(KCS)"
+        texto="TOP 52 approx capitalization"
         capitalizacion="900 M USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of KuCoin token (KCS) would have a value of"
-        logo="/img/logo.svg" precio="90.000" caja="/img/coins/caja.png" />
+        logo="/img/logo.svg"
+        precio="90.000"
+        caja="/img/coins/caja.png"
+        :index="index_pagina"
+      />
     </div>
     <div class="card_coin">
-      <coin icono="/img/coins/axie.svg" titulo="Axie Infinity" sigla="(AXS)" texto="TOP 48 approx capitalization"
+      <coin
+        icono="/img/coins/axie.svg"
+        titulo="Axie Infinity"
+        sigla="(AXS)"
+        texto="TOP 48 approx capitalization"
         capitalizacion="1.05 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of AXIE INFINITY (AXS) would have a value of"
-        logo="/img/logo.svg" precio="105.000" caja="/img/coins/caja.png" />
+        logo="/img/logo.svg"
+        precio="105.000"
+        caja="/img/coins/caja.png"
+        :index="index_pagina"
+      />
     </div>
     <div class="card_coin">
-      <coin icono="/img/coins/decentraland.svg" titulo="Decentraland" sigla="(MANA)"
-        texto="TOP 42 approx capitalization" capitalizacion="1.30 B USD"
+      <coin
+        icono="/img/coins/decentraland.svg"
+        titulo="Decentraland"
+        sigla="(MANA)"
+        texto="TOP 42 approx capitalization"
+        capitalizacion="1.30 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of Decentraland (MANA) would have a value of"
-        logo="/img/logo.svg" precio="130.000" caja="/img/coins/caja.png" />
+        logo="/img/logo.svg"
+        precio="130.000"
+        caja="/img/coins/caja.png"
+        :index="index_pagina"
+      />
     </div>
 
     <div class="card_coin">
-      <coin icono="/img/coins/monero.svg" titulo="Monero" sigla="(XRM)" texto="TOP 28 approx capitalization"
+      <coin
+        icono="/img/coins/monero.svg"
+        titulo="Monero"
+        sigla="(XRM)"
+        texto="TOP 28 approx capitalization"
         capitalizacion="2.68 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of  Monero (XRM) would have a value of"
-        logo="/img/logo.svg" precio="268.000" caja="/img/coins/caja.png" />
+        logo="/img/logo.svg"
+        precio="268.000"
+        caja="/img/coins/caja.png"
+        :index="index_pagina"
+      />
     </div>
     <div class="card_coin">
-      <coin icono="/img/coins/chain.svg" titulo="Chainlink" sigla="(LINK)" texto="TOP 21 approx capitalization"
+      <coin
+        icono="/img/coins/chain.svg"
+        titulo="Chainlink"
+        sigla="(LINK)"
+        texto="TOP 21 approx capitalization"
         capitalizacion="3.72 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of Chainlink (LINK) would have a value of"
-        logo="/img/coins/logo.svg" precio="372.000" caja="/img/coins/caja.png" />
+        logo="/img/coins/logo.svg"
+        precio="372.000"
+        caja="/img/coins/caja.png"
+        :index="index_pagina"
+      />
     </div>
   </div>
 
@@ -84,19 +130,23 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
   z-index: 1;
 }
 
 .filtro-superior {
   z-index: 2;
-  background: radial-gradient(circle at center,
-      #f9f9fa 0%,
-      #c8ced4 50%,
-      #a8aaaf 100%);
+  background: radial-gradient(
+    circle at center,
+    #f9f9fa 0%,
+    #c8ced4 50%,
+    #a8aaaf 100%
+  );
   mix-blend-mode: multiply;
 }
 
@@ -194,7 +244,6 @@ img {
   align-items: center;
   width: 30%;
   height: 20%;
-
 }
 
 .monner h3 {
@@ -202,7 +251,6 @@ img {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 1.5vw;
   font-weight: 600;
-
 }
 
 .monner h1 {
@@ -210,6 +258,5 @@ img {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 3vw;
   font-weight: 600;
-
 }
 </style>
