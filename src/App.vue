@@ -25,11 +25,7 @@ import Footer from "./components/Footer.vue";
 
 <template>
   <header>
-    <Header
-      :index="index"
-      :isVisible="isVisibleLogo"
-      :setPage="setOnPage"
-    ></Header>
+    <Header :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage"></Header>
   </header>
 
   <main class="scroll-main">
@@ -43,140 +39,75 @@ import Footer from "./components/Footer.vue";
     Fonts para el proyecto calibri, Bahnschrift semibold semiconden, work sans, work sans Semibold
      LCD, LCD MOno, Roboto
     -->
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 1 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 1 }">
       <Bienvenida />
     </div>
 
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 2 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 2 }">
       <Alliances :index_pagina="index_pagina" />
     </div>
 
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 3 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 3 }">
       <Alianzas />
     </div>
 
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 4 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 4 }">
       <Calculadora :index_pagina="index_pagina" />
     </div>
 
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 5 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 5 }">
       <ContenedorArticulo :index_pagina="index_pagina" />
     </div>
 
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 6 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 6 }">
       <Exchanges />
     </div>
 
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 7 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 7 }">
       <Logos_auditorias />
     </div>
 
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 8 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 8 }">
       <Coins />
     </div>
 
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 9 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 9 }">
       <Benefits :index_pagina="index_pagina" />
     </div>
 
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 10 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 10 }">
       <Beneficio :index_pagina="index_pagina" />
     </div>
 
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 11 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 11 }">
       <Benefits_card :index_pagina="index_pagina" />
     </div>
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 12 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 12 }">
       <Benefits_card2 :index_pagina="index_pagina" />
     </div>
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 13 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 13 }">
       <Tokenomics :index_pagina="index_pagina" />
     </div>
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 14 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 14 }">
       <News />
     </div>
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 15 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 15 }">
       <Fase />
     </div>
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 16 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 16 }">
       <Fase2 />
     </div>
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 17 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 17 }">
       <Fase3 />
     </div>
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 18 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 18 }">
       <Fase4 />
     </div>
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == 19 }"
-    >
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 19 }">
       <Fase5 />
     </div>
-    <div
-      id="container"
-      :class="{ container: true, 'mostrar-container': index_pagina == limite }"
-    >
-      <Footer
-        :index_pagina="index_pagina"
-        :limite="limite"
-        :enter="enterAnimation"
-        :exit="exitAnimation"
-      ></Footer>
+    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == limite }">
+      <Footer :index_pagina="index_pagina" :limite="limite" :enter="enterAnimation" :exit="exitAnimation"></Footer>
     </div>
   </main>
 </template>
@@ -428,7 +359,12 @@ export default {
 <style>
 /* Fuentes Aquí */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
+
+@font-face {
+  font-family: "Work Sans", serif;
+  src: url("/Fonts/WorkSans.ttf");
+  font-style: semibold;
+}
 
 /*  */
 * {
@@ -439,6 +375,7 @@ export default {
   border: none;
   outline: none;
 }
+
 .grabbing {
   cursor: grabbing;
 }
@@ -480,21 +417,17 @@ main {
 }
 
 .orange {
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
 }
 
 .red {
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
 }
 
 ::-webkit-scrollbar {
@@ -509,6 +442,7 @@ main {
   width: 100%;
   height: 100%;
 }
+
 .mostrar-container {
   visibility: visible;
 }

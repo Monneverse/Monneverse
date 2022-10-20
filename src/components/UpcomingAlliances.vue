@@ -67,11 +67,10 @@
 <script></script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
-
 @font-face {
-  font-family: "WorkSans", serif;
-  src: url("../assets/fonts/Work+Sans:wght@700&display=swap");
+  font-family: "Work Sans", serif;
+  src: url("/Fonts/WorkSans.ttf");
+  font-style: semibold;
 }
 
 /*INICIO ESTILO FONDO*/

@@ -51,11 +51,17 @@
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+@font-face {
+    font-family: "Work Sans", serif;
+    src: url("/Fonts/WorkSans.ttf");
+    font-style: semibold;
+}
 
 @font-face {
     font-family: "Bahn";
-    src: url("/../../public/Fonts/BAHNSCHRIFT.TTF");
+    src: url("/Fonts/BAHNSCHRIFT9.ttf");
+    font-style: semibold;
+    font-stretch: semi-condensed;
 }
 
 img {
