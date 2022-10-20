@@ -26,6 +26,7 @@ import Footer from "./components/Footer.vue";
 <template>
   <header>
     <Header
+
       :index="index"
       :isVisible="isVisibleLogo"
       :setPage="setOnPage"
@@ -96,7 +97,7 @@ import Footer from "./components/Footer.vue";
       id="container"
       :class="{ container: true, 'mostrar-container': index_pagina == 8 }"
     >
-      <Coins />
+      <Coins :index_pagina="index_pagina" />
     </div>
 
     <div
