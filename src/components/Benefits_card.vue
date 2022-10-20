@@ -24,7 +24,7 @@ defineProps({
     <div
       :class="{
         benefits: true,
-        'animacion-desplazamiento': index_pagina == 10,
+        'animacion-desplazamiento': index_pagina == 11,
       }"
     >
       <div class="cards">
@@ -135,10 +135,10 @@ developed.
   display: none;
   transition: 0.5s;
   opacity: 0%;
-  background: linear-gradient( #80f99e 1%, transparent);
-  -webkit-box-shadow: 7px 3px 29px 4px rgba(219,219,219,1);
--moz-box-shadow: 7px 3px 29px 4px rgba(219,219,219,1);
-box-shadow: 7px 3px 29px 4px rgba(219,219,219,1);
+  background: linear-gradient(#80f99e 1%, transparent);
+  -webkit-box-shadow: 7px 3px 29px 4px rgba(219, 219, 219, 1);
+  -moz-box-shadow: 7px 3px 29px 4px rgba(219, 219, 219, 1);
+  box-shadow: 7px 3px 29px 4px rgba(219, 219, 219, 1);
 }
 
 .cards:hover span {
@@ -290,7 +290,6 @@ box-shadow: 7px 3px 29px 4px rgba(219,219,219,1);
   }
 
   100% {
-    top: 20%;
   }
 }
 
