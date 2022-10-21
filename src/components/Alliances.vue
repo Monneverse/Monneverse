@@ -583,8 +583,8 @@ section {
   }
 
   .alianzas a {
-    font-size: 1.5vw;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 300;
   }
 
   .alianzas a span {
@@ -668,7 +668,7 @@ section {
   .rectangulo p {
     top: 6.2rem;
 
-    font-size: 2.5vw;
+    font-size: 2rem;
   }
 
   .rectangulo-medio {
