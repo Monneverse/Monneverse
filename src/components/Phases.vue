@@ -219,7 +219,7 @@ img {
 .componentes1 {
   position: absolute;
   top: 60%;
-  left: 0%;
+  left: 50%;
   width: 25%;
   height: 64%;
 }
@@ -227,15 +227,7 @@ img {
 .componentes2 {
   position: absolute;
   top: 70%;
-  left: 36%;
-  width: 25%;
-  height: 64%;
-}
-
-.componentes3 {
-  position: absolute;
-  top: 60%;
-  right: 0%;
+  right: 26%;
   width: 25%;
   height: 64%;
 }
