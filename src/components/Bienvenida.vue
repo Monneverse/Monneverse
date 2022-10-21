@@ -25,7 +25,7 @@
   </div>
   <div class="iluminacionLogo"></div>
   <div class="fondo-mundial">
-    <img src="/img/celFondo.svg" alt="" srcset="" />
+    <img src="/img/fondoCel2.png" alt="" srcset="" />
   </div>
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
