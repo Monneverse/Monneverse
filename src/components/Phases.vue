@@ -45,20 +45,16 @@ defineProps({
   </div>
 
   <div class="componentes1">
-    <fasesComponentes title="development" description="development of the entire monnerverse ecosystem website,
-             spanish and english, discord, telegram, twitter and facebook." :isVisible="isVisible" />
-  </div>
-
-  <div class="componentes2">
     <fasesComponentes title="collection" description="Collection of documents for important Exchanges:
          CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others."
       :isVisible="isVisible" />
   </div>
 
-  <div class="componentes3">
+  <div class="componentes2">
     <fasesComponentes title="started" description="Started mass advertising in more than 20 countries around the world."
       :isVisible="isVisible" />
   </div>
+
 </template>
 
 <script>
