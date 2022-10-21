@@ -45,30 +45,19 @@ defineProps({
   </div>
 
   <div class="componentes1">
-    <fasesComponentes
-      title="development"
-      description="development of the entire monnerverse ecosystem website,
-             spanish and english, discord, telegram, twitter and facebook."
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="development" description="development of the entire monnerverse ecosystem website,
+             spanish and english, discord, telegram, twitter and facebook." :isVisible="isVisible" />
   </div>
 
   <div class="componentes2">
-    <fasesComponentes
-      title="collection"
-      description="Collection of documents for important Exchanges:
+    <fasesComponentes title="collection" description="Collection of documents for important Exchanges:
          CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others."
-      :isVisible="isVisible"
-    />
+      :isVisible="isVisible" />
   </div>
 
   <div class="componentes3">
-    <fasesComponentes
-      title="started"
-      description="Collection of documents for important Exchanges:
-         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others."
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="started" description="Started mass advertising in more than 20 countries around the world."
+      :isVisible="isVisible" />
   </div>
 </template>
 
@@ -112,22 +101,18 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 1;
 }
 
 .filtro-superior {
-  background: radial-gradient(
-    circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
-  );
+  background: radial-gradient(circle at center,
+      #f9f9fa 0%,
+      #c8ced4 50%,
+      #a8aaaf 100%);
   mix-blend-mode: multiply;
   z-index: 2;
 }
