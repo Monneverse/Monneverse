@@ -7,6 +7,10 @@ import fasesComponentes from "./ComponentsPhases.vue";
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
   <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
+  <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
+  <div class="logo">
+    <img src="/img/logo.svg" alt="">
+  </div>
   <div class="fondo fondo-oscurecer"></div>
   <div class="circuito circuito-izquierdo">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
@@ -33,76 +37,46 @@ import fasesComponentes from "./ComponentsPhases.vue";
     <img src="/img/Imagen1.png" />
   </div>
 
-  <button class="readMore" v-on:click="cambiarEstado()">Learn More</button>
+  <button class="readMore" v-on:click="cambiarEstado()">Show {{ isVisible ? "LESS" : "MORE" }}</button>
 
   <div class="circulos1">
     <img src="/img/Imagen1.png" />
   </div>
 
   <div class="componentes1">
-    <fasesComponentes
-      title="Enlisting"
-      description="enlist on Pancakeswap one day after our pre-sale"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Enlisting" description="enlist on Pancakeswap one day after our pre-sale"
+      :isVisible="isVisible" />
   </div>
 
   <div class="componentes2">
-    <fasesComponentes
-      title="MonnerStaking"
-      description="MonnerStaking start one day after pre-sale ends,
-             payouts of 12,6% of total capital every 48 hours"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="MonnerStaking" description="MonnerStaking start one day after pre-sale ends,
+             payouts of 12,6% of total capital every 48 hours" :isVisible="isVisible" />
   </div>
 
   <div class="componentes3">
-    <fasesComponentes
-      title="Liquidity"
-      description="liquid lock"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Liquidity" description="liquid lock" :isVisible="isVisible" />
   </div>
 
   <div class="componentes4">
-    <fasesComponentes
-      title="Schedule"
-      description="schedule burning"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Schedule" description="schedule burning" :isVisible="isVisible" />
   </div>
 
   <div class="componentes5">
-    <fasesComponentes
-      title="Certick"
-      description="certick audit"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Certick" description="certick audit" :isVisible="isVisible" />
   </div>
 
   <div class="componentes8">
-    <fasesComponentes
-      title="Official enlistment:"
-      description="coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
-        MEXC global"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Official enlistment:" description="coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
+        MEXC global" :isVisible="isVisible" />
   </div>
 
   <div class="componentes7">
-    <fasesComponentes
-      title="Increase x5"
-      description="Budget increase x5 of our advertising campaign"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Increase x5" description="Budget increase x5 of our advertising campaign"
+      :isVisible="isVisible" />
   </div>
 
   <div class="componentes6">
-    <fasesComponentes
-      title="Holders"
-      description="10.000 holders"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Holders" description="10.000 holders" :isVisible="isVisible" />
   </div>
 </template>
 
@@ -145,22 +119,18 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 1;
 }
 
 .filtro-superior {
-  background: radial-gradient(
-    circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
-  );
+  background: radial-gradient(circle at center,
+      #f9f9fa 0%,
+      #c8ced4 50%,
+      #a8aaaf 100%);
   mix-blend-mode: multiply;
   z-index: 2;
 }
@@ -197,6 +167,16 @@ img {
   transform: scaleY(-1);
 }
 
+.logo {
+  position: fixed;
+  top: 22%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+  z-index: 1;
+  opacity: 70%;
+}
+
 /* FIN ESTILO FONDO */
 
 .Fases {
@@ -217,6 +197,7 @@ img {
   width: 100%;
   height: 100%;
   position: absolute;
+  font-size: 1.8vw;
   opacity: 100%;
   text-transform: uppercase;
   z-index: 6;
@@ -227,7 +208,7 @@ img {
   color: white;
   width: 45%;
   font-size: 1.3vw;
-  font-family: Roboto;
+  font-family: "work Sans";
 }
 
 .circulos {
@@ -241,9 +222,9 @@ img {
 
 .circulos1 {
   position: absolute;
-  left: 22%;
+  left: 25%;
   bottom: 30%;
-  width: 55%;
+  width: 48%;
   height: 30%;
   z-index: 5;
 }

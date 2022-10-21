@@ -7,6 +7,10 @@ import fasesComponentes from "./ComponentsPhases.vue";
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
   <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
+  <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
+  <div class="logo">
+    <img src="/img/logo.svg" alt="">
+  </div>
   <div class="fondo fondo-oscurecer"></div>
   <div class="circuito circuito-izquierdo">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
@@ -33,27 +37,20 @@ import fasesComponentes from "./ComponentsPhases.vue";
     <img src="/img/Imagen1.png" />
   </div>
 
-  <button class="readMore" v-on:click="cambiarEstado()">Learn More</button>
+  <button class="readMore" v-on:click="cambiarEstado()">Show {{ isVisible ? "LESS" : "MORE" }}</button>
 
   <div class="circulos1">
     <img src="/img/Imagen1.png" />
   </div>
 
   <div class="componentes1">
-    <fasesComponentes
-      title="Disclosure"
-      description="Disclosure of our second phase of the project."
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Disclosure" description="Disclosure of our second phase of the project."
+      :isVisible="isVisible" />
   </div>
 
   <div class="componentes2">
-    <fasesComponentes
-      title="Holders"
-      description="40.000 holders MONNERVERSE will remain at the forefront with new high innovation projects
-             in 2023."
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Holders" description="40.000 holders MONNERVERSE will remain at the forefront with new high innovation projects
+             in 2023." :isVisible="isVisible" />
   </div>
 </template>
 
@@ -96,22 +93,18 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 1;
 }
 
 .filtro-superior {
-  background: radial-gradient(
-    circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
-  );
+  background: radial-gradient(circle at center,
+      #f9f9fa 0%,
+      #c8ced4 50%,
+      #a8aaaf 100%);
   mix-blend-mode: multiply;
   z-index: 2;
 }
@@ -148,6 +141,16 @@ img {
   transform: scaleY(-1);
 }
 
+.logo {
+  position: fixed;
+  top: 22%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+  z-index: 1;
+  opacity: 70%;
+}
+
 /* FIN ESTILO FONDO */
 
 .Fases {
@@ -168,6 +171,7 @@ img {
   width: 100%;
   height: 100%;
   position: absolute;
+  font-size: 1.8vw;
   opacity: 100%;
   text-transform: uppercase;
   z-index: 6;
@@ -178,7 +182,7 @@ img {
   color: white;
   width: 45%;
   font-size: 1.3vw;
-  font-family: Roboto;
+  font-family: "work Sans";
 }
 
 .circulos {
