@@ -352,7 +352,7 @@ img {
 
 .logo-redes {
   position: fixed;
-  bottom: 9.4%;
+  bottom: 7%;
   left: 41.9%;
   width: 20rem;
   height: 7rem;
