@@ -78,31 +78,42 @@ img {
   left: 40%;
   align-items: center;
   z-index: 10;
-}.fade-enter-active
- {
+}
+
+.fade-enter-active {
   animation: opacity 0.5s linear;
 }
+
 @keyframes opacity {
   0% {
     opacity: 0%;
   }
+
   50% {
     opacity: 50%;
   }
+
   100% {
     opacity: 100%;
   }
 }
-.fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+.fade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+  {
   animation: opacity2 0.5s linear;
 }
+
 @keyframes opacity2 {
   0% {
     opacity: 100%;
   }
+
   50% {
     opacity: 50%;
   }
+
   100% {
     opacity: 0%;
   }
