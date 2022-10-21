@@ -56,8 +56,8 @@ defineProps({
   </div>
 
   <div class="componentes3">
-    <fasesComponentes title="started" description="Collection of documents for important Exchanges:
-         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others."
+    <fasesComponentes title="started" description="Started mass advertising in more than 20 countries around the world.
+"
       :isVisible="isVisible" />
   </div>
 </template>
