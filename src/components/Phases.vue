@@ -183,6 +183,7 @@ img {
   position: absolute;
   font-size: 1.8vw;
   opacity: 100%;
+  font-size: 1.8vw;
   text-transform: uppercase;
   z-index: 6;
   font-family: "work Sans";
@@ -191,7 +192,7 @@ img {
 .description {
   color: white;
   width: 45%;
-  font-size: 1.4vw;
+  font-size: 1.2vw;
   text-transform: capitalize;
   font-family: "work Sans";
 }

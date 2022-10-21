@@ -173,6 +173,7 @@ img {
   position: absolute;
   font-size: 1.8vw;
   opacity: 100%;
+  font-size: 1.8vw;
   text-transform: uppercase;
   z-index: 6;
   font-family: "work Sans";

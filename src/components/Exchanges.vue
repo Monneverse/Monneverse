@@ -318,9 +318,9 @@ img {
   display: block;
   position: fixed;
   top: 28%;
-  left: 5%;
+  left: 3%;
   height: 20%;
-  width: 20%;
+  width: 30%;
   text-align: space-between;
   font-size: 4vw;
   text-transform: uppercase;
@@ -330,10 +330,9 @@ img {
 .exchange_text p {
   background: linear-gradient(to right,
       #8753c1 0%,
-      #6f6cbe 30%,
-      #38a6b7 50%,
+      #6f6cbe 10%,
+      #38a6b7 40%,
       #5884bb 100%);
-  font-family: Calibri;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
