@@ -163,15 +163,15 @@ img {
     z-index: 5;
 }
 
-/* .auditoria1:hover {
+.fondoSolidity:hover {
     position: absolute;
-    width: 32%;
+    width: 33%;
     border: 2px solid #121026;
-    border-radius: 2%;
+    border-radius: 0.5rem;
     -webkit-box-shadow: 0px 2px 28px 5px #08047A;
     -moz-box-shadow: 0px 2px 28px 5px #08047A;
     box-shadow: 0px 2px 28px 15px #08047A;
-} */
+}
 
 .fondoCertik {
     position: fixed;
@@ -192,15 +192,15 @@ img {
     z-index: 5;
 }
 
-/* .auditoria2:hover {
+.fondoCertik:hover {
     position: absolute;
-    width: 30%;
+    width: 33%;
     border: 2px solid #121026;
-    border-radius: 2%;
+    border-radius: 0.5rem;
     -webkit-box-shadow: 0px 2px 28px 5px #08047A;
     -moz-box-shadow: 0px 2px 28px 5px #08047A;
     box-shadow: 0px 2px 28px 15px #08047A;
-} */
+}
 
 .btn_registro {
     position: absolute;
