@@ -176,6 +176,7 @@ img {
   position: absolute;
   opacity: 100%;
   text-transform: uppercase;
+  font-size: 1.8vw;
   z-index: 6;
   font-family: "work Sans";
 }

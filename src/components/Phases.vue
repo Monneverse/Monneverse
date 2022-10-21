@@ -168,6 +168,7 @@ img {
   height: 100%;
   position: absolute;
   opacity: 100%;
+  font-size: 1.8vw;
   text-transform: uppercase;
   z-index: 6;
   font-family: "work Sans";
@@ -176,7 +177,7 @@ img {
 .description {
   color: white;
   width: 45%;
-  font-size: 1.4vw;
+  font-size: 1.2vw;
   text-transform: capitalize;
   font-family: Roboto;
 }
@@ -218,8 +219,8 @@ img {
 
 .componentes1 {
   position: absolute;
-  top: 60%;
-  left: 50%;
+  top: 70%;
+  left: 20%;
   width: 25%;
   height: 64%;
 }
@@ -227,7 +228,7 @@ img {
 .componentes2 {
   position: absolute;
   top: 70%;
-  right: 26%;
+  right: 20%;
   width: 25%;
   height: 64%;
 }
