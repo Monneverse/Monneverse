@@ -130,7 +130,7 @@ defineProps({
             </div>
           </div>
           <div class="rectangulo">
-            <img src="/img/rectangulo.svg" alt="" />
+            <img src="/img/rectangul.svg" alt="" />
             <p>UPCOMING ALLIANCES</p>
           </div>
         </section>
@@ -142,7 +142,7 @@ defineProps({
           'animacion-aparecer': index_pagina == 2,
         }"
       >
-        <img src="/img/puntero.svg" alt="" />
+        <img src="/img/punter.svg" alt="" />
       </div>
     </div>
 

@@ -52,7 +52,7 @@ export default {
   <div class="coin">
     <div    :class="{
         icono: true,
-        'animacion-desplazamiento': index == 8,
+        'animacion-desplazamiento': index == 7,
       }">
 
         <img  :src="icono" alt="" />
