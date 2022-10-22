@@ -173,7 +173,7 @@ export default {
 
 <style scoped>
 @font-face {
-  font-family: "work Sans";
+  font-family: "WorkSans";
   src: url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap")
 }
 
@@ -441,7 +441,7 @@ img {
 }
 
 .control>input {
-  font-family: "work Sans";
+  font-family: "WorkSans", sans-serif;
   font-size: 1.5rem;
   color: #067f4e;
   padding-right: 1rem;
@@ -464,7 +464,7 @@ img {
 }
 
 .control>label {
-  font-family: "work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
   font-size: 1.5rem;
   color: white;
   padding: 0rem;
@@ -483,7 +483,6 @@ img {
   z-index: 20;
   color: white;
   font-size: 4vh;
-  font-family: "work Sans";
 }
 
 #month-2 {
@@ -493,7 +492,6 @@ img {
   z-index: 20;
   color: white;
   font-size: 4vh;
-  font-family: "work Sans";
 }
 
 .circulo-indicador {
@@ -551,8 +549,8 @@ img {
   width: 100%;
   text-align: center;
   user-select: none;
-  font-family: "work Sans", sans-serif;
-  color: #ffc000;
+  font-family: "WorkSans", sans-serif;
+  color: #c27e01;
   font-size: 6vh;
   font-weight: 600;
 }
@@ -585,13 +583,13 @@ img {
   left: 6rem;
   max-width: 30rem;
   z-index: 9;
-  font-family: "work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
   color: white;
 }
 
 .informacion #title {
   font-size: 10vh;
-  font-family: "work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
   font-weight: 500;
 }
 
@@ -599,7 +597,7 @@ img {
 
 .informacion #title span {
   color: #01c28d;
-  font-family: "work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
 }
 
 .informacion #descripcion {

@@ -375,14 +375,14 @@ img {
 .contrato {
   position: relative;
   left: -4%;
-  font-size: 1.1vw;
+  font-size: .9vw;
   color: white;
   height: 20%;
   width: 110%;
 }
 
 .contrato span {
-  font-size: .9vw;
+  font-size: .8vw;
 }
 
 .logos {

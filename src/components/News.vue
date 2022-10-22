@@ -34,7 +34,7 @@
         <p>news</p>
     </div>
     <div class="cryptopotato">
-        <a href=""><img src="/img/News/cryptopotato.png"></a>
+        <a href=""><img src="/img/News/criptopotato.svg"></a>
     </div>
     <div class="coinquora">
         <a href=""><img src="/img/Exchanges/Coinquora.png"></a>
@@ -232,8 +232,8 @@ img {
 
 .cryptopotato {
     position: absolute;
-    top: 14%;
-    left: 13%;
+    top: 18%;
+    left: 15%;
     width: auto;
     height: auto;
     z-index: 9;
@@ -272,7 +272,7 @@ img:hover {
 
 .criptotendencia {
     position: absolute;
-    top: 70%;
+    top: 65%;
     right: 15%;
     width: auto;
     height: auto;
