@@ -119,24 +119,16 @@ defineProps({
       </div>
     </div>
 
-<<<<<<< HEAD
-      <div :class="{
-        puntero: true,
-        'animacion-aparecer': index_pagina == 2,
-      }">
-        <img src="/img/punter.svg" alt="" />
-      </div>
-=======
     <div :class="{
       puntero: true,
       'animacion-aparecer': index_pagina == 2,
     }">
-      <img src="/img/puntero.svg" alt="" />
->>>>>>> 6c34d0f5169b759aaf49c83c6b4a8fa174fc12e7
+      <img src="/img/punter.svg" alt="" />
     </div>
+  </div>
 
-    <div class="degradado degradado_izquierdo"></div>
-    <div class="degradado degradado_derecho"></div>
+  <div class="degradado degradado_izquierdo"></div>
+  <div class="degradado degradado_derecho"></div>
   </div>
 </template>
 
