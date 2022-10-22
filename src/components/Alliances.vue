@@ -104,7 +104,7 @@ defineProps({
         <section class="rectangulos">
           <div class="rectangulo-medio">
             <div class="contenido">
-              <img src="/assets/rectangulo-medio.svg" alt="" />
+              <img src="../assets/rectangulo-medio.svg" alt="" />
               <div class="imagenes">
                 <img src="/assets/methodBuy/visa.svg" alt="" />
                 <img src="/assets/methodBuy/masterCard.svg" alt="" />
