@@ -26,10 +26,9 @@ export default {
           moneda: "USD",
           sale_price: "Sale Price",
           texto:
-            "The price on Pancakeswap for purchases and sales will be $22,6 one day after the pre-sale of our first 2,000,000 Monners to the public ends",
+            "Our PancakeSwap price will range from $8,200 to $10,000 thanks to: - Our limited supply of 10,000 MNR. - Scheduled Burns. -Our sponsors. - The GREAT injection of liquidity made by our team with its line of credit from the USA and private investors. We will take into account all the tools that allow us to make our prices grow",
         },
-       
-       
+
         {
           icono: "/img/plus.svg",
           symbol: "",
@@ -37,7 +36,7 @@ export default {
           moneda: "",
           sale_price: "Sale Price",
           texto:
-            "Our PancakeSwap price will range from $8,200 to $10,000 thanks to:    - Our limited supply of 10,000 MNR.    - Scheduled Burns.    -Our sponsors.    - The GREAT injection of liquidity made by our team with its line of credit from the USA and private investors.     We will take into account all the tools that allow us to make our prices grow exponentially.    As we grow further into PancakeSwap, it is less likely that we will hit our presale prices again.  Our goal is to be the highest value token thanks to our limited supply of 10,000 MNR.  ",
+            "Enter our first phase os staking buying in pre-sale and earn 6.2% every 48 hours of your total capital in Monnercoins after the launch in Pancakeswap",
         },
       ],
     };
@@ -88,7 +87,7 @@ export default {
 .benefit h1 {
   width: 85%;
   margin: 0 auto;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 9vw;
   text-align: left;
 }
@@ -100,15 +99,26 @@ export default {
   .benefit h1 {
     font-size: 4.5vw;
   }
+  .benefit:nth-child(1) {
+    position: relative;
+    top: -40%;
+
+    display: flex;
+    grid-area: c;
+  }
   .benefit:nth-child(2) {
     display: flex;
+    grid-area: b;
+  }
+  .benefit:nth-child(3) {
+    display: flex;
+    grid-area: d;
   }
   .benefit:nth-child(4) {
+    position: relative;
+    top: -40%;
     display: flex;
     grid-area: e;
-  }
-  .benefit:nth-child(5) {
-    width: 60%;
   }
 }
 
@@ -204,7 +214,7 @@ i img {
     width: 90%;
     height: 10%;
     font-weight: 300;
-    font-size: .9vw;
+    font-size: 0.9vw;
     text-align: justify;
     align-items: left;
   }
