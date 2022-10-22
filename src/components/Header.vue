@@ -3,10 +3,17 @@
     <a href="" @click="this.setPage(1, false)">
       <img src="/img/logo.svg" alt="logo monneverse" /></a>
   </div>
-  <div id="barra" class="barra-navegacion">
-    <div class="content-nav">
-    </div>
+  <div :class="{'menu-Burger':true, 'menu-Burger-active':isExpanded }" @click="isExpanded = !isExpanded">
+    <div class="line line__1"></div>
+    <div class="line line__2"></div>
+    <div class="line line__3"></div>
+  </div>
+  <div id="barra" :class="{'barra-navegacion':true, 'barra-navegacion-active':isExpanded}">
+
     <nav class="barra" @mouseout="exit_mouse">
+      <div class="logo-menu">
+        <img src="/img/logo.svg" alt="logo monneverse" />
+      </div>
       <a id="a1" :class="{ link: true, home: indexF == 1 }" @mouseover="hover_mover('a1')"
         @click="this.setPage(1)">articles</a>
       <a id="a2" :class="{ link: true, home: indexF == 2 }" @mouseover="hover_mover('a2')"
@@ -37,6 +44,7 @@ export default {
       distancia: 0,
       animando: false,
       event: "click",
+      isExpanded: false
     };
   },
   props: {
@@ -118,10 +126,13 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
-
+/* Style of web */
 .invisible {
   opacity: 0;
+}
+
+.menu-Burger {
+  display: none;
 }
 
 .logo {
@@ -224,19 +235,137 @@ export default {
   background-color: #b48700;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
-  #barra {
+
+
+/* style of mobile */
+@media only screen and (max-width: 850px) {
+
+  .animacion {
     display: none;
+    opacity: 0;
+  }
+
+
+
+  .barra-navegacion {
+    display: none;
+    position: absolute;
+    top: 0;
+    margin-left: -50%;
+    transform-origin: 0% 100%;
+    transition: all 600ms;
+  }
+
+  .barra-navegacion-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 70%;
+    max-width: 20rem;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    padding-top: 5rem;
+    opacity: 100%;
+    background: linear-gradient(#111418 0%,
+        #01A850 30%,
+        #111418 100%);
+    border-top-right-radius: 3rem;
+  }
+
+  .barra-navegacion-active>.barra {
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .barra>* {
+    padding: 0;
+    margin: 0;
+    width: 90%;
+    text-align: right;
+
+  }
+
+  .barra>a:hover {
+    background-color: #ffc000;
+  }
+
+  .logo-menu {
+    width: 70%;
+    box-shadow: #505863 20px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -0);
+    margin-bottom: 2rem;
+  }
+
+  .menu-Burger {
+    position: absolute;
+    display: flex;
+    top: 2rem;
+    left: 2rem;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 2.5rem;
+    width: 3rem;
+
+
+  }
+
+  .menu-Burger>.line {
+    height: .2rem;
+    border-radius: 2rem;
+    width: 90%;
+    background-color: #ffc000;
+    transform-origin: 0% 100%;
+    transition: transform 600ms;
+  }
+
+  .menu-Burger>.line {
+    height: .2rem;
+    border-radius: 2rem;
+    width: 90%;
+    background-color: #ffc000;
+    transform-origin: 0% 100%;
+    transition: all 600ms;
+  }
+
+  .menu-Burger-active .line__1 {
+    transform: rotate(45deg) translate(-5px, -2px);
+  }
+
+  .menu-Burger-active .line__2 {
+    opacity: 0;
+    margin-left: -50rem;
+
+  }
+
+  .menu-Burger-active .line__3 {
+    transform: rotate(-45deg) translate(1px, -1px);
+    ;
   }
 
   .btn {
     position: fixed;
-    top: 91%;
-    left: 57%;
-    width: 40%;
-    height: 8%;
-    padding: 0rem;
-    font-size: 5vw;
+    bottom: 5%;
+    right: 5%;
+    width: auto;
+    height: auto;
+    padding: .8rem;
+    font-size: 3vw;
   }
 
   .logo {

@@ -127,8 +127,8 @@ img {
 
 .fondo-montana {
   position: fixed;
-  top: 27%;
-  left: 1%;
+  bottom: 0%;
+  left: 0%;
   width: 100%;
   z-index: 6;
 }
