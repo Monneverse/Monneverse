@@ -50,13 +50,13 @@ export default {
 
 <template>
   <div class="coin">
-    <div    :class="{
+    <div
+      :class="{
         icono: true,
-        'animacion-desplazamiento': index == 8,
-      }">
-
-        <img  :src="icono" alt="" />
-          
+        'animacion-desplazamiento': index == 7,
+      }"
+    >
+      <img :src="icono" alt="" />
     </div>
 
     <div class="container-titulo">
@@ -108,10 +108,9 @@ export default {
   font-family: "Work Sans", sans-serif;
 }
 
-
 .icono {
   width: 30%;
-  height:4rem;
+  height: 4rem;
   margin: 2% auto;
   display: flex;
   justify-content: center;
@@ -239,8 +238,8 @@ export default {
 
 @keyframes desplazamiento {
   0% {
-   position: absolute;
-   top: 100%;
+    position: absolute;
+    top: 100%;
   }
 
   100% {

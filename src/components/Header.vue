@@ -1,6 +1,6 @@
 <template>
   <div :class="{ logo: true, mostrar: isVisible }">
-    <a href=""  @click="this.setPage(1, false)" >
+    <a href="" @click="this.setPage(1, false)">
       <img src="/img/logo.svg" alt="logo monneverse" /></a>
   </div>
   <div id="barra" class="barra-navegacion">
@@ -207,9 +207,9 @@ export default {
 
 .btn {
   font-family: "Montserrat";
-  font-size: 16px;
+  font-size: 1.1vw;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: .5rem;
   border-style: none;
   border-color: transparent;
   text-align: center;

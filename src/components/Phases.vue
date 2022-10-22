@@ -13,7 +13,11 @@ defineProps({
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
   <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
+  <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
   <div class="fondo fondo-oscurecer"></div>
+  <div class="logo">
+    <img src="/img/logo.svg" alt="">
+  </div>
   <div class="circuito-izquierdo">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
   </div>
@@ -38,28 +42,23 @@ defineProps({
     <img src="/img/Imagen1.png" />
   </div>
 
-  <button class="readMore" v-on:click="cambiarEstado()">Learn More</button>
+  <button class="readMore" v-on:click="cambiarEstado()">Show {{ isVisible ? "LESS" : "MORE" }}</button>
 
   <div class="circulos1">
     <img src="/img/Imagen1.png" />
   </div>
 
   <div class="componentes1">
-    <fasesComponentes title="development" description="development of the entire monnerverse ecosystem website,
-             spanish and english, discord, telegram, twitter and facebook." :isVisible="isVisible" />
-  </div>
-
-  <div class="componentes2">
     <fasesComponentes title="collection" description="Collection of documents for important Exchanges:
          CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others."
       :isVisible="isVisible" />
   </div>
 
-  <div class="componentes3">
-    <fasesComponentes title="started" description="Collection of documents for important Exchanges:
-         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others."
+  <div class="componentes2">
+    <fasesComponentes title="started" description="Started mass advertising in more than 20 countries around the world."
       :isVisible="isVisible" />
   </div>
+
 </template>
 
 <script>
@@ -152,6 +151,16 @@ img {
   z-index: 5;
 }
 
+.logo {
+  position: fixed;
+  top: 17%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+  z-index: 1;
+  opacity: 70%;
+}
+
 /* FIN ESTILO FONDO */
 
 .Fases {
@@ -172,7 +181,9 @@ img {
   width: 100%;
   height: 100%;
   position: absolute;
+  font-size: 1.8vw;
   opacity: 100%;
+  font-size: 1.8vw;
   text-transform: uppercase;
   z-index: 6;
   font-family: "work Sans";
@@ -181,9 +192,9 @@ img {
 .description {
   color: white;
   width: 45%;
-  font-size: 1.4vw;
+  font-size: 1.2vw;
   text-transform: capitalize;
-  font-family: Roboto;
+  font-family: "work Sans";
 }
 
 .circulos {
@@ -223,8 +234,8 @@ img {
 
 .componentes1 {
   position: absolute;
-  top: 60%;
-  left: 0%;
+  top: 70%;
+  left: 20%;
   width: 25%;
   height: 64%;
 }
@@ -232,15 +243,7 @@ img {
 .componentes2 {
   position: absolute;
   top: 70%;
-  left: 36%;
-  width: 25%;
-  height: 64%;
-}
-
-.componentes3 {
-  position: absolute;
-  top: 60%;
-  right: 0%;
+  right: 20%;
   width: 25%;
   height: 64%;
 }
