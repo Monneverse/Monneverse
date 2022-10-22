@@ -106,13 +106,13 @@ defineProps({
             <div class="contenido">
               <img src="../assets/rectangulo-medio.svg" alt="" />
               <div class="imagenes">
-                <img src="/assets/methodBuy/visa.svg" alt="" />
-                <img src="/assets/methodBuy/masterCard.svg" alt="" />
+                <img src="../assets/methodBuy/visa.svg" alt="" />
+                <img src="../assets/methodBuy/masterCard.svg" alt="" />
               </div>
             </div>
           </div>
           <div class="rectangulo">
-            <img src="/img/rectangulo.svg" alt="" />
+            <img src="../img/rectangulo.svg" alt="" />
             <p>UPCOMING ALLIANCES</p>
           </div>
         </section>
