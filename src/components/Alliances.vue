@@ -129,7 +129,6 @@ defineProps({
 
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
-  </div>
 </template>
 
 <style scoped>
