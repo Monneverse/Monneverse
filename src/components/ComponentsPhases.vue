@@ -59,11 +59,11 @@ img {
 
 .divDesc p {
   font-size: 1.3vw;
-  font-family: "work Sans";
+  font-family: Roboto;
 }
 
 .divDesc b {
-  font-size: 2vw;
+  font-size: 1.8vw;
   font-family: "Work Sans";
 }
 
@@ -81,7 +81,7 @@ img {
 }
 
 .fade-enter-active {
-  animation: opacity 0.5s ease-out;
+  animation: opacity 0.5s linear;
 }
 
 @keyframes opacity {
@@ -102,7 +102,7 @@ img {
 
 /* .fade-leave-active below version 2.1.8 */
   {
-  animation: opacity2 0.5s ease-out;
+  animation: opacity2 0.5s linear;
 }
 
 @keyframes opacity2 {

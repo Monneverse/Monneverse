@@ -7,10 +7,6 @@ import fasesComponentes from "./ComponentsPhases.vue";
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
   <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
-  <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
-  <div class="logo">
-    <img src="/img/logo.svg" alt="">
-  </div>
   <div class="fondo fondo-oscurecer"></div>
   <div class="circuito circuito-izquierdo">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
@@ -36,26 +32,34 @@ import fasesComponentes from "./ComponentsPhases.vue";
     <img src="/img/Imagen1.png" />
   </div>
 
-  <button class="readMore" v-on:click="cambiarEstado()">Show {{ isVisible ? "LESS" : "MORE" }}</button>
+  <button class="readMore" v-on:click="cambiarEstado()">Learn More</button>
 
   <div class="circulos1">
     <img src="/img/Imagen1.png" />
   </div>
 
   <div class="componentes1">
-    <fasesComponentes title="Launch"
+    <fasesComponentes
+      title="Launch"
       description="Official launch of MonnerWallet, MonnerSwap and MonnerCardwith Visa and Mastercard."
-      :isVisible="isVisible" />
+      :isVisible="isVisible"
+    />
   </div>
 
   <div class="componentes2">
-    <fasesComponentes title="Solidity" description="Solidity Finance Audit." :isVisible="isVisible" />
+    <fasesComponentes
+      title="Solidity"
+      description="Solidity Finance Audit."
+      :isVisible="isVisible"
+    />
   </div>
 
   <div class="componentes3">
-    <fasesComponentes title="Exhibition"
+    <fasesComponentes
+      title="Exhibition"
       description="exhibition of our team from my solar powered industrial mining in New York City"
-      :isVisible="isVisible" />
+      :isVisible="isVisible"
+    />
   </div>
 </template>
 
@@ -98,18 +102,22 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
   z-index: 1;
 }
 
 .filtro-superior {
-  background: radial-gradient(circle at center,
-      #f9f9fa 0%,
-      #c8ced4 50%,
-      #a8aaaf 100%);
+  background: radial-gradient(
+    circle at center,
+    #f9f9fa 0%,
+    #c8ced4 50%,
+    #a8aaaf 100%
+  );
   mix-blend-mode: multiply;
   z-index: 2;
 }
@@ -146,16 +154,6 @@ img {
   transform: scaleY(-1);
 }
 
-.logo {
-  position: fixed;
-  top: 20%;
-  left: 30%;
-  width: 40%;
-  height: 40%;
-  z-index: 1;
-  opacity: 70%;
-}
-
 /* FIN ESTILO FONDO */
 
 .Fases {
@@ -176,10 +174,8 @@ img {
   width: 100%;
   height: 100%;
   position: absolute;
-  font-size: 1.8vw;
   opacity: 100%;
   text-transform: uppercase;
-  font-size: 1.8vw;
   z-index: 6;
   font-family: "work Sans";
 }
@@ -188,7 +184,7 @@ img {
   color: white;
   width: 45%;
   font-size: 1.3vw;
-  font-family: "work Sans";
+  font-family: Roboto;
 }
 
 .circulos {

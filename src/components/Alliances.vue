@@ -112,18 +112,27 @@ defineProps({
             </div>
           </div>
           <div class="rectangulo">
-            <img src="/img/rectangul.svg" alt="" />
+            <img src="/img/rectangulo.svg" alt="" />
             <p>UPCOMING ALLIANCES</p>
           </div>
         </section>
       </div>
+    </div>
 
+<<<<<<< HEAD
       <div :class="{
         puntero: true,
         'animacion-aparecer': index_pagina == 2,
       }">
         <img src="/img/punter.svg" alt="" />
       </div>
+=======
+    <div :class="{
+      puntero: true,
+      'animacion-aparecer': index_pagina == 2,
+    }">
+      <img src="/img/puntero.svg" alt="" />
+>>>>>>> 6c34d0f5169b759aaf49c83c6b4a8fa174fc12e7
     </div>
 
     <div class="degradado degradado_izquierdo"></div>
@@ -292,11 +301,13 @@ section {
 }
 
 .grupo-logos .grupo {
+
   position: relative;
   top: 6rem;
   align-items: center;
   margin: 0 auto;
   width: 70%;
+
 }
 
 .grupo-2 img:nth-child(1) {
@@ -561,7 +572,7 @@ section {
   }
 
   .alianzas a {
-    font-size: 1.2rem;
+    font-size: 1.5vw;
     font-weight: 400;
   }
 
@@ -646,7 +657,7 @@ section {
   .rectangulo p {
     top: 6.2rem;
 
-    font-size: 2rem;
+    font-size: 2.5vw;
   }
 
   .rectangulo-medio {
