@@ -10,17 +10,16 @@ defineProps({
 </script>
 <template>
   <!--FONDO-->
-  <div class="fondo-oscuro fondo-benefit">
-      <img src="/img/fondo-benefit.png" alt="" />
-    </div>
 
   <div class="fondo">
-   
     <div class="logo">
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
 
- 
+    <!-- <div class="titulo">
+      <h1>BENEFITS</h1>
+    </div>
+-->
 
     <div
       :class="{
@@ -66,7 +65,7 @@ developed.
           texto="Open a window of possibilities for all those creators who wish to design their"
           textOculto="own token from scratch and sell it worldwide with fees never seen before. Our goal is to create a safe environment on which every token fulfills a series of standards of qualification such as the KYC Verification, residential addres and back-up liquidity. this way we can protect you from any scam. MonnerBlockchain will handle the lowest fees of the hest market beside one of the best times of execution. this will bring more liquidity, stability and exponential growing"
           imagen="/img/benefits/monner.png"
-        />
+          />
       </div>
       <div class="cards">
         <span></span><span></span><span></span><span></span>
@@ -75,11 +74,10 @@ developed.
           texto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
           textOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
           imagen="/img/benefits/visa.png"
-        />
+          />
       </div>
     </div>
   </div>
-
   <div class="logo-redes">
     <div class="icon icon-telegram">
       <a href="https://t.me/monnerversecommunity" target="_blank">
@@ -96,11 +94,7 @@ developed.
         <img src="../assets/discord.svg" alt="logo discord" srcset="" />
       </a>
     </div>
-    
   </div>
-   <div class="fondo-benefit">
-      <img src="/img/fondo-benefit.png" alt="" />
-    </div>
 </template>
 
 <style scoped>
@@ -141,20 +135,6 @@ developed.
   flex: none;
 }
 
-.fondo-benefit {
-  
-  background-size: no-repeat center center fixed;
-  z-index:0;
-}
-.fondo-benefit > img {
-  height: 100vh;
-}
-@media screen and (min-width: 769px) {
-  .fondo-benefit > img {
-    width: 100%;
-    height: 115vh;
-  }
-}
 .cards span {
   display: none;
   transition: 0.5s;
@@ -296,15 +276,6 @@ developed.
 .fondo {
   position: absolute;
   z-index: 1;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-
-}
-.fondo-oscuro {
-  position: absolute;
-  z-index: 0;
   top: 0;
   left: 0;
   height: 100%;
