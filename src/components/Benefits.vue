@@ -90,15 +90,6 @@ defineProps({
   z-index: 12;
   display: none;
 }
-.monner {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-.monner img {
-  width: 30%;
-}
 
 .titulo {
   position: absolute;

@@ -73,6 +73,7 @@ export default {
 }
 
 .benefit {
+ 
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -83,10 +84,11 @@ export default {
 }
 
 .fondo-oscuro {
-  background-color: #161431;
+  background-color: rgb(22, 20, 49, 0.9) !important;
 }
 
 .benefit .contenido {
+  opacity: none;
   display: flex;
   flex-direction: column;
   align-items: center;

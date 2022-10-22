@@ -10,6 +10,9 @@ defineProps({
 </script>
 <template>
   <!--FONDO-->
+  <div class="fondo-oscuro fondo-benefit">
+      <img src="/img/fondo-benefit.png" alt="" />
+    </div>
 
   <div class="fondo">
     <div class="logo">
@@ -117,7 +120,20 @@ defineProps({
   color: #fff;
   border-radius: 1em;
 }
-
+.fondo-benefit {
+  
+  background-size: no-repeat center center fixed;
+  z-index:0;
+}
+.fondo-benefit > img {
+  height: 100vh;
+}
+@media screen and (min-width: 769px) {
+  .fondo-benefit > img {
+    width: 100%;
+    height: 115vh;
+  }
+}
 .cards {
   width: 100%;
   height: 100%;
@@ -268,7 +284,6 @@ defineProps({
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #121026;
 }
 
 .animacion-desplazamiento {
@@ -301,5 +316,15 @@ defineProps({
   width: 3.5vw;
   height: auto;
   margin-left: 1rem;
+}
+
+.fondo-oscuro {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #121026;
 }
 </style>
