@@ -123,7 +123,7 @@ defineProps({
       puntero: true,
       'animacion-aparecer': index_pagina == 2,
     }">
-      <img src="/img/punter.svg" alt="" />
+      <img src="/img/puntero.svg" alt="" />
     </div>
   </div>
 
