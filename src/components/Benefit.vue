@@ -21,7 +21,7 @@ defineProps({
     <div class="fondo-benefit">
       <img src="/img/fondo-benefit.png" alt="" />
     </div>
-   
+
     <div class="reflector reflector-izquierdo">
       <div class="luz-1"></div>
       <div class="luz-2"></div>
@@ -39,23 +39,41 @@ defineProps({
         aparecer: index_pagina == 10,
       }"
     >
-      <div class="titulo">
-        <h1>BENEFITS</h1>
-      </div>
-      <div class="contenedor">
-        <p>
-          Our staking platform is safe and reliable. We offer you a system that
-          works by phases, backed up by Bank Security, where the Monnercoin will
-          be your entry-ticket to a much-wider world! We want Monner to become
-          one of the main 25 cryptocurrencies in the world! To do that, we rely
-          on a limited and privileged supply of 10.000.000 Monnercoin and
-          scheduled burns what are you waiting for? A universe full of
-          opportunities is expecting you to unravel it!
-        </p>
+      <div class="contenido">
+        <div class="titulo">
+          <h1>BENEFITS</h1>
+        </div>
+        <div class="contenedor-parrafo">
+          <p>
+            Monner DeFi is a project based on the payment of dividends that have
+            the largest shares listed on the New York Stock Exchange. We want to
+            reward our customers for holding our token and follow its evolution
+            through time. Monner is a 100% descentralized contract that will
+            guarantee security to its investors under any measure. Our mission
+            is to position the MNR token between the top 50 charts of
+            CoinMarketCap thus giving it an approximate value of 90.000$ per
+            MNR. <br />
+            <br />
+
+            Our main projects, such as MonnerPlanet (whose mission is to change
+            the way energy is distributed to each american home with its
+            patented renewable energy plates) and MonnerMinner (whose mission is
+            to create crypto-mining farms at an industrial level, powered by
+            solar energy) will be fundamental for our mission of giving worth to
+            our ecosystem and currency. Other projects that can be summarized in
+            our list are MonnerStaking, MonnerCard (with Visa and MasterCard),
+            MonnerBlockchain, MonnerGames
+          </p>
+        </div>
+        <div class="buttom">
+          <buttom :class="ocultar" v-on:click="mostrarTexto" class="btn centrar"
+            >READ {{ look ? "LESS" : "MORE" }}</buttom
+          >
+        </div>
       </div>
     </div>
 
-    <!-- <div class="logo-redes">
+ <div class="logo-redes">
       <div class="icon icon-telegram">
         <a href="https://t.me/monnerversecommunity" target="_blank">
           <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
@@ -72,7 +90,7 @@ defineProps({
         </a>
       </div>
     </div>
-  --></div>
+</div>
 </template>
 
 <style scoped>
@@ -84,7 +102,7 @@ defineProps({
   z-index: -1233;
   width: 100%;
   height: 100%;
-  background-color:#121026;
+  background-color: #121026;
 }
 
 .logo {
@@ -111,60 +129,111 @@ defineProps({
   color: white;
 }
 
+
+
 .benefits {
   position: absolute;
   top: 10%;
   z-index: 8;
   width: 100%;
-  height: 80%;
+  height: 100%;
   row-gap: 5%;
+
+}
+.contenido{
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 80%;
+  height: 80%;
 }
-
-.contenedor {
+.contenedor-parrafo {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
   height: 80%;
   background-color: rgba(32, 29, 64, 0.2);
   margin: 0 auto;
   border-radius: 3vw;
 }
+.buttom {
+  margin: 0 auto;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (width > 769px) {
 
-.contenedor p {
-  font-size: 4vw;
+  .buttom {
+  margin: 0 auto;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+}
+.btn {
+
+  padding: 10px;
+  background: linear-gradient(
+    90deg,
+    rgb(18, 17, 65) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
+  border-radius: .5vw;
+  cursor: pointer;
+  width: 7rem;
+  font-size: 1rem;
+  font-family: "WorkSans", sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.contenedor-parrafo p {
+  font-size: 1rem;
   font-family: "WorkSans", sans-serif;
   font-weight: 100;
   width: 90%;
-  text-align: center;
+  text-align: justify;
   color: white;
 }
 @media screen and (min-width: 769px) {
   .benefits {
     position: absolute;
-    top: 10%;
+    top: 15%;
     width: 100%;
     height: 80%;
   }
+  .contenido{
+
+    margin: 0;
+    width: 80%;
+    height: 90%;
+
+  }
   .titulo {
     padding: 0;
+   
   }
   .titulo h1 {
-    font-size: 5vw;
+    font-size: 4vw;
     font-family: "WorkSans", sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     color: white;
   }
 
-  .contenedor {
-    width: 80%;
-    height: 40%;
+  .contenedor-parrafo {
+
+    width: 85%;
+    height: 100%;
   }
-  .contenedor p {
-    font-size: 2vw;
+  .contenedor-parrafo p {
+    font-size: 1.5vw;
   }
 }
 .aparecer {
@@ -180,7 +249,6 @@ defineProps({
   }
 
   100% {
-
     opacity: 100%;
   }
 }

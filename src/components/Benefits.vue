@@ -21,9 +21,6 @@ defineProps({
       <img src="/img/fondo-benefit.png" alt="" />
     </div>
 
-    <div :class="{ rectangulo: true, 'animacion-aparecer': index_pagina == 9 }">
-      <img src="/img/rectangulo.svg" alt="" />
-    </div>
     <div class="logo">
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
@@ -231,7 +228,13 @@ defineProps({
   justify-content: start;
   display: none;
 }
+@media screen and (width > 768px){
 
+  .logo-redes{
+    display: flex;
+  }
+  
+}
 
 .icon img {
   width: 3.5vw;

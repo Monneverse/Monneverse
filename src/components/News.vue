@@ -34,7 +34,7 @@
         <p>news</p>
     </div>
     <div class="cryptopotato">
-        <a href=""><img src="/img/News/cryptopotato.png"></a>
+        <a href=""><img src="/img/News/cryptoPotato.png"></a>
     </div>
     <div class="coinquora">
         <a href=""><img src="/img/Exchanges/Coinquora.png"></a>

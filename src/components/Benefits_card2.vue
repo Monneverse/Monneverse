@@ -107,7 +107,7 @@ defineProps({
   position: relative;
   margin: 0 auto;
   z-index: 8;
-  width: 70%;
+  width: 85%;
   height: 70%;
   top: 15%;
   display: flex;

@@ -52,6 +52,7 @@ many other add-ons to the
 MonnerMetaverse will be
 developed.
 "
+          imagen="/img/benefits/staking.jpg"
         />
       </div>
       <div class="cards">
@@ -63,7 +64,8 @@ developed.
           titulo="MonnerHosting and MonnerBlockchain"
           texto="Open a window of possibilities for all those creators who wish to design their"
           textOculto="own token from scratch and sell it worldwide with fees never seen before. Our goal is to create a safe environment on which every token fulfills a series of standards of qualification such as the KYC Verification, residential addres and back-up liquidity. this way we can protect you from any scam. MonnerBlockchain will handle the lowest fees of the hest market beside one of the best times of execution. this will bring more liquidity, stability and exponential growing"
-        />
+          imagen="/img/benefits/monner.png"
+          />
       </div>
       <div class="cards">
         <span></span><span></span><span></span><span></span>
@@ -71,7 +73,8 @@ developed.
           titulo="The universe in the pocket of your Wallet!"
           texto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
           textOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
-        />
+          imagen="/img/benefits/visa.png"
+          />
       </div>
     </div>
   </div>
@@ -109,11 +112,12 @@ developed.
   position: relative;
   margin: 0 auto;
   z-index: 8;
-  width: 70%;
+  width: 85%;
   height: 70%;
   top: 15%;
   display: flex;
   scroll-snap-type: x mandatory;
+  overflow-y: hidden;
   overflow-x: scroll;
   column-gap: 20%;
   color: #fff;
@@ -259,6 +263,7 @@ developed.
   .benefits {
     column-gap: 0;
     overflow-x: initial;
+    overflow-y: initial;
     scroll-snap-type: none;
   }
   .cards {

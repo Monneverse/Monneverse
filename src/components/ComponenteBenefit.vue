@@ -22,6 +22,10 @@ export default {
       type: String,
       required: true,
     },
+    imagen: {
+      type: String,
+      required: true,
+    },
   },
   data() {
     return {
@@ -42,7 +46,7 @@ export default {
       <h2 class="centrar">
         {{ titulo }}
       </h2>
-
+      <img :src="imagen" alt="Imagenes-Beneficios" />
       <p class="centrar">
         {{ texto }}
       </p>
@@ -53,10 +57,11 @@ export default {
           {{ textOculto }}
         </p>
       </transition>
-
-      <buttom :class="ocultar" v-on:click="mostrarTexto" class="btn centrar"
-        >READ {{ look ? "LESS" : "MORE" }}</buttom
-      >
+      <div class="buttom">
+        <buttom :class="ocultar" v-on:click="mostrarTexto" class="btn centrar"
+          >READ {{ look ? "LESS" : "MORE" }}</buttom
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -82,7 +87,8 @@ export default {
 }
 
 .benefit .contenido {
-
+  display: flex;
+  flex-direction: column;
   align-items: center;
   width: 90%;
   margin: 0 auto;
@@ -90,6 +96,7 @@ export default {
 
 .contenido h2 {
   align-items: center;
+  margin: 2% auto;
   height: 10%;
   font-size: 6vw;
   font-weight: 600;
@@ -103,25 +110,26 @@ export default {
 }
 
 .contenido p {
-  height: 38%;
+  height: 15%;
   align-items: center;
   font-weight: 400;
   font-size: 5vw;
 }
 
-.texto-oculto{
- 
+.contenido img {
+  height: 20%;
+  margin: 0 auto;
+}
+
+.texto-oculto {
+  height: 45%;
   text-align: justify;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
 }
-
-.texto-oculto::-webkit-scrollbar {
-  -webkit-appearance: none;
-}
-
-.texto-oculto::-webkit-scrollbar:vertical {
-  height: 10px;
+.buttom{
+  width: 100%;
+  position: absolute;
+  bottom: -10%;
+  height: 25%;
 }
 
 .texto-oculto::-webkit-scrollbar-thumb {
@@ -137,9 +145,7 @@ export default {
   border-radius: 10px;
 }
 
-
-.fade-enter-active
- {
+.fade-enter-active {
   animation: opacity 0.5s linear;
 }
 @keyframes opacity {
@@ -175,12 +181,13 @@ export default {
   }
   .contenido p {
     font-weight: 400;
-    font-size: 1.2vw;
+    font-size: 1vw;
   }
 }
 
 .btn {
   position: relative;
+  bottom: -15%;
   background: linear-gradient(
     90deg,
     rgb(18, 17, 65) 0%,
@@ -189,8 +196,8 @@ export default {
   padding: 2% 5%;
   border-radius: 1.5vw;
   cursor: pointer;
-  width: 45%;
-  height: 5%;
+  width: 30%;
+  height: 20%;
   font-size: 4vw;
   font-family: "WorkSans", sans-serif;
   align-items: center;
@@ -211,22 +218,13 @@ export default {
   }
 }
 
-.transparente {
-  background-color: rgb(22, 20, 49, 0.6);
-  margin: 0 auto;
-  margin-right: 0;
-  display: flex;
-  justify-content: center;
-  width: 75%;
-}
-
 .centrar {
   margin: 0 auto;
   display: flex;
   justify-content: center;
   text-align: center;
 }
-.ocultar{
+.ocultar {
   display: none;
 }
 </style>
