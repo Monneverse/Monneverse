@@ -752,9 +752,9 @@ section {
   width: 15%;
   height: 40%;
   padding: 0;
-  margin: 0;
-  top: 32rem;
-  left: 43%;
+  margin: 0; 
+  bottom: -160px;
+ left: 43%;
 }
 
 @media screen and (max-width: 769px) {
