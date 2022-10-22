@@ -112,7 +112,7 @@ defineProps({
             </div>
           </div>
           <div class="rectangulo">
-            <img src="../img/rectangulo.svg" alt="" />
+            <img src="/img/rectangulo.svg" alt="" />
             <p>UPCOMING ALLIANCES</p>
           </div>
         </section>
