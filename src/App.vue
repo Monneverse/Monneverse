@@ -352,7 +352,6 @@ export default {
     document.addEventListener("wheel", this.Navegar);
     this.listaPaginaDondeSeOcultaLogo.push(this.limite);
 
-
     document.addEventListener("drag", this.returnMethods());
   },
 };

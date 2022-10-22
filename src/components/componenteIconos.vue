@@ -44,7 +44,7 @@ img {
   left: 20%;
   height: 70%;
   z-index: 7;
-  width: 65%;
+  width: 74%;
   top: 0%;
   gap: 2rem;
 }
