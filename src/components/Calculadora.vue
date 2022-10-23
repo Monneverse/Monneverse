@@ -485,10 +485,10 @@ img {
 #month-1 {
   position: absolute;
   top: 0;
-  transform: translate(0%,425%);
+  transform: translate(0%,600%);
   z-index: 20;
   color: white;
-  font-size: 4vh;
+  font-size: 3vh;
   font-family: "work Sans";
 }
 
@@ -496,9 +496,9 @@ img {
   position:absolute;
   bottom:  20%;
   z-index: 20;
-  transform: translate(350%,0);
+  transform: translate(450%,0);
   color: white;
-  font-size: 4vh;
+  font-size: 3vh;
   font-family: "work Sans";
 }
 
