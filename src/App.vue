@@ -361,7 +361,7 @@ export default {
 <style>
 /* Fuentes Aquí */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;600&display=swap');
 @font-face {
   font-family: "Work Sans", serif;
   src: url("/Fonts/WorkSans.ttf");

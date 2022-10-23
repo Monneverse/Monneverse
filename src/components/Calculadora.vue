@@ -78,7 +78,8 @@
     </div>
 
     <p id="descripcion">
-      FIRST TWO MONTHS EVERY 48 <br> HOURS THE MONNER WILL RETURN {{porcentajeInteres}}% INTEREST
+      First Two Months Every 48 Hours
+      <br>The Monner Will Return  {{porcentajeInteres}}% Interest
     </p>
   </article>
 
@@ -582,21 +583,45 @@ img {
 .informacion {
   position: absolute;
   top: 40%;
-  left: 6rem;
-  max-width: 30rem;
+  left: 3rem;
+  max-width: 35rem;
+  width: 30%;
   z-index: 9;
   font-family: "work Sans", sans-serif;
   color: white;
 }
 
 .informacion #title {
-  font-size: 10vh;
+  font-size: 11vh;
   font-family: "work Sans", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
+  
 }
 
-
-
+@media screen and (max-width: 1250px) {
+  .informacion #title {
+  font-size: 9vh;
+  font-family: "work Sans", sans-serif;
+  font-weight: 600;
+  
+}
+}
+@media screen and (max-width: 1150px) {
+  .informacion #title {
+  font-size: 7vh;
+  font-family: "work Sans", sans-serif;
+  font-weight: 600;
+  
+}
+}
+@media screen and (max-width: 950px) {
+  .informacion #title {
+  font-size: 5vh;
+  font-family: "work Sans", sans-serif;
+  font-weight: 600;
+  
+}
+}
 .informacion #title span {
   color: #01c28d;
   font-family: "work Sans", sans-serif;
@@ -605,9 +630,10 @@ img {
 .informacion #descripcion {
   margin-top: 2rem;
   text-align: start;
-  font-size: 1.5rem;
-  width: 130%;
-  text-transform: uppercase;
+  font-family: "work Sans", sans-serif;
+  font-size: 2.5vh;
+  font-weight: 300;
+  width: 100%;
 }
 
 .titulo-imagen {
@@ -620,6 +646,7 @@ img {
   width: 3rem;
   height: auto;
   margin-right: 1rem;
+  margin-top: .7rem;
 }
 
 /* redes sociales */
