@@ -65,10 +65,12 @@ export default {
     indexF: {
       get() {
         try {
-          var anim = document.getElementById("animacion");
-          var link = document.getElementsByClassName("link")[this.index - 1];
-          anim.style.minWidth = link.offsetWidth + "px";
-          anim.style.left = this.getOffset(link).left + "px";
+          if (window.screen.width > 850) {
+            var anim = document.getElementById("animacion");
+            var link = document.getElementsByClassName("link")[this.index - 1];
+            anim.style.minWidth = link.offsetWidth + "px";
+            anim.style.left = this.getOffset(link).left + "px";
+          }
         } catch (error) { }
 
         return this.index;
@@ -77,20 +79,25 @@ export default {
   },
   methods: {
     hover_mover(id) {
-      let anim = document.getElementById("animacion");
-      anim.classList.remove("invisible");
-      let link = document.getElementById(id);
-      anim.style.minWidth = link.offsetWidth + "px";
-      anim.style.left = this.getOffset(link).left + "px";
+      if (window.screen.width > 850) {
+        let anim = document.getElementById("animacion");
+        anim.classList.remove("invisible");
+        let link = document.getElementById(id);
+        anim.style.minWidth = link.offsetWidth + "px";
+        anim.style.left = this.getOffset(link).left + "px";
+      }
     },
     exit_mouse() {
-      var anim = document.getElementById("animacion");
-      var link = document.getElementsByClassName("home")[0];
-      if (this.indexF == 0) {
-        anim.classList.add("invisible");
+      if (window.screen.width > 850) {
+        var anim = document.getElementById("animacion");
+        var link = document.getElementsByClassName("home")[0];
+        if (this.indexF == 0) {
+          anim.classList.add("invisible");
+        }
+        anim.style.minWidth = link.offsetWidth + "px";
+        anim.style.left = this.getOffset(link).left + "px";
       }
-      anim.style.minWidth = link.offsetWidth + "px";
-      anim.style.left = this.getOffset(link).left + "px";
+
     },
     getOffset(el) {
       var _x = 0;
@@ -104,10 +111,12 @@ export default {
     },
     recargar() {
       try {
+        if(window.screen.width > 850){
         var anim = document.getElementById("animacion");
         var link = document.getElementsByClassName("home")[0];
         anim.style.minWidth = link.offsetWidth + "px";
         anim.style.left = this.getOffset(link).left + "px";
+        }
       } catch (error) {
         console.log("EL ERROR ES " + error);
       }
@@ -270,8 +279,9 @@ export default {
     align-items: flex-start;
     padding-top: 5rem;
     opacity: 100%;
-    background: linear-gradient(#111418 0%,
-        #01A850 30%,
+    background: linear-gradient(#092D2A 0%,
+        #092D2A 30%,
+        #092D2A 70%,
         #111418 100%);
     border-top-right-radius: 3rem;
   }
