@@ -15,15 +15,15 @@
         <img src="/img/logo.svg" alt="logo monneverse" />
       </div>
       <a id="a1" :class="{ link: true, home: indexF == 1 }" @mouseover="hover_mover('a1')"
-        @click="this.setPage(1)">articles</a>
+        @click="this.setPage(1); isExpanded = false;">articles</a>
       <a id="a2" :class="{ link: true, home: indexF == 2 }" @mouseover="hover_mover('a2')"
-        @click="this.setPage(2)">benefits</a>
+        @click="this.setPage(2); isExpanded = false;">benefits</a>
       <a id="a3" :class="{ link: true, home: indexF == 3 }" @mouseover="hover_mover('a3')"
-        @click="this.setPage(3)">tokenomics</a>
+        @click="this.setPage(3); isExpanded = false;">tokenomics</a>
       <a id="a4" :class="{ link: true, home: indexF == 4 }" @mouseover="hover_mover('a4')"
-        @click="this.setPage(4)">news</a>
+        @click="this.setPage(4); isExpanded = false;">news</a>
       <a id="a5" :class="{ link: true, home: indexF == 5 }" @mouseover="hover_mover('a5')"
-        @click="this.setPage(5)">roadmaps</a>
+        @click="this.setPage(5); isExpanded = false;">roadmaps</a>
       <div id="animacion" :class="{
         animacion: true,
         traslado_animacion: true,
