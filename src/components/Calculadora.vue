@@ -607,7 +607,7 @@ img {
   
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1450px) {
   .informacion #title {
   font-size: 9vh;
   font-family: "work Sans", sans-serif;
@@ -615,7 +615,7 @@ img {
   
 }
 }
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1350px) {
   .informacion #title {
   font-size: 7vh;
   font-family: "work Sans", sans-serif;
@@ -623,7 +623,7 @@ img {
   
 }
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1050px) {
   .informacion #title {
   font-size: 5vh;
   font-family: "work Sans", sans-serif;
