@@ -430,7 +430,7 @@ img {
 .form-controles {
   position: absolute;
   top: 82%;
-  left: 0%;
+  left: -5%;
   width: 100%;
   z-index: 8;
   display: flex;
@@ -443,6 +443,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 10%;
 }
 
 .control>input {
