@@ -333,18 +333,20 @@ export default {
       return (this.position = event.touches[0].clientY);
     },
     returnMethods() {
-      const scrolls = Array.from(document.querySelectorAll("div"));
+      if (window.screen.width > 850) {
+        const scrolls = Array.from(document.querySelectorAll("div"));
 
-      scrolls.forEach((scroll) => {
-        scroll.addEventListener("touchstart", this.touchStart);
-        scroll.addEventListener("touchend", this.touchEnd);
-        scroll.addEventListener("touchmove", this.touchMove);
-      });
-      window.oncontextmenu = () => {
-        event.preventDefault();
-        event.stopPropagation();
-        return false;
-      };
+        scrolls.forEach((scroll) => {
+          scroll.addEventListener("touchstart", this.touchStart);
+          scroll.addEventListener("touchend", this.touchEnd);
+          scroll.addEventListener("touchmove", this.touchMove);
+        });
+        window.oncontextmenu = () => {
+          event.preventDefault();
+          event.stopPropagation();
+          return false;
+        };
+      }
     },
   },
   mounted() {
@@ -352,7 +354,7 @@ export default {
     document.addEventListener("wheel", this.Navegar);
     this.listaPaginaDondeSeOcultaLogo.push(this.limite);
 
-    document.addEventListener("drag", this.returnMethods());
+     document.addEventListener("drag", this.returnMethods());
   },
 };
 </script>
