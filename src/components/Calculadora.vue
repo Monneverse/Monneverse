@@ -178,6 +178,7 @@ export default {
   src: url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap")
 }
 
+
 /* estilos generales */
 img {
   height: 100%;
@@ -328,19 +329,22 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
 .calculadora {
   position: relative;
   top: 0%;
-  left: 15%;
+  left: 10%;
   height: 90%;
-  width: 90%;
+  width: 70%;
   max-width: 60rem;
+
   z-index: 8;
   user-select: none;
   display: flex;
   justify-content: center;
+  margin: 3rem;
 }
 
 .aparecer-animation {
@@ -480,7 +484,8 @@ img {
 
 #month-1 {
   position: absolute;
-  top: 23%;
+  top: 0;
+  transform: translate(0%,425%);
   z-index: 20;
   color: white;
   font-size: 4vh;
@@ -488,10 +493,10 @@ img {
 }
 
 #month-2 {
-  position: absolute;
-  top: 75%;
-  left: 75%;
+  position:absolute;
+  bottom:  20%;
   z-index: 20;
+  transform: translate(350%,0);
   color: white;
   font-size: 4vh;
   font-family: "work Sans";
