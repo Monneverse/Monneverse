@@ -31,7 +31,7 @@ defineProps({
   </div>
 
   <!-- CONTENEDOR DE BOTON METATASK -->
-  <div class="btn_buyMonner" click="addTokenFunction()">
+  <div class="btn_buyMonner">
     <div class="contrato"><b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span></div>
     <button class="buyNow">
       <div class="texto1">BUY MONNER</div>
@@ -45,7 +45,7 @@ defineProps({
   <!-- Contenedor de Articulos -->
   <div class="containerArticulo">
     <transition name="slide-fade">
-      <div v-if="index_pagina==5" class="contenedorDeArticulo">
+      <div v-if="index_pagina == 5" class="contenedorDeArticulo">
         <Articulo v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen"
           :url="item.link" />
       </div>
@@ -157,39 +157,7 @@ export default {
       this.minutoString = this.AgregarCero(minutes);
       this.segundoString = this.AgregarCero(seconds);
     },
-    async addTokenFunction() {
-      const tokenAddress = '0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893';
-      const tokenSymbol = 'MNR';
-      const tokenDecimals = 18;
-      const tokenImage = 'https://i.postimg.cc/xCHLP8sw/icon-32x32.png';
-
-      try {
-
-        const wasAdded = await ethereum.request({
-          method: 'wallet_watchAsset',
-          params: {
-            type: 'ERC20',
-            options: {
-              address: tokenAddress,
-              symbol: tokenSymbol,
-              decimals: tokenDecimals,
-              image: tokenImage,
-            },
-          },
-        });
-
-        if (wasAdded) {
-          alert('Thanks for your interest!');
-        } else {
-          alert('HelloWorld Coin has not been added');
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    }
   },
-
-
   mounted() {
     setInterval(this.ObtenerFechaActual, 500);
     this.vectorArticulo = this.vectorTodo.slice(0, 3)
@@ -375,14 +343,14 @@ img {
 .contrato {
   position: relative;
   left: -4%;
-  font-size: 1.1vw;
+  font-size: .9vw;
   color: white;
   height: 20%;
   width: 110%;
 }
 
 .contrato span {
-  font-size: .9vw;
+  font-size: .8vw;
 }
 
 .logos {

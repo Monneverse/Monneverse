@@ -8,24 +8,17 @@ defineProps({
 </script>
 <template>
   <div class="contenido-general">
-    <div
-      :class="{
-        logo: true,
-        'animacion-logo': index_pagina == 2,
-      }"
-    >
+    <div :class="{
+      logo: true,
+      'animacion-logo': index_pagina == 2,
+    }">
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
 
     <!--FONDOS-->
     <div class="fondo-video">
-      <video
-        src="/public/video/Multimedia1.mp4"
-        autoplay="true"
-        muted="true"
-        loop="true"
-        poster="/img/fondo_binario.png"
-      ></video>
+      <video src="/public/video/Multimedia1.mp4" autoplay="true" muted="true" loop="true"
+        poster="/img/fondo_binario.png"></video>
 
       <div class="logos">
         <div class="grupo-logos">
@@ -46,23 +39,17 @@ defineProps({
     </div>
 
     <div class="fondo filtro-superior"></div>
-    <div
-      :class="{
-        'fondo-montana': true,
-        'fondo-montana-animation': index_pagina == 2,
-      }"
-      class="fondo"
-    >
+    <div :class="{
+      'fondo-montana': true,
+      'fondo-montana-animation': index_pagina == 2,
+    }" class="fondo">
       <img src="/img/fondo-montana.png" />
     </div>
     <div class="fondo fondo-oscurecer"></div>
-    <div
-      :class="{
-        'fondo-red': true,
-        'animacion-aparecer': index_pagina == 2,
-      }"
-      class="fondo"
-    >
+    <div :class="{
+      'fondo-red': true,
+      'animacion-aparecer': index_pagina == 2,
+    }" class="fondo">
       <img src="/img/red.png" alt="" />
     </div>
     <div class="fondo-telefono">
@@ -91,30 +78,25 @@ defineProps({
           </div>
         </section>
         <section class="arco">
-          <div
-            :class="{
-              semi_circulo: true,
-              'animacion-arco': index_pagina == 2,
-            }"
-          >
+          <div :class="{
+            semi_circulo: true,
+            'animacion-arco': index_pagina == 2,
+          }">
             <img src="../assets/aro-iluminado-brillante.svg" alt="" />
           </div>
         </section>
         <section class="Alianzas">
           <div class="alianzas">
-            <a href="https://www.reddit.com/user/monnerverse"
-              ><span><img src="/img/Alianzas/reddit.png" /></span>REDDIT</a
-            >
+            <a href="https://www.reddit.com/user/monnerverse"><span><img
+                  src="/img/Alianzas/reddit.png" /></span>REDDIT</a>
             <!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
 
-            <a href="https://t.me/monnerversecommunity"
-              ><span><img src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a
-            >
+            <a href="https://t.me/monnerversecommunity"><span><img
+                  src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a>
             <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 
-            <a href="https://discord.com/invite/h7fRvek9dn"
-              ><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a
-            >
+            <a href="https://discord.com/invite/h7fRvek9dn"><span><img
+                  src="/img/Alianzas/discord.png" /></span>DISCORD</a>
             <!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
           </div>
         </section>
@@ -130,25 +112,23 @@ defineProps({
             </div>
           </div>
           <div class="rectangulo">
-            <img src="/img/rectangul.svg" alt="" />
+            <img src="/img/rectangulo.svg" alt="" />
             <p>UPCOMING ALLIANCES</p>
           </div>
         </section>
       </div>
-
-      <div
-        :class="{
-          puntero: true,
-          'animacion-aparecer': index_pagina == 2,
-        }"
-      >
-        <img src="/img/punter.svg" alt="" />
-      </div>
     </div>
 
-    <div class="degradado degradado_izquierdo"></div>
-    <div class="degradado degradado_derecho"></div>
+    <div :class="{
+      puntero: true,
+      'animacion-aparecer': index_pagina == 2,
+    }">
+      <img src="/img/puntero.svg" alt="" />
+    </div>
   </div>
+
+  <div class="degradado degradado_izquierdo"></div>
+  <div class="degradado degradado_derecho"></div>
 </template>
 
 <style scoped>
@@ -190,11 +170,11 @@ section {
   align-items: flex-end;
 }
 
-.texto > section {
+.texto>section {
   width: 70%;
 }
 
-.texto > section p {
+.texto>section p {
   width: 80%;
   float: right;
   font-family: "Work Sans", sans-serif;
@@ -312,11 +292,13 @@ section {
 }
 
 .grupo-logos .grupo {
+
   position: relative;
   top: 6rem;
   align-items: center;
   margin: 0 auto;
   width: 70%;
+
 }
 
 .grupo-2 img:nth-child(1) {
@@ -363,12 +345,10 @@ section {
 .filtro-superior {
   position: absolute;
   z-index: 4;
-  background: radial-gradient(
-    circle at center,
-    #14ec84 0%,
-    #0b5f50 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #14ec84 0%,
+      #0b5f50 50%,
+      #505863 100%);
   opacity: 30%;
 }
 
@@ -583,7 +563,7 @@ section {
   }
 
   .alianzas a {
-    font-size: 1.2rem;
+    font-size: 1.5vw;
     font-weight: 400;
   }
 
@@ -668,7 +648,7 @@ section {
   .rectangulo p {
     top: 6.2rem;
 
-    font-size: 2rem;
+    font-size: 2.5vw;
   }
 
   .rectangulo-medio {

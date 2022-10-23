@@ -26,6 +26,12 @@
         <div class="luz-2"></div>
         <div class="luz-3"></div>
     </div>
+    <div class="fondo-mundial">
+        <img src="/img/fondo-mundial.png" alt="" srcset="" />
+    </div>
+    <div class="fondo_rayos">
+        <img src="/img/rayos.png" alt="" />
+    </div>
     <div class="degradado_azuliz"></div>
     <div class="degradado_azulde"></div>
     <!--FIN FONDO-->
@@ -167,29 +173,23 @@ img {
     opacity: 100%;
 }
 
-.degradado_azuliz {
-    background: linear-gradient(to right, #08047A 0.5%, transparent);
-    position: absolute;
-    transform: rotate(-60deg);
-    top: 0%;
-    z-index: 6;
-    right: 50%;
+.degradado {
+    background: linear-gradient(to right, #040077 55%, transparent);
+    position: fixed;
     width: 50%;
-    height: 180%;
-    opacity: 70%;
-
+    height: 190%;
+    z-index: 3;
+    top: 0%;
 }
 
-.degradado_azulde {
-    background: linear-gradient(to right, #08047A 0.5%, transparent);
-    position: absolute;
+.degradado_izquierdo {
+    transform: rotate(-60deg);
+    right: 55%;
+}
+
+.degradado_derecho {
     transform: rotate(230deg);
-    top: -12%;
-    left: 50%;
-    width: 50%;
-    height: 180%;
-    opacity: 70%;
-    z-index: 6;
+    left: 55%;
 }
 
 .circuito {
@@ -210,10 +210,90 @@ img {
     transform: scaleY(-1);
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+    .fondo_rayos {
+        position: fixed;
+        left: -35%;
+        top: -30%;
+        width: 150%;
+        height: 150%;
+        opacity: 50%;
+        z-index: 1;
+        background-size: no-repeat center center fixed;
+    }
+
+    .fondo_rayos img {
+        height: 100%;
+    }
+
+    .degradado {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 35%;
+        left: 55%;
+        z-index: 9;
+    }
+
+    .degradado_izquierdo {
+        display: none;
+    }
+
+    .fondo-montana {
+        position: fixed;
+        top: 28%;
+        left: -60%;
+        width: 200%;
+        height: 80%;
+    }
+
+    .fondo-mundial {
+        position: fixed;
+        top: 15em;
+        left: -9em;
+        width: 50em;
+        height: 35em;
+        z-index: 3;
+        opacity: 80%;
+    }
+
+    .fondo-calculadora {
+        width: 100%;
+        height: 100%;
+    }
+
+    .circuito-derecho {
+        display: none;
+    }
+
+    .circuito-izquierdo {
+        display: none;
+    }
+
+    #logo-2 {
+        position: absolute;
+        top: 70%;
+        left: -4%;
+        opacity: 50%;
+        z-index: 4;
+    }
+
+    .fondoTokenomics {
+        position: fixed;
+        top: 0%;
+        left: -6%;
+        width: 140%;
+        height: 90%;
+        visibility: hidden;
+    }
+}
+
 /* FIN ESTILO FONDO */
 
+/* TITULO */
+
 .titulo {
-    position: absolute;
+    position: fixed;
     top: 15%;
     left: 44.5%;
     color: white;
@@ -230,10 +310,25 @@ img {
     font-family: 'Work Sans', sans-serif;
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+
+    .titulo {
+        top: 14%;
+        left: 35%;
+    }
+
+    .titulo p {
+        font-size: 8vw;
+    }
+}
+
+/* FIN TITULO */
+
+/* PRIMERAS CRIPTOS */
 .cryptopotato {
     position: absolute;
-    top: 14%;
-    left: 13%;
+    top: 18%;
+    left: 15%;
     width: auto;
     height: auto;
     z-index: 9;
@@ -257,6 +352,22 @@ img {
     z-index: 9;
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+    .cryptopotato {
+        visibility: hidden;
+    }
+
+    .coinquora {
+        visibility: hidden;
+    }
+
+    .coinrepublic {
+        visibility: hidden;
+    }
+}
+
+/* FIN PRIMERAS CRIPTOS */
+
 .coinrepublic img {
     position: fixed;
     top: 60%;
@@ -270,9 +381,11 @@ img:hover {
     transition: transform 0.3s;
 }
 
+/* RESTO CRIPTOS */
+
 .criptotendencia {
     position: absolute;
-    top: 70%;
+    top: 65%;
     right: 15%;
     width: auto;
     height: auto;
@@ -296,6 +409,22 @@ img:hover {
     height: auto;
     z-index: 9;
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+    .criptotendencia {
+        visibility: hidden;
+    }
+
+    .coinspeaker {
+        visibility: hidden;
+    }
+
+    .territoriobitcoin {
+        visibility: hidden;
+    }
+}
+
+/* FIN RESTO CRIPTOS */
 
 @keyframes luz {
     0% {

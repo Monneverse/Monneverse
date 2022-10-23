@@ -354,7 +354,8 @@ export default {
     document.addEventListener("wheel", this.Navegar);
     this.listaPaginaDondeSeOcultaLogo.push(this.limite);
 
-     document.addEventListener("drag", this.returnMethods());
+
+    document.addEventListener("drag", this.returnMethods());
   },
 };
 </script>
@@ -362,6 +363,7 @@ export default {
 /* Fuentes Aquí */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;600&display=swap');
+
 @font-face {
   font-family: "Work Sans", serif;
   src: url("/Fonts/WorkSans.ttf");

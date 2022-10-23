@@ -195,7 +195,7 @@ img {
 }
 
 .circuito {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   height: 80%;
   width: 50%;
@@ -232,7 +232,6 @@ img {
     z-index: 3;
   }
 
-
   .fondo-oscuro {
     position: absolute;
     top: 0%;
@@ -253,13 +252,13 @@ img {
     width: 50em;
     height: 35em;
     z-index: 3;
-    opacity: 70%;
+    opacity: 80%;
   }
 
   .fondo-montana {
     position: fixed;
-    top: 6%;
-    left: -40%;
+    top: 24%;
+    left: -143%;
     width: 70em;
     height: 40em;
     z-index: 3;
@@ -277,16 +276,24 @@ img {
         #097561 30%,
         #0F161C 100%);
     z-index: 1;
-    opacity: 70%;
+    opacity: 100%;
+  }
+
+  .fondoTokenomics {
+    position: fixed;
+    top: 20%;
+    width: 130%;
+    height: 60%;
+    visibility: hidden;
   }
 
   .degradado {
     background: linear-gradient(to right, #090380 55%, transparent);
     position: fixed;
-    width: 50%;
-    height: 180%;
+    width: 100%;
+    height: 100%;
     z-index: 4;
-    top: -85%;
+    top: 38%;
     opacity: 90%;
   }
 
@@ -299,17 +306,21 @@ img {
 
   .degradado_derecho {
     transform: rotate(230deg);
-    left: 55%;
+    left: 40%;
+  }
+
+  .circuito-izquierdo {
+    left: -70%;
   }
 
   #logo-1 {
-    width: 17em;
-    max-height: 14rem;
+    width: 63%;
+    max-height: 14%;
     position: fixed;
-    top: 18%;
-    left: -2%;
+    top: 65%;
+    left: -7%;
     z-index: 3;
-    opacity: 50%;
+    opacity: 70%;
   }
 }
 
@@ -318,9 +329,9 @@ img {
   display: block;
   position: fixed;
   top: 28%;
-  left: 3%;
+  left: 5%;
   height: 20%;
-  width: 30%;
+  width: 20%;
   text-align: space-between;
   font-size: 4vw;
   text-transform: uppercase;
@@ -332,7 +343,9 @@ img {
       #8753c1 0%,
       #6f6cbe 10%,
       #38a6b7 40%,
-      #5884bb 100%);
+      #5884bb 60%,
+      #11334e 100%);
+  font-family: Calibri;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -341,11 +354,11 @@ img {
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .exchange_text {
-    top: 1%;
-    left: 5%;
-    width: 20%;
+    top: 12%;
+    left: 16%;
+    width: 73%;
     height: 10.5%;
-    font-size: 14vw;
+    font-size: 12vw;
     z-index: 999;
   }
 }
@@ -390,44 +403,14 @@ img {
     visibility: hidden;
   }
 
-  .contenedor_monedaMovil .primeros .pancake {
-    top: 13%;
-    left: 1%;
-    width: 28%;
-    height: 4%;
-    display: grid;
+  .contenedor_monedaMovil .primeros {
     position: fixed;
-    z-index: 4;
-  }
-
-  .contenedor_monedaMovil .primeros .kucoin {
-    top: 17%;
-    left: 1%;
-    width: 28%;
-    height: 4%;
-    display: grid;
-    position: fixed;
-    z-index: 4;
-  }
-
-  .contenedor_monedaMovil .primeros .gateio {
-    top: 21%;
-    left: 1%;
-    width: 28%;
-    height: 4%;
-    display: grid;
-    position: fixed;
-    z-index: 4;
-  }
-
-  .contenedor_monedaMovil {
-    position: relative;
-    display: grid;
+    display: flex;
+    top: 0%;
+    left: 0%;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 99;
+    z-index: 999;
   }
 }
 
