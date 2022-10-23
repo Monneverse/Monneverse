@@ -262,7 +262,7 @@ export default {
     top: 0;
     margin-left: -50%;
     transform-origin: 0% 100%;
-    transition: all 600ms;
+    transition: all 300ms;
   }
 
   .barra-navegacion-active {
@@ -341,7 +341,7 @@ export default {
     width: 90%;
     background-color: #ffc000;
     transform-origin: 0% 100%;
-    transition: transform 600ms;
+    transition: transform 300ms;
   }
 
   .menu-Burger>.line {
