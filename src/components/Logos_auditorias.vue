@@ -1,7 +1,30 @@
 <template>
-    <div class="fondo"></div>
     <div class="texto_auditoria">
         <p>audited by the <br>most reliable companies</p>
+    </div>
+    <div class="fondo"></div>
+    <div class="fondo-oscuro1"></div>
+    <div class="fondo-oscuro"></div>
+    <div id="logo-1" class="logo">
+        <img src="/img/logo_Grande.png" alt="" />
+    </div>
+    <div class="fondo-montana">
+        <img src="/img/fondo-montana.png" alt="" srcset="" />
+    </div>
+    <div class="fondo-montana">
+        <img src="/img/fondo-montana.png" alt="" srcset="" />
+    </div>
+    <div class="fondo-montana">
+        <img src="/img/fondo-montana.png" alt="" srcset="" />
+    </div>
+    <div class="fondo-mundial">
+        <img src="/img/fondo_Cel.png" alt="" srcset="" />
+    </div>
+    <div class="circuito circuito-izquierdo">
+        <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
+    </div>
+    <div class="circuito circuito-derecho">
+        <img src="/img/calculadora/circuito-derecho.png" alt="" />
     </div>
     <div class="circuito circuito-izquierdo">
         <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
@@ -40,8 +63,8 @@
             </a>
         </div>
     </div>
-    <div class="degradado_azuliz"></div>
-    <div class="degradado_azulde"></div>
+    <div class="degradado degradado_izquierdo"></div>
+    <div class="degradado degradado_derecho"></div>
 
 </template>
 
@@ -62,6 +85,7 @@
     font-stretch: semi-condensed;
 }
 
+/* FONDO */
 img {
     height: 100%;
     width: 100%;
@@ -86,9 +110,9 @@ img {
     z-index: 4;
 }
 
-.degradado_azuliz {
-    background: linear-gradient(to right, #08047A 0.5%, transparent);
-    position: absolute;
+.degradado {
+    background: linear-gradient(to right, #040077 50%, transparent);
+    position: fixed;
     transform: rotate(-60deg);
     top: 0%;
     right: 50%;
@@ -97,15 +121,14 @@ img {
     z-index: 2;
 }
 
-.degradado_azulde {
-    background: linear-gradient(to right, #08047A 0.5%, transparent);
-    position: absolute;
+.degradado_izquierdo {
+    transform: rotate(-60deg);
+    right: 55%;
+}
+
+.degradado_derecho {
     transform: rotate(230deg);
-    top: -12%;
-    left: 50%;
-    width: 50%;
-    height: 200%;
-    z-index: 2;
+    left: 55%;
 }
 
 .circuito {
@@ -126,6 +149,102 @@ img {
     transform: scaleY(-1);
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+    .fondo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #121026;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        opacity: 30%;
+        z-index: 3;
+    }
+
+    .fondo-oscuro {
+        position: fixed;
+        top: 0;
+        left: 0em;
+        width: 24em;
+        height: 52em;
+        background: radial-gradient(circle at center,
+                #48d0ab 10%,
+                #097561 20%,
+                #0F161C 100%);
+        z-index: 1;
+        opacity: 100%;
+    }
+
+    .luces {
+        visibility: hidden;
+    }
+
+    .degradado {
+        background: linear-gradient(to right, #090380 55%, transparent);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+        top: 38%;
+        opacity: 90%;
+    }
+
+    .degradado_izquierdo {
+        transform: rotate(-60deg);
+        right: 55%;
+        visibility: hidden;
+
+    }
+
+    .degradado_derecho {
+        transform: rotate(230deg);
+        left: 40%;
+    }
+
+    .fondo-montana {
+        position: fixed;
+        top: 24%;
+        left: -143%;
+        width: 70em;
+        height: 40em;
+        z-index: 3;
+        opacity: 20%;
+    }
+
+    .fondo-mundial {
+        position: fixed;
+        top: 12em;
+        left: -12em;
+        width: 50em;
+        height: 35em;
+        z-index: 3;
+        opacity: 80%;
+    }
+
+    .circuito-derecho {
+        visibility: hidden;
+    }
+
+    .circuito-izquierdo {
+        left: -70%;
+    }
+
+    #logo-1 {
+        width: 63%;
+        max-height: 14%;
+        position: fixed;
+        top: 65%;
+        left: -7%;
+        z-index: 3;
+        opacity: 70%;
+    }
+}
+
+/* FIN FONDO */
+
+/* TEXT */
+
 .texto_auditoria {
     position: absolute;
     top: 20%;
@@ -143,6 +262,31 @@ img {
     font-weight: 500;
     text-transform: uppercase;
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+    .texto_auditoria {
+        position: absolute;
+        top: 12%;
+        left: 3%;
+        color: white;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+    }
+
+    .texto_auditoria p {
+        font-size: 9vw;
+        font-family: "Bahn";
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}
+
+
+/* FIN TEXT */
+
+/* LOGOS */
 
 .fondoSolidity {
     position: fixed;
@@ -164,7 +308,7 @@ img {
 }
 
 .fondoSolidity:hover {
-    position: absolute;
+    position: fixed;
     width: 33%;
     border: 2px solid #121026;
     border-radius: 0.5rem;
@@ -202,6 +346,47 @@ img {
     box-shadow: 0px 2px 28px 15px #08047A;
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+    .fondoSolidity {
+        top: 30%;
+        left: 26%;
+        height: 15%;
+        width: 50%
+    }
+
+    .fondoSolidity:hover {
+        position: fixed;
+        width: 50%;
+        border: 2px solid #121026;
+        border-radius: 0.5rem;
+        -webkit-box-shadow: 0px 2px 28px 5px #08047A;
+        -moz-box-shadow: 0px 2px 28px 5px #08047A;
+        box-shadow: 0px 2px 28px 15px #08047A;
+    }
+
+    .fondoCertik {
+        top: 50%;
+        left: 26%;
+        width: 50%;
+        height: 15%;
+    }
+
+    .fondoCertik:hover {
+        position: fixed;
+        width: 50%;
+        border: 2px solid #121026;
+        border-radius: 0.5rem;
+        -webkit-box-shadow: 0px 2px 28px 5px #08047A;
+        -moz-box-shadow: 0px 2px 28px 5px #08047A;
+        box-shadow: 0px 2px 28px 15px #08047A;
+    }
+
+}
+
+/* FIN LOGOS */
+
+
+/* BOTON */
 .btn_registro {
     position: absolute;
     bottom: 8%;
@@ -239,6 +424,31 @@ img {
     z-index: 7;
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+    .btn_registro {
+        bottom: 23%;
+        left: 28%;
+        width: 45%;
+        height: 8%;
+    }
+
+    .btn_registro a {
+        font-size: 3.5vw;
+    }
+
+    .circulos {
+        bottom: 19%;
+        left: 24%;
+        width: 53%;
+        height: 13%;
+    }
+}
+
+
+/* FIN BOTON */
+
+/* REDES */
+
 .logo-redes {
     position: absolute;
     bottom: 1rem;
@@ -257,4 +467,19 @@ img {
     z-index: 18;
     margin-left: 1rem;
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+
+    .logo-redes {
+        left: .5rem;
+        bottom: .5rem;
+    }
+
+    .icon {
+        width: 2.3rem;
+    }
+
+}
+
+/* FIN REDES */
 </style>

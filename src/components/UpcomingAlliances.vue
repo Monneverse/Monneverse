@@ -24,6 +24,9 @@
   <div class="fondo-mundial">
     <img src="/img/fondo-mundial.png" alt="" srcset="" />
   </div>
+  <div class="fondo_rayos">
+    <img src="/img/rayos.png" alt="" />
+  </div>
   <div class="fondoTokenomics">
     <img src="/img/fondo_Tokenomics.png" alt="" />
   </div>
@@ -154,7 +157,7 @@ img {
 }
 
 .degradado {
-  background: linear-gradient(to right, #040077 50%, transparent);
+  background: linear-gradient(to right, #040077 55%, transparent);
   position: fixed;
   width: 50%;
   height: 190%;
@@ -173,6 +176,7 @@ img {
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+
   .degradado {
     position: fixed;
     height: 100%;
@@ -188,10 +192,20 @@ img {
 
   .fondo-montana {
     position: fixed;
-    top: 56%;
-    left: 0%;
-    width: 100%;
-    height: 50%;
+    top: 28%;
+    left: -60%;
+    width: 200%;
+    height: 80%;
+  }
+
+  .fondo-mundial {
+    position: fixed;
+    top: 15em;
+    left: -9em;
+    width: 50em;
+    height: 35em;
+    z-index: 3;
+    opacity: 80%;
   }
 
   .fondo-calculadora {
@@ -207,6 +221,21 @@ img {
     display: none;
   }
 
+  .fondo_rayos {
+    position: fixed;
+    left: -35%;
+    top: -30%;
+    width: 150%;
+    height: 150%;
+    opacity: 50%;
+    z-index: 0;
+    background-size: no-repeat center center fixed;
+  }
+
+  .fondo_rayos img {
+    height: 100%;
+  }
+
   #logo-1 {
     position: absolute;
     top: 78%;
@@ -214,13 +243,22 @@ img {
     opacity: 50%;
     z-index: 4;
   }
+
+  .fondoTokenomics {
+    position: fixed;
+    top: 0%;
+    left: -6%;
+    width: 140%;
+    height: 90%;
+    visibility: hidden;
+  }
 }
 
 /*FIN ESTILO FONDO*/
 
 .upcoming_alliance {
-  position: relative;
-  display: contents;
+  position: fixed;
+  z-index: 4;
 }
 
 .upcoming_alliance h1 {
@@ -263,18 +301,18 @@ img {
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .mastercard_img {
     position: fixed;
-    width: 45%;
-    height: 20%;
-    top: 34%;
-    left: 50%;
+    width: 55%;
+    height: 25%;
+    top: 50%;
+    left: 25%;
   }
 
   .visa_img {
     position: absolute;
-    width: 45%;
-    height: 20%;
-    top: 34%;
-    left: 1%;
+    width: 55%;
+    height: 25%;
+    top: 30%;
+    left: 25%;
   }
 
   .upcoming_alliance {
@@ -284,10 +322,10 @@ img {
   }
 
   .upcoming_alliance h1 {
-    font-size: 8vw;
-    width: 12em;
-    top: 23%;
-    left: 6%;
+    font-size: 12vw;
+    width: 5%;
+    top: 12%;
+    left: 19%;
   }
 }
 
