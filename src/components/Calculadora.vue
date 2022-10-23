@@ -79,7 +79,7 @@
 
     <p id="descripcion">
       First Two Months Every 48 Hours
-      <br>The Monner Will Return  {{porcentajeInteres}}% Interest
+      <br>The Monner Will Return {{porcentajeInteres}}% Interest
     </p>
   </article>
 
@@ -155,7 +155,7 @@ export default {
           (this.porcentajeInteres / 100)
         ).toFixed(2);
       }
-      this.interes = "$ "+ this.interes;
+      this.interes = "$ " + this.interes;
     },
     CambiarMonth() {
       if (this.indicador < 3) {
@@ -340,7 +340,7 @@ img {
   height: 90%;
   width: 70%;
   max-width: 60rem;
-
+  min-width: 60rem;
   z-index: 8;
   user-select: none;
   display: flex;
@@ -489,7 +489,7 @@ img {
 #month-1 {
   position: absolute;
   top: 0;
-  transform: translate(0%,600%);
+  transform: translate(0%, 600%);
   z-index: 20;
   color: white;
   font-size: 3vh;
@@ -497,10 +497,10 @@ img {
 }
 
 #month-2 {
-  position:absolute;
-  bottom:  20%;
+  position: absolute;
+  bottom: 20%;
   z-index: 20;
-  transform: translate(450%,0);
+  transform: translate(450%, 0);
   color: white;
   font-size: 3vh;
   font-family: "work Sans";
@@ -512,7 +512,7 @@ img {
   border-radius: 50%;
   background-color: white;
   height: 2rem;
-  top: 17%;
+  top: 18%;
   z-index: 10;
 }
 
@@ -604,33 +604,39 @@ img {
   font-size: 11vh;
   font-family: "work Sans", sans-serif;
   font-weight: 600;
-  
+
 }
 
 @media screen and (max-width: 1450px) {
   .informacion #title {
-  font-size: 9vh;
-  font-family: "work Sans", sans-serif;
-  font-weight: 600;
-  
+    font-size: 8vh;
+    font-family: "work Sans", sans-serif;
+    font-weight: 600;
+
+  }
 }
-}
-@media screen and (max-width: 1350px) {
+
+@media screen and (max-width: 1150px) {
   .informacion #title {
-  font-size: 7vh;
-  font-family: "work Sans", sans-serif;
-  font-weight: 600;
-  
+    font-size: 5vh;
+    font-family: "work Sans", sans-serif;
+    font-weight: 600;
+
+  }
 }
-}
-@media screen and (max-width: 1050px) {
+
+@media screen and (max-width: 950px) {
   .informacion #title {
-  font-size: 5vh;
-  font-family: "work Sans", sans-serif;
-  font-weight: 600;
-  
+    font-size: 4.5vh;
+    font-family: "work Sans", sans-serif;
+    font-weight: 600;
+
+  }
+  .informacion {
+  width: 25%;
 }
 }
+
 .informacion #title span {
   color: #01c28d;
   font-family: "work Sans", sans-serif;
@@ -690,6 +696,88 @@ img {
   width: 3rem;
   height: auto;
   margin-left: 1rem;
+}
+
+/* style of mobile */
+@media screen and (max-width: 850px) {
+  .calculadora {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    height: 90%;
+    width: 80%;
+    max-width: 30rem;
+    min-width: 30rem;
+    z-index: 8;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+  }
+
+  .informacion {
+    position: absolute;
+    top: 8%;
+    left: 20%;
+    max-width: 75rem;
+    width: 60%;
+    z-index: 9;
+    font-family: "work Sans", sans-serif;
+    color: white;
+  }
+
+  .informacion #descripcion {
+    margin-top: 0rem;
+    margin-left: 4.56rem;
+    text-align: start;
+    font-family: "work Sans", sans-serif;
+    font-size: 2.5vh;
+    font-weight: 300;
+    width: 100%;
+  }
+
+  #month-1 {
+    transform: translate(0%, 980%);
+    font-size: 2.5vh;
+  }
+
+  #month-2 {
+    bottom: 30%;
+    font-size: 2.5vh;
+    transform: translate(350%, 0);
+  }
+
+  .form-controles {
+    bottom: 15%;
+    left: -5%;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .indicador-calculadora {
+    margin-top: 3.8%;
+  }
+
+  .circulo-indicador {
+    top: 29%;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .descripcion {
+    top: 2%;
+  }
+
+
+  .descripcion>p {
+    font-size: 3.5vh;
+  }
+
+  .form-controles {
+    top: 70%;
+  }
+
+  .control {}
 }
 </style>
 
