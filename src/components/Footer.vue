@@ -13,18 +13,19 @@
     <img src="/img/fondo-montana.png" />
   </div>
   <div class="fondo fondo-oscurecer"></div>
-
+ 
+  <div class="fondo-mundial">
+    <img src="/img/fondoCel2.png" alt="" srcset="" />
+  </div>
   <!-- Circuitos -->
   <div class="circuito circuito-izquierdo">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
   </div>
-  <div class="circuito circuito-derecho">
-    <img src="/img/calculadora/circuito-derecho.png" alt="" />
-  </div>
-  <!-- Filtros azul -->
-  <div class="degradado degradado_izquierdo"></div>
-  <div class="degradado degradado_derecho"></div>
 
+  <!-- Filtros azul -->
+  <div class="degradado degradado_derecho"></div>
+  <div class="degradado degradado_derecho"></div>
+  
   <!-- redes sociales -->
   <div :class="{
     'fondo-redes': true,
@@ -223,18 +224,6 @@ img {
 }
 
 /* redes */
-.fondo-redes {
-  position: relative;
-  margin: 0 auto;
-  width: 60%;
-  height: 100%;
-  background-color: #1a1e2957;
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 
 .fondo-redes-animation {
@@ -262,6 +251,25 @@ img {
   }
 }
 
+
+.redes:hover a img {
+  transition: 0.5s ease-in-out;
+  transform: translate(-20px, -40px) rotate(-25deg) scale(1.2);
+}
+
+.fondo-redes {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #1a1e2993;
+  opacity: 1;
+  z-index: 9;
+}
+
 .redes {
   min-width: 2rem;
   height: auto;
@@ -273,30 +281,55 @@ img {
 }
 
 .redes a img {
-  width: 3rem;
+  width: 6vw;
   height: auto;
 }
 
-.redes:hover a img {
-  transition: 0.5s ease-in-out;
-  transform: translate(-20px, -40px) rotate(-25deg) scale(1.2);
+.logo {
+  display: block;
 }
 
 /* style of  mobile */
 
-@media screen and (min-width: 769px) {
+@media screen and (max-width: 850px) {
+  
+.degradado {
+  background: linear-gradient(to right, #08047a 0.5%, transparent);
+  position: absolute;
+  width: 90%;
+  height:180%;
+  z-index: 7;
+  top: 0%;
+}
+
+
+.degradado_derecho {
+  transform: rotate(230deg);
+  left: 58%;
+}
+
+
+  .circuito {
+    scale: 1.65;
+    z-index: 2;
+  }
+
   .fondo-redes {
     position: relative;
-    top: 60%;
-    width: 100%;
-    height: 30%;
+    top: 0;
+    margin: 0 auto;
+    width: 60%;
+    height: 100%;
+    background-color: #1a1e29bd;
+    z-index: 6;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .redes {
-    min-width: 2rem;
+    min-width: 4rem;
     height: auto;
     margin-left: 0;
     padding: 2rem;
@@ -306,12 +339,22 @@ img {
   }
 
   .redes a img {
-    width: 6vw;
+    width: 4rem;
     height: auto;
   }
 
   .logo {
-    display: block;
+    display: none;
+  }
+  .fondo-mundial {
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    width: 50em;
+    height: 40em;
+    z-index: 3;
+    opacity: 100%;
+    scale: 1.3;
   }
 }
 </style>
