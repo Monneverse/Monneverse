@@ -329,9 +329,9 @@ img {
   display: block;
   position: fixed;
   top: 28%;
-  left: 3%;
+  left: 5%;
   height: 20%;
-  width: 30%;
+  width: 20%;
   text-align: space-between;
   font-size: 4vw;
   text-transform: uppercase;
@@ -343,7 +343,9 @@ img {
       #8753c1 0%,
       #6f6cbe 10%,
       #38a6b7 40%,
-      #5884bb 100%);
+      #5884bb 60%,
+      #11334e 100%);
+  font-family: Calibri;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

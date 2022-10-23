@@ -327,8 +327,8 @@ img {
 /* PRIMERAS CRIPTOS */
 .cryptopotato {
     position: absolute;
-    top: 14%;
-    left: 13%;
+    top: 18%;
+    left: 15%;
     width: auto;
     height: auto;
     z-index: 9;
@@ -385,7 +385,7 @@ img:hover {
 
 .criptotendencia {
     position: absolute;
-    top: 70%;
+    top: 65%;
     right: 15%;
     width: auto;
     height: auto;

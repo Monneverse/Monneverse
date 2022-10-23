@@ -3,7 +3,8 @@
 
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
-  <div :class="{ fondo: true,'fondo-montana': true,
+  <div :class="{
+    fondo: true, 'fondo-montana': true,
     'fondo-montana-animation': index_pagina == 4,
   }"><img src="/img/fondo-montana.png" /> </div>
   <div class="fondo fondo-oscurecer"></div>
@@ -41,11 +42,11 @@
 
       <img class="circulo circulo-verde" src="../assets/circulo-verde.svg" alt="circle green">
       <img @click="CambiarMonth" id="indicador-img"
-        :class="{'indicador-calculadora':true, hour48:classindicador==1, month1:classindicador==2,month2:classindicador==3 }"
+        :class="{ 'indicador-calculadora': true, hour48: classindicador == 1, month1: classindicador == 2, month2: classindicador == 3 }"
         src="../assets/indicador.svg" alt="index calculator">
 
       <div @click="CambiarMonth" class="descripcion">
-        <p>{{porcentajeInteres}}%</p>
+        <p>{{ porcentajeInteres }}%</p>
       </div>
       <p id="month-1">24 h</p>
       <p id="month-2">48 h</p>
@@ -74,12 +75,12 @@
   <article :class="{ informacion: true, 'aparecer-animation': index_pagina == 4 }">
     <div class="titulo-imagen">
       <img src="../assets/add.svg" alt="" />
-      <p id="title">{{porcentajeInteres}}%<span>*</span>48h</p>
+      <p id="title">{{ porcentajeInteres }}%<span>*</span>48h</p>
     </div>
 
     <p id="descripcion">
       First Two Months Every 48 Hours
-      <br>The Monner Will Return  {{porcentajeInteres}}% Interest
+      <br>The Monner Will Return {{ porcentajeInteres }}% Interest
     </p>
   </article>
 
@@ -155,7 +156,7 @@ export default {
           (this.porcentajeInteres / 100)
         ).toFixed(2);
       }
-      this.interes = "$ "+ this.interes;
+      this.interes = "$ " + this.interes;
     },
     CambiarMonth() {
       if (this.indicador < 3) {
@@ -175,7 +176,7 @@ export default {
 
 <style scoped>
 @font-face {
-  font-family: "work Sans";
+  font-family: "WorkSans";
   src: url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap")
 }
 
@@ -449,7 +450,7 @@ img {
 }
 
 .control>input {
-  font-family: "work Sans";
+  font-family: "WorkSans", sans-serif;
   font-size: 1.5rem;
   color: #067f4e;
   padding-right: 1rem;
@@ -473,7 +474,7 @@ img {
 }
 
 .control>label {
-  font-family: "work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
   font-size: 1.5rem;
   color: white;
   padding: 0rem;
@@ -489,21 +490,19 @@ img {
 #month-1 {
   position: absolute;
   top: 0;
-  transform: translate(0%,600%);
+  transform: translate(0%, 600%);
   z-index: 20;
   color: white;
-  font-size: 3vh;
-  font-family: "work Sans";
+  font-size: 4vh;
 }
 
 #month-2 {
-  position:absolute;
-  bottom:  20%;
+  position: absolute;
+  bottom: 20%;
   z-index: 20;
-  transform: translate(450%,0);
+  transform: translate(450%, 0);
   color: white;
-  font-size: 3vh;
-  font-family: "work Sans";
+  font-size: 4vh;
 }
 
 .circulo-indicador {
@@ -561,8 +560,8 @@ img {
   width: 100%;
   text-align: center;
   user-select: none;
-  font-family: "work Sans", sans-serif;
-  color: #ffc000;
+  font-family: "WorkSans", sans-serif;
+  color: #c27e01;
   font-size: 6vh;
   font-weight: 600;
 }
@@ -596,44 +595,46 @@ img {
   max-width: 35rem;
   width: 30%;
   z-index: 9;
-  font-family: "work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
   color: white;
 }
 
 .informacion #title {
-  font-size: 11vh;
-  font-family: "work Sans", sans-serif;
-  font-weight: 600;
-  
+  font-size: 10vh;
+  font-family: "WorkSans", sans-serif;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1250px) {
   .informacion #title {
-  font-size: 9vh;
-  font-family: "work Sans", sans-serif;
-  font-weight: 600;
-  
+    font-size: 9vh;
+    font-family: "work Sans", sans-serif;
+    font-weight: 600;
+
+  }
 }
-}
+
 @media screen and (max-width: 1150px) {
   .informacion #title {
-  font-size: 7vh;
-  font-family: "work Sans", sans-serif;
-  font-weight: 600;
-  
+    font-size: 7vh;
+    font-family: "work Sans", sans-serif;
+    font-weight: 600;
+
+  }
 }
-}
+
 @media screen and (max-width: 950px) {
   .informacion #title {
-  font-size: 5vh;
-  font-family: "work Sans", sans-serif;
-  font-weight: 600;
-  
+    font-size: 5vh;
+    font-family: "work Sans", sans-serif;
+    font-weight: 600;
+
+  }
 }
-}
+
 .informacion #title span {
   color: #01c28d;
-  font-family: "work Sans", sans-serif;
+  font-family: "WorkSans", sans-serif;
 }
 
 .informacion #descripcion {

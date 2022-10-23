@@ -363,7 +363,7 @@ img {
   width: 50%;
   height: 35%;
   position: fixed;
-  top: -31%;
+  top: -29%;
   left: 25%;
   background: rgb(8, 7, 32);
   background: linear-gradient(90deg,
@@ -379,7 +379,7 @@ img {
   height: 20%;
   background-color: white;
   position: fixed;
-  top: -18.8%;
+  top: -18%;
   left: 28%;
   border-radius: 1.5rem;
   -webkit-box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
@@ -390,7 +390,7 @@ img {
 
 .logo-redes {
   position: fixed;
-  bottom: 7%;
+  bottom: 6.7%;
   left: 41.9%;
   width: 20rem;
   height: 7rem;

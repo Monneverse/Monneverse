@@ -35,10 +35,12 @@
     <div class="luces">
         <img src="/img/luz.png" alt="" />
     </div>
-    <div class="fondoSolidity"> <a href="https://solidity.finance/audits/MONNERVERSE/" target="_blank">
-            <img src="/img/Exchanges/solidity1.png" class="auditoria1"></a></div>
-    <div class="fondoCertik"><a><img src="/img/Exchanges/certik.png" class="auditoria2"></a></div>
+    <div class="fondoSolidity"></div>
+    <div class="fondoCertik"></div>
     <div class="logos_auditoria">
+        <a href="https://solidity.finance/audits/MONNERVERSE/" target="_blank">
+            <img src="/img/Exchanges/solidity1.png" class="auditoria1"></a>
+        <a><img src="/img/Exchanges/certik.png" class="auditoria2"></a>
         <button class="btn_registro"><a
                 href="https://sites.google.com/view/whiterpaper-monnerverse/p%C3%A1gina-principal" target="_blank">
                 register EEUU</a></button>
@@ -248,7 +250,7 @@ img {
 .texto_auditoria {
     position: absolute;
     top: 20%;
-    left: 33%;
+    left: 28%;
     color: white;
     text-align: center;
     justify-content: center;
@@ -290,20 +292,21 @@ img {
 
 .fondoSolidity {
     position: fixed;
-    top: 52%;
+    top: 42%;
     left: 8%;
     width: 33%;
-    height: 16%;
+    height: 30%;
     border-radius: 0.5rem;
     background-color: white;
     z-index: 4;
 }
 
 .auditoria1 {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5rem;
+    position: absolute;
+    top: 45%;
+    left: 8.41%;
+    width: 32%;
+    height: 22%;
     z-index: 5;
 }
 
@@ -311,7 +314,7 @@ img {
     position: fixed;
     width: 33%;
     border: 2px solid #121026;
-    border-radius: 0.5rem;
+    border-radius: 2%;
     -webkit-box-shadow: 0px 2px 28px 5px #08047A;
     -moz-box-shadow: 0px 2px 28px 5px #08047A;
     box-shadow: 0px 2px 28px 15px #08047A;
@@ -319,28 +322,29 @@ img {
 
 .fondoCertik {
     position: fixed;
-    top: 52%;
+    top: 42%;
     right: 6%;
     width: 33%;
-    height: 16%;
+    height: 30%;
     border-radius: 0.5rem;
     background-color: white;
     z-index: 4;
 }
 
 .auditoria2 {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5rem;
+    position: absolute;
+    top: 42.7%;
+    right: 7.33%;
+    width: 29%;
+    height: 27.9%;
     z-index: 5;
 }
 
-.fondoCertik:hover {
+.auditoria2:hover {
     position: absolute;
-    width: 33%;
+    width: 30%;
     border: 2px solid #121026;
-    border-radius: 0.5rem;
+    border-radius: 2%;
     -webkit-box-shadow: 0px 2px 28px 5px #08047A;
     -moz-box-shadow: 0px 2px 28px 5px #08047A;
     box-shadow: 0px 2px 28px 15px #08047A;
@@ -390,7 +394,7 @@ img {
 .btn_registro {
     position: absolute;
     bottom: 8%;
-    left: 42%;
+    right: 44%;
     width: 14%;
     height: 8%;
     z-index: 5;
