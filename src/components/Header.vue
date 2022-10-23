@@ -3,12 +3,12 @@
     <a href="" @click="this.setPage(1, false)">
       <img src="/img/logo.svg" alt="logo monneverse" /></a>
   </div>
-  <div :class="{'menu-Burger':true, 'menu-Burger-active':isExpanded }" @click="isExpanded = !isExpanded">
+  <div :class="{ 'menu-Burger': true, 'menu-Burger-active': isExpanded }" @click="isExpanded = !isExpanded">
     <div class="line line__1"></div>
     <div class="line line__2"></div>
     <div class="line line__3"></div>
   </div>
-  <div id="barra" :class="{'barra-navegacion':true, 'barra-navegacion-active':isExpanded}">
+  <div id="barra" :class="{ 'barra-navegacion': true, 'barra-navegacion-active': isExpanded }">
 
     <nav class="barra" @mouseout="exit_mouse">
       <div class="logo-menu">
@@ -32,8 +32,19 @@
     </nav>
   </div>
 
+  <div class="arrow-container animated fadeInDown">
+    <div class="arrow-2">
+      <i class="fa fa-angle-down"></i>
+    </div>
+    <div class="arrow-1 animated hinge infinite zoomIn"></div>
+  </div>
+
   <div class="container-whitepaper">
     <button class="btn" @click="reDirect">WHITEPAPER</button>
+  </div>
+
+  <div class="btnMeta">
+    <button @click="addTokenFunction()" class="add">Add Token To MetaMask</button>
   </div>
 </template>
 
@@ -111,14 +122,43 @@ export default {
     },
     recargar() {
       try {
-        if(window.screen.width > 850){
-        var anim = document.getElementById("animacion");
-        var link = document.getElementsByClassName("home")[0];
-        anim.style.minWidth = link.offsetWidth + "px";
-        anim.style.left = this.getOffset(link).left + "px";
+        if (window.screen.width > 850) {
+          var anim = document.getElementById("animacion");
+          var link = document.getElementsByClassName("home")[0];
+          anim.style.minWidth = link.offsetWidth + "px";
+          anim.style.left = this.getOffset(link).left + "px";
         }
       } catch (error) {
         console.log("EL ERROR ES " + error);
+      }
+    },
+    async addTokenFunction() {
+      const tokenAddress = '0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893';
+      const tokenSymbol = 'MNR';
+      const tokenDecimals = 18;
+      const tokenImage = 'https://i.postimg.cc/xCHLP8sw/icon-32x32.png';
+
+      try {
+        const wasAdded = await ethereum.request({
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20',
+            options: {
+              address: tokenAddress,
+              symbol: tokenSymbol,
+              decimals: tokenDecimals,
+              image: tokenImage,
+            },
+          },
+        });
+
+        if (wasAdded) {
+          console('Thanks for your interest!');
+        } else {
+          console('HelloWorld Coin has not been added');
+        }
+      } catch (error) {
+        console.log(error);
       }
     },
     reDirect() {
@@ -135,6 +175,13 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: "Bahn";
+  src: url("/Fonts/BAHNSCHRIFT9.ttf");
+  font-style: semibold;
+  font-stretch: semi-condensed;
+}
+
 /* Style of web */
 .invisible {
   opacity: 0;
@@ -221,14 +268,13 @@ export default {
   position: fixed;
   width: 30%;
   top: 5%;
-  left: 77%;
+  left: 80%;
 
 }
 
 .btn {
-  font-family: "Montserrat";
+  font-family: "Bahn";
   font-size: 1.1vw;
-  font-weight: bold;
   border-radius: .5rem;
   border-style: none;
   border-color: transparent;
@@ -253,8 +299,6 @@ export default {
     display: none;
     opacity: 0;
   }
-
-
 
   .barra-navegacion {
     display: none;
@@ -331,8 +375,6 @@ export default {
     align-items: center;
     height: 2.5rem;
     width: 3rem;
-
-
   }
 
   .menu-Burger>.line {
@@ -382,4 +424,137 @@ export default {
     display: none;
   }
 }
+
+/* ADD METATASK */
+
+.add {
+  border: none;
+  position: fixed;
+  width: 12%;
+  height: 5%;
+  top: 5.5%;
+  right: 22%;
+  background: linear-gradient(90deg, rgba(85, 0, 255, 1) 35%, rgba(214, 0, 255, 1) 100%);
+  /* background: linear-gradient(to right,
+      #029F50 0%,
+      #0A664E 50%,
+      #0E444D 100%); */
+  border-radius: 3rem;
+  color: #fff;
+  font-size: 1vw;
+  font-family: "Bahn";
+  transition: ease-in all .5s;
+  animation: btnMeta infinite alternate 5s;
+}
+
+.add:hover {
+  cursor: pointer;
+}
+
+@keyframes add {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 70%;
+  }
+}
+
+/* ADD METATASK */
+
+/* SCROLL */
+.arrow-container {
+  width: 6%;
+  height: 12%;
+  position: fixed;
+  bottom: 0%;
+  right: 44%;
+}
+
+.arrow-1 {
+  width: 100%;
+  height: 100%;
+  background: #ffc000;
+  opacity: 0.5;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.arrow-2 {
+  width: 60px;
+  height: 60px;
+  background: #ffc000;
+  border-radius: 50%;
+  position: absolute;
+  top: 16%;
+  left: 18%;
+  z-index: 1;
+  display: table;
+}
+
+.arrow-2:before {
+  width: 90%;
+  height: 90%;
+  content: "";
+  border: 2px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 2%;
+  left: 2.5%;
+}
+
+.arrow-2 i.fa {
+  font-size: 30px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: #000;
+}
+
+/* Custom Animate.css */
+
+.animated.hinge {
+  -webkit-animation-duration: 1.6s;
+  animation-duration: 1.6s;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.4, .4, .4);
+    transform: scale3d(.4, .4, .4);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.4, .4, .4);
+    transform: scale3d(.4, .4, .4);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+
+/* SCROLL */
 </style>
