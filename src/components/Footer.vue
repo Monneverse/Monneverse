@@ -1,12 +1,10 @@
 <template>
   <!-- Fondo de la footer -->
-  <div
-    :class="{
-      logo: true,
-      'logo-animation': index_pagina == this.limite && enter,
-      'logo-animation-revert': index_pagina == this.limite && exit,
-    }"
-  >
+  <div :class="{
+    logo: true,
+    'logo-animation': index_pagina == this.limite && enter,
+    'logo-animation-revert': index_pagina == this.limite && exit,
+  }">
     <img src="/img/logo.svg" alt="logo monneverse" />
   </div>
   <div class="fondo fondo-footer"></div>
@@ -28,22 +26,18 @@
   <div class="degradado degradado_derecho"></div>
 
   <!-- redes sociales -->
-  <div
-    :class="{
-      'fondo-redes': true,
-      'fondo-redes-animation': index_pagina == this.limite && enter,
-      'fondo-redes-animation-revert': index_pagina == this.limite && exit,
-    }"
-  >
+  <div :class="{
+    'fondo-redes': true,
+    'fondo-redes-animation': index_pagina == this.limite && enter,
+    'fondo-redes-animation-revert': index_pagina == this.limite && exit,
+  }">
     <div class="redes">
       <a href="https://t.me/monnerversecommunity">
         <img src="../assets/footer/telegram.svg" alt="" />
       </a>
     </div>
     <div class="redes">
-      <a
-        href="https://www.facebook.com/Monnerverse-community-101148059377702/?ref=page_internal"
-      >
+      <a href="https://www.facebook.com/Monnerverse-community-101148059377702/?ref=page_internal">
         <img src="../assets/footer/facebook.svg" alt="" />
       </a>
     </div>
@@ -59,8 +53,7 @@
     </div>
     <div class="redes">
       <a href="https://t.me/monnerverse_community">
-        <img src="../assets/footer/instagram.svg" alt=""
-      /></a>
+        <img src="../assets/footer/instagram.svg" alt="" /></a>
     </div>
     <div class="redes">
       <a href="https://discord.com/invite/h7fRvek9dn">
@@ -94,6 +87,7 @@ export default {
 </script>
 
 <style scoped>
+/* style of web */
 img {
   height: 100%;
   width: 100%;
@@ -155,22 +149,18 @@ img {
 
 .fondo-footer {
   z-index: 0;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
 }
 
 .filtro-superior {
   z-index: 1;
-  background: radial-gradient(
-    circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
-  );
+  background: radial-gradient(circle at center,
+      #f9f9fa 0%,
+      #c8ced4 50%,
+      #a8aaaf 100%);
   mix-blend-mode: multiply;
 }
 
@@ -196,16 +186,16 @@ img {
 }
 
 .circuito-izquierdo {
-  left: -10%;
-  animation-name: mover_izquierdo;
+  left: -5%;
+  /* animation-name: mover_izquierdo;
   animation-duration: 5s;
   animation-direction: alternate;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
 }
 
 @keyframes mover_izquierdo {
   0% {
-    left: -10%;
+    left: -5%;
   }
 
   100% {
@@ -214,17 +204,17 @@ img {
 }
 
 .circuito-derecho {
-  right: -10%;
-  animation-name: mover_derecho;
+  right: -5%;
+  /* animation-name: mover_derecho;
   animation-duration: 5s;
   animation-direction: alternate-reverse;
   animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
 }
 
 @keyframes mover_derecho {
   0% {
-    right: -10%;
+    right: -5%;
   }
 
   100% {
@@ -245,18 +235,7 @@ img {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 769px) {
-  .fondo-redes {
-    position: relative;
-    top: 60%;
-    width: 100%;
-    height: 30%;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
 
 .fondo-redes-animation {
   animation-name: fondo-redes-animation;
@@ -297,7 +276,25 @@ img {
   width: 3rem;
   height: auto;
 }
+
+.redes:hover a img {
+  transition: 0.5s ease-in-out;
+  transform: translate(-20px, -40px) rotate(-25deg) scale(1.2);
+}
+
+/* style of  mobile */
+
 @media screen and (min-width: 769px) {
+  .fondo-redes {
+    position: relative;
+    top: 60%;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
   .redes {
     min-width: 2rem;
     height: auto;
@@ -312,13 +309,9 @@ img {
     width: 6vw;
     height: auto;
   }
-  .logo{
+
+  .logo {
     display: block;
   }
-}
-
-.redes:hover a img {
-  transition: 0.5s ease-in-out;
-  transform: translate(-20px, -40px) rotate(-25deg) scale(1.2);
 }
 </style>
