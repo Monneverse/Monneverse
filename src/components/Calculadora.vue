@@ -58,12 +58,12 @@
         'aparecer-animation': index_pagina == 4,
       }">
         <div class="control">
-          <input type="number" min="0" @input="Calculator" name="inversion" id="inversion" v-model="inversion"
+          <input type="text" min="0" @input="Calculator" name="inversion" id="inversion" v-model="inversion"
             placeholder="$ 100" />
           <label for="inversion">Invert</label>
         </div>
         <div class="control">
-          <input type="number" name="interes" id="interes" v-model="interes" placeholder="$ 100" disabled />
+          <input type="text" name="interes" id="interes" v-model="interes" placeholder="$ 100" disabled />
           <label for="interes">Interest</label>
         </div>
       </div>
@@ -136,7 +136,7 @@ export default {
     return {
       inversion: 1500,
       porcentajeInteres: 6.2,
-      interes: 0,
+      interes: "$ 0",
       indicador: State.Hour0
     };
   },
@@ -155,6 +155,7 @@ export default {
           (this.porcentajeInteres / 100)
         ).toFixed(2);
       }
+      this.interes = "$ "+ this.interes;
     },
     CambiarMonth() {
       if (this.indicador < 3) {
@@ -444,6 +445,7 @@ img {
   justify-content: center;
   align-items: center;
   margin-left: 10%;
+  z-index: 1000;
 }
 
 .control>input {
@@ -452,7 +454,8 @@ img {
   color: #067f4e;
   padding-right: 1rem;
   padding-left: 1rem;
-  width: 8rem;
+  width: 60%;
+  max-width: 4rem;
   min-height: 2.5rem;
   border-radius: 2rem;
   max-width: 8rem;
