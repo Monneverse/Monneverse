@@ -147,12 +147,6 @@ img {
 }
 
 .logo {
-    position: fixed;
-    z-index: 5;
-    opacity: 40%;
-}
-
-#logo-2 {
     width: 34%;
     height: 56%;
     position: fixed;
@@ -272,8 +266,9 @@ img {
 
     #logo-2 {
         position: absolute;
-        top: 70%;
-        left: -4%;
+        width: 50%;
+        top: 56%;
+        left: 2%;
         opacity: 50%;
         z-index: 4;
     }
@@ -284,6 +279,144 @@ img {
         left: -6%;
         width: 140%;
         height: 90%;
+        visibility: hidden;
+    }
+
+    .indicador {
+        position: absolute;
+        top: 45%;
+        left: 40%;
+        width: 18%;
+        height: 14%;
+        border-radius: 2rem;
+        background: linear-gradient(to top,
+                #029F50 0%,
+                #0A664E 50%,
+                #0E444D 100%);
+        z-index: 8;
+        visibility: hidden;
+    }
+
+    .circulo {
+        position: absolute;
+        top: 31%;
+        left: 38%;
+        width: 22%;
+        height: 10%;
+        border-radius: 5rem;
+        z-index: 8;
+        background: #1A1E29;
+        visibility: hidden;
+    }
+}
+
+@media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
+    .fondo_rayos {
+        position: fixed;
+        left: -35%;
+        top: -30%;
+        width: 150%;
+        height: 150%;
+        opacity: 50%;
+        z-index: 1;
+        background-size: no-repeat center center fixed;
+    }
+
+    .fondo_rayos img {
+        height: 100%;
+    }
+
+    .degradado {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 35%;
+        left: 55%;
+        z-index: 9;
+    }
+
+    .degradado_izquierdo {
+        display: none;
+    }
+
+    .fondo-montana {
+        position: fixed;
+        top: 38%;
+        left: -56%;
+        width: 200%;
+        height: 80%;
+    }
+
+    .fondo-mundial {
+        position: fixed;
+        top: 25em;
+        left: -9em;
+        width: 50em;
+        height: 35em;
+        z-index: 3;
+        opacity: 100%;
+    }
+
+    .fondo-calculadora {
+        width: 100%;
+        height: 100%;
+    }
+
+    .circuito-derecho {
+        display: none;
+    }
+
+    .circuito-izquierdo {
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 10%;
+        height: 100%;
+        display: none;
+    }
+
+    #logo-2 {
+        position: fixed;
+        top: 55%;
+        left: 0%;
+        width: 50%;
+        opacity: 50%;
+        z-index: 3;
+    }
+
+    .fondoTokenomics {
+        position: fixed;
+        top: 0%;
+        left: -6%;
+        width: 140%;
+        height: 90%;
+        visibility: hidden;
+    }
+
+    .indicador {
+        position: absolute;
+        top: 45%;
+        left: 40%;
+        width: 18%;
+        height: 14%;
+        border-radius: 2rem;
+        background: linear-gradient(to top,
+                #029F50 0%,
+                #0A664E 50%,
+                #0E444D 100%);
+        z-index: 8;
+        visibility: hidden;
+    }
+
+    .circulo {
+        position: absolute;
+        top: 31%;
+        left: 38%;
+        width: 22%;
+        height: 10%;
+        border-radius: 5rem;
+        z-index: 8;
+        background: #1A1E29;
         visibility: hidden;
     }
 }
@@ -350,6 +483,20 @@ img {
     width: 30%;
     height: 30%;
     z-index: 9;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+    .cryptopotato {
+        visibility: hidden;
+    }
+
+    .coinquora {
+        visibility: hidden;
+    }
+
+    .coinrepublic {
+        visibility: hidden;
+    }
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
