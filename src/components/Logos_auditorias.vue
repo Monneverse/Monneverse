@@ -217,9 +217,102 @@ img {
     .fondo-mundial {
         position: fixed;
         top: 12em;
-        left: -12em;
+        left: -10em;
         width: 50em;
         height: 35em;
+        z-index: 3;
+        opacity: 80%;
+    }
+
+    .circuito-derecho {
+        visibility: hidden;
+    }
+
+    .circuito-izquierdo {
+        left: -70%;
+    }
+
+    #logo-1 {
+        width: 63%;
+        max-height: 14%;
+        position: fixed;
+        top: 65%;
+        left: -7%;
+        z-index: 3;
+        opacity: 70%;
+    }
+}
+
+@media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
+
+    .fondo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #121026;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        opacity: 30%;
+        z-index: 3;
+    }
+
+    .fondo-oscuro {
+        position: fixed;
+        top: 0;
+        left: 0em;
+        width: 100em;
+        height: 100em;
+        background: radial-gradient(circle at center,
+                #48d0ab 10%,
+                #097561 20%,
+                #0F161C 100%);
+        z-index: 1;
+        opacity: 100%;
+    }
+
+    .luces {
+        visibility: hidden;
+    }
+
+    .degradado {
+        background: linear-gradient(to right, #090380 55%, transparent);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+        top: 38%;
+        opacity: 90%;
+    }
+
+    .degradado_izquierdo {
+        transform: rotate(-60deg);
+        right: 55%;
+        visibility: hidden;
+
+    }
+
+    .degradado_derecho {
+        transform: rotate(230deg);
+        left: 40%;
+    }
+
+    .fondo-montana {
+        position: fixed;
+        top: 24%;
+        left: -143%;
+        width: 100em;
+        height: 100em;
+        z-index: 3;
+        opacity: 20%;
+    }
+
+    .fondo-mundial {
+        position: fixed;
+        top: 22em;
+        left: -8em;
+        width: 50em;
+        height: 40em;
         z-index: 3;
         opacity: 80%;
     }
@@ -358,8 +451,15 @@ img {
         width: 50%
     }
 
-    .fondoSolidity:hover {
-        position: fixed;
+    .auditoria1 {
+        top: 30%;
+        left: 26%;
+        height: 15%;
+        width: 50%;
+        border-radius: 1rem;
+    }
+
+    .auditoria1:hover {
         width: 50%;
         border: 2px solid #121026;
         border-radius: 0.5rem;
@@ -375,8 +475,63 @@ img {
         height: 15%;
     }
 
-    .fondoCertik:hover {
-        position: fixed;
+    .auditoria2 {
+        top: 50%;
+        left: 26%;
+        width: 50%;
+        height: 15%;
+    }
+
+    .auditoria2:hover {
+        width: 50%;
+        border: 2px solid #121026;
+        border-radius: 0.5rem;
+        -webkit-box-shadow: 0px 2px 28px 5px #08047A;
+        -moz-box-shadow: 0px 2px 28px 5px #08047A;
+        box-shadow: 0px 2px 28px 15px #08047A;
+    }
+}
+
+@media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
+    .fondoSolidity {
+        top: 30%;
+        left: 26%;
+        height: 15%;
+        width: 50%
+    }
+
+    .auditoria1 {
+        top: 30%;
+        left: 26%;
+        height: 15%;
+        width: 50%;
+        border-radius: 1rem;
+    }
+
+    .auditoria1:hover {
+        width: 50%;
+        border: 2px solid #121026;
+        border-radius: 0.5rem;
+        -webkit-box-shadow: 0px 2px 28px 5px #08047A;
+        -moz-box-shadow: 0px 2px 28px 5px #08047A;
+        box-shadow: 0px 2px 28px 15px #08047A;
+    }
+
+    .fondoCertik {
+        top: 50%;
+        left: 26%;
+        width: 50%;
+        height: 15%;
+    }
+
+    .auditoria2 {
+        top: 50%;
+        left: 26%;
+        width: 50%;
+        height: 15%;
+    }
+
+    .auditoria2:hover {
         width: 50%;
         border: 2px solid #121026;
         border-radius: 0.5rem;
@@ -477,6 +632,7 @@ img {
     .logo-redes {
         left: .5rem;
         bottom: .5rem;
+        visibility: hidden;
     }
 
     .icon {
