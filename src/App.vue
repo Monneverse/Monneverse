@@ -25,7 +25,8 @@ import Footer from "./components/Footer.vue";
 
 <template>
   <header>
-    <Header :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage"></Header>
+    <Header :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage" :setNext="next"  :indexPagina="index_pagina" >
+    </Header>
   </header>
 
   <main class="scroll-main">
@@ -131,6 +132,16 @@ export default {
     };
   },
   methods: {
+    next() {
+      let newPosition = this.index_pagina;
+
+      if (this.index_pagina < this.limite) {
+        newPosition = this.index_pagina + 1;
+        this.isRevert = false;
+        this.CambiarContenedor(newPosition)
+      }
+     
+    },
     setOnPage(id, visible = true) {
       this.index = id;
       this.isVisibleLogo = visible;
@@ -203,6 +214,34 @@ export default {
         this.NavegarUp();
       }
     },
+    CambiarContenedor(newPosition) {
+      setTimeout(() => {
+        this.index_pagina = newPosition;
+        this.isVisibleLogo = true;
+        if (
+          this.listaPaginaDondeSeOcultaLogo.filter(
+            (x) => x == this.index_pagina
+          ).length > 0
+        ) {
+          this.isVisibleLogo = false;
+        }
+
+        location.hash = "#" + this.index_pagina;
+        window.history.pushState(
+          {},
+          document.title,
+          window.location.pathname
+        );
+        this.UpdateNav(this.index_pagina);
+        this.exitAnimation = false;
+        this.enterAnimation = true;
+      }, 500);
+
+      setTimeout(() => {
+        this.scroll = true;
+        this.enterAnimation = false;
+      }, 1000);
+    },
     Navegar() {
       if (this.scroll) {
         this.exitAnimation = true;
@@ -220,32 +259,7 @@ export default {
             this.isRevert = true;
           }
         }
-        setTimeout(() => {
-          this.index_pagina = newPosition;
-          this.isVisibleLogo = true;
-          if (
-            this.listaPaginaDondeSeOcultaLogo.filter(
-              (x) => x == this.index_pagina
-            ).length > 0
-          ) {
-            this.isVisibleLogo = false;
-          }
-
-          location.hash = "#" + this.index_pagina;
-          window.history.pushState(
-            {},
-            document.title,
-            window.location.pathname
-          );
-          this.UpdateNav(this.index_pagina);
-          this.exitAnimation = false;
-          this.enterAnimation = true;
-        }, 500);
-
-        setTimeout(() => {
-          this.scroll = true;
-          this.enterAnimation = false;
-        }, 1000);
+        this.CambiarContenedor(newPosition)
       }
     },
     NavegarDown() {

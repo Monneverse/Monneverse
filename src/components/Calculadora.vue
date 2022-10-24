@@ -103,7 +103,7 @@
   </div>
 </template>
 
-<script>
+<script lang="js">
 const State = Object.freeze({ Hour0: 1, Hour24: 2, Hour48: 3 });
 export default {
   props: {
@@ -490,7 +490,7 @@ img {
 #month-1 {
   position: absolute;
   top: 0;
-  transform: translate(0%, 600%);
+  transform: translate(0%, 450%);
   z-index: 20;
   color: white;
   font-size: 4vh;

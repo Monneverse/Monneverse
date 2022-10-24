@@ -32,15 +32,16 @@
     </nav>
   </div>
 
-  <div class="arrow-container animated fadeInDown">
-    <div class="arrow-2">
+
+  <div v-if="this.indexPagina != 20" class="arrow-container animated fadeInDown">
+    <div   @click="this.setNext()" class="arrow-2">
       <i class="fa fa-angle-down"></i>
     </div>
     <div class="arrow-1 animated hinge infinite zoomIn"></div>
   </div>
 
   <div class="container-whitepaper">
-    <button class="btn" @click="reDirect">WHITEPAPER</button>
+    <button class="btn" @click="reDirect">WHITEPAPER </button>
   </div>
 
   <div class="btnMeta">
@@ -48,7 +49,7 @@
   </div>
 </template>
 
-<script>
+<script lang="js">
 export default {
   data() {
     return {
@@ -58,20 +59,7 @@ export default {
       isExpanded: false
     };
   },
-  props: {
-    index: {
-      type: Number,
-      required: false,
-    },
-    isVisible: {
-      type: Boolean,
-      required: true,
-    },
-    setPage: {
-      type: Function,
-      required: true,
-    },
-  },
+  props: ["index","isVisible","setPage","setNext","indexPagina"] ,
   computed: {
     indexF: {
       get() {
@@ -430,10 +418,11 @@ export default {
 .add {
   border: none;
   position: fixed;
-  width: 12%;
-  height: 5%;
-  top: 5.5%;
-  right: 22%;
+  width: 20%;
+  min-width: 7rem;
+  height: auto;
+  top: 12%;
+  right: 2%;
   background: linear-gradient(90deg, rgba(85, 0, 255, 1) 35%, rgba(214, 0, 255, 1) 100%);
   /* background: linear-gradient(to right,
       #029F50 0%,
@@ -441,13 +430,11 @@ export default {
       #0E444D 100%); */
   border-radius: 3rem;
   color: #fff;
-  font-size: 1vw;
+  font-size: 1.5vw;
+  padding: .5rem;
   font-family: "Bahn";
   transition: ease-in all .5s;
   animation: btnMeta infinite alternate 5s;
-}
-
-.add:hover {
   cursor: pointer;
 }
 
@@ -465,11 +452,16 @@ export default {
 
 /* SCROLL */
 .arrow-container {
-  width: 6%;
-  height: 12%;
+  width: 5rem;
+  height: 5rem;
   position: fixed;
   bottom: 0%;
-  right: 44%;
+  left: 44%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0%;
+  padding: 0%;
 }
 
 .arrow-1 {
@@ -479,6 +471,11 @@ export default {
   opacity: 0.5;
   border-radius: 50%;
   position: absolute;
+  top: 0% ;
+  left: 0%;
+  margin: 0%;
+  padding: 0%;
+  cursor: pointer;
 }
 
 .arrow-2 {
@@ -486,11 +483,14 @@ export default {
   height: 60px;
   background: #ffc000;
   border-radius: 50%;
-  position: absolute;
-  top: 16%;
-  left: 18%;
+  position: relative;
+  top: 0%;
+  left: 0%;
   z-index: 1;
   display: table;
+  margin: 0%;
+  padding: 0%;
+  cursor: pointer;
 }
 
 .arrow-2:before {
