@@ -248,7 +248,7 @@ img {
   .fondo-mundial {
     position: fixed;
     top: 12em;
-    left: -16em;
+    left: -10em;
     width: 50em;
     height: 35em;
     z-index: 3;
@@ -324,6 +324,118 @@ img {
   }
 }
 
+@media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #121026;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    opacity: 30%;
+    z-index: 3;
+  }
+
+  .fondo-oscuro {
+    position: fixedq;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center,
+        #48d0ab 0%,
+        #097561 50%,
+        #505863 100%);
+    z-index: 1;
+  }
+
+  .fondo-mundial {
+    position: fixed;
+    top: 25em;
+    left: -8em;
+    width: 50em;
+    height: 35em;
+    z-index: 3;
+    opacity: 80%;
+  }
+
+  .fondo-montana {
+    position: fixed;
+    top: 40%;
+    left: -110%;
+    width: 70em;
+    height: 40em;
+    z-index: 3;
+    opacity: 20%;
+  }
+
+  .fondo-oscuro {
+    position: fixed;
+    top: 0;
+    left: 0em;
+    width: 100em;
+    height: 100em;
+    background: radial-gradient(circle at center,
+        #48d0ab 10%,
+        #097561 30%,
+        #0F161C 100%);
+    z-index: 1;
+    opacity: 100%;
+  }
+
+  .fondoTokenomics {
+    position: fixed;
+    top: 20%;
+    left: -12%;
+    width: 130%;
+    height: 60%;
+    visibility: hidden;
+  }
+
+  .degradado {
+    background: linear-gradient(to right, #090380 55%, transparent);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    top: 38%;
+    opacity: 90%;
+  }
+
+  .degradado_izquierdo {
+    transform: rotate(-60deg);
+    right: 55%;
+    visibility: hidden;
+
+  }
+
+  .degradado_derecho {
+    transform: rotate(230deg);
+    left: 40%;
+  }
+
+  .circuito-izquierdo {
+    left: -70%;
+  }
+
+  #logo-1 {
+    width: 63%;
+    max-height: 14%;
+    position: fixed;
+    top: 75%;
+    left: -8%;
+    z-index: 3;
+    opacity: 50%;
+  }
+}
+
 /* CONTENIDO */
 .exchange_text {
   display: block;
@@ -356,6 +468,17 @@ img {
   .exchange_text {
     top: 12%;
     left: 16%;
+    width: 73%;
+    height: 10.5%;
+    font-size: 12vw;
+    z-index: 999;
+  }
+}
+
+@media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
+  .exchange_text {
+    top: 6%;
+    left: 26%;
     width: 73%;
     height: 10.5%;
     font-size: 12vw;
@@ -411,6 +534,10 @@ img {
     width: 100%;
     height: 100%;
     z-index: 999;
+  }
+
+  .logo-redes {
+    visibility: hidden;
   }
 }
 
