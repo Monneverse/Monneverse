@@ -1,6 +1,6 @@
 <template>
   <!-- video de fondo -->
-  <video src="/public/video/Multimedia1.mp4" autoplay="true" muted="true" loop="true" class="video-fondo"
+  <video src="video/video_fondo_lite.m4v" autoplay="true" muted="true" loop="true" class="video-fondo"
     poster="/img/fondo_binario.png"></video>
   <!-- logos de fondos -->
   <div id="logo-1" class="logo">
