@@ -1,7 +1,7 @@
 <template>
   <!-- video de fondo -->
   <video autoplay="true" muted="true" loop="true" class="video-fondo" poster="/img/fondo_binario.png">
-    <source src="/video/Full HD Lite.mp4" type="video/mp4">
+    <source src="/video/Full-HD-Lite.mp4" type="video/mp4">
     <source src="/video/fondo-lite.mp4">
     <img src="/img/fondo_binario.png" />
   </video>
