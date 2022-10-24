@@ -703,7 +703,7 @@ img {
     height: 90%;
     width: 70%;
     max-width: 30rem;
-    min-width: 30rem;
+    min-width: 25rem;
     z-index: 8;
     user-select: none;
     display: flex;
@@ -774,7 +774,9 @@ img {
     width: 90%;
     left: 2%;
   }
-
+  .logo-redes {
+    display: none;
+  }
 }
 </style>
 

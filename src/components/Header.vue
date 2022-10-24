@@ -29,12 +29,28 @@
         traslado_animacion: true,
         invisible: indexF == 0,
       }"></div>
+      <div class="logo-redes">
+
+        <a class="icon" href="https://t.me/monnerversecommunity" target="_blank">
+          <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+        </a>
+
+        <a class="icon" href="https://www.reddit.com/user/monnerverse" target="_blank">
+          <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
+        </a>
+
+
+        <a class="icon" href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+          <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+        </a>
+
+      </div>
     </nav>
   </div>
 
 
   <div v-if="this.indexPagina != 20" class="arrow-container animated fadeInDown">
-    <div   @click="this.setNext()" class="arrow-2">
+    <div @click="this.setNext()" class="arrow-2">
       <i class="fa fa-angle-down"></i>
     </div>
     <div class="arrow-1 animated hinge infinite zoomIn"></div>
@@ -59,7 +75,7 @@ export default {
       isExpanded: false
     };
   },
-  props: ["index","isVisible","setPage","setNext","indexPagina"] ,
+  props: ["index", "isVisible", "setPage", "setNext", "indexPagina"],
   computed: {
     indexF: {
       get() {
@@ -177,6 +193,11 @@ export default {
 
 .menu-Burger {
   display: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
 
 .logo {
@@ -472,7 +493,7 @@ export default {
   opacity: 0.5;
   border-radius: 50%;
   position: absolute;
-  top: 0% ;
+  top: 0%;
   left: 0%;
   margin: 0%;
   padding: 0%;
@@ -557,6 +578,28 @@ export default {
 .zoomIn {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
+}
+
+/* redes sociales */
+.logo-redes {
+
+  margin-top: 10%;
+  width: 100%;
+  height: 5rem;
+  border-top: 1px solid white;
+  padding-top: 1rem;
+  z-index: 14;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+
+.logo-redes .icon {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1rem;
 }
 
 /* SCROLL */
