@@ -773,7 +773,6 @@ img {
     top: 70%;
   }
 
-  .control {}
 }
 </style>
 
