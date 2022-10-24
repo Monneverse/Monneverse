@@ -25,7 +25,7 @@
   </div>
   <div class="iluminacionLogo"></div>
   <div class="fondo-mundial">
-    <img src="/img/celFondo.svg" alt="" srcset="" />
+    <img src="/img/fondo_Cel.png" alt="" srcset="" />
   </div>
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
@@ -291,6 +291,112 @@ img {
   }
 }
 
+@media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-fondo {
+    top: 0%;
+    width: 100em;
+    height: 100em;
+    z-index: 0;
+  }
+
+  .fondo-oscuro {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100em;
+    height: 100em;
+    background: radial-gradient(circle at center,
+        #48d0ab 0%,
+        #097561 50%,
+        #505863 100%);
+    z-index: 1;
+  }
+
+  .fondo-mundial {
+    position: fixed;
+    top: 40%;
+    left: -8em;
+    width: 50em;
+    height: 40em;
+    z-index: 8;
+    opacity: 100%;
+  }
+
+  .fondo-montana {
+    position: fixed;
+    top: 38%;
+    left: -59%;
+    width: 200%;
+    height: 70%;
+  }
+
+  .fondo-oscuro {
+    position: fixed;
+    top: 0;
+    left: -15em;
+    width: 50em;
+    height: 80em;
+    background: radial-gradient(circle at center,
+        #48d0ab 10%,
+        #097561 30%,
+        #0F161C 100%);
+    z-index: 3;
+    opacity: 70%;
+  }
+
+  .degradado {
+    position: fixed;
+    top: 10%;
+    left: -26%;
+    z-index: 9;
+  }
+
+  .degradado_derecho {
+    width: 60em;
+    opacity: 100%;
+    opacity: 80%;
+  }
+
+  .degradado_izquierdo {
+    display: none;
+  }
+
+  #logo-1 {
+    width: 17em;
+    max-height: 14rem;
+    position: fixed;
+    top: 0em;
+    left: 0em;
+    right: 50%;
+    bottom: -58%;
+    z-index: 9;
+    opacity: 70%;
+  }
+
+  #logo-2 {
+    width: 8em;
+    left: 17em;
+    top: 12em;
+    z-index: 5;
+    opacity: 70%;
+  }
+
+  .semi-circle {
+    position: fixed;
+    left: 0%;
+    top: 52em;
+    width: 13em;
+    height: 14em;
+    z-index: 10;
+    opacity: 100%;
+  }
+}
+
 .welcome {
   position: fixed;
   display: flex;
@@ -402,6 +508,70 @@ img {
     position: fixed;
     top: 14em;
     left: 0.5em;
+    justify-content: center;
+    width: 65%;
+    z-index: 9;
+
+  }
+
+  .welcome_text p {
+    font-size: 7vw;
+    font-family: "Bahn";
+    color: white;
+    text-align: left;
+    text-transform: capitalize;
+  }
+
+  .welcome_text p b {
+    text-transform: uppercase;
+
+  }
+
+  .welcome_text p span {
+    color: #FFC000;
+    font-size: 10vw;
+
+  }
+}
+
+@media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
+  .welcome {
+    position: fixed;
+    justify-content: center;
+    top: 8em;
+    left: -2%;
+    width: 100%;
+    z-index: 99;
+  }
+
+  .welcome1 {
+    position: fixed;
+    justify-content: center;
+    top: 12em;
+    left: 0em;
+    width: 100%;
+    z-index: 6;
+
+  }
+
+  .welcome p {
+    font-size: 18vw;
+    font-family: "Bahn";
+    color: white;
+    text-align: left;
+  }
+
+  .welcome1 p {
+    font-size: 16vw;
+    font-family: "Bahn";
+    color: white;
+    text-align: left;
+  }
+
+  .welcome_text {
+    position: fixed;
+    top: 18em;
+    left: 2.5em;
     justify-content: center;
     width: 65%;
     z-index: 9;
