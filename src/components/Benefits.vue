@@ -317,32 +317,143 @@ defineProps({
     animation-iteration-count: infinite;
     animation-direction: alternate;
   }
+}
 
-  @media screen and (min-width: 768px) {
-    .logo-redes {
-      display: flex;
-    }
-
-    .reflector {
-      display: flex;
-    }
+@media screen and (min-width: 768px) {
+  .logo-redes {
+    display: flex;
   }
 
-  @keyframes reflector {
-    0% {
-      opacity: 10%;
-    }
+  .reflector {
+    display: flex;
+  }
+}
 
-    50% {
-      opacity: 30%;
-    }
-
-    100% {
-      opacity: 50%;
-    }
+@keyframes reflector {
+  0% {
+    opacity: 10%;
   }
 
-  .reflector-derecho {
+  50% {
+    opacity: 30%;
+  }
+
+  100% {
+    opacity: 50%;
+  }
+}
+
+.reflector-derecho {
+  position: absolute;
+  top: 65%;
+  bottom: 0%;
+  left: 50%;
+  width: 40%;
+  height: 90%;
+}
+
+.reflector-izquierdo {
+  position: absolute;
+  top: 65%;
+  bottom: 0%;
+  left: 10%;
+  width: 40%;
+  height: 90%;
+}
+
+.luz-1 {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  border-radius: 50%;
+  bottom: -30%;
+  transform: rotate(-30deg);
+  background: radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.5) 0%,
+      transparent 47%,
+      rgba(184, 184, 184, 0) 100%);
+  filter: blur(3rem);
+  left: 30%;
+}
+
+.luz-2 {
+  position: absolute;
+  width: 30%;
+  height: 140%;
+  border-radius: 50%;
+  bottom: -30%;
+  left: 40%;
+  transform: rotate(0deg);
+  background: radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.8) 0%,
+      transparent 47%,
+      rgba(184, 184, 184, 0) 100%);
+  filter: blur(3rem);
+}
+
+.luz-3 {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  border-radius: 50%;
+  bottom: -30%;
+  left: 55%;
+  transform: rotate(-150deg);
+  background: radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.8) 0%,
+      transparent 47%,
+      rgba(184, 184, 184, 0) 100%);
+  filter: blur(3rem);
+}
+
+.animacion-aparecer {
+  animation-duration: 0.5s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+.animacion-dezplazamiento {
+  animation-name: dezplazamiento;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes dezplazamiento {
+  0% {
+    left: 0.2rem;
+  }
+
+  100% {
+    left: 3rem;
+  }
+}
+
+.animacion-dezplazamiento-reflector-derecho {
+  animation-duration: 0.5s;
+  animation-name: dezplazar_reflector_derecho;
+  animation-iteration-count: 1;
+}
+
+@keyframes dezplazar_reflector_derecho {
+  0% {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    width: 20%;
+    height: 50%;
+  }
+
+  100% {
     position: absolute;
     top: 65%;
     bottom: 0%;
@@ -350,8 +461,24 @@ defineProps({
     width: 40%;
     height: 90%;
   }
+}
 
-  .reflector-izquierdo {
+.animacion-dezplazamiento-reflector-izquierdo {
+  animation-duration: 0.5s;
+  animation-name: dezplazar_reflector_izquierdo;
+  animation-iteration-count: 1;
+}
+
+@keyframes dezplazar_reflector_izquierdo {
+  0% {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    width: 20%;
+    height: 50%;
+  }
+
+  100% {
     position: absolute;
     top: 65%;
     bottom: 0%;
@@ -359,151 +486,25 @@ defineProps({
     width: 40%;
     height: 90%;
   }
+}
 
-  .luz-1 {
+.animacion-circuito {
+  animation-duration: 0.5s;
+  animation-name: dezplazar_circuito;
+  animation-iteration-count: 1;
+}
+
+@keyframes dezplazar_circuito {
+  0% {
     position: absolute;
-    width: 30%;
-    height: 100%;
-    border-radius: 50%;
-    bottom: -30%;
-    transform: rotate(-30deg);
-    background: radial-gradient(ellipse at center,
-        rgba(255, 255, 255, 0.5) 0%,
-        transparent 47%,
-        rgba(184, 184, 184, 0) 100%);
-    filter: blur(3rem);
-    left: 30%;
+    top: 30%;
+    left: 80%;
   }
 
-  .luz-2 {
+  100% {
     position: absolute;
-    width: 30%;
-    height: 140%;
-    border-radius: 50%;
-    bottom: -30%;
-    left: 40%;
-    transform: rotate(0deg);
-    background: radial-gradient(ellipse at center,
-        rgba(255, 255, 255, 0.8) 0%,
-        transparent 47%,
-        rgba(184, 184, 184, 0) 100%);
-    filter: blur(3rem);
+    top: 20%;
+    left: 65%;
   }
-
-  .luz-3 {
-    position: absolute;
-    width: 30%;
-    height: 100%;
-    border-radius: 50%;
-    bottom: -30%;
-    left: 55%;
-    transform: rotate(-150deg);
-    background: radial-gradient(ellipse at center,
-        rgba(255, 255, 255, 0.8) 0%,
-        transparent 47%,
-        rgba(184, 184, 184, 0) 100%);
-    filter: blur(3rem);
-  }
-
-  .animacion-aparecer {
-    animation-duration: 0.5s;
-    animation-name: aparecer;
-    animation-iteration-count: 1;
-  }
-
-  @keyframes aparecer {
-    0% {
-      opacity: 0%;
-    }
-
-    100% {
-      opacity: 100%;
-    }
-  }
-
-  .animacion-dezplazamiento {
-    animation-name: dezplazamiento;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-  }
-
-  @keyframes dezplazamiento {
-    0% {
-      left: 0.2rem;
-    }
-
-    100% {
-      left: 3rem;
-    }
-  }
-
-  .animacion-dezplazamiento-reflector-derecho {
-    animation-duration: 0.5s;
-    animation-name: dezplazar_reflector_derecho;
-    animation-iteration-count: 1;
-  }
-
-  @keyframes dezplazar_reflector_derecho {
-    0% {
-      position: absolute;
-      top: 30%;
-      left: 40%;
-      width: 20%;
-      height: 50%;
-    }
-
-    100% {
-      position: absolute;
-      top: 65%;
-      bottom: 0%;
-      left: 50%;
-      width: 40%;
-      height: 90%;
-    }
-  }
-
-  .animacion-dezplazamiento-reflector-izquierdo {
-    animation-duration: 0.5s;
-    animation-name: dezplazar_reflector_izquierdo;
-    animation-iteration-count: 1;
-  }
-
-  @keyframes dezplazar_reflector_izquierdo {
-    0% {
-      position: absolute;
-      top: 30%;
-      left: 40%;
-      width: 20%;
-      height: 50%;
-    }
-
-    100% {
-      position: absolute;
-      top: 65%;
-      bottom: 0%;
-      left: 10%;
-      width: 40%;
-      height: 90%;
-    }
-  }
-
-  .animacion-circuito {
-    animation-duration: 0.5s;
-    animation-name: dezplazar_circuito;
-    animation-iteration-count: 1;
-  }
-
-  @keyframes dezplazar_circuito {
-    0% {
-      position: absolute;
-      top: 30%;
-      left: 80%;
-    }
-
-    100% {
-      position: absolute;
-      top: 20%;
-      left: 65%;
-    }
-  }
+}
 </style>

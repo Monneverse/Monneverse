@@ -80,10 +80,7 @@
 
     <p id="descripcion">
       First Two Months Every 48 Hours
-      <<<<<<< HEAD <br>The Monner Will Return {{ porcentajeInteres }}% Interest
-        =======
-        <br>The Monner Will Return {{ porcentajeInteres }}% Interest
-        >>>>>>> Juan_Almeida
+    <br>The Monner Will Return {{ porcentajeInteres }}% Interest
     </p>
   </article>
 
