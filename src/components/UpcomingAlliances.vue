@@ -254,6 +254,84 @@ img {
   }
 }
 
+@media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
+  .degradado {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 35%;
+    left: 55%;
+    z-index: 9;
+  }
+
+  .degradado_izquierdo {
+    display: none;
+  }
+
+  .fondo-montana {
+    position: fixed;
+    top: 38%;
+    left: -60%;
+    width: 200%;
+    height: 80%;
+  }
+
+  .fondo-mundial {
+    position: fixed;
+    top: 27em;
+    left: -9em;
+    width: 50em;
+    height: 35em;
+    z-index: 3;
+    opacity: 100%;
+  }
+
+  .fondo-calculadora {
+    width: 100%;
+    height: 100%;
+  }
+
+  .circuito-derecho {
+    display: none;
+  }
+
+  .circuito-izquierdo {
+    display: none;
+  }
+
+  .fondo_rayos {
+    position: fixed;
+    left: -35%;
+    top: -30%;
+    width: 150%;
+    height: 150%;
+    opacity: 50%;
+    z-index: 0;
+    background-size: no-repeat center center fixed;
+  }
+
+  .fondo_rayos img {
+    height: 100%;
+  }
+
+  #logo-1 {
+    position: absolute;
+    top: 78%;
+    left: -4%;
+    opacity: 50%;
+    z-index: 4;
+  }
+
+  .fondoTokenomics {
+    position: fixed;
+    top: 0%;
+    left: -6%;
+    width: 140%;
+    height: 90%;
+    visibility: hidden;
+  }
+}
+
 /*FIN ESTILO FONDO*/
 
 .upcoming_alliance {
@@ -307,12 +385,20 @@ img {
     left: 25%;
   }
 
+  .mastercard_img img:hover {
+    transform: scale(1.1);
+  }
+
   .visa_img {
     position: absolute;
     width: 55%;
     height: 25%;
     top: 30%;
     left: 25%;
+  }
+
+  .visa_img img:hover {
+    transform: scale(1.1);
   }
 
   .upcoming_alliance {
@@ -441,6 +527,7 @@ img {
     top: 88%;
     left: 0%;
     z-index: 9;
+    visibility: hidden;
   }
 
   .icon {
