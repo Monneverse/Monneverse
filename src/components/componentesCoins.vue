@@ -50,10 +50,7 @@ export default {
 
 <template>
   <div class="coin">
-    <div    :class="{
-        icono: true,
-        'animacion-desplazamiento': index == 8,
-      }">
+    <div   class="icono">
 
         <img  :src="icono" alt="" />
           

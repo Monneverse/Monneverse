@@ -104,23 +104,29 @@ export default {
   .benefit {
     width: 100%;
     height: 100%;
+    margin-bottom: 5rem;
   }
   .benefit h1 {
-    font-size: 4.5vw;
+    font-size: 4rem;
+    font-weight: 500;
   }
   .benefit:nth-child(1) {
+    width: 23rem;
     grid-area: a;
     display: flex;
   }
   .benefit:nth-child(2) {
-    grid-area: b;
+    width: 23rem;
+    grid-area: d;
     display: flex;
   }
   .benefit:nth-child(3) {
+    width: 23rem;
     display: flex;
-    grid-area: d;
+    grid-area: b;
   }
   .benefit:nth-child(4) {
+    width: 23rem;
     grid-area: c;
     display: flex;
   }
@@ -161,7 +167,7 @@ export default {
   .content_price {
     width: 88%;
     height: 50%;
-    margin: 0 auto;
+
     background-color: #161431;
     border-radius: 0.5rem;
     display: flex;
@@ -171,13 +177,13 @@ export default {
 }
 
 .content_text {
-  position: relative;
   margin-left: 2.5rem;
   width: 80rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   text-align: left;
+
 }
 .content_text h3 {
   font-size: 1rem;
@@ -196,6 +202,7 @@ i {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
 }
 i img {
   align-items: flex-start;
@@ -203,29 +210,35 @@ i img {
   right: 4%;
   height: 1.6rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (width > 768px) {
   .content_text {
-    top: 0%;
+    background-color: aqua!important;
+    margin-top: -30px;
     margin-left: 15%;
     height: 0;
   }
   .content_text h3 {
+    margin: 0;
     font-size: 1.2vw;
     font-weight: 400;
   }
   .content_text p {
-    width: 90%;
-    height: 10%;
+    width: 100%;
+    height: 5%;
     font-weight: 300;
     font-size: 0.9vw;
-    text-align: justify;
-    align-items: left;
+
+
+  }
+  i{
+    height: 50%;
   }
   i img {
     align-items: flex-start;
-    top: 10%;
-    right: 4%;
+    top: -100%;
+    right: 44%;
     height: 2rem;
+
   }
 }
 </style>

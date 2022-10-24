@@ -160,9 +160,10 @@ defineProps({
 
 @media screen and (min-width: 768px) {
   .benefits {
+    flex: none;
     top: 25%;
     left: 13%;
-    width: 65%;
+    width: 70%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
