@@ -21,7 +21,8 @@ defineProps({
   <div class="componentes">
     <div class="divDesc">
       <div class="circulo-indicador"></div>
-      <b>{{ title }}</b>
+      <div class="indicador"> <b>{{ title }}</b>
+      </div>
       <br />
       <transition name="fade">
         <p v-show="isVisible">
@@ -65,6 +66,120 @@ img {
 .divDesc b {
   font-size: 1.8vw;
   font-family: "Work Sans";
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .componentes {
+    font-family: "Work Sans", sans-serif;
+    position: relative;
+    z-index: 7;
+  }
+
+  .divDesc {
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    text-transform: capitalize;
+    display: flex;
+    z-index: 4;
+    margin: 10px;
+    color: white;
+  }
+
+  .divDesc p {
+    font-size: 1.3vw;
+    font-family: Roboto;
+  }
+
+  .divDesc b {
+    font-size: 5vw;
+    font-family: "Work Sans";
+  }
+
+  .indicador {
+    position: absolute;
+    width: 10rem;
+    border-radius: 1rem;
+    border: 1px solid white;
+    background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 80%);
+    height: 3rem;
+    bottom: 100%;
+    right: -75%;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .circulo-indicador {
+    position: absolute;
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid white;
+    background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 80%);
+    height: 100%;
+    bottom: 100%;
+    left: 4%;
+    align-items: center;
+    z-index: 10;
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
+  .componentes {
+    font-family: "Work Sans", sans-serif;
+    position: relative;
+    z-index: 7;
+  }
+
+  .divDesc {
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    text-transform: capitalize;
+    display: flex;
+    z-index: 4;
+    margin: 10px;
+    color: white;
+  }
+
+  .divDesc p {
+    font-size: 1.3vw;
+    font-family: Roboto;
+  }
+
+  .divDesc b {
+    font-size: 5vw;
+    font-family: "Work Sans";
+  }
+
+  .indicador {
+    position: absolute;
+    width: 10rem;
+    border-radius: 1rem;
+    border: 1px solid white;
+    background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 80%);
+    height: 3rem;
+    bottom: 100%;
+    right: -50%;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .circulo-indicador {
+    position: absolute;
+    width: 10rem;
+    border-radius: 1rem;
+    border: 1px solid white;
+    background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 80%);
+    height: 100%;
+    bottom: 100%;
+    left: 40%;
+    align-items: center;
+    z-index: 10;
+    visibility: hidden;
+  }
 }
 
 .circulo-indicador {

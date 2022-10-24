@@ -40,69 +40,39 @@ import fasesComponentes from "./ComponentsPhases.vue";
   </div>
 
   <div class="componentes1">
-    <fasesComponentes
-      title="Enlisting"
-      description="enlist on Pancakeswap one day after our pre-sale"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Enlisting" description="enlist on Pancakeswap one day after our pre-sale"
+      :isVisible="isVisible" />
   </div>
 
   <div class="componentes2">
-    <fasesComponentes
-      title="MonnerStaking"
-      description="MonnerStaking start one day after pre-sale ends,
-             payouts of 12,6% of total capital every 48 hours"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="MonnerStaking" description="MonnerStaking start one day after pre-sale ends,
+             payouts of 12,6% of total capital every 48 hours" :isVisible="isVisible" />
   </div>
 
   <div class="componentes3">
-    <fasesComponentes
-      title="Liquidity"
-      description="liquid lock"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Liquidity" description="liquid lock" :isVisible="isVisible" />
   </div>
 
   <div class="componentes4">
-    <fasesComponentes
-      title="Schedule"
-      description="schedule burning"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Schedule" description="schedule burning" :isVisible="isVisible" />
   </div>
 
   <div class="componentes5">
-    <fasesComponentes
-      title="Certick"
-      description="certick audit"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Certick" description="certick audit" :isVisible="isVisible" />
   </div>
 
   <div class="componentes8">
-    <fasesComponentes
-      title="Official enlistment:"
-      description="coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
-        MEXC global"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Official enlistment:" description="coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
+        MEXC global" :isVisible="isVisible" />
   </div>
 
   <div class="componentes7">
-    <fasesComponentes
-      title="Increase x5"
-      description="Budget increase x5 of our advertising campaign"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Increase x5" description="Budget increase x5 of our advertising campaign"
+      :isVisible="isVisible" />
   </div>
 
   <div class="componentes6">
-    <fasesComponentes
-      title="Holders"
-      description="10.000 holders"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Holders" description="10.000 holders" :isVisible="isVisible" />
   </div>
 </template>
 
@@ -145,22 +115,18 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 1;
 }
 
 .filtro-superior {
-  background: radial-gradient(
-    circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
-  );
+  background: radial-gradient(circle at center,
+      #f9f9fa 0%,
+      #c8ced4 50%,
+      #a8aaaf 100%);
   mix-blend-mode: multiply;
   z-index: 2;
 }
@@ -195,6 +161,234 @@ img {
 .circuito-derecho {
   right: -14%;
   transform: scaleY(-1);
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .circuito-izquierdo {
+    visibility: hidden;
+  }
+
+  .circuito-derecho {
+    visibility: hidden;
+  }
+
+  .fondo-montana {
+    height: 100%;
+    width: 300%;
+    top: 30%;
+    left: -150%;
+    z-index: 3;
+  }
+
+  .fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #121026;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    opacity: 30%;
+    z-index: 1;
+  }
+
+  .fondo-oscuro {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center,
+        #48d0ab 0%,
+        #097561 50%,
+        #505863 100%);
+    z-index: 0;
+  }
+
+  .fondo-mundial {
+    position: fixed;
+    top: 12em;
+    left: -16em;
+    width: 50em;
+    height: 35em;
+    z-index: 3;
+    opacity: 80%;
+  }
+
+  .fondo-montana {
+    position: fixed;
+    top: 24%;
+    left: -143%;
+    width: 70em;
+    height: 40em;
+    z-index: 3;
+    opacity: 20%;
+  }
+
+  .fondo-oscuro {
+    position: fixed;
+    top: 0;
+    left: 0em;
+    width: 24em;
+    height: 52em;
+    background: radial-gradient(circle at center,
+        #48d0ab 10%,
+        #097561 30%,
+        #0F161C 100%);
+    z-index: 1;
+    opacity: 100%;
+  }
+
+  .fondoTokenomics {
+    position: fixed;
+    top: 20%;
+    width: 130%;
+    height: 60%;
+    visibility: hidden;
+  }
+
+  .degradado {
+    background: linear-gradient(to right, #090380 55%, transparent);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    top: 38%;
+    opacity: 90%;
+  }
+
+  .degradado_izquierdo {
+    transform: rotate(-60deg);
+    right: 55%;
+    visibility: hidden;
+
+  }
+
+  .degradado_derecho {
+    transform: rotate(230deg);
+    left: 40%;
+  }
+
+  .circuito-izquierdo {
+    left: -70%;
+  }
+
+  #logo-1 {
+    width: 63%;
+    max-height: 14%;
+    position: fixed;
+    top: 65%;
+    left: -7%;
+    z-index: 3;
+    opacity: 70%;
+  }
+}
+
+@media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
+  .fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #121026;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    opacity: 30%;
+    z-index: 3;
+  }
+
+  .fondo-oscuro {
+    position: fixedq;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center,
+        #48d0ab 0%,
+        #097561 50%,
+        #505863 100%);
+    z-index: 1;
+  }
+
+  .fondo-mundial {
+    position: fixed;
+    top: 25em;
+    left: -8em;
+    width: 50em;
+    height: 35em;
+    z-index: 3;
+    opacity: 80%;
+  }
+
+  .fondo-montana {
+    position: fixed;
+    top: 40%;
+    left: -110%;
+    width: 70em;
+    height: 40em;
+    z-index: 3;
+    opacity: 20%;
+  }
+
+  .fondo-oscuro {
+    position: fixed;
+    top: 0;
+    left: 0em;
+    width: 100em;
+    height: 100em;
+    background: radial-gradient(circle at center,
+        #48d0ab 10%,
+        #097561 30%,
+        #0F161C 100%);
+    z-index: 1;
+    opacity: 100%;
+  }
+
+  .fondoTokenomics {
+    position: fixed;
+    top: 20%;
+    left: -12%;
+    width: 130%;
+    height: 60%;
+    visibility: hidden;
+  }
+
+  .degradado {
+    background: linear-gradient(to right, #090380 55%, transparent);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    top: 38%;
+    opacity: 90%;
+  }
+
+  .degradado_izquierdo {
+    transform: rotate(-60deg);
+    right: 55%;
+    visibility: hidden;
+
+  }
+
+  .degradado_derecho {
+    transform: rotate(230deg);
+    left: 40%;
+  }
+
+  .circuito-izquierdo {
+    left: -70%;
+  }
+
+  #logo-1 {
+    width: 63%;
+    max-height: 14%;
+    position: fixed;
+    top: 75%;
+    left: -8%;
+    z-index: 3;
+    opacity: 50%;
+  }
+
 }
 
 /* FIN ESTILO FONDO */

@@ -10,16 +10,38 @@ defineProps({
 
 <template>
   <!--FONDO-->
-  <div class="fondo fondo-calculadora"></div>
-  <div class="fondo filtro-superior"></div>
-  <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
-  <div class="fondo fondo-oscurecer"></div>
-  <div class="circuito-izquierdo">
+  <div class="fondo"></div>
+  <div class="fondo-oscuro1"></div>
+  <div class="fondo-oscuro"></div>
+  <div class="fondo-oscuro-superior">
+    <img src="/img/fondo-oscuro-superior.png" alt="" srcset="" />
+  </div>
+  <div class="fondo-montana">
+    <img src="/img/fondo-montana.png" alt="" srcset="" />
+  </div>
+  <div class="fondo-montana">
+    <img src="/img/fondo-montana.png" alt="" srcset="" />
+  </div>
+  <div class="fondo-montana">
+    <img src="/img/fondo-montana.png" alt="" srcset="" />
+  </div>
+  <div class="circuito circuito-izquierdo">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
   </div>
-  <div class="circuito-derecho">
+  <div class="circuito circuito-derecho">
     <img src="/img/calculadora/circuito-derecho.png" alt="" />
   </div>
+  <div class="fondoTokenomics">
+    <img src="/img/fondo_Tokenomics.png" alt="" />
+  </div>
+  <div class="degradado degradado_izquierdo"></div>
+  <div class="degradado degradado_derecho"></div>
+  <div class="fondo-mundial">
+    <img src="/img/fondo_Cel.png" alt="" srcset="" />
+  </div>
+  <div class="fondo fondo-calculadora"></div>
+  <div class="fondo filtro-superior"></div>
+  <div class="fondo fondo-oscurecer"></div>
   <!--FIN FONDO-->
 
   <div class="Fases">
@@ -152,6 +174,234 @@ img {
   z-index: 5;
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .circuito-izquierdo {
+    visibility: hidden;
+  }
+
+  .circuito-derecho {
+    visibility: hidden;
+  }
+
+  .fondo-montana {
+    height: 100%;
+    width: 300%;
+    top: 30%;
+    left: -150%;
+    z-index: 3;
+  }
+
+  .fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #121026;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    opacity: 30%;
+    z-index: 1;
+  }
+
+  .fondo-oscuro {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center,
+        #48d0ab 0%,
+        #097561 50%,
+        #505863 100%);
+    z-index: 0;
+  }
+
+  .fondo-mundial {
+    position: fixed;
+    top: 12em;
+    left: -16em;
+    width: 50em;
+    height: 35em;
+    z-index: 3;
+    opacity: 80%;
+  }
+
+  .fondo-montana {
+    position: fixed;
+    top: 24%;
+    left: -143%;
+    width: 70em;
+    height: 40em;
+    z-index: 3;
+    opacity: 20%;
+  }
+
+  .fondo-oscuro {
+    position: fixed;
+    top: 0;
+    left: 0em;
+    width: 24em;
+    height: 52em;
+    background: radial-gradient(circle at center,
+        #48d0ab 10%,
+        #097561 30%,
+        #0F161C 100%);
+    z-index: 1;
+    opacity: 100%;
+  }
+
+  .fondoTokenomics {
+    position: fixed;
+    top: 20%;
+    width: 130%;
+    height: 60%;
+    visibility: hidden;
+  }
+
+  .degradado {
+    background: linear-gradient(to right, #090380 55%, transparent);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    top: 38%;
+    opacity: 90%;
+  }
+
+  .degradado_izquierdo {
+    transform: rotate(-60deg);
+    right: 55%;
+    visibility: hidden;
+
+  }
+
+  .degradado_derecho {
+    transform: rotate(230deg);
+    left: 40%;
+  }
+
+  .circuito-izquierdo {
+    left: -70%;
+  }
+
+  #logo-1 {
+    width: 63%;
+    max-height: 14%;
+    position: fixed;
+    top: 65%;
+    left: -7%;
+    z-index: 3;
+    opacity: 70%;
+  }
+}
+
+@media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
+  .fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #121026;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    opacity: 30%;
+    z-index: 3;
+  }
+
+  .fondo-oscuro {
+    position: fixedq;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center,
+        #48d0ab 0%,
+        #097561 50%,
+        #505863 100%);
+    z-index: 1;
+  }
+
+  .fondo-mundial {
+    position: fixed;
+    top: 25em;
+    left: -8em;
+    width: 50em;
+    height: 35em;
+    z-index: 3;
+    opacity: 80%;
+  }
+
+  .fondo-montana {
+    position: fixed;
+    top: 40%;
+    left: -110%;
+    width: 70em;
+    height: 40em;
+    z-index: 3;
+    opacity: 100%;
+  }
+
+  .fondo-oscuro {
+    position: fixed;
+    top: 0;
+    left: 0em;
+    width: 100em;
+    height: 100em;
+    background: radial-gradient(circle at center,
+        #48d0ab 10%,
+        #097561 30%,
+        #0F161C 100%);
+    z-index: 1;
+    opacity: 100%;
+  }
+
+  .fondoTokenomics {
+    position: fixed;
+    top: 20%;
+    left: -12%;
+    width: 130%;
+    height: 60%;
+    visibility: hidden;
+  }
+
+  .degradado {
+    background: linear-gradient(to right, #090380 55%, transparent);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    top: 38%;
+    opacity: 90%;
+  }
+
+  .degradado_izquierdo {
+    transform: rotate(-60deg);
+    right: 55%;
+    visibility: hidden;
+
+  }
+
+  .degradado_derecho {
+    transform: rotate(230deg);
+    left: 40%;
+  }
+
+  .circuito-izquierdo {
+    left: -70%;
+  }
+
+  #logo-1 {
+    width: 63%;
+    max-height: 14%;
+    position: fixed;
+    top: 75%;
+    left: -8%;
+    z-index: 3;
+    opacity: 50%;
+  }
+
+}
+
 /* FIN ESTILO FONDO */
 
 .Fases {
@@ -243,5 +493,201 @@ img {
   right: 0%;
   width: 25%;
   height: 64%;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .Fases {
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 6;
+    left: 27%;
+    top: 25%;
+  }
+
+  .titulo {
+    color: white;
+    right: 28%;
+    bottom: 10%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 100%;
+    text-transform: uppercase;
+    z-index: 6;
+    font-family: "work Sans";
+    font-size: 8vw;
+  }
+
+  .description {
+    color: white;
+    position: fixed;
+    width: 100%;
+    right: 0%;
+    text-transform: capitalize;
+    font-family: Roboto;
+    font-size: 5vw;
+  }
+
+  .circulos {
+    position: absolute;
+    left: 0%;
+    bottom: 60%;
+    width: 100%;
+    height: 20%;
+    z-index: 5;
+  }
+
+  .circulos1 {
+    position: absolute;
+    left: 10%;
+    bottom: 55%;
+    width: 80%;
+    height: 20%;
+    z-index: 5;
+  }
+
+  .readMore {
+    position: absolute;
+    top: 40.5%;
+    left: 44%;
+    border-radius: 1rem;
+    margin-bottom: 15px;
+    width: 10%;
+    height: 7%;
+    font-size: 1vw;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 9;
+    background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
+    visibility: hidden;
+  }
+
+  .componentes1 {
+    position: absolute;
+    top: 52%;
+    left: 35%;
+    width: 25%;
+    height: 64%;
+    border: 1px solid wheat;
+  }
+
+  .componentes2 {
+    position: absolute;
+    top: 63%;
+    left: 35%;
+    width: 25%;
+    height: 64%;
+  }
+
+  .componentes3 {
+    position: absolute;
+    top: 76%;
+    left: 35%;
+    width: 25%;
+    height: 64%;
+  }
+}
+
+@media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
+  .Fases {
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 6;
+    left: 27%;
+    top: 25%;
+  }
+
+  .titulo {
+    color: white;
+    right: 28%;
+    bottom: 10%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 100%;
+    text-transform: uppercase;
+    z-index: 6;
+    font-family: "work Sans";
+    font-size: 8vw;
+  }
+
+  .description {
+    color: white;
+    position: fixed;
+    width: 100%;
+    right: 0%;
+    text-transform: capitalize;
+    font-family: Roboto;
+    font-size: 5vw;
+  }
+
+  .circulos {
+    position: absolute;
+    left: 0%;
+    bottom: 60%;
+    width: 100%;
+    height: 20%;
+    z-index: 5;
+  }
+
+  .circulos1 {
+    position: absolute;
+    left: 10%;
+    bottom: 55%;
+    width: 80%;
+    height: 20%;
+    z-index: 5;
+  }
+
+  .readMore {
+    position: absolute;
+    top: 40.5%;
+    left: 44%;
+    border-radius: 1rem;
+    margin-bottom: 15px;
+    width: 10%;
+    height: 7%;
+    font-size: 1vw;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 9;
+    background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
+    visibility: hidden;
+  }
+
+  .componentes1 {
+    position: absolute;
+    top: 52%;
+    left: 35%;
+    width: 25%;
+    height: 64%;
+    border: 1px solid wheat;
+  }
+
+  .componentes2 {
+    position: absolute;
+    top: 63%;
+    left: 35%;
+    width: 25%;
+    height: 64%;
+  }
+
+  .componentes3 {
+    position: absolute;
+    top: 76%;
+    left: 35%;
+    width: 25%;
+    height: 64%;
+  }
 }
 </style>
