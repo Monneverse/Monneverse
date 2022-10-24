@@ -1,7 +1,10 @@
 <template>
   <!-- video de fondo -->
-  <video src="video/video_fondo_lite.m4v" autoplay="true" muted="true" loop="true" class="video-fondo"
-    poster="/img/fondo_binario.png"></video>
+  <video autoplay="true" muted="true" loop="true" class="video-fondo"  poster="/img/fondo_binario.png">
+    <source src="video/fondo lite.m4v" >
+    <source src="video/VideoBinario.mp4" type="video/mp4">
+    <img src="/img/fondo_binario.png"/>
+  </video>
   <!-- logos de fondos -->
   <div id="logo-1" class="logo">
     <img src="/img/logo_Grande.png" alt="" />
@@ -237,20 +240,22 @@ img {
     width: 100%;
     z-index: 6;
   }
-  #logo-1 {
-  width: 30%;
-  height: fit-content;
-  position: fixed;
-  top: 5%;
-  left: 0%;
-}
 
-#logo-2 {
-  width: 12%;
-  right: 18%;
-  top: 20%;
-  z-index: 6;
-}
+  #logo-1 {
+    width: 30%;
+    height: fit-content;
+    position: fixed;
+    top: 5%;
+    left: 0%;
+  }
+
+  #logo-2 {
+    width: 12%;
+    right: 18%;
+    top: 20%;
+    z-index: 6;
+  }
+
   .fondo-mundial {
     position: fixed;
     bottom: -10rem;
