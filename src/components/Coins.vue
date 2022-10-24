@@ -20,7 +20,7 @@ defineProps({
   <div class="circuito circuito-derecho">
     <img src="/img/calculadora/circuito-derecho.png" alt="" />
   </div>
- 
+
   <div class="degradado_azuliz"></div>
   <div class="degradado_azulde"></div>
   <!--FIN FONDO-->
@@ -151,12 +151,17 @@ img {
 }
 
 .fondo-montana {
+  z-index: 5;
+  background-size: no-repeat center center fixed;
+  width: 300%;
   height: 100%;
-  top: 0%;
-  left: 0;
   z-index: 3;
 }
-
+@media screen and (width > 768px) {
+  .fondo-montana {
+    width: 100%;
+  }
+}
 .fondo-oscurecer {
   z-index: 4;
   background-color: rgb(0, 0, 0);
@@ -168,10 +173,10 @@ img {
   background: linear-gradient(to right, #08047a 0.5%, transparent);
   position: absolute;
   transform: rotate(-60deg);
-  top: 0%;
+  top: -40%;
   z-index: 7;
   right: 50%;
-  width: 50%;
+  width: 180%;
   height: 180%;
 }
 
@@ -184,6 +189,7 @@ img {
   width: 50%;
   height: 180%;
   z-index: 7;
+  display: none;
 }
 
 .circuito {
@@ -192,36 +198,92 @@ img {
   height: 80%;
   width: 40%;
   min-width: 30rem;
-  top: 40%;
+  top: 20%;
 }
 
 .circuito-izquierdo {
-  left: -10%;
+  left: -30%;
 }
 
 .circuito-derecho {
   right: -10%;
+  display: none;
+}
+
+@media screen and (width > 768px) {
+  .degradado_azuliz {
+    background: linear-gradient(to right, #08047a 0.5%, transparent);
+    position: absolute;
+    transform: rotate(-60deg);
+    top: -12%;
+    z-index: 7;
+    right: 50%;
+    width: 50%;
+    height: 180%;
+  }
+
+  .degradado_azulde {
+    display: block;
+  }
+
+  .circuito-izquierdo {
+    left: -10%;
+  }
+
+  .circuito-derecho {
+    right: -10%;
+    display: block;
+  }
 }
 
 /* FIN ESTILO FONDO */
 
 .contenedor_coins {
-  position: absolute;
-  z-index: 14;
-  width: 95%;
-  height: 90%;
-  left: 2.5%;
-  bottom: -2%;
-  display: grid;
-  grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
-  align-items: stretch;
+  position: relative;
+  margin: 0 auto;
+  z-index: 46;
+  width: 85%;
+  height: 60%;
+  top: 10%;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  column-gap: 20%;
+  color: #fff;
+}
+
+@media screen and (width > 768px) {
+  .contenedor_coins {
+    position: absolute;
+    z-index: 14;
+    width: 95%;
+    height: 90%;
+    left: 2.5%;
+    bottom: -2%;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
+    align-items: stretch;
+    column-gap: 0%;
+    overflow-x: hidden;
+  }
+}
+.card_coin {
+  width: 100%;
+  height: 100%;
+  flex: none;
+}
+@media screen and (width > 769px) {
+  .card_coin {
+    flex: auto;
+  }
 }
 
 .cuadros-derecho {
   width: 20%;
   position: absolute;
-  top: 90%;
+  top: 80%;
   z-index: 18;
   transform: rotate(600grad);
 }
@@ -229,34 +291,53 @@ img {
 .cuadros-izquierdo {
   width: 20%;
   position: absolute;
-  top: 90%;
+  top: 80%;
   right: 0;
   z-index: 18;
 }
 
+@media screen and (width > 768px) {
+  .cuadros-derecho {
+
+
+    top: 90%;
+
+  }
+  .cuadros-izquierdo {
+
+    top: 90%;
+
+  }
+}
 .monner {
   position: absolute;
-  top: 88%;
-  left: 35%;
+  top: 80%;
+
   z-index: 456;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 30%;
+  width: 100%;
   height: 20%;
 }
 
 .monner h3 {
   color: rgb(18, 225, 142);
   font-family: "Barlow Semi Condensed", sans-serif;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
 .monner h1 {
   color: #ffffff;
   font-family: "Barlow Semi Condensed", sans-serif;
-  font-size: 3vw;
+  font-size: 1rem;
   font-weight: 600;
+}
+@media screen and (width > 768px) {
+  .monner {
+    position: absolute;
+    top: 90%;
+  }
 }
 </style>
