@@ -15,7 +15,7 @@
   <div class="fondo fondo-oscurecer"></div>
  
   <div class="fondo-mundial">
-    <img src="/img/fondoCel2.png" alt="" srcset="" />
+    <img src="/img/fondo-mundial.png" alt="" srcset="" />
   </div>
   <!-- Circuitos -->
   <div class="circuito circuito-izquierdo">
@@ -350,11 +350,11 @@ img {
     position: fixed;
     bottom: 0%;
     right: 0%;
-    width: 50em;
-    height: 40em;
+    width: 100%;
+    height:  30rem;
     z-index: 3;
     opacity: 100%;
-    scale: 1.3;
+    scale: 1.5;
   }
 }
 </style>

@@ -701,7 +701,7 @@ img {
     top: 0%;
     left: 0%;
     height: 90%;
-    width: 80%;
+    width: 70%;
     max-width: 30rem;
     min-width: 30rem;
     z-index: 8;
@@ -714,7 +714,7 @@ img {
   .informacion {
     position: absolute;
     top: 8%;
-    left: 20%;
+    left: 10%;
     max-width: 75rem;
     width: 60%;
     z-index: 9;
@@ -733,7 +733,7 @@ img {
   }
 
   #month-1 {
-    transform: translate(0%, 980%);
+    transform: translate(0%, 1050%);
     font-size: 2.5vh;
   }
 
@@ -755,7 +755,7 @@ img {
   }
 
   .circulo-indicador {
-    top: 29%;
+    top: 30%;
     width: 1.5rem;
     height: 1.5rem;
   }
@@ -771,6 +771,8 @@ img {
 
   .form-controles {
     top: 70%;
+    width: 90%;
+    left: 2%;
   }
 
 }
