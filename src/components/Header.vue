@@ -461,6 +461,7 @@ export default {
   justify-content: center;
   align-items: center;
   margin: 0%;
+  user-select: none;
   padding: 0%;
 }
 
@@ -476,6 +477,7 @@ export default {
   margin: 0%;
   padding: 0%;
   cursor: pointer;
+
 }
 
 .arrow-2 {
@@ -491,6 +493,7 @@ export default {
   margin: 0%;
   padding: 0%;
   cursor: pointer;
+  user-select: none;
 }
 
 .arrow-2:before {

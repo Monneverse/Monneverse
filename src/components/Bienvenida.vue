@@ -1,9 +1,9 @@
 <template>
   <!-- video de fondo -->
-  <video autoplay="true" muted="true" loop="true" class="video-fondo"  poster="/img/fondo_binario.png">
-    <source src="/video/fondo-lite.mp4" >
+  <video autoplay="true" muted="true" loop="true" class="video-fondo" poster="/img/fondo_binario.png">
+    <source src="/video/fondo-lite.mp4">
     <source src="/video/VideoBinario.mp4" type="video/mp4">
-    <img src="/img/fondo_binario.png"/>
+    <img src="/img/fondo_binario.png" />
   </video>
   <!-- logos de fondos -->
   <div id="logo-1" class="logo">
@@ -282,5 +282,12 @@ img {
     font-size: 5vw;
     margin-top: 3rem;
   }
+
+  .degradado {
+    width: 80%;
+  }
+
+
+
 }
 </style>
