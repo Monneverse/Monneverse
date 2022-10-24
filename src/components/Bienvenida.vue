@@ -269,7 +269,7 @@ img {
   }
 
   .welcome .title {
-    font-size: 10vh;
+    font-size: 8vh;
   }
 
   .welcome .subtitle {
