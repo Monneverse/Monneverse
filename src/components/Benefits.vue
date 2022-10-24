@@ -100,11 +100,7 @@ defineProps({
   font-weight: 500;
   color: white;
 }
-@media screen and (min-width: 768px) {
-  .titulo h1 {
-    font-size: 4vw;
-  }
-}
+
 .benefits {
   position: absolute;
   z-index: 14;
@@ -175,7 +171,8 @@ defineProps({
       "e f";
   }
   .titulo {
-    left: 16%;
+    top: 10rem;
+    left: 18%;
   }
   .titulo h1 {
     font-size: 4.5vw;
@@ -215,12 +212,10 @@ defineProps({
   justify-content: start;
   display: none;
 }
-@media screen and (width > 768px){
-
-  .logo-redes{
+@media screen and (width > 768px) {
+  .logo-redes {
     display: flex;
   }
-  
 }
 
 .icon img {

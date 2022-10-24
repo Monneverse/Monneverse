@@ -111,6 +111,9 @@ export default {
     font-weight: 500;
   }
   .benefit:nth-child(1) {
+    position: relative;
+    top: 50%;
+    left: 5%;
     width: 23rem;
     grid-area: a;
     display: flex;
@@ -121,11 +124,15 @@ export default {
     display: flex;
   }
   .benefit:nth-child(3) {
+    
     width: 23rem;
     display: flex;
     grid-area: b;
   }
   .benefit:nth-child(4) {
+    position: relative;
+    top: 50%;
+    left: 5%;
     width: 23rem;
     grid-area: c;
     display: flex;

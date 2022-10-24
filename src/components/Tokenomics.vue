@@ -52,22 +52,22 @@ export default {
         </div>
 
         <div class="">
-          <p>To buy 9% slip</p>
+          <p>To buy 0% slip</p>
         </div>
         <div class="">
-          <p>Automatic LP 3% of order fees go back into liquidity</p>
+          <p>Automatic LP 0% of order fees go back into liquidity</p>
         </div>
         <div class="">
           <p>
-            Bank Security 3% of order fees are stores in BANK SECURITY for price
+            Bank Security 0% of order fees are stores in BANK SECURITY for price
             protection
           </p>
         </div>
         <div class="">
-          <p>Management 1.5% of order fees go to the treasury</p>
+          <p>Management 1.0% of order fees go to the treasury</p>
         </div>
         <div class="">
-          <p>Monner Burns 1.5% is burned for stability and price increase</p>
+          <p>Monner Burns 1.0% is burned for stability and price increase</p>
         </div>
       </div>
     </div>
@@ -94,22 +94,22 @@ export default {
           </div>
         </div>
         <div class="">
-          <p>To buy 10% slip</p>
+          <p>To buy 0% slip</p>
         </div>
         <div class="">
-          <p>Automatic LP 3% of order fees go back into liquidity</p>
+          <p>Automatic LP 0% of order fees go back into liquidity</p>
         </div>
         <div class="">
           <p>
-            Bank Security 3% of order fees are stored in BANK SECURITY for price
+            Bank Security 0% of order fees are stored in BANK SECURITY for price
             protection
           </p>
         </div>
         <div class="">
-          <p>Management 2% of order fees go to the treasury</p>
+          <p>Management 0% of order fees go to the treasury</p>
         </div>
         <div class="">
-          <p>Monner Burns 2% is burned for stability and price increase</p>
+          <p>Monner Burns 0% is burned for stability and price increase</p>
         </div>
       </div>
     </div>
