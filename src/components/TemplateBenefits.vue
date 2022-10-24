@@ -11,6 +11,17 @@ export default {
           sale_price: "Minimun purchase 1,5 USD Pre-sale Price",
           texto: "",
         },
+       
+        {
+          icono: "/img/plus.svg",
+          symbol: "$",
+          precio: "22,5",
+          moneda: "USD",
+          sale_price: "Sale Price",
+          texto:
+            "Our PancakeSwap price will range from $8,200 to $10,000 thanks to: - Our limited supply of 10,000 MNR. - Scheduled Burns. -Our sponsors. - The GREAT injection of liquidity made by our team with its line of credit from the USA and private investors. We will take into account all the tools that allow us to make our prices grow",
+        },
+
         {
           icono: "/img/plus.svg",
           symbol: "",
@@ -19,17 +30,8 @@ export default {
           sale_price: "",
           texto: "Phase 1 of staking only for users who buy in pre-sale",
         },
-        {
-          icono: "/img/plus.svg",
-          symbol: "$",
-          precio: "22,5",
-          moneda: "USD",
-          sale_price: "Sale Price",
-          texto:
-            "The price on Pancakeswap for purchases and sales will be $22,6 one day after the pre-sale of our first 2,000,000 Monners to the public ends",
-        },
-       
-       
+
+
         {
           icono: "/img/plus.svg",
           symbol: "",
@@ -37,7 +39,7 @@ export default {
           moneda: "",
           sale_price: "Sale Price",
           texto:
-            "Our PancakeSwap price will range from $8,200 to $10,000 thanks to:    - Our limited supply of 10,000 MNR.    - Scheduled Burns.    -Our sponsors.    - The GREAT injection of liquidity made by our team with its line of credit from the USA and private investors.     We will take into account all the tools that allow us to make our prices grow exponentially.    As we grow further into PancakeSwap, it is less likely that we will hit our presale prices again.  Our goal is to be the highest value token thanks to our limited supply of 10,000 MNR.  ",
+            "Enter our first phase os staking buying in pre-sale and earn 6.2% every 48 hours of your total capital in Monnercoins after the launch in Pancakeswap",
         },
       ],
     };
@@ -67,57 +69,82 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;700&display=swap");
 
 .benefit {
-  width: 50%;
-  height: 15%;
+  width: 100%;
+  height: 10%;
+  margin-bottom: 2rem;
   color: white;
   display: flex;
   flex-wrap: wrap;
   font-family: "Work Sans", sans-serif;
 }
 
-.benefit:nth-child(5) {
-  width: 50%;
+.benefit:nth-child(1) {
+  width: 15rem;
+
 }
 .benefit:nth-child(2) {
-  display: none;
+  width: 19rem;
+  margin-bottom: 5rem;
+}
+.benefit:nth-child(3) {
+  width: 21rem;
 }
 .benefit:nth-child(4) {
-  display: none;
+  width: 24rem;
 }
 
 .benefit h1 {
   width: 85%;
   margin: 0 auto;
-  font-weight: 400;
-  font-size: 9vw;
+  font-weight: 600;
+  font-size: 3.1rem;
   text-align: left;
 }
 @media screen and (min-width: 768px) {
   .benefit {
     width: 100%;
     height: 100%;
+    margin-bottom: 5rem;
   }
   .benefit h1 {
-    font-size: 4.5vw;
+    font-size: 4rem;
+    font-weight: 500;
+  }
+  .benefit:nth-child(1) {
+    position: relative;
+    top: 50%;
+    left: 5%;
+    width: 23rem;
+    grid-area: a;
+    display: flex;
   }
   .benefit:nth-child(2) {
+    width: 23rem;
+    grid-area: d;
     display: flex;
+  }
+  .benefit:nth-child(3) {
+    
+    width: 23rem;
+    display: flex;
+    grid-area: b;
   }
   .benefit:nth-child(4) {
+    position: relative;
+    top: 50%;
+    left: 5%;
+    width: 23rem;
+    grid-area: c;
     display: flex;
-    grid-area: e;
-  }
-  .benefit:nth-child(5) {
-    width: 60%;
   }
 }
 
 .benefit span {
-  font-size: 2vw;
+  font-size: 3vw;
 }
 .dolar {
   color: rgb(55, 243, 149);
-  font-size: 9vw;
+  font-size: 3rem;
 }
 .content_price {
   width: 70%;
@@ -147,7 +174,7 @@ export default {
   .content_price {
     width: 88%;
     height: 50%;
-    margin: 0 auto;
+
     background-color: #161431;
     border-radius: 0.5rem;
     display: flex;
@@ -157,23 +184,22 @@ export default {
 }
 
 .content_text {
-  position: relative;
-  margin-left: 8vw;
-  margin-bottom: 20%;
-  width: 100%;
+  margin-left: 2.5rem;
+  width: 80rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   text-align: left;
+
 }
 .content_text h3 {
-  font-size: 3.6vw;
+  font-size: 1rem;
   font-weight: 400;
 }
 .content_text p {
-  width: 70%;
+  width: 17rem;
   font-weight: 300;
-  font-size: 1.5vw;
+  font-size:.57rem;
   text-align: justify;
   align-items: left;
 }
@@ -183,36 +209,43 @@ i {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
 }
 i img {
   align-items: flex-start;
   top: 0;
   right: 4%;
-  height: 1.2rem;
+  height: 1.6rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (width > 768px) {
   .content_text {
-    top: 0%;
+    background-color: aqua!important;
+    margin-top: -30px;
     margin-left: 15%;
     height: 0;
   }
   .content_text h3 {
+    margin: 0;
     font-size: 1.2vw;
     font-weight: 400;
   }
   .content_text p {
-    width: 90%;
-    height: 10%;
+    width: 100%;
+    height: 5%;
     font-weight: 300;
-    font-size: .9vw;
-    text-align: justify;
-    align-items: left;
+    font-size: 0.9vw;
+
+
+  }
+  i{
+    height: 50%;
   }
   i img {
     align-items: flex-start;
-    top: 10%;
-    right: 4%;
+    top: -100%;
+    right: 44%;
     height: 2rem;
+
   }
 }
 </style>

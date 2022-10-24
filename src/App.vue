@@ -25,7 +25,8 @@ import Footer from "./components/Footer.vue";
 
 <template>
   <header>
-    <Header :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage"></Header>
+    <Header :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage" :setNext="next" :indexPagina="index_pagina">
+    </Header>
   </header>
 
   <main class="scroll-main">
@@ -131,6 +132,26 @@ export default {
     };
   },
   methods: {
+    next() {
+      let newPosition = this.index_pagina;
+
+      if (this.index_pagina < this.limite) {
+        newPosition = this.index_pagina + 1;
+        this.isRevert = false;
+        this.CambiarContenedor(newPosition)
+      }
+
+    },
+    before() {
+      let newPosition = this.index_pagina;
+
+      if (this.index_pagina > 0) {
+        newPosition = this.index_pagina - 1;
+        this.isRevert = false;
+        this.CambiarContenedor(newPosition)
+      }
+
+    },
     setOnPage(id, visible = true) {
       this.index = id;
       this.isVisibleLogo = visible;
@@ -195,13 +216,41 @@ export default {
     },
     touchMove() {
       this.moveY = this.touchPositionY();
-    },
-    touchEnd() {
-      if (this.startY - 100 > this.moveY) {
-        this.NavegarDown();
-      } else if (this.startY + 100 < this.moveY) {
-        this.NavegarUp();
+      if (this.scroll) {
+        if (this.startY > this.moveY)
+          this.next();
+        else if (this.startY < this.moveY)
+          this.before();
       }
+
+    },
+    CambiarContenedor(newPosition) {
+      setTimeout(() => {
+        this.index_pagina = newPosition;
+        this.isVisibleLogo = true;
+        if (
+          this.listaPaginaDondeSeOcultaLogo.filter(
+            (x) => x == this.index_pagina
+          ).length > 0
+        ) {
+          this.isVisibleLogo = false;
+        }
+
+        location.hash = "#" + this.index_pagina;
+        window.history.pushState(
+          {},
+          document.title,
+          window.location.pathname
+        );
+        this.UpdateNav(this.index_pagina);
+        this.exitAnimation = false;
+        this.enterAnimation = true;
+      }, 500);
+
+      setTimeout(() => {
+        this.scroll = true;
+        this.enterAnimation = false;
+      }, 1000);
     },
     Navegar() {
       if (this.scroll) {
@@ -220,133 +269,27 @@ export default {
             this.isRevert = true;
           }
         }
-        setTimeout(() => {
-          this.index_pagina = newPosition;
-          this.isVisibleLogo = true;
-          if (
-            this.listaPaginaDondeSeOcultaLogo.filter(
-              (x) => x == this.index_pagina
-            ).length > 0
-          ) {
-            this.isVisibleLogo = false;
-          }
-
-          location.hash = "#" + this.index_pagina;
-          window.history.pushState(
-            {},
-            document.title,
-            window.location.pathname
-          );
-          this.UpdateNav(this.index_pagina);
-          this.exitAnimation = false;
-          this.enterAnimation = true;
-        }, 500);
-
-        setTimeout(() => {
-          this.scroll = true;
-          this.enterAnimation = false;
-        }, 1000);
+        this.CambiarContenedor(newPosition)
       }
     },
-    NavegarDown() {
-      if (this.scroll) {
-        this.exitAnimation = true;
-        this.scroll = false;
 
-        let newPosition = this.index_pagina;
-        if (this.position > 0) {
-          if (this.index_pagina < this.limite) {
-            newPosition = this.index_pagina + 1;
-            this.isRevert = false;
-          }
-        }
-        setTimeout(() => {
-          this.index_pagina = newPosition;
-          this.isVisibleLogo = true;
-          if (
-            this.listaPaginaDondeSeOcultaLogo.filter(
-              (x) => x == this.index_pagina
-            ).length > 0
-          ) {
-            this.isVisibleLogo = false;
-          }
 
-          location.hash = "#" + this.index_pagina;
-          window.history.pushState(
-            {},
-            document.title,
-            window.location.pathname
-          );
-          this.UpdateNav(this.index_pagina);
-          this.exitAnimation = false;
-          this.enterAnimation = true;
-        }, 500);
-
-        setTimeout(() => {
-          this.scroll = true;
-          this.enterAnimation = false;
-        }, 1000);
-      }
-    },
-    NavegarUp() {
-      if (this.scroll) {
-        this.exitAnimation = true;
-        this.scroll = false;
-
-        let newPosition = this.index_pagina;
-        if (this.position > 0) {
-          if (this.index_pagina > 1) {
-            newPosition = this.index_pagina - 1;
-            this.isRevert = true;
-          }
-        }
-        setTimeout(() => {
-          this.index_pagina = newPosition;
-          this.isVisibleLogo = true;
-          if (
-            this.listaPaginaDondeSeOcultaLogo.filter(
-              (x) => x == this.index_pagina
-            ).length > 0
-          ) {
-            this.isVisibleLogo = false;
-          }
-
-          location.hash = "#" + this.index_pagina;
-          window.history.pushState(
-            {},
-            document.title,
-            window.location.pathname
-          );
-          this.UpdateNav(this.index_pagina);
-          this.exitAnimation = false;
-          this.enterAnimation = true;
-        }, 500);
-
-        setTimeout(() => {
-          this.scroll = true;
-          this.enterAnimation = false;
-        }, 1000);
-      }
-    },
 
     touchPositionY() {
       return (this.position = event.touches[0].clientY);
     },
     returnMethods() {
-      if (window.screen.width > 850) {
-        const scrolls = Array.from(document.querySelectorAll("div"));
 
-        scrolls.forEach((scroll) => {
-          scroll.addEventListener("touchstart", this.touchStart);
-          scroll.addEventListener("touchend", this.touchEnd);
-          scroll.addEventListener("touchmove", this.touchMove);
-        });
-        window.oncontextmenu = () => {
-          event.preventDefault();
-          event.stopPropagation();
-          return false;
-        };
-      }
+      const scrolls = Array.from(document.querySelectorAll("body"));
+      scrolls[0].addEventListener("touchstart", this.touchStart);
+      scrolls[0].addEventListener("touchmove", this.touchMove);
+
+      window.oncontextmenu = () => {
+        event.preventDefault();
+        event.stopPropagation();
+        return false;
+      };
+  
     },
   },
   mounted() {
