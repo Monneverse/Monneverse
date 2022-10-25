@@ -138,6 +138,7 @@ defineProps({
   -webkit-box-shadow: 7px 3px 29px 4px rgba(219, 219, 219, 1);
   -moz-box-shadow: 7px 3px 29px 4px rgba(219, 219, 219, 1);
   box-shadow: 7px 3px 29px 4px rgba(219, 219, 219, 1);
+
 }
 
 .cards:hover span {
