@@ -300,7 +300,7 @@ img {
   width: 28%;
   height: 55%;
 }
-
+/* style of mobile */
 @media screen and (max-width: 900px) {
 
   .circuito {
