@@ -219,7 +219,7 @@ img {
   overflow-x: scroll;
 }
 .content::-webkit-scrollbar {
-  -webkit-appearance: none;
+  --webkit-appearance: none;
 }
 
 .content::-webkit-scrollbar:horizontal {

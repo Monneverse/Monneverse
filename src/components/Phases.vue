@@ -312,21 +312,30 @@ img {
   .componentes {
     position: absolute;
     top: 40%;
-    left: 0%;
-    width: 90%;
-    height: max-content;
+    left: 2%;
+    width: 63%;
+    height: 40%;
+    padding: 4rem;
+    margin-right: 3rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 3rem;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    scrollbar-width: 1rem;
+    scroll-snap-type: mandatory;
+    z-index: 1000;
   }
 
- 
+  
+
   .componente {
     position: unset;
     width: 75%;
     height: auto;
+    margin-right: 3rem;
   }
 
 
