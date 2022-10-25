@@ -97,21 +97,7 @@ img {
 }
 
 .fade-leave-to {
-  animation: opacity2 0.5s linear;
-}
-
-@keyframes opacity2 {
-  0% {
-    opacity: 100%;
-  }
-
-  50% {
-    opacity: 50%;
-  }
-
-  100% {
-    opacity: 0%;
-  }
+  animation: opacity 0.5s linear alternate-reverse;
 }
 
 /* Style of mobile */
