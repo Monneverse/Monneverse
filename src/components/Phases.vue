@@ -325,11 +325,28 @@ img {
     overflow-x: scroll;
     overflow-y: scroll;
     scrollbar-width: 1rem;
-    scroll-snap-type: mandatory;
+    scroll-snap-type: x mandatory;
     z-index: 1000;
   }
 
   
+  .componentes::-webkit-scrollbar:vertical {
+    height: 10px;
+    width: 10px;
+  }
+
+  .componentes::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg,
+        rgb(33, 32, 85) 0%,
+        rgba(1, 209, 88, 1) 100%);
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+  }
+
+  .componentes::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
 
   .componente {
     position: unset;
