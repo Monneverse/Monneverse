@@ -362,7 +362,7 @@ img {
   padding: 0%;
 
   position: fixed;
-  bottom:  2rem;
+  bottom:  .5rem;
 }
 .left {
   left: 2rem;
@@ -575,7 +575,7 @@ img {
 
   .btn {
     position: fixed;
-    bottom: 5%;
+    bottom: 1rem;
     right: 5%;
     width: auto;
     height: auto;

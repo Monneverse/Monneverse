@@ -5,6 +5,7 @@
     <source src="/video/fondo-lite.mp4">
     <img src="/img/fondo_binario.png" />
   </video>
+
   <!-- logos de fondos -->
   <div id="logo-1" class="logo">
     <img src="/img/logo_Grande.png" alt="" />
@@ -12,6 +13,7 @@
   <div id="logo-2" class="logo">
     <img src="/img/logo.svg" alt="" />
   </div>
+
 
   <!-- imagenes fondos -->
   <div class="semi-circle ">
@@ -71,6 +73,7 @@ img {
 
 .video-fondo {
   position: fixed;
+  top: 0;
   left: -40%;
   width: 140%;
   scale: 2;
@@ -342,24 +345,27 @@ img {
 
 @media screen and (max-width: 900px) {
   .fondo-montana {
-    height: 90%;
-    width: 100%;
-    z-index: 6;
+    display: none;
   }
-
+  .video-fondo {
+  position: fixed;
+  top: 0;
+  left: -40%;
+  width: 140%;
+  scale: 3;
+  height: 100%;
+  z-index: 0;
+  opacity: 100%;
+}
   #logo-1 {
-    width: 30%;
-    height: fit-content;
-    position: fixed;
-    top: 5%;
-    left: 0%;
+    display: none;
   }
 
   #logo-2 {
-    width: 12%;
-    right: 18%;
-    top: 20%;
-    z-index: 6;
+    width: 30%;
+    left: 30%;
+    bottom: -50%;
+    z-index: 8;
   }
 
   .fondo-mundial {
