@@ -29,81 +29,56 @@ import fasesComponentes from "./ComponentsPhases.vue";
     </div>
   </div>
 
-  <div class="circulos">
+
+  <button class="readMore" v-on:click="cambiarEstado()">Learn More</button>
+
+  <div class="circulo circulo__1">
     <img src="/img/Imagen1.png" />
   </div>
 
   <button class="readMore" v-on:click="cambiarEstado()">Learn More</button>
 
-  <div class="circulos1">
+  <div class="circulo circulo__2">
     <img src="/img/Imagen1.png" />
   </div>
+  <div class="componentes">
+    <div class="componente componentes1">
+      <fasesComponentes title="Enlisting" description="enlist on Pancakeswap one day after our pre-sale"
+        :isVisible="isVisible" />
+    </div>
 
-  <div class="componentes1">
-    <fasesComponentes
-      title="Enlisting"
-      description="enlist on Pancakeswap one day after our pre-sale"
-      :isVisible="isVisible"
-    />
+    <div class="componente componentes2">
+      <fasesComponentes title="MonnerStaking" description="MonnerStaking start one day after pre-sale ends,
+             payouts of 12,6% of total capital every 48 hours" :isVisible="isVisible" />
+    </div>
+
+    <div class="componente componentes3">
+      <fasesComponentes title="Liquidity" description="liquid lock" :isVisible="isVisible" />
+    </div>
+
+    <div class="componente componentes4">
+      <fasesComponentes title="Schedule" description="schedule burning" :isVisible="isVisible" />
+    </div>
+
+    <div class="componente componentes5">
+      <fasesComponentes title="Certick" description="certick audit" :isVisible="isVisible" />
+    </div>
+
+    <div class="componente componentes8">
+      <fasesComponentes title="Official enlistment:" description="coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
+        MEXC global" :isVisible="isVisible" />
+    </div>
+
+    <div class="componente componentes7">
+      <fasesComponentes title="Increase x5" description="Budget increase x5 of our advertising campaign"
+        :isVisible="isVisible" />
+    </div>
+
+    <div class="componente componentes6">
+      <fasesComponentes title="Holders" description="10.000 holders" :isVisible="isVisible" />
+    </div>
   </div>
 
-  <div class="componentes2">
-    <fasesComponentes
-      title="MonnerStaking"
-      description="MonnerStaking start one day after pre-sale ends,
-             payouts of 12,6% of total capital every 48 hours"
-      :isVisible="isVisible"
-    />
-  </div>
-
-  <div class="componentes3">
-    <fasesComponentes
-      title="Liquidity"
-      description="liquid lock"
-      :isVisible="isVisible"
-    />
-  </div>
-
-  <div class="componentes4">
-    <fasesComponentes
-      title="Schedule"
-      description="schedule burning"
-      :isVisible="isVisible"
-    />
-  </div>
-
-  <div class="componentes5">
-    <fasesComponentes
-      title="Certick"
-      description="certick audit"
-      :isVisible="isVisible"
-    />
-  </div>
-
-  <div class="componentes8">
-    <fasesComponentes
-      title="Official enlistment:"
-      description="coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
-        MEXC global"
-      :isVisible="isVisible"
-    />
-  </div>
-
-  <div class="componentes7">
-    <fasesComponentes
-      title="Increase x5"
-      description="Budget increase x5 of our advertising campaign"
-      :isVisible="isVisible"
-    />
-  </div>
-
-  <div class="componentes6">
-    <fasesComponentes
-      title="Holders"
-      description="10.000 holders"
-      :isVisible="isVisible"
-    />
-  </div>
 </template>
 
 <script>
@@ -145,22 +120,18 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 1;
 }
 
 .filtro-superior {
-  background: radial-gradient(
-    circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
-  );
+  background: radial-gradient(circle at center,
+      #f9f9fa 0%,
+      #c8ced4 50%,
+      #a8aaaf 100%);
   mix-blend-mode: multiply;
   z-index: 2;
 }
@@ -230,22 +201,23 @@ img {
   font-family: Roboto;
 }
 
-.circulos {
+.circulo {
   position: absolute;
+  z-index: 5;
+}
+
+.circulo__1 {
   left: 24%;
   bottom: 40%;
   width: 50%;
   height: 25%;
-  z-index: 5;
 }
 
-.circulos1 {
-  position: absolute;
+.circulo__2 {
   left: 22%;
   bottom: 30%;
   width: 55%;
   height: 30%;
-  z-index: 5;
 }
 
 .readMore {
@@ -327,5 +299,117 @@ img {
   right: 0%;
   width: 28%;
   height: 55%;
+}
+
+@media screen and (max-width: 900px) {
+
+  .circuito {
+    display: none;
+  }
+
+  .Fases {
+    left: 0%;
+    top: 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+  }
+
+  .titulo {
+    width: 100%;
+    height: fit-content;
+    position: initial;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .description {
+    margin-top: 1rem;
+    width: 90%;
+    font-size: 4.5vw;
+  }
+
+  .circulo {
+
+    left: 20%;
+    height: 15%;
+
+  }
+
+  .circulo__1 {
+    left: 13%;
+    top: 20%;
+    width: 80%;
+  }
+
+  .circulo__2 {
+    left: 8%;
+    top: 22%;
+    width: 90%;
+  }
+
+  .readMore {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 10%;
+    font-size: 4vw;
+    flex-wrap: wrap;
+  }
+
+  .componentes {
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    width: 63%;
+    height: 40%;
+    padding: 4rem;
+    margin-right: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 3rem;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    scrollbar-width: 1rem;
+    scroll-snap-type: x mandatory;
+    z-index: 1000;
+  }
+
+
+  .componentes::-webkit-scrollbar:vertical {
+    height: 10px;
+    width: 10px;
+  }
+
+  .componentes::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg,
+        rgb(33, 32, 85) 0%,
+        rgba(1, 209, 88, 1) 100%);
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+  }
+
+  .componentes::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+
+  .componente {
+    position: unset;
+    width: 75%;
+    height: auto;
+    margin-right: 3rem;
+  }
+
+
+
 }
 </style>
