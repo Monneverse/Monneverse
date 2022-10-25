@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 354.86 314.36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Degradado_sin_nombre_2);
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-family: Bahnschrift-Bold, Bahnschrift;
+        font-size: 17px;
+        font-variation-settings: 'wght' 700, 'wdth' 100;
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        letter-spacing: -.03em;
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_2" data-name="Degradado sin nombre 2" x1="-118.62" y1="578.7" x2="-117.62" y2="578.7" gradientTransform="translate(42092.51 182077.38) scale(354.86 -314.36)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5fbca2"/>
+      <stop offset="0" stop-color="#375365"/>
+      <stop offset=".7" stop-color="#07a54e"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-1" d="M172.63,0c43.86-.24,88.17,15.68,123.24,47.8,65.79,60.26,77.58,157.84,30.17,229.15l-6.62,10.04-15.34,18.62c-8.47,10.29-23.74,11.7-34.11,3.16s-11.9-23.8-3.43-34.08l15.34-18.62,.03,.03,4.29-5.82c34.37-51.86,25.47-123.03-22.72-167.15-51.36-47.03-129.45-46.94-177.9,.21-45.66,44.44-49.97,116.02-11.93,167.81l3.15,3.88,.05-.04,16.1,17.97c8.89,9.92,7.99,25.23-2.01,34.19s-25.32,8.18-34.21-1.74l-16.1-17.97,.46-.41-6.36-7.88C-17,208.37-10.7,110.29,52.02,49.13,85.34,16.63,128.77,.24,172.63,0Z"/>
+  <text class="cls-2" transform="translate(162.87 33.04)"><tspan class="cls-3" x="0" y="0">2</tspan><tspan x="8.28" y="0">4h</tspan></text>
+  <text class="cls-2" transform="translate(275.53 291.45)"><tspan x="0" y="0">48h</tspan></text>
+</svg>
