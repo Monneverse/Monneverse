@@ -17,7 +17,7 @@ defineProps({
 
 <template>
   <div class="contenedor__fases">
-    <div class="circulo-indicador"></div>
+    <div class="circulo-indicador" @click="isVisible = !isVisible"></div>
     <b>{{ title }}</b>
     <br />
     <transition name="fade">
@@ -75,6 +75,7 @@ img {
   background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 80%);
   margin-bottom: .5rem;
   z-index: 10;
+  cursor: pointer;
 }
 /* animaciones (required) */
 .fade-enter-active {
