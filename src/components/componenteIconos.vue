@@ -55,15 +55,32 @@ defineProps({
   height: 80%;
   padding: 0%;
 }
+@media screen and (width > 769px) {
+  .icon {
+    transition: transform 0.75s;
+    display: flex;
+    height: 80%;
+    width: 35%;
+    background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
+    border-radius: 1rem;
+    margin-right: 10px;
+  }
+  .icon_coin {
+    margin: 4px auto;
+    width: 100%;
+    height: 80%;
+    padding: 0%;
+  }
+}
 
 .name_coin {
   background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0.6em;
+  border-radius: 1em;
   margin: 0 auto;
-  background-color: #029f50;
+
   font-family: Calibri;
   text-transform: uppercase;
   left: 14%;
@@ -78,6 +95,7 @@ defineProps({
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .name_coin {
     font-size: 8vw;
+    border-radius: 0.6em;
   }
 
   .icon_coin {
