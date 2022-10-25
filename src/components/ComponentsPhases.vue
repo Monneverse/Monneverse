@@ -96,13 +96,30 @@ img {
   }
 }
 
+.fade-leave-to {
+  animation: opacity2 0.5s linear;
+}
+
+@keyframes opacity2 {
+  0% {
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 50%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
 
 /* Style of mobile */
 @media screen and (max-width: 900px) {
 
   .circulo-indicador {
     position: absolute;
-    top:0 ;
+    top: 0;
     left: 0%;
     transform: translate(-100%, 0%);
     width: 2rem;
