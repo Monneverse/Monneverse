@@ -56,6 +56,7 @@ img {
     align-items: center;
     background-color: #161431;
     padding: 1%;
+    flex: none;
 }
 
 .titulo1 {  
