@@ -29,7 +29,6 @@ defineProps({
 </template>
 
 <style scoped>
-
 /* Style of web */
 img {
   width: 100%;
@@ -64,9 +63,9 @@ img {
 
 .circulo-indicador {
   position: absolute;
-  bottom: 100%;
+  top: 0%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -100%);
   width: 3rem;
   height: 3rem;
   align-items: center;
@@ -77,6 +76,7 @@ img {
   z-index: 10;
   cursor: pointer;
 }
+
 /* animaciones (required) */
 .fade-enter-active {
   animation: opacity 0.5s linear;
@@ -100,7 +100,31 @@ img {
 /* Style of mobile */
 @media screen and (max-width: 900px) {
 
+  .circulo-indicador {
+    position: absolute;
+    top: 3%;
+    left: 0%;
+    transform: translate(-100%, 0%);
+    width: 2rem;
+    height:2rem;
 
+  }
+  .contenedor__fases  {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .contenedor__fases p {
+    font-size: 3vw;
+    font-family: Roboto;
+    margin-top: 1rem;
+    
+  }
+
+  .contenedor__fases b {
+    font-size: 3.5vw;
+    
+  }
 
 }
 </style>

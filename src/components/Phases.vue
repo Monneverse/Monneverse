@@ -299,6 +299,7 @@ img {
   }
 
   .readMore {
+    display: none;
     position: absolute;
     top: 40%;
     left: 50%;
@@ -310,9 +311,9 @@ img {
 
   .componentes {
     position: absolute;
-    top: 55%;
+    top: 40%;
     left: 0%;
-    width: 100%;
+    width: 90%;
     height: max-content;
     display: flex;
     flex-direction: column;
@@ -321,18 +322,14 @@ img {
     flex-wrap: wrap;
   }
 
-  /* .componente {
-    position: initial;
-    width: 100%;
-    border: 1px solid red;
+ 
+  .componente {
+    position: unset;
+    width: 75%;
+    height: auto;
   }
 
-  .componente>* {
 
-
-    width: 100%;
-    border: 1px solid red;
-  } */
 
 }
 </style>
