@@ -5,11 +5,9 @@ import ComponenteIconos from "./componenteIconos.vue";
 <template>
   <!-- FONDO -->
   <div class="fondo"></div>
-  <div class="fondo-oscuro1"></div>
+ 
   <div class="fondo-oscuro"></div>
-  <div class="fondo-oscuro-superior">
-    <img src="/img/fondo-oscuro-superior.png" alt="" srcset="" />
-  </div>
+
   <div class="fondo-montana">
     <img src="/img/fondo-montana.png" alt="" srcset="" />
   </div>
@@ -242,7 +240,7 @@ import ComponenteIconos from "./componenteIconos.vue";
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #121026;
+  background-color: #06050d;
   height: 100%;
   width: 100%;
   display: flex;
@@ -258,18 +256,26 @@ import ComponenteIconos from "./componenteIconos.vue";
 }
 
 .circuito {
-  position: fixed;
-  z-index: 1;
-  height: 80%;
+  position: absolute;
+  z-index: 4;
+  height: 10%;
   width: 50%;
-  min-width: 30rem;
-  top: 11%;
+  top: 12%;
 }
 
 .circuito-izquierdo {
-  left: -14%;
+  left: -5%;
+}
+.circuito-izquierdo img {
+  width: 85%;
+  opacity: 50%;
 }
 
+.circuito-derecho {
+  right: -10%;
+  visibility: hidden;
+  transform: scaleY(-1);
+}
 .circuito-derecho {
   right: -10%;
   visibility: hidden;
@@ -436,20 +442,15 @@ import ComponenteIconos from "./componenteIconos.vue";
 
 /*ICONOS EXCHANGES*/
 .contenedor_crypto {
-  width: 58%;
+  width: 60%;
   height: 75%;
   position: absolute;
   top: 20%;
-  left: 35%;
-  display: grid;
-  grid-template-columns: 33% 33% 31%;
-  grid-template-rows: 18% 18% 18% 18% 18%;
+  left: 30%;
+  display: flex;
+  flex-direction: column;
   gap: 3.5%;
   z-index: 7;
-}
-
-.cryptos {
-  height: 33%;
 }
 
 @media only screen and (min-device-width: 275px) and (max-device-width: 768px) {
@@ -493,6 +494,16 @@ import ComponenteIconos from "./componenteIconos.vue";
     flex: none;
   }
 }
+.cryptos {
+  width: 40%;
+  height: 80%;
+  margin-left: 5%;
+}
+.caja-cryptos {
+   display: flex;
+    width: 100%;
+    height: 60%;
+  }
 
 /* FIN ICONOS EXCHANGES */
 

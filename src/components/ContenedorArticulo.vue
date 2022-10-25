@@ -1,3 +1,4 @@
+
 <script setup>
 import { text } from "@fortawesome/fontawesome-svg-core";
 import Articulo from "./Articulo.vue";
@@ -9,6 +10,7 @@ defineProps({
 });
 </script>
 
+
 <template>
   <!-- Fondos -->
   <div class="fondo">
@@ -17,7 +19,7 @@ defineProps({
       <img src="/img/circuloImagen.png" alt="" class="circuloFondo2" />
     </div>
     <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
-    <div class="fondo-oscuro"></div>
+    <div class="fondo-oscuro"> </div>
     <div class="degradado degradado_izquierdo"></div>
     <div class="degradado degradado_derecho"></div>
   </div>
@@ -30,30 +32,25 @@ defineProps({
 
   <!-- CONTENEDOR DE BOTON METATASK -->
   <div class="btn_buyMonner">
-    <div class="contrato">
-      <b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span>
-    </div>
+    <div class="contrato"><b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span></div>
     <button class="buyNow">
       <div class="texto1">BUY MONNER</div>
       <div class="logos">
-        <div class="binance"><img src="/./img/Articulo/BNC.svg" /></div>
-        <div class="meta"><img src="/./img/Articulo/Meta.svg" /></div>
+        <div class="binance"><img src="/./img/Articulo/BNC.svg" ></div>
+        <div class="meta"><img src="/./img/Articulo/Meta.svg" ></div>
       </div>
     </button>
   </div>
 
+
   <!-- Contenedor de Articulos -->
   <div class="containerArticulo">
     <div v-if="index_pagina == 5" class="contenedorDeArticulo">
-      <Articulo
-        v-for="item in vectorArticulo"
-        :key="item"
-        :titulo="item.titulo"
-        :img="item.imagen"
-        :url="item.link"
-      />
-    </div>
+        <Articulo v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen"
+          :url="item.link" />
+      </div>
   </div>
+
 
   <!-- Contenedor de Redes Sociales -->
   <div class="logo_redes">
@@ -111,6 +108,7 @@ export default {
           imagen: "/img/Articulo/imagenArticulo6.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/the-monner-coin-and-its-benefits",
         },
+
       ],
       vectorArticulo: [
         {
@@ -129,6 +127,7 @@ export default {
           imagen: "/img/Articulo/imagenArticulo3.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/why-will-monner-become-one-of-the-best-cryptocurrencies-to-invest-in",
         },
+
       ],
       fechaEvento: new Date(2022, 9, 12, 4, 0, 0, 0),
       diaString: "00",
@@ -160,17 +159,19 @@ export default {
   },
   mounted() {
     setInterval(this.ObtenerFechaActual, 500);
-    this.vectorArticulo = this.vectorTodo.slice(0, 3);
-    var myfunction = this.vectorTodo.slice(0, 3);
+    this.vectorArticulo = this.vectorTodo.slice(0, 3)
+    var myfunction = this.vectorTodo.slice(0, 3)
 
     setTimeout(() => {
-      this.vectorArticulo = this.vectorTodo.slice(3, 6);
+      this.vectorArticulo = this.vectorTodo.slice(3, 6)
       setTimeout(() => {
-        this.vectorArticulo = this.vectorTodo.slice(0, 3);
-      }, 5000);
-    }, 5000);
+        this.vectorArticulo = this.vectorTodo.slice(0, 3)
+
+      }, 5000)
+    }, 5000)
   },
 };
+
 </script>
 
 <style scoped>
@@ -178,7 +179,7 @@ export default {
 
 @font-face {
   font-family: LCDFONT;
-  src: url("/Fonts/LCDFONT.TTF");
+  src: url("/Fonts/LCDFONT.TTF")
 }
 
 @font-face {
@@ -200,12 +201,10 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 0;
 }
 
@@ -305,6 +304,7 @@ img {
   left: 58%;
 }
 
+
 /* CONTENEDOR BOTON BUYNOW */
 .btn_buyMonner {
   position: fixed;
@@ -317,10 +317,13 @@ img {
 .buyNow {
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #029f50 0%, #0a664e 50%, #0e444d 100%);
+  background: linear-gradient(to right,
+      #029F50 0%,
+      #0A664E 50%,
+      #0E444D 100%);
   border: 1.2px solid black;
-  border-radius: 0.5rem;
-  transition: ease-in all 0.5s;
+  border-radius: .5rem;
+  transition: ease-in all .5s;
   animation: button infinite alternate 5s;
   -webkit-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
@@ -339,15 +342,15 @@ img {
 
 .contrato {
   position: relative;
-  left: 0%;
-  font-size: 0.9vw;
+  left:0%;
+  font-size: .9vw;
   color: white;
   height: 20%;
   width: 110%;
 }
 
 .contrato span {
-  font-size: 0.8vw;
+  font-size: .8vw;
 }
 
 .logos {
@@ -371,6 +374,7 @@ img {
   width: 10%;
 }
 
+
 /* contendero de Articulo*/
 .containerArticulo {
   position: absolute;
@@ -384,6 +388,7 @@ img {
   z-index: 8;
 }
 
+
 .contenedorDeArticulo {
   display: flex;
   justify-content: space-around;
@@ -391,6 +396,7 @@ img {
   width: 70%;
   height: 80%;
 }
+
 
 h1,
 h2,
@@ -409,6 +415,7 @@ h4 {
   z-index: 14;
   display: flex;
   justify-content: start;
+
 }
 
 .icon {
@@ -418,8 +425,9 @@ h4 {
   margin-left: 1%;
 }
 
-/* vista de movil*/
+/* vista de movil*/ 
 @media screen and (max-width: 850px) {
+
   .btn_buyMonner {
     top: 15%;
   }
@@ -427,15 +435,15 @@ h4 {
   .containerArticulo {
     top: 30%;
     scroll-snap-type: x mandatory;
-    overflow-x: scroll;
+   overflow-x: scroll;
   }
   .containerArticulo::-webkit-scrollbar {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
   }
 
-  .containerArticulo::-webkit-scrollbar:horizontal {
-    height: 10px;
-  }
+.containerArticulo::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
 
   .logo_redes {
     display: none;
@@ -449,44 +457,45 @@ h4 {
     right: 80%;
   }
 
-  .contenedorDeArticulo > * {
-    width: 100%;
-
+  .contenedorDeArticulo>* {
+    width: 90%;
     top: 0%;
+    flex: none;
+
   }
 
-  .contenedorDeArticulo {
-   
-  }
-
-  .btn_buyMonner {
+   .btn_buyMonner{
     top: 20%;
     left: 25%;
     height: 5%;
     width: 55%;
-  }
-  .buyNow {
+    
+   }
+   .buyNow{
     height: 130%;
-  }
-  .buyNow .logos {
-    top: -10%;
-  }
-  .buyNow .logos .meta {
+   }
+   .buyNow .logos{
+    top:  -10%;
+   }
+   .buyNow .logos .meta{
     width: 10%;
-  }
-  .contrato {
+    
+   }
+   .contrato{
     font-size: 55%;
     left: -2%;
-  }
-  .contrato span {
+   }
+   .contrato span{
     font-size: 90%;
-  }
-  .buyNow .texto1 {
+   }
+    .buyNow .texto1{
     top: 30%;
-  }
-  .binance {
-    width: 25%;
+   }
+   .binance{
+    width: 25%; 
     bottom: 10%;
-  }
+   }
+   
+
 }
 </style>
