@@ -216,9 +216,9 @@ export default {
     touchMove() {
       this.moveY = this.touchPositionY();
       if (this.scroll) {
-        if (this.startY - 50 > this.moveY)
+        if (this.startY - 100 > this.moveY)
           this.next();
-        else if (this.startY + 50 < this.moveY)
+        else if (this.startY + 100 < this.moveY)
           this.before();
       }
 
