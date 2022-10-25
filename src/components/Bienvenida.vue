@@ -234,7 +234,7 @@ img {
 }
 
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
   .fondo-montana {
     height: 90%;
     width: 100%;
