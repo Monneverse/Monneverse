@@ -52,6 +52,8 @@ img {
   text-align: center;
   text-transform: capitalize;
   display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 4;
   margin: 10px;
   color: white;
@@ -75,7 +77,9 @@ img {
   background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 80%);
   height: 3rem;
   bottom: 100%;
-  left: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-bottom: 1rem;
   align-items: center;
   z-index: 10;
 }
