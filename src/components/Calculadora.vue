@@ -37,7 +37,7 @@
         circulo: true,
         'circulo-superior-animation': index_pagina == 4,
       }">
-        <img src="../assets/circulo-colores.svg" alt="aro-multikolor" />
+        <img src="../assets/circulo-colores-texto.svg" alt="aro-multikolor" />
       </div>
 
       <img class="circulo circulo-verde" src="../assets/circulo-verde.svg" alt="circle green">
@@ -48,8 +48,8 @@
       <div @click="CambiarMonth" class="descripcion">
         <p>{{ porcentajeInteres }}%</p>
       </div>
-      <p id="month-1">24 h</p>
-      <p id="month-2">48 h</p>
+      <!-- <p id="month-1">24 h</p>
+      <p id="month-2">48 h</p> -->
       <div :class="{
         'circulo-indicador': true,
         'circulo-indicador-animation': index_pagina == 4,
