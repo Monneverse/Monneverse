@@ -210,13 +210,16 @@ img {
   }
 }
 
+.fade-leave-to {
+  animation: opacity 0.5s linear alternate-reverse;
+}
 
 /* Style of mobile */
 @media screen and (max-width: 900px) {
 
   .circulo-indicador {
     position: absolute;
-    top: 3%;
+    top: 0;
     left: 0%;
     transform: translate(-100%, 0%);
     width: 2rem;
@@ -226,18 +229,20 @@ img {
 
   .contenedor__fases {
     width: 100%;
+    height: 40%;
     align-items: flex-start;
   }
 
+
   .contenedor__fases p {
-    font-size: 3vw;
+    font-size: 4vw;
     font-family: Roboto;
-    margin-top: 1rem;
+    margin-top: .2rem;
 
   }
 
   .contenedor__fases b {
-    font-size: 3.5vw;
+    font-size: 5vw;
 
   }
 

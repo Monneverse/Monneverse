@@ -35,8 +35,9 @@ defineProps({
     <div class="contrato"><b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span></div>
     <button class="buyNow">
       <div class="texto1">BUY MONNER</div>
-      <div class="logos"><img src="/./img/Articulo/BNC.svg" class="binance">
-        <img src="/./img/Articulo/Meta.svg" class="meta">
+      <div class="logos">
+        <div class="binance"><img src="/./img/Articulo/BNC.svg" ></div>
+        <div class="meta"><img src="/./img/Articulo/Meta.svg" ></div>
       </div>
     </button>
   </div>
@@ -44,12 +45,10 @@ defineProps({
 
   <!-- Contenedor de Articulos -->
   <div class="containerArticulo">
-    <transition name="slide-fade">
-      <div v-if="index_pagina == 5" class="contenedorDeArticulo">
+    <div v-if="index_pagina == 5" class="contenedorDeArticulo">
         <Articulo v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen"
           :url="item.link" />
       </div>
-    </transition>
   </div>
 
 
@@ -172,6 +171,7 @@ export default {
     }, 5000)
   },
 };
+
 </script>
 
 <style scoped>
@@ -342,7 +342,7 @@ img {
 
 .contrato {
   position: relative;
-  left: -4%;
+  left:0%;
   font-size: .9vw;
   color: white;
   height: 20%;
@@ -357,6 +357,7 @@ img {
   position: relative;
   height: auto;
   width: auto;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -386,6 +387,7 @@ img {
   align-items: center;
   z-index: 8;
 }
+
 
 .contenedorDeArticulo {
   display: flex;
@@ -423,40 +425,77 @@ h4 {
   margin-left: 1%;
 }
 
-.slide-fade-enter-active {
-  transform: translateY(-2440px);
-  transition: all 2s ease-out;
-}
-
-.slide-fade-leave-active {
-  transition: all 5s cubic-bezier(1, 0.5, 0.8, 1);
-}
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateX(20px);
-  opacity: 0;
-}
-
-
-/* vista de movil*/
-@media screen and (max-width: 769px) {
+/* vista de movil*/ 
+@media screen and (max-width: 850px) {
 
   .btn_buyMonner {
-    top: 20%;
+    top: 15%;
   }
 
   .containerArticulo {
     top: 30%;
-    border: 1px solid white;
+    scroll-snap-type: x mandatory;
+   overflow-x: scroll;
+  }
+  .containerArticulo::-webkit-scrollbar {
+  -webkit-appearance: none;
   }
 
-  .containerArticulo .contenedorDeArticulo {
-    height: 100%;
-    width: 40%;
-    scroll-snap-type: x mandatory;
-    overflow-x: scroll;
-    flex: none;
+.containerArticulo::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+  .logo_redes {
+    display: none;
   }
+
+  .degradado_derecho {
+    left: 80%;
+  }
+
+  .degradado_izquierdo {
+    right: 80%;
+  }
+
+  .contenedorDeArticulo>* {
+    width: 90%;
+    top: 0%;
+    flex: none;
+
+  }
+
+   .btn_buyMonner{
+    top: 20%;
+    left: 25%;
+    height: 5%;
+    width: 55%;
+    
+   }
+   .buyNow{
+    height: 130%;
+   }
+   .buyNow .logos{
+    top:  -10%;
+   }
+   .buyNow .logos .meta{
+    width: 10%;
+    
+   }
+   .contrato{
+    font-size: 55%;
+    left: -2%;
+   }
+   .contrato span{
+    font-size: 90%;
+   }
+    .buyNow .texto1{
+    top: 30%;
+   }
+   .binance{
+    width: 25%; 
+    bottom: 10%;
+   }
+   
+
 }
 </style>
