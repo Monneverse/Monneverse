@@ -24,7 +24,7 @@ import Footer from "./components/Footer.vue";
 
 <template>
   <header>
-    <Header :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage" :setNext="next" :indexPagina="index_pagina">
+    <Header :orientacion="orientacion" :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage" :setNext="next" :indexPagina="index_pagina">
     </Header>
   </header>
 
@@ -112,6 +112,7 @@ import Footer from "./components/Footer.vue";
   </main>
 </template>
 <script>
+const typeOrientacion = Object.freeze({ left: 1, center: 2, right: 3 });
 export default {
   data() {
     return {
@@ -128,6 +129,7 @@ export default {
       startY: 0,
       moveY: 0,
       position: 0,
+      orientacion : typeOrientacion.center
     };
   },
   methods: {

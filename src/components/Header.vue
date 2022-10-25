@@ -67,7 +67,8 @@
   </div>
 
   <!-- boton bajar -->
-  <div class="arrow-container animated fadeInDown">
+  <div :class="{'arrow-container':true, 'animated':true, 'fadeInDown':true, 
+  right:this.orientacion ==3,center:this.orientacion ==2, left:this.orientacion ==1 }">
     <div @click="this.setNext()" class="arrow-2">
       <i class="fa fa-angle-down"></i>
     </div>
@@ -87,7 +88,7 @@ export default {
       isExpanded: false
     };
   },
-  props: ["index", "isVisible", "setPage", "setNext", "indexPagina"],
+  props: ["index", "isVisible", "setPage", "setNext", "indexPagina","orientacion"],
   computed: {
     indexF: {
       get() {
@@ -353,17 +354,28 @@ img {
 .arrow-container {
   width: 5rem;
   height: 5rem;
-  position: fixed;
-  bottom: 0%;
-  left: 44%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0%;
   user-select: none;
   padding: 0%;
-}
 
+  position: fixed;
+  bottom:  2rem;
+}
+.left {
+  left: 2rem;
+  transform: translate(0%,0);
+}
+.center {
+  left: 50%;
+  transform: translate(-50%,0);
+}
+.right {
+  right:   2rem;
+  transform: translate(0%,0);
+}
 .arrow-1 {
   width: 100%;
   height: 100%;
