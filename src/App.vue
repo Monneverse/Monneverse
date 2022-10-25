@@ -3,7 +3,6 @@ import Header from "./components/Header.vue";
 import Bienvenida from "./components/Bienvenida.vue";
 import Calculadora from "./components/Calculadora.vue";
 import Alliances from "./components/Alliances.vue";
-import Certificado from "./components/Certificado.vue";
 import ContenedorArticulo from "./components/ContenedorArticulo.vue";
 import Coins from "./components/Coins.vue";
 import Benefits from "./components/Benefits.vue";
@@ -25,7 +24,7 @@ import Footer from "./components/Footer.vue";
 
 <template>
   <header>
-    <Header :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage" :setNext="next" :indexPagina="index_pagina">
+    <Header :orientacion="orientacion" :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage" :setNext="next" :indexPagina="index_pagina">
     </Header>
   </header>
 
@@ -113,6 +112,7 @@ import Footer from "./components/Footer.vue";
   </main>
 </template>
 <script>
+const typeOrientacion = Object.freeze({ left: 1, center: 2, right: 3 });
 export default {
   data() {
     return {
@@ -129,6 +129,7 @@ export default {
       startY: 0,
       moveY: 0,
       position: 0,
+      orientacion : typeOrientacion.center
     };
   },
   methods: {
@@ -145,7 +146,7 @@ export default {
     before() {
       let newPosition = this.index_pagina;
 
-      if (this.index_pagina > 0) {
+      if (this.index_pagina > 1) {
         newPosition = this.index_pagina - 1;
         this.isRevert = false;
         this.CambiarContenedor(newPosition)
@@ -217,15 +218,16 @@ export default {
     touchMove() {
       this.moveY = this.touchPositionY();
       if (this.scroll) {
-        if (this.startY > this.moveY)
+        if (this.startY - 100 > this.moveY)
           this.next();
-        else if (this.startY < this.moveY)
+        else if (this.startY + 100 < this.moveY)
           this.before();
       }
 
     },
     CambiarContenedor(newPosition) {
       setTimeout(() => {
+        this.scroll = false;
         this.index_pagina = newPosition;
         this.isVisibleLogo = true;
         if (
@@ -245,6 +247,7 @@ export default {
         this.UpdateNav(this.index_pagina);
         this.exitAnimation = false;
         this.enterAnimation = true;
+
       }, 500);
 
       setTimeout(() => {
@@ -272,9 +275,6 @@ export default {
         this.CambiarContenedor(newPosition)
       }
     },
-
-
-
     touchPositionY() {
       return (this.position = event.touches[0].clientY);
     },
@@ -289,15 +289,12 @@ export default {
         event.stopPropagation();
         return false;
       };
-  
+
     },
   },
   mounted() {
-    this.index_pagina = 1;
     document.addEventListener("wheel", this.Navegar);
     this.listaPaginaDondeSeOcultaLogo.push(this.limite);
-
-
     document.addEventListener("drag", this.returnMethods());
   },
 };
@@ -313,7 +310,19 @@ export default {
   font-style: semibold;
 }
 
-/*  */
+/* Variables */
+:root {
+  /* colores */
+  --color-letra: white;
+  --degradado-linear-navegacion: radial-gradient(circle at center,
+      #32987d 0%,
+      #097561 50%,
+      #505863 100%);
+  --color-secundario: #ffc000;
+  --color-secundario-hover: #b48700;
+}
+
+/*style global  */
 * {
   margin: 0;
   padding: 0;
@@ -358,24 +367,6 @@ main {
 }
 
 /* Style cambiar de div */
-
-.green {
-  background-color: green;
-}
-
-.orange {
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
-}
-
-.red {
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
-}
 
 ::-webkit-scrollbar {
   display: none;

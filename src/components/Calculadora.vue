@@ -695,7 +695,7 @@ img {
 }
 
 /* style of mobile */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
   .calculadora {
     position: relative;
     top: 0%;
