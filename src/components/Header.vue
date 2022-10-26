@@ -496,7 +496,6 @@ img {
         #111418 100%);
     border-top-right-radius: 3rem;
     transform-origin: 0% 100%;
-    transition: all 600ms;
   }
 
   .barra-navegacion-active {
