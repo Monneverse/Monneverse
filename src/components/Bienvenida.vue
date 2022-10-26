@@ -219,7 +219,7 @@ img {
   .fondo-mundial {
     position: fixed;
     top: 40%;
-    left: -8em;
+    left: -16em;
     width: 50em;
     height: 40em;
     z-index: 8;
@@ -228,9 +228,9 @@ img {
 
   .fondo-montana {
     position: fixed;
-    top: 38%;
-    left: -59%;
-    width: 200%;
+    top: 36%;
+    left: 0%;
+    width: 100%;
     height: 70%;
   }
 
@@ -251,7 +251,7 @@ img {
   .degradado {
     position: fixed;
     top: 10%;
-    left: -26%;
+    left: -2%;
     z-index: 9;
   }
 
@@ -342,22 +342,23 @@ img {
 
 @media screen and (max-width: 850px) {
   .fondo-montana {
-    height: 90%;
-    width: 100%;
+    height: 100%;
+    width: 200%;
+    left: -62%;
     z-index: 6;
   }
 
   #logo-1 {
-    width: 30%;
+    width: 80%;
     height: fit-content;
     position: fixed;
     top: 5%;
-    left: 0%;
+    left: -5%;
   }
 
   #logo-2 {
-    width: 12%;
-    right: 18%;
+    width: 35%;
+    right: 25%;
     top: 20%;
     z-index: 6;
   }
@@ -381,12 +382,12 @@ img {
   .welcome .subtitle {
     font-size: 6vh;
 
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .welcome .description {
     font-size: 5vw;
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
 
   .degradado {
@@ -402,7 +403,7 @@ img {
     position: fixed;
     justify-content: center;
     top: 8em;
-    left: -2%;
+    left: 2%;
     width: 100%;
     z-index: 99;
   }
