@@ -80,10 +80,11 @@ export default {
   display: flex;
   flex-wrap: wrap;
   font-family: "WorkSans", sans-serif;
+  
 }
 
 .fondo-oscuro {
-  background-color: #161431;
+  background-color: rgb(22, 20, 49, 0.8);
 }
 
 .benefit .contenido {

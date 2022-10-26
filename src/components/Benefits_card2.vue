@@ -12,6 +12,9 @@ defineProps({
   <!--FONDO-->
 
   <div class="fondo">
+    <div class="fondo-benefit">
+      <img src="/img/fondo-benefit.png" alt="" />
+    </div>
     <div class="logo">
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
@@ -279,6 +282,23 @@ defineProps({
   height: 100%;
   width: 100%;
   background-color: #121026;
+}
+.fondo-benefit {
+ 
+ background-size: no-repeat center center fixed ;
+ z-index: 5;
+}
+.fondo-benefit > img {
+ position: absolute;
+ width: 200%;
+ height: 130vh;
+}
+@media screen and (min-width: 769px) {
+
+ .fondo-benefit > img {
+   width: 100%;
+   height: 115vh;
+ }
 }
 
 .animacion-desplazamiento {
