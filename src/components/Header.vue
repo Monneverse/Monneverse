@@ -496,7 +496,7 @@ img {
         #111418 100%);
     border-top-right-radius: 3rem;
     transform-origin: 0% 100%;
-    transition: all 300ms;
+    transition: all 600ms;
   }
 
   .barra-navegacion-active {
@@ -542,12 +542,13 @@ img {
     display: flex;
     top: 2rem;
     left: 2rem;
-    z-index: 1000;
+    z-index: 9000;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     height: 2.5rem;
     width: 3rem;
+    transition: all 600ms;
   }
 
   .menu-Burger>.line {
@@ -556,7 +557,7 @@ img {
     width: 90%;
     background-color: var(--color-secundario);
     transform-origin: 0% 100%;
-    transition: transform 300ms;
+    transition: all 600ms;
   }
 
   .menu-Burger-active .line__1 {
