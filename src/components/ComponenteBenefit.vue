@@ -117,7 +117,7 @@ export default {
 }
 
 .contenido img {
-  width: 99%;
+  width: 60%;
   height: 20%;
   margin: 0 auto;
 }
