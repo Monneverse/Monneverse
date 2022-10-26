@@ -39,32 +39,40 @@
     <div class="titulo">
         <p>news</p>
     </div>
-    <div class="cryptopotato">
-        <a href=""><img src="/img/News/cryptoPotato.png"></a>
+    <div class="news">
+        <!-- PRIMERAS CRYPTOS -->
+        <div class="primeras">
+            <div class="cryptopotato">
+                <a href=""><img src="/img/News/cryptoPotato.png"></a>
+            </div>
+            <div class="coinquora">
+                <a href=""><img src="/img/Exchanges/Coinquora.png"></a>
+            </div>
+            <div class="coinrepublic">
+                <a href=""><img src="/img/News/TheCoinRepublic.png"></a>
+            </div>
+        </div>
+        <!-- FIN PRIMERAS CRYPTOS -->
+        <!-- ULTIMAS CRYPTOS -->
+        <div class="ultimas">
+            <div class="criptotendencia">
+                <a
+                    href="https://criptotendencia.com/2022/08/03/por-que-monner-puede-convertirse-en-una-de-las-mejores-criptomonedas-para-invertir/"><img
+                        src="/img/Exchanges/criptotend.png"></a>
+            </div>
+            <div class="coinspeaker">
+                <a href="https://www.coinspeaker.com/monner-coin-revolutionize-crypto/"><img
+                        src="/img/Exchanges/coinspeaker.png"></a>
+            </div>
+            <div class="territoriobitcoin">
+                <a href="https://www.territoriobitcoin.com/una-nueva-criptomoneda-en-tendencia/"><img
+                        src="/img/Exchanges/territoriobtc.png"></a>
+            </div>
+        </div>
+        <!-- FIN ULTIMAS CRYPTO -->
     </div>
-    <div class="coinquora">
-        <a href=""><img src="/img/Exchanges/Coinquora.png"></a>
-    </div>
-    <div class="coinrepublic">
-        <a href=""><img src="/img/News/TheCoinRepublic.png"></a>
-    </div>
-
     <div class="circulo"></div>
     <div class="indicador"></div>
-
-    <div class="criptotendencia">
-        <a
-            href="https://criptotendencia.com/2022/08/03/por-que-monner-puede-convertirse-en-una-de-las-mejores-criptomonedas-para-invertir/"><img
-                src="/img/Exchanges/criptotend.png"></a>
-    </div>
-    <div class="coinspeaker">
-        <a href="https://www.coinspeaker.com/monner-coin-revolutionize-crypto/"><img
-                src="/img/Exchanges/coinspeaker.png"></a>
-    </div>
-    <div class="territoriobitcoin">
-        <a href="https://www.territoriobitcoin.com/una-nueva-criptomoneda-en-tendencia/"><img
-                src="/img/Exchanges/territoriobtc.png"></a>
-    </div>
 </template>
 
 <script>
@@ -147,12 +155,6 @@ img {
 }
 
 .logo {
-    position: fixed;
-    z-index: 5;
-    opacity: 40%;
-}
-
-#logo-2 {
     width: 34%;
     height: 56%;
     position: fixed;
@@ -272,8 +274,9 @@ img {
 
     #logo-2 {
         position: absolute;
-        top: 70%;
-        left: -4%;
+        width: 50%;
+        top: 56%;
+        left: 2%;
         opacity: 50%;
         z-index: 4;
     }
@@ -284,6 +287,144 @@ img {
         left: -6%;
         width: 140%;
         height: 90%;
+        visibility: hidden;
+    }
+
+    .indicador {
+        position: absolute;
+        top: 45%;
+        left: 40%;
+        width: 18%;
+        height: 14%;
+        border-radius: 2rem;
+        background: linear-gradient(to top,
+                #029F50 0%,
+                #0A664E 50%,
+                #0E444D 100%);
+        z-index: 8;
+        visibility: hidden;
+    }
+
+    .circulo {
+        position: absolute;
+        top: 31%;
+        left: 38%;
+        width: 22%;
+        height: 10%;
+        border-radius: 5rem;
+        z-index: 8;
+        background: #1A1E29;
+        visibility: hidden;
+    }
+}
+
+@media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
+    .fondo_rayos {
+        position: fixed;
+        left: -35%;
+        top: -30%;
+        width: 150%;
+        height: 150%;
+        opacity: 50%;
+        z-index: 1;
+        background-size: no-repeat center center fixed;
+    }
+
+    .fondo_rayos img {
+        height: 100%;
+    }
+
+    .degradado {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 35%;
+        left: 55%;
+        z-index: 9;
+    }
+
+    .degradado_izquierdo {
+        display: none;
+    }
+
+    .fondo-montana {
+        position: fixed;
+        top: 38%;
+        left: -56%;
+        width: 200%;
+        height: 80%;
+    }
+
+    .fondo-mundial {
+        position: fixed;
+        top: 25em;
+        left: -9em;
+        width: 50em;
+        height: 35em;
+        z-index: 3;
+        opacity: 100%;
+    }
+
+    .fondo-calculadora {
+        width: 100%;
+        height: 100%;
+    }
+
+    .circuito-derecho {
+        display: none;
+    }
+
+    .circuito-izquierdo {
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 10%;
+        height: 100%;
+        display: none;
+    }
+
+    #logo-2 {
+        position: fixed;
+        top: 55%;
+        left: 0%;
+        width: 50%;
+        opacity: 50%;
+        z-index: 3;
+    }
+
+    .fondoTokenomics {
+        position: fixed;
+        top: 0%;
+        left: -6%;
+        width: 140%;
+        height: 90%;
+        visibility: hidden;
+    }
+
+    .indicador {
+        position: absolute;
+        top: 45%;
+        left: 40%;
+        width: 18%;
+        height: 14%;
+        border-radius: 2rem;
+        background: linear-gradient(to top,
+                #029F50 0%,
+                #0A664E 50%,
+                #0E444D 100%);
+        z-index: 8;
+        visibility: hidden;
+    }
+
+    .circulo {
+        position: absolute;
+        top: 31%;
+        left: 38%;
+        width: 22%;
+        height: 10%;
+        border-radius: 5rem;
+        z-index: 8;
+        background: #1A1E29;
         visibility: hidden;
     }
 }
@@ -325,106 +466,132 @@ img {
 /* FIN TITULO */
 
 /* PRIMERAS CRIPTOS */
-.cryptopotato {
-    position: absolute;
+.primeras {
+    position: fixed;
     top: 18%;
-    left: 15%;
-    width: auto;
-    height: auto;
+    left: 8%;
+    width: 32%;
+    height: 83%;
+    z-index: 999;
+}
+
+.cryptopotato {
+    position: relative;
+    top: 0%;
+    left: 10%;
+    width: 80%;
+    height: 20%;
     z-index: 9;
 }
 
 .coinquora {
-    position: absolute;
-    top: 42%;
-    left: 12%;
-    width: auto;
+    position: relative;
+    top: 12%;
+    left: 10%;
+    width: 80%;
     height: auto;
     z-index: 9;
 }
 
 .coinrepublic {
-    position: fixed;
-    top: 70%;
-    left: 12%;
-    width: 30%;
-    height: 30%;
+    position: relative;
+    top: 24%;
+    left: 10%;
+    width: 80%;
+    height: auto;
     z-index: 9;
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+    .cryptopotato {}
+
+    .coinquora {}
+
+    .coinrepublic {}
+}
+
+@media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
+
+    .primeras {
+        top: 25%;
+        width: 50%;
+        height: 60%;
+    }
+
     .cryptopotato {
-        visibility: hidden;
+        top: 1%;
+        left: 0%;
+        width: 80%;
     }
 
     .coinquora {
-        visibility: hidden;
+        top: 15%;
+        left: 0%;
+        width: 80%;
     }
 
     .coinrepublic {
-        visibility: hidden;
+        top: 25%;
+        left: 0%;
+        width: 80%;
+        height: 25%;
     }
 }
 
 /* FIN PRIMERAS CRIPTOS */
 
-.coinrepublic img {
+/* RESTO CRIPTOS */
+
+.ultimas {
+    position: fixed;
+    top: 18%;
+    right: 5.5%;
+    width: 32%;
+    height: 83%;
+    z-index: 999;
+}
+
+.criptotendencia {
+    position: relative;
+    top: 60%;
+    right: -8%;
+    width: 80%;
+    height: 10%;
+    z-index: 9;
+}
+
+.coinspeaker {
+    position: relative;
+    top: -4%;
+    right: -8%;
+    width: 80%;
+    height: 25%;
+    z-index: 9;
+}
+
+.territoriobitcoin {
+    position: relative;
+    top: -8%;
+    right: -8%;
+    width: 80%;
+    height: 18%;
+    z-index: 9;
+}
+
+/* FIN RESTO CRIPTOS */
+
+/* .coinrepublic img {
     position: fixed;
     top: 60%;
     left: 15%;
     width: 25%;
     height: 30%;
-}
+} */
 
 img:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     transition: transform 0.3s;
 }
-
-/* RESTO CRIPTOS */
-
-.criptotendencia {
-    position: absolute;
-    top: 65%;
-    right: 15%;
-    width: auto;
-    height: auto;
-    z-index: 9;
-}
-
-.coinspeaker {
-    position: absolute;
-    top: 14%;
-    right: 13%;
-    width: auto;
-    height: auto;
-    z-index: 9;
-}
-
-.territoriobitcoin {
-    position: absolute;
-    top: 42%;
-    right: 9%;
-    width: auto;
-    height: auto;
-    z-index: 9;
-}
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
-    .criptotendencia {
-        visibility: hidden;
-    }
-
-    .coinspeaker {
-        visibility: hidden;
-    }
-
-    .territoriobitcoin {
-        visibility: hidden;
-    }
-}
-
-/* FIN RESTO CRIPTOS */
 
 @keyframes luz {
     0% {
