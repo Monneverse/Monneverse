@@ -20,13 +20,13 @@ defineProps({
         <h1>BENEFITS</h1>
       </div>
   -->
-    <div
-      class="benefits"
-    >
-      <div :class="{
-        cards: true,
-        'animacion-desplazamiento': index_pagina == 12,
-      }">
+    <div class="benefits">
+      <div
+        :class="{
+          cards: true,
+          'animacion-desplazamiento': index_pagina == 12,
+        }"
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -38,10 +38,12 @@ defineProps({
           mostrarBtn="true"
         />
       </div>
-      <div :class="{
-        cards: true,
-        'animacion-desplazamiento': index_pagina == 12,
-      }">
+      <div
+        :class="{
+          cards: true,
+          'animacion-desplazamiento': index_pagina == 12,
+        }"
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -53,10 +55,12 @@ defineProps({
           mostrarBtn="true"
         />
       </div>
-      <div :class="{
-        cards: true,
-        'animacion-desplazamiento': index_pagina == 12,
-      }">
+      <div
+        :class="{
+          cards: true,
+          'animacion-desplazamiento': index_pagina == 12,
+        }"
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -103,6 +107,11 @@ defineProps({
   height: 5rem;
   z-index: 12;
 }
+@media screen and (width < 769px) {
+  .logo {
+    display: none;
+  }
+}
 .benefits {
   position: relative;
   margin: 0 auto;
@@ -112,6 +121,7 @@ defineProps({
   top: 15%;
   display: flex;
   scroll-snap-type: x mandatory;
+  overflow-y: hidden;
   overflow-x: scroll;
   column-gap: 20%;
   color: #fff;
@@ -138,7 +148,6 @@ defineProps({
   -webkit-box-shadow: 7px 3px 29px 4px rgba(219, 219, 219, 1);
   -moz-box-shadow: 7px 3px 29px 4px rgba(219, 219, 219, 1);
   box-shadow: 7px 3px 29px 4px rgba(219, 219, 219, 1);
-
 }
 
 .cards:hover span {
@@ -150,7 +159,6 @@ defineProps({
   }
   .cards:hover {
     transform: translateY(-3%);
-
     transition: 0.5s ease-out;
   }
   .cards span:nth-child(1) {
@@ -252,6 +260,7 @@ defineProps({
   .benefits {
     column-gap: 0;
     overflow-x: initial;
+    overflow-y: initial;
     scroll-snap-type: none;
   }
 
@@ -273,7 +282,7 @@ defineProps({
 }
 
 .animacion-desplazamiento {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-name: desplazamiento;
   animation-iteration-count: 1;
 }
@@ -296,6 +305,11 @@ defineProps({
   z-index: 14;
   display: flex;
   justify-content: start;
+}
+@media screen and (width < 769px) {
+  .logo-redes {
+    display: none;
+  }
 }
 
 .icon img {

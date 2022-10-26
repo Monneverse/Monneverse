@@ -65,7 +65,7 @@ developed.
           texto="Open a window of possibilities for all those creators who wish to design their"
           textOculto="own token from scratch and sell it worldwide with fees never seen before. Our goal is to create a safe environment on which every token fulfills a series of standards of qualification such as the KYC Verification, residential addres and back-up liquidity. this way we can protect you from any scam. MonnerBlockchain will handle the lowest fees of the hest market beside one of the best times of execution. this will bring more liquidity, stability and exponential growing"
           imagen="/img/benefits/monner.png"
-          />
+        />
       </div>
       <div class="cards">
         <span></span><span></span><span></span><span></span>
@@ -74,7 +74,7 @@ developed.
           texto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
           textOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
           imagen="/img/benefits/visa.png"
-          />
+        />
       </div>
     </div>
   </div>
@@ -107,6 +107,12 @@ developed.
   width: 5rem;
   height: 5rem;
   z-index: 12;
+}
+
+@media screen and (width < 769px) {
+  .logo {
+    display: none;
+  }
 }
 .benefits {
   position: relative;
@@ -323,6 +329,11 @@ developed.
   z-index: 14;
   display: flex;
   justify-content: start;
+}
+@media screen and (width < 769px) {
+  .logo-redes {
+    display: none;
+  }
 }
 
 .icon img {

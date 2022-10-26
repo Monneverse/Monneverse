@@ -64,10 +64,10 @@ export default {
           </p>
         </div>
         <div class="">
-          <p>Management 1.0% of order fees go to the treasury</p>
+          <p>Management 0% of order fees go to the treasury</p>
         </div>
         <div class="">
-          <p>Monner Burns 1.0% is burned for stability and price increase</p>
+          <p>Monner Burns 0% is burned for stability and price increase</p>
         </div>
       </div>
     </div>
@@ -429,6 +429,11 @@ img {
   z-index: 50;
   display: flex;
   justify-content: center;
+}
+@media screen and (width < 769px) {
+  .container-alianza {
+    display: none;
+  }
 }
 
 .contenido {

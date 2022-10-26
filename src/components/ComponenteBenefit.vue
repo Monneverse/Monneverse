@@ -113,7 +113,7 @@ export default {
   height: 15%;
   align-items: center;
   font-weight: 400;
-  font-size: 5vw;
+  font-size: 3.6vw;
 }
 
 .contenido img {
@@ -122,6 +122,7 @@ export default {
 }
 
 .texto-oculto {
+  font-size: 1vw;
   height: 45%;
   text-align: justify;
 }
