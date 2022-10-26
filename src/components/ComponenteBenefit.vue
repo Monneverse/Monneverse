@@ -80,7 +80,6 @@ export default {
   display: flex;
   flex-wrap: wrap;
   font-family: "WorkSans", sans-serif;
-  
 }
 
 .fondo-oscuro {
@@ -118,8 +117,16 @@ export default {
 }
 
 .contenido img {
+  width: 99%;
   height: 20%;
   margin: 0 auto;
+}
+@media screen and (width > 769px) {
+  .contenido img {
+    width: 50%;
+    height: 20%;
+    margin: 0 auto;
+  }
 }
 
 .texto-oculto {
@@ -127,7 +134,7 @@ export default {
   height: 45%;
   text-align: justify;
 }
-.buttom{
+.buttom {
   width: 100%;
   position: absolute;
   bottom: -10%;

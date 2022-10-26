@@ -19,8 +19,6 @@ defineProps({
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
 
-   
-
     <div
       :class="{
         benefits: true,
@@ -96,7 +94,6 @@ developed.
       </a>
     </div>
   </div>
-
 </template>
 
 <style scoped>
@@ -291,8 +288,7 @@ developed.
   background-color: #121026;
 }
 .fondo-benefit {
- 
-  background-size: no-repeat center center fixed ;
+  background-size: no-repeat center center fixed;
   z-index: 5;
 }
 .fondo-benefit > img {
@@ -301,7 +297,6 @@ developed.
   height: 130vh;
 }
 @media screen and (min-width: 769px) {
-
   .fondo-benefit > img {
     width: 100%;
     height: 115vh;
