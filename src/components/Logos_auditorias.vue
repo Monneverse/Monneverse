@@ -343,7 +343,7 @@ img {
 .texto_auditoria {
     position: absolute;
     top: 20%;
-    left: 28%;
+    left: 34%;
     color: white;
     text-align: center;
     justify-content: center;
@@ -396,10 +396,10 @@ img {
 
 .auditoria1 {
     position: absolute;
-    top: 45%;
+    top: 46.5%;
     left: 8.41%;
     width: 32%;
-    height: 22%;
+    height: 20%;
     z-index: 5;
 }
 
@@ -433,7 +433,7 @@ img {
     z-index: 5;
 }
 
-.auditoria2:hover {
+.fondoCertik:hover {
     position: absolute;
     width: 30%;
     border: 2px solid #121026;
