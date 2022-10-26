@@ -98,7 +98,7 @@ img {
 .indicador {
   position: absolute;
   top: 45%;
-  left: 46%;
+  left: 48%;
   width: 5%;
   height: 20%;
   border-radius: 2rem;
@@ -109,7 +109,7 @@ img {
 .circulo {
   position: absolute;
   top: 31%;
-  left: 46%;
+  left: 48%;
   width: 4.7%;
   height: 10%;
   border-radius: 5rem;
@@ -310,7 +310,7 @@ img {
 .titulo {
   position: fixed;
   top: 15%;
-  left: 44.5%;
+  left: 46.5%;
   color: white;
   text-align: center;
   justify-content: center;
@@ -325,10 +325,10 @@ img {
   font-family: "Work Sans", sans-serif;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+@media only screen and (min-device-width: 175px) and (max-device-width: 667px) {
   .titulo {
-    top: 14%;
-    left: 35%;
+    top: 11.5%;
+    left: 38%;
   }
 
   .titulo p {
@@ -342,7 +342,7 @@ img {
   top: 20%;
   width: 100%;
   height: 75%;
-  z-index: 999;
+  z-index: 8;
 }
 .contenido {
   margin: 0 auto;
@@ -360,7 +360,6 @@ img {
 .columnas:nth-child(2) {
   width: 20%;
   height: 100%;
-  
 }
 
 .news {
@@ -378,18 +377,58 @@ img {
   align-items: center;
 }
 
-/* PRIMERAS CRIPTOS */
-
-/* FIN PRIMERAS CRIPTOS */
-
 img:hover {
   transform: scale(1.5);
   transition: transform 0.3s;
 }
 
-/* RESTO CRIPTOS */
+@media screen and (width < 769px) {
+  .major {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 80%;
+    height: 60%;
+    z-index: 8;
+    background-color: rgba(44, 109, 128, 0.1);
+    border-radius: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .contenido {
+    width: 100%;
+    height: 100%;
+  }
+  .columnas {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: none;
+  }
+  .columnas:nth-child(2) {
+    width: 20%;
+    height: 100%;
+    display: none;
+  }
 
-/* FIN RESTO CRIPTOS */
+  .news {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 30%;
+  }
+  .news img {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%;
+  }
+}
 
 @keyframes luz {
   0% {
@@ -408,7 +447,7 @@ img:hover {
 .reflector {
   position: absolute;
   bottom: 0%;
-  left: 5%;
+  left: 0%;
   width: 40%;
   height: 100%;
   z-index: 7;
