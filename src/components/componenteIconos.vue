@@ -31,46 +31,26 @@ defineProps({
   z-index: 7;
   width: 100%;
 }
-/* .contenedor_icono:hover {
-  width: 88%;
-  transition: 0.5s;
-}
-
-.contenedor_icono:hover .icono {
-  width: 100%;
-} */
 
 .icon {
   transition: transform 0.75s;
   display: flex;
-  height: 80%;
-  width: 30%;
-  background-color: #161431;
+  width: 5rem;
+  height: 4rem;
+  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
   border-radius: 1rem;
+}
+@media only screen and (width > 769px) {
+  .icon {
+    width: 4rem;
+  }
 }
 
 .icon_coin {
   margin: 4px auto;
-  width: 50%;
+  width: 80%;
   height: 80%;
   padding: 0%;
-}
-@media screen and (width > 769px) {
-  .icon {
-    transition: transform 0.75s;
-    display: flex;
-    height: 80%;
-    width: 35%;
-    background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
-    border-radius: 1rem;
-    margin-right: 10px;
-  }
-  .icon_coin {
-    margin: 4px auto;
-    width: 100%;
-    height: 80%;
-    padding: 0%;
-  }
 }
 
 .name_coin {
@@ -78,28 +58,36 @@ defineProps({
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1em;
+  border-radius: 0.8em;
   margin: 0 auto;
 
   font-family: Calibri;
   text-transform: uppercase;
   left: 14%;
   font-weight: bold;
-  font-size: 1.3vw;
+  font-size: 2rem;
   color: white;
-  text-align: center;
+
   width: 100%;
-  height: 80%;
+  height: 4rem;
 }
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+@media only screen and (width > 769px) {
   .name_coin {
-    font-size: 8vw;
-    border-radius: 0.6em;
+    background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
+    display: flex;
+    justify-content: left;
+    border-radius: 0.8em;
+    font-family: Calibri;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    width: 60%;
+    height: 4rem;
+    margin-left: 4%;
   }
-
-  .icon_coin {
-    width: 18vw;
+  .name_coin p {
+    margin: 20px;
   }
 }
 </style>

@@ -187,7 +187,7 @@ export default {
   position: relative;
   top: -5%;
   left: 0;
-  width:25rem;
+  width: 20rem;
   height: 50%;
   z-index: -1;
 }

@@ -129,7 +129,7 @@ defineProps({
   z-index: -23;
   background-size: no-repeat center center fixed;
 }
-
+ 
 .fondo_rayos img {
   height: 100%;
 }
