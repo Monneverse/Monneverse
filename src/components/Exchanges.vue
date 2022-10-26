@@ -5,26 +5,16 @@ import ComponenteIconos from "./componenteIconos.vue";
 <template>
   <!-- FONDO -->
   <div class="fondo"></div>
-  <div class="fondo-oscuro1"></div>
+
   <div class="fondo-oscuro"></div>
-  <div class="fondo-oscuro-superior">
-    <img src="/img/fondo-oscuro-superior.png" alt="" srcset="" />
-  </div>
-  <div class="fondo-montana">
-    <img src="/img/fondo-montana.png" alt="" srcset="" />
-  </div>
-  <div class="fondo-montana">
-    <img src="/img/fondo-montana.png" alt="" srcset="" />
-  </div>
+
   <div class="fondo-montana">
     <img src="/img/fondo-montana.png" alt="" srcset="" />
   </div>
   <div class="circuito circuito-izquierdo">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
   </div>
-  <div class="circuito circuito-derecho">
-    <img src="/img/calculadora/circuito-derecho.png" alt="" />
-  </div>
+
   <div class="fondoTokenomics">
     <img src="/img/fondo_Tokenomics.png" alt="" />
   </div>
@@ -38,148 +28,87 @@ import ComponenteIconos from "./componenteIconos.vue";
   </div>
   <!-- FIN FONDO -->
   <!-- CONTENIDO -->
-  <div class="exchange_text">
-    <p>first exchanges after our pre-sale</p>
+
+  <div class="content-major">
+    <div class="exchange_text">
+      <p>first exchanges after our pre-sale</p>
+    </div>
+
+    <div class="contenedor_crypto">
+      <div class="caja-cryptos">
+        <div class="cryptos">
+          <ComponenteIconos iconos="/img/Exchanges/bunny-color.svg" iconname="pancakeswap" />
+        </div>
+
+        <div class="cryptos">
+          <ComponenteIconos iconos="/img/Exchanges/Kucoin.svg" iconname="kucoin" />
+        </div>
+        <div class="cryptos">
+          <ComponenteIconos iconos="/img/Exchanges/Gatebw.svg" iconname="gate.io" />
+        </div>
+      </div>
+
+      <div class="caja-cryptos">
+        <div class="cryptos">
+          <ComponenteIconos iconos="/img/Exchanges/lbank2.svg" iconname="LBANK" />
+        </div>
+
+        <div class="cryptos">
+          <ComponenteIconos iconos="/img/Exchanges/okxlogo.svg" iconname="OKX" />
+        </div>
+        <div class="cryptos">
+          <ComponenteIconos iconos="/img/Exchanges/CoinGecko.svg" iconname="COINGECKO" />
+        </div>
+      </div>
+      <div class="caja-cryptos">
+        <div class="cryptos">
+          <ComponenteIconos iconos="/img/Exchanges/mexcglobal.svg" iconname="MEXC GLOBAL" />
+        </div>
+
+        <div class="cryptos">
+          <ComponenteIconos iconos="/img/Exchanges/xtcom.svg" iconname="XT.COM" />
+        </div>
+        <div class="cryptos">
+          <ComponenteIconos iconos="/img/Exchanges/poloniex.svg" iconname="POLONIEX" />
+        </div>
+      </div>
+      <div class="caja-cryptos">
+        <div class="cryptos">
+          <ComponenteIconos iconos="/img/Exchanges/hotbit.svg" iconname="HOTBIT" />
+        </div>
+
+        <div class="cryptos">
+          <ComponenteIconos iconos="/img/Exchanges/coinmarket.svg" iconname="COINMARKET" />
+        </div>
+        <div class="cryptos">
+          <ComponenteIconos iconos="/img/Exchanges/ftx.svg" iconname="FTX" />
+        </div>
+      </div>
+      <div class="caja-cryptos">
+        <div class="cryptos">
+          <ComponenteIconos iconos="/img/Exchanges/latoken.svg" iconname="LATOKEN" />
+        </div>
+
+        <div class="cryptos">
+          <ComponenteIconos iconos="/img/Exchanges/bitrue.svg" iconname="BITRUE" />
+        </div>
+        <div class="cryptos">
+          <ComponenteIconos iconos="/img/Exchanges/favicon.svg" iconname="FAVICON" />
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="logo-redes">
-    <div class="icon icon-telegram">
-      <a href="https://t.me/monnerversecommunity" target="_blank">
-        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="">
-      </a>
-    </div>
-    <div class="icon icon-reddit">
-      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="">
-      </a>
-    </div>
-    <div class="icon icon-discord ">
-      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-        <img src="../assets/discord.svg" alt="logo discord" srcset="">
-      </a>
-    </div>
-  </div>
-
-  <div class="contenedor_moneda">
-    <div class="pancake">
-      <ComponenteIconos iconos="/img/Exchanges/bunny-color.svg" iconname="pancakeswap" />
-    </div>
-    <div class="kucoin">
-      <ComponenteIconos iconos="/img/Exchanges/Kucoin.svg" iconname="kucoin" />
-    </div>
-    <div class="gateio">
-      <ComponenteIconos iconos="/img/Exchanges/Gatebw.svg" iconname="gate.io" />
-    </div>
-    <div class="lbank">
-      <ComponenteIconos iconos="/img/Exchanges/lbank2.svg" iconname="LBank" />
-    </div>
-    <div class="okx">
-      <ComponenteIconos iconos="/img/Exchanges/okxlogo.svg" iconname="okx" />
-    </div>
-    <div class="coingecko">
-      <ComponenteIconos iconos="/img/Exchanges/CoinGecko.svg " iconname="coingecko" />
-    </div>
-    <div class="mexcglobal">
-      <ComponenteIconos iconos="/img/Exchanges/mexcglobal.svg" iconname="mexc global" />
-    </div>
-    <div class="xtcom">
-      <ComponenteIconos iconos="/img/Exchanges/xtcom.svg" iconname="xt.com" />
-    </div>
-    <div class="poloniex">
-      <ComponenteIconos iconos="/img/Exchanges/poloniex.svg" iconname="poloniex" />
-    </div>
-    <div class="hotbit">
-      <ComponenteIconos iconos="/img/Exchanges/hotbit.svg" iconname="hotbit" />
-    </div>
-    <div class="coinmarket">
-      <ComponenteIconos iconos="/img/Exchanges/coinmarket.svg" iconname="coinmarket" />
-    </div>
-    <div class="ftx">
-      <ComponenteIconos iconos="/img/Exchanges/ftx.svg" iconname="ftx" />
-    </div>
-    <div class="latoken">
-      <ComponenteIconos iconos="/img/Exchanges/latoken.svg" iconname="latoken" />
-    </div>
-    <div class="bitrue">
-      <ComponenteIconos iconos="/img/Exchanges/bitrue.svg" iconname="bitrue" />
-    </div>
-    <div class="favicon">
-      <ComponenteIconos iconos="/img/Exchanges/favicon.svg" iconname="favicon" />
-    </div>
-  </div>
-
-  <div class="contenedor_monedaMovil">
-    <div class="primeros">
-      <div class="pancake">
-        <ComponenteIconos iconos="/img/Exchanges/bunny-color.svg" iconname="pancakeswap" />
-      </div>
-      <div class="kucoin">
-        <ComponenteIconos iconos="/img/Exchanges/Kucoin.svg" iconname="kucoin" />
-      </div>
-      <div class="gateio">
-        <ComponenteIconos iconos="/img/Exchanges/Gatebw.svg" iconname="gate.io" />
-      </div>
-    </div>
-    <div class="segundos">
-      <div class="lbank">
-        <ComponenteIconos iconos="/img/Exchanges/lbank2.svg" iconname="LBank" />
-      </div>
-      <div class="okx">
-        <ComponenteIconos iconos="/img/Exchanges/okxlogo.svg" iconname="okx" />
-      </div>
-      <div class="coingecko">
-        <ComponenteIconos iconos="/img/Exchanges/CoinGecko.svg " iconname="coingecko" />
-      </div>
-    </div>
-    <div class="terceros">
-      <div class="mexcglobal">
-        <ComponenteIconos iconos="/img/Exchanges/mexcglobal.svg" iconname="mexc global" />
-      </div>
-      <div class="xtcom">
-        <ComponenteIconos iconos="/img/Exchanges/xtcom.svg" iconname="xt.com" />
-      </div>
-      <div class="poloniex">
-        <ComponenteIconos iconos="/img/Exchanges/poloniex.svg" iconname="poloniex" />
-      </div>
-    </div>
-    <div class="cuartos">
-      <div class="hotbit">
-        <ComponenteIconos iconos="/img/Exchanges/hotbit.svg" iconname="hotbit" />
-      </div>
-      <div class="coinmarket">
-        <ComponenteIconos iconos="/img/Exchanges/coinmarket.svg" iconname="coinmarket" />
-      </div>
-      <div class="ftx">
-        <ComponenteIconos iconos="/img/Exchanges/ftx.svg" iconname="ftx" />
-      </div>
-    </div>
-    <div class="quintos">
-      <div class="latoken">
-        <ComponenteIconos iconos="/img/Exchanges/latoken.svg" iconname="latoken" />
-      </div>
-      <div class="bitrue">
-        <ComponenteIconos iconos="/img/Exchanges/bitrue.svg" iconname="bitrue" />
-      </div>
-      <div class="favicon">
-        <ComponenteIconos iconos="/img/Exchanges/favicon.svg" iconname="favicon" />
-      </div>
-    </div>
-  </div>
   <!-- FIN CONTENIDO -->
 </template>
 
 <style scoped>
-img {
-  height: 100%;
-  width: 100%;
-}
-
 /* FONDO */
 .fondo {
   position: absolute;
+  background-color: #040709;
   top: 0;
   left: 0;
-  background-color: #121026;
   height: 100%;
   width: 100%;
   display: flex;
@@ -195,26 +124,24 @@ img {
 }
 
 .circuito {
-  position: fixed;
-  z-index: 1;
-  height: 80%;
+  position: absolute;
+  z-index: 4;
+  height: 10%;
   width: 50%;
-  min-width: 30rem;
-  top: 11%;
+  top: 12%;
 }
 
 .circuito-izquierdo {
-  left: -14%;
+  left: -5%;
 }
 
-.circuito-derecho {
-  right: -10%;
-  visibility: hidden;
-  transform: scaleY(-1);
+.circuito-izquierdo img {
+  width: 85%;
+  opacity: 50%;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
 
+@media only screen and (width < 769px) {
   img {
     width: 100%;
     height: 100%;
@@ -224,7 +151,6 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #121026;
     height: 100%;
     width: 100%;
     display: flex;
@@ -246,35 +172,38 @@ img {
   }
 
   .fondo-mundial {
-    position: fixed;
-    top: 12em;
-    left: -10em;
-    width: 50em;
+    position: absolute;
+    bottom: -5em;
+    left: -14em;
+    width: 200%;
     height: 35em;
     z-index: 3;
     opacity: 80%;
   }
 
   .fondo-montana {
-    position: fixed;
-    top: 24%;
-    left: -143%;
-    width: 70em;
-    height: 40em;
+    position: absolute;
+    width: 200%;
+    height: 100%;
     z-index: 3;
     opacity: 20%;
   }
 
+  .fondo-montana img {
+    background-size: no-repeat center center fixed;
+  }
+
   .fondo-oscuro {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0em;
-    width: 24em;
-    height: 52em;
+    width: 300%;
+    height: 200%;
+    background-size: no-repeat center center fixed;
     background: radial-gradient(circle at center,
         #48d0ab 10%,
         #097561 30%,
-        #0F161C 100%);
+        #0f161c 100%);
     z-index: 1;
     opacity: 100%;
   }
@@ -282,7 +211,7 @@ img {
   .fondoTokenomics {
     position: fixed;
     top: 20%;
-    width: 130%;
+    width: 300%;
     height: 60%;
     visibility: hidden;
   }
@@ -301,7 +230,6 @@ img {
     transform: rotate(-60deg);
     right: 55%;
     visibility: hidden;
-
   }
 
   .degradado_derecho {
@@ -309,15 +237,11 @@ img {
     left: 40%;
   }
 
-  .circuito-izquierdo {
-    left: -70%;
-  }
-
   #logo-1 {
     width: 63%;
     max-height: 14%;
     position: fixed;
-    top: 65%;
+    bottom: 20%;
     left: -7%;
     z-index: 3;
     opacity: 70%;
@@ -437,17 +361,38 @@ img {
 }
 
 /* CONTENIDO */
+
+.content-major {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (width > 769px) {
+  .content-major {
+    flex-direction: row;
+  }
+}
+
 .exchange_text {
-  display: block;
-  position: fixed;
-  top: 28%;
-  left: 5%;
-  height: 20%;
-  width: 20%;
-  text-align: space-between;
-  font-size: 4vw;
+  width: 100%;
+  height: 50%;
+  font-size: 3rem;
   text-transform: uppercase;
-  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (width > 769px) {
+  .exchange_text {
+    width: 40%;
+    height: 100%;
+  }
 }
 
 .exchange_text p {
@@ -463,7 +408,7 @@ img {
   z-index: 2;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+@media only screen and (min-device-width: 275px) and (max-device-width: 667px) {
   .exchange_text {
     top: 12%;
     left: 16%;
@@ -474,70 +419,71 @@ img {
   }
 }
 
-@media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
-  .exchange_text {
-    top: 6%;
-    left: 26%;
-    width: 73%;
-    height: 10.5%;
-    font-size: 12vw;
-    z-index: 999;
-  }
-}
-
-/*ICONOS EXCHANGES*/
-
-.contenedor_monedaMovil {
-  display: none;
-}
-
-.contenedor_moneda {
-  width: 58%;
-  height: 75%;
-  position: absolute;
-  top: 20%;
-  left: 35%;
-  display: grid;
-  grid-template-columns: 33% 33% 31%;
-  grid-template-rows: 18% 18% 18% 18% 18%;
-  gap: 3.5%;
-  z-index: 7;
-}
-
-.contenedor_moneda>div {
-  position: relative;
-  display: grid;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.moneda {
-  width: 100%;
-  height: 100%;
-  left: 50%;
-  top: 10%;
-}
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 768px) {
-  .contenedor_moneda {
-    visibility: hidden;
-  }
-
-  .contenedor_monedaMovil .primeros {
-    position: fixed;
+@media only screen and (width > 769px) {
+  .contenedor_crypto {
+    position: relative;
+    top: 17%;
+    left: -3%;
+    height: 70%;
+    width: 70%;
     display: flex;
-    top: 0%;
-    left: 0%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .caja-cryptos {
     width: 100%;
-    height: 100%;
-    z-index: 999;
+    height: 60%;
+  }
+
+  .caja-cryptos:nth-child(1) {
+    width: 100%;
+    height: 60%;
+    flex: none;
+  }
+
+  .caja-cryptos:nth-child(2) {
+    width: 100%;
+    height: 60%;
+    flex: none;
+  }
+
+  .caja-cryptos:nth-child(3) {
+    width: 100%;
+    height: 60%;
+    flex: none;
+  }
+
+  .caja-cryptos:nth-child(4) {
+    width: 100%;
+    height: 60%;
+    flex: none;
+  }
+
+  .caja-cryptos:nth-child(5) {
+    width: 100%;
+    height: 60%;
+    flex: none;
   }
 
   .logo-redes {
     visibility: hidden;
   }
+}
+
+.cryptos {
+  width: 40%;
+  height: 80%;
+  margin-left: 5%;
+}
+
+.caja-cryptos {
+  display: flex;
+  width: 100%;
+  height: 60%;
 }
 
 /* FIN ICONOS EXCHANGES */
@@ -552,16 +498,34 @@ img {
   z-index: 14;
   display: flex;
   justify-content: start;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  flex: none;
+  margin-right: 5%;
 }
 
-.icon {
-  width: 2rem;
-  height: auto;
-  z-index: 18;
-  margin-left: 1rem;
+@media only screen and (width > 769px) {
+  .caja-cryptos {
+    display: flex;
+    flex: initial;
+    margin-right: 30px;
+  }
 }
 
-/* FIN REDES SOCIALES */
+.caja-cryptos:nth-child(5) {
+  margin-right: 0%;
+}
 
-/* FIN CONTENIDO */
+.cryptos {
+  width: 100%;
+  height: 30%;
+}
+
+@media only screen and (width > 769px) {
+  .cryptos {
+    width: 33%;
+    margin-right: .5%;
+  }
+}
 </style>

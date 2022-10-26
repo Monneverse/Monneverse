@@ -28,17 +28,19 @@ import fasesComponentes from "./ComponentsPhases.vue";
     </div>
   </div>
 
-  <div class="circulos">
+  <div class="circulo circulo__1">
     <img src="/img/Imagen1.png" />
   </div>
 
   <button class="readMore" v-on:click="cambiarEstado()">Learn More</button>
 
-  <div class="circulos1">
+  <div class="circulo circulo__2">
     <img src="/img/Imagen1.png" />
   </div>
+  <button class="readMore" v-on:click="cambiarEstado()">Learn More</button>
 
-  <div class="componentes1">
+<div class="componentes">
+  <div class="componente componentes1">
     <fasesComponentes
       title="Launch"
       description="Official launch of MonnerWallet, MonnerSwap and MonnerCardwith Visa and Mastercard."
@@ -46,7 +48,7 @@ import fasesComponentes from "./ComponentsPhases.vue";
     />
   </div>
 
-  <div class="componentes2">
+  <div class="componente componentes2">
     <fasesComponentes
       title="Solidity"
       description="Solidity Finance Audit."
@@ -54,13 +56,15 @@ import fasesComponentes from "./ComponentsPhases.vue";
     />
   </div>
 
-  <div class="componentes3">
+  <div class="componente componentes3">
     <fasesComponentes
       title="Exhibition"
       description="exhibition of our team from my solar powered industrial mining in New York City"
       :isVisible="isVisible"
     />
   </div>
+</div>
+
 </template>
 
 <script>
@@ -187,7 +191,7 @@ img {
   font-family: Roboto;
 }
 
-.circulos {
+.circulo__1 {
   position: absolute;
   left: 28%;
   bottom: 58%;
@@ -196,7 +200,7 @@ img {
   z-index: 5;
 }
 
-.circulos1 {
+.circulo__2 {
   position: absolute;
   align-items: center;
   left: 24.5%;
@@ -245,5 +249,119 @@ img {
   right: 0%;
   width: 25%;
   height: 64%;
+}
+
+/* style of mobile */
+
+@media screen and (max-width: 900px) {
+
+.circuito {
+  display: none;
+}
+
+.Fases {
+  left: 0%;
+  top: 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+}
+
+.titulo {
+  width: 100%;
+  height: fit-content;
+  position: initial;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.description {
+  margin-top: 1rem;
+  width: 90%;
+  font-size: 4.5vw;
+}
+
+.circulo {
+
+  left: 20%;
+  height: 15%;
+
+}
+
+.circulo__1 {
+  left: 13%;
+  top: 20%;
+  width: 80%;
+}
+
+.circulo__2 {
+  left: 8%;
+  top: 22%;
+  width: 90%;
+}
+
+.readMore {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 10%;
+  font-size: 4vw;
+  flex-wrap: wrap;
+}
+
+.componentes {
+  position: absolute;
+  top: 40%;
+  left: 2%;
+  width: 63%;
+  height: 40%;
+  padding: 4rem;
+  margin-right: 3rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 3rem;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  scrollbar-width: 1rem;
+  scroll-snap-type: x mandatory;
+  z-index: 1000;
+}
+
+
+.componentes::-webkit-scrollbar:vertical {
+  height: 10px;
+  width: 10px;
+}
+
+.componentes::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%);
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.componentes::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+
+.componente {
+  position: unset;
+  width: 75%;
+  height: auto;
+  margin-right: 3rem;
+}
+
+
+
 }
 </style>

@@ -58,7 +58,7 @@ img {
     padding: 1%;
 }
 
-.titulo1 {
+.titulo1 {  
     height: 15%;
     color: white;
     display: flex;
@@ -70,7 +70,7 @@ img {
 h5 {
     width: 100%;
     height: 20%;
-    font-family: "WorkSans", sans-serif;
+    font-family: "calibri", sans-serif;
     font-size: 1.2vw;
     font-weight: 600;
     text-align: center;
@@ -85,7 +85,7 @@ h5 {
     color: white;
     width: 50%;
     height: 14%;
-    border-radius: 1vw;
+    border-radius: 3rem;
     background: linear-gradient(to left,
             #029F50 0%,
             #0A664E 50%,
@@ -97,4 +97,27 @@ h5 {
     justify-content: center;
     align-items: center;
 }
+    
+   
+
+
+@media screen and (min-width: 100px) {
+    .titulo1 {
+        height:1    0%;
+        font-size: 80%;
+    }
+    .leer_Mas{
+        font-size: 50%;
+        border-radius: 3rem;
+    }
+    .imagenDeArticulo{
+       width: 90%;
+       height: 65%;
+    }
+
+
+    }
+
+
+
 </style>

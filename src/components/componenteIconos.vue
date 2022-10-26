@@ -15,99 +15,79 @@ defineProps({
 
 <template>
   <div class="contenedor_icono">
-    <div class="icono">
-      <img :src=iconos class="icon_coin" />
+    <div class="icon">
+      <img :src="iconos" class="icon_coin" />
     </div>
     <div class="name_coin">
-      <p>{{iconname}}</p>
+      <p>{{ iconname }}</p>
     </div>
   </div>
 </template>
 
 <style scoped>
-img {
-  width: 100%;
-  height: 100%;
-}
-
 .contenedor_icono {
-  background: linear-gradient(to right,
-      #029F50 0%,
-      #0A664E 50%,
-      #0E444D 100%);
-  border-radius: 1.3rem;
-  position: absolute;
   display: flex;
-  align-items: center;
-  text-align: center;
-  margin: 0%;
-  left: 20%;
-  height: 70%;
+  height: 100%;
   z-index: 7;
-  width: 65%;
-  top: 0%;
-  gap: 2rem;
-}
-
-.icon_coin {
-  position: absolute;
-  top: 0%;
-  right: 15%;
-  width: 32%;
-  height: 100%;
-  background: linear-gradient(to left,
-      #029F50 0%,
-      #0A664E 50%,
-      #0E444D 100%);
-}
-
-/* .contenedor_icono:hover {
-  width: 88%;
-  transition: 0.5s;
-}
-
-.contenedor_icono:hover .icono {
   width: 100%;
-} */
+}
 
-.icono {
+.icon {
   transition: transform 0.75s;
-  position: relative;
   display: flex;
-  height: 100%;
-  width: 30%;
+  width: 5rem;
+  height: 4rem;
+  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
+  border-radius: 1rem;
+}
+@media only screen and (width > 769px) {
+  .icon {
+    width: 4rem;
+  }
 }
 
 .icon_coin {
-  position: absolute;
-  border-radius: 1rem;
-  overflow: visible;
-  min-width: 4.3vw;
-  height: 100%;
+  margin: 4px auto;
+  width: 80%;
+  height: 80%;
   padding: 0%;
-  right: 120%;
 }
 
 .name_coin {
-  position: absolute;
+  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.8em;
+  margin: 0 auto;
+
   font-family: Calibri;
   text-transform: uppercase;
-  text-align: center;
   left: 14%;
   font-weight: bold;
-  font-size: 1.3vw;
-  float: center;
+  font-size: 2rem;
   color: white;
-  text-align: center;
+
+  width: 100%;
+  height: 4rem;
 }
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+@media only screen and (width > 769px) {
   .name_coin {
-    font-size: 8vw;
+    background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
+    display: flex;
+    justify-content: left;
+    border-radius: 0.8em;
+    font-family: Calibri;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    width: 60%;
+    height: 4rem;
+    margin-left: 4%;
   }
-
-  .icon_coin {
-    width: 18vw;
+  .name_coin p {
+    margin: 20px;
   }
 }
 </style>

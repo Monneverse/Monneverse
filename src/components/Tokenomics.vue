@@ -12,6 +12,33 @@ export default {
 <template>
   <!-- Fondos -->
   <div class="fondo">
+    <div
+      :class="{ fondo_rayos: true, 'animacion-aparecer': index_pagina == 9 }"
+    >
+      <img src="/img/rayos.png" alt="" />
+    </div>
+    <div class="logos">
+      <div class="grupo-logos">
+        <div class="grupo grupo-1">
+          <img src="/img/logo.svg" alt="logo monneverse" />
+          <img src="/img/logo.svg" alt="logo monneverse" />
+        </div>
+        <div class="grupo grupo-2">
+          <img src="/img/logo.svg" alt="logo monneverse" />
+          <img src="/img/logo.svg" alt="logo monneverse" />
+        </div>
+      </div>
+
+      <div class="logo-alone">
+        <img src="/img/logo.svg" alt="logo monneverse" />
+      </div>
+    </div>
+    <div class="fondo-telefono">
+      <img src="/img/celFondo.svg" alt="" srcset="" />
+    </div>
+    
+    <div class="fondo filtro-superior"></div>
+    <div class="fondo fondo-oscurecer"></div>
     <div class="fondoTokenomics">
       <img src="/img/fondo_Tokenomics.png" alt="" />
       <div class="imagen_Eclipse">
@@ -21,8 +48,6 @@ export default {
   </div>
   <div class="fondo fondo-oscurecer"></div>
 
-  <div class="degradado_azuliz"></div>
-  <div class="degradado_azulde"></div>
 
   <div>
     <h1>.........</h1>
@@ -122,6 +147,8 @@ export default {
       </div>
     </div>
   </div>
+  <div class="degradado degradado_izquierdo"></div>
+  <div class="degradado degradado_derecho"></div>
 </template>
 
 <style scoped>
@@ -170,6 +197,122 @@ img {
   background-color: black;
   z-index: 0;
 }
+.fondo_rayos {
+  position: absolute;
+  left: -3%;
+  width: 350%;
+  height: 100%;
+  z-index: -23;
+
+}
+
+.fondo_rayos img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (width > 769px){
+  .fondo_rayos{
+
+    display: none;
+  }
+  
+}
+.filtro-superior {
+  position: absolute;
+  z-index: 4;
+  background: radial-gradient(
+    circle at center,
+    #14ec84 0%,
+    #0b5f50 50%,
+    #505863 100%
+  );
+  opacity: 30%;
+}
+.fondo-oscurecer {
+  position: absolute;
+  z-index: 42;
+  background-color: rgb(0, 0, 0);
+  opacity: 30%;
+  mix-blend-mode: multiply;
+}
+@media screen and (width < 769px) {
+  .fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 0;
+  }
+  .filtro-superior {
+    position: absolute;
+    opacity: 60%;
+  }
+}
+
+.logos {
+  width: 100%;
+  height: 100%;
+}
+
+.logos .grupo-logos {
+  width: 100%;
+  height: 50%;
+}
+
+.grupo-logos img {
+  width: 7rem;
+}
+
+.grupo-logos .grupo {
+  position: relative;
+  top: 6rem;
+  align-items: center;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.grupo-2 img:nth-child(1) {
+  transform: rotateZ(-10deg);
+}
+
+.grupo-2 img:nth-child(2) {
+  transform: rotateZ(-10deg);
+}
+
+.logo-alone {
+  width: 80%;
+  height: 40%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.logo-alone img {
+  width: 80%;
+}
+
+@media screen and (width > 500px) {
+  .logos {
+    display: none;
+  }
+}
+
+.fondo-telefono {
+  position: fixed;
+  top: 44%;
+  left: -12em;
+  width: 50em;
+  height: 40em;
+  z-index: 4;
+  opacity: 30%;
+}
+
+@media screen and (width > 500px) {
+  .fondo-telefono {
+    display: none;
+  }
+}
 
 .fondo-oscurecer {
   position: absolute;
@@ -186,6 +329,12 @@ img {
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+@media screen and (width < 769px) {
+  .fondoTokenomics {
+    display: none;
+  }
 }
 
 .imagen_Eclipse {
@@ -215,7 +364,7 @@ img {
 }
 
 .content::-webkit-scrollbar {
-  -webkit-appearance: none;
+  --webkit-appearance: none;
 }
 
 .content::-webkit-scrollbar:horizontal {
@@ -432,6 +581,11 @@ img {
   display: flex;
   justify-content: center;
 }
+@media screen and (width < 769px) {
+  .container-alianza {
+    display: none;
+  }
+}
 
 .contenido {
   width: 50%;
@@ -470,28 +624,41 @@ img {
   width: 6.5vw;
 }
 
-.degradado_azuliz {
-  background: linear-gradient(to right, #08047a 50%, transparent);
+.degradado {
+  background: linear-gradient(to right, #090380 55%, transparent);
   position: absolute;
-  transform: rotate(-60deg);
-  top: 15%;
-  z-index: 43;
-  right: 50%;
-  width: 50%;
+  width: 100%;
   height: 180%;
+  z-index: 19;
+  animation-duration: 3s;
+  animation-name: luz;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  top: -10%;
   opacity: 70%;
 }
 
-.degradado_azulde {
-  background: linear-gradient(to right, #08047a 50%, transparent);
-  position: absolute;
-  transform: rotate(235deg);
-  top: 55%;
-  left: 50%;
-  width: 60%;
-  height: 180%;
-  z-index: 43;
-  opacity: 70%;
+@media screen and (width > 600px) {
+  .degradado {
+    width: 50%;
+    top: 20%;
+  }
+}
+
+.degradado_izquierdo {
+  transform: rotate(-60deg);
+  right: 55%;
+}
+
+@media screen and (width <=769px) {
+  .degradado_izquierdo {
+    display: none;
+  }
+}
+
+.degradado_derecho {
+  transform: rotate(230deg);
+  left: 55%;
 }
 
 ::-webkit-scrollbar {
