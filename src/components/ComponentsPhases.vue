@@ -59,13 +59,13 @@ img {
 }
 
 .divDesc p {
-  font-size: 1.3vw;
-  font-family: Roboto;
+  font-size: 1vw;
+  font-family: "Work Sans", sans-serif;
 }
 
 .divDesc b {
   font-size: 1.8vw;
-  font-family: "Work Sans";
+  font-family: "Work Sans", sans-serif;
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {

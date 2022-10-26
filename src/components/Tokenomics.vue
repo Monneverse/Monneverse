@@ -29,24 +29,20 @@ export default {
   </div>
 
   <!-- Contenedor de Contenido -->
-  <div
-    :class="{
-      titulo: true,
-      'animacion-desplazamiento-titulo': index_pagina == 13,
-    }"
-  >
+  <div :class="{
+    titulo: true,
+    'animacion-desplazamiento-titulo': index_pagina == 13,
+  }">
     <h1>TOKENOMICS</h1>
   </div>
   <div class="content">
     <div class="cards">
       <div class="purchase-tax">
         <div class="">
-          <div
-            :class="{
-              titulo1: true,
-              'animacion-desplazamiento-titulo1': index_pagina == 13,
-            }"
-          >
+          <div :class="{
+            titulo1: true,
+            'animacion-desplazamiento-titulo1': index_pagina == 13,
+          }">
             <h2>Purchase Tax</h2>
           </div>
         </div>
@@ -64,10 +60,10 @@ export default {
           </p>
         </div>
         <div class="">
-          <p>Management 1.0% of order fees go to the treasury</p>
+          <p>Management 0% of order fees go to the treasury</p>
         </div>
         <div class="">
-          <p>Monner Burns 1.0% is burned for stability and price increase</p>
+          <p>Monner Burns 0% is burned for stability and price increase</p>
         </div>
       </div>
     </div>
@@ -84,12 +80,10 @@ export default {
     <div class="cards">
       <div class="sale-tax">
         <div class="">
-          <div
-            :class="{
-              titulo2: true,
-              'animacion-desplazamiento-titulo2': index_pagina == 13,
-            }"
-          >
+          <div :class="{
+            titulo2: true,
+            'animacion-desplazamiento-titulo2': index_pagina == 13,
+          }">
             <h2>Sale Tax</h2>
           </div>
         </div>
@@ -157,6 +151,7 @@ img {
   font-size: 7vw;
   font-weight: 500;
 }
+
 @media screen and (min-width: 769px) {
   .titulo h1 {
     color: white;
@@ -218,6 +213,7 @@ img {
   scroll-snap-type: x mandatory;
   overflow-x: scroll;
 }
+
 .content::-webkit-scrollbar {
   -webkit-appearance: none;
 }
@@ -227,11 +223,9 @@ img {
 }
 
 .content::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    90deg,
-    rgb(33, 32, 85) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%);
   border-radius: 20px;
   border: 2px solid #f1f2f3;
 }
@@ -252,6 +246,7 @@ img {
     overflow-x: initial;
     scroll-snap-type: none;
   }
+
   .content::-webkit-scrollbar {
     display: none;
   }
@@ -268,12 +263,14 @@ img {
 .cards:nth-child(2) {
   width: 20%;
 }
+
 @media screen and (min-width: 769px) {
   .cards:nth-child(1) {
     display: flex;
     justify-content: flex-end;
   }
 }
+
 .purchase-tax {
   display: flex;
   flex-direction: column;
@@ -294,15 +291,18 @@ img {
   text-align: right;
   font-size: 1rem;
 }
+
 @media screen and (min-width: 769px) {
   .purchase-tax {
     justify-content: space-between;
     width: 90%;
     height: 100%;
   }
+
   .purchase-tax h2 {
     font-size: 2.5vw;
   }
+
   .purchase-tax p {
     font-size: 1.5vw;
   }
@@ -316,11 +316,9 @@ img {
   align-items: center;
   height: 80%;
   width: 77%;
-  background: linear-gradient(
-    90deg,
-    rgb(33, 32, 85) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%);
   border-radius: 0.5vw;
 }
 
@@ -358,12 +356,14 @@ img {
   margin: 0 auto;
   width: 50%;
 }
+
 @media screen and (min-width: 769px) {
   .plus div {
     margin: 0 auto;
     width: 100%;
   }
 }
+
 .sale-tax {
   display: flex;
   flex-direction: column;
@@ -382,15 +382,18 @@ img {
 .sale-tax p {
   font-size: 1rem;
 }
+
 @media screen and (min-width: 769px) {
   .sale-tax {
     justify-content: space-between;
     width: 90%;
     height: 100%;
   }
+
   .sale-tax h2 {
     font-size: 2.5vw;
   }
+
   .sale-tax p {
     font-size: 1.5vw;
   }
@@ -402,11 +405,9 @@ img {
   align-items: center;
   height: 80%;
   width: 77%;
-  background: linear-gradient(
-    90deg,
-    rgb(1, 209, 88) 0%,
-    rgba(33, 32, 85, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(1, 209, 88) 0%,
+      rgba(33, 32, 85, 1) 100%);
   border-radius: 0.5vw;
 }
 
@@ -414,6 +415,7 @@ img {
   padding-left: 10%;
   font-family: Calibri;
 }
+
 @media screen and (min-width: 769px) {
   .titulo2 {
     width: 50%;
@@ -463,6 +465,7 @@ img {
 .imagen-alianza:nth-child(2) {
   width: 8vw;
 }
+
 .imagen-alianza:nth-child(3) {
   width: 6.5vw;
 }
@@ -490,9 +493,11 @@ img {
   z-index: 43;
   opacity: 70%;
 }
+
 ::-webkit-scrollbar {
   display: block;
 }
+
 .animacion-desplazamiento-titulo {
   animation-duration: 0.5s;
   animation-name: desplazamiento;
@@ -504,9 +509,9 @@ img {
     top: -100%;
   }
 
-  100% {
-  }
+  100% {}
 }
+
 .animacion-desplazamiento-titulo1 {
   animation-duration: 0.5s;
   animation-name: desplazamiento2;
@@ -518,9 +523,9 @@ img {
     left: -10%;
   }
 
-  100% {
-  }
+  100% {}
 }
+
 .animacion-desplazamiento-titulo2 {
   animation-duration: 0.35s;
   animation-name: desplazamiento3;
@@ -531,6 +536,7 @@ img {
   0% {
     left: 100%;
   }
+
   25% {
     left: 75%;
   }
@@ -538,9 +544,11 @@ img {
   50% {
     left: 50%;
   }
+
   75% {
     left: 25%;
   }
+
   100% {
     left: 0;
   }

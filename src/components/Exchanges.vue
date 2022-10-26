@@ -453,10 +453,9 @@ img {
 .exchange_text p {
   background: linear-gradient(to right,
       #8753c1 0%,
-      #6f6cbe 10%,
+      #6f6cbe 20%,
       #38a6b7 40%,
-      #5884bb 60%,
-      #11334e 100%);
+      #5884bb 60%);
   font-family: Calibri;
   -webkit-background-clip: text;
   background-clip: text;

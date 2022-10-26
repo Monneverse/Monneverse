@@ -431,9 +431,9 @@ img {
 .description {
   color: white;
   width: 45%;
-  font-size: 1.4vw;
+  font-size: 1.3vw;
   text-transform: capitalize;
-  font-family: Roboto;
+  font-family: "Work Sans", sans-serif;
 }
 
 .circulos {
