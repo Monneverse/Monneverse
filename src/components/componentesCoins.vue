@@ -134,6 +134,7 @@ export default {
 }
 
 .container-texto span {
+
   font-size: 1rem;
 }
 .container-capi {
