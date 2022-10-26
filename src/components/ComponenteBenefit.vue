@@ -83,7 +83,7 @@ export default {
 }
 
 .fondo-oscuro {
-  background-color: #161431;
+  background-color: rgb(22, 20, 49, 0.8);
 }
 
 .benefit .contenido {
@@ -113,19 +113,28 @@ export default {
   height: 15%;
   align-items: center;
   font-weight: 400;
-  font-size: 5vw;
+  font-size: 3.6vw;
 }
 
 .contenido img {
+  width: 99%;
   height: 20%;
   margin: 0 auto;
 }
+@media screen and (width > 769px) {
+  .contenido img {
+    width: 50%;
+    height: 20%;
+    margin: 0 auto;
+  }
+}
 
 .texto-oculto {
+  font-size: 1vw;
   height: 45%;
   text-align: justify;
 }
-.buttom{
+.buttom {
   width: 100%;
   position: absolute;
   bottom: -10%;

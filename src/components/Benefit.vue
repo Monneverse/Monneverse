@@ -73,10 +73,14 @@ defineProps({
       </div>
     </div>
 
- <div class="logo-redes">
+    <div class="logo-redes">
       <div class="icon icon-telegram">
         <a href="https://t.me/monnerversecommunity" target="_blank">
-          <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+          <img
+            src="../assets/Telegram_logo.svg"
+            alt="logo telegram"
+            srcset=""
+          />
         </a>
       </div>
       <div class="icon icon-reddit">
@@ -90,7 +94,7 @@ defineProps({
         </a>
       </div>
     </div>
-</div>
+  </div>
 </template>
 
 <style scoped>
@@ -129,8 +133,6 @@ defineProps({
   color: white;
 }
 
-
-
 .benefits {
   position: absolute;
   top: 10%;
@@ -138,14 +140,13 @@ defineProps({
   width: 100%;
   height: 100%;
   row-gap: 5%;
-
 }
-.contenido{
+.contenido {
   margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 80%;
+  width: 90%;
   height: 80%;
 }
 .contenedor-parrafo {
@@ -167,25 +168,23 @@ defineProps({
   align-items: center;
 }
 @media screen and (width > 769px) {
-
   .buttom {
-  margin: 0 auto;
-  width: 100%;
-  height: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    margin: 0 auto;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .btn {
-
   padding: 10px;
   background: linear-gradient(
     90deg,
     rgb(18, 17, 65) 0%,
     rgba(1, 209, 88, 1) 100%
   );
-  border-radius: .5vw;
+  border-radius: 0.5vw;
   cursor: pointer;
   width: 7rem;
   font-size: 1rem;
@@ -195,13 +194,15 @@ defineProps({
 }
 
 .contenedor-parrafo p {
-  font-size: 1rem;
+  font-size: 3vw;
   font-family: "WorkSans", sans-serif;
   font-weight: 100;
   width: 90%;
   text-align: justify;
   color: white;
 }
+
+
 @media screen and (min-width: 769px) {
   .benefits {
     position: absolute;
@@ -209,16 +210,13 @@ defineProps({
     width: 100%;
     height: 80%;
   }
-  .contenido{
-
+  .contenido {
     margin: 0;
     width: 80%;
     height: 90%;
-
   }
   .titulo {
     padding: 0;
-   
   }
   .titulo h1 {
     font-size: 4vw;
@@ -228,12 +226,17 @@ defineProps({
   }
 
   .contenedor-parrafo {
-
     width: 85%;
     height: 100%;
   }
   .contenedor-parrafo p {
     font-size: 1.5vw;
+  }
+}
+
+@media screen and (width > 500px) and (width < 769px){
+  .contenedor-parrafo p {
+    font-size: 2.5vw;
   }
 }
 .aparecer {
@@ -311,6 +314,12 @@ defineProps({
   z-index: 14;
   display: flex;
   justify-content: start;
+}
+
+@media screen and (width < 769px) {
+  .logo-redes {
+    display: none;
+  }
 }
 
 .icon img {
