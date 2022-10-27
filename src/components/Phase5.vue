@@ -39,24 +39,16 @@ import fasesComponentes from "./ComponentsPhases.vue";
   <button class="readMore" v-on:click="cambiarEstado()">Learn More</button>
 
 
-<div class="componentes">
-  <div class="componente componentes1">
-    <fasesComponentes
-      title="Disclosure"
-      description="Disclosure of our second phase of the project."
-      :isVisible="isVisible"
-    />
-  </div>
+  <div class="componentes">
+    <div class="componente componentes1">
+      <fasesComponentes title="" description="Disclosure of our second phase of the project." :isVisible="isVisible" />
+    </div>
 
-  <div class="componente componentes2">
-    <fasesComponentes
-      title="Holders"
-      description="40.000 holders MONNERVERSE will remain at the forefront with new high innovation projects
-             in 2023."
-      :isVisible="isVisible"
-    />
+    <div class="componente componentes2">
+      <fasesComponentes description="40.000 holders MONNERVERSE will remain at the forefront with new high innovation projects
+             in 2023." :isVisible="isVisible" />
+    </div>
   </div>
-</div>
 
 </template>
 
@@ -99,22 +91,18 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 1;
 }
 
 .filtro-superior {
-  background: radial-gradient(
-    circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
-  );
+  background: radial-gradient(circle at center,
+      #f9f9fa 0%,
+      #c8ced4 50%,
+      #a8aaaf 100%);
   mix-blend-mode: multiply;
   z-index: 2;
 }
@@ -193,7 +181,7 @@ img {
   z-index: 5;
 }
 
-.circulo__2{
+.circulo__2 {
   position: absolute;
   align-items: center;
   left: 24.5%;
@@ -241,111 +229,111 @@ img {
 
 @media screen and (max-width: 900px) {
 
-.circuito {
-  display: none;
-}
+  .circuito {
+    display: none;
+  }
 
-.Fases {
-  left: 0%;
-  top: 12%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
+  .Fases {
+    left: 0%;
+    top: 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
 
-}
+  }
 
-.titulo {
-  width: 100%;
-  height: fit-content;
-  position: initial;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-size: 2rem;
-}
+  .titulo {
+    width: 100%;
+    height: fit-content;
+    position: initial;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+  }
 
-.description {
-  margin-top: 1rem;
-  width: 90%;
-  font-size: 4.5vw;
-}
+  .description {
+    margin-top: 1rem;
+    width: 90%;
+    font-size: 4.5vw;
+  }
 
-.circulo {
+  .circulo {
 
-  left: 20%;
-  height: 15%;
+    left: 20%;
+    height: 15%;
 
-}
+  }
 
-.circulo__1 {
-  left: 13%;
-  top: 20%;
-  width: 80%;
-}
+  .circulo__1 {
+    left: 13%;
+    top: 20%;
+    width: 80%;
+  }
 
-.circulo__2 {
-  left: 8%;
-  top: 22%;
-  width: 90%;
-}
+  .circulo__2 {
+    left: 8%;
+    top: 22%;
+    width: 90%;
+  }
 
-.readMore {
-  display: none;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 10%;
-  font-size: 4vw;
-  flex-wrap: wrap;
-}
+  .readMore {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 10%;
+    font-size: 4vw;
+    flex-wrap: wrap;
+  }
 
-.componentes {
-  position: absolute;
-  top: 40%;
-  left: 2%;
-  width: 63%;
-  height: 40%;
-  padding: 4rem;
-  margin-right: 3rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: start;
-  gap: 3rem;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  overflow-y: scroll;
-  scrollbar-width: 1rem;
-  scroll-snap-type: x mandatory;
-  z-index: 1000;
-}
-
-
-.componentes::-webkit-scrollbar:vertical {
-  height: 10px;
-  width: 10px;
-}
-
-.componentes::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg,
-      rgb(33, 32, 85) 0%,
-      rgba(1, 209, 88, 1) 100%);
-  border-radius: 20px;
-  border: 2px solid #f1f2f3;
-}
-
-.componentes::-webkit-scrollbar-track {
-  border-radius: 10px;
-}
+  .componentes {
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    width: 63%;
+    height: 40%;
+    padding: 4rem;
+    margin-right: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 3rem;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    scrollbar-width: 1rem;
+    scroll-snap-type: x mandatory;
+    z-index: 1000;
+  }
 
 
-.componente {
-  position: unset;
-  width: 75%;
-  height: auto;
-  margin-right: 3rem;
-}
+  .componentes::-webkit-scrollbar:vertical {
+    height: 10px;
+    width: 10px;
+  }
+
+  .componentes::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg,
+        rgb(33, 32, 85) 0%,
+        rgba(1, 209, 88, 1) 100%);
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+  }
+
+  .componentes::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+
+  .componente {
+    position: unset;
+    width: 75%;
+    height: auto;
+    margin-right: 3rem;
+  }
 
 
 

@@ -43,39 +43,39 @@ import fasesComponentes from "./ComponentsPhases.vue";
   </div>
   <div class="componentes">
     <div class="componente componentes1">
-      <fasesComponentes title="Enlisting" description="enlist on Pancakeswap one day after our pre-sale"
+      <fasesComponentes title="" description="enlist on Pancakeswap one day after our pre-sale"
         :isVisible="isVisible" />
     </div>
 
     <div class="componente componentes2">
-      <fasesComponentes title="MonnerStaking" description="MonnerStaking start one day after pre-sale ends,
+      <fasesComponentes title="" description="MonnerStaking start one day after pre-sale ends,
              payouts of 12,6% of total capital every 48 hours" :isVisible="isVisible" />
     </div>
 
     <div class="componente componentes3">
-      <fasesComponentes title="Liquidity" description="liquid lock" :isVisible="isVisible" />
+      <fasesComponentes title="" description="liquid lock" :isVisible="isVisible" />
     </div>
 
     <div class="componente componentes4">
-      <fasesComponentes title="Schedule" description="schedule burning" :isVisible="isVisible" />
+      <fasesComponentes title="" description="schedule burning" :isVisible="isVisible" />
     </div>
 
     <div class="componente componentes5">
-      <fasesComponentes title="Certick" description="certick audit" :isVisible="isVisible" />
+      <fasesComponentes title="" description="certick audit" :isVisible="isVisible" />
     </div>
 
     <div class="componente componentes8">
-      <fasesComponentes title="Official enlistment:" description="coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
+      <fasesComponentes title="" description="Official enlistment: coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
         MEXC global" :isVisible="isVisible" />
     </div>
 
     <div class="componente componentes7">
-      <fasesComponentes title="Increase x5" description="Budget increase x5 of our advertising campaign"
+      <fasesComponentes title="" description=" Increase x5 Budget increase x5 of our advertising campaign"
         :isVisible="isVisible" />
     </div>
 
     <div class="componente componentes6">
-      <fasesComponentes title="Holders" description="10.000 holders" :isVisible="isVisible" />
+      <fasesComponentes title="" description="10.000 holders" :isVisible="isVisible" />
     </div>
   </div>
 
