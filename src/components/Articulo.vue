@@ -98,7 +98,7 @@ h5 {
 
 @media screen and (min-width: 100px) {
   .titulo1 {
-    height: 1 0%;
+    height: 10%;
     font-size: 80%;
   }
   .leer_Mas {

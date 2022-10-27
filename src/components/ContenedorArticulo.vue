@@ -33,13 +33,15 @@ defineProps({
     <div class="contrato">
       <b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span>
     </div>
-    <button class="buyNow">
-      <div class="texto1">BUY MONNER</div>
-      <div class="logos">
-        <div class="binance"><img src="/./img/Articulo/BNC.svg" /></div>
-        <div class="meta"><img src="/./img/Articulo/Meta.svg" /></div>
-      </div>
-    </button>
+    <div class="buyNow">
+      <button class="btn_moner">
+        <div class="texto1">BUY MONNER</div>
+        <div class="logos">
+          <div class="binance"><img src="/./img/Articulo/BNC.svg" /></div>
+          <div class="meta"><img src="/./img/Articulo/Meta.svg" /></div>
+        </div>
+      </button>
+    </div>
   </div>
 
   <!-- Contenedor de Articulos -->
@@ -301,13 +303,22 @@ img {
 .btn_buyMonner {
   position: fixed;
   top: 19%;
-  left: 37.5%;
-  width: 23%;
+  left: 20%;
+  width: 60%;
   height: auto;
 }
 
 .buyNow {
   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.btn_moner {
+  width: 50%;
   height: 100%;
   background: linear-gradient(to right, #029f50 0%, #0a664e 50%, #0e444d 100%);
   border: 1.2px solid black;
@@ -317,6 +328,7 @@ img {
   -webkit-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px px 5px rgba(0, 0, 0, 0.75);
+
 }
 
 .texto1 {
