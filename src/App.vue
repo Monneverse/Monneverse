@@ -283,11 +283,17 @@ export default {
           if (this.index_pagina < this.limite) {
             newPosition = this.index_pagina + 1;
             this.isRevert = false;
+            if(newPosition == 11){
+              newPosition = 13;
+            }
           }
         } else {
           if (this.index_pagina > 1) {
             newPosition = this.index_pagina - 1;
             this.isRevert = true;
+            if(newPosition == 12){
+              newPosition = 10;
+            }
           }
         }
         this.CambiarContenedor(newPosition)
