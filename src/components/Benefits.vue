@@ -1,5 +1,5 @@
 <script setup>
-import Benefits from "./TemplateBenefits.vue";
+import Beneficio from "./TemplateBenefits.vue";
 import Circulos from "./ComponentesCirculo.vue";
 defineProps({
   index_pagina: {
@@ -32,7 +32,49 @@ defineProps({
       :class="{ display_flex: true, 'animacion-aparecer': index_pagina == 9 }"
     >
       <div class="benefits">
-        <Benefits />
+        <Beneficio
+          icono="/img/plus.svg"
+          symbol="$"
+          precio="1500"
+          moneda="USD-MNR"
+          info="(Minimun purchase $1,5 USD)"
+          sale_price="Minimun purchase 1,5 USD Pre-sale Price"
+          texto=""
+        />
+        <Beneficio
+          icono="/img/plus.svg"
+          symbol="$"
+          precio="15.300"
+          moneda="USD"
+          info=""
+          sale_price="Sale Price"
+          texto="Our Token will be more exclusive than the most valuable NFT's of the moment. That's why the price of each MNR on PancakeSwap will initially range from"
+          textoA1=" $14,200 to $15,500"
+          textoD=" thanks to: Our limited supply of"
+          textoA2=" 10,000 MNR"
+          textoT=". scheduled burns. -Our sponsors. - The GREAT injection of liquidity made by our team with its line of credit from the USA and private investors. We will take into account all the tools that allow us to grow our prices"
+          />
+     
+        <Beneficio
+          icono="/img/plus.svg"
+          symbol=""
+          precio="Phase 1"
+          moneda=""
+          info=""
+          sale_price=""
+          texto="Phase 1 of staking only for users who buy in pre-sale"
+        />
+        <Beneficio
+          icono="/img/plus.svg"
+          symbol=""
+          precio="6.2%*48h"
+          moneda=""
+          info=""
+          sale_price="Sale Price"
+          texto="Enter our first phase os staking buying in pre-sale and earn 6.2% every 48 hours of your total capital in Monnercoins after the launch in Pancakeswap"
+
+          />
+           
       </div>
     </div>
 
@@ -91,8 +133,8 @@ defineProps({
 }
 .titulo {
   position: absolute;
-  top: 5rem;
-  left: 3rem;
+  top: 4.2rem;
+  left: 4.5rem;
 }
 .titulo h1 {
   font-size: 3rem;
@@ -105,12 +147,11 @@ defineProps({
   position: absolute;
   z-index: 14;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
-  width: 70%;
-  height: 60%;
-  top: 10rem;
-  left: 5%;
+  width: 90%;
+  height: 75%;
+  top: 20%;
 }
 
 .fondo {
@@ -129,7 +170,7 @@ defineProps({
   z-index: -23;
   background-size: no-repeat center center fixed;
 }
- 
+
 .fondo_rayos img {
   height: 100%;
 }
@@ -158,12 +199,11 @@ defineProps({
   .benefits {
     flex: none;
     top: 25%;
-    left: 13%;
-    width: 70%;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 2%;
+    grid-column-gap: 0;
     grid-row-gap: 0px;
     grid-template-areas:
       "a b"

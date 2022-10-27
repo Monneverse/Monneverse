@@ -1,65 +1,72 @@
-<script>
-export default {
-  data() {
-    return {
-      valores: [
-        {
-          icono: "/img/plus.svg",
-          symbol: "$",
-          precio: "1500",
-          moneda: "USD-MNR",
-          info: "(Mimun purchase $1,5 USD)",
-          sale_price: "Minimun purchase 1,5 USD Pre-sale Price",
-          texto: "",
-        },
-
-        {
-          icono: "/img/plus.svg",
-          symbol: "$",
-          precio: "15.300",
-          moneda: "USD",
-          sale_price: "Sale Price",
-          texto:
-            "Our Token will be more exclusive than the most valuable NFT's of the moment. That's why the price of each MNR on PancakeSwap will initially range from $14,200 to $15,500 thanks to: Our limited supply of 10,000 MNR. scheduled burns. -Our sponsors. - The GREAT injection of liquidity made by our team with its line of credit from the USA and private investors. We will take into account all the tools that allow us to grow our prices",
-        },
-
-        {
-          icono: "/img/plus.svg",
-          symbol: "",
-          precio: "Phase 1",
-          moneda: "",
-          sale_price: "",
-          texto: "Phase 1 of staking only for users who buy in pre-sale",
-        },
-
-
-        {
-          icono: "/img/plus.svg",
-          symbol: "",
-          precio: "6.2%*48h",
-          moneda: "",
-          sale_price: "Sale Price",
-          texto:
-            "Enter our first phase os staking buying in pre-sale and earn 6.2% every 48 hours of your total capital in Monnercoins after the launch in Pancakeswap",
-        },
-      ],
-    };
+<script setup>
+defineProps({
+  icono: {
+    type: String,
+    required: true,
   },
-};
+  symbol: {
+    type: String,
+    required: true,
+  },
+  precio: {
+    type: String,
+    required: true,
+  },
+  moneda: {
+    type: String,
+    required: true,
+  },
+  info: {
+    type: String,
+    required: true,
+  },
+  sale_price: {
+    type: String,
+    required: true,
+  },
+  texto: {
+    type: String,
+    required: true,
+  },
+  textoD: {
+    type: String,
+    required: true,
+  },
+  textoT: {
+    type: String,
+    required: true,
+  },
+  textoA1: {
+    type: String,
+    required: true,
+  },
+  textoA2: {
+    type: String,
+    required: true,
+  },
+});
 </script>
 
 <template>
-  <div v-for="valor in valores" class="benefit">
-    <i><img class="icon-discord" :src="valor.icono" alt="" /></i>
-    <div class="content_price">
-      <h1>
-        <b class="dolar">{{ valor.symbol }}</b>{{ valor.precio }}<span>{{ valor.moneda }} {{ valor.info }}</span>
-      </h1>
+  <div class="benefit">
+    <div class="content-price">
+      <div class="titulo">
+        <h1 class="inicio">
+          <img class="image" :src="icono" alt="" />
+          <span class="dolar">{{ symbol }}</span
+          >{{ precio }}<b class="moneda">{{ moneda }}</b>
+        </h1>
+      </div>
+      <div class="info">
+        <p>{{ info }}</p>
+      </div>
     </div>
-    <div class="content_text">
-      <h3>{{ valor.sale_price }}</h3>
-      <p v-show="valor.texto">
-        {{ valor.texto }}
+    <div class="content-text">
+      <h4>{{ sale_price }}</h4>
+      <p>
+        {{ texto }}<b>{{ textoA1 }}</b
+        >{{ textoD }}<b>{{ textoA2 }}</b
+        >{{ textoT }}
       </p>
     </div>
   </div>
@@ -70,104 +77,66 @@ export default {
 
 .benefit {
   width: 100%;
-  height: 10%;
-  margin-bottom: 2rem;
+  height: 25%;
   color: white;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   font-family: "Work Sans", sans-serif;
-}
-
-.benefit:nth-child(1) {
-  width: 15rem;
-
-}
-
-.benefit:nth-child(2) {
-  width: 19rem;
-  margin-bottom: 5rem;
-}
-
-.benefit:nth-child(3) {
-  width: 21rem;
-}
-
-.benefit:nth-child(4) {
-  width: 24rem;
-}
-
-.benefit h1 {
-  width: 85%;
-  margin: 0 auto;
-  font-weight: 600;
-  font-size: 3.1rem;
-  text-align: left;
 }
 
 @media screen and (min-width: 768px) {
   .benefit {
     width: 100%;
     height: 100%;
-    margin-bottom: 5rem;
-  }
-
-  .benefit h1 {
-    font-size: 4rem;
-    font-weight: 500;
   }
 
   .benefit:nth-child(1) {
+    height: 110%;
     position: relative;
+    margin: 0 auto;
     top: 50%;
     left: 5%;
-    width: 23rem;
+    width: 28rem;
     grid-area: a;
-    display: flex;
   }
 
   .benefit:nth-child(2) {
-    width: 23rem;
+    height: 100%;
+    width: 28rem;
     grid-area: d;
     display: flex;
   }
 
   .benefit:nth-child(3) {
-
-    width: 23rem;
+    height: 110%;
+    width: 28rem;
     display: flex;
     grid-area: b;
   }
 
   .benefit:nth-child(4) {
+    height: 100%;
     position: relative;
+    margin: 0 auto;
     top: 50%;
     left: 5%;
-    width: 23rem;
+    width: 28rem;
     grid-area: c;
     display: flex;
   }
+  
 }
 
-.benefit span {
-  font-size: 3vw;
-}
-
-.dolar {
-  color: rgb(55, 243, 149);
-  font-size: 3rem;
-}
-
-.content_price {
-  width: 70%;
-  height: 100%;
+.content-price {
+  width: 100%;
+  height: 50%;
   background-color: #161431;
-  border-radius: 0.5rem;
+  border-radius: 0.6rem;
   display: flex;
-  align-items: center;
-  justify-items: center;
+  flex-direction: column;
 }
 
-.content_price:hover {
+.content-price:hover {
   box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px rgb(6, 38, 58),
     inset -20px 0 80px rgb(7, 64, 25), inset 20px 0 300px rgb(5, 12, 28),
     inset -20px 0 300px rgb(4, 41, 10), 0 0 50px #fff,
@@ -175,100 +144,111 @@ export default {
   transition: 0.5s ease-in;
 }
 
+.image {
+  width: 2rem;
+  position: relative;
+  left: -13px;
+}
+.image img {
+  width: 100%;
+}
+
+.titulo {
+  width: 100%;
+  height: 80%;
+  background-color: #161431;
+  border-radius: 1rem;
+}
+
+.titulo h1 {
+  margin-left: 0%;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.info {
+  border-radius: 1rem;
+  width: 100%;
+  height: 25%;
+  background-color: #161431;
+}
+.info p {
+  text-align: center;
+  margin-left: 10%;
+}
+.dolar {
+  color: rgb(55, 243, 149);
+  font-size: 3rem;
+}
+.moneda {
+  font-size: 1.5rem;
+}
 @media screen and (min-width: 768px) {
-  .benefit span {
-    font-size: 1vw;
+  .image {
+    margin: 0 auto;
+    width: 2.5rem;
+    position: relative;
+    left: -20px;
+  }
+  .titulo h1 {
+    font-size: 4.5rem;
   }
 
+  .info {
+    border-radius: 1rem;
+    width: 100%;
+    height: 25%;
+    background-color: #161431;
+  }
+  .info p {
+    text-align: center;
+    margin-left: 10%;
+  }
   .dolar {
     color: rgb(55, 243, 149);
-    font-size: 4.5vw;
-  }
-
-  .content_price {
-    width: 88%;
-    height: 50%;
-
-    background-color: #161431;
-    border-radius: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-items: center;
+    font-size: 4.5rem;
   }
 }
 
-.content_text {
-  margin-left: 2.5rem;
-  width: 80rem;
-  height: 100%;
+.content-text {
+  width: 100%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   text-align: left;
-
 }
 
-.content_text h3 {
-  font-size: 1rem;
+.content-text h4 {
+  height: 20%;
+  margin-top: 1%;
+  margin-left: 10%;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
-.content_text p {
-  width: 17rem;
+.content-text p {
+  width: 90%;
+  height: 80%;
+  margin-left: 10%;
   font-weight: 300;
-  font-size: .57rem;
+  font-size: 0.57rem;
   text-align: justify;
   align-items: left;
 }
 
-i {
-  position: relative;
-  left: 4%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-
-i img {
-  align-items: flex-start;
-  top: 0;
-  right: 4%;
-  height: 1.6rem;
-}
-
 @media screen and (width > 768px) {
-  .content_text {
-    background-color: aqua !important;
-    margin-top: -30px;
-    margin-left: 15%;
-    height: 0;
-  }
-
-  .content_text h3 {
-    margin: 0;
-    font-size: 1.2vw;
+  .content-text h4 {
+    font-size: 1.4vw;
     font-weight: 400;
   }
 
-  .content_text p {
-    width: 100%;
-    height: 5%;
+  .content-text p {
     font-weight: 300;
-    font-size: 0.9vw;
-
-
+    font-size: 0.8vw;
+  }
+  .content-text p b {
+    color: yellow;
   }
 
-  i {
-    height: 50%;
-  }
-
-  i img {
-    align-items: flex-start;
-    top: -100%;
-    right: 44%;
-    height: 2rem;
-
-  }
 }
 </style>
