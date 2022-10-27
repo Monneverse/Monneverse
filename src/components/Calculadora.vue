@@ -138,7 +138,7 @@ export default {
       inversion: 1500,
       porcentajeInteres: 6.2,
       interes: "$ 0",
-      indicador: State.Hour0
+      indicador: State.Hour48
     };
   },
   methods: {
@@ -169,7 +169,7 @@ export default {
   },
   mounted() {
     this.Calculator();
-    this.indicador = State.Hour0
+    this.indicador = State.Hour48
   },
 };
 </script>
