@@ -230,6 +230,7 @@ export default {
           this.index = 5;
           break;
         case 20:
+        this.index = 0;
           this.orientacion = typeOrientacion.none
           break;
         default:
