@@ -6,20 +6,21 @@ export default {
         {
           icono: "/img/plus.svg",
           symbol: "$",
-          precio: "1,5",
-          moneda: "USD",
+          precio: "1500",
+          moneda: "USD-MNR",
+          info: "(Mimun purchase $1,5 USD)",
           sale_price: "Minimun purchase 1,5 USD Pre-sale Price",
           texto: "",
         },
-       
+
         {
           icono: "/img/plus.svg",
           symbol: "$",
-          precio: "22,5",
+          precio: "15.300",
           moneda: "USD",
           sale_price: "Sale Price",
           texto:
-            "Our PancakeSwap price will range from $8,200 to $10,000 thanks to: - Our limited supply of 10,000 MNR. - Scheduled Burns. -Our sponsors. - The GREAT injection of liquidity made by our team with its line of credit from the USA and private investors. We will take into account all the tools that allow us to make our prices grow",
+            "Our Token will be more exclusive than the most valuable NFT's of the moment. That's why the price of each MNR on PancakeSwap will initially range from $14,200 to $15,500 thanks to: Our limited supply of 10,000 MNR. scheduled burns. -Our sponsors. - The GREAT injection of liquidity made by our team with its line of credit from the USA and private investors. We will take into account all the tools that allow us to grow our prices",
         },
 
         {
@@ -52,8 +53,7 @@ export default {
     <i><img class="icon-discord" :src="valor.icono" alt="" /></i>
     <div class="content_price">
       <h1>
-        <b class="dolar">{{ valor.symbol }}</b
-        >{{ valor.precio }}<span>{{ valor.moneda }}</span>
+        <b class="dolar">{{ valor.symbol }}</b>{{ valor.precio }}<span>{{ valor.moneda }} {{ valor.info }}</span>
       </h1>
     </div>
     <div class="content_text">
@@ -82,13 +82,16 @@ export default {
   width: 15rem;
 
 }
+
 .benefit:nth-child(2) {
   width: 19rem;
   margin-bottom: 5rem;
 }
+
 .benefit:nth-child(3) {
   width: 21rem;
 }
+
 .benefit:nth-child(4) {
   width: 24rem;
 }
@@ -100,16 +103,19 @@ export default {
   font-size: 3.1rem;
   text-align: left;
 }
+
 @media screen and (min-width: 768px) {
   .benefit {
     width: 100%;
     height: 100%;
     margin-bottom: 5rem;
   }
+
   .benefit h1 {
     font-size: 4rem;
     font-weight: 500;
   }
+
   .benefit:nth-child(1) {
     position: relative;
     top: 50%;
@@ -118,17 +124,20 @@ export default {
     grid-area: a;
     display: flex;
   }
+
   .benefit:nth-child(2) {
     width: 23rem;
     grid-area: d;
     display: flex;
   }
+
   .benefit:nth-child(3) {
-    
+
     width: 23rem;
     display: flex;
     grid-area: b;
   }
+
   .benefit:nth-child(4) {
     position: relative;
     top: 50%;
@@ -142,10 +151,12 @@ export default {
 .benefit span {
   font-size: 3vw;
 }
+
 .dolar {
   color: rgb(55, 243, 149);
   font-size: 3rem;
 }
+
 .content_price {
   width: 70%;
   height: 100%;
@@ -163,14 +174,17 @@ export default {
     -10px 0 80px rgb(1, 13, 37), 10px 0 80px rgb(1, 64, 12);
   transition: 0.5s ease-in;
 }
+
 @media screen and (min-width: 768px) {
   .benefit span {
     font-size: 1vw;
   }
+
   .dolar {
     color: rgb(55, 243, 149);
     font-size: 4.5vw;
   }
+
   .content_price {
     width: 88%;
     height: 50%;
@@ -192,17 +206,20 @@ export default {
   text-align: left;
 
 }
+
 .content_text h3 {
   font-size: 1rem;
   font-weight: 400;
 }
+
 .content_text p {
   width: 17rem;
   font-weight: 300;
-  font-size:.57rem;
+  font-size: .57rem;
   text-align: justify;
   align-items: left;
 }
+
 i {
   position: relative;
   left: 4%;
@@ -211,24 +228,28 @@ i {
   justify-content: center;
   height: 100%;
 }
+
 i img {
   align-items: flex-start;
   top: 0;
   right: 4%;
   height: 1.6rem;
 }
+
 @media screen and (width > 768px) {
   .content_text {
-    background-color: aqua!important;
+    background-color: aqua !important;
     margin-top: -30px;
     margin-left: 15%;
     height: 0;
   }
+
   .content_text h3 {
     margin: 0;
     font-size: 1.2vw;
     font-weight: 400;
   }
+
   .content_text p {
     width: 100%;
     height: 5%;
@@ -237,9 +258,11 @@ i img {
 
 
   }
-  i{
+
+  i {
     height: 50%;
   }
+
   i img {
     align-items: flex-start;
     top: -100%;
