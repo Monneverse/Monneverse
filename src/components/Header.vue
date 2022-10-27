@@ -67,8 +67,10 @@
   </div>
 
   <!-- boton bajar -->
-  <div :class="{'arrow-container':true, 'animated':true, 'fadeInDown':true, 
-  right:this.orientacion ==3,center:this.orientacion ==2, left:this.orientacion ==1 }">
+  <div :class="{
+    'arrow-container': true, 'animated': true, 'fadeInDown': true,
+    right: this.orientacion == 3, center: this.orientacion == 2, left: this.orientacion == 1, none: this.orientacion == 4
+  }">
     <div @click="this.setNext()" class="arrow-2">
       <i class="fa fa-angle-down"></i>
     </div>
@@ -88,7 +90,7 @@ export default {
       isExpanded: false
     };
   },
-  props: ["index", "isVisible", "setPage", "setNext", "indexPagina","orientacion"],
+  props: ["index", "isVisible", "setPage", "setNext", "indexPagina", "orientacion"],
   computed: {
     indexF: {
       get() {
@@ -187,6 +189,7 @@ export default {
   mounted() {
     this.recargar();
     window.addEventListener("resize", this.recargar);
+
   },
 };
 </script>
@@ -362,20 +365,29 @@ img {
   padding: 0%;
 
   position: fixed;
-  bottom:  .5rem;
+  bottom: .5rem;
+  transition: all 0.4s;
 }
+
 .left {
   left: 2rem;
-  transform: translate(0%,0);
+  transform: translate(0%, 0);
 }
+
 .center {
   left: 50%;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
 }
+
 .right {
-  right:   2rem;
-  transform: translate(0%,0);
+  right: 2rem;
+  transform: translate(0%, 0);
 }
+
+.none {
+  display: none;
+}
+
 .arrow-1 {
   width: 100%;
   height: 100%;
@@ -620,7 +632,8 @@ img {
     width: 2.6rem;
     height: 2.6rem;
   }
-  .btnMeta{
+
+  .btnMeta {
     position: fixed;
     top: 2rem;
     right: 2rem;
