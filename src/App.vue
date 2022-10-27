@@ -24,7 +24,8 @@ import Footer from "./components/Footer.vue";
 
 <template>
   <header>
-    <Header :orientacion="orientacion" :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage" :setNext="next" :indexPagina="index_pagina">
+    <Header :orientacion="orientacion" :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage" :setNext="next"
+      :indexPagina="index_pagina">
     </Header>
   </header>
 
@@ -129,7 +130,7 @@ export default {
       startY: 0,
       moveY: 0,
       position: 0,
-      orientacion : typeOrientacion.center
+      orientacion: typeOrientacion.center
     };
   },
   methods: {
@@ -255,7 +256,24 @@ export default {
         this.enterAnimation = false;
       }, 1000);
     },
+    DisabledZoom() {
+      const handleWheel = function (e) {
+        if (e.ctrlKey || e.metaKey)
+          e.preventDefault();
+      };
+      window.addEventListener("wheel", handleWheel, { passive: false });
+      document.addEventListener('keydown', function () {
+        if (event.ctrlKey == true && (event.which == '61' || event.which == '107' || event.which == '173' || event.which == '109' || event.which == '187' || event.which == '189')) {
+          event.preventDefault();
+        }
+        // 107 Num Key  +
+        // 109 Num Key  -
+        // 173 Min Key  hyphen/underscore key
+        // 61 Plus key  +/= key
+      });
+    },
     Navegar() {
+
       if (this.scroll) {
         this.exitAnimation = true;
         this.scroll = false;
@@ -294,8 +312,12 @@ export default {
   },
   mounted() {
     document.addEventListener("wheel", this.Navegar);
+
+    this.DisabledZoom();
+
     this.listaPaginaDondeSeOcultaLogo.push(this.limite);
     document.addEventListener("drag", this.returnMethods());
+    window.bind
   },
 };
 </script>
