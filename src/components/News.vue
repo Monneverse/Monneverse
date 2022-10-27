@@ -553,16 +553,16 @@ img {
 
 .criptotendencia {
     position: relative;
-    top: 60%;
-    right: -8%;
-    width: 80%;
+    top: 70%;
+    right: -18%;
+    width: 60%;
     height: 10%;
     z-index: 9;
 }
 
 .coinspeaker {
     position: relative;
-    top: -4%;
+    top: -10%;
     right: -8%;
     width: 80%;
     height: 25%;
@@ -571,7 +571,7 @@ img {
 
 .territoriobitcoin {
     position: relative;
-    top: -8%;
+    top: -4%;
     right: -8%;
     width: 80%;
     height: 18%;
