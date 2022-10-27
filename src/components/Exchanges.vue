@@ -14,7 +14,7 @@ import ComponenteIconos from "./componenteIconos.vue";
   <div class="circuito circuito-izquierdo">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
   </div>
-
+ 
   <div class="fondoTokenomics">
     <img src="/img/fondo_Tokenomics.png" alt="" />
   </div>
@@ -37,48 +37,81 @@ import ComponenteIconos from "./componenteIconos.vue";
     <div class="contenedor_crypto">
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/bunny-color.svg" iconname="pancakeswap" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/bunny-color.svg"
+            iconname="pancakeswap"
+          />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/Kucoin.svg" iconname="kucoin" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/Kucoin.svg"
+            iconname="kucoin"
+          />
         </div>
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/Gatebw.svg" iconname="gate.io" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/Gatebw.svg"
+            iconname="gate.io"
+          />
         </div>
       </div>
 
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/lbank2.svg" iconname="LBANK" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/lbank2.svg"
+            iconname="LBANK"
+          />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/okxlogo.svg" iconname="OKX" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/okxlogo.svg"
+            iconname="OKX"
+          />
         </div>
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/CoinGecko.svg" iconname="COINGECKO" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/CoinGecko.svg"
+            iconname="COINGECKO"
+          />
         </div>
       </div>
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/mexcglobal.svg" iconname="MEXC GLOBAL" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/mexcglobal.svg"
+            iconname="MEXC GLOBAL"
+          />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/xtcom.svg" iconname="XT.COM" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/xtcom.svg"
+            iconname="XT.COM"
+          />
         </div>
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/poloniex.svg" iconname="POLONIEX" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/poloniex.svg"
+            iconname="POLONIEX"
+          />
         </div>
       </div>
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/hotbit.svg" iconname="HOTBIT" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/hotbit.svg"
+            iconname="HOTBIT"
+          />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/coinmarket.svg" iconname="COINMARKET" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/coinmarket.svg"
+            iconname="COINMARKET"
+          />
         </div>
         <div class="cryptos">
           <ComponenteIconos iconos="/img/Exchanges/ftx.svg" iconname="FTX" />
@@ -86,14 +119,23 @@ import ComponenteIconos from "./componenteIconos.vue";
       </div>
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/latoken.svg" iconname="LATOKEN" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/latoken.svg"
+            iconname="LATOKEN"
+          />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/bitrue.svg" iconname="BITRUE" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/bitrue.svg"
+            iconname="BITRUE"
+          />
         </div>
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/favicon.svg" iconname="FAVICON" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/favicon.svg"
+            iconname="FAVICON"
+          />
         </div>
       </div>
     </div>
@@ -151,7 +193,6 @@ import ComponenteIconos from "./componenteIconos.vue";
 .circuito-izquierdo {
   left: -5%;
 }
-
 .circuito-izquierdo img {
   width: 85%;
   opacity: 50%;
@@ -181,10 +222,12 @@ import ComponenteIconos from "./componenteIconos.vue";
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at center,
-        #48d0ab 0%,
-        #097561 50%,
-        #505863 100%);
+    background: radial-gradient(
+      circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%
+    );
     z-index: 1;
   }
 
@@ -205,7 +248,6 @@ import ComponenteIconos from "./componenteIconos.vue";
     z-index: 3;
     opacity: 20%;
   }
-
   .fondo-montana img {
     background-size: no-repeat center center fixed;
   }
@@ -217,10 +259,12 @@ import ComponenteIconos from "./componenteIconos.vue";
     width: 300%;
     height: 200%;
     background-size: no-repeat center center fixed;
-    background: radial-gradient(circle at center,
-        #48d0ab 10%,
-        #097561 30%,
-        #0f161c 100%);
+    background: radial-gradient(
+      circle at center,
+      #48d0ab 10%,
+      #097561 30%,
+      #0f161c 100%
+    );
     z-index: 1;
     opacity: 100%;
   }
@@ -265,118 +309,6 @@ import ComponenteIconos from "./componenteIconos.vue";
   }
 }
 
-@media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
-
-  img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .fondo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #121026;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    opacity: 30%;
-    z-index: 3;
-  }
-
-  .fondo-oscuro {
-    position: fixedq;
-    top: 0%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center,
-        #48d0ab 0%,
-        #097561 50%,
-        #505863 100%);
-    z-index: 1;
-  }
-
-  .fondo-mundial {
-    position: fixed;
-    top: 25em;
-    left: -8em;
-    width: 50em;
-    height: 35em;
-    z-index: 3;
-    opacity: 80%;
-  }
-
-  .fondo-montana {
-    position: fixed;
-    top: 40%;
-    left: -110%;
-    width: 70em;
-    height: 40em;
-    z-index: 3;
-    opacity: 20%;
-  }
-
-  .fondo-oscuro {
-    position: fixed;
-    top: 0;
-    left: 0em;
-    width: 100em;
-    height: 100em;
-    background: radial-gradient(circle at center,
-        #48d0ab 10%,
-        #097561 30%,
-        #0F161C 100%);
-    z-index: 1;
-    opacity: 100%;
-  }
-
-  .fondoTokenomics {
-    position: fixed;
-    top: 20%;
-    left: -12%;
-    width: 130%;
-    height: 60%;
-    visibility: hidden;
-  }
-
-  .degradado {
-    background: linear-gradient(to right, #090380 55%, transparent);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 4;
-    top: 38%;
-    opacity: 90%;
-  }
-
-  .degradado_izquierdo {
-    transform: rotate(-60deg);
-    right: 55%;
-    visibility: hidden;
-
-  }
-
-  .degradado_derecho {
-    transform: rotate(230deg);
-    left: 40%;
-  }
-
-  .circuito-izquierdo {
-    left: -70%;
-  }
-
-  #logo-1 {
-    width: 63%;
-    max-height: 14%;
-    position: fixed;
-    top: 75%;
-    left: -8%;
-    z-index: 3;
-    opacity: 50%;
-  }
-}
-
 /* CONTENIDO */
 
 .content-major {
@@ -394,7 +326,6 @@ import ComponenteIconos from "./componenteIconos.vue";
     flex-direction: row;
   }
 }
-
 .exchange_text {
   width: 100%;
   height: 50%;
@@ -404,7 +335,6 @@ import ComponenteIconos from "./componenteIconos.vue";
   justify-content: center;
   align-items: center;
 }
-
 @media only screen and (width > 769px) {
   .exchange_text {
     width: 40%;
@@ -413,29 +343,35 @@ import ComponenteIconos from "./componenteIconos.vue";
 }
 
 .exchange_text p {
-  background: linear-gradient(to right,
-      #8753c1 0%,
-      #6f6cbe 20%,
-      #38a6b7 40%,
-      #5884bb 60%);
+  background: linear-gradient(
+    to right,
+    #8753c1 0%,
+    #6f6cbe 10%,
+    #38a6b7 40%,
+    #5884bb 60%,
+    #11334e 100%
+  );
   font-family: Calibri;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  z-index: 2;
+  width: 60%;
+  margin-top: 10%;
 }
-
-@media only screen and (min-device-width: 275px) and (max-device-width: 667px) {
-  .exchange_text {
-    top: 12%;
-    left: 16%;
-    width: 73%;
-    height: 10.5%;
-    font-size: 12vw;
-    z-index: 999;
+@media only screen and (width > 769px) {
+  .exchange_text p {
+    font-size: 4.5vw;
+    margin-top: 0%;
+    width: 70%;
   }
 }
-
+.contenedor_crypto {
+  margin: 0 auto;
+  height: 35%;
+  width: 90%;
+  display: flex;
+  overflow-x: scroll;
+}
 @media only screen and (width > 769px) {
   .contenedor_crypto {
     position: relative;
@@ -450,71 +386,8 @@ import ComponenteIconos from "./componenteIconos.vue";
     overflow-x: hidden;
     overflow-y: hidden;
   }
-
-  .caja-cryptos {
-    width: 100%;
-    height: 60%;
-  }
-
-  .caja-cryptos:nth-child(1) {
-    width: 100%;
-    height: 60%;
-    flex: none;
-  }
-
-  .caja-cryptos:nth-child(2) {
-    width: 100%;
-    height: 60%;
-    flex: none;
-  }
-
-  .caja-cryptos:nth-child(3) {
-    width: 100%;
-    height: 60%;
-    flex: none;
-  }
-
-  .caja-cryptos:nth-child(4) {
-    width: 100%;
-    height: 60%;
-    flex: none;
-  }
-
-  .caja-cryptos:nth-child(5) {
-    width: 100%;
-    height: 60%;
-    flex: none;
-  }
-
-  .logo-redes {
-    visibility: hidden;
-  }
 }
-
-.cryptos {
-  width: 40%;
-  height: 80%;
-  margin-left: 5%;
-}
-
 .caja-cryptos {
-  display: flex;
-  width: 100%;
-  height: 60%;
-}
-
-/* FIN ICONOS EXCHANGES */
-
-/* REDES SOCIALES */
-.logo-redes {
-  position: absolute;
-  bottom: 0%;
-  left: 1rem;
-  width: 20rem;
-  height: 5rem;
-  z-index: 14;
-  display: flex;
-  justify-content: start;
   margin: 0 auto;
   width: 100%;
   height: 100%;
@@ -529,16 +402,13 @@ import ComponenteIconos from "./componenteIconos.vue";
     margin-right: 30px;
   }
 }
-
 .caja-cryptos:nth-child(5) {
   margin-right: 0%;
 }
-
 .cryptos {
   width: 100%;
   height: 30%;
 }
-
 @media only screen and (width > 769px) {
   .cryptos {
     width: 33%;
