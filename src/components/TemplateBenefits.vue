@@ -12,6 +12,14 @@ defineProps({
     type: String,
     required: true,
   },
+  ask: {
+    type: String,
+    required: true,
+  },
+  precioS: {
+    type: String,
+    required: true,
+  },
   moneda: {
     type: String,
     required: true,
@@ -54,7 +62,8 @@ defineProps({
         <h1 class="inicio">
           <img class="image" :src="icono" alt="" />
           <span class="dolar">{{ symbol }}</span
-          >{{ precio }}<b class="moneda">{{ moneda }}</b>
+          >{{ precio }}<strong>{{ ask }}</strong
+          >{{ precioS }}<b class="moneda">{{ moneda }}</b>
         </h1>
       </div>
       <div class="info">
@@ -75,6 +84,9 @@ defineProps({
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;700&display=swap");
 
+strong {
+  color: rgb(55, 243, 149);
+}
 .benefit {
   width: 100%;
   height: 25%;
@@ -91,7 +103,7 @@ defineProps({
   }
 
   .benefit:nth-child(1) {
-    height: 110%;
+    height: 115%;
     position: relative;
     margin: 0 auto;
     top: 50%;
@@ -101,21 +113,21 @@ defineProps({
   }
 
   .benefit:nth-child(2) {
-    height: 100%;
+    height: 90%;
     width: 28rem;
     grid-area: d;
     display: flex;
   }
 
   .benefit:nth-child(3) {
-    height: 110%;
+    height: 115%;
     width: 28rem;
     display: flex;
     grid-area: b;
   }
 
   .benefit:nth-child(4) {
-    height: 100%;
+    height: 90%;
     position: relative;
     margin: 0 auto;
     top: 50%;
@@ -124,7 +136,6 @@ defineProps({
     grid-area: c;
     display: flex;
   }
-  
 }
 
 .content-price {
@@ -246,9 +257,8 @@ defineProps({
     font-weight: 300;
     font-size: 0.8vw;
   }
-  .content-text p b {
-    color: yellow;
-  }
-
+}
+.content-text p b {
+  color: yellow;
 }
 </style>
