@@ -31,7 +31,7 @@ defineProps({
   <!-- CONTENEDOR DE BOTON METATASK -->
   <div class="btn_buyMonner">
     <div class="contrato">
-      <b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span>
+      <b>Contract: </b><b> 0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</b>
     </div>
     <div class="buyNow">
       <button class="btn_moner">
@@ -47,7 +47,13 @@ defineProps({
   <!-- Contenedor de Articulos -->
   <div class="containerArticulo">
     <div v-if="index_pagina == 5" class="contenedorDeArticulo">
-      <Articulo v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen" :url="item.link" />
+      <Articulo
+        v-for="item in vectorArticulo"
+        :key="item"
+        :titulo="item.titulo"
+        :img="item.imagen"
+        :url="item.link"
+      />
     </div>
   </div>
 
@@ -196,10 +202,12 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
   z-index: 0;
 }
 
@@ -314,7 +322,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .btn_moner {
@@ -328,7 +335,6 @@ img {
   -webkit-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px px 5px rgba(0, 0, 0, 0.75);
-
 }
 
 .texto1 {
@@ -343,16 +349,14 @@ img {
 
 .contrato {
   position: relative;
-  left: 19%;
-  font-size: 1.3vw;
+  margin: 0 auto;
+  font-size: 1.5vw;
   color: white;
-  height: 20%;
-  width: 158%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
 }
 
-.contrato span {
-  font-size: 1.1vw;
-}
 
 .logos {
   position: relative;
@@ -400,7 +404,7 @@ img {
     bottom: 5%;
     width: 100%;
     left: 0;
-    height: 50%;
+    height: 55%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -474,7 +478,7 @@ h4 {
     right: 80%;
   }
 
-  .contenedorDeArticulo>* {
+  .contenedorDeArticulo > * {
     width: 90%;
     top: 0%;
     flex: none;

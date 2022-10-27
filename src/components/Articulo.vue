@@ -99,11 +99,12 @@ h5 {
 @media screen and (min-width: 100px) {
   .titulo1 {
     height: 10%;
-    font-size: 80%;
+    font-size: 100%;
   }
   .leer_Mas {
-    font-size: 50%;
+    font-size: 90%;
     border-radius: 3rem;
+    font-weight: 600;
   }
   .imagenDeArticulo {
     width: 90%;
