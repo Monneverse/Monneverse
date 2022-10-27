@@ -45,13 +45,7 @@ defineProps({
   <!-- Contenedor de Articulos -->
   <div class="containerArticulo">
     <div v-if="index_pagina == 5" class="contenedorDeArticulo">
-      <Articulo
-        v-for="item in vectorArticulo"
-        :key="item"
-        :titulo="item.titulo"
-        :img="item.imagen"
-        :url="item.link"
-      />
+      <Articulo v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen" :url="item.link" />
     </div>
   </div>
 
@@ -200,12 +194,10 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 0;
 }
 
@@ -339,15 +331,15 @@ img {
 
 .contrato {
   position: relative;
-  left: 0%;
-  font-size: 0.9vw;
+  left: -30%;
+  font-size: 1.3vw;
   color: white;
   height: 20%;
-  width: 110%;
+  width: 158%;
 }
 
 .contrato span {
-  font-size: 0.8vw;
+  font-size: 1.1vw;
 }
 
 .logos {
@@ -406,7 +398,7 @@ img {
 
   .contenedorDeArticulo {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     width: 80%;
     height: 100%;
   }
@@ -449,6 +441,7 @@ h4 {
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
   }
+
   .containerArticulo::-webkit-scrollbar {
     -webkit-appearance: none;
   }
@@ -469,7 +462,7 @@ h4 {
     right: 80%;
   }
 
-  .contenedorDeArticulo > * {
+  .contenedorDeArticulo>* {
     width: 90%;
     top: 0%;
     flex: none;
@@ -481,25 +474,32 @@ h4 {
     height: 5%;
     width: 55%;
   }
+
   .buyNow {
     height: 130%;
   }
+
   .buyNow .logos {
     top: -10%;
   }
+
   .buyNow .logos .meta {
     width: 10%;
   }
+
   .contrato {
     font-size: 55%;
     left: -2%;
   }
+
   .contrato span {
     font-size: 90%;
   }
+
   .buyNow .texto1 {
     top: 30%;
   }
+
   .binance {
     width: 25%;
     bottom: 10%;
