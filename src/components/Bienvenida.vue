@@ -131,7 +131,7 @@ img {
 
 .fondo-montana {
   position: fixed;
-  bottom: 0%;
+  top: 20%;
   left: 0%;
   width: 100%;
   z-index: 6;
@@ -189,7 +189,7 @@ img {
 
 .degradado_derecho {
   transform: rotate(230deg);
-  left: 55%;
+  left: 60%;
 }
 
 
@@ -314,7 +314,7 @@ img {
 
 
 .welcome .title {
-  font-size: 9vh;
+  font-size: 6vw;
   font-family: "Bahn";
   font-stretch: semi-condensed;
   font-style: semibold;
