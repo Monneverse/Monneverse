@@ -34,50 +34,48 @@ import fasesComponentes from "./ComponentsPhases.vue";
   <div class="circulo circulo__2">
     <img src="/img/Imagen1.png" />
   </div>
-<div class="componentes">
-  <div class="componente componentes1">
-    <fasesComponentes title="Development"
-      description="Development of MonnerTrading, MonnerHosting, and MonnerBlockchaine." :isVisible="isVisible" />
+  <div class="componentes">
+    <div class="componente componentes1">
+      <fasesComponentes title="" description="Development of MonnerTrading, MonnerHosting, and MonnerBlockchaine."
+        :isVisible="isVisible" />
+    </div>
+
+    <div class="componente componentes2">
+      <fasesComponentes title="" description="Official <b>CEO</b> conference for the public." :isVisible="isVisible" />
+    </div>
+
+    <div class="componente componentes3">
+      <fasesComponentes title=""
+        description="Development and presentation of MonnerMetaverse-MonnerGame in augmented virtual reality."
+        :isVisible="isVisible" />
+    </div>
+
+    <div class="componente componentes4">
+      <fasesComponentes title="" description="15.000 holders Phase 4." :isVisible="isVisible" />
+    </div>
+
+    <div class="componente componentes5">
+      <fasesComponentes title="" description="MonnerTrading official Launch." :isVisible="isVisible" />
+    </div>
+
+    <div class="componente componentes6">
+      <fasesComponentes title="" description="Official MonnerMetaverse-MonnerGame in argumented reality."
+        :isVisible="isVisible" />
+    </div>
+
+    <div class="componente componentes7">
+      <fasesComponentes title="" description="Phase 3 Staking Programming." :isVisible="isVisible" />
+    </div>
+
+    <div class="componente componentes8">
+      <fasesComponentes title="" description="Scheduled burning." :isVisible="isVisible" />
+    </div>
+
+    <div class="componente componentes9">
+      <fasesComponentes title="" description="Enlistment in other High Recognition Exchanges" :isVisible="isVisible" />
+    </div>
   </div>
 
-  <div class="componente componentes2">
-    <fasesComponentes title="Conference" description="Official <b>CEO</b> conference for the public."
-      :isVisible="isVisible" />
-  </div>
-
-  <div class="componente componentes3">
-    <fasesComponentes title="Presentation"
-      description="Development and presentation of MonnerMetaverse-MonnerGame in augmented virtual reality."
-      :isVisible="isVisible" />
-  </div>
-
-  <div class="componente componentes4">
-    <fasesComponentes title="Holders" description="15.000 holders Phase 4." :isVisible="isVisible" />
-  </div>
-
-  <div class="componente componentes5">
-    <fasesComponentes title="MonnerTrading" description="MonnerTrading official Launch." :isVisible="isVisible" />
-  </div>
-
-  <div class="componente componentes6">
-    <fasesComponentes title="MonnerMetaverse-MonnerGame"
-      description="Official MonnerMetaverse-MonnerGame in argumented reality." :isVisible="isVisible" />
-  </div>
-
-  <div class="componente componentes7">
-    <fasesComponentes title="Staking" description="Phase 3 Staking Programming." :isVisible="isVisible" />
-  </div>
-
-  <div class="componente componentes8">
-    <fasesComponentes title="Scheduled" description="Scheduled burning." :isVisible="isVisible" />
-  </div>
-
-  <div class="componente componentes9">
-    <fasesComponentes title="Enlistment" description="Enlistment in other High Recognition Exchanges"
-      :isVisible="isVisible" />
-  </div>
-</div>
- 
 </template>
 
 <script>
