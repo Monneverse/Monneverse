@@ -29,7 +29,6 @@ import fasesComponentes from "./ComponentsPhases.vue";
     <img src="/img/Imagen1.png" />
   </div>
 
-  <button class="readMore" v-on:click="cambiarEstado()">Learn More</button>
 
   <div class="circulo circulo__2">
     <img src="/img/Imagen1.png" />
@@ -37,42 +36,42 @@ import fasesComponentes from "./ComponentsPhases.vue";
   <div class="componentes">
     <div class="componente componentes1">
       <fasesComponentes title="" description="Development of MonnerTrading, MonnerHosting, and MonnerBlockchaine."
-        :isVisible="isVisible" />
+         />
     </div>
 
     <div class="componente componentes2">
-      <fasesComponentes title="" description="Official <b>CEO</b> conference for the public." :isVisible="isVisible" />
+      <fasesComponentes title="" description="Official <b>CEO</b> conference for the public."  />
     </div>
 
     <div class="componente componentes3">
       <fasesComponentes title=""
         description="Development and presentation of MonnerMetaverse-MonnerGame in augmented virtual reality."
-        :isVisible="isVisible" />
+         />
     </div>
 
     <div class="componente componentes4">
-      <fasesComponentes title="" description="15.000 holders Phase 4." :isVisible="isVisible" />
+      <fasesComponentes title="" description="15.000 holders Phase 4."  />
     </div>
 
     <div class="componente componentes5">
-      <fasesComponentes title="" description="MonnerTrading official Launch." :isVisible="isVisible" />
+      <fasesComponentes title="" description="MonnerTrading official Launch."  />
     </div>
 
     <div class="componente componentes6">
       <fasesComponentes title="" description="Official MonnerMetaverse-MonnerGame in argumented reality."
-        :isVisible="isVisible" />
+         />
     </div>
 
     <div class="componente componentes7">
-      <fasesComponentes title="" description="Phase 3 Staking Programming." :isVisible="isVisible" />
+      <fasesComponentes title="" description="Phase 3 Staking Programming."  />
     </div>
 
     <div class="componente componentes8">
-      <fasesComponentes title="" description="Scheduled burning." :isVisible="isVisible" />
+      <fasesComponentes title="" description="Scheduled burning."  />
     </div>
 
     <div class="componente componentes9">
-      <fasesComponentes title="" description="Enlistment in other High Recognition Exchanges" :isVisible="isVisible" />
+      <fasesComponentes title="" description="Enlistment in other High Recognition Exchanges"  />
     </div>
   </div>
 
@@ -82,8 +81,7 @@ import fasesComponentes from "./ComponentsPhases.vue";
 export default {
   data() {
     return {
-      event: "click",
-      isVisible: false,
+      event: "click"
     };
   },
   methods: {
@@ -91,11 +89,7 @@ export default {
       location.replace(
         "https://sites.google.com/view/community-monnerverse/p%C3%A1gina-principal"
       );
-    },
-    cambiarEstado() {
-      this.isVisible = !this.isVisible;
-      console.log(this.isVisible);
-    },
+    }
   },
 };
 </script>
@@ -214,23 +208,6 @@ img {
   width: 35%;
   height: 30%;
   z-index: 5;
-}
-
-.readMore {
-  position: absolute;
-  top: 60.5%;
-  left: 45%;
-  border-radius: 1rem;
-  margin-bottom: 15px;
-  width: 10%;
-  height: 7%;
-  font-size: 1vw;
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  z-index: 9;
-  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
 }
 
 .componentes1 {
@@ -357,17 +334,6 @@ img {
     left: 8%;
     top: 22%;
     width: 90%;
-  }
-
-  .readMore {
-    display: none;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 10%;
-    font-size: 4vw;
-    flex-wrap: wrap;
   }
 
   .componentes {

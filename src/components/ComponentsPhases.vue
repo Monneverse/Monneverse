@@ -7,24 +7,18 @@ defineProps({
   description: {
     type: String,
     required: true,
-  },
-  isVisible: {
-    type: Boolean,
-    required: true,
-  },
+  }
 });
 </script>
 
 <template>
   <div class="contenedor__fases">
-    <div class="circulo-indicador" @click="isVisible = !isVisible"></div>
+    <div class="circulo-indicador" ></div>
     <b>{{ title }}</b>
     <br />
-    <transition name="fade">
-      <p v-show="isVisible">
+      <p >
         {{ description }}
       </p>
-    </transition>
   </div>
 </template>
 
@@ -75,29 +69,6 @@ img {
   margin-bottom: .5rem;
   z-index: 10;
   cursor: pointer;
-}
-
-/* animaciones (required) */
-.fade-enter-active {
-  animation: opacity 0.5s linear;
-}
-
-@keyframes opacity {
-  0% {
-    opacity: 0%;
-  }
-
-  50% {
-    opacity: 50%;
-  }
-
-  100% {
-    opacity: 100%;
-  }
-}
-
-.fade-leave-to {
-  animation: opacity 0.5s linear alternate-reverse;
 }
 
 /* Style of mobile */

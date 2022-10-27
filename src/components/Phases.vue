@@ -38,27 +38,25 @@ defineProps({
     <img src="/img/Imagen1.png" />
   </div>
 
-  <button class="readMore" v-on:click="cambiarEstado()">Learn More</button>
-
   <div class="circulo circulo__2">
     <img src="/img/Imagen1.png" />
   </div>
   <div class="componentes">
     <div class="componente componente__1">
-      <fasesComponentes title="" description="development of the entire monnerverse ecosystem website,
-             spanish and english, discord, telegram, twitter and facebook." :isVisible="isVisible" />
+      <fasesComponentes title="development" description="development of the entire monnerverse ecosystem website,
+             spanish and english, discord, telegram, twitter and facebook."  />
     </div>
 
     <div class="componente componente__2">
-      <fasesComponentes title="" description=" Collection of documents for important Exchanges:
+      <fasesComponentes title="collection" description="Collection of documents for important Exchanges:
          CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others."
-        :isVisible="isVisible" />
+    />
     </div>
 
     <div class="componente componente__3">
-      <fasesComponentes title="" description=" Collection of documents for important Exchanges:
+      <fasesComponentes title="started" description="Collection of documents for important Exchanges:
          CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others."
-        :isVisible="isVisible" />
+         />
     </div>
 
   </div>
@@ -69,8 +67,7 @@ defineProps({
 export default {
   data() {
     return {
-      event: "click",
-      isVisible: false,
+      event: "click"
     };
   },
   methods: {
@@ -80,10 +77,6 @@ export default {
     //"https://sites.google.com/view/community-monnerverse/p%C3%A1gina-principal"
     //);
     // },
-    cambiarEstado() {
-      this.isVisible = !this.isVisible;
-      console.log(this.isVisible)
-    },
   },
 };
 </script>
@@ -208,23 +201,6 @@ img {
   height: 30%;
 }
 
-.readMore {
-  position: absolute;
-  top: 42.5%;
-  left: 44%;
-  min-width: 10rem;
-  border-radius: 1rem;
-  margin-bottom: 15px;
-  width: 10%;
-  height: 7%;
-  font-size: 1vw;
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  z-index: 9;
-  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
-}
 
 .componente {
   position: absolute;
@@ -298,16 +274,7 @@ img {
     width: 90%;
   }
 
-  .readMore {
-    display: none;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 10%;
-    font-size: 4vw;
-    flex-wrap: wrap;
-  }
+ 
 
   .componentes {
     position: absolute;

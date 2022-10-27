@@ -36,17 +36,15 @@ import fasesComponentes from "./ComponentsPhases.vue";
     <img src="/img/Imagen1.png" />
   </div>
 
-  <button class="readMore" v-on:click="cambiarEstado()">Learn More</button>
-
 
   <div class="componentes">
     <div class="componente componentes1">
-      <fasesComponentes title="" description="Disclosure of our second phase of the project." :isVisible="isVisible" />
+      <fasesComponentes title="" description="Disclosure of our second phase of the project."  />
     </div>
 
     <div class="componente componentes2">
       <fasesComponentes description="40.000 holders MONNERVERSE will remain at the forefront with new high innovation projects
-             in 2023." :isVisible="isVisible" />
+             in 2023."  />
     </div>
   </div>
 
@@ -56,8 +54,7 @@ import fasesComponentes from "./ComponentsPhases.vue";
 export default {
   data() {
     return {
-      event: "click",
-      isVisible: false,
+      event: "click"
     };
   },
   methods: {
@@ -65,11 +62,7 @@ export default {
       location.replace(
         "https://sites.google.com/view/community-monnerverse/p%C3%A1gina-principal"
       );
-    },
-    cambiarEstado() {
-      this.isVisible = !this.isVisible;
-      console.log(this.isVisible);
-    },
+    }
   },
 };
 </script>
@@ -191,23 +184,6 @@ img {
   z-index: 5;
 }
 
-.readMore {
-  position: absolute;
-  top: 42.5%;
-  left: 44%;
-  border-radius: 1rem;
-  margin-bottom: 15px;
-  width: 10%;
-  height: 7%;
-  font-size: 1vw;
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  z-index: 9;
-  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
-}
-
 .componentes1 {
   position: absolute;
   top: 70%;
@@ -276,17 +252,6 @@ img {
     left: 8%;
     top: 22%;
     width: 90%;
-  }
-
-  .readMore {
-    display: none;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 10%;
-    font-size: 4vw;
-    flex-wrap: wrap;
   }
 
   .componentes {

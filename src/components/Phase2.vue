@@ -30,13 +30,9 @@ import fasesComponentes from "./ComponentsPhases.vue";
   </div>
 
 
-  <button class="readMore" v-on:click="cambiarEstado()">Learn More</button>
-
   <div class="circulo circulo__1">
     <img src="/img/Imagen1.png" />
   </div>
-
-  <button class="readMore" v-on:click="cambiarEstado()">Learn More</button>
 
   <div class="circulo circulo__2">
     <img src="/img/Imagen1.png" />
@@ -44,38 +40,38 @@ import fasesComponentes from "./ComponentsPhases.vue";
   <div class="componentes">
     <div class="componente componentes1">
       <fasesComponentes title="" description="enlist on Pancakeswap one day after our pre-sale"
-        :isVisible="isVisible" />
+         />
     </div>
 
     <div class="componente componentes2">
       <fasesComponentes title="" description="MonnerStaking start one day after pre-sale ends,
-             payouts of 12,6% of total capital every 48 hours" :isVisible="isVisible" />
+             payouts of 12,6% of total capital every 48 hours"  />
     </div>
 
     <div class="componente componentes3">
-      <fasesComponentes title="" description="liquid lock" :isVisible="isVisible" />
+      <fasesComponentes title="" description="liquid lock"  />
     </div>
 
     <div class="componente componentes4">
-      <fasesComponentes title="" description="schedule burning" :isVisible="isVisible" />
+      <fasesComponentes title="" description="schedule burning"  />
     </div>
 
     <div class="componente componentes5">
-      <fasesComponentes title="" description="certick audit" :isVisible="isVisible" />
+      <fasesComponentes title="" description="certick audit"  />
     </div>
 
     <div class="componente componentes8">
       <fasesComponentes title="" description="Official enlistment: coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
-        MEXC global" :isVisible="isVisible" />
+        MEXC global"  />
     </div>
 
     <div class="componente componentes7">
       <fasesComponentes title="" description=" Increase x5 Budget increase x5 of our advertising campaign"
-        :isVisible="isVisible" />
+         />
     </div>
 
     <div class="componente componentes6">
-      <fasesComponentes title="" description="10.000 holders" :isVisible="isVisible" />
+      <fasesComponentes title="" description="10.000 holders"  />
     </div>
   </div>
 
@@ -85,8 +81,7 @@ import fasesComponentes from "./ComponentsPhases.vue";
 export default {
   data() {
     return {
-      event: "click",
-      isVisible: false,
+      event: "click"
     };
   },
   methods: {
@@ -94,11 +89,7 @@ export default {
       location.replace(
         "https://sites.google.com/view/community-monnerverse/p%C3%A1gina-principal"
       );
-    },
-    cambiarEstado() {
-      this.isVisible = !this.isVisible;
-      console.log(this.isVisible);
-    },
+    }
   },
 };
 </script>
@@ -220,23 +211,6 @@ img {
   height: 30%;
 }
 
-.readMore {
-  position: absolute;
-  top: 60.5%;
-  left: 44%;
-  border-radius: 1rem;
-  margin-bottom: 15px;
-  width: 10%;
-  height: 7%;
-  font-size: 1vw;
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  z-index: 9;
-  background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
-}
-
 .componentes1 {
   position: absolute;
   top: 30%;
@@ -352,16 +326,6 @@ img {
     width: 90%;
   }
 
-  .readMore {
-    display: none;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 10%;
-    font-size: 4vw;
-    flex-wrap: wrap;
-  }
 
   .componentes {
     position: absolute;
