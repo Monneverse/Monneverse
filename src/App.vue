@@ -113,7 +113,7 @@ import Footer from "./components/Footer.vue";
   </main>
 </template>
 <script>
-const typeOrientacion = Object.freeze({ left: 1, center: 2, right: 3 });
+const typeOrientacion = Object.freeze({ left: 1, center: 2, right: 3, none: 4 });
 export default {
   data() {
     return {
@@ -179,33 +179,58 @@ export default {
         default:
           break;
       }
-
-      location.hash = "#" + this.index_pagina;
-      window.history.pushState({}, document.title, window.location.pathname);
+      this.CambiarContenedor(this.index_pagina);
     },
     UpdateNav(id) {
       switch (id) {
+        case 1:
+          this.orientacion = typeOrientacion.center
+          break;
+        case 2:
+          this.orientacion = typeOrientacion.right
+          break;
+        case 3:
+          this.orientacion = typeOrientacion.right
+          break
+        case 4:
+          this.orientacion = typeOrientacion.right
+          break
         case 5:
           this.index = 1;
-          break;
+          this.orientacion = typeOrientacion.right
+          break
         case 9:
+          this.orientacion = typeOrientacion.right
         case 10:
+          this.orientacion = typeOrientacion.right
         case 11:
+          this.orientacion = typeOrientacion.right
         case 12:
+          this.orientacion = typeOrientacion.right
           this.index = 2;
           break;
         case 13:
+          this.orientacion = typeOrientacion.right
           this.index = 3;
           break;
         case 14:
+          this.orientacion = typeOrientacion.right
           this.index = 4;
           break;
         case 15:
+          this.orientacion = typeOrientacion.right
         case 16:
+          this.orientacion = typeOrientacion.right
         case 17:
+          this.orientacion = typeOrientacion.right
         case 18:
+          this.orientacion = typeOrientacion.right
         case 19:
+          this.orientacion = typeOrientacion.right
           this.index = 5;
+          break;
+        case 20:
+          this.orientacion = typeOrientacion.none
           break;
         default:
           this.index = 0;
@@ -283,7 +308,7 @@ export default {
           if (this.index_pagina < this.limite) {
             newPosition = this.index_pagina + 1;
             this.isRevert = false;
-            if(newPosition == 11){
+            if (newPosition == 11) {
               newPosition = 13;
             }
           }
@@ -291,7 +316,7 @@ export default {
           if (this.index_pagina > 1) {
             newPosition = this.index_pagina - 1;
             this.isRevert = true;
-            if(newPosition == 12){
+            if (newPosition == 12) {
               newPosition = 10;
             }
           }
@@ -323,7 +348,8 @@ export default {
 
     this.listaPaginaDondeSeOcultaLogo.push(this.limite);
     document.addEventListener("drag", this.returnMethods());
-    window.bind
+    this.orientacion = typeOrientacion.none;
+    this.orientacion = typeOrientacion.center;
   },
 };
 </script>
