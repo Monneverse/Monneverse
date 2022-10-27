@@ -43,7 +43,7 @@ img {
   border-radius: 1.5vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #161431;
   padding: 1%;
@@ -61,7 +61,7 @@ img {
 }
 
 .titulo1 {
-  height: 15%;
+  height: 20%;
   color: white;
   display: flex;
   justify-content: center;
@@ -78,7 +78,7 @@ h5 {
 }
 
 .imagenDeArticulo {
-  width: 80%;
+  width: 100%;
   height: 60%;
 }
 
@@ -107,7 +107,7 @@ h5 {
     font-weight: 600;
   }
   .imagenDeArticulo {
-    width: 90%;
+    width: 100%;
     height: 65%;
   }
 }
