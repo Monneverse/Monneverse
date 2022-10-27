@@ -343,7 +343,7 @@ img {
 
 .contrato {
   position: relative;
-  left: -30%;
+  left: 19%;
   font-size: 1.3vw;
   color: white;
   height: 20%;
