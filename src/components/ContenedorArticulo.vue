@@ -110,7 +110,7 @@ export default {
         },
         {
           titulo: "The monner coin and it’s benefits",
-          imagen: "/img/Articulo/imagenArticulo6.png",
+          imagen: "/img/Articulo/articulo6.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/the-monner-coin-and-its-benefits",
         },
       ],
