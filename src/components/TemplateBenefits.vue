@@ -103,39 +103,44 @@ strong {
   }
 
   .benefit:nth-child(1) {
-    height: 115%;
+    height: 110%;
     position: relative;
     margin: 0 auto;
     top: 50%;
     left: 5%;
-    width: 28rem;
+    width: 25rem;
     grid-area: a;
   }
 
   .benefit:nth-child(2) {
     height: 90%;
-    width: 28rem;
+    width: 25rem;
     grid-area: d;
     display: flex;
   }
 
   .benefit:nth-child(3) {
-    height: 115%;
-    width: 28rem;
+    height: 100%;
+    width: 25rem;
     display: flex;
     grid-area: b;
   }
 
   .benefit:nth-child(4) {
-    height: 90%;
+    height: 80%;
     position: relative;
     margin: 0 auto;
     top: 50%;
     left: 5%;
-    width: 28rem;
+    width: 25rem;
     grid-area: c;
     display: flex;
   }
+  
+ .info:nth-last-child(2){
+  display: none;
+
+ }
 }
 
 .content-price {
@@ -165,6 +170,8 @@ strong {
 }
 
 .titulo {
+  position: relative;
+  z-index: 999;
   width: 100%;
   height: 80%;
   background-color: #161431;
