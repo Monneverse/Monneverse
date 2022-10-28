@@ -1,5 +1,11 @@
 <script setup>
 import fasesComponentes from "./ComponentsPhases.vue";
+defineProps({
+  index_pagina: {
+    type: Number,
+    required: true,
+  },
+});
 </script>
 
 <template>
@@ -45,7 +51,8 @@ import fasesComponentes from "./ComponentsPhases.vue";
     </div>
 
     <div class="componente componentes2">
-      <fasesComponentes description="Solidity Finance Audit."  />
+      <fasesComponentes title="" 
+      description="Solidity Finance Audit."  />
     </div>
 
     <div class="componente componentes3">

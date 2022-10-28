@@ -1,5 +1,11 @@
 <script setup>
 import fasesComponentes from "./ComponentsPhases.vue";
+defineProps({
+  index_pagina: {
+    type: Number,
+    required: true,
+  },
+});
 </script>
 
 <template>
@@ -39,38 +45,46 @@ import fasesComponentes from "./ComponentsPhases.vue";
   </div>
   <div class="componentes">
     <div class="componente componentes1">
-      <fasesComponentes title="" description="enlist on Pancakeswap one day after our pre-sale"
+      <fasesComponentes title="" 
+      description="enlist on Pancakeswap one day after our pre-sale"
          />
     </div>
 
     <div class="componente componentes2">
-      <fasesComponentes title="" description="The MonnerStake startup will give its holders 6.2% every 48 hours for the first 2 months. It starts one day after the presale ends."  />
+      <fasesComponentes title=""
+       description="The MonnerStake startup will give its holders 6.2% every 48 hours for the first 2 months. It starts one day after the presale ends."  />
     </div>
 
     <div class="componente componentes3">
-      <fasesComponentes title="" description="liquid lock"  />
+      <fasesComponentes title=""
+       description="liquid lock"  />
     </div>
 
     <div class="componente componentes4">
-      <fasesComponentes title="" description="schedule burning"  />
+      <fasesComponentes title="" 
+      description="schedule burning"  />
     </div>
 
     <div class="componente componentes5">
-      <fasesComponentes title="" description="certick audit"  />
+      <fasesComponentes title="" 
+      description="certick audit"  />
     </div>
 
     <div class="componente componentes8">
-      <fasesComponentes title="" description="Official enlistment: coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
+      <fasesComponentes title="" 
+      description="Official enlistment: coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
         MEXC global"  />
     </div>
 
     <div class="componente componentes7">
-      <fasesComponentes title="" description=" Increase x5 Budget increase x5 of our advertising campaign"
+      <fasesComponentes title="" 
+      description=" Increase x5 Budget increase x5 of our advertising campaign"
          />
     </div>
 
     <div class="componente componentes6">
-      <fasesComponentes title="" description="10.000 holders"  />
+      <fasesComponentes title="" 
+      description="10.000 holders"  />
     </div>
   </div>
 

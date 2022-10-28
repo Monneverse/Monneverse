@@ -1,5 +1,11 @@
 <script setup>
 import fasesComponentes from "./ComponentsPhases.vue";
+defineProps({
+  index_pagina: {
+    type: Number,
+    required: true,
+  },
+});
 </script>
 
 <template>
@@ -43,7 +49,7 @@ import fasesComponentes from "./ComponentsPhases.vue";
     </div>
 
     <div class="componente componentes2">
-      <fasesComponentes description="40.000 holders MONNERVERSE will remain at the forefront with new high innovation projects
+      <fasesComponentes title=""  description="40.000 holders MONNERVERSE will remain at the forefront with new high innovation projects
              in 2023."  />
     </div>
   </div>
