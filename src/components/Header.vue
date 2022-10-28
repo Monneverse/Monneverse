@@ -375,7 +375,7 @@ img {
 }
 
 .center {
-  left: 50%;
+  left: 45%;
   transform: translate(-50%, 0);
 }
 
@@ -487,6 +487,7 @@ img {
     display: none;
     opacity: 0;
   }
+
 
   .barra-navegacion {
     position: absolute;

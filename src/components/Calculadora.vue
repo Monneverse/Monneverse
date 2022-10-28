@@ -59,7 +59,7 @@
         'aparecer-animation': index_pagina == 4,
       }">
         <div class="control">
-          <input type="text" min="0" @input="Calculator" name="inversion" id="inversion" v-model="inversion"
+          <input type="text" inputmode="numeric" prefix="$ "  @input="Calculator" name="inversion" id="inversion" v-model="inversion"
             placeholder="$ 100" />
           <label for="inversion">Invert</label>
         </div>
@@ -80,7 +80,7 @@
 
     <p id="descripcion">
       First Two Months Every 48 Hours
-    <br>The Monner Will Return {{ porcentajeInteres }}% Interest
+      <br>The Monner Will Return {{ porcentajeInteres }}% Interest
     </p>
   </article>
 
@@ -434,7 +434,7 @@ img {
   top: 82%;
   left: -5%;
   width: 100%;
-  z-index: 8;
+  z-index: 100;
   display: flex;
   justify-content: center;
 }
@@ -774,6 +774,7 @@ img {
     width: 90%;
     left: 2%;
   }
+
   .logo-redes {
     display: none;
   }

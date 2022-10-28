@@ -182,54 +182,122 @@ export default {
       this.CambiarContenedor(this.index_pagina);
     },
     UpdateNav(id) {
+      
+      console.log(window.innerWidth);
       switch (id) {
         case 1:
-          this.orientacion = typeOrientacion.center
+        if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.left
+          } else {
+            this.orientacion = typeOrientacion.center
+          }
           break;
         case 2:
-          this.orientacion = typeOrientacion.right
+          if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.left
+          } else {
+            this.orientacion = typeOrientacion.right
+          }
+
           break;
         case 3:
-          this.orientacion = typeOrientacion.right
+          if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.left
+          } else {
+            this.orientacion = typeOrientacion.right
+          }
           break
         case 4:
-          this.orientacion = typeOrientacion.right
+          if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.left
+          } else {
+            this.orientacion = typeOrientacion.right
+          }
           break
         case 5:
           this.index = 1;
-          this.orientacion = typeOrientacion.right
+          if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.left
+          } else {
+            this.orientacion = typeOrientacion.right
+          }
           break
         case 9:
-          this.orientacion = typeOrientacion.right
+          if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.left
+          } else {
+            this.orientacion = typeOrientacion.right
+          }
         case 10:
-          this.orientacion = typeOrientacion.right
+          if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.left
+          } else {
+            this.orientacion = typeOrientacion.right
+          }
         case 11:
-          this.orientacion = typeOrientacion.right
+          if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.left
+          } else {
+            this.orientacion = typeOrientacion.right
+          }
         case 12:
-          this.orientacion = typeOrientacion.right
+          if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.left
+          } else {
+            this.orientacion = typeOrientacion.right
+          }
           this.index = 2;
           break;
         case 13:
-          this.orientacion = typeOrientacion.right
+          if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.left
+          } else {
+            this.orientacion = typeOrientacion.right
+          }
           this.index = 3;
           break;
         case 14:
-          this.orientacion = typeOrientacion.right
+          if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.center
+          } else {
+            this.orientacion = typeOrientacion.right
+          }
           this.index = 4;
           break;
         case 15:
-          this.orientacion = typeOrientacion.right
+          if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.left
+          } else {
+            this.orientacion = typeOrientacion.right
+          }
         case 16:
-          this.orientacion = typeOrientacion.right
+          if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.left
+          } else {
+            this.orientacion = typeOrientacion.right
+          }
         case 17:
-          this.orientacion = typeOrientacion.right
+          if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.left
+          } else {
+            this.orientacion = typeOrientacion.right
+          }
         case 18:
-          this.orientacion = typeOrientacion.right
+          if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.left
+          } else {
+            this.orientacion = typeOrientacion.right
+          }
         case 19:
-          this.orientacion = typeOrientacion.right
+          if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.left
+          } else {
+            this.orientacion = typeOrientacion.right
+          }
           this.index = 5;
           break;
         case 20:
+          this.index = 0;
           this.orientacion = typeOrientacion.none
           break;
         default:
