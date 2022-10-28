@@ -1,6 +1,4 @@
 <script setup>
-import Beneficio from "./TemplateBenefits.vue";
-import Circulos from "./ComponentesCirculo.vue";
 defineProps({
   index_pagina: {
     type: Number,
@@ -32,51 +30,79 @@ defineProps({
       :class="{ display_flex: true, 'animacion-aparecer': index_pagina == 9 }"
     >
       <div class="benefits">
-        <Beneficio
-          icono="/img/plus.svg"
-          symbol="$"
-          precio="1500"
-          moneda="USD-MNR"
-          info="(Minimun purchase $1,5 USD)"
-          sale_price="Minimun purchase 1,5 USD Pre-sale Price"
-          texto=""
-        />
-        <Beneficio
-          icono="/img/plus.svg"
-          symbol="$"
-          precio="15.300"
-          moneda="USD"
-          info="At PancakeSwap"
-          sale_price="Sale Price"
-          texto="Our Token will be more exclusive than the most valuable NFT's of the moment. That's why the price of each MNR on PancakeSwap will initially range from"
-          textoA1=" $14,200 to $15,500"
-          textoD=" thanks to: Our limited supply of"
-          textoA2=" 10,000 MNR"
-          textoT=". scheduled burns. -Our sponsors. - The GREAT injection of liquidity made by our team with its line of credit from the USA and private investors. We will take into account all the tools that allow us to grow our prices"
-          />
-     
-        <Beneficio
-          icono="/img/plus.svg"
-          symbol=""
-          precio="Phase 1"
-          moneda=""
-          info=""
-          sale_price=""
-          texto="Phase 1 of staking only for users who buy in pre-sale"
-        />
-        <Beneficio
-          icono="/img/plus.svg"
-          symbol=""
-          precio="6.2%"
-          ask="*"
-          precioS="48h"
-          moneda=""
-          info=""
-          sale_price="Sale Price"
-          texto="Enter our first phase os staking buying in pre-sale and earn 6.2% every 48 hours of your total capital in Monnercoins after the launch in Pancakeswap"
-
-          />
-           
+        <div class="beneficio">
+          <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios">
+          <div class="content-price">
+            <div class="titulo-benefit">
+              <h1><span>$</span>1500<b>USD-MNR</b></h1>
+              <div class="info"><p>(Minimum purchase $1,5 USD)</p></div>
+            </div>
+          </div>
+          <div class="content-text">
+            <div class="sale">
+              <h3>Minimum purchase $1,5 USD Pre-sale Price</h3>
+            </div>
+          </div>
+        </div>
+        <div class="beneficio">
+          <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios">
+          <div class="content-price">
+            <div class="titulo-two">
+              <h1>Phase 1</h1>
+            </div>
+          </div>
+          <div class="content-text">
+            <div class="text">
+              <p>Phase 1 of staking only for users who buy in pre-sale</p>
+            </div>
+          </div>
+        </div>
+        <div class="beneficio">
+          <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios">
+          <div class="content-price">
+            <div class="titulo-two">
+              <h1>6.2%<span>*</span>48h</h1>
+            </div>
+          </div>
+          <div class="content-text">
+            <div class="sale">
+              <h3>Sale Price</h3>
+            </div>
+            <div class="text">
+              <p>
+                Enter our first phase os staking buying in pre-sale and earn
+                6.2% every 48 hours of your total capital in Monnercoins after
+                the launch in Pancakeswap
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="beneficio">
+          <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios">
+          <div class="content-price">
+            <div class="titulo-benefit">
+              <div class="info-two"><p>At PancakeSwap</p></div>
+              <h1><span>$</span>15,300<b>USD</b></h1>
+            </div>
+          </div>
+          <div class="content-text">
+            <div class="sale">
+              <h3>Sale Price</h3>
+            </div>
+            <div class="scroll">
+              <p class="">
+                Our Token will be more exclusive than the most valuable NFT's of
+                the moment. That's why the price of each MNR on PancakeSwap will
+                initially range from <span>$14,200 to $15,500</span> thanks to:
+                Our limited supply of <span> 10,000 MNR</span>. scheduled burns.
+                -Our sponsors. - The GREAT injection of liquidity made by our
+                team with its line of credit from the USA and private investors.
+                We will take into account all the tools that allow us to grow
+                our prices
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -117,6 +143,9 @@ defineProps({
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
+p {
+  text-align: justify;
+}
 .display_flex {
   display: flex;
   justify-content: space-evenly;
@@ -137,6 +166,7 @@ defineProps({
   position: absolute;
   top: 4.2rem;
   left: 4.5rem;
+  z-index: 45;
 }
 .titulo h1 {
   font-size: 3rem;
@@ -153,9 +183,98 @@ defineProps({
   flex-direction: column;
   width: 90%;
   height: 75%;
-  top: 20%;
+  top: 18%;
+}
+.beneficio {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+}
+.content-price {
+  width: 100%;
+  height: 50%;
+}
+.content-text {
+  width: 100%;
+  height: 50%;
 }
 
+.titulo-benefit {
+  margin: 0;
+  width: 100;
+  height: 100%;
+  background-color: #161431;
+  border-radius: 0.4em;
+}
+.titulo-benefit h1 {
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  margin: 0;
+  font-size: 2.5rem;
+  margin-left: 5%;
+}
+.titulo-benefit h1 span {
+  color: #37f395;
+}
+.titulo-benefit h1 b {
+  font-size: 1.5rem;
+}
+.info {
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  position: relative;
+  top: -10px;
+  left: 5%;
+  font-size: 1.2rem;
+}
+.info-two {
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  position: relative;
+  top: 0px;
+  left: 15%;
+  font-size: 1.2rem;
+}
+.titulo-two {
+  height: 100%;
+  width: 100%;
+  background-color: #161431;
+  display: flex;
+  align-items: center;
+  border-radius: 0.4em;
+}
+.titulo-two h1 {
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  margin: 0;
+  font-size: 2.5rem;
+  margin-left: 5%;
+}
+.titulo-two h1 span {
+  color: #37f395;
+}
+.content-text {
+  height: 50%;
+  width: 90%;
+  margin-left: 5%;
+}
+.content-text h3 {
+  color: white;
+}
+.content-text p {
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  font-size: 0.7rem;
+}
+.sale {
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  font-size: 0.8rem;
+}
+.text {
+  height: 80%;
+}
 .fondo {
   position: absolute;
   top: 0;
@@ -163,6 +282,13 @@ defineProps({
   width: 100%;
   height: 100%;
   background-color: #121026;
+}
+.scroll {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+.scroll p span {
+  color: yellow;
 }
 .fondo_rayos {
   position: absolute;
@@ -200,13 +326,14 @@ defineProps({
 @media screen and (min-width: 768px) {
   .benefits {
     flex: none;
-    top: 25%;
-    width: 90%;
+    top: 20%;
+    width: 70%;
+    height: 50%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0;
-    grid-row-gap: 0px;
+    grid-row-gap: 30px;
     grid-template-areas:
       "a b"
       "c d"
@@ -222,27 +349,8 @@ defineProps({
   .fondo_rayos {
     display: initial;
   }
-  .circuito {
-    display: block;
-  }
-  .circulos {
-    display: flex;
-  }
 }
-.animacion-rotar {
-  animation-duration: 0.5s;
-  animation-name: rotar;
-  animation-iteration-count: 1;
-}
-@keyframes rotar {
-  0% {
-    transform: rotate(180grad);
-  }
 
-  100% {
-    transform: rotate(225deg);
-  }
-}
 .logo-redes {
   position: absolute;
   bottom: 0%;
@@ -298,25 +406,163 @@ defineProps({
 .circulos {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 30rem;
-  left: 51.5rem;
-
-  width: 45%;
-  height: 45%;
-  z-index: -1;
+  position: relative;
+  top: 30%;
+  left: -3%;
+  width: 2rem;
+  z-index: 33;
 }
 .circulos img {
   margin: 0 auto;
-  width: 60%;
-  height: 60%;
+  width: 1rem;
   z-index: 5;
 }
-.circulos img:nth-child(2) {
+
+@media screen and (width > 769px) {
+  .circulos {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  top: -30%;
-  width: 70%;
-  height: 60%;
-  z-index: 5;
+  top: 30%;
+  left: -4%;
+  width: 8%;
+  z-index: 33;
+}
+  .beneficio {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .beneficio:nth-child(1) {
+    position: relative;
+    top: 50%;
+    width: 80%;
+    height: 150%;
+    display: flex;
+    flex-direction: column;
+  }
+  .beneficio:nth-child(2) {
+    width: 80%;
+    height: 150%;
+    display: flex;
+    flex-direction: column;
+  }
+  .beneficio:nth-child(3) {
+    position: relative;
+    height: 80%;
+    top: 30%;
+  }
+  .beneficio:nth-child(4) {
+    height: 80%;
+  }
+
+  .content-price {
+    width: 100%;
+    height: 50%;
+  }
+  .content-text {
+    width: 100%;
+    height: 50%;
+  }
+
+  .titulo-benefit {
+    margin: 0;
+    width: 100;
+    height: 100%;
+    background-color: #161431;
+    border-radius: 0.4em;
+  }
+  .titulo-benefit h1 {
+    font-family: "Work Sans", sans-serif;
+    color: white;
+    margin: 0;
+    font-size: 4vw;
+    margin-left: 5%;
+  }
+  .titulo-benefit h1 span {
+    color: #37f395;
+  }
+  .titulo-benefit h1 b {
+    font-size: 1.8vw;
+  }
+  .info {
+    font-family: "Work Sans", sans-serif;
+    color: white;
+    position: relative;
+    top: -10px;
+    left: 15%;
+    font-size: 1.5vw;
+  }
+  .info-two {
+    font-family: "Work Sans", sans-serif;
+    color: white;
+    position: relative;
+    top: 5px;
+    left: 18%;
+    font-size: 1.5vw;
+    height: 15%;
+  }
+  .titulo-two {
+    height: 100%;
+    width: 100%;
+    background-color: #161431;
+    display: flex;
+    align-items: center;
+    border-radius: 0.4em;
+  }
+  .titulo-two h1 {
+    font-family: "Work Sans", sans-serif;
+    color: white;
+    margin: 0;
+    font-size: 4vw;
+    margin-left: 5%;
+  }
+  .titulo-two h1 span {
+    color: #37f395;
+  }
+  .content-text {
+    height: 50%;
+    width: 100%;
+    margin-left: 5%;
+  }
+  .content-text h3 {
+    color: white;
+  }
+  .content-text p {
+    font-family: "Work Sans", sans-serif;
+    color: white;
+    font-size: 1vw;
+  }
+  .sale {
+    font-family: "Work Sans", sans-serif;
+    color: white;
+    font-size: 1.1vw;
+    width: 90;
+  }
+  .text {
+    height: 80%;
+  }
+  .scroll {
+    scroll-snap-type: initial;
+    overflow-y: hidden;
+  }
+}
+
+@media  (width > 769px) and (width < 900px) {
+  .beneficio:nth-child(1) {
+    position: relative;
+    top: 50%;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .beneficio:nth-child(2) {
+    position: relative;
+    height: 80%;
+    top: 30%;
+  }
 }
 </style>
