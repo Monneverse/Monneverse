@@ -31,7 +31,7 @@ defineProps({
     >
       <div class="benefits">
         <div class="beneficio">
-          <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios">
+          <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
             <div class="titulo-benefit">
               <h1><span>$</span>1500<b>USD-MNR</b></h1>
@@ -45,7 +45,7 @@ defineProps({
           </div>
         </div>
         <div class="beneficio">
-          <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios">
+          <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
             <div class="titulo-two">
               <h1>Phase 1</h1>
@@ -58,7 +58,7 @@ defineProps({
           </div>
         </div>
         <div class="beneficio">
-          <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios">
+          <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
             <div class="titulo-two">
               <h1>6.2%<span>*</span>48h</h1>
@@ -78,7 +78,7 @@ defineProps({
           </div>
         </div>
         <div class="beneficio">
-          <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios">
+          <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
             <div class="titulo-benefit">
               <div class="info-two"><p>At PancakeSwap</p></div>
@@ -420,14 +420,14 @@ p {
 
 @media screen and (width > 769px) {
   .circulos {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  top: 30%;
-  left: -4%;
-  width: 8%;
-  z-index: 33;
-}
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 30%;
+    left: -4%;
+    width: 8%;
+    z-index: 33;
+  }
   .beneficio {
     width: 80%;
     height: 90%;
@@ -540,6 +540,9 @@ p {
     font-size: 1.1vw;
     width: 90;
   }
+  .sale h3 {
+    font-weight: 400;
+  }
   .text {
     height: 80%;
   }
@@ -549,7 +552,7 @@ p {
   }
 }
 
-@media  (width > 769px) and (width < 900px) {
+@media (width > 769px) and (width < 900px) {
   .beneficio:nth-child(1) {
     position: relative;
     top: 50%;
