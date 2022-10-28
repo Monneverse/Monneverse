@@ -136,11 +136,12 @@ export default {
   methods: {
     next() {
       let newPosition = this.index_pagina;
-      if (newPosition == 11) {
-        newPosition = 13;
-      }
+
       if (this.index_pagina < this.limite) {
         newPosition = this.index_pagina + 1;
+        if (newPosition == 11) {
+          newPosition = 13;
+        }
         this.isRevert = false;
         this.CambiarContenedor(newPosition)
       }
@@ -148,11 +149,12 @@ export default {
     },
     before() {
       let newPosition = this.index_pagina;
-      if (newPosition == 12) {
-        newPosition = 10;
-      }
+
       if (this.index_pagina > 1) {
         newPosition = this.index_pagina - 1;
+        if (newPosition == 12) {
+          newPosition = 10;
+        }
         this.isRevert = false;
         this.CambiarContenedor(newPosition)
       }
@@ -186,8 +188,6 @@ export default {
       this.CambiarContenedor(this.index_pagina);
     },
     UpdateNav(id) {
-
-      console.log(window.innerWidth);
       switch (id) {
         case 1:
           if (window.innerWidth < 900) {
