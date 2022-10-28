@@ -188,8 +188,6 @@ export default {
       this.CambiarContenedor(this.index_pagina);
     },
     UpdateNav(id) {
-
-      console.log(window.innerWidth);
       switch (id) {
         case 1:
           if (window.innerWidth < 900) {

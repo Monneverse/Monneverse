@@ -47,13 +47,7 @@ defineProps({
   <!-- Contenedor de Articulos -->
   <div class="containerArticulo">
     <div v-if="index_pagina == 5" class="contenedorDeArticulo">
-      <Articulo
-        v-for="item in vectorArticulo"
-        :key="item"
-        :titulo="item.titulo"
-        :img="item.imagen"
-        :url="item.link"
-      />
+      <Articulo v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen" :url="item.link" />
     </div>
   </div>
 
@@ -117,18 +111,18 @@ export default {
       vectorArticulo: [
         {
           titulo: "Presale and benefits For investors",
-          imagen: "/img/Articulo/imagenArticulo1.png",
+          imagen: "/img/Articulo/Articulo.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/presale-and-its-benefits-for-investors",
         },
         {
           titulo: "How to avoid being scammed by investing in monner coin?",
-          imagen: "/img/Articulo/imagenArticulo2.png",
+          imagen: "/img/Articulo/Articulo2.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/how-to-avoid-being-scammed-by-investing-in-monner-coin",
         },
         {
           titulo:
             "Why will monner become one of the best cryptocurrencies to investin?",
-          imagen: "/img/Articulo/imagenArticulo3.png",
+          imagen: "/img/Articulo/Articulo3.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/why-will-monner-become-one-of-the-best-cryptocurrencies-to-invest-in",
         },
       ],
@@ -137,6 +131,8 @@ export default {
       horaString: "00",
       minutoString: "00",
       segundoString: "00",
+      inicio: 0,
+      salto: 3
     };
   },
   methods: {
@@ -159,18 +155,21 @@ export default {
       this.minutoString = this.AgregarCero(minutes);
       this.segundoString = this.AgregarCero(seconds);
     },
+    CambiarArticulos() {
+      this.vectorArticulo = this.vectorTodo.slice(this.inicio, this.inicio + this.salto);
+      if (this.inicio == 0) {
+        this.inicio = this.salto;
+      } else {
+        this.inicio = 0;
+      }
+    }
   },
   mounted() {
+    this.CambiarArticulos();
     setInterval(this.ObtenerFechaActual, 500);
-    this.vectorArticulo = this.vectorTodo.slice(0, 3);
-    var myfunction = this.vectorTodo.slice(0, 3);
+    setInterval(this.CambiarArticulos, 10000);
 
-    setTimeout(() => {
-      this.vectorArticulo = this.vectorTodo.slice(3, 6);
-      setTimeout(() => {
-        this.vectorArticulo = this.vectorTodo.slice(0, 3);
-      }, 5000);
-    }, 5000);
+   
   },
 };
 </script>
@@ -202,12 +201,10 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 0;
 }
 
@@ -460,6 +457,7 @@ h4 {
 
   .containerArticulo::-webkit-scrollbar {
     -webkit-appearance: none;
+    appearance: none;
   }
 
   .containerArticulo::-webkit-scrollbar:horizontal {
@@ -478,7 +476,7 @@ h4 {
     right: 80%;
   }
 
-  .contenedorDeArticulo > * {
+  .contenedorDeArticulo>* {
     width: 90%;
     top: 0%;
     flex: none;
