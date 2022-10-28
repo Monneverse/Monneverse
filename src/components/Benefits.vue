@@ -26,10 +26,8 @@ defineProps({
       <h1>BENEFITS</h1>
     </div>
 
-    <div
-      :class="{ display_flex: true, 'animacion-aparecer': index_pagina == 9 }"
-    >
-      <div class="benefits">
+    <div class="display_flex">
+      <div :class="{ benefits: true, 'animacion-aparecer': index_pagina == 9 }">
         <div class="beneficio">
           <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
@@ -59,7 +57,12 @@ defineProps({
         </div>
         <div class="beneficio">
           <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
-          <div class="content-price">
+          <div
+            :class="{
+              'content-price': true,
+              'animacion-caja1': index_pagina == 9,
+            }"
+          >
             <div class="titulo-two">
               <h1>6.2%<span>*</span>48h</h1>
             </div>
@@ -104,13 +107,19 @@ defineProps({
           </div>
         </div>
       </div>
+      <div class="aro">
+        <img src="/img/Imagen1.png" />
+
+        <img
+          :class="{
+            image: true,
+            'animacion-aro': index_pagina == 9,
+          }"
+          src="/img/Imagen1.png"
+        />
+      </div>
     </div>
 
-    <div class="circulos">
-      <img src="/img/Imagen1.png" />
-
-      <img src="/img/Imagen1.png" />
-    </div>
     <div
       :class="{
         'logo-redes': true,
@@ -419,6 +428,42 @@ p {
 }
 
 @media screen and (width > 769px) {
+  .aro {
+    top: -45%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-end;
+    z-index: 999;
+    width: 100%;
+    height: 30%;
+  }
+  .aro img {
+    width: 30%;
+    margin-right: 2%;
+    margin-bottom: 0;
+  }
+  .image {
+    position: relative;
+    top: -50%;
+  }
+  .animacion-aro {
+    animation-name: aro;
+    animation-duration: .5s;
+
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes aro {
+    0% {
+      left: -25%;
+    }
+
+    100% {
+      left: 0%;
+    }
+  }
+
   .circulos {
     display: flex;
     flex-direction: column;
@@ -566,6 +611,28 @@ p {
     position: relative;
     height: 80%;
     top: 30%;
+  }
+}
+
+.animacion-caja1 {
+  animation-name: caja1;
+  animation-duration: 5s;
+
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes caja1 {
+  0% {
+    position: absolute;
+    top: -50%;
+    left: 25%;
+    background-color: white;
+    width: 430px;
+  }
+
+  100% {
+    top: 60%;
+    left: -23%;
   }
 }
 </style>
