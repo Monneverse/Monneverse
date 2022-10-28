@@ -49,8 +49,8 @@
         <div class="news">
           <a href=""><img src="/img/Exchanges/Coinquora.png" /></a>
         </div>
-        <div class="news">
-          <a href=""><img src="/img/News/coinrepublic.png" /></a>
+        <div id="theCoinRepublic" class="news theCoinRepublic">
+          <a href=""><img src="/img/News/TheCoinRepublic.png" /></a>
         </div>
       </div>
 
@@ -366,7 +366,10 @@ img {
   justify-content: center;
   align-items: center;
 }
-
+#theCoinRepublic{
+  width: 50%;
+  height: 30%;
+}
 
 @media screen and (width < 769px) {
   .major {

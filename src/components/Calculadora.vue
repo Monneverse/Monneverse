@@ -590,7 +590,8 @@ img {
 /* Informacion*/
 .informacion {
   position: absolute;
-  top: 40%;
+  top: 50%;
+  transform: translate(0, -10%);
   left: 3rem;
   max-width: 35rem;
   width: 30%;
