@@ -78,7 +78,7 @@ export default {
       vectorTodo: [
         {
           titulo: "Presale and benefits For investors",
-          imagen: "/img/Articulo/articulo1.png",
+          imagen: "/img/Articulo/articulo.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/presale-and-its-benefits-for-investors",
         },
         {
@@ -94,7 +94,7 @@ export default {
         },
         {
           titulo: "Why invest in monner and how to secure your investment?",
-          imagen: "/img/Articuloa/articulo4.png",
+          imagen: "/img/Articulo/articulo4.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/why-invest-in-monner-and-how-to-secure-your-investment",
         },
         {
