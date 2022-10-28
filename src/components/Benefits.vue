@@ -26,10 +26,8 @@ defineProps({
       <h1>BENEFITS</h1>
     </div>
 
-    <div
-      :class="{ display_flex: true, 'animacion-aparecer': index_pagina == 9 }"
-    >
-      <div class="benefits">
+    <div class="display_flex">
+      <div :class="{ benefits: true, 'animacion-aparecer': index_pagina == 9 }">
         <div class="beneficio">
           <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
@@ -59,7 +57,12 @@ defineProps({
         </div>
         <div class="beneficio">
           <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
-          <div class="content-price">
+          <div
+            :class="{
+              'content-price': true,
+              'animacion-caja1': index_pagina == 9,
+            }"
+          >
             <div class="titulo-two">
               <h1>6.2%<span>*</span>48h</h1>
             </div>
@@ -566,6 +569,28 @@ p {
     position: relative;
     height: 80%;
     top: 30%;
+  }
+}
+
+.animacion-caja1 {
+  animation-name: caja1;
+  animation-duration: 5s;
+  
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes caja1 {
+  0% {
+    position: absolute;
+    top: -50%;
+    left: 0%;
+    background-color: white;
+    width: 430px;
+  }
+
+  100% {
+    top: 60%;
+    left: -23%;
   }
 }
 </style>

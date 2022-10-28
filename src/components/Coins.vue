@@ -14,7 +14,14 @@ defineProps({
   <div class="fondo filtro-superior"></div>
   <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
   <div class="fondo fondo-oscurecer"></div>
-  <div class="circuito circuito-izquierdo">
+  <div
+   
+    :class="{
+      'circuito-izquierdo': true,
+      'animacion-desplazamiento': index_pagina == 8,
+    }"
+     class="circuito"
+  >
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
   </div>
   <div class="circuito circuito-derecho">
@@ -24,7 +31,12 @@ defineProps({
   <div class="degradado_azuliz"></div>
   <div class="degradado_azulde"></div>
   <!--FIN FONDO-->
-  <div class="contenedor_coins">
+  <div
+    :class="{
+      contenedor_coins: true,
+      'animacion-aparecer': index_pagina == 8,
+    }"
+  >
     <div class="card_coin">
       <coin
         icono="/img/coins/kucoin.svg"
@@ -298,15 +310,10 @@ img {
 
 @media screen and (width > 768px) {
   .cuadros-derecho {
-
-
     top: 90%;
-
   }
   .cuadros-izquierdo {
-
     top: 90%;
-
   }
 }
 .monner {
@@ -338,6 +345,37 @@ img {
   .monner {
     position: absolute;
     top: 90%;
+  }
+}
+
+.animacion-aparecer {
+  animation-duration: 0.5s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+.animacion-desplazamiento {
+  animation-name: dezplazamiento;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+@keyframes dezplazamiento {
+  0% {
+    left: 1em;
+  }
+
+  100% {
+  
   }
 }
 </style>
