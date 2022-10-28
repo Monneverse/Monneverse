@@ -1,5 +1,11 @@
 <script setup>
 import fasesComponentes from "./ComponentsPhases.vue";
+defineProps({
+  index_pagina: {
+    type: Number,
+    required: true,
+  },
+});
 </script>
 
 <template>
@@ -35,43 +41,40 @@ import fasesComponentes from "./ComponentsPhases.vue";
   </div>
   <div class="componentes">
     <div class="componente componentes1">
-      <fasesComponentes title="" description="Development of MonnerTrading, MonnerHosting, and MonnerBlockchaine."
-         />
+      <fasesComponentes title="" description="Development of MonnerTrading, MonnerHosting, and MonnerBlockchaine." />
     </div>
 
     <div class="componente componentes2">
-      <fasesComponentes title="" description="Official <b>CEO</b> conference for the public."  />
+      <fasesComponentes title="" description="Official CEO conference for the public." />
     </div>
 
     <div class="componente componentes3">
       <fasesComponentes title=""
-        description="Development and presentation of MonnerMetaverse-MonnerGame in augmented virtual reality."
-         />
+        description="Development and presentation of MonnerMetaverse-MonnerGame in augmented virtual reality." />
     </div>
 
     <div class="componente componentes4">
-      <fasesComponentes title="" description="15.000 holders Phase 4."  />
+      <fasesComponentes title="" description="15.000 holders Phase 4." />
     </div>
 
     <div class="componente componentes5">
-      <fasesComponentes title="" description="MonnerTrading official Launch."  />
+      <fasesComponentes title="" description="MonnerTrading official Launch." />
     </div>
 
     <div class="componente componentes6">
-      <fasesComponentes title="" description="Official MonnerMetaverse-MonnerGame in argumented reality."
-         />
+      <fasesComponentes title="" description="Official MonnerMetaverse-MonnerGame in argumented reality." />
     </div>
 
     <div class="componente componentes7">
-      <fasesComponentes title="" description="Phase 3 Staking Programming."  />
+      <fasesComponentes title="" description="Phase 3 Staking Programming." />
     </div>
 
     <div class="componente componentes8">
-      <fasesComponentes title="" description="Scheduled burning."  />
+      <fasesComponentes title="" description="Scheduled burning." />
     </div>
 
     <div class="componente componentes9">
-      <fasesComponentes title="" description="Enlistment in other High Recognition Exchanges"  />
+      <fasesComponentes title="" description="Enlistment in other High Recognition Exchanges" />
     </div>
   </div>
 
@@ -182,14 +185,14 @@ img {
   opacity: 100%;
   text-transform: uppercase;
   z-index: 6;
-  font-family: "work Sans";
+  font-family: "work Sans", sans-serif;
 }
 
 .description {
   color: white;
   width: 45%;
   font-size: 1.2vw;
-  font-family: Roboto;
+  font-family: "work Sans", sans-serif;
 }
 
 .circulo__1 {

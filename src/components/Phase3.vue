@@ -1,5 +1,11 @@
 <script setup>
 import fasesComponentes from "./ComponentsPhases.vue";
+defineProps({
+  index_pagina: {
+    type: Number,
+    required: true,
+  },
+});
 </script>
 
 <template>
@@ -40,18 +46,16 @@ import fasesComponentes from "./ComponentsPhases.vue";
   <div class="componentes">
     <div class="componente componentes1">
       <fasesComponentes title=""
-        description="Official launch of MonnerWallet, MonnerSwap and MonnerCardwith Visa and Mastercard."
-         />
+        description="Official launch of MonnerWallet, MonnerSwap and MonnerCardwith Visa and Mastercard." />
     </div>
 
     <div class="componente componentes2">
-      <fasesComponentes description="Solidity Finance Audit."  />
+      <fasesComponentes title="" description="Solidity Finance Audit." />
     </div>
 
     <div class="componente componentes3">
       <fasesComponentes title=""
-        description="exhibition of our team from my solar powered industrial mining in New York City"
-         />
+        description="exhibition of our team from my solar powered industrial mining in New York City" />
     </div>
   </div>
 
@@ -162,14 +166,14 @@ img {
   opacity: 100%;
   text-transform: uppercase;
   z-index: 6;
-  font-family: "work Sans";
+  font-family: "work Sans", sans-serif;
 }
 
 .description {
   color: white;
   width: 45%;
   font-size: 1.3vw;
-  font-family: Roboto;
+  font-family: "work Sans", sans-serif;
 }
 
 .circulo__1 {

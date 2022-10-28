@@ -13,12 +13,12 @@ defineProps({
 
 <template>
   <div class="contenedor__fases">
-    <div class="circulo-indicador" ></div>
+    <div class="circulo-indicador"></div>
     <b>{{ title }}</b>
     <br />
-      <p >
-        {{ description }}
-      </p>
+    <p>
+      {{ description }}
+    </p>
   </div>
 </template>
 
@@ -47,7 +47,7 @@ img {
 
 .contenedor__fases p {
   font-size: 1.3vw;
-  font-family: Roboto;
+  font-family: "Work Sans", sans-serif;
 }
 
 .contenedor__fases b {
@@ -93,7 +93,7 @@ img {
 
   .contenedor__fases p {
     font-size: 4vw;
-    font-family: Roboto;
+    font-family: "Work Sans", sans-serif;
     margin-top: .2rem;
 
   }

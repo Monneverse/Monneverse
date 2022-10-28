@@ -59,7 +59,7 @@
         'aparecer-animation': index_pagina == 4,
       }">
         <div class="control">
-          <input type="text" inputmode="numeric" prefix="$ "  @input="Calculator" name="inversion" id="inversion" v-model="inversion"
+          <input type="text" inputmode="numeric"   @input="Calculator" name="inversion" id="inversion" v-model="inversion"
             placeholder="$ 100" />
           <label for="inversion">Invert</label>
         </div>
