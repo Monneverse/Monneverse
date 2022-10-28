@@ -423,7 +423,6 @@ img {
 }
 
 .indicador-calculadora {
-  scale: 0.3;
   margin-top: 1.8%;
   transition: transform 0.4s ease-in 0s;
 }
