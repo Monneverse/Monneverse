@@ -62,21 +62,16 @@
       <div class="columnas">
         <div class="news">
           <a
-            href="https://criptotendencia.com/2022/08/03/por-que-monner-puede-convertirse-en-una-de-las-mejores-criptomonedas-para-invertir/"
-            ><img src="/img/Exchanges/criptotend.png"
-          /></a>
+            href="https://criptotendencia.com/2022/08/03/por-que-monner-puede-convertirse-en-una-de-las-mejores-criptomonedas-para-invertir/"><img
+              src="/img/Exchanges/criptotend.png" /></a>
         </div>
         <div class="news">
-          <a
-            href="https://www.coinspeaker.com/monner-coin-revolutionize-crypto/"
-            ><img src="/img/Exchanges/coinspeaker.png"
-          /></a>
+          <a href="https://www.coinspeaker.com/monner-coin-revolutionize-crypto/"><img
+              src="/img/Exchanges/coinspeaker.png" /></a>
         </div>
         <div class="news">
-          <a
-            href="https://www.territoriobitcoin.com/una-nueva-criptomoneda-en-tendencia/"
-            ><img src="/img/Exchanges/territoriobtc.png"
-          /></a>
+          <a href="https://www.territoriobitcoin.com/una-nueva-criptomoneda-en-tendencia/"><img
+              src="/img/Exchanges/territoriobtc.png" /></a>
         </div>
       </div>
     </div>
@@ -108,10 +103,10 @@ img {
 
 .circulo {
   position: absolute;
-  top: 31%;
+  top: 29%;
   left: 48%;
   width: 4.7%;
-  height: 10%;
+  height: 13%;
   border-radius: 5rem;
   z-index: 8;
   background: #1a1e29;
@@ -127,23 +122,19 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 1;
 }
 
 .filtro-superior {
   z-index: 2;
-  background: radial-gradient(
-    circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
-  );
+  background: radial-gradient(circle at center,
+      #f9f9fa 0%,
+      #c8ced4 50%,
+      #a8aaaf 100%);
   mix-blend-mode: multiply;
 }
 
@@ -162,14 +153,14 @@ img {
 }
 
 .logo {
-    width: 34%;
-    height: 56%;
-    position: fixed;
-    top: 10%;
-    left: 31.5%;
-    margin: auto;
-    z-index: 5;
-    opacity: 10%;
+  width: 34%;
+  height: 56%;
+  position: fixed;
+  top: 10%;
+  left: 31.5%;
+  margin: auto;
+  z-index: 5;
+  opacity: 10%;
 }
 
 .luces {
@@ -329,6 +320,7 @@ img {
     font-size: 8vw;
   }
 }
+
 /* FIN TITULO */
 
 .major {
@@ -338,12 +330,14 @@ img {
   height: 75%;
   z-index: 8;
 }
+
 .contenido {
   margin: 0 auto;
   width: 90%;
   height: 100%;
   display: flex;
 }
+
 .columnas {
   width: 40%;
   height: 100%;
@@ -351,6 +345,7 @@ img {
   flex-direction: column;
   justify-content: space-between;
 }
+
 .columnas:nth-child(2) {
   width: 20%;
   height: 100%;
@@ -364,6 +359,7 @@ img {
   width: 70%;
   height: 30%;
 }
+
 .news img {
   margin: 0 auto;
   display: flex;
@@ -371,10 +367,6 @@ img {
   align-items: center;
 }
 
-img:hover {
-  transform: scale(1.5);
-  transition: transform 0.3s;
-}
 
 @media screen and (width < 769px) {
   .major {
@@ -389,10 +381,12 @@ img:hover {
     overflow-x: scroll;
     overflow-y: hidden;
   }
+
   .contenido {
     width: 100%;
     height: 100%;
   }
+
   .columnas {
     width: 100%;
     height: 100%;
@@ -401,6 +395,7 @@ img:hover {
     justify-content: space-between;
     flex: none;
   }
+
   .columnas:nth-child(2) {
     width: 20%;
     height: 100%;
@@ -415,6 +410,7 @@ img:hover {
     width: 70%;
     height: 30%;
   }
+
   .news img {
     margin: 0 auto;
     display: flex;
@@ -476,12 +472,10 @@ img:hover {
   border-radius: 50%;
   bottom: -30%;
   transform: rotate(-30deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 1) 0%,
-    transparent 55%,
-    rgba(184, 184, 184, 0) 100%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 1) 0%,
+      transparent 55%,
+      rgba(184, 184, 184, 0) 100%);
   filter: blur(3rem);
   left: 30%;
 }
@@ -494,12 +488,10 @@ img:hover {
   bottom: -30%;
   left: 40%;
   transform: rotate(0deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 1) 0%,
-    transparent 55%,
-    rgba(184, 184, 184, 0) 100%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 1) 0%,
+      transparent 55%,
+      rgba(184, 184, 184, 0) 100%);
   filter: blur(3rem);
 }
 
@@ -511,12 +503,10 @@ img:hover {
   bottom: -30%;
   left: 55%;
   transform: rotate(-150deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 1) 0%,
-    transparent 55%,
-    rgba(184, 184, 184, 0) 100%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 1) 0%,
+      transparent 55%,
+      rgba(184, 184, 184, 0) 100%);
   filter: blur(3rem);
 }
 </style>
