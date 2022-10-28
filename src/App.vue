@@ -137,6 +137,8 @@ export default {
   },
   methods: {
     next() {
+      this.exitAnimation = true;
+      this.scroll = false;
       let newPosition = this.index_pagina;
 
       if (this.index_pagina < this.limite) {
@@ -150,6 +152,8 @@ export default {
 
     },
     before() {
+      this.exitAnimation = true;
+      this.scroll = false;
       let newPosition = this.index_pagina;
       if (this.index_pagina > 1) {
         newPosition = this.index_pagina - 1;
