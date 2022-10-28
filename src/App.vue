@@ -136,7 +136,9 @@ export default {
   methods: {
     next() {
       let newPosition = this.index_pagina;
-
+      if (newPosition == 11) {
+        newPosition = 13;
+      }
       if (this.index_pagina < this.limite) {
         newPosition = this.index_pagina + 1;
         this.isRevert = false;
@@ -146,7 +148,9 @@ export default {
     },
     before() {
       let newPosition = this.index_pagina;
-
+      if (newPosition == 12) {
+        newPosition = 10;
+      }
       if (this.index_pagina > 1) {
         newPosition = this.index_pagina - 1;
         this.isRevert = false;
@@ -182,11 +186,11 @@ export default {
       this.CambiarContenedor(this.index_pagina);
     },
     UpdateNav(id) {
-      
+
       console.log(window.innerWidth);
       switch (id) {
         case 1:
-        if (window.innerWidth < 900) {
+          if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.center
