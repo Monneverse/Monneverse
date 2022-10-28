@@ -50,7 +50,7 @@
           <a href=""><img src="/img/Exchanges/Coinquora.png" /></a>
         </div>
         <div class="news">
-          <a href=""><img src="/img/News/TheCoinRepublic.png" /></a>
+          <a href=""><img src="/img/News/coinrepublic.png" /></a>
         </div>
       </div>
 
