@@ -157,7 +157,7 @@ img {
   height: 56%;
   position: fixed;
   top: 10%;
-  left: 31.5%;
+  left: 33.3%;
   margin: auto;
   z-index: 5;
   opacity: 10%;
@@ -366,7 +366,8 @@ img {
   justify-content: center;
   align-items: center;
 }
-#theCoinRepublic{
+
+#theCoinRepublic {
   width: 50%;
   height: 30%;
 }
