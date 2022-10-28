@@ -17,7 +17,7 @@ defineProps({
 
     <!--FONDOS-->
     <div class="fondo-video">
-      <video src="/public/video/Full-HD-Lite.mp4" autoplay="true" muted="true" loop="true"
+      <video src="/video/Full-HD-Lite.mp4" autoplay="true" muted="true" loop="true"
         poster="/img/fondo_binario.png"></video>
 
       <div class="logos">

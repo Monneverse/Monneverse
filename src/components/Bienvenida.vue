@@ -17,7 +17,7 @@
 
   <!-- imagenes fondos -->
   <div class="semi-circle ">
-    <img src="../../public/img/semi_circulo.png" alt="" />
+    <img src="../../img/semi_circulo.png" alt="" />
   </div>
   <div class="fondo-montana">
     <img src="/img/fondo-montana.png" alt="" srcset="" />
