@@ -44,8 +44,7 @@ import fasesComponentes from "./ComponentsPhases.vue";
     </div>
 
     <div class="componente componentes2">
-      <fasesComponentes title="" description="MonnerStaking start one day after pre-sale ends,
-             payouts of 12,6% of total capital every 48 hours"  />
+      <fasesComponentes title="" description="The MonnerStake startup will give its holders 6.2% every 48 hours for the first 2 months. It starts one day after the presale ends."  />
     </div>
 
     <div class="componente componentes3">
