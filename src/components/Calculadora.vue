@@ -425,6 +425,7 @@ img {
 .indicador-calculadora {
   margin-top: 1.8%;
   transition: transform 0.4s ease-in 0s;
+  max-width: 60rem;
 }
 
 
@@ -751,6 +752,7 @@ img {
 
   .indicador-calculadora {
     margin-top: 3.8%;
+    max-width: 30rem;
   }
 
   .circulo-indicador {
