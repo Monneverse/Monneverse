@@ -148,7 +148,6 @@ export default {
           anim.style.left = this.getOffset(link).left + "px";
         }
       } catch (error) {
-        console.log("EL ERROR ES " + error);
       }
     },
     async addTokenFunction() {
@@ -177,7 +176,6 @@ export default {
           console('HelloWorld Coin has not been added');
         }
       } catch (error) {
-        console.log(error);
       }
     },
     reDirect() {
