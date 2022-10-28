@@ -43,20 +43,13 @@ defineProps({
   </div>
   <div class="componentes">
     <div class="componente componente__1">
-      <fasesComponentes title="development" description="development of the entire monnerverse ecosystem website,
-             spanish and english, discord, telegram, twitter and facebook."  />
-    </div>
-
-    <div class="componente componente__2">
       <fasesComponentes title="collection" description="Collection of documents for important Exchanges:
-         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others."
-    />
+         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others." />
     </div>
 
     <div class="componente componente__3">
-      <fasesComponentes title="started" description="Collection of documents for important Exchanges:
-         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others."
-         />
+      <fasesComponentes title="started"
+        description="Started mass advertising in more than 20 countries around the world" />
     </div>
 
   </div>
@@ -210,17 +203,17 @@ img {
 
 .componente__1 {
   top: 60%;
-  left: 0%;
+  left: 20%;
 }
 
 .componente__2 {
   top: 70%;
-  left: 36%;
+  left: 56%;
 }
 
 .componente__3 {
   top: 60%;
-  right: 0%;
+  right: 20%;
 }
 
 @media screen and (max-width: 900px) {
@@ -274,7 +267,7 @@ img {
     width: 90%;
   }
 
- 
+
 
   .componentes {
     position: absolute;
@@ -296,7 +289,7 @@ img {
     z-index: 1000;
   }
 
-  
+
   .componentes::-webkit-scrollbar:vertical {
     height: 10px;
     width: 10px;

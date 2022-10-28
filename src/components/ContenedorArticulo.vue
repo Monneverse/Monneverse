@@ -31,7 +31,7 @@ defineProps({
   <!-- CONTENEDOR DE BOTON METATASK -->
   <div class="btn_buyMonner">
     <div class="contrato">
-      <b>Contract: </b><b> 0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</b>
+      <b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span>
     </div>
     <div class="buyNow">
       <button class="btn_moner">
@@ -78,33 +78,33 @@ export default {
       vectorTodo: [
         {
           titulo: "Presale and benefits For investors",
-          imagen: "/img/Articulo/articulo.png",
+          imagen: "/img/Articulo/imagenArticulo1.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/presale-and-its-benefits-for-investors",
         },
         {
           titulo: "How to avoid being scammed by investing in monner coin?",
-          imagen: "/img/Articulo/articulo4.png",
+          imagen: "/img/Articulo/imagenArticulo2.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/how-to-avoid-being-scammed-by-investing-in-monner-coin",
         },
         {
           titulo:
             "Why will monner become one of the best cryptocurrencies to investin?",
-          imagen: "/img/Articulo/articulo2.png",
+          imagen: "/img/Articulo/imagenArticulo3.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/why-will-monner-become-one-of-the-best-cryptocurrencies-to-invest-in",
         },
         {
           titulo: "Why invest in monner and how to secure your investment?",
-          imagen: "/img/Articulo/articulo3.png",
+          imagen: "/img/Articulo/imagenArticulo4.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/why-invest-in-monner-and-how-to-secure-your-investment",
         },
         {
           titulo: "What to do to not miss any Monner news?",
-          imagen: "/img/Articulo/articulo5.png",
+          imagen: "/img/Articulo/imagenArticulo5.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/what-to-do-to-not-miss-any-monner-news",
         },
         {
           titulo: "The monner coin and it’s benefits",
-          imagen: "/img/Articulo/articulo6.png",
+          imagen: "/img/Articulo/imagenArticulo6.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/the-monner-coin-and-its-benefits",
         },
       ],
@@ -319,6 +319,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .btn_moner {
@@ -332,6 +333,7 @@ img {
   -webkit-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px px 5px rgba(0, 0, 0, 0.75);
+
 }
 
 .texto1 {
@@ -345,15 +347,19 @@ img {
 }
 
 .contrato {
+  font-family: "Bahn";
   position: relative;
-  margin: 0 auto;
-  font-size: 1.5vw;
+  left: 27%;
+  font-size: 1.3vw;
   color: white;
-  height: 30%;
-  display: flex;
-  justify-content: center;
+  height: 20%;
+  width: 158%;
 }
 
+.contrato span {
+  font-family: "Bahn";
+  font-size: 1.1vw;
+}
 
 .logos {
   position: relative;
@@ -401,7 +407,7 @@ img {
     bottom: 5%;
     width: 100%;
     left: 0;
-    height: 55%;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
