@@ -156,7 +156,6 @@ export default {
           (this.porcentajeInteres / 100)
         ).toFixed(2);
       }
-      this.inversion = "$ " + this.inversion;
       this.interes = "$ " + this.interes;
     },
     CambiarMonth() {
