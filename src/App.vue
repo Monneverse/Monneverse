@@ -93,19 +93,19 @@ import Footer from "./components/Footer.vue";
       <News />
     </div>
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 15 }">
-      <Fase />
+      <Fase :index_pagina="index_pagina" />
     </div>
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 16 }">
-      <Fase2 />
+      <Fase2 :index_pagina="index_pagina" />
     </div>
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 17 }">
-      <Fase3 />
+      <Fase3 :index_pagina="index_pagina" />
     </div>
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 18 }">
-      <Fase4 />
+      <Fase4 :index_pagina="index_pagina" />
     </div>
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 19 }">
-      <Fase5 />
+      <Fase5  :index_pagina="index_pagina"/>
     </div>
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == limite }">
       <Footer :index_pagina="index_pagina" :limite="limite" :enter="enterAnimation" :exit="exitAnimation"></Footer>
