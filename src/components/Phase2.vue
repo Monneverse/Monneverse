@@ -22,9 +22,8 @@ import fasesComponentes from "./ComponentsPhases.vue";
     </div>
     <div class="description">
       <p>
-        Official pre-sale of 2,000,000 monners at $1.5 publication on
-        www.monneverse.com of the portafolios by monnerstaking at the end of the
-        pre-sale.
+        Official pre-sale of 2,000 monners (MNR) on <a href="www.monnerverse.com">www.monneverse.com</a> of the
+        portafolios by monnerstaking at the end of the pre-sale.
       </p>
     </div>
   </div>
@@ -39,39 +38,37 @@ import fasesComponentes from "./ComponentsPhases.vue";
   </div>
   <div class="componentes">
     <div class="componente componentes1">
-      <fasesComponentes title="" description="enlist on Pancakeswap one day after our pre-sale"
-         />
+      <fasesComponentes title="" description="enlist on Pancakeswap one day after our pre-sale" />
     </div>
 
     <div class="componente componentes2">
       <fasesComponentes title="" description="MonnerStaking start one day after pre-sale ends,
-             payouts of 12,6% of total capital every 48 hours"  />
+             payouts of 12,6% of total capital every 48 hours" />
     </div>
 
     <div class="componente componentes3">
-      <fasesComponentes title="" description="liquid lock"  />
+      <fasesComponentes title="" description="liquid lock" />
     </div>
 
     <div class="componente componentes4">
-      <fasesComponentes title="" description="schedule burning"  />
+      <fasesComponentes title="" description="schedule burning" />
     </div>
 
     <div class="componente componentes5">
-      <fasesComponentes title="" description="certick audit"  />
+      <fasesComponentes title="" description="certik audit" />
     </div>
 
     <div class="componente componentes8">
       <fasesComponentes title="" description="Official enlistment: coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
-        MEXC global"  />
+        MEXC global" />
     </div>
 
     <div class="componente componentes7">
-      <fasesComponentes title="" description=" Increase x5 Budget increase x5 of our advertising campaign"
-         />
+      <fasesComponentes title="" description=" Increase x5 Budget increase x5 of our advertising campaign" />
     </div>
 
     <div class="componente componentes6">
-      <fasesComponentes title="" description="10.000 holders"  />
+      <fasesComponentes title="" description="10.000 holders" />
     </div>
   </div>
 
@@ -182,14 +179,19 @@ img {
   opacity: 100%;
   text-transform: uppercase;
   z-index: 6;
-  font-family: "work Sans";
+  font-family: "work Sans", sans-serif;
 }
 
 .description {
   color: white;
   width: 45%;
   font-size: 1.3vw;
-  font-family: Roboto;
+  font-family: "work Sans", sans-serif;
+}
+
+.description a {
+  text-decoration: none;
+  color: #b48700;
 }
 
 .circulo {
@@ -274,6 +276,7 @@ img {
   width: 28%;
   height: 55%;
 }
+
 /* style of mobile */
 @media screen and (max-width: 900px) {
 

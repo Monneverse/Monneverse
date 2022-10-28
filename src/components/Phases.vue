@@ -164,7 +164,7 @@ img {
   opacity: 100%;
   text-transform: uppercase;
   z-index: 6;
-  font-family: "work Sans";
+  font-family: "work Sans", sans-serif;
 }
 
 .description {
@@ -172,7 +172,7 @@ img {
   width: 45%;
   font-size: 1.4vw;
   text-transform: capitalize;
-  font-family: Roboto;
+  font-family: "work Sans", sans-serif;
 }
 
 .circulo {
