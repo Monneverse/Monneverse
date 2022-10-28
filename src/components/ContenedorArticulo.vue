@@ -104,7 +104,7 @@ export default {
         },
         {
           titulo: "The monner coin and it’s benefits",
-          imagen: "/img/Articulo/Articulo6.png",
+          imagen: "/img/Articulo/articulo6.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/the-monner-coin-and-its-benefits",
         },
       ],
@@ -169,7 +169,7 @@ export default {
     setInterval(this.ObtenerFechaActual, 500);
     setInterval(this.CambiarArticulos, 10000);
 
-   
+
   },
 };
 </script>
