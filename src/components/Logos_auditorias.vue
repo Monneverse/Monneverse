@@ -42,7 +42,7 @@
             <img src="/img/Exchanges/solidity1.png" class="auditoria1"></a>
         <a><img src="/img/Exchanges/certik.png" class="auditoria2"></a>
         <button class="btn_registro"><a
-                href="https://sites.google.com/view/whiterpaper-monnerverse/p%C3%A1gina-principal" target="_blank">
+                href="https://www.flbusinessgo.com/companies/L22000347356/" target="_blank">
                 register EEUU</a></button>
     </div>
     <div class="circulos">
