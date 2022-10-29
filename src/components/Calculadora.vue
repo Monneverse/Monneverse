@@ -29,49 +29,65 @@
   <!-- Contenido -->
   <div class="contenido">
     <div class="calculadora">
-      <div :class="{ circulo: true, 'aparecer-animation': this.enterAnimation && !this.isRevert }">
-        <img src="../assets/circulo-blanco.svg" />
-      </div>
 
-      <div :class="{
-        circulo: true,
-        'circulo-superior-animation': this.enterAnimation && !this.isRevert,
-      }">
-        <img src="../assets/circulo-colores-texto.svg" alt="aro-multikolor" />
-      </div>
 
-      <img :class="{
-        circulo: true, 'circulo-verde': true
-        , 'indicador-animacion': this.enterAnimation && !this.isRevert
-      }" src="../assets/circulo-verde.svg" alt="circle green">
-      <img @click="CambiarMonth" id="indicador-img" :class="{
-        'indicador-calculadora': true,
-        'indicador-animacion': this.enterAnimation && !this.isRevert,
-        hour48: classindicador == 1, month1: classindicador == 2, month2: classindicador == 3
-      }" src="../assets/indicador.svg" alt="index calculator">
 
-      <div @click="CambiarMonth" class="descripcion">
-        <p>{{ porcentajeInteres }}%</p>
-      </div>
+
 
       <div :class="{
         'circulo-indicador': true,
         'circulo-indicador-animation': this.enterAnimation && !this.isRevert,
+      
       }"></div>
+
+
       <div :class="{
-        'form-controles': true,
-        'aparecer-animation': this.enterAnimation && !this.isRevert,
-      }">
-        <div class="control">
-          <input type="text" inputmode="numeric" @input="Calculator" name="inversion" id="inversion" v-model="inversion"
-            placeholder="$ 100" />
-          <label for="inversion">Invert</label>
+        'aparecer': this.enterAnimation && !this.isRevert,
+        'aparecer_revert': this.exitAnimation && this.isRevert,
+      }">>
+
+        <div :class="{ circulo: true }">
+          <img src="../assets/circulo-blanco.svg" />
         </div>
-        <div class="control">
-          <input type="text" name="interes" id="interes" v-model="interes" placeholder="$ 100" disabled />
-          <label for="interes">Interest</label>
+        <div @click="CambiarMonth" class="descripcion">
+          <p>{{ porcentajeInteres }}%</p>
         </div>
+
+        <div :class="{
+          'form-controles': true
+        }">
+          <div class="control">
+            <input type="text" inputmode="numeric" @input="Calculator" name="inversion" id="inversion"
+              v-model="inversion" placeholder="$ 100" />
+            <label for="inversion">Invert</label>
+          </div>
+          <div class="control">
+            <input type="text" name="interes" id="interes" v-model="interes" placeholder="$ 100" disabled />
+            <label for="interes">Interest</label>
+          </div>
+        </div>
+
       </div>
+
+      <div :class="{
+        'rotar': this.enterAnimation && !this.isRevert,
+        'rotar_revert': this.exitAnimation && this.isRevert,
+      }">>
+        <div :class="{
+          circulo: true,
+        }">
+          <img src="../assets/circulo-colores-texto.svg" alt="aro-multikolor" />
+        </div>
+        <img :class="{
+          circulo: true, 'circulo-verde': true
+        }" src="../assets/circulo-verde.svg" alt="circle green">
+        <img @click="CambiarMonth" id="indicador-img" :class="{
+          'indicador-calculadora': true,
+          hour48: classindicador == 1, month1: classindicador == 2, month2: classindicador == 3
+        }" src="../assets/indicador.svg" alt="index calculator">
+
+      </div>
+
     </div>
   </div>
 
@@ -89,7 +105,11 @@
   </article>
 
   <!-- redes sociales -->
-  <div :class="{ 'logo-redes': true, 'logo-redes-animation': this.enterAnimation && !this.isRevert }">
+  <div :class="{
+    'logo-redes': true,
+    'desplazar_redes': this.enterAnimation && !this.isRevert,
+    'desplazar_redes_revert': this.exitAnimation && this.isRevert,
+  }">
 
     <a class="icon" href="https://t.me/monnerversecommunity" target="_blank">
       <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
@@ -361,10 +381,18 @@ img {
   margin: 3rem;
 }
 
-.aparecer-animation {
+.aparecer {
   animation-duration: 0.5s;
   animation-name: aparecer-animation;
   animation-iteration-count: 1;
+}
+
+.aparecer_revert {
+  animation-duration: 0.5s;
+  animation-name: aparecer-animation;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
 }
 
 @keyframes aparecer-animation {
@@ -413,13 +441,21 @@ img {
   animation-iteration-count: 1;
 }
 
-.indicador-animacion {
-  animation-name: circulo-superior-animation;
+.rotar_revert {
+  animation-name: rotar;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
+
+.rotar {
+  animation-name: rotar;
   animation-duration: .5s;
   animation-iteration-count: 1;
 }
 
-@keyframes circulo-superior-animation {
+@keyframes rotar {
   0% {
     /* top: 100%;
     left: -40%;
@@ -559,7 +595,8 @@ img {
   color: white;
   position: absolute;
   width: 100%;
-  top: 3%;
+  top: 2rem;
+  left: 1rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -686,10 +723,18 @@ img {
   justify-content: start;
 }
 
-.logo-redes-animation {
+.desplazar_redes {
   animation-name: redes_animation;
   animation-duration: .5s;
   animation-iteration-count: 1;
+}
+
+.desplazar_redes_revert {
+  animation-name: redes_animation;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
 }
 
 @keyframes redes_animation {
