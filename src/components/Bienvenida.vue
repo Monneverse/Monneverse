@@ -11,7 +11,7 @@ defineProps({
   isRevert: {
     type: Boolean,
     required: true,
-  },
+  }
 });
 </script>
 

@@ -55,7 +55,7 @@ import Footer from "./components/Footer.vue";
     </div>
 
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 4 }">
-      <Calculadora :index_pagina="index_pagina" />
+      <Calculadora  :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"  />
     </div>
 
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 5 }">
