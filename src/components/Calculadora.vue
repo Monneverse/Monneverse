@@ -36,7 +36,8 @@
 
       <div :class="{
         'circulo-indicador': true,
-        'circulo-indicador-animation': this.enterAnimation && !this.isRevert,
+        'circulo_indicador_animation': this.enterAnimation && !this.isRevert,
+        'circulo_indicador_animation_revert': this.exitAnimation && this.isRevert,
       
       }"></div>
 
@@ -566,10 +567,16 @@ img {
 
 
 
-.circulo-indicador-animation {
+.circulo_indicador_animation {
   animation-duration: .5s;
   animation-name: circulo-indicador-animation;
   animation-direction: normal;
+  animation-iteration-count: 1;
+}
+.circulo_indicador_animation_revert {
+  animation-duration: .5s;
+  animation-name: circulo-indicador-animation;
+  animation-direction: reverse;
   animation-iteration-count: 1;
 }
 
