@@ -380,7 +380,7 @@ p {
   animation-iteration-count: 1;
 }
 
-@keyframes aparecer {
+/* @keyframes aparecer {
   0% {
     opacity: 0%;
   }
@@ -388,13 +388,13 @@ p {
   100% {
     opacity: 100%;
   }
-}
+} */
 .animacion-dezplazamiento {
   animation-name: dezplazamiento;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
 }
-@keyframes dezplazamiento {
+/* @keyframes dezplazamiento {
   0% {
     left: 0.2rem;
   }
@@ -402,7 +402,7 @@ p {
   100% {
     left: 3rem;
   }
-}
+} */
 .circulos {
   display: flex;
   flex-direction: column;

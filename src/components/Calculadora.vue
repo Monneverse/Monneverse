@@ -237,7 +237,7 @@ img {
   animation-iteration-count: 1;
 }
 
-@keyframes fondo-montana-animation {
+/* @keyframes fondo-montana-animation {
   0% {
     height: 50%;
     top: 50%;
@@ -247,7 +247,7 @@ img {
     height: 100%;
     top: 0%;
   }
-}
+} */
 
 
 /* Circuito */
@@ -306,7 +306,7 @@ img {
   left: 55%;
 }
 
-@keyframes luz {
+/* @keyframes luz {
   0% {
     opacity: 20%;
   }
@@ -318,7 +318,7 @@ img {
   100% {
     opacity: 100%;
   }
-}
+} */
 
 /* contenido principal y calculadora */
 .contenido {
@@ -355,7 +355,7 @@ img {
   animation-iteration-count: 1;
 }
 
-@keyframes aparecer-animation {
+/* @keyframes aparecer-animation {
   0% {
     opacity: 0%;
   }
@@ -367,7 +367,7 @@ img {
   45% {
     opacity: 100%;
   }
-}
+} */
 
 
 .circulo {
@@ -406,7 +406,7 @@ img {
   animation-duration: .5s;
   animation-iteration-count: 1;
 }
-
+/* 
 @keyframes circulo-superior-animation {
   0% {
     top: 100%;
@@ -419,9 +419,9 @@ img {
     left: 0;
     transition: rotate(0deg);
     transform: rotate(0deg);
-  }
+  } 
 }
-
+*/
 .indicador-calculadora {
   margin-top: 1.8%;
   transition: transform 0.4s ease-in 0s;
@@ -524,7 +524,7 @@ img {
   animation-iteration-count: 1;
 }
 
-@keyframes circulo-indicador-animation {
+/* @keyframes circulo-indicador-animation {
   0% {
     position: absolute;
     top: -10%;
@@ -540,7 +540,7 @@ img {
     width: 3rem;
     height: 3rem;
   }
-}
+} */
 
 .descripcion {
   color: white;
@@ -679,7 +679,7 @@ img {
   animation-iteration-count: 1;
 }
 
-@keyframes redes_animation {
+/* @keyframes redes_animation {
   0% {
     left: 45%;
   }
@@ -687,7 +687,7 @@ img {
   100% {
     left: 1rem;
   }
-}
+} */
 
 .icon {
   width: 3rem;

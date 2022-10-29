@@ -671,27 +671,27 @@ img {
   animation-iteration-count: 1;
 }
 
-@keyframes desplazamiento {
+/* @keyframes desplazamiento {
   0% {
     top: -100%;
   }
 
   100% {}
-}
+} */
 
 .animacion-desplazamiento-titulo1 {
   animation-duration: 0.5s;
   animation-name: desplazamiento2;
   animation-iteration-count: 1;
 }
-
+/* 
 @keyframes desplazamiento2 {
   0% {
     left: -10%;
   }
 
   100% {}
-}
+} */
 
 .animacion-desplazamiento-titulo2 {
   animation-duration: 0.35s;
@@ -699,7 +699,7 @@ img {
   animation-iteration-count: 1;
 }
 
-@keyframes desplazamiento3 {
+/* @keyframes desplazamiento3 {
   0% {
     left: 100%;
   }
@@ -719,5 +719,5 @@ img {
   100% {
     left: 0;
   }
-}
+} */
 </style>
