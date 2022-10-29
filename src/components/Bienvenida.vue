@@ -1,3 +1,20 @@
+<script setup>
+defineProps({
+  enterAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  exitAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  isRevert: {
+    type: Boolean,
+    required: true,
+  },
+});
+</script>
+
 <template>
   <!-- video de fondo -->
   <video autoplay="true" muted="true" loop="true" class="video-fondo" poster="/img/fondo_binario.png">
@@ -40,8 +57,17 @@
   <div class="degradado degradado_derecho"></div>
 
 
-  <div class="welcome">
-    <p class="title"> Welcome to <br>Monnerverse</p>
+  <div :class="{
+    welcome: true,
+    welcome_animation: this.exitAnimation && !this.isRevert,
+    welcome_animation_revert: this.enterAnimation && this.isRevert
+  }">
+    <p class="title">
+      <LabelAnimation :class="{
+        animacion_salida: this.exitAnimation && !this.isRevert,
+        animacion_salida_revert: this.enterAnimation && this.isRevert,
+      }">Welcome to</LabelAnimation> <br>Monnerverse
+    </p>
     <p class="subtitle">Utilities DeFi</p>
     <p class="description">Take advantage of this opportunity and <b>reserve</b> your spot in our
       pre-sale</p>
@@ -189,6 +215,76 @@ img {
   left: 60%;
 }
 
+.animacion_salida {
+  position: relative;
+  top: 0;
+  left: 0;
+  animation: retirar__texto 1000ms 1 normal;
+}
+
+.animacion_salida_revert {
+  position: relative;
+  top: 0;
+  left: 0;
+  animation-name: retirar__texto_revert;
+  animation-duration: 1s;
+
+}
+
+.welcome_animation {
+  animation-name: ocultar;
+  animation-duration: 1s;
+}
+
+.welcome_animation_revert {
+  animation-name: ocultar_revert;
+  animation-duration: 2s;
+
+}
+
+@keyframes ocultar {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes ocultar_revert {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes retirar__texto {
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  100% {
+    top: -5%;
+    left: -115%;
+  }
+}
+
+@keyframes retirar__texto_revert {
+  0% {
+    top: -5%;
+    left: -115%;
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+  }
+
+
+}
 
 @media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
   img {
