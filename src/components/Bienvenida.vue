@@ -1,19 +1,4 @@
-<script setup>
-defineProps({
-  enterAnimation: {
-    type: Boolean,
-    required: true,
-  },
-  exitAnimation: {
-    type: Boolean,
-    required: true,
-  },
-  isRevert: {
-    type: Boolean,
-    required: true,
-  }
-});
-</script>
+
 
 <template>
   <!-- video de fondo -->
@@ -59,21 +44,26 @@ defineProps({
 
   <div :class="{
     welcome: true,
-    welcome_animation: this.exitAnimation && !this.isRevert,
-    welcome_animation_revert: this.enterAnimation && this.isRevert
+    welcome_animation: exitAnimation && !isRevert,
+    welcome_animation_revert: enterAnimation && isRevert
   }">
     <p class="title">
-      <LabelAnimation :class="{
-        animacion_salida: this.exitAnimation && !this.isRevert,
-        animacion_salida_revert: this.enterAnimation && this.isRevert,
-      }">Welcome to</LabelAnimation> <br>Monnerverse
+      <b :class="{
+        animacion_salida: exitAnimation && !isRevert,
+        animacion_salida_revert: enterAnimation && isRevert,
+      }">Welcome to</b> <br>Monnerverse
     </p>
     <p class="subtitle">Utilities DeFi</p>
     <p class="description">Take advantage of this opportunity and <b>reserve</b> your spot in our
       pre-sale</p>
   </div>
 </template>
-
+<script>
+export default {
+ 
+  props: ["enterAnimation", "exitAnimation", "isRevert"]
+}
+</script>
 
 <style scoped>
 @font-face {
@@ -251,6 +241,7 @@ img {
     opacity: 0;
   }
 }
+
 @keyframes ocultar_revert {
   0% {
     opacity: 0;
@@ -260,6 +251,7 @@ img {
     opacity: 1;
   }
 }
+
 @keyframes retirar__texto {
   0% {
     top: 0;

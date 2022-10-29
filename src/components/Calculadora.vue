@@ -36,7 +36,10 @@
 
       <div :class="{
         'circulo-indicador': true,
-        'circulo-indicador-animation': this.enterAnimation && !this.isRevert,
+        'circulo_indicador_animation': this.enterAnimation && !this.isRevert,
+        'circulo_indicador_animation_revert': this.exitAnimation && this.isRevert,
+        'circulo_indicador_animation_salida': this.exitAnimation && !this.isRevert,
+        'circulo_indicador_animation_salida_revert': this.enterAnimation && this.isRevert,
       
       }"></div>
 
@@ -44,6 +47,8 @@
       <div :class="{
         'aparecer': this.enterAnimation && !this.isRevert,
         'aparecer_revert': this.exitAnimation && this.isRevert,
+        'aparecer_revert': this.exitAnimation && !this.isRevert,
+        'aparecer': this.enterAnimation && this.isRevert,
       }">>
 
         <div :class="{ circulo: true }">
@@ -72,6 +77,8 @@
       <div :class="{
         'rotar': this.enterAnimation && !this.isRevert,
         'rotar_revert': this.exitAnimation && this.isRevert,
+        'rotar_derecha': this.exitAnimation && !this.isRevert,
+        'rotar_derecha_revert': this.enterAnimation && this.isRevert,
       }">>
         <div :class="{
           circulo: true,
@@ -109,6 +116,7 @@
     'logo-redes': true,
     'desplazar_redes': this.enterAnimation && !this.isRevert,
     'desplazar_redes_revert': this.exitAnimation && this.isRevert,
+    'desplazar_redes_salida': this.exitAnimation && !this.isRevert,
   }">
 
     <a class="icon" href="https://t.me/monnerversecommunity" target="_blank">
@@ -201,7 +209,7 @@ export default {
   },
   mounted() {
     this.Calculator();
-    this.indicador = State.Hour48
+    this.indicador = State.Hour48;
   },
 };
 </script>
@@ -455,17 +463,37 @@ img {
   animation-iteration-count: 1;
 }
 
+.rotar_derecha {
+  animation-name: rotar_derecha;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
+.rotar_derecha_revert {
+  animation-name: rotar_derecha;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
 @keyframes rotar {
   0% {
-    /* top: 100%;
-    left: -40%;
-     */
     transform: rotate(-80deg) translate(-100%, 40%);
   }
 
   100% {
-    /* top: 0;
-    left: 0; */
+    transform: rotate(0deg) translate(0%, 0%);
+    ;
+  }
+}
+
+@keyframes rotar_derecha {
+  0% {
+    transform: rotate(-10deg) translate(40%, 100%);
+  }
+
+  100% {
     transform: rotate(0deg) translate(0%, 0%);
     ;
   }
@@ -566,10 +594,18 @@ img {
 
 
 
-.circulo-indicador-animation {
+.circulo_indicador_animation {
   animation-duration: .5s;
   animation-name: circulo-indicador-animation;
   animation-direction: normal;
+  animation-iteration-count: 1;
+}
+
+.circulo_indicador_animation_revert {
+  animation-duration: .5s;
+  animation-name: circulo-indicador-animation;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
 
@@ -589,6 +625,40 @@ img {
     width: 3rem;
     height: 3rem;
   }
+}
+
+.circulo_indicador_animation_salida {
+  animation-duration: .5s;
+  animation-name: circulo_indicador_salida;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+.circulo_indicador_animation_salida_revert {
+  animation-duration: .5s;
+  animation-name: circulo_indicador_salida;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+@keyframes circulo_indicador_salida {
+
+  0% {
+    position: absolute;
+    right: 48%;
+    top: 17%;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  100% {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    width: 6rem;
+    height: 6rem;
+  }
+
 }
 
 .descripcion {
@@ -736,7 +806,12 @@ img {
   animation-direction: reverse;
   animation-fill-mode: forwards;
 }
-
+/* .desplazar_redes_salida {
+  animation-name: redes_animation_salida;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+} */
 @keyframes redes_animation {
   0% {
     left: 45%;
@@ -746,7 +821,17 @@ img {
     left: 1rem;
   }
 }
+@keyframes redes_animation_salida {
+  0% {
+    left: 1rem;
+    bottom: 1rem;
+  }
 
+  100% {
+    left: -10rem;
+    bottom: -10rem;
+  }
+}
 .icon {
   width: 3rem;
   height: auto;

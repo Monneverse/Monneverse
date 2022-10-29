@@ -328,7 +328,6 @@ img {
   background: linear-gradient(to right, #029f50 0%, #0a664e 50%, #0e444d 100%);
   border: 1.2px solid black;
   border-radius: 0.5rem;
-  transition: ease-in all 0.5s;
   animation: button infinite alternate 5s;
   -webkit-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
@@ -433,10 +432,10 @@ h4 {
 
 .logo_redes {
   position: absolute;
-  bottom: 1%;
-  left: 1%;
-  width: 20%;
-  height: 5%;
+  bottom: 1rem;
+  left: 1rem;
+  width: 20rem;
+  height: 5rem;
   z-index: 14;
   display: flex;
   justify-content: start;
@@ -445,8 +444,7 @@ h4 {
 .icon {
   width: 3rem;
   height: auto;
-  z-index: 18;
-  margin-left: 1%;
+  margin-left: 1rem;
 }
 
 /* vista de movil*/
