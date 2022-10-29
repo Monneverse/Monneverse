@@ -328,7 +328,6 @@ img {
   background: linear-gradient(to right, #029f50 0%, #0a664e 50%, #0e444d 100%);
   border: 1.2px solid black;
   border-radius: 0.5rem;
-  transition: ease-in all 0.5s;
   animation: button infinite alternate 5s;
   -webkit-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
