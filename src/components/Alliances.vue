@@ -217,7 +217,9 @@ section {
     height: 100%;
   }
 }
-
+.logos {
+  display :none;
+}
 .logo {
   position: absolute;
   top: 2rem;
