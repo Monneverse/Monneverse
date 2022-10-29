@@ -140,29 +140,35 @@ import ComponenteIconos from "./componenteIconos.vue";
       </div>
     </div>
   </div>
-  <div class="logo-redes">
-        <div class="icon icon-telegram">
-            <a href="https://t.me/monnerversecommunity" target="_blank">
-                <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="">
-            </a>
-        </div>
-        <div class="icon icon-reddit">
-            <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-                <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="">
-            </a>
-        </div>
-        <div class="icon icon-discord ">
-            <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-                <img src="../assets/discord.svg" alt="logo discord" srcset="">
-            </a>
-        </div>
+ <!-- Contenedor de Redes Sociales -->
+ <div class="logo_redes">
+    <div class="icon icon-telegram">
+      <a href="https://t.me/monnerversecommunity" target="_blank">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+      </a>
     </div>
+    <div class="icon icon-reddit">
+      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
+      </a>
+    </div>
+    <div class="icon icon-discord">
+      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+      </a>
+    </div>
+  </div>
 
   <!-- FIN CONTENIDO -->
 </template>
 
 <style scoped>
 /* FONDO */
+img {
+  height: 100%;
+  width: 100%;
+}
+
 .fondo {
   position: absolute;
   background-color: #040709;
@@ -415,27 +421,29 @@ import ComponenteIconos from "./componenteIconos.vue";
     margin-right: .5%;
   }
 }
-.logo-redes {
-  position: absolute;
-  bottom: 0%;
-  left: 3rem;
-  width: 20rem;
-  height: 5rem;
-  z-index: 14;
-  display: flex;
-  justify-content: start;
-  display: none;
-}
+
+
+
 @media screen and (width > 768px) {
   .logo-redes {
     display: flex;
   }
 }
 
-.icon img {
-  width: 3.5vw;
+.logo_redes {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  width: 20rem;
+  height: 5rem;
+  z-index: 14;
+  display: flex;
+  justify-content: start;
+}
+
+.icon {
+  width: 3rem;
   height: auto;
   margin-left: 1rem;
 }
-
 </style>
