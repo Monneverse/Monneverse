@@ -40,8 +40,10 @@ import Footer from "./components/Footer.vue";
     Fonts para el proyecto calibri, Bahnschrift semibold semiconden, work sans, work sans Semibold
      LCD, LCD MOno, Roboto
     -->
+
+
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 1 }">
-      <Bienvenida />
+      <Bienvenida :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 2 }">
@@ -53,7 +55,7 @@ import Footer from "./components/Footer.vue";
     </div>
 
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 4 }">
-      <Calculadora :index_pagina="index_pagina" />
+      <Calculadora  :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"  />
     </div>
 
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 5 }">
@@ -105,7 +107,7 @@ import Footer from "./components/Footer.vue";
       <Fase4 :index_pagina="index_pagina" />
     </div>
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 19 }">
-      <Fase5  :index_pagina="index_pagina"/>
+      <Fase5 :index_pagina="index_pagina" />
     </div>
     <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == limite }">
       <Footer :index_pagina="index_pagina" :limite="limite" :enter="enterAnimation" :exit="exitAnimation"></Footer>
@@ -135,6 +137,8 @@ export default {
   },
   methods: {
     next() {
+      this.exitAnimation = true;
+      this.scroll = false;
       let newPosition = this.index_pagina;
 
       if (this.index_pagina < this.limite) {
@@ -148,14 +152,16 @@ export default {
 
     },
     before() {
+      this.exitAnimation = true;
+      this.scroll = false;
       let newPosition = this.index_pagina;
-
       if (this.index_pagina > 1) {
         newPosition = this.index_pagina - 1;
         if (newPosition == 12) {
           newPosition = 10;
         }
-        this.isRevert = false;
+
+        this.isRevert = true;
         this.CambiarContenedor(newPosition)
       }
 
@@ -326,6 +332,7 @@ export default {
     CambiarContenedor(newPosition) {
       setTimeout(() => {
         this.scroll = false;
+        let mismoContenedor = this.index_pagina == newPosition;
         this.index_pagina = newPosition;
         this.isVisibleLogo = true;
         if (
@@ -343,14 +350,19 @@ export default {
           window.location.pathname
         );
         this.UpdateNav(this.index_pagina);
-        this.exitAnimation = false;
-        this.enterAnimation = true;
+        if (mismoContenedor == false) {
+          this.exitAnimation = false;
+          this.enterAnimation = true;
+        }
+
 
       }, 500);
 
       setTimeout(() => {
         this.scroll = true;
+
         this.enterAnimation = false;
+
       }, 1000);
     },
     DisabledZoom() {
@@ -374,7 +386,6 @@ export default {
       if (this.scroll) {
         this.exitAnimation = true;
         this.scroll = false;
-
         let newPosition = this.index_pagina;
         if (event.deltaY > 0) {
           if (this.index_pagina < this.limite) {
@@ -393,6 +404,8 @@ export default {
             }
           }
         }
+
+
         this.CambiarContenedor(newPosition)
       }
     },
@@ -422,6 +435,7 @@ export default {
     document.addEventListener("drag", this.returnMethods());
     this.orientacion = typeOrientacion.none;
     this.orientacion = typeOrientacion.center;
+    this.CambiarContenedor(1)
   },
 };
 </script>
