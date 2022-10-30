@@ -44,13 +44,13 @@
 
   <div :class="{
     welcome: true,
-    welcome_animation: exitAnimation && !isRevert,
-    welcome_animation_revert: enterAnimation && isRevert
+    welcome_animation31152814: exitAnimation && !isRevert,
+    welcome_animation_revert31152814: enterAnimation && isRevert
   }">
     <p class="title">
       <b :class="{
-        animacion_salida: exitAnimation && !isRevert,
-        animacion_salida_revert: enterAnimation && isRevert,
+        animacion_salida31152814: exitAnimation && !isRevert,
+        animacion_salida_revert31152814: enterAnimation && isRevert,
       }">Welcome to</b> <br>Monnerverse
     </p>
     <p class="subtitle">Utilities DeFi</p>

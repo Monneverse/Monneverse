@@ -13,7 +13,7 @@ defineProps({
     <div
       :class="{
         fondo_rayos: true,
-        'animacion-desplazamiento': index_pagina == 10,
+        'animacion-desplazamiento': index_pagina == 101,
       }"
     >
       <img src="/img/rayos.png" alt="" />
@@ -36,7 +36,7 @@ defineProps({
     <div
       :class="{
         benefits: true,
-        aparecer: index_pagina == 10,
+        aparecer: index_pagina == 101,
       }"
     >
       <div class="contenido">
