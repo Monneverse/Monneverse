@@ -152,7 +152,7 @@ img {
     transform: scaleY(-1);
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 900px) {
     .fondo {
         position: absolute;
         top: 0;
@@ -340,8 +340,8 @@ img {
 
 .texto_auditoria {
     position: absolute;
+    width: 100%;
     top: 20%;
-    left: 34%;
     color: white;
     text-align: center;
     justify-content: center;
@@ -356,11 +356,10 @@ img {
     text-transform: uppercase;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 900px) {
     .texto_auditoria {
         position: absolute;
         top: 13%;
-        left: 3%;
         color: white;
         text-align: center;
         justify-content: center;
@@ -369,7 +368,7 @@ img {
     }
 
     .texto_auditoria p {
-        font-size: 9vw;
+        font-size: 2.7rem;
         font-family: "Bahn";
         font-weight: 500;
         text-transform: uppercase;
@@ -440,7 +439,7 @@ img {
     box-shadow: 0px 2px 28px 15px #08047A;
 } */
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 900px) {
     .fondoSolidity {
         top: 40%;
         left: 26%;
@@ -491,14 +490,14 @@ img {
 
 @media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
     .fondoSolidity {
-        top: 30%;
+        top: 35%;
         left: 26%;
         height: 15%;
         width: 50%;
     }
 
     .auditoria1 {
-        top: 30%;
+        top: 35%;
         left: 26%;
         height: 15%;
         width: 50%;
@@ -515,14 +514,14 @@ img {
     }
 
     .fondoCertik {
-        top: 50%;
+        top:55%;
         left: 26%;
         width: 50%;
         height: 15%;
     }
 
     .auditoria2 {
-        top: 50%;
+        top: 55%;
         left: 26%;
         width: 50%;
         height: 15%;
@@ -575,7 +574,7 @@ img {
     z-index: 7;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 900px) {
     .btn_registro {
         bottom: 17%;
         left: 28%;
@@ -618,7 +617,7 @@ img {
     margin-left: 1rem;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 900px) {
     .logo-redes {
         left: 0.5rem;
         bottom: 0.5rem;
