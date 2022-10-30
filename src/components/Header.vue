@@ -373,8 +373,8 @@ img {
 }
 
 .center {
-  left: 40%;
-  transform: translate(-150%, 0);
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .right {
