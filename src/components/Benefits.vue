@@ -27,9 +27,16 @@ defineProps({
     </div>
 
     <div class="display_flex">
-      <div :class="{ benefits: true, 'animacion-aparecer': index_pagina == 999 }">
+      <div
+        :class="{ benefits: true, 'animacion-aparecer': index_pagina == 999 }"
+      >
         <div class="beneficio">
-          <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
+          <img
+            id="a"
+            class="circulos"
+            src="/img/plus.svg"
+            alt="Plus-Beneficios"
+          />
           <div class="content-price">
             <div class="titulo-benefit">
               <h1><span>$</span>1500<b>USD-MNR</b></h1>
@@ -42,8 +49,14 @@ defineProps({
             </div>
           </div>
         </div>
+
         <div class="beneficio">
-          <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
+          <img
+            id="b"
+            class="circulos"
+            src="/img/plus.svg"
+            alt="Plus-Beneficios"
+          />
           <div class="content-price">
             <div class="titulo-two">
               <h1>Phase 1</h1>
@@ -56,7 +69,12 @@ defineProps({
           </div>
         </div>
         <div class="beneficio">
-          <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
+          <img
+            id="c"
+            class="circulos"
+            src="/img/plus.svg"
+            alt="Plus-Beneficios"
+          />
           <div
             :class="{
               'content-price': true,
@@ -81,7 +99,12 @@ defineProps({
           </div>
         </div>
         <div class="beneficio">
-          <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
+          <img
+            id="d"
+            class="circulos"
+            src="/img/plus.svg"
+            alt="Plus-Beneficios"
+          />
           <div class="content-price">
             <div class="titulo-benefit">
               <div class="info-two"><p>At PancakeSwap</p></div>
@@ -108,7 +131,10 @@ defineProps({
         </div>
       </div>
       <div class="aro">
-        <img :class="{ image1:true, 'animacion-aparecer': index_pagina == 999 }" src="/img/Imagen1.png" />
+        <img
+          :class="{ image1: true, 'animacion-aparecer': index_pagina == 999 }"
+          src="/img/Imagen1.png"
+        />
 
         <img
           :class="{
@@ -174,11 +200,11 @@ p {
 .titulo {
   position: absolute;
   top: 4.2rem;
-  left: 4.5rem;
+  left: 5.5rem;
   z-index: 45;
 }
 .titulo h1 {
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-family: "Work Sans", sans-serif;
   font-weight: 500;
   color: white;
@@ -192,7 +218,7 @@ p {
   flex-direction: column;
   width: 90%;
   height: 75%;
-  top: 18%;
+  top: 14%;
 }
 .beneficio {
   width: 100%;
@@ -200,15 +226,24 @@ p {
   display: flex;
   flex-direction: column;
 }
-.content-price {
-  width: 100%;
-  height: 50%;
+.beneficio:nth-child(1) {
+  height: 20%;
 }
-.content-text {
-  width: 100%;
-  height: 50%;
+.beneficio:nth-child(2) {
+  height: 10%;
+}
+.beneficio:nth-child(3) {
+  height: 10%;
+}
+.beneficio:nth-child(4) {
+  margin-top: 15%;
+  height: 45%;
 }
 
+.content-price {
+  width: 100%;
+  height: 80%;
+}
 .titulo-benefit {
   margin: 0;
   width: 100;
@@ -220,7 +255,7 @@ p {
   font-family: "Work Sans", sans-serif;
   color: white;
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   margin-left: 5%;
 }
 .titulo-benefit h1 span {
@@ -257,14 +292,14 @@ p {
   font-family: "Work Sans", sans-serif;
   color: white;
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   margin-left: 5%;
 }
 .titulo-two h1 span {
   color: #37f395;
 }
 .content-text {
-  height: 50%;
+  height: 70%;
   width: 90%;
   margin-left: 5%;
 }
@@ -282,7 +317,7 @@ p {
   font-size: 0.8rem;
 }
 .text {
-  height: 80%;
+  height: 0%;
 }
 .fondo {
   position: absolute;
@@ -413,17 +448,27 @@ p {
   }
 } */
 .circulos {
-  display: flex;
-  flex-direction: column;
   position: relative;
-  top: 30%;
+  top: 20%;
   left: -3%;
-  width: 2rem;
+  width: 1rem;
   z-index: 33;
+}
+#a {
+  top: 40%;
+}
+#b {
+  top: 50%;
+}
+#c {
+  top: 50%;
+}
+#d {
+  top: 22%;
 }
 .circulos img {
   margin: 0 auto;
-  width: 1rem;
+  width: 4%;
   z-index: 5;
 }
 
@@ -444,7 +489,6 @@ p {
     margin-bottom: 0;
   }
   .image1 {
-    
   }
   .image {
     position: relative;
@@ -452,7 +496,7 @@ p {
   }
   .animacion-aro {
     animation-name: aro;
-    animation-duration: .5s;
+    animation-duration: 0.5s;
 
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -475,6 +519,18 @@ p {
     left: -4%;
     width: 8%;
     z-index: 33;
+  }
+  #a {
+    top: 30%;
+  }
+  #b {
+    top: 30%;
+  }
+  #c {
+    top: 30%;
+  }
+  #d {
+    top: 30%;
   }
   .beneficio {
     width: 80%;
@@ -503,6 +559,7 @@ p {
   }
   .beneficio:nth-child(4) {
     height: 80%;
+    margin-top: 0;
   }
 
   .content-price {
@@ -614,6 +671,9 @@ p {
     position: relative;
     height: 80%;
     top: 30%;
+  }
+  .beneficio:nth-child(4) {
+    margin-top: 0;
   }
 }
 
