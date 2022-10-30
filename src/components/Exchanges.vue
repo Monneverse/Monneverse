@@ -454,6 +454,12 @@ import ComponenteIconos from "./componenteIconos.vue";
     flex: initial;
     margin-right: 30px;
   }
+  .arrow{
+    display: none;
+  }
+  .arrow2{
+    display: none;
+  }
 }
 
 .caja-cryptos:nth-child(5) {

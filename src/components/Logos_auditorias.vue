@@ -7,7 +7,7 @@
     <div class="fondo-oscuro"></div>
     <div id="logo-1" class="logo">
         <img src="/img/logo_Grande.png" alt="" />
-    </div>
+    </div> 
     <div class="fondo-montana">
         <img src="/img/fondo-montana.png" alt="" srcset="" />
     </div>
