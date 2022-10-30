@@ -17,13 +17,19 @@ defineProps({
 
     <!--FONDOS-->
     <div class="fondo-video">
+      <!-- video de fondo -->
       <video preload="auto" autoplay="true" muted="true" loop="true" class="video-fondo"
         poster="/img/fondo_binario.png">
-        <source src="/video/Full-HD-Lite.mp4" type="video/mp4">
-        <source src="/video/Full-Hd-Lite.webm" type="video/webm">
+        <source src="/public/video/Full-HD-Lite.mp4" type="video/mp4">
+        <source src="/public/video/Full-HD-Lite.webm" type="video/webm">
+        <source src="/public/video/Full-HD-Lite-IPhone.mp4" type="video/mp4">
+        <!-- <source src="/public/video/Full-HD-Lite.mov">
+    <source src="/public/video/Full-HD-Lite.m4v">
+    <source src="/public/video/Full-HD-Lite.ts"> -->
         <p>Your browser doesn't support HTML5 video. Here is a <a href="/video/Full-HD-Lite.mp4">link to the video</a>
           instead.</p>
       </video>
+
     </div>
 
     <div class="fondo filtro-superior"></div>
