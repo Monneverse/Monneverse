@@ -249,15 +249,15 @@ img {
   }
 
   .circulo__1 {
-    left: 13%;
-    top: 20%;
+    left: 10%;
+    top: 28%;
     width: 80%;
   }
 
   .circulo__2 {
-    left: 8%;
-    top: 22%;
-    width: 90%;
+    left: 0%;
+    top: 24%;
+    width: 100%;
   }
 
   .componentes {
