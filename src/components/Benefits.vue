@@ -108,7 +108,7 @@ defineProps({
         </div>
       </div>
       <div class="aro">
-        <img src="/img/Imagen1.png" />
+        <img :class="{ image1:true, 'animacion-aparecer': index_pagina == 9 }" src="/img/Imagen1.png" />
 
         <img
           :class="{
@@ -442,6 +442,9 @@ p {
     width: 30%;
     margin-right: 2%;
     margin-bottom: 0;
+  }
+  .image1 {
+    
   }
   .image {
     position: relative;
