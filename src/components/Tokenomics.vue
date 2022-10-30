@@ -373,7 +373,7 @@ img {
 
 .purchase-tax h2 {
   text-align: right;
-  font-size: 10vw;
+  font-size: 8vw;
   font-weight: 500;
 }
 
@@ -465,7 +465,7 @@ img {
 }
 
 .sale-tax h2 {
-  font-size: 10vw;
+  font-size: 8vw;
   font-weight: 500;
 }
 
