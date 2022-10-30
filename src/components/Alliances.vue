@@ -17,9 +17,13 @@ defineProps({
 
     <!--FONDOS-->
     <div class="fondo-video">
-      <video src="/public/video/Full-HD-Lite.mp4" autoplay="true" muted="true" loop="true"
-        poster="/img/fondo_binario.png"></video>
-
+      <video preload="auto" autoplay="true" muted="true" loop="true" class="video-fondo"
+        poster="/img/fondo_binario.png">
+        <source src="/video/Full-HD-Lite.mp4" type="video/mp4">
+        <source src="/video/Full-Hd-Lite.webm" type="video/webm">
+        <p>Your browser doesn't support HTML5 video. Here is a <a href="/video/Full-HD-Lite.mp4">link to the video</a>
+          instead.</p>
+      </video>
     </div>
 
     <div class="fondo filtro-superior"></div>
@@ -42,7 +46,7 @@ defineProps({
 
     <div class="contenido-principal">
       <div class="texto">
-       
+
       </div>
 
       <!--UPCOMING ALLIANCES-->
@@ -128,18 +132,21 @@ defineProps({
   font-style: semibold;
   font-stretch: semi-condensed;
 }
+
 @font-face {
   font-family: "Arial";
   src: url("/Fonts/arial.ttf");
   font-style: semibold;
   font-stretch: semi-condensed;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/Fonts/Montserrat-Regular.ttf");
   font-style: semibold;
   font-stretch: semi-condensed;
 }
+
 section {
   width: 80%;
   height: 100%;
@@ -183,7 +190,7 @@ section {
 .texto>section p {
   width: 80%;
   float: right;
-   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-size: 4.5vw;
   text-align: left;
   color: #ffffff;
@@ -478,7 +485,7 @@ section {
   color: black;
   display: flex;
   flex-direction: column;
-   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-weight: 600;
   font-size: 2vw;
 }
@@ -578,7 +585,7 @@ section {
   position: absolute;
   z-index: 12;
   color: #ffffff;
-   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-size: 3.5vw;
   font-weight: 400;
 }
