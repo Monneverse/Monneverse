@@ -16,7 +16,6 @@ export default {
       <img src="/img/rayos.png" alt="" />
     </div>
 
-
     <div class="fondo-telefono">
       <img src="/img/celFondo.svg" alt="" srcset="" />
     </div>

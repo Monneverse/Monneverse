@@ -122,11 +122,6 @@ import ComponenteIconos from "./componenteIconos.vue";
 
 <style scoped>
 /* FONDO */
-img {
-  height: 100%;
-  width: 100%;
-}
-
 .fondo {
   position: absolute;
   background-color: #040709;
@@ -477,7 +472,6 @@ img {
   }
 }
 
-
 .logo-redes {
   position: absolute;
   bottom: 0%;
@@ -496,19 +490,8 @@ img {
   }
 }
 
-.logo_redes {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  width: 20rem;
-  height: 5rem;
-  z-index: 14;
-  display: flex;
-  justify-content: start;
-}
-
-.icon {
-  width: 3rem;
+.icon img {
+  width: 3.5vw;
   height: auto;
   margin-left: 1rem;
 }

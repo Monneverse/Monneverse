@@ -205,10 +205,6 @@ section {
   }
 }
 
-.logos {
-  display: none;
-}
-
 .logo {
   position: absolute;
   top: 2rem;
@@ -225,7 +221,6 @@ section {
   animation-iteration-count: 1;
 }
 
-/* 
 @keyframes animar-logo {
   0% {
     position: absolute;
@@ -246,7 +241,7 @@ section {
     z-index: 12;
     opacity: 100%;
   }
-} */
+}
 
 .fondo {
   width: 100%;
@@ -268,9 +263,6 @@ section {
   opacity: 40%;
   z-index: 0;
 }
-
-
-
 
 .fondo-telefono {
   position: fixed;
@@ -313,7 +305,6 @@ section {
   animation-iteration-count: 1;
 }
 
-/* 
 @keyframes fondo-montana-animation {
   0% {
     height: 50%;
@@ -325,7 +316,7 @@ section {
     width: 100%;
     height: 75%;
   }
-} */
+}
 
 .fondo-oscurecer {
   position: absolute;
@@ -531,7 +522,6 @@ section {
   animation-iteration-count: 1;
 }
 
-/* 
 @keyframes animacion-arco {
   0% {
     top: 70%;
@@ -542,7 +532,7 @@ section {
     top: 0%;
     transform: rotateZ(0deg);
   }
-} */
+}
 
 .rectangulos {
   position: absolute;
@@ -734,7 +724,7 @@ section {
   animation-iteration-count: 1;
 }
 
-/* @keyframes aparecer {
+@keyframes aparecer {
   0% {
     opacity: 0%;
   }
@@ -742,5 +732,5 @@ section {
   100% {
     opacity: 100%;
   }
-} */
+}
 </style>
