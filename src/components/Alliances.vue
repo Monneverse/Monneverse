@@ -269,52 +269,8 @@ section {
   z-index: 0;
 }
 
-.logos {
-  width: 100%;
-  height: 100%;
-}
 
-.logos .grupo-logos {
-  width: 100%;
-  height: 50%;
-}
 
-.grupo-logos img {
-  width: 7rem;
-}
-
-.grupo-logos .grupo {
-  position: relative;
-  top: 6rem;
-  align-items: center;
-  margin: 0 auto;
-  width: 70%;
-}
-
-.grupo-2 img:nth-child(1) {
-  transform: rotateZ(-10deg);
-}
-
-.grupo-2 img:nth-child(2) {
-  transform: rotateZ(-10deg);
-}
-
-.logo-alone {
-  width: 80%;
-  height: 40%;
-  display: flex;
-  align-items: flex-end;
-}
-
-.logo-alone img {
-  width: 80%;
-}
-
-@media screen and (width > 500px) {
-  .logos {
-    display: none;
-  }
-}
 
 .fondo-telefono {
   position: fixed;

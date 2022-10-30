@@ -33,6 +33,7 @@ defineProps({
     <div class="contrato">
       <b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span>
     </div>
+    <div class="separar"></div>
     <div class="buyNow">
       <button class="btn_moner">
         <div class="texto1">BUY MONNER</div>
@@ -599,9 +600,13 @@ h4 {
   }
 
   .buyNow {
+    left: 10%;
+    width: 100%;
     height: 130%;
   }
-
+  .btn_moner{
+    width: 100%;
+  }
   .buyNow .logos {
     top: -10%;
   }
@@ -609,9 +614,13 @@ h4 {
   .buyNow .logos .meta {
     width: 10%;
   }
+  .separar{
+    height: 20%;
+    
+  }
 
   .contrato {
-    font-size: 55%;
+    font-size: 65%;
     left: -2%;
   }
 

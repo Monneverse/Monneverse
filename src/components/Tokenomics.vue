@@ -12,16 +12,15 @@ export default {
 <template>
   <!-- Fondos -->
   <div class="fondo">
-    <div
-      :class="{ fondo_rayos: true, 'animacion-aparecer': index_pagina == 9 }"
-    >
+    <div :class="{ fondo_rayos: true, 'animacion-aparecer': index_pagina == 9 }">
       <img src="/img/rayos.png" alt="" />
     </div>
-  
+
+
     <div class="fondo-telefono">
       <img src="/img/celFondo.svg" alt="" srcset="" />
     </div>
-    
+
     <div class="fondo filtro-superior"></div>
     <div class="fondo fondo-oscurecer"></div>
     <div class="fondoTokenomics">
@@ -182,6 +181,7 @@ img {
   background-color: black;
   z-index: 0;
 }
+
 .fondo_rayos {
   position: absolute;
   left: -3%;
@@ -195,24 +195,25 @@ img {
   width: 100%;
   height: 100%;
 }
-@media screen and (width > 769px){
-  .fondo_rayos{
+
+@media screen and (width > 769px) {
+  .fondo_rayos {
 
     display: none;
   }
-  
+
 }
+
 .filtro-superior {
   position: absolute;
   z-index: 4;
-  background: radial-gradient(
-    circle at center,
-    #14ec84 0%,
-    #0b5f50 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #14ec84 0%,
+      #0b5f50 50%,
+      #505863 100%);
   opacity: 30%;
 }
+
 .fondo-oscurecer {
   position: absolute;
   z-index: 42;
@@ -220,6 +221,7 @@ img {
   opacity: 30%;
   mix-blend-mode: multiply;
 }
+
 @media screen and (width < 769px) {
   .fondo {
     position: absolute;
@@ -230,12 +232,12 @@ img {
     background-color: rgb(0, 0, 0);
     z-index: 0;
   }
+
   .filtro-superior {
     position: absolute;
     opacity: 60%;
   }
 }
-
 
 .fondo-telefono {
   position: fixed;
@@ -520,6 +522,7 @@ img {
   display: flex;
   justify-content: center;
 }
+
 @media screen and (width < 769px) {
   .container-alianza {
     display: none;
@@ -623,6 +626,7 @@ img {
   animation-name: desplazamiento2;
   animation-iteration-count: 1;
 }
+
 /* 
 @keyframes desplazamiento2 {
   0% {
