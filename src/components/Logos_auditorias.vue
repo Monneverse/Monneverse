@@ -152,7 +152,7 @@ img {
     transform: scaleY(-1);
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 900px) {
+@media only screen and (min-device-width: 75px) and (max-device-width: 900px) {
     .fondo {
         position: absolute;
         top: 0;
@@ -356,10 +356,10 @@ img {
     text-transform: uppercase;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 900px) {
+@media only screen and (min-device-width: 1px) and (max-device-width: 900px) {
     .texto_auditoria {
         position: absolute;
-        top: 13%;
+        top: 11.4%;
         color: white;
         text-align: center;
         justify-content: center;
@@ -439,7 +439,7 @@ img {
     box-shadow: 0px 2px 28px 15px #08047A;
 } */
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 900px) {
+@media only screen and (min-device-width: 75px) and (max-device-width: 900px) {
     .fondoSolidity {
         top: 40%;
         left: 26%;
@@ -574,7 +574,7 @@ img {
     z-index: 7;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 900px) {
+@media only screen and (min-device-width: 75px) and (max-device-width: 900px) {
     .btn_registro {
         bottom: 17%;
         left: 28%;
@@ -617,7 +617,7 @@ img {
     margin-left: 1rem;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 900px) {
+@media only screen and (min-device-width: 75px) and (max-device-width: 900px) {
     .logo-redes {
         left: 0.5rem;
         bottom: 0.5rem;
