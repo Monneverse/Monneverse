@@ -136,8 +136,16 @@ export default {
 
 <style scoped>
 @font-face {
-  font-family: "WorkSans";
-  src: url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
+  font-family: "Work Sans", serif;
+  src: url("/Fonts/WorkSans.ttf");
+  font-style: semibold;
+}
+
+@font-face {
+  font-family: "Bahn";
+  src: url("/Fonts/BAHNSCHRIFT9.ttf");
+  font-style: semibold;
+  font-stretch: semi-condensed;
 }
 
 /* Fondo de la pagina*/
@@ -157,7 +165,7 @@ img {
 
 .titulo h1 {
   color: white;
-  font-family: "WorkSans", sans-serif;
+  font-family: "Work Sans", serif;
   font-size: 7vw;
   font-weight: 500;
 }
@@ -165,7 +173,7 @@ img {
 @media screen and (min-width: 769px) {
   .titulo h1 {
     color: white;
-    font-family: "WorkSans", sans-serif;
+    font-family: "Work Sans", serif;
     font-size: 4vw;
     font-weight: 500;
   }
@@ -364,7 +372,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  font-family: "WorkSans", sans-serif;
+  font-family: "Work Sans", serif;
   color: white;
   width: 100%;
   height: 100%;
@@ -457,7 +465,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  font-family: "WorkSans", sans-serif;
+  font-family: "Work Sans", serif;
   color: white;
   width: 100%;
   height: 100%;
@@ -546,7 +554,7 @@ img {
   text-align: center;
   width: 100%;
   color: white;
-  font-family: "WorkSans", sans-serif;
+  font-family: "Work Sans", serif;
   font-size: 2.5vw;
   font-weight: 500;
 }

@@ -25,6 +25,19 @@ defineProps({
 </template>
 
 <style scoped>
+@font-face {
+  font-family: "Work Sans", serif;
+  src: url("/Fonts/WorkSans.ttf");
+  font-style: semibold;
+}
+
+@font-face {
+  font-family: "Bahn";
+  src: url("/Fonts/BAHNSCHRIFT9.ttf");
+  font-style: semibold;
+  font-stretch: semi-condensed;
+}
+
 .contenedor_icono {
   display: flex;
   height: 100%;
@@ -40,6 +53,7 @@ defineProps({
   background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
   border-radius: 1rem;
 }
+
 @media only screen and (width > 769px) {
   .icon {
     width: 4rem;
@@ -61,31 +75,33 @@ defineProps({
   border-radius: 0.8em;
   margin: 0 auto;
 
-  font-family: Calibri;
+  font-family: "Work Sans", serif;
   text-transform: uppercase;
   left: 14%;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: white;
 
   width: 100%;
   height: 4rem;
 }
+
 @media only screen and (width > 769px) {
   .name_coin {
     background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
     display: flex;
     justify-content: left;
     border-radius: 0.8em;
-    font-family: Calibri;
+    font-family: "Work Sans", serif;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: .8rem;
     color: white;
     width: 60%;
     height: 4rem;
     margin-left: 4%;
   }
+
   .name_coin p {
     margin: 20px;
   }

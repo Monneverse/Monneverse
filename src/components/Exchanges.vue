@@ -121,6 +121,19 @@ import ComponenteIconos from "./componenteIconos.vue";
 </template>
 
 <style scoped>
+@font-face {
+  font-family: "Work Sans", serif;
+  src: url("/Fonts/WorkSans.ttf");
+  font-style: semibold;
+}
+
+@font-face {
+  font-family: "Bahn";
+  src: url("/Fonts/BAHNSCHRIFT9.ttf");
+  font-style: semibold;
+  font-stretch: semi-condensed;
+}
+
 /* FONDO */
 .fondo {
   position: absolute;
@@ -308,7 +321,7 @@ import ComponenteIconos from "./componenteIconos.vue";
       #38a6b7 40%,
       #5884bb 60%,
       #11334e 100%);
-  font-family: Calibri;
+  font-family: "Work Sans", serif;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

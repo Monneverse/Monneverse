@@ -213,8 +213,16 @@ export default {
 
 <style scoped>
 @font-face {
-  font-family: "WorkSans";
-  src: url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap")
+  font-family: "Work Sans", serif;
+  src: url("/Fonts/WorkSans.ttf");
+  font-style: semibold;
+}
+
+@font-face {
+  font-family: "Bahn";
+  src: url("/Fonts/BAHNSCHRIFT9.ttf");
+  font-style: semibold;
+  font-stretch: semi-condensed;
 }
 
 
@@ -496,7 +504,7 @@ img {
   left: 50%;
   transform: translate(-50%, -40%);
   width: 25%;
-  height: 25%;;
+  height: 25%;
 
 }
 
@@ -525,7 +533,7 @@ img {
 }
 
 .control>input {
-  font-family: "WorkSans", sans-serif;
+  font-family: "Work Sans", serif;
   font-size: 1.5rem;
   color: #067f4e;
   padding-right: 1rem;
@@ -549,7 +557,7 @@ img {
 }
 
 .control>label {
-  font-family: "WorkSans", sans-serif;
+  font-family: "Work Sans", serif;
   font-size: 1.5rem;
   color: white;
   padding: 0rem;
@@ -719,13 +727,13 @@ img {
   max-width: 35rem;
   width: 30%;
   z-index: 9;
-  font-family: "WorkSans", sans-serif;
+  font-family: "Work Sans", serif;
   color: white;
 }
 
 .informacion #title {
   font-size: 11vh;
-  font-family: "work Sans", sans-serif;
+  font-family: "Work Sans", serif;
   font-weight: 600;
 
 }
@@ -733,7 +741,7 @@ img {
 @media screen and (max-width: 1450px) {
   .informacion #title {
     font-size: 9vh;
-    font-family: "work Sans", sans-serif;
+    font-family: "Work Sans", serif;
     font-weight: 600;
 
   }
@@ -742,7 +750,7 @@ img {
 @media screen and (max-width: 1150px) {
   .informacion #title {
     font-size: 7vh;
-    font-family: "work Sans", sans-serif;
+    font-family: "Work Sans", serif;
     font-weight: 600;
 
   }
@@ -751,7 +759,7 @@ img {
 @media screen and (max-width: 950px) {
   .informacion #title {
     font-size: 5vh;
-    font-family: "work Sans", sans-serif;
+    font-family: "Work Sans", serif;
     font-weight: 600;
 
   }
@@ -759,13 +767,13 @@ img {
 
 .informacion #title span {
   color: #01c28d;
-  font-family: "WorkSans", sans-serif;
+  font-family: "Work Sans", serif;
 }
 
 .informacion #descripcion {
   margin-top: 2rem;
   text-align: start;
-  font-family: "work Sans", sans-serif;
+  font-family: "Work Sans", serif;
   font-size: 2.5vh;
   font-weight: 300;
   width: 100%;
@@ -870,7 +878,7 @@ img {
     max-width: 75rem;
     width: 60%;
     z-index: 9;
-    font-family: "work Sans", sans-serif;
+    font-family: "Work Sans", serif;
     color: white;
   }
 
@@ -878,13 +886,13 @@ img {
     margin-top: 0rem;
     margin-left: 4.56rem;
     text-align: start;
-    font-family: "work Sans", sans-serif;
+    font-family: "Work Sans", serif;
     font-size: 2.5vh;
     font-weight: 300;
     width: 100%;
   }
 
- 
+
 
 
   .form-controles {
@@ -901,18 +909,18 @@ img {
 
 
   .circulo-indicador {
-  position: relative;
-  left: 0%;
-  top: 30%;
-  transform: translate(0%, 0%);
-  width: 1.5rem;  
-  height: 1.5rem;
-  border-radius: 50%;
-  background-color: white;
+    position: relative;
+    left: 0%;
+    top: 30%;
+    transform: translate(0%, 0%);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: white;
 
 
-  z-index: 10;
-}
+    z-index: 10;
+  }
 
 
 

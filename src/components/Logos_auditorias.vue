@@ -537,6 +537,55 @@ img {
     }
 }
 
+@media only screen and (min-device-width: 428px) and (max-device-width: 926px) {
+    .fondoSolidity {
+        top: 39%;
+        left: 26%;
+        height: 10%;
+        width: 50%;
+    }
+
+    .auditoria1 {
+        top: 39%;
+        left: 26%;
+        height: 10%;
+        width: 50%;
+        border-radius: 1rem;
+    }
+
+    .auditoria1:hover {
+        width: 50%;
+        border: 2px solid #121026;
+        border-radius: 0.5rem;
+        -webkit-box-shadow: 0px 2px 28px 5px #08047a;
+        -moz-box-shadow: 0px 2px 28px 5px #08047a;
+        box-shadow: 0px 2px 28px 15px #08047a;
+    }
+
+    .fondoCertik {
+        top: 55%;
+        left: 26%;
+        width: 50%;
+        height: 10%;
+    }
+
+    .auditoria2 {
+        top: 55%;
+        left: 26%;
+        width: 50%;
+        height: 10%;
+    }
+
+    .auditoria2:hover {
+        width: 50%;
+        border: 2px solid #121026;
+        border-radius: 0.5rem;
+        -webkit-box-shadow: 0px 2px 28px 5px #08047a;
+        -moz-box-shadow: 0px 2px 28px 5px #08047a;
+        box-shadow: 0px 2px 28px 15px #08047a;
+    }
+}
+
 /* FIN LOGOS */
 
 /* BOTON */
