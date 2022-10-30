@@ -65,7 +65,7 @@ defineProps({
   text-transform: uppercase;
   left: 14%;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.4rem;
   color: white;
 
   width: 100%;
