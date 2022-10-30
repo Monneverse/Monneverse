@@ -116,6 +116,18 @@ defineProps({
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
+@font-face {
+  font-family: "Work Sans", serif;
+  src: url("/Fonts/WorkSans.ttf");
+  font-style: semibold;
+}
+
+@font-face {
+  font-family: "Bahn";
+  src: url("/Fonts/BAHNSCHRIFT9.ttf");
+  font-style: semibold;
+  font-stretch: semi-condensed;
+}
 section {
   width: 80%;
   height: 100%;
@@ -159,7 +171,7 @@ section {
 .texto>section p {
   width: 80%;
   float: right;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
   font-size: 4.5vw;
   text-align: left;
   color: #ffffff;
@@ -454,7 +466,7 @@ section {
   color: black;
   display: flex;
   flex-direction: column;
-  font-family: Calibri;
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
   font-weight: 600;
   font-size: 2vw;
 }
@@ -496,7 +508,7 @@ section {
   }
 
   .alianzas a {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     font-weight: 400;
   }
 
@@ -554,7 +566,7 @@ section {
   position: absolute;
   z-index: 12;
   color: #ffffff;
-  font-family: Calibri;
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
   font-size: 3.5vw;
   font-weight: 400;
 }
@@ -581,7 +593,7 @@ section {
   .rectangulo p {
     top: 6.2rem;
 
-    font-size: 2.5vw;
+    font-size: 2.2vw;
   }
 
   .rectangulo-medio {

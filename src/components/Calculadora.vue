@@ -532,7 +532,7 @@ img {
 }
 
 .control>input {
-  font-family: "Work Sans", serif;
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
   font-size: 1.5rem;
   color: #067f4e;
   padding-right: 1rem;
@@ -556,7 +556,7 @@ img {
 }
 
 .control>label {
-  font-family: "Work Sans", serif;
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
   font-size: 1.5rem;
   color: white;
   padding: 0rem;
@@ -693,7 +693,7 @@ img {
   width: 100%;
   text-align: center;
   user-select: none;
-  font-family: "WorkSans", sans-serif;
+ font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
   color: #c27e01;
   font-size: 6vh;
   font-weight: 600;
@@ -726,13 +726,13 @@ img {
   max-width: 35rem;
   width: 30%;
   z-index: 9;
-  font-family: "Work Sans", serif;
+font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
   color: white;
 }
 
 .informacion #title {
   font-size: 11vh;
-  font-family: "Work Sans", serif;
+font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
   font-weight: 600;
 
 }
@@ -740,7 +740,7 @@ img {
 @media screen and (max-width: 1450px) {
   .informacion #title {
     font-size: 9vh;
-    font-family: "Work Sans", serif;
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
     font-weight: 600;
 
   }
@@ -749,7 +749,7 @@ img {
 @media screen and (max-width: 1150px) {
   .informacion #title {
     font-size: 7vh;
-    font-family: "Work Sans", serif;
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
     font-weight: 600;
 
   }
@@ -758,7 +758,7 @@ img {
 @media screen and (max-width: 950px) {
   .informacion #title {
     font-size: 5vh;
-    font-family: "Work Sans", serif;
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
     font-weight: 600;
 
   }
@@ -766,13 +766,13 @@ img {
 
 .informacion #title span {
   color: #01c28d;
-  font-family: "Work Sans", serif;
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
 }
 
 .informacion #descripcion {
   margin-top: 2rem;
   text-align: start;
-  font-family: "Work Sans", serif;
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
   font-size: 2.5vh;
   font-weight: 300;
   width: 100%;
@@ -881,7 +881,7 @@ img {
     max-width: 75rem;
     width: 70%;
     z-index: 9;
-    font-family: "Work Sans", serif;
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
     color: white;
   }
 
@@ -889,7 +889,7 @@ img {
     margin-top: 0rem;
     margin-left: 4.56rem;
     text-align: start;
-    font-family: "Work Sans", serif;
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
     font-size: 2.5vh;
     font-weight: 300;
     width: 100%;

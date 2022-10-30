@@ -38,48 +38,81 @@ import ComponenteIconos from "./componenteIconos.vue";
     <div class="contenedor_crypto">
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/bunny-color.svg" iconname="pancakeswap" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/bunny-color.svg"
+            iconname="pancakeswap"
+          />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/Kucoin.svg" iconname="kucoin" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/Kucoin.svg"
+            iconname="kucoin"
+          />
         </div>
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/Gatebw.svg" iconname="gate.io" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/Gatebw.svg"
+            iconname="gate.io"
+          />
         </div>
       </div>
 
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/lbank2.svg" iconname="LBANK" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/lbank2.svg"
+            iconname="LBANK"
+          />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/okxlogo.svg" iconname="OKX" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/okxlogo.svg"
+            iconname="OKX"
+          />
         </div>
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/CoinGecko.svg" iconname="COINGECKO" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/CoinGecko.svg"
+            iconname="COINGECKO"
+          />
         </div>
       </div>
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/mexcglobal.svg" iconname="MEXC GLOBAL" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/mexcglobal.svg"
+            iconname="MEXC GLOBAL"
+          />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/xtcom.svg" iconname="XT.COM" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/xtcom.svg"
+            iconname="XT.COM"
+          />
         </div>
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/poloniex.svg" iconname="POLONIEX" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/poloniex.svg"
+            iconname="POLONIEX"
+          />
         </div>
       </div>
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/hotbit.svg" iconname="HOTBIT" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/hotbit.svg"
+            iconname="HOTBIT"
+          />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/coinmarket.svg" iconname="COINMARKET" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/coinmarket.svg"
+            iconname="COINMARKET"
+          />
         </div>
         <div class="cryptos">
           <ComponenteIconos iconos="/img/Exchanges/ftx.svg" iconname="FTX" />
@@ -87,14 +120,23 @@ import ComponenteIconos from "./componenteIconos.vue";
       </div>
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/latoken.svg" iconname="LATOKEN" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/latoken.svg"
+            iconname="LATOKEN"
+          />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/bitrue.svg" iconname="BITRUE" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/bitrue.svg"
+            iconname="BITRUE"
+          />
         </div>
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/favicon.svg" iconname="FAVICON" />
+          <ComponenteIconos
+            iconos="/img/Exchanges/favicon.svg"
+            iconname="FAVICON"
+          />
         </div>
       </div>
     </div>
@@ -102,17 +144,17 @@ import ComponenteIconos from "./componenteIconos.vue";
   <div class="logo-redes">
     <div class="icon icon-telegram">
       <a href="https://t.me/monnerversecommunity" target="_blank">
-        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
       </a>
     </div>
     <div class="icon icon-reddit">
       <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
       </a>
     </div>
-    <div class="icon icon-discord ">
+    <div class="icon icon-discord">
       <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-        <img src="../assets/discord.svg" alt="logo discord" srcset="">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
       </a>
     </div>
   </div>
@@ -171,7 +213,6 @@ import ComponenteIconos from "./componenteIconos.vue";
   opacity: 50%;
 }
 
-
 @media only screen and (width < 769px) {
   img {
     width: 100%;
@@ -195,10 +236,12 @@ import ComponenteIconos from "./componenteIconos.vue";
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at center,
-        #48d0ab 0%,
-        #097561 50%,
-        #505863 100%);
+    background: radial-gradient(
+      circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%
+    );
     z-index: 1;
   }
 
@@ -231,10 +274,12 @@ import ComponenteIconos from "./componenteIconos.vue";
     width: 300%;
     height: 200%;
     background-size: no-repeat center center fixed;
-    background: radial-gradient(circle at center,
-        #48d0ab 10%,
-        #097561 30%,
-        #0f161c 100%);
+    background: radial-gradient(
+      circle at center,
+      #48d0ab 10%,
+      #097561 30%,
+      #0f161c 100%
+    );
     z-index: 1;
     opacity: 100%;
   }
@@ -315,13 +360,15 @@ import ComponenteIconos from "./componenteIconos.vue";
 }
 
 .exchange_text p {
-  background: linear-gradient(to right,
-      #8753c1 0%,
-      #6f6cbe 10%,
-      #38a6b7 40%,
-      #5884bb 60%,
-      #11334e 100%);
-  font-family: "Work Sans", serif;
+  background: linear-gradient(
+    to right,
+    #8753c1 0%,
+    #6f6cbe 10%,
+    #38a6b7 40%,
+    #5884bb 60%,
+    #11334e 100%
+  );
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -348,7 +395,7 @@ import ComponenteIconos from "./componenteIconos.vue";
 .arrow,
 .arrow:before {
   position: absolute;
-  left: 50%
+  left: 50%;
 }
 
 .arrow {
@@ -366,7 +413,7 @@ import ComponenteIconos from "./componenteIconos.vue";
 }
 
 .arrow:before {
-  content: '';
+  content: "";
   width: 15px;
   height: 15px;
   top: 50%;
@@ -394,7 +441,7 @@ import ComponenteIconos from "./componenteIconos.vue";
 .arrow2,
 .arrow2:before {
   position: absolute;
-  left: 50%
+  left: 50%;
 }
 
 .arrow2 {
@@ -412,7 +459,7 @@ import ComponenteIconos from "./componenteIconos.vue";
 }
 
 .arrow2:before {
-  content: '';
+  content: "";
   width: 15px;
   height: 15px;
   top: 50%;
@@ -467,10 +514,10 @@ import ComponenteIconos from "./componenteIconos.vue";
     flex: initial;
     margin-right: 30px;
   }
-  .arrow{
+  .arrow {
     display: none;
   }
-  .arrow2{
+  .arrow2 {
     display: none;
   }
 }
@@ -487,7 +534,7 @@ import ComponenteIconos from "./componenteIconos.vue";
 @media only screen and (width > 769px) {
   .cryptos {
     width: 33%;
-    margin-right: .5%;
+    margin-right: 0.5%;
   }
 }
 
