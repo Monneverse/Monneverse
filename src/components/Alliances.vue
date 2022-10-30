@@ -42,12 +42,7 @@ defineProps({
 
     <div class="contenido-principal">
       <div class="texto">
-        <section>
-          <p>
-            Take advantage of this opportunity and RESERV your spot in our
-            pre-sale
-          </p>
-        </section>
+       
       </div>
 
       <!--UPCOMING ALLIANCES-->
