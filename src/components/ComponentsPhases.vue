@@ -15,7 +15,6 @@ defineProps({
   <div class="contenedor__fases">
     <div class="circulo-indicador"></div>
     <b>{{ title }}</b>
-    <br />
     <p>
       {{ description }}
     </p>
@@ -76,7 +75,7 @@ img {
 
   .circulo-indicador {
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 0%;
     transform: translate(-100%, 0%);
     width: 2rem;
