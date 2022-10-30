@@ -403,8 +403,7 @@ img {
   animation-fill-mode: forwards;
 }
 
-@keyframes aparecer-animation {
-  /* @keyframes aparecer-animation {
+/* @keyframes aparecer-animation {
   0% {
     opacity: 0%;
   }
@@ -419,70 +418,68 @@ img {
 } */
 
 
-  .circulo {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.circulo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .circulo-verde {
-    top: 18%;
-    left: 15%;
-    height: 70%;
-    width: 70%;
-  }
+.circulo-verde {
+  top: 18%;
+  left: 15%;
+  height: 70%;
+  width: 70%;
+}
 
-  .circulo img {
+.circulo img {
 
-    height: 60%;
-    width: 70%;
-  }
+  height: 60%;
+  width: 70%;
+}
 
-  .circulo-superior-animation {
-    animation-name: circulo-superior-animation;
-    animation-duration: .5s;
-    animation-iteration-count: 1;
-  }
+.circulo-superior-animation {
+  animation-name: circulo-superior-animation;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+}
 
-  .rotar_revert {
-    animation-name: rotar;
-    animation-duration: .5s;
-    animation-iteration-count: 1;
-    animation-direction: reverse;
-    animation-fill-mode: forwards;
-  }
+.rotar_revert {
+  animation-name: rotar;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
 
-  .rotar {
-    animation-name: rotar;
-    animation-duration: .5s;
-    animation-iteration-count: 1;
-  }
+.rotar {
+  animation-name: rotar;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+}
 
-  .rotar_derecha {
-    animation-name: rotar_derecha;
-    animation-duration: .5s;
-    animation-iteration-count: 1;
-    animation-direction: reverse;
-    animation-fill-mode: forwards;
-  }
+.rotar_derecha {
+  animation-name: rotar_derecha;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
 
-  .rotar_derecha_revert {
-    animation-name: rotar_derecha;
-    animation-duration: .5s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-  }
+.rotar_derecha_revert {
+  animation-name: rotar_derecha;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
 
-  @keyframes rotar {
-
-    /* 
+/* 
 @keyframes circulo-superior-animation {
   0% {
     transform: rotate(-80deg) translate(-100%, 40%);
@@ -510,118 +507,117 @@ img {
   } 
 }
 */
-    .indicador-calculadora {
-      margin-top: 1.8%;
-      transition: transform 0.4s ease-in 0s;
-      max-width: 60rem;
-    }
+.indicador-calculadora {
+  margin-top: 1.8%;
+  transition: transform 0.4s ease-in 0s;
+  max-width: 60rem;
+}
 
 
-    .form-controles {
-      position: absolute;
-      top: 82%;
-      left: -5%;
-      width: 100%;
-      z-index: 100;
-      display: flex;
-      justify-content: center;
-    }
+.form-controles {
+  position: absolute;
+  top: 82%;
+  left: -5%;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
 
-    .control {
-      color: #f9f9fa;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-left: 10%;
-      z-index: 1000;
-    }
+.control {
+  color: #f9f9fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+  z-index: 1000;
+}
 
-    .control>input {
-      font-family: "WorkSans", sans-serif;
-      font-size: 1.5rem;
-      color: #067f4e;
-      padding-right: 1rem;
-      padding-left: 1rem;
-      width: 60%;
-      max-width: 4rem;
-      min-height: 2.5rem;
-      border-radius: 2rem;
-      max-width: 8rem;
-      text-align: center;
-      margin-left: 2rem;
-      margin-right: 2rem;
-    }
-
-
-
-    #interes:disabled {
-      background-color: white;
-      user-select: none;
-      pointer-events: none;
-    }
-
-    .control>label {
-      font-family: "WorkSans", sans-serif;
-      font-size: 1.5rem;
-      color: white;
-      padding: 0rem;
-      text-align: center;
-      width: 5rem;
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
+.control>input {
+  font-family: "WorkSans", sans-serif;
+  font-size: 1.5rem;
+  color: #067f4e;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 60%;
+  max-width: 4rem;
+  min-height: 2.5rem;
+  border-radius: 2rem;
+  max-width: 8rem;
+  text-align: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 
 
 
+#interes:disabled {
+  background-color: white;
+  user-select: none;
+  pointer-events: none;
+}
 
-    #month-1 {
-      position: absolute;
-      top: 0;
-      transform: translate(0%, 450%);
-      z-index: 20;
-      color: white;
-      font-size: 4vh;
-    }
-
-    #month-2 {
-      position: absolute;
-      bottom: 20%;
-      z-index: 20;
-      transform: translate(450%, 0);
-      color: white;
-      font-size: 4vh;
-    }
-
-    .circulo-indicador {
-      position: absolute;
-      width: 2rem;
-      border-radius: 50%;
-      background-color: white;
-      height: 2rem;
-      top: 18%;
-      z-index: 10;
-    }
+.control>label {
+  font-family: "WorkSans", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0rem;
+  text-align: center;
+  width: 5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 
 
 
-    .circulo_indicador_animation {
-      animation-duration: .5s;
-      animation-name: circulo-indicador-animation;
-      animation-direction: normal;
-      animation-iteration-count: 1;
-    }
 
-    .circulo_indicador_animation_revert {
-      animation-duration: .5s;
-      animation-name: circulo-indicador-animation;
-      animation-direction: reverse;
-      animation-fill-mode: forwards;
-      animation-iteration-count: 1;
-    }
+#month-1 {
+  position: absolute;
+  top: 0;
+  transform: translate(0%, 450%);
+  z-index: 20;
+  color: white;
+  font-size: 4vh;
+}
 
-    @keyframes circulo-indicador-animation {
-      /* @keyframes circulo-indicador-animation {
+#month-2 {
+  position: absolute;
+  bottom: 20%;
+  z-index: 20;
+  transform: translate(450%, 0);
+  color: white;
+  font-size: 4vh;
+}
+
+.circulo-indicador {
+  position: absolute;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: white;
+  height: 2rem;
+  top: 18%;
+  z-index: 10;
+}
+
+
+
+.circulo_indicador_animation {
+  animation-duration: .5s;
+  animation-name: circulo-indicador-animation;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+
+.circulo_indicador_animation_revert {
+  animation-duration: .5s;
+  animation-name: circulo-indicador-animation;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+/* @keyframes circulo-indicador-animation {
   0% {
     position: absolute;
     top: -10%;
@@ -639,196 +635,196 @@ img {
   }
 } */
 
-      .circulo_indicador_animation_salida {
-        animation-duration: .5s;
-        animation-name: circulo_indicador_salida;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-      }
+.circulo_indicador_animation_salida {
+  animation-duration: .5s;
+  animation-name: circulo_indicador_salida;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
 
-      .circulo_indicador_animation_salida_revert {
-        animation-duration: .5s;
-        animation-name: circulo_indicador_salida;
-        animation-direction: reverse;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-      }
+.circulo_indicador_animation_salida_revert {
+  animation-duration: .5s;
+  animation-name: circulo_indicador_salida;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
 
-      @keyframes circulo_indicador_salida {
+@keyframes circulo_indicador_salida {
 
-        0% {
-          position: absolute;
-          right: 48%;
-          top: 17%;
-          width: 3rem;
-          height: 3rem;
-        }
+  0% {
+    position: absolute;
+    right: 48%;
+    top: 17%;
+    width: 3rem;
+    height: 3rem;
+  }
 
-        100% {
-          position: absolute;
-          top: 20%;
-          right: 20%;
-          width: 6rem;
-          height: 6rem;
-        }
+  100% {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    width: 6rem;
+    height: 6rem;
+  }
 
-      }
+}
 
-      .descripcion {
-        color: white;
-        position: absolute;
-        width: 100%;
-        top: 2rem;
-        left: 1rem;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 17;
-      }
-
-
-      .descripcion>p {
-        width: 100%;
-        text-align: center;
-        user-select: none;
-        font-family: "WorkSans", sans-serif;
-        color: #c27e01;
-        font-size: 6vh;
-        font-weight: 600;
-      }
+.descripcion {
+  color: white;
+  position: absolute;
+  width: 100%;
+  top: 2rem;
+  left: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 17;
+}
 
 
+.descripcion>p {
+  width: 100%;
+  text-align: center;
+  user-select: none;
+  font-family: "WorkSans", sans-serif;
+  color: #c27e01;
+  font-size: 6vh;
+  font-weight: 600;
+}
 
-      /* Clases de animaciones */
-      .hour48 {
-        transform: rotate(-80deg);
-        scale: 0.3;
-        margin-top: 1.8%
-      }
 
-      .month1 {
-        transform: rotate(65deg);
-        scale: 0.3;
-        margin-top: 1.8%
-      }
 
-      .month2 {
-        transform: rotate(200deg);
-        scale: 0.3;
-        margin-top: 1.8%
-      }
+/* Clases de animaciones */
+.hour48 {
+  transform: rotate(-80deg);
+  scale: 0.3;
+  margin-top: 1.8%
+}
 
-      /* Informacion*/
-      .informacion {
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -10%);
-        left: 3rem;
-        max-width: 35rem;
-        width: 30%;
-        z-index: 9;
-        font-family: "WorkSans", sans-serif;
-        color: white;
-      }
+.month1 {
+  transform: rotate(65deg);
+  scale: 0.3;
+  margin-top: 1.8%
+}
 
-      .informacion #title {
-        font-size: 11vh;
-        font-family: "work Sans", sans-serif;
-        font-weight: 600;
+.month2 {
+  transform: rotate(200deg);
+  scale: 0.3;
+  margin-top: 1.8%
+}
 
-      }
+/* Informacion*/
+.informacion {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -10%);
+  left: 3rem;
+  max-width: 35rem;
+  width: 30%;
+  z-index: 9;
+  font-family: "WorkSans", sans-serif;
+  color: white;
+}
 
-      @media screen and (max-width: 1450px) {
-        .informacion #title {
-          font-size: 9vh;
-          font-family: "work Sans", sans-serif;
-          font-weight: 600;
+.informacion #title {
+  font-size: 11vh;
+  font-family: "work Sans", sans-serif;
+  font-weight: 600;
 
-        }
-      }
+}
 
-      @media screen and (max-width: 1150px) {
-        .informacion #title {
-          font-size: 7vh;
-          font-family: "work Sans", sans-serif;
-          font-weight: 600;
+@media screen and (max-width: 1450px) {
+  .informacion #title {
+    font-size: 9vh;
+    font-family: "work Sans", sans-serif;
+    font-weight: 600;
 
-        }
-      }
+  }
+}
 
-      @media screen and (max-width: 950px) {
-        .informacion #title {
-          font-size: 5vh;
-          font-family: "work Sans", sans-serif;
-          font-weight: 600;
+@media screen and (max-width: 1150px) {
+  .informacion #title {
+    font-size: 7vh;
+    font-family: "work Sans", sans-serif;
+    font-weight: 600;
 
-        }
-      }
+  }
+}
 
-      .informacion #title span {
-        color: #01c28d;
-        font-family: "WorkSans", sans-serif;
-      }
+@media screen and (max-width: 950px) {
+  .informacion #title {
+    font-size: 5vh;
+    font-family: "work Sans", sans-serif;
+    font-weight: 600;
 
-      .informacion #descripcion {
-        margin-top: 2rem;
-        text-align: start;
-        font-family: "work Sans", sans-serif;
-        font-size: 2.5vh;
-        font-weight: 300;
-        width: 100%;
-      }
+  }
+}
 
-      .titulo-imagen {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-      }
+.informacion #title span {
+  color: #01c28d;
+  font-family: "WorkSans", sans-serif;
+}
 
-      .titulo-imagen>img {
-        width: 3rem;
-        height: auto;
-        margin-right: 1rem;
-        margin-top: .7rem;
-      }
+.informacion #descripcion {
+  margin-top: 2rem;
+  text-align: start;
+  font-family: "work Sans", sans-serif;
+  font-size: 2.5vh;
+  font-weight: 300;
+  width: 100%;
+}
 
-      /* redes sociales */
-      .logo-redes {
-        position: absolute;
-        bottom: 1rem;
-        left: 1rem;
-        width: 20rem;
-        height: 5rem;
-        z-index: 14;
-        display: flex;
-        justify-content: start;
-      }
+.titulo-imagen {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
 
-      .desplazar_redes {
-        animation-name: redes_animation;
-        animation-duration: .5s;
-        animation-iteration-count: 1;
-      }
+.titulo-imagen>img {
+  width: 3rem;
+  height: auto;
+  margin-right: 1rem;
+  margin-top: .7rem;
+}
 
-      .desplazar_redes_revert {
-        animation-name: redes_animation;
-        animation-duration: .5s;
-        animation-iteration-count: 1;
-        animation-direction: reverse;
-        animation-fill-mode: forwards;
-      }
+/* redes sociales */
+.logo-redes {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  width: 20rem;
+  height: 5rem;
+  z-index: 14;
+  display: flex;
+  justify-content: start;
+}
 
-      /* .desplazar_redes_salida {
+.desplazar_redes {
+  animation-name: redes_animation;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+}
+
+.desplazar_redes_revert {
+  animation-name: redes_animation;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
+
+/* .desplazar_redes_salida {
   animation-name: redes_animation_salida;
   animation-duration: .5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 } */
-      @keyframes redes_animation {
-        /* @keyframes redes_animation {
+@keyframes redes_animation {
+  /* @keyframes redes_animation {
   0% {
     left: 45%;
   }
@@ -844,104 +840,104 @@ img {
   }
 } */
 
-        100% {
-          left: -10rem;
-          bottom: -10rem;
-        }
-      }
+  100% {
+    left: -10rem;
+    bottom: -10rem;
+  }
+}
 
-      .icon {
-        width: 3rem;
-        height: auto;
-        margin-left: 1rem;
-      }
+.icon {
+  width: 3rem;
+  height: auto;
+  margin-left: 1rem;
+}
 
-      /* style of mobile */
-      @media screen and (max-width: 900px) {
-        .calculadora {
-          position: relative;
-          top: 0%;
-          left: 0%;
-          height: 90%;
-          width: 70%;
-          max-width: 30rem;
-          min-width: 25rem;
-          z-index: 8;
-          user-select: none;
-          display: flex;
-          justify-content: center;
-          margin: 3rem;
-        }
+/* style of mobile */
+@media screen and (max-width: 900px) {
+  .calculadora {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    height: 90%;
+    width: 70%;
+    max-width: 30rem;
+    min-width: 25rem;
+    z-index: 8;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+  }
 
-        .informacion {
-          position: absolute;
-          top: 8%;
-          left: 10%;
-          max-width: 75rem;
-          width: 60%;
-          z-index: 9;
-          font-family: "work Sans", sans-serif;
-          color: white;
-        }
+  .informacion {
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    max-width: 75rem;
+    width: 60%;
+    z-index: 9;
+    font-family: "work Sans", sans-serif;
+    color: white;
+  }
 
-        .informacion #descripcion {
-          margin-top: 0rem;
-          margin-left: 4.56rem;
-          text-align: start;
-          font-family: "work Sans", sans-serif;
-          font-size: 2.5vh;
-          font-weight: 300;
-          width: 100%;
-        }
+  .informacion #descripcion {
+    margin-top: 0rem;
+    margin-left: 4.56rem;
+    text-align: start;
+    font-family: "work Sans", sans-serif;
+    font-size: 2.5vh;
+    font-weight: 300;
+    width: 100%;
+  }
 
-        #month-1 {
-          transform: translate(0%, 1050%);
-          font-size: 2.5vh;
-        }
+  #month-1 {
+    transform: translate(0%, 1050%);
+    font-size: 2.5vh;
+  }
 
-        #month-2 {
-          bottom: 30%;
-          font-size: 2.5vh;
-          transform: translate(350%, 0);
-        }
+  #month-2 {
+    bottom: 30%;
+    font-size: 2.5vh;
+    transform: translate(350%, 0);
+  }
 
-        .form-controles {
-          bottom: 15%;
-          left: -5%;
-          width: 100%;
-          margin-top: 1rem;
-        }
+  .form-controles {
+    bottom: 15%;
+    left: -5%;
+    width: 100%;
+    margin-top: 1rem;
+  }
 
-        .indicador-calculadora {
-          margin-top: 3.8%;
-          max-width: 30rem;
-        }
+  .indicador-calculadora {
+    margin-top: 3.8%;
+    max-width: 30rem;
+  }
 
-        .circulo-indicador {
-          top: 30%;
-          width: 1.5rem;
-          height: 1.5rem;
-        }
+  .circulo-indicador {
+    top: 30%;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 
-        .descripcion {
-          top: 2%;
-        }
+  .descripcion {
+    top: 2%;
+  }
 
 
-        .descripcion>p {
-          font-size: 3.5vh;
-        }
+  .descripcion>p {
+    font-size: 3.5vh;
+  }
 
-        .form-controles {
-          top: 70%;
-          width: 90%;
-          left: 2%;
-        }
+  .form-controles {
+    top: 70%;
+    width: 90%;
+    left: 2%;
+  }
 
-        .logo-redes {
-          display: none;
-        }
-      }
+  .logo-redes {
+    display: none;
+  }
+}
 </style>
 
 

@@ -594,9 +594,9 @@ h4 {
 
   .btn_buyMonner {
     top: 20%;
-    left: 25%;
-    height: 5%;
-    width: 55%;
+    left: 18%;
+    height: 6%;
+    width: 60%;
   }
 
   .buyNow {
@@ -604,9 +604,11 @@ h4 {
     width: 100%;
     height: 130%;
   }
-  .btn_moner{
+
+  .btn_moner {
     width: 100%;
   }
+
   .buyNow .logos {
     top: -10%;
   }
@@ -614,13 +616,14 @@ h4 {
   .buyNow .logos .meta {
     width: 10%;
   }
-  .separar{
+
+  .separar {
     height: 20%;
-    
+
   }
 
   .contrato {
-    font-size: 65%;
+    font-size: 3vw;
     left: -2%;
   }
 
@@ -633,7 +636,7 @@ h4 {
   }
 
   .binance {
-    width: 25%;
+    width: 30%;
     bottom: 10%;
   }
 }
