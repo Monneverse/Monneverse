@@ -517,7 +517,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 70%;
+    max-width: 100%;
   }
 }
 
