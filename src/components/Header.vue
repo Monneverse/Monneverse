@@ -585,13 +585,14 @@ img {
   }
 
   .btn {
+    
     position: fixed;
     bottom: 1rem;
     right: 5%;
     width: auto;
     height: auto;
-    padding: .8rem;
-    font-size: 3vw;
+    padding: .5rem;
+    font-size: 1.3rem;
   }
 
   .logo {
