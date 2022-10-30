@@ -316,16 +316,17 @@ img {
 
   .fondo-redes {
     position: relative;
-    top: 0;
+    top: 0%;
     margin: 0 auto;
     width: 60%;
-    height: 100%;
+    height: 110%;
     background-color: #1a1e29bd;
-    z-index: 6;
+    z-index: 26;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
   }
 
   .redes {
@@ -339,7 +340,7 @@ img {
   }
 
   .redes a img {
-    width: 4rem;
+    width: 2.2rem;
     height: auto;
   }
 

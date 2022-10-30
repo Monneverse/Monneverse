@@ -115,16 +115,13 @@ developed.
 }
 .benefits {
   position: relative;
-  margin: 0 auto;
   z-index: 8;
   width: 85%;
   height: 70%;
   top: 15%;
   display: flex;
-  scroll-snap-type: x mandatory;
-  overflow-y: hidden;
   overflow-x: scroll;
-  column-gap: 20%;
+  column-gap: 1%;
   color: #fff;
 }
 

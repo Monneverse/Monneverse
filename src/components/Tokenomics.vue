@@ -19,7 +19,8 @@ export default {
     <div class="fondo-telefono">
       <img src="/img/celFondo.svg" alt="" srcset="" />
     </div>
-
+    <div class="arrow"></div>
+    <div class="arrow2"></div>
     <div class="fondo filtro-superior"></div>
     <div class="fondo fondo-oscurecer"></div>
     <div class="fondoTokenomics">
@@ -303,7 +304,7 @@ img {
   z-index: 55;
   top: 20%;
   display: flex;
-  width: 80%;
+  width: 78%;
   height: 57%;
   margin: 0 auto;
   border-radius: 1vw;
@@ -380,7 +381,7 @@ img {
 
 .purchase-tax h2 {
   text-align: right;
-  font-size: 10vw;
+  font-size: 8vw;
   font-weight: 500;
 }
 
@@ -472,7 +473,7 @@ img {
 }
 
 .sale-tax h2 {
-  font-size: 10vw;
+  font-size: 8vw;
   font-weight: 500;
 }
 
@@ -670,4 +671,104 @@ img {
     left: 0;
   }
 } */
+
+
+@media screen and (max-width: 900px) {
+
+  .arrow,
+  .arrow:before {
+    position: absolute;
+    left: 50%
+  }
+
+  .arrow {
+    width: 25px;
+    height: 25px;
+    top: 56%;
+    left: 94%;
+    margin: -20px 0 0 -20px;
+    -webkit-transform: rotate(-50deg);
+    transform: rotate(-50deg);
+    border-left: none;
+    border-top: none;
+    border-right: 4px #fff solid;
+    border-bottom: 4px #fff solid;
+    z-index: 999;
+  }
+
+  .arrow:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    margin: -10px 0 0 -10px;
+    border-left: none;
+    border-top: none;
+    border-right: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+  }
+
+  @keyframes arrow {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translate(-10px, -10px);
+    }
+  }
+
+  .arrow2,
+  .arrow2:before {
+    position: absolute;
+    left: 50%
+  }
+
+  .arrow2 {
+    width: 25px;
+    height: 25px;
+    top: 56%;
+    left: 9%;
+    margin: -20px 0 0 -20px;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    border-left: none;
+    border-top: none;
+    border-right: 4px #fff solid;
+    border-bottom: 4px #fff solid;
+    z-index: 999;
+  }
+
+  .arrow2:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    margin: -10px 0 0 -10px;
+    border-left: none;
+    border-top: none;
+    border-right: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: arrow2;
+  }
+
+  @keyframes arrow2 {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translate(-10px, -10px);
+    }
+  }
+
+
+}
 </style>

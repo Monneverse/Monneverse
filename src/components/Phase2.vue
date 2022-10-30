@@ -21,7 +21,8 @@ defineProps({
     <img src="/img/calculadora/circuito-derecho.png" alt="" />
   </div>
   <!--FIN FONDO-->
-
+  <div class="arrow"></div>
+  <div class="arrow2"></div>
   <div class="Fases">
     <div class="titulo">
       <h1>phase 2</h1>
@@ -339,8 +340,9 @@ img {
   .componentes {
     position: absolute;
     top: 40%;
+    transform: translate(10%, 0);
     left: 2%;
-    width: 63%;
+    width: 73%;
     height: 40%;
     padding: 4rem;
     margin-right: 3rem;
@@ -379,10 +381,103 @@ img {
     position: unset;
     width: 75%;
     height: auto;
-    margin-right: 3rem;
+    margin-right: 8rem;
   }
 
 
+  .arrow,
+  .arrow:before {
+    position: absolute;
+    left: 50%
+  }
+
+  .arrow {
+    width: 25px;
+    height: 25px;
+    top: 66%;
+    left: 94%;
+    margin: -20px 0 0 -20px;
+    -webkit-transform: rotate(-50deg);
+    transform: rotate(-50deg);
+    border-left: none;
+    border-top: none;
+    border-right: 4px #fff solid;
+    border-bottom: 4px #fff solid;
+    z-index: 999;
+  }
+
+  .arrow:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    top: 60%;
+    margin: -10px 0 0 -10px;
+    border-left: none;
+    border-top: none;
+    border-right: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+  }
+
+  @keyframes arrow {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translate(-10px, -10px);
+    }
+  }
+
+  .arrow2,
+  .arrow2:before {
+    position: absolute;
+    left: 50%
+  }
+
+  .arrow2 {
+    width: 25px;
+    height: 25px;
+    top: 66%;
+    left: 9%;
+    margin: -20px 0 0 -20px;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    border-left: none;
+    border-top: none;
+    border-right: 4px #fff solid;
+    border-bottom: 4px #fff solid;
+    z-index: 999;
+  }
+
+  .arrow2:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    top: 60%;
+    margin: -10px 0 0 -10px;
+    border-left: none;
+    border-top: none;
+    border-right: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: arrow2;
+  }
+
+  @keyframes arrow2 {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translate(-10px, -10px);
+    }
+  }
 
 }
 </style>

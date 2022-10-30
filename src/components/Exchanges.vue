@@ -300,7 +300,7 @@ import ComponenteIconos from "./componenteIconos.vue";
 .exchange_text {
   width: 100%;
   height: 50%;
-  font-size: 3rem;
+  font-size: 2.9rem;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
@@ -466,6 +466,12 @@ import ComponenteIconos from "./componenteIconos.vue";
     display: flex;
     flex: initial;
     margin-right: 30px;
+  }
+  .arrow{
+    display: none;
+  }
+  .arrow2{
+    display: none;
   }
 }
 

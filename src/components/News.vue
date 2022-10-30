@@ -211,7 +211,7 @@ img {
   transform: scaleY(-1);
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+@media only screen and (min-device-width: 1px) and (max-device-width: 667px) {
   .fondo_rayos {
     position: fixed;
     left: -35%;
@@ -374,7 +374,7 @@ img {
   height: 30%;
 }
 
-@media screen and (width < 769px) {
+@media screen and (max-width: 769px) {
 
   .arrow,
   .arrow:before {
@@ -389,6 +389,7 @@ img {
     left: 94%;
     margin: -20px 0 0 -20px;
     -webkit-transform: rotate(-50deg);
+    transform: rotate(-50deg);
     border-left: none;
     border-top: none;
     border-right: 4px #fff solid;
@@ -435,6 +436,7 @@ img {
     left: 9%;
     margin: -20px 0 0 -20px;
     -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
     border-left: none;
     border-top: none;
     border-right: 4px #fff solid;
@@ -515,7 +517,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 70%;
+    max-width: 100%;
   }
 }
 
