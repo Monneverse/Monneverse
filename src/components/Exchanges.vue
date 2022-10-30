@@ -14,7 +14,7 @@ import ComponenteIconos from "./componenteIconos.vue";
   <div class="circuito circuito-izquierdo">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
   </div>
- 
+
   <div class="fondoTokenomics">
     <img src="/img/fondo_Tokenomics.png" alt="" />
   </div>
@@ -28,7 +28,8 @@ import ComponenteIconos from "./componenteIconos.vue";
   </div>
   <!-- FIN FONDO -->
   <!-- CONTENIDO -->
-
+  <div class="arrow"></div>
+  <div class="arrow2"></div>
   <div class="content-major">
     <div class="exchange_text">
       <p>first exchanges after our pre-sale</p>
@@ -37,81 +38,48 @@ import ComponenteIconos from "./componenteIconos.vue";
     <div class="contenedor_crypto">
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos
-            iconos="/img/Exchanges/bunny-color.svg"
-            iconname="pancakeswap"
-          />
+          <ComponenteIconos iconos="/img/Exchanges/bunny-color.svg" iconname="pancakeswap" />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos
-            iconos="/img/Exchanges/Kucoin.svg"
-            iconname="kucoin"
-          />
+          <ComponenteIconos iconos="/img/Exchanges/Kucoin.svg" iconname="kucoin" />
         </div>
         <div class="cryptos">
-          <ComponenteIconos
-            iconos="/img/Exchanges/Gatebw.svg"
-            iconname="gate.io"
-          />
+          <ComponenteIconos iconos="/img/Exchanges/Gatebw.svg" iconname="gate.io" />
         </div>
       </div>
 
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos
-            iconos="/img/Exchanges/lbank2.svg"
-            iconname="LBANK"
-          />
+          <ComponenteIconos iconos="/img/Exchanges/lbank2.svg" iconname="LBANK" />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos
-            iconos="/img/Exchanges/okxlogo.svg"
-            iconname="OKX"
-          />
+          <ComponenteIconos iconos="/img/Exchanges/okxlogo.svg" iconname="OKX" />
         </div>
         <div class="cryptos">
-          <ComponenteIconos
-            iconos="/img/Exchanges/CoinGecko.svg"
-            iconname="COINGECKO"
-          />
+          <ComponenteIconos iconos="/img/Exchanges/CoinGecko.svg" iconname="COINGECKO" />
         </div>
       </div>
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos
-            iconos="/img/Exchanges/mexcglobal.svg"
-            iconname="MEXC GLOBAL"
-          />
+          <ComponenteIconos iconos="/img/Exchanges/mexcglobal.svg" iconname="MEXC GLOBAL" />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos
-            iconos="/img/Exchanges/xtcom.svg"
-            iconname="XT.COM"
-          />
+          <ComponenteIconos iconos="/img/Exchanges/xtcom.svg" iconname="XT.COM" />
         </div>
         <div class="cryptos">
-          <ComponenteIconos
-            iconos="/img/Exchanges/poloniex.svg"
-            iconname="POLONIEX"
-          />
+          <ComponenteIconos iconos="/img/Exchanges/poloniex.svg" iconname="POLONIEX" />
         </div>
       </div>
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos
-            iconos="/img/Exchanges/hotbit.svg"
-            iconname="HOTBIT"
-          />
+          <ComponenteIconos iconos="/img/Exchanges/hotbit.svg" iconname="HOTBIT" />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos
-            iconos="/img/Exchanges/coinmarket.svg"
-            iconname="COINMARKET"
-          />
+          <ComponenteIconos iconos="/img/Exchanges/coinmarket.svg" iconname="COINMARKET" />
         </div>
         <div class="cryptos">
           <ComponenteIconos iconos="/img/Exchanges/ftx.svg" iconname="FTX" />
@@ -119,42 +87,32 @@ import ComponenteIconos from "./componenteIconos.vue";
       </div>
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos
-            iconos="/img/Exchanges/latoken.svg"
-            iconname="LATOKEN"
-          />
+          <ComponenteIconos iconos="/img/Exchanges/latoken.svg" iconname="LATOKEN" />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos
-            iconos="/img/Exchanges/bitrue.svg"
-            iconname="BITRUE"
-          />
+          <ComponenteIconos iconos="/img/Exchanges/bitrue.svg" iconname="BITRUE" />
         </div>
         <div class="cryptos">
-          <ComponenteIconos
-            iconos="/img/Exchanges/favicon.svg"
-            iconname="FAVICON"
-          />
+          <ComponenteIconos iconos="/img/Exchanges/favicon.svg" iconname="FAVICON" />
         </div>
       </div>
     </div>
   </div>
- <!-- Contenedor de Redes Sociales -->
- <div class="logo_redes">
+  <div class="logo-redes">
     <div class="icon icon-telegram">
       <a href="https://t.me/monnerversecommunity" target="_blank">
-        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="">
       </a>
     </div>
     <div class="icon icon-reddit">
       <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="">
       </a>
     </div>
-    <div class="icon icon-discord">
+    <div class="icon icon-discord ">
       <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+        <img src="../assets/discord.svg" alt="logo discord" srcset="">
       </a>
     </div>
   </div>
@@ -199,6 +157,7 @@ img {
 .circuito-izquierdo {
   left: -5%;
 }
+
 .circuito-izquierdo img {
   width: 85%;
   opacity: 50%;
@@ -228,12 +187,10 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(
-      circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%
-    );
+    background: radial-gradient(circle at center,
+        #48d0ab 0%,
+        #097561 50%,
+        #505863 100%);
     z-index: 1;
   }
 
@@ -254,6 +211,7 @@ img {
     z-index: 3;
     opacity: 20%;
   }
+
   .fondo-montana img {
     background-size: no-repeat center center fixed;
   }
@@ -265,12 +223,10 @@ img {
     width: 300%;
     height: 200%;
     background-size: no-repeat center center fixed;
-    background: radial-gradient(
-      circle at center,
-      #48d0ab 10%,
-      #097561 30%,
-      #0f161c 100%
-    );
+    background: radial-gradient(circle at center,
+        #48d0ab 10%,
+        #097561 30%,
+        #0f161c 100%);
     z-index: 1;
     opacity: 100%;
   }
@@ -332,6 +288,7 @@ img {
     flex-direction: row;
   }
 }
+
 .exchange_text {
   width: 100%;
   height: 50%;
@@ -341,6 +298,7 @@ img {
   justify-content: center;
   align-items: center;
 }
+
 @media only screen and (width > 769px) {
   .exchange_text {
     width: 40%;
@@ -349,14 +307,12 @@ img {
 }
 
 .exchange_text p {
-  background: linear-gradient(
-    to right,
-    #8753c1 0%,
-    #6f6cbe 10%,
-    #38a6b7 40%,
-    #5884bb 60%,
-    #11334e 100%
-  );
+  background: linear-gradient(to right,
+      #8753c1 0%,
+      #6f6cbe 10%,
+      #38a6b7 40%,
+      #5884bb 60%,
+      #11334e 100%);
   font-family: Calibri;
   -webkit-background-clip: text;
   background-clip: text;
@@ -364,6 +320,7 @@ img {
   width: 60%;
   margin-top: 10%;
 }
+
 @media only screen and (width > 769px) {
   .exchange_text p {
     font-size: 4.5vw;
@@ -371,20 +328,114 @@ img {
     width: 70%;
   }
 }
+
 .contenedor_crypto {
   margin: 0 auto;
   height: 35%;
-  width: 90%;
+  width: 70%;
   display: flex;
   overflow-x: scroll;
 }
+
+.arrow,
+.arrow:before {
+  position: absolute;
+  left: 50%
+}
+
+.arrow {
+  width: 25px;
+  height: 25px;
+  top: 66%;
+  left: 94%;
+  margin: -20px 0 0 -20px;
+  -webkit-transform: rotate(-50deg);
+  border-left: none;
+  border-top: none;
+  border-right: 4px #fff solid;
+  border-bottom: 4px #fff solid;
+  z-index: 999;
+}
+
+.arrow:before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  margin: -10px 0 0 -10px;
+  border-left: none;
+  border-top: none;
+  border-right: 2px #fff solid;
+  border-bottom: 2px #fff solid;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-10px, -10px);
+  }
+}
+
+.arrow2,
+.arrow2:before {
+  position: absolute;
+  left: 50%
+}
+
+.arrow2 {
+  width: 25px;
+  height: 25px;
+  top: 66%;
+  left: 9%;
+  margin: -20px 0 0 -20px;
+  -webkit-transform: rotate(135deg);
+  border-left: none;
+  border-top: none;
+  border-right: 4px #fff solid;
+  border-bottom: 4px #fff solid;
+  z-index: 999;
+}
+
+.arrow2:before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  margin: -10px 0 0 -10px;
+  border-left: none;
+  border-top: none;
+  border-right: 2px #fff solid;
+  border-bottom: 2px #fff solid;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow2;
+}
+
+@keyframes arrow2 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-10px, -10px);
+  }
+}
+
 @media only screen and (width > 769px) {
   .contenedor_crypto {
     position: relative;
     top: 17%;
     left: -3%;
     height: 70%;
-    width: 70%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -393,6 +444,7 @@ img {
     overflow-y: hidden;
   }
 }
+
 .caja-cryptos {
   margin: 0 auto;
   width: 100%;
@@ -408,13 +460,16 @@ img {
     margin-right: 30px;
   }
 }
+
 .caja-cryptos:nth-child(5) {
   margin-right: 0%;
 }
+
 .cryptos {
   width: 100%;
   height: 30%;
 }
+
 @media only screen and (width > 769px) {
   .cryptos {
     width: 33%;
@@ -423,6 +478,17 @@ img {
 }
 
 
+.logo-redes {
+  position: absolute;
+  bottom: 0%;
+  left: 3rem;
+  width: 20rem;
+  height: 5rem;
+  z-index: 14;
+  display: flex;
+  justify-content: start;
+  display: none;
+}
 
 @media screen and (width > 768px) {
   .logo-redes {

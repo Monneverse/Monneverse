@@ -245,7 +245,7 @@ defineProps({
   animation-iteration-count: 1;
 }
 
-@keyframes arriba {
+/* @keyframes arriba {
   0% {
     top: 54%;
     opacity: 10%;
@@ -254,7 +254,7 @@ defineProps({
   100% {
     opacity: 100%;
   }
-}
+} */
 
 .fondo_rayos {
   position: absolute;
@@ -295,7 +295,7 @@ defineProps({
   animation-iteration-count: 1;
 }
 
-@keyframes desplazamiento {
+/* @keyframes desplazamiento {
   0% {
     left: -5%;
   }
@@ -303,7 +303,7 @@ defineProps({
   100% {
     left: 0%;
   }
-}
+} */
 
 .logo-redes {
   position: absolute;
@@ -342,7 +342,7 @@ defineProps({
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-
+/* 
 @keyframes reflector {
   0% {
     opacity: 10%;
@@ -355,7 +355,7 @@ defineProps({
   100% {
     opacity: 50%;
   }
-}
+} */
 
 .reflector-derecho {
   z-index: 0;

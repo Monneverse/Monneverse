@@ -123,7 +123,7 @@ img {
   animation-fill-mode: forwards;
 }
 
-@keyframes logo-animation {
+/* @keyframes logo-animation {
   0% {
     top: 2rem;
     left: 2rem;
@@ -137,7 +137,7 @@ img {
     width: 40%;
     height: 40%;
   }
-}
+} */
 
 /* fondo */
 .fondo {
@@ -213,7 +213,7 @@ img {
   animation-fill-mode: forwards; */
 }
 
-@keyframes mover_derecho {
+/* @keyframes mover_derecho {
   0% {
     right: -5%;
   }
@@ -221,7 +221,7 @@ img {
   100% {
     right: 0%;
   }
-}
+} */
 
 /* redes */
 
@@ -241,7 +241,7 @@ img {
   animation-fill-mode: forwards;
 }
 
-@keyframes fondo-redes-animation {
+/* @keyframes fondo-redes-animation {
   0% {
     bottom: -70%;
   }
@@ -249,7 +249,7 @@ img {
   100% {
     bottom: 10%;
   }
-}
+} */
 
 
 .redes:hover a img {
