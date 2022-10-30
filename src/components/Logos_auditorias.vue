@@ -37,6 +37,7 @@
     </div>
     <div class="fondoSolidity"></div>
     <div class="fondoCertik"></div>
+    <br>
     <div class="logos_auditoria">
         <a href="https://solidity.finance/audits/MONNERVERSE/" target="_blank">
             <img src="/img/Exchanges/solidity1.png" class="auditoria1" /></a>
@@ -358,7 +359,7 @@ img {
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
     .texto_auditoria {
         position: absolute;
-        top: 17%;
+        top: 13%;
         left: 3%;
         color: white;
         text-align: center;
@@ -626,6 +627,9 @@ img {
 
     .icon {
         width: 2.3rem;
+    }
+    .logos_auditoria{
+        margin-top: 2rem;
     }
 }
 
