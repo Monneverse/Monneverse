@@ -10,7 +10,7 @@ defineProps({
   <div class="contenido-general">
     <div :class="{
       logo: true,
-      'animacion-logo': index_pagina == 2,
+      'animacion-logo': index_pagina == 23,
     }">
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
@@ -25,14 +25,14 @@ defineProps({
     <div class="fondo filtro-superior"></div>
     <div :class="{
       'fondo-montana': true,
-      'fondo-montana-animation': index_pagina == 2,
+      'fondo-montana-animation': index_pagina == 23,
     }" class="fondo">
       <img src="/img/fondo-montana.png" />
     </div>
     <div class="fondo fondo-oscurecer"></div>
     <div :class="{
       'fondo-red': true,
-      'animacion-aparecer': index_pagina == 2,
+      'animacion-aparecer': index_pagina == 23,
     }" class="fondo">
       <img src="/img/red.png" alt="" />
     </div>
@@ -54,7 +54,7 @@ defineProps({
       <div class="content-forms">
         <section :class="{
           circulos: true,
-          'animacion-aparecer': index_pagina == 2,
+          'animacion-aparecer': index_pagina == 23,
         }">
           <div class="circulo">
             <img src="../assets/circulo.svg" alt="" />
@@ -67,7 +67,7 @@ defineProps({
         <section class="arco">
           <div :class="{
             semi_circulo: true,
-            'animacion-arco': index_pagina == 2,
+            'animacion-arco': index_pagina == 23,
           }">
             <img src="../assets/aro-iluminado-brillante.svg" alt="" />
           </div>
@@ -108,7 +108,7 @@ defineProps({
 
     <div :class="{
       puntero: true,
-      'animacion-aparecer': index_pagina == 2,
+      'animacion-aparecer': index_pagina == 23,
     }">
       <img src="/img/puntero.svg" alt="" />
     </div>
