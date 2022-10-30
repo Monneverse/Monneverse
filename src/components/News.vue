@@ -389,6 +389,7 @@ img {
     left: 94%;
     margin: -20px 0 0 -20px;
     -webkit-transform: rotate(-50deg);
+    transform: rotate(-50deg);
     border-left: none;
     border-top: none;
     border-right: 4px #fff solid;
@@ -435,6 +436,7 @@ img {
     left: 9%;
     margin: -20px 0 0 -20px;
     -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
     border-left: none;
     border-top: none;
     border-right: 4px #fff solid;
