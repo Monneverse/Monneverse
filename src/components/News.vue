@@ -211,7 +211,7 @@ img {
   transform: scaleY(-1);
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+@media only screen and (min-device-width: 1px) and (max-device-width: 667px) {
   .fondo_rayos {
     position: fixed;
     left: -35%;
@@ -374,7 +374,7 @@ img {
   height: 30%;
 }
 
-@media screen and (width < 769px) {
+@media screen and (max-width: 769px) {
 
   .arrow,
   .arrow:before {
