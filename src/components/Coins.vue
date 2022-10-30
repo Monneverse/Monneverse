@@ -18,7 +18,7 @@ defineProps({
    
     :class="{
       'circuito-izquierdo': true,
-      'animacion-desplazamiento': index_pagina == 8,
+      'animacion-desplazamiento': index_pagina == 88,
     }"
      class="circuito"
   >
@@ -34,7 +34,7 @@ defineProps({
   <div
     :class="{
       contenedor_coins: true,
-      'animacion-aparecer': index_pagina == 8,
+      'animacion-aparecer': index_pagina == 88,
     }"
   >
     <div class="card_coin">
