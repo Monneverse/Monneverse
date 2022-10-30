@@ -175,7 +175,7 @@ img {
   left: 55%;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+@media only screen and  (max-width: 900px) {
 
   .degradado {
     position: fixed;
@@ -254,7 +254,7 @@ img {
   }
 }
 
-@media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
+@media only screen and  (max-width: 900px) {
   .degradado {
     position: fixed;
     height: 100%;
@@ -376,7 +376,7 @@ img {
   transform: scale(1.2);
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+@media only screen and  (max-width: 900px) {
   .mastercard_img {
     position: fixed;
     width: 55%;
@@ -492,7 +492,7 @@ img {
   z-index: 8;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+@media only screen and  (max-width: 900px) {
   .circulos_redes {
     position: fixed;
     top: 10%;
