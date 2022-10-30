@@ -17,9 +17,6 @@
   <div class="circuito circuito-derecho">
     <img src="/img/calculadora/circuito-derecho.png" alt="" />
   </div>
-  <div class="fondoTokenomics">
-    <img src="/img/fondo_Tokenomics.png" alt="" />
-  </div>
 
   <!-- filtro azul -->
 
@@ -29,10 +26,6 @@
   <!-- Contenido -->
   <div class="contenido">
     <div class="calculadora">
-
-
-
-
 
       <div :class="{
         'circulo-indicador': true,
@@ -49,7 +42,7 @@
         'aparecer_revert': this.exitAnimation && this.isRevert,
         'aparecer_revert': this.exitAnimation && !this.isRevert,
         'aparecer': this.enterAnimation && this.isRevert,
-      }">>
+      }">
 
         <div :class="{ circulo: true }">
           <img src="../assets/circulo-blanco.svg" />
@@ -79,7 +72,7 @@
         'rotar_revert': this.exitAnimation && this.isRevert,
         'rotar_derecha': this.exitAnimation && !this.isRevert,
         'rotar_derecha_revert': this.enterAnimation && this.isRevert,
-      }">>
+      }">
         <div :class="{
           circulo: true,
         }">
@@ -88,10 +81,14 @@
         <img :class="{
           circulo: true, 'circulo-verde': true
         }" src="../assets/circulo-verde.svg" alt="circle green">
-        <img @click="CambiarMonth" id="indicador-img" :class="{
-          'indicador-calculadora': true,
+
+        <div @click="CambiarMonth" :class="{
+          'indicador': true,
           hour48: classindicador == 1, month1: classindicador == 2, month2: classindicador == 3
-        }" src="../assets/indicador.svg" alt="index calculator">
+        }">
+          <img src="../assets/indicador.svg" alt="index calculator">
+
+        </div>
 
       </div>
 
@@ -310,14 +307,6 @@ img {
   transform: scaleY(-1);
 }
 
-.fondoTokenomics {
-  position: absolute;
-  top: -8.3%;
-  width: 100%;
-  height: 120%;
-  z-index: 3;
-  opacity: 60%;
-}
 
 /* Filtro azul */
 
@@ -384,8 +373,6 @@ img {
   min-width: 60rem;
   z-index: 8;
   user-select: none;
-  display: flex;
-  justify-content: center;
   margin: 3rem;
 }
 
@@ -447,6 +434,8 @@ img {
   animation-name: circulo-superior-animation;
   animation-duration: .5s;
   animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
 }
 
 .rotar_revert {
@@ -470,6 +459,7 @@ img {
   animation-direction: reverse;
   animation-fill-mode: forwards;
 }
+
 .rotar_derecha_revert {
   animation-name: rotar_derecha;
   animation-duration: .5s;
@@ -477,6 +467,7 @@ img {
   animation-direction: normal;
   animation-fill-mode: forwards;
 }
+
 @keyframes rotar {
   0% {
     transform: rotate(-80deg) translate(-100%, 40%);
@@ -499,12 +490,19 @@ img {
   }
 }
 
-.indicador-calculadora {
-  margin-top: 1.8%;
-  transition: transform 0.4s ease-in 0s;
-  max-width: 60rem;
+.indicador {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 25%;
+  height: 25%;;
+
 }
 
+.indicador>img {
+  transition: transform 0.4s ease-in 0s;
+}
 
 .form-controles {
   position: absolute;
@@ -583,12 +581,15 @@ img {
 }
 
 .circulo-indicador {
-  position: absolute;
+  position: relative;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
   width: 2rem;
   border-radius: 50%;
   background-color: white;
   height: 2rem;
-  top: 18%;
+
   z-index: 10;
 }
 
@@ -598,6 +599,7 @@ img {
   animation-duration: .5s;
   animation-name: circulo-indicador-animation;
   animation-direction: normal;
+  animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
 
@@ -611,17 +613,19 @@ img {
 
 @keyframes circulo-indicador-animation {
   0% {
-    position: absolute;
+    position: relative;
+    left: 70%;
     top: -10%;
-    right: 10%;
+    transform: translate(-50%, -50%);
     width: 6rem;
     height: 6rem;
   }
 
   100% {
-    position: absolute;
-    right: 48%;
-    top: 17%;
+    position: relative;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
     width: 3rem;
     height: 3rem;
   }
@@ -634,6 +638,7 @@ img {
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
+
 .circulo_indicador_animation_salida_revert {
   animation-duration: .5s;
   animation-name: circulo_indicador_salida;
@@ -641,6 +646,7 @@ img {
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
+
 @keyframes circulo_indicador_salida {
 
   0% {
@@ -689,21 +695,18 @@ img {
 
 
 /* Clases de animaciones */
-.hour48 {
+.hour48>img {
   transform: rotate(-80deg);
-  scale: 0.3;
   margin-top: 1.8%
 }
 
-.month1 {
+.month1>img {
   transform: rotate(65deg);
-  scale: 0.3;
   margin-top: 1.8%
 }
 
-.month2 {
+.month2>img {
   transform: rotate(200deg);
-  scale: 0.3;
   margin-top: 1.8%
 }
 
@@ -806,6 +809,7 @@ img {
   animation-direction: reverse;
   animation-fill-mode: forwards;
 }
+
 /* .desplazar_redes_salida {
   animation-name: redes_animation_salida;
   animation-duration: .5s;
@@ -821,6 +825,7 @@ img {
     left: 1rem;
   }
 }
+
 @keyframes redes_animation_salida {
   0% {
     left: 1rem;
@@ -832,6 +837,7 @@ img {
     bottom: -10rem;
   }
 }
+
 .icon {
   width: 3rem;
   height: auto;
@@ -839,6 +845,8 @@ img {
 }
 
 /* style of mobile */
+
+
 @media screen and (max-width: 900px) {
   .calculadora {
     position: relative;
@@ -857,7 +865,7 @@ img {
 
   .informacion {
     position: absolute;
-    top: 8%;
+    top: 15%;
     left: 10%;
     max-width: 75rem;
     width: 60%;
@@ -876,49 +884,48 @@ img {
     width: 100%;
   }
 
-  #month-1 {
-    transform: translate(0%, 1050%);
-    font-size: 2.5vh;
-  }
+ 
 
-  #month-2 {
-    bottom: 30%;
-    font-size: 2.5vh;
-    transform: translate(350%, 0);
-  }
 
   .form-controles {
-    bottom: 15%;
+    bottom: 30%;
     left: -5%;
     width: 100%;
     margin-top: 1rem;
   }
 
-  .indicador-calculadora {
-    margin-top: 3.8%;
-    max-width: 30rem;
+  .control>input {
+    font-size: 1.2rem;
   }
+
+
 
   .circulo-indicador {
-    top: 30%;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
+  position: relative;
+  left: 0%;
+  top: 30%;
+  transform: translate(0%, 0%);
+  width: 1.5rem;  
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: white;
+
+
+  z-index: 10;
+}
+
+
 
   .descripcion {
-    top: 2%;
+    top: 3%;
+    left: 2%;
   }
 
 
   .descripcion>p {
-    font-size: 3.5vh;
+    font-size: 2vh;
   }
 
-  .form-controles {
-    top: 70%;
-    width: 90%;
-    left: 2%;
-  }
 
   .logo-redes {
     display: none;
