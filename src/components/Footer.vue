@@ -2,8 +2,8 @@
   <!-- Fondo de la footer -->
   <div :class="{
     logo: true,
-    'logo-animation': index_pagina == this.limite && enter,
-    'logo-animation-revert': index_pagina == this.limite && exit,
+    'logo-animation31152814': index_pagina == this.limite && enter,
+    'logo-animation-revert31152814': index_pagina == this.limite && exit,
   }">
     <img src="/img/logo.svg" alt="logo monneverse" />
   </div>
@@ -29,8 +29,8 @@
   <!-- redes sociales -->
   <div :class="{
     'fondo-redes': true,
-    'fondo-redes-animation': index_pagina == this.limite && enter,
-    'fondo-redes-animation-revert': index_pagina == this.limite && exit,
+    'fondo-redes-animation31152814': index_pagina == this.limite && enter,
+    'fondo-redes-animation-revert31152814': index_pagina == this.limite && exit,
   }">
     <div class="redes">
       <a href="https://t.me/monnerversecommunity">
