@@ -279,7 +279,7 @@ img {
     top: 40%;
     transform: translate(10%,0);
     left: 2%;
-    width: 43%;
+    width: 73%;
     height: 40%;
     padding: 4rem;
     margin-right: 3rem;
