@@ -274,7 +274,7 @@ img {
   animation-iteration-count: 1;
 }
 
-/* @keyframes fondo-montana-animation {
+@keyframes fondo-montana-animation {
   0% {
     height: 50%;
     top: 50%;
@@ -284,7 +284,7 @@ img {
     height: 100%;
     top: 0%;
   }
-} */
+}
 
 
 /* Circuito */
@@ -335,7 +335,7 @@ img {
   left: 55%;
 }
 
-/* @keyframes luz {
+@keyframes luz {
   0% {
     opacity: 20%;
   }
@@ -347,7 +347,7 @@ img {
   100% {
     opacity: 100%;
   }
-} */
+}
 
 /* contenido principal y calculadora */
 .contenido {
@@ -390,7 +390,7 @@ img {
   animation-fill-mode: forwards;
 }
 
-/* @keyframes aparecer-animation {
+@keyframes aparecer-animation {
   0% {
     opacity: 0%;
   }
@@ -402,7 +402,7 @@ img {
   45% {
     opacity: 100%;
   }
-} */
+}
 
 
 .circulo {
@@ -488,141 +488,130 @@ img {
     transform: rotate(0deg) translate(0%, 0%);
     ;
   }
-
-  top: 0;
-  left: 0;
-  transition: rotate(0deg);
-  transform: rotate(0deg);
 }
 
-.indicador-calculadora {
-  margin-top: 1.8%;
+.indicador {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 25%;
+  height: 25%;;
+
+}
+
+.indicador>img {
   transition: transform 0.4s ease-in 0s;
-  max-width: 60rem;
+}
 
-  .indicador {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    width: 25%;
-    height: 25%;
-    ;
+.form-controles {
+  position: absolute;
+  top: 82%;
+  left: -5%;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
 
-  }
+.control {
+  color: #f9f9fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+  z-index: 1000;
+}
 
-  .indicador>img {
-    transition: transform 0.4s ease-in 0s;
-  }
-
-  .form-controles {
-    position: absolute;
-    top: 82%;
-    left: -5%;
-    width: 100%;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-  }
-
-  .control {
-    color: #f9f9fa;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10%;
-    z-index: 1000;
-  }
-
-  .control>input {
-    font-family: "WorkSans", sans-serif;
-    font-size: 1.5rem;
-    color: #067f4e;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    width: 60%;
-    max-width: 4rem;
-    min-height: 2.5rem;
-    border-radius: 2rem;
-    max-width: 8rem;
-    text-align: center;
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
+.control>input {
+  font-family: "WorkSans", sans-serif;
+  font-size: 1.5rem;
+  color: #067f4e;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 60%;
+  max-width: 4rem;
+  min-height: 2.5rem;
+  border-radius: 2rem;
+  max-width: 8rem;
+  text-align: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 
 
 
-  #interes:disabled {
-    background-color: white;
-    user-select: none;
-    pointer-events: none;
-  }
+#interes:disabled {
+  background-color: white;
+  user-select: none;
+  pointer-events: none;
+}
 
-  .control>label {
-    font-family: "WorkSans", sans-serif;
-    font-size: 1.5rem;
-    color: white;
-    padding: 0rem;
-    text-align: center;
-    width: 5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
+.control>label {
+  font-family: "WorkSans", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0rem;
+  text-align: center;
+  width: 5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 
 
 
 
-  #month-1 {
-    position: absolute;
-    top: 0;
-    transform: translate(0%, 450%);
-    z-index: 20;
-    color: white;
-    font-size: 4vh;
-  }
+#month-1 {
+  position: absolute;
+  top: 0;
+  transform: translate(0%, 450%);
+  z-index: 20;
+  color: white;
+  font-size: 4vh;
+}
 
-  #month-2 {
-    position: absolute;
-    bottom: 20%;
-    z-index: 20;
-    transform: translate(450%, 0);
-    color: white;
-    font-size: 4vh;
-  }
+#month-2 {
+  position: absolute;
+  bottom: 20%;
+  z-index: 20;
+  transform: translate(450%, 0);
+  color: white;
+  font-size: 4vh;
+}
 
-  .circulo-indicador {
-    position: relative;
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-    width: 2rem;
-    border-radius: 50%;
-    background-color: white;
-    height: 2rem;
+.circulo-indicador {
+  position: relative;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  width: 2rem;
+  border-radius: 50%;
+  background-color: white;
+  height: 2rem;
 
-    z-index: 10;
-  }
+  z-index: 10;
+}
 
 
 
-  .circulo_indicador_animation {
-    animation-duration: .5s;
-    animation-name: circulo-indicador-animation;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-  }
+.circulo_indicador_animation {
+  animation-duration: .5s;
+  animation-name: circulo-indicador-animation;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
 
-  .circulo_indicador_animation_revert {
-    animation-duration: .5s;
-    animation-name: circulo-indicador-animation;
-    animation-direction: reverse;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-  }
+.circulo_indicador_animation_revert {
+  animation-duration: .5s;
+  animation-name: circulo-indicador-animation;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
 
-  /* @keyframes circulo-indicador-animation {
+@keyframes circulo-indicador-animation {
   0% {
     position: relative;
     left: 70%;
@@ -640,195 +629,194 @@ img {
     width: 3rem;
     height: 3rem;
   }
-} */
+}
 
-  .circulo_indicador_animation_salida {
-    animation-duration: .5s;
-    animation-name: circulo_indicador_salida;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-  }
+.circulo_indicador_animation_salida {
+  animation-duration: .5s;
+  animation-name: circulo_indicador_salida;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
 
-  .circulo_indicador_animation_salida_revert {
-    animation-duration: .5s;
-    animation-name: circulo_indicador_salida;
-    animation-direction: reverse;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-  }
+.circulo_indicador_animation_salida_revert {
+  animation-duration: .5s;
+  animation-name: circulo_indicador_salida;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
 
-  @keyframes circulo_indicador_salida {
+@keyframes circulo_indicador_salida {
 
-    0% {
-      position: absolute;
-      right: 48%;
-      top: 17%;
-      width: 3rem;
-      height: 3rem;
-    }
-
-    100% {
-      position: absolute;
-      top: 20%;
-      right: 20%;
-      width: 6rem;
-      height: 6rem;
-    }
-
-  }
-
-  .descripcion {
-    color: white;
+  0% {
     position: absolute;
-    width: 100%;
-    top: 2rem;
-    left: 1rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 17;
-  }
-
-
-  .descripcion>p {
-    width: 100%;
-    text-align: center;
-    user-select: none;
-    font-family: "WorkSans", sans-serif;
-    color: #c27e01;
-    font-size: 6vh;
-    font-weight: 600;
-  }
-
-
-
-  /* Clases de animaciones */
-  .hour48>img {
-    transform: rotate(-80deg);
-    margin-top: 1.8%
-  }
-
-  .month1>img {
-    transform: rotate(65deg);
-    margin-top: 1.8%
-  }
-
-  .month2>img {
-    transform: rotate(200deg);
-    margin-top: 1.8%
-  }
-
-  /* Informacion*/
-  .informacion {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -10%);
-    left: 3rem;
-    max-width: 35rem;
-    width: 30%;
-    z-index: 9;
-    font-family: "WorkSans", sans-serif;
-    color: white;
-  }
-
-  .informacion #title {
-    font-size: 11vh;
-    font-family: "work Sans", sans-serif;
-    font-weight: 600;
-
-  }
-
-  @media screen and (max-width: 1450px) {
-    .informacion #title {
-      font-size: 9vh;
-      font-family: "work Sans", sans-serif;
-      font-weight: 600;
-
-    }
-  }
-
-  @media screen and (max-width: 1150px) {
-    .informacion #title {
-      font-size: 7vh;
-      font-family: "work Sans", sans-serif;
-      font-weight: 600;
-
-    }
-  }
-
-  @media screen and (max-width: 950px) {
-    .informacion #title {
-      font-size: 5vh;
-      font-family: "work Sans", sans-serif;
-      font-weight: 600;
-
-    }
-  }
-
-  .informacion #title span {
-    color: #01c28d;
-    font-family: "WorkSans", sans-serif;
-  }
-
-  .informacion #descripcion {
-    margin-top: 2rem;
-    text-align: start;
-    font-family: "work Sans", sans-serif;
-    font-size: 2.5vh;
-    font-weight: 300;
-    width: 100%;
-  }
-
-  .titulo-imagen {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-  }
-
-  .titulo-imagen>img {
+    right: 48%;
+    top: 17%;
     width: 3rem;
-    height: auto;
-    margin-right: 1rem;
-    margin-top: .7rem;
+    height: 3rem;
   }
 
-  /* redes sociales */
-  .logo-redes {
+  100% {
     position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    width: 20rem;
-    height: 5rem;
-    z-index: 14;
-    display: flex;
-    justify-content: start;
+    top: 20%;
+    right: 20%;
+    width: 6rem;
+    height: 6rem;
   }
 
-  .desplazar_redes {
-    animation-name: redes_animation;
-    animation-duration: .5s;
-    animation-iteration-count: 1;
-  }
+}
 
-  .desplazar_redes_revert {
-    animation-name: redes_animation;
-    animation-duration: .5s;
-    animation-iteration-count: 1;
-    animation-direction: reverse;
-    animation-fill-mode: forwards;
-  }
+.descripcion {
+  color: white;
+  position: absolute;
+  width: 100%;
+  top: 2rem;
+  left: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 17;
+}
 
-  /* .desplazar_redes_salida {
+
+.descripcion>p {
+  width: 100%;
+  text-align: center;
+  user-select: none;
+  font-family: "WorkSans", sans-serif;
+  color: #c27e01;
+  font-size: 6vh;
+  font-weight: 600;
+}
+
+
+
+/* Clases de animaciones */
+.hour48>img {
+  transform: rotate(-80deg);
+  margin-top: 1.8%
+}
+
+.month1>img {
+  transform: rotate(65deg);
+  margin-top: 1.8%
+}
+
+.month2>img {
+  transform: rotate(200deg);
+  margin-top: 1.8%
+}
+
+/* Informacion*/
+.informacion {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -10%);
+  left: 3rem;
+  max-width: 35rem;
+  width: 30%;
+  z-index: 9;
+  font-family: "WorkSans", sans-serif;
+  color: white;
+}
+
+.informacion #title {
+  font-size: 11vh;
+  font-family: "work Sans", sans-serif;
+  font-weight: 600;
+
+}
+
+@media screen and (max-width: 1450px) {
+  .informacion #title {
+    font-size: 9vh;
+    font-family: "work Sans", sans-serif;
+    font-weight: 600;
+
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .informacion #title {
+    font-size: 7vh;
+    font-family: "work Sans", sans-serif;
+    font-weight: 600;
+
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .informacion #title {
+    font-size: 5vh;
+    font-family: "work Sans", sans-serif;
+    font-weight: 600;
+
+  }
+}
+
+.informacion #title span {
+  color: #01c28d;
+  font-family: "WorkSans", sans-serif;
+}
+
+.informacion #descripcion {
+  margin-top: 2rem;
+  text-align: start;
+  font-family: "work Sans", sans-serif;
+  font-size: 2.5vh;
+  font-weight: 300;
+  width: 100%;
+}
+
+.titulo-imagen {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.titulo-imagen>img {
+  width: 3rem;
+  height: auto;
+  margin-right: 1rem;
+  margin-top: .7rem;
+}
+
+/* redes sociales */
+.logo-redes {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  width: 20rem;
+  height: 5rem;
+  z-index: 14;
+  display: flex;
+  justify-content: start;
+}
+
+.desplazar_redes {
+  animation-name: redes_animation;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+}
+
+.desplazar_redes_revert {
+  animation-name: redes_animation;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
+
+/* .desplazar_redes_salida {
   animation-name: redes_animation_salida;
   animation-duration: .5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 } */
-  @keyframes redes_animation {
-    /* @keyframes redes_animation {
+@keyframes redes_animation {
   0% {
     left: 45%;
   }
@@ -843,107 +831,106 @@ img {
     left: 1rem;
     bottom: 1rem;
   }
-} */
 
-    100% {
-      left: -10rem;
-      bottom: -10rem;
-    }
+  100% {
+    left: -10rem;
+    bottom: -10rem;
+  }
+}
+
+.icon {
+  width: 3rem;
+  height: auto;
+  margin-left: 1rem;
+}
+
+/* style of mobile */
+
+
+@media screen and (max-width: 900px) {
+  .calculadora {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    height: 90%;
+    width: 70%;
+    max-width: 30rem;
+    min-width: 25rem;
+    z-index: 8;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
   }
 
-  .icon {
-    width: 3rem;
-    height: auto;
-    margin-left: 1rem;
+  .informacion {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    max-width: 75rem;
+    width: 60%;
+    z-index: 9;
+    font-family: "work Sans", sans-serif;
+    color: white;
   }
 
-  /* style of mobile */
-
-
-  @media screen and (max-width: 900px) {
-    .calculadora {
-      position: relative;
-      top: 0%;
-      left: 0%;
-      height: 90%;
-      width: 70%;
-      max-width: 30rem;
-      min-width: 25rem;
-      z-index: 8;
-      user-select: none;
-      display: flex;
-      justify-content: center;
-      margin: 3rem;
-    }
-
-    .informacion {
-      position: absolute;
-      top: 15%;
-      left: 10%;
-      max-width: 75rem;
-      width: 60%;
-      z-index: 9;
-      font-family: "work Sans", sans-serif;
-      color: white;
-    }
-
-    .informacion #descripcion {
-      margin-top: 0rem;
-      margin-left: 4.56rem;
-      text-align: start;
-      font-family: "work Sans", sans-serif;
-      font-size: 2.5vh;
-      font-weight: 300;
-      width: 100%;
-    }
-
-
-
-
-    .form-controles {
-      bottom: 30%;
-      left: -5%;
-      width: 100%;
-      margin-top: 1rem;
-    }
-
-    .control>input {
-      font-size: 1.2rem;
-    }
-
-
-
-    .circulo-indicador {
-      position: relative;
-      left: 0%;
-      top: 30%;
-      transform: translate(0%, 0%);
-      width: 1.5rem;
-      height: 1.5rem;
-      border-radius: 50%;
-      background-color: white;
-
-
-      z-index: 10;
-    }
-
-
-
-    .descripcion {
-      top: 3%;
-      left: 2%;
-    }
-
-
-    .descripcion>p {
-      font-size: 2vh;
-    }
-
-
-    .logo-redes {
-      display: none;
-    }
+  .informacion #descripcion {
+    margin-top: 0rem;
+    margin-left: 4.56rem;
+    text-align: start;
+    font-family: "work Sans", sans-serif;
+    font-size: 2.5vh;
+    font-weight: 300;
+    width: 100%;
   }
+
+ 
+
+
+  .form-controles {
+    bottom: 30%;
+    left: -5%;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .control>input {
+    font-size: 1.2rem;
+  }
+
+
+
+  .circulo-indicador {
+  position: relative;
+  left: 0%;
+  top: 30%;
+  transform: translate(0%, 0%);
+  width: 1.5rem;  
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: white;
+
+
+  z-index: 10;
+}
+
+
+
+  .descripcion {
+    top: 3%;
+    left: 2%;
+  }
+
+
+  .descripcion>p {
+    font-size: 2vh;
+  }
+
+
+  .logo-redes {
+    display: none;
+  }
+}
 </style>
 
 
