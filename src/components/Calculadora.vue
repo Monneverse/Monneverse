@@ -496,7 +496,8 @@ img {
   left: 50%;
   transform: translate(-50%, -40%);
   width: 25%;
-  height: 25%;;
+  height: 25%;
+  ;
 
 }
 
@@ -672,7 +673,7 @@ img {
   position: absolute;
   width: 100%;
   top: 2rem;
-  left: 1rem;
+  left: 0rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -863,12 +864,16 @@ img {
     margin: 3rem;
   }
 
+  .titulo-imagen>img {
+    width: 2rem;
+  }
+
   .informacion {
     position: absolute;
     top: 15%;
-    left: 10%;
+    left: 5%;
     max-width: 75rem;
-    width: 60%;
+    width: 70%;
     z-index: 9;
     font-family: "work Sans", sans-serif;
     color: white;
@@ -884,12 +889,13 @@ img {
     width: 100%;
   }
 
- 
+
 
 
   .form-controles {
     bottom: 30%;
     left: -5%;
+    transform: translate(0, 100%);
     width: 100%;
     margin-top: 1rem;
   }
@@ -898,32 +904,35 @@ img {
     font-size: 1.2rem;
   }
 
+  .control>label {
+    font-size: 1rem;
+  }
 
 
   .circulo-indicador {
-  position: relative;
-  left: 0%;
-  top: 30%;
-  transform: translate(0%, 0%);
-  width: 1.5rem;  
-  height: 1.5rem;
-  border-radius: 50%;
-  background-color: white;
+    position: relative;
+    left: 0%;
+    top: 30%;
+    transform: translate(0%, 0%);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: white;
+    display: none;
 
-
-  z-index: 10;
-}
+    z-index: 10;
+  }
 
 
 
   .descripcion {
     top: 3%;
-    left: 2%;
+    left: 0%;
   }
 
 
   .descripcion>p {
-    font-size: 2vh;
+    font-size: 1rem;
   }
 
 
