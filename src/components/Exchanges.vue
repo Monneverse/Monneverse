@@ -287,7 +287,7 @@ import ComponenteIconos from "./componenteIconos.vue";
 .exchange_text {
   width: 100%;
   height: 50%;
-  font-size: 3rem;
+  font-size: 2.9rem;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
