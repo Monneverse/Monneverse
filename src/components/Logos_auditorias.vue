@@ -1,6 +1,6 @@
 <template>
     <div class="texto_auditoria">
-        <p>audited by the <br>most reliable companies</p>
+        <p>audited by the <br />most reliable companies</p>
     </div>
     <div class="fondo"></div>
     <div class="fondo-oscuro1"></div>
@@ -39,39 +39,39 @@
     <div class="fondoCertik"></div>
     <div class="logos_auditoria">
         <a href="https://solidity.finance/audits/MONNERVERSE/" target="_blank">
-            <img src="/img/Exchanges/solidity1.png" class="auditoria1"></a>
-        <a><img src="/img/Exchanges/certik.png" class="auditoria2"></a>
-        <button class="btn_registro"><a
-                href="https://sites.google.com/view/whiterpaper-monnerverse/p%C3%A1gina-principal" target="_blank">
-                register EEUU</a></button>
+            <img src="/img/Exchanges/solidity1.png" class="auditoria1" /></a>
+        <a href="https://sites.google.com/view/certik-kyc-approved/certik-kyc-approved" target="_blank"><img
+                class="auditoria2" src="/img/Exchanges/certik.png" /></a>
+        <button class="btn_registro">
+            <a href="https://www.flbusinessgo.com/companies/L22000347356/" target="_blank">
+                register EEUU</a>
+        </button>
     </div>
     <div class="circulos">
-        <img src="/img/Imagen1.png">
+        <img src="/img/Imagen1.png" />
     </div>
     <div class="logo-redes">
         <div class="icon icon-telegram">
             <a href="https://t.me/monnerversecommunity" target="_blank">
-                <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="">
+                <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
             </a>
         </div>
         <div class="icon icon-reddit">
             <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-                <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="">
+                <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
             </a>
         </div>
-        <div class="icon icon-discord ">
+        <div class="icon icon-discord">
             <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-                <img src="../assets/discord.svg" alt="logo discord" srcset="">
+                <img src="../assets/discord.svg" alt="logo discord" srcset="" />
             </a>
         </div>
     </div>
     <div class="degradado degradado_izquierdo"></div>
     <div class="degradado degradado_derecho"></div>
-
 </template>
 
-<script>
-</script>
+<script></script>
 
 <style scoped>
 @font-face {
@@ -173,7 +173,7 @@ img {
         background: radial-gradient(circle at center,
                 #48d0ab 10%,
                 #097561 20%,
-                #0F161C 100%);
+                #0f161c 100%);
         z-index: 1;
         opacity: 100%;
     }
@@ -196,7 +196,6 @@ img {
         transform: rotate(-60deg);
         right: 55%;
         visibility: hidden;
-
     }
 
     .degradado_derecho {
@@ -244,7 +243,6 @@ img {
 }
 
 @media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
-
     .fondo {
         position: absolute;
         top: 0;
@@ -266,7 +264,7 @@ img {
         background: radial-gradient(circle at center,
                 #48d0ab 10%,
                 #097561 20%,
-                #0F161C 100%);
+                #0f161c 100%);
         z-index: 1;
         opacity: 100%;
     }
@@ -289,7 +287,6 @@ img {
         transform: rotate(-60deg);
         right: 55%;
         visibility: hidden;
-
     }
 
     .degradado_derecho {
@@ -361,7 +358,7 @@ img {
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
     .texto_auditoria {
         position: absolute;
-        top: 12%;
+        top: 17%;
         left: 3%;
         color: white;
         text-align: center;
@@ -377,7 +374,6 @@ img {
         text-transform: uppercase;
     }
 }
-
 
 /* FIN TEXT */
 
@@ -445,16 +441,16 @@ img {
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
     .fondoSolidity {
-        top: 30%;
+        top: 40%;
         left: 26%;
-        height: 15%;
-        width: 50%
+        height: 10%;
+        width: 50%;
     }
 
     .auditoria1 {
-        top: 30%;
+        top: 40%;
         left: 26%;
-        height: 15%;
+        height: 10%;
         width: 50%;
         border-radius: 1rem;
     }
@@ -463,32 +459,32 @@ img {
         width: 50%;
         border: 2px solid #121026;
         border-radius: 0.5rem;
-        -webkit-box-shadow: 0px 2px 28px 5px #08047A;
-        -moz-box-shadow: 0px 2px 28px 5px #08047A;
-        box-shadow: 0px 2px 28px 15px #08047A;
+        -webkit-box-shadow: 0px 2px 28px 5px #08047a;
+        -moz-box-shadow: 0px 2px 28px 5px #08047a;
+        box-shadow: 0px 2px 28px 15px #08047a;
     }
 
     .fondoCertik {
-        top: 50%;
+        top: 58%;
         left: 26%;
         width: 50%;
-        height: 15%;
+        height: 10%;
     }
 
     .auditoria2 {
-        top: 50%;
+        top: 58%;
         left: 26%;
         width: 50%;
-        height: 15%;
+        height: 10%;
     }
 
     .auditoria2:hover {
         width: 50%;
         border: 2px solid #121026;
         border-radius: 0.5rem;
-        -webkit-box-shadow: 0px 2px 28px 5px #08047A;
-        -moz-box-shadow: 0px 2px 28px 5px #08047A;
-        box-shadow: 0px 2px 28px 15px #08047A;
+        -webkit-box-shadow: 0px 2px 28px 5px #08047a;
+        -moz-box-shadow: 0px 2px 28px 5px #08047a;
+        box-shadow: 0px 2px 28px 15px #08047a;
     }
 }
 
@@ -497,7 +493,7 @@ img {
         top: 30%;
         left: 26%;
         height: 15%;
-        width: 50%
+        width: 50%;
     }
 
     .auditoria1 {
@@ -512,9 +508,9 @@ img {
         width: 50%;
         border: 2px solid #121026;
         border-radius: 0.5rem;
-        -webkit-box-shadow: 0px 2px 28px 5px #08047A;
-        -moz-box-shadow: 0px 2px 28px 5px #08047A;
-        box-shadow: 0px 2px 28px 15px #08047A;
+        -webkit-box-shadow: 0px 2px 28px 5px #08047a;
+        -moz-box-shadow: 0px 2px 28px 5px #08047a;
+        box-shadow: 0px 2px 28px 15px #08047a;
     }
 
     .fondoCertik {
@@ -535,15 +531,13 @@ img {
         width: 50%;
         border: 2px solid #121026;
         border-radius: 0.5rem;
-        -webkit-box-shadow: 0px 2px 28px 5px #08047A;
-        -moz-box-shadow: 0px 2px 28px 5px #08047A;
-        box-shadow: 0px 2px 28px 15px #08047A;
+        -webkit-box-shadow: 0px 2px 28px 5px #08047a;
+        -moz-box-shadow: 0px 2px 28px 5px #08047a;
+        box-shadow: 0px 2px 28px 15px #08047a;
     }
-
 }
 
 /* FIN LOGOS */
-
 
 /* BOTON */
 .btn_registro {
@@ -558,10 +552,7 @@ img {
     font-weight: 600;
     color: white;
     z-index: 999;
-    background: linear-gradient(to right,
-            #029F50 0%,
-            #0A664E 50%,
-            #0E444D 100%);
+    background: linear-gradient(to right, #029f50 0%, #0a664e 50%, #0e444d 100%);
     border-radius: 0.6rem;
 }
 
@@ -585,7 +576,7 @@ img {
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
     .btn_registro {
-        bottom: 23%;
+        bottom: 17%;
         left: 28%;
         width: 45%;
         height: 8%;
@@ -596,13 +587,12 @@ img {
     }
 
     .circulos {
-        bottom: 19%;
+        bottom: 12%;
         left: 24%;
         width: 53%;
         height: 13%;
     }
 }
-
 
 /* FIN BOTON */
 
@@ -628,17 +618,15 @@ img {
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
-
     .logo-redes {
-        left: .5rem;
-        bottom: .5rem;
+        left: 0.5rem;
+        bottom: 0.5rem;
         visibility: hidden;
     }
 
     .icon {
         width: 2.3rem;
     }
-
 }
 
 /* FIN REDES */
