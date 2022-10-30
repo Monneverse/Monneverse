@@ -148,6 +148,18 @@ export default {
   font-style: semibold;
   font-stretch: semi-condensed;
 }
+@font-face {
+  font-family: "Arial";
+  src: url("/Fonts/arial.ttf");
+  font-style: semibold;
+  font-stretch: semi-condensed;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/Fonts/Montserrat-Regular.ttf");
+  font-style: semibold;
+  font-stretch: semi-condensed;
+}
 
 /* Fondo de la pagina*/
 img {
@@ -166,7 +178,7 @@ img {
 
 .titulo h1 {
   color: white;
-  font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
+   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-size: 7vw;
   font-weight: 500;
 }
@@ -174,7 +186,7 @@ img {
 @media screen and (min-width: 769px) {
   .titulo h1 {
     color: white;
-    font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
+     font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
     font-size: 4vw;
     font-weight: 500;
   }
@@ -373,7 +385,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
+   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   color: white;
   width: 100%;
   height: 100%;
@@ -466,7 +478,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
+   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   color: white;
   width: 100%;
   height: 100%;
@@ -555,7 +567,7 @@ img {
   text-align: center;
   width: 100%;
   color: white;
-  font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
+   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-size: 2.5vw;
   font-weight: 500;
 }

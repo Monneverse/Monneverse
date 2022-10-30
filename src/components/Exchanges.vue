@@ -175,6 +175,18 @@ import ComponenteIconos from "./componenteIconos.vue";
   font-style: semibold;
   font-stretch: semi-condensed;
 }
+@font-face {
+  font-family: "Arial";
+  src: url("/Fonts/arial.ttf");
+  font-style: semibold;
+  font-stretch: semi-condensed;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/Fonts/Montserrat-Regular.ttf");
+  font-style: semibold;
+  font-stretch: semi-condensed;
+}
 
 /* FONDO */
 .fondo {
@@ -368,7 +380,7 @@ import ComponenteIconos from "./componenteIconos.vue";
     #5884bb 60%,
     #11334e 100%
   );
-  font-family: "Work Sans", "BAHNSCHRIFT9.ttf";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
