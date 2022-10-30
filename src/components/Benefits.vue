@@ -11,7 +11,7 @@ defineProps({
 
   <div class="fondo">
     <div
-      :class="{ fondo_rayos: true, 'animacion-aparecer': index_pagina == 9 }"
+      :class="{ fondo_rayos: true, 'animacion-aparecer': index_pagina == 999 }"
     >
       <img src="/img/rayos.png" alt="" />
     </div>
@@ -22,12 +22,12 @@ defineProps({
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
 
-    <div :class="{ titulo: true, 'animacion-aparecer': index_pagina == 9 }">
+    <div :class="{ titulo: true, 'animacion-aparecer': index_pagina == 999 }">
       <h1>BENEFITS</h1>
     </div>
 
     <div class="display_flex">
-      <div :class="{ benefits: true, 'animacion-aparecer': index_pagina == 9 }">
+      <div :class="{ benefits: true, 'animacion-aparecer': index_pagina == 999 }">
         <div class="beneficio">
           <img class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
@@ -60,7 +60,7 @@ defineProps({
           <div
             :class="{
               'content-price': true,
-              'animacion-caja1': index_pagina == 9,
+              'animacion-caja1': index_pagina == 999,
             }"
           >
             <div class="titulo-two">
@@ -108,12 +108,12 @@ defineProps({
         </div>
       </div>
       <div class="aro">
-        <img :class="{ image1:true, 'animacion-aparecer': index_pagina == 9 }" src="/img/Imagen1.png" />
+        <img :class="{ image1:true, 'animacion-aparecer': index_pagina == 999 }" src="/img/Imagen1.png" />
 
         <img
           :class="{
             image: true,
-            'animacion-aro': index_pagina == 9,
+            'animacion-aro': index_pagina == 999,
           }"
           src="/img/Imagen1.png"
         />
@@ -123,7 +123,7 @@ defineProps({
     <div
       :class="{
         'logo-redes': true,
-        'animacion-dezplazamiento': index_pagina == 9,
+        'animacion-dezplazamiento': index_pagina == 999,
       }"
     >
       <div class="icon icon-telegram">
