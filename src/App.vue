@@ -268,7 +268,7 @@ export default {
           break;
         case 14:
           if (window.innerWidth < 900) {
-            this.orientacion = typeOrientacion.center
+            this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
           }
