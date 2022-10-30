@@ -256,15 +256,15 @@ img {
   }
 
   .circulo__1 {
-    left: 13%;
-    top: 20%;
+    left: 10%;
+    top: 26%;
     width: 80%;
   }
 
   .circulo__2 {
-    left: 8%;
+    left: 0%;
     top: 22%;
-    width: 90%;
+    width: 100%;
   }
 
 
