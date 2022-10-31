@@ -83,51 +83,51 @@ export default {
       vectorTodo: [
         {
           titulo: "Presale and benefits For investors",
-          imagen: "/img/Articulo/articulo.png",
+          imagen: "/img/Articulo/articulo_lite.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/presale-and-its-benefits-for-investors",
         },
         {
           titulo: "How to avoid being scammed by investing in monner coin?",
-          imagen: "/img/Articulo/articulo2.png",
+          imagen: "/img/Articulo/articulo2_lite.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/how-to-avoid-being-scammed-by-investing-in-monner-coin",
         },
         {
           titulo:
             "Why will monner become one of the best cryptocurrencies to investin?",
-          imagen: "/img/Articulo/articulo3.png",
+          imagen: "/img/Articulo/articulo3_lite.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/why-will-monner-become-one-of-the-best-cryptocurrencies-to-invest-in",
         },
         {
           titulo: "Why invest in monner and how to secure your investment?",
-          imagen: "/img/Articulo/articulo4.png",
+          imagen: "/img/Articulo/articulo4_lite.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/why-invest-in-monner-and-how-to-secure-your-investment",
         },
         {
           titulo: "What to do to not miss any Monner news?",
-          imagen: "/img/Articulo/articulo5.png",
+          imagen: "/img/Articulo/articulo5_lite.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/what-to-do-to-not-miss-any-monner-news",
         },
         {
           titulo: "The monner coin and it’s benefits",
-          imagen: "/img/Articulo/articulo6.png",
+          imagen: "/img/Articulo/articulo6_lite.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/the-monner-coin-and-its-benefits",
         },
       ],
       vectorArticulo: [
         {
           titulo: "Presale and benefits For investors",
-          imagen: "/img/Articulo/articulo.png",
+          imagen: "/img/Articulo/articulo_lite.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/presale-and-its-benefits-for-investors",
         },
         {
           titulo: "How to avoid being scammed by investing in monner coin?",
-          imagen: "/img/Articulo/articulo2.png",
+          imagen: "/img/Articulo/articulo2_lite.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/how-to-avoid-being-scammed-by-investing-in-monner-coin",
         },
         {
           titulo:
             "Why will monner become one of the best cryptocurrencies to investin?",
-          imagen: "/img/Articulo/articulo3.png",
+          imagen: "/img/Articulo/articulo3_lite.png",
           link: "https://sites.google.com/view/blog-monnerverse/home/why-will-monner-become-one-of-the-best-cryptocurrencies-to-invest-in",
         },
       ],
