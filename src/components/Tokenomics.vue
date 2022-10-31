@@ -394,12 +394,14 @@ h2 {
 }
 
 .purchase-tax h2 {
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   text-align: right;
   font-size: 8vw;
   font-weight: 500;
 }
 
 .purchase-tax p {
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   text-align: right;
   font-size: 1rem;
 }
@@ -487,11 +489,13 @@ h2 {
 }
 
 .sale-tax h2 {
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-size: 8vw;
   font-weight: 500;
 }
 
 .sale-tax p {
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-size: 1rem;
 }
 
