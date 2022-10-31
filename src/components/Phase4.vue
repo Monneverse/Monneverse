@@ -455,25 +455,22 @@ img {
   .componentes {
     position: absolute;
     top: 40%;
-    transform: translate(10%, 0);
-    left: 0%;
-    width: 73%;
+    left: 0;
+    padding: 0 5%;
+    box-sizing: border-box;
+    width: 100%;
     height: 40%;
-    padding: 4rem;
-    margin-right: 3rem;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: start;
     gap: 3rem;
-    flex-wrap: nowrap;
     overflow-x: scroll;
-    overflow-y: scroll;
-    scrollbar-width: 1rem;
+    overscroll-behavior-x: initial;
     scroll-snap-type: x mandatory;
     z-index: 1000;
   }
 
-
+  /* 
   .componentes::-webkit-scrollbar:vertical {
     height: 10px;
     width: 10px;
@@ -489,15 +486,19 @@ img {
 
   .componentes::-webkit-scrollbar-track {
     border-radius: 10px;
-  }
+  } */
 
 
   .componente {
+
+    box-sizing: content-box;
     position: unset;
-    width: 100vh;
-    height: auto;
-    margin-right: 8rem;
+    width: 90%;
+    margin: 10%;
+    min-width: 80%;
+    height: 80%;
   }
+
 
 
   .arrow,

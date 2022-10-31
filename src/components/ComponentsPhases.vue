@@ -42,16 +42,21 @@ img {
   margin: 10px;
   padding: 1rem;
   color: white;
+  width: 100%;
+  text-overflow: ellipsis;
 }
 
 .contenedor__fases p {
   font-size: 1.3vw;
+  width: 90%;
+  
   font-family: "Work Sans", sans-serif;
 }
 
 .contenedor__fases b {
   font-size: 1.8vw;
   font-family: "Work Sans";
+  margin-bottom: 5%;
 }
 
 .circulo-indicador {
