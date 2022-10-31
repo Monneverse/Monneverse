@@ -386,6 +386,7 @@ import ComponenteIconos from "./componenteIconos.vue";
   color: transparent;
   width: 60%;
   margin-top: 10%;
+  font-size: 2rem;
 }
 
 @media only screen and (width > 769px) {
