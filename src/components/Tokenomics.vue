@@ -166,7 +166,9 @@ img {
   width: 100%;
   height: 100%;
 }
-
+h2 {
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+}
 .titulo {
   position: absolute;
   width: 100%;
