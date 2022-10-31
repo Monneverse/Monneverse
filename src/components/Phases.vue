@@ -269,12 +269,11 @@ img {
   }
 
 
-
   .componentes {
     position: absolute;
     top: 40%;
-    transform: translate(10%,0);
-    left: 2%;
+    transform: translate(10%, 0);
+    left: 0;
     width: 73%;
     height: 40%;
     padding: 4rem;
@@ -284,7 +283,6 @@ img {
     justify-content: start;
     gap: 3rem;
     flex-wrap: nowrap;
-    overflow-x: scroll;
     overflow-y: scroll;
     scrollbar-width: 1rem;
     scroll-snap-type: x mandatory;
@@ -312,7 +310,7 @@ img {
 
   .componente {
     position: unset;
-    width: 75%;
+    width: 100vh;
     height: auto;
     margin-right: 8rem;
   }

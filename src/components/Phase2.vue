@@ -351,7 +351,6 @@ img {
     justify-content: start;
     gap: 3rem;
     flex-wrap: nowrap;
-    overflow-x: scroll;
     overflow-y: scroll;
     scrollbar-width: 1rem;
     scroll-snap-type: x mandatory;
@@ -379,7 +378,7 @@ img {
 
   .componente {
     position: unset;
-    width: 75%;
+    width: 100vh;
     height: auto;
     margin-right: 8rem;
   }

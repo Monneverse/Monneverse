@@ -456,7 +456,7 @@ img {
     position: absolute;
     top: 40%;
     transform: translate(10%, 0);
-    left: 2%;
+    left: 0%;
     width: 73%;
     height: 40%;
     padding: 4rem;
@@ -494,7 +494,7 @@ img {
 
   .componente {
     position: unset;
-    width: 75%;
+    width: 100vh;
     height: auto;
     margin-right: 8rem;
   }
