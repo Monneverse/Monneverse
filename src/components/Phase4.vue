@@ -457,7 +457,8 @@ img {
     position: absolute;
     top: 40%;
     left: 0;
-    margin: 5%;
+    padding: 0 5%;
+    margin: 0 5%;
     box-sizing: border-box;
     width: 90%;
     height: 40%;
@@ -496,9 +497,9 @@ img {
 
     box-sizing: content-box;
     position: unset;
-    width: 95%;
+    width: 90%;
     margin: 10%;
-    min-width: 95%;
+    min-width: 80%;
     height: 80%;
   }
 
