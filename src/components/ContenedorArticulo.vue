@@ -1,5 +1,4 @@
 <script setup>
-import { text } from "@fortawesome/fontawesome-svg-core";
 import Articulo from "./Articulo.vue";
 defineProps({
   index_pagina: {
