@@ -385,6 +385,12 @@ img {
   }
 
 
+  .arrow,
+  .arrow:before {
+    position: absolute;
+    left: 50%
+  }
+
   .arrow {
     width: 25px;
     height: 25px;
@@ -472,6 +478,5 @@ img {
       transform: translate(-10px, -10px);
     }
   }
-
 }
 </style>
