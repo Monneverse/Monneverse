@@ -437,8 +437,8 @@ h2 {
 }
 
 .titulo1 h2 {
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   padding-right: 10%;
-  font-family: Calibri;
 }
 
 @media screen and (min-width: 769px) {
@@ -528,6 +528,7 @@ h2 {
 }
 
 .titulo2 h2 {
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   padding-left: 10%;
 }
 
