@@ -16,10 +16,14 @@ defineProps({
   <div class="fondo fondo-oscurecer"></div>
   <div class="arrow"></div>
   <div class="arrow2"></div>
-  <div :class="{
-    'circuito-izquierdo': true,
-    'animacion-desplazamiento': index_pagina == 88,
-  }" class="circuito">
+  <div
+   
+    :class="{
+      'circuito-izquierdo': true,
+      'animacion-desplazamiento': index_pagina == 88,
+    }"
+     class="circuito"
+  >
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
   </div>
   <div class="circuito circuito-derecho">
@@ -29,40 +33,82 @@ defineProps({
   <div class="degradado_azuliz"></div>
   <div class="degradado_azulde"></div>
   <!--FIN FONDO-->
-  <div :class="{
-    contenedor_coins: true,
-    'animacion-aparecer': index_pagina == 88,
-  }">
+  <div
+    :class="{
+      contenedor_coins: true,
+      'animacion-aparecer': index_pagina == 88,
+    }"
+  >
     <div class="card_coin">
-      <coin icono="/img/coins/kucoin.svg" titulo="KuCoin token " sigla="(KCS)" texto="TOP 52 approx capitalization"
+      <coin
+        icono="/img/coins/kucoin.svg"
+        titulo="KuCoin token "
+        sigla="(KCS)"
+        texto="TOP 52 approx capitalization"
         capitalizacion="900 M USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of KuCoin token (KCS) would have a value of"
-        logo="/img/logo.svg" precio="90.000" caja="/img/coins/caja.png" :index="index_pagina" />
+        logo="/img/logo.svg"
+        precio="90.000"
+        caja="/img/coins/caja.png"
+        :index="index_pagina"
+      />
     </div>
     <div class="card_coin">
-      <coin icono="/img/coins/axie.svg" titulo="Axie Infinity" sigla="(AXS)" texto="TOP 48 approx capitalization"
+      <coin
+        icono="/img/coins/axie.svg"
+        titulo="Axie Infinity"
+        sigla="(AXS)"
+        texto="TOP 48 approx capitalization"
         capitalizacion="1.05 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of AXIE INFINITY (AXS) would have a value of"
-        logo="/img/logo.svg" precio="105.000" caja="/img/coins/caja.png" :index="index_pagina" />
+        logo="/img/logo.svg"
+        precio="105.000"
+        caja="/img/coins/caja.png"
+        :index="index_pagina"
+      />
     </div>
     <div class="card_coin">
-      <coin icono="/img/coins/decentraland.svg" titulo="Decentraland" sigla="(MANA)"
-        texto="TOP 42 approx capitalization" capitalizacion="1.30 B USD"
+      <coin
+        icono="/img/coins/decentraland.svg"
+        titulo="Decentraland"
+        sigla="(MANA)"
+        texto="TOP 42 approx capitalization"
+        capitalizacion="1.30 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of Decentraland (MANA) would have a value of"
-        logo="/img/logo.svg" precio="130.000" caja="/img/coins/caja.png" :index="index_pagina" />
+        logo="/img/logo.svg"
+        precio="130.000"
+        caja="/img/coins/caja.png"
+        :index="index_pagina"
+      />
     </div>
 
     <div class="card_coin">
-      <coin icono="/img/coins/monero.svg" titulo="Monero" sigla="(XRM)" texto="TOP 28 approx capitalization"
+      <coin
+        icono="/img/coins/monero.svg"
+        titulo="Monero"
+        sigla="(XRM)"
+        texto="TOP 28 approx capitalization"
         capitalizacion="2.68 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of  Monero (XRM) would have a value of"
-        logo="/img/logo.svg" precio="268.000" caja="/img/coins/caja.png" :index="index_pagina" />
+        logo="/img/logo.svg"
+        precio="268.000"
+        caja="/img/coins/caja.png"
+        :index="index_pagina"
+      />
     </div>
     <div class="card_coin">
-      <coin icono="/img/coins/chain.svg" titulo="Chainlink" sigla="(LINK)" texto="TOP 21 approx capitalization"
+      <coin
+        icono="/img/coins/chain.svg"
+        titulo="Chainlink"
+        sigla="(LINK)"
+        texto="TOP 21 approx capitalization"
         capitalizacion="3.72 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of Chainlink (LINK) would have a value of"
-        logo="/img/coins/logo.svg" precio="372.000" caja="/img/coins/caja.png" :index="index_pagina" />
+        logo="/img/coins/logo.svg"
+        precio="372.000"
+        caja="/img/coins/caja.png"
+        :index="index_pagina"
+      />
     </div>
   </div>
 
@@ -98,19 +144,23 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
   z-index: 1;
 }
 
 .filtro-superior {
   z-index: 2;
-  background: radial-gradient(circle at center,
-      #f9f9fa 0%,
-      #c8ced4 50%,
-      #a8aaaf 100%);
+  background: radial-gradient(
+    circle at center,
+    #f9f9fa 0%,
+    #c8ced4 50%,
+    #a8aaaf 100%
+  );
   mix-blend-mode: multiply;
 }
 
@@ -121,13 +171,11 @@ img {
   height: 100%;
   z-index: 3;
 }
-
-@media screen and (width > 900px) {
+@media screen and (width > 768px) {
   .fondo-montana {
     width: 100%;
   }
 }
-
 .fondo-oscurecer {
   z-index: 4;
   background-color: rgb(0, 0, 0);
@@ -176,7 +224,7 @@ img {
   display: none;
 }
 
-@media screen and (width > 900px) {
+@media screen and (width > 768px) {
   .degradado_azuliz {
     background: linear-gradient(to right, #08047a 0.5%, transparent);
     position: absolute;
@@ -219,7 +267,7 @@ img {
   color: #fff;
 }
 
-@media screen and (width > 900px) {
+@media screen and (width > 768px) {
   .contenedor_coins {
     position: absolute;
     z-index: 14;
@@ -235,14 +283,12 @@ img {
     overflow-x: hidden;
   }
 }
-
 .card_coin {
   width: 100%;
   height: 100%;
   flex: none;
 }
-
-@media screen and (width > 900px) {
+@media screen and (width > 769px) {
   .card_coin {
     flex: auto;
   }
@@ -264,16 +310,14 @@ img {
   z-index: 18;
 }
 
-@media screen and (width > 900px) {
+@media screen and (width > 768px) {
   .cuadros-derecho {
     top: 90%;
   }
-
   .cuadros-izquierdo {
     top: 90%;
   }
 }
-
 .monner {
   position: absolute;
   top: 80%;
@@ -299,8 +343,7 @@ img {
   font-size: 1rem;
   font-weight: 600;
 }
-
-@media screen and (width > 900px) {
+@media screen and (width > 768px) {
   .monner {
     position: absolute;
     top: 90%;
@@ -328,44 +371,17 @@ img {
   animation-duration: 0.5s;
   animation-iteration-count: 1;
 }
-
 @keyframes dezplazamiento {
   0% {
     left: 1em;
   }
 
-  100% {}
+  100% {
+  
+  }
 }
 
 @media screen and (max-width: 900px) {
-
-  .contenedor_coins {
-    overflow: hidden;
-    overflow-x: scroll;
-    overscroll-behavior-x: initial;
-    scroll-snap-type: x mandatory;
-  }
-
-  .contenedor_coins::-webkit-scrollbar:horizontal {
-    height: 10px;
-  }
-
-  .contenedor_coins::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg,
-        rgb(33, 32, 85) 0%,
-        rgba(1, 209, 88, 1) 100%);
-    border-radius: 20px;
-    border: 2px solid #f1f2f3;
-  }
-
-  .contenedor_coins::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar {
-    display: block;
-  }
-
   .arrow,
   .arrow:before {
     position: absolute;
