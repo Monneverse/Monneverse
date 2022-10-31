@@ -374,7 +374,36 @@ img {
   height: 30%;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 900px) {
+
+  .major {
+    overflow: hidden;
+    overflow-x: scroll;
+    overscroll-behavior-x: initial;
+    scroll-snap-type: x mandatory;
+    padding: 1rem;
+  }
+
+
+  .major::-webkit-scrollbar:horizontal {
+    height: 10px;
+  }
+
+  .major::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg,
+        rgb(33, 32, 85) 0%,
+        rgba(1, 209, 88, 1) 100%);
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+  }
+
+  .major ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar {
+    display: block;
+  }
 
   .arrow,
   .arrow:before {

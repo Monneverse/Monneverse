@@ -355,7 +355,7 @@ section {
   width: 100%;
   height: 100%;
   z-index: 5;
-  background-color: rgb(0, 0, 0);
+  background-color: #010101;
   opacity: 10%;
   mix-blend-mode: multiply;
 }
@@ -487,8 +487,9 @@ section {
 }
 
 .alianzas a {
+
   text-align: center;
-  color: black;
+  color:#010101;
   display: flex;
   flex-direction: column;
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";

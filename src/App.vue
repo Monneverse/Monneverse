@@ -42,74 +42,74 @@ import Footer from "./components/Footer.vue";
     -->
 
 
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 1 }">
+    <div v-show="index_pagina == 1 " class="container">
       <Bienvenida :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 2 }">
+    <div  v-show="index_pagina == 2 " class="container">
       <Alliances :index_pagina="index_pagina" />
     </div>
 
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 3 }">
+    <div  v-show="index_pagina == 3 " class="container">
       <Alianzas />
     </div>
 
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 4 }">
+    <div  v-show="index_pagina == 4 " class="container">
       <Calculadora  :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"  />
     </div>
 
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 5 }">
+    <div  v-show="index_pagina == 5 " class="container">
       <ContenedorArticulo :index_pagina="index_pagina" />
     </div>
 
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 6 }">
+    <div  v-show="index_pagina == 6 " class="container">
       <Exchanges />
     </div>
 
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 7 }">
+    <div v-show="index_pagina == 7 " class="container">
       <Logos_auditorias />
     </div>
 
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 8 }">
+    <div  v-show="index_pagina == 8 " class="container">
       <Coins :index_pagina="index_pagina" />
     </div>
 
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 9 }">
+    <div  v-show="index_pagina == 9 " class="container">
       <Benefits :index_pagina="index_pagina" />
     </div>
 
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 10 }">
+    <div  v-show="index_pagina == 10 " class="container">
       <Beneficio :index_pagina="index_pagina" />
     </div>
 
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 11 }">
+    <div  v-show="index_pagina == 12" class="container">
       <Benefits_card :index_pagina="index_pagina" />
     </div>
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 12 }">
+    <div  v-show="index_pagina == 12" class="container">
       <Benefits_card2 :index_pagina="index_pagina" />
     </div>
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 13 }">
+    <div v-show="index_pagina == 13" class="container">
       <Tokenomics :index_pagina="index_pagina" />
     </div>
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 14 }">
+    <div v-show="index_pagina == 14" class="container">
       <News />
     </div>
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 15 }">
+    <div v-show="index_pagina == 15" class="container">
       <Fase :index_pagina="index_pagina" />
     </div>
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 16 }">
+    <div v-show="index_pagina == 16" class="container">
       <Fase2 :index_pagina="index_pagina" />
     </div>
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 17 }">
+    <div v-show="index_pagina == 17" class="container">
       <Fase3 :index_pagina="index_pagina" />
     </div>
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 18 }">
+    <div v-show="index_pagina == 18" class="container">
       <Fase4 :index_pagina="index_pagina" />
     </div>
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == 19 }">
+    <div v-show="index_pagina == 19" class="container">
       <Fase5 :index_pagina="index_pagina" />
     </div>
-    <div id="container" :class="{ container: true, 'mostrar-container': index_pagina == limite }">
+    <div v-show="index_pagina == limite" class="container">
       <Footer :index_pagina="index_pagina" :limite="limite" :enter="enterAnimation" :exit="exitAnimation"></Footer>
     </div>
   </main>
@@ -513,7 +513,6 @@ main {
 }
 
 .container {
-  visibility: hidden;
   position: absolute;
   padding: 0%;
   margin: 0%;

@@ -304,6 +304,7 @@ img {
   border-color: transparent;
   text-align: center;
   background-color: var(--color-secundario);
+  color: #010101;
   padding: 1rem;
   width: 42%;
   height: 100%;
@@ -426,7 +427,7 @@ img {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  color: #000;
+  color: #010101;
 }
 
 /* Custom Animate.css */
