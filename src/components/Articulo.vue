@@ -19,7 +19,7 @@ defineProps({
   <article class="container2">
     <h5 class="titulo1">{{ titulo }}</h5>
     <div class="imagenDeArticulo">
-      <img :src="img" alt="" class="imagenArticulo01" />
+      <img  :src="img" alt="" class="imagenArticulo01" />
     </div>
     <a class="leer_Mas" target="_blank" :href="url">READ MORE</a>
   </article>

@@ -70,7 +70,7 @@ defineProps({
     </div>
     <div class="icon icon-discord">
       <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+        <img  src="../assets/discord.svg" alt="logo discord" srcset="" />
       </a>
     </div>
   </div>
