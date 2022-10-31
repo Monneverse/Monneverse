@@ -122,7 +122,7 @@ img {
 
 #logo-1 {
   width: 34%;
-  height: 56%;
+  height: fit-content;
   position: fixed;
   top: 0;
   left: 0%;
@@ -148,10 +148,11 @@ img {
 }
 
 .fondo-montana {
-  position: fixed;
-  top: 20%;
+  position: absolute;
+  bottom: 0%;
   left: 0%;
   width: 100%;
+  height: 80%;
   z-index: 6;
 }
 
