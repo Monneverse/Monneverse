@@ -274,28 +274,28 @@ img {
     width: 100%;
   }
 
+
   .componentes {
     position: absolute;
     top: 40%;
     left: 0;
-    padding: 0 5%;
+    margin: 5%;
     box-sizing: border-box;
-    width: 100%;
+    width: 90%;
     height: 40%;
     display: flex;
     align-items: center;
     justify-content: start;
     gap: 3rem;
+    overflow: hidden;
     overflow-x: scroll;
     overscroll-behavior-x: initial;
     scroll-snap-type: x mandatory;
     z-index: 1000;
   }
 
-  /* 
-  .componentes::-webkit-scrollbar:vertical {
+  .componentes::-webkit-scrollbar:horizontal {
     height: 10px;
-    width: 10px;
   }
 
   .componentes::-webkit-scrollbar-thumb {
@@ -308,16 +308,19 @@ img {
 
   .componentes::-webkit-scrollbar-track {
     border-radius: 10px;
-  } */
+  }
 
+  ::-webkit-scrollbar {
+    display: block;
+  }
 
   .componente {
 
     box-sizing: content-box;
     position: unset;
-    width: 90%;
+    width: 80%;
     margin: 10%;
-    min-width: 80%;
+    min-width:80%;
     height: 80%;
   }
 
