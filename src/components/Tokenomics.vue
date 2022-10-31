@@ -525,7 +525,6 @@ h2 {
 
 .titulo2 h2 {
   padding-left: 10%;
-  font-family: Calibri;
 }
 
 @media screen and (min-width: 769px) {
