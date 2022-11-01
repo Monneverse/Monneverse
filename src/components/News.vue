@@ -331,6 +331,8 @@ img {
   width: 100%;
   height: 75%;
   z-index: 8;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .contenido {
