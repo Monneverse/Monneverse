@@ -2,7 +2,7 @@
 
 <template>
    <!-- video de fondo -->
-   <video preload="auto" autoplay="true" muted="true" loop="true" class="video-fondo" poster="/img/fondo_binario.png">
+   <video preload="auto" autoplay="true" muted="true" loop="true" class="video-fondo" poster="/public/video/Full-HD-Lite.gif">
     <source src="/public/video/Full-HD-Lite.mp4" type="video/mp4">
     <source src="/public/video/Full-HD-Lite.webm" type="video/webm">
     <source src="/public/video/Full-HD-Lite-IPhone.mp4" type="video/mp4">
