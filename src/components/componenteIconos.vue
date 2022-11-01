@@ -52,6 +52,7 @@ defineProps({
   height: 4rem;
   background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
   border-radius: 1rem;
+  margin-right: 1rem;
 }
 
 @media only screen and (width > 769px) {
@@ -73,7 +74,8 @@ defineProps({
   justify-content: center;
   align-items: center;
   border-radius: 0.8em;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
 
   font-family: "Work Sans", serif;
   text-transform: uppercase;
@@ -86,7 +88,7 @@ defineProps({
   height: 4rem;
 }
 
-@media only screen and (width > 769px) {
+@media only screen and (width > 900px) {
   .name_coin {
     background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 100%);
     display: flex;
