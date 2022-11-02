@@ -19,18 +19,25 @@ defineProps({
 
     <!--FONDOS-->
 
-      <video
-        preload="auto"
-        autoplay="true"
-        muted="true"
-        loop="true"
-        poster="/img/fondo_binario.png"
-      >
-        <source src="/public/video/Full-HD-Lite-2.mp4" type="video/mp4" />
-        <!-- <source src="/public/video/Full-HD-Lite.webm" type="video/webm">
-        <source src="/public/video/Full-HD-Lite-IPhone.mp4" type="video/mp4"> -->
-      </video>
-
+    <!-- video de fondo -->
+    <video
+      preload="auto"
+      autoplay="true"
+      muted="true"
+      loop="true"
+      poster="/img/fondo_binario.png"
+    >
+      <source src="/public/video/Full-HD-Lite.mp4" type="video/mp4" />
+      <source src="/public/video/Full-HD-Lite.webm" type="video/webm" />
+      <source src="/public/video/Full-HD-Lite-IPhone.mp4" type="video/mp4" />
+      <!-- <source src="/public/video/Full-HD-Lite.mov">
+    <source src="/public/video/Full-HD-Lite.m4v">
+    <source src="/public/video/Full-HD-Lite.ts"> -->
+      <p>
+        Your browser doesn't support HTML5 video. Here is a
+        <a href="/video/Full-HD-Lite.mp4">link to the video</a> instead.
+      </p>
+    </video>
 
     <div class="fondo filtro-superior"></div>
     <div
@@ -118,16 +125,17 @@ defineProps({
             <img src="/img/rectangulo.svg" alt="" />
             <p>UPCOMING ALLIANCES</p>
           </div>
-          <div
-            :class="{
-              puntero: true,
-              'animacion-aparecer': index_pagina == 23,
-            }"
-          >
-            <img src="/img/puntero.svg" alt="" />
-          </div>
         </section>
       </div>
+    </div>
+
+    <div
+      :class="{
+        puntero: true,
+        'animacion-aparecer': index_pagina == 23,
+      }"
+    >
+      <img src="/img/puntero.svg" alt="" />
     </div>
   </div>
 
@@ -164,20 +172,7 @@ defineProps({
   font-style: semibold;
   font-stretch: semi-condensed;
 }
-.fondo-video{
 
-  width: 200%;
-  height: 100%;
-}
-
-.video-fondo-alliances {
-  opacity: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-
-}
 section {
   width: 80%;
   height: 100%;
@@ -303,6 +298,17 @@ section {
 .fondo {
   width: 100%;
   height: 100%;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 40%;
+  z-index: 0;
 }
 
 .fondo-telefono {
@@ -544,7 +550,7 @@ section {
   }
 
   .alianzas a {
-    font-size: 1.3rem;
+    font-size: 1.3vw;
     font-weight: 400;
   }
 
@@ -628,7 +634,8 @@ section {
 
   .rectangulo p {
     top: 6.2rem;
-    font-size: 2rem;
+
+    font-size: 2.2vw;
   }
 
   .rectangulo-medio {
@@ -709,17 +716,12 @@ section {
 .puntero {
   position: absolute;
   z-index: 20;
-  width: 100%;
+  width: 15%;
   height: 40%;
   padding: 0;
   margin: 0;
-  bottom: 10;
-  display: flex;
-  justify-content: center;
-  top: 22rem;
-}
-.puntero img {
-  width: 30%;
+  bottom: -160px;
+  left: 43%;
 }
 
 @media screen and (max-width: 769px) {
