@@ -301,11 +301,11 @@ section {
 }
 
 video {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 120%;
+  height: 120%;
   object-fit: cover;
   opacity: 40%;
   z-index: 0;
@@ -727,7 +727,7 @@ video {
 .puntero img{
   width: 16rem;
   
-}
+  }
 
 @media screen and (max-width: 769px) {
   .puntero {
