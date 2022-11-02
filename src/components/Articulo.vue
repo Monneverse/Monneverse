@@ -112,4 +112,10 @@ h5 {
     height: 65%;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .leer_Mas {
+    width: 70%;
+  }
+}
 </style>

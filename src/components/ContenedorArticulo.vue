@@ -70,7 +70,7 @@ defineProps({
     </div>
     <div class="icon icon-discord">
       <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-        <img  src="../assets/discord.svg" alt="logo discord" srcset="" />
+        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
       </a>
     </div>
   </div>
@@ -558,27 +558,46 @@ h4 {
       transform: translate(-10px, -10px);
     }
   }
-}
 
-/* vista de movil*/
-@media screen and (max-width: 850px) {
   .btn_buyMonner {
     top: 15%;
   }
 
   .containerArticulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 30%;
-    scroll-snap-type: x mandatory;
+    overflow: hidden;
     overflow-x: scroll;
+    overscroll-behavior-x: initial;
+    scroll-snap-type: x mandatory;
+    padding: 1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 0;
+
   }
 
-  .containerArticulo::-webkit-scrollbar {
-    -webkit-appearance: none;
-    appearance: none;
-  }
 
   .containerArticulo::-webkit-scrollbar:horizontal {
     height: 10px;
+  }
+
+  .containerArticulo::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg,
+        rgb(33, 32, 85) 0%,
+        rgba(1, 209, 88, 1) 100%);
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+  }
+
+  .containerArticulo::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar {
+    display: block;
   }
 
   .logo_redes {
@@ -593,10 +612,19 @@ h4 {
     right: 80%;
   }
 
+  .contenedorDeArticulo {
+    width: 100%;
+    height: 90%;
+  }
+
   .contenedorDeArticulo>* {
-    width: 90%;
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
     top: 0%;
     flex: none;
+    border-radius: 2rem;
+    height: 100%;
   }
 
   .btn_buyMonner {
