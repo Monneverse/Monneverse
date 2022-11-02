@@ -23,21 +23,6 @@ import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <!-- video de fondo -->
-
-  <video v-show="index_pagina == 1 || index_pagina == 2 "  preload="auto" autoplay="true" muted="true" loop="true"
-    :class="{ 'video-fondo-bienvenida': index_pagina == 1, 'video-fondo-alliances': index_pagina == 2 }"
-    poster="/img/fondo_binario.png">
-
-    <source src="/public/video/Full-HD-Lite-2.mp4" type="video/mp4">
-    <!-- <source src="/public/video/Full-HD-Lite.webm" type="video/webm">
-    <source src="/public/video/Full-HD-Lite-IPhone.mp4" type="video/mp4"> -->
-    <!-- <source src="/public/video/Full-HD-Lite.mov">
-    <source src="/public/video/Full-HD-Lite.m4v">
-    <source src="/public/video/Full-HD-Lite.ts"> -->
-    <p>Your browser doesn't support HTML5 video. Here is a <a href="/video/Full-HD-Lite.mp4">link to the video</a>
-      instead.</p>
-  </video>
 
 
   <header>
@@ -489,28 +474,7 @@ export default {
   outline: none;
 }
 
-.video-fondo-bienvenida {
-  position: fixed;
-  top: 0;
-  left: -40%;
-  width: 140%;
-  scale: 2;
-  height: 100%;
-  z-index: 0;
-  opacity: 100%;
-}
 
-.video-fondo-alliances {
-  position: fixed;
-  scale: 1;
-  opacity: 30%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  border: 1px solid red;
-}
 
 .grabbing {
   cursor: grabbing;

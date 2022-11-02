@@ -16,9 +16,7 @@ defineProps({
     </div>
 
     <!--FONDOS-->
-    <div class="fondo-video">
-      <!-- video de fondo -->
-      <video preload="auto" autoplay="true" muted="true" loop="true" class="video-fondo"
+      <video preload="auto" autoplay="true" muted="true" loop="true" class="video-fondo-alliances"
         poster="/img/fondo_binario.png">
         <source src="/public/video/Full-HD-Lite-2.mp4" type="video/mp4">
         <!-- <source src="/public/video/Full-HD-Lite.webm" type="video/webm">
@@ -30,7 +28,7 @@ defineProps({
           instead.</p>
       </video>
 
-    </div>
+  
 
     <div class="fondo filtro-superior"></div>
     <div :class="{
@@ -153,6 +151,17 @@ defineProps({
   font-stretch: semi-condensed;
 }
 
+
+.video-fondo-alliances {
+  position: fixed;
+  scale: 1;
+  opacity: 30%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 3;
+}
 section {
   width: 80%;
   height: 100%;
