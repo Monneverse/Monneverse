@@ -34,13 +34,15 @@ defineProps({
     </div>
     <div class="separar"></div>
     <div class="buyNow">
-      <button class="btn_moner">
+
+    
+      <a href="https://www.pinksale.finance/launchpad/0x8cf9cA848ECAB7781a316eFFaFa41876c585Bc48?chain=BSC" target="_blank" class="btn_moner">
         <div class="texto1">BUY MONNER</div>
         <div class="logos">
           <div class="binance"><img src="/./img/Articulo/BNC.svg" /></div>
           <div class="meta"><img src="/./img/Articulo/Meta.svg" /></div>
         </div>
-      </button>
+      </a>
     </div>
   </div>
 
@@ -337,6 +339,9 @@ img {
   -webkit-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px px 5px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 
