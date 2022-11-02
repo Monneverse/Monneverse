@@ -550,7 +550,7 @@ video {
   }
 
   .alianzas a {
-    font-size: 1.3vw;
+    font-size: 1rem;
     font-weight: 400;
   }
 
@@ -635,7 +635,7 @@ video {
   .rectangulo p {
     top: 6.2rem;
 
-    font-size: 2.2vw;
+    font-size: 2rem;
   }
 
   .rectangulo-medio {
@@ -716,12 +716,17 @@ video {
 .puntero {
   position: absolute;
   z-index: 20;
-  width: 15%;
+  width: 100%;
   height: 40%;
   padding: 0;
   margin: 0;
-  bottom: -160px;
-  left: 43%;
+  top: 33.5rem;
+  display: flex;
+  justify-content: center;
+}
+.puntero img{
+  width: 16rem;
+  
 }
 
 @media screen and (max-width: 769px) {
