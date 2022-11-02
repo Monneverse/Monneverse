@@ -8,55 +8,40 @@ defineProps({
 </script>
 <template>
   <div class="contenido-general">
-    <div
-      :class="{
-        logo: true,
-        'animacion-logo': index_pagina == 23,
-      }"
-    >
+    <div :class="{
+      logo: true,
+      'animacion-logo': index_pagina == 23,
+    }">
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
 
     <!--FONDOS-->
-
-    <!-- video de fondo -->
-    <video
-      preload="auto"
-      autoplay="true"
-      muted="true"
-      loop="true"
-      poster="/img/fondo_binario.png"
-    >
-      <source src="/public/video/Full-HD-Lite.mp4" type="video/mp4" />
-      <source src="/public/video/Full-HD-Lite.webm" type="video/webm" />
-      <source src="/public/video/Full-HD-Lite-IPhone.mp4" type="video/mp4" />
+    <video preload="auto" autoplay="true" muted="true" loop="true" class="video-fondo-alliances"
+      poster="/img/fondo_binario.png">
+      <source src="/public/video/Full-HD-Lite-2.mp4" type="video/mp4">
+      <!-- <source src="/public/video/Full-HD-Lite.webm" type="video/webm">
+        <source src="/public/video/Full-HD-Lite-IPhone.mp4" type="video/mp4"> -->
       <!-- <source src="/public/video/Full-HD-Lite.mov">
     <source src="/public/video/Full-HD-Lite.m4v">
     <source src="/public/video/Full-HD-Lite.ts"> -->
-      <p>
-        Your browser doesn't support HTML5 video. Here is a
-        <a href="/video/Full-HD-Lite.mp4">link to the video</a> instead.
-      </p>
+      <p>Your browser doesn't support HTML5 video. Here is a <a href="/video/Full-HD-Lite.mp4">link to the video</a>
+        instead.</p>
     </video>
 
+
+
     <div class="fondo filtro-superior"></div>
-    <div
-      :class="{
-        'fondo-montana': true,
-        'fondo-montana-animation': index_pagina == 23,
-      }"
-      class="fondo"
-    >
+    <div :class="{
+      'fondo-montana': true,
+      'fondo-montana-animation': index_pagina == 23,
+    }" class="fondo">
       <img src="/img/fondo-montana.png" />
     </div>
     <div class="fondo fondo-oscurecer"></div>
-    <div
-      :class="{
-        'fondo-red': true,
-        'animacion-aparecer': index_pagina == 23,
-      }"
-      class="fondo"
-    >
+    <div :class="{
+      'fondo-red': true,
+      'animacion-aparecer': index_pagina == 23,
+    }" class="fondo">
       <img src="/img/red.png" alt="" />
     </div>
     <div class="fondo-telefono">
@@ -68,12 +53,10 @@ defineProps({
 
       <!--UPCOMING ALLIANCES-->
       <div class="content-forms">
-        <section
-          :class="{
-            circulos: true,
-            'animacion-aparecer': index_pagina == 23,
-          }"
-        >
+        <section :class="{
+          circulos: true,
+          'animacion-aparecer': index_pagina == 23,
+        }">
           <div class="circulo">
             <img src="../assets/circulo.svg" alt="" />
           </div>
@@ -83,30 +66,25 @@ defineProps({
           </div>
         </section>
         <section class="arco">
-          <div
-            :class="{
-              semi_circulo: true,
-              'animacion-arco': index_pagina == 23,
-            }"
-          >
+          <div :class="{
+            semi_circulo: true,
+            'animacion-arco': index_pagina == 23,
+          }">
             <img src="../assets/aro-iluminado-brillante.svg" alt="" />
           </div>
         </section>
         <section class="Alianzas">
           <div class="alianzas">
-            <a href="https://www.reddit.com/user/monnerverse"
-              ><span><img src="/img/Alianzas/reddit.png" /></span>REDDIT</a
-            >
+            <a href="https://www.reddit.com/user/monnerverse"><span><img
+                  src="/img/Alianzas/reddit.png" /></span>REDDIT</a>
             <!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
 
-            <a href="https://t.me/monnerversecommunity"
-              ><span><img src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a
-            >
+            <a href="https://t.me/monnerversecommunity"><span><img
+                  src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a>
             <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 
-            <a href="https://discord.com/invite/h7fRvek9dn"
-              ><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a
-            >
+            <a href="https://discord.com/invite/h7fRvek9dn"><span><img
+                  src="/img/Alianzas/discord.png" /></span>DISCORD</a>
             <!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
           </div>
         </section>
@@ -129,12 +107,10 @@ defineProps({
       </div>
     </div>
 
-    <div
-      :class="{
-        puntero: true,
-        'animacion-aparecer': index_pagina == 23,
-      }"
-    >
+    <div :class="{
+      puntero: true,
+      'animacion-aparecer': index_pagina == 23,
+    }">
       <img src="/img/puntero.svg" alt="" />
     </div>
   </div>
@@ -177,7 +153,16 @@ section {
   width: 80%;
   height: 100%;
 }
-
+.video-fondo-alliances {
+  position: fixed;
+  scale: 1;
+  opacity: 30%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 3;
+}
 .contenido-general {
   width: 100%;
   height: 100%;
@@ -209,11 +194,11 @@ section {
   align-items: flex-end;
 }
 
-.texto > section {
+.texto>section {
   width: 70%;
 }
 
-.texto > section p {
+.texto>section p {
   width: 80%;
   float: right;
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
@@ -319,12 +304,10 @@ section {
 .filtro-superior {
   position: absolute;
   z-index: 4;
-  background: radial-gradient(
-    circle at center,
-    #14ec84 0%,
-    #0b5f50 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #14ec84 0%,
+      #0b5f50 50%,
+      #505863 100%);
   opacity: 30%;
 }
 
@@ -713,10 +696,11 @@ section {
   display: flex;
   justify-content: center;
 }
-.puntero img{
+
+.puntero img {
   width: 16rem;
-  
-  }
+
+}
 
 @media screen and (max-width: 769px) {
   .puntero {
