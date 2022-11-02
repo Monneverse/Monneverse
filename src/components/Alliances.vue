@@ -166,11 +166,14 @@ defineProps({
   font-style: semibold;
   font-stretch: semi-condensed;
 }
+.fondo-video{
+
+  width: 200%;
+  height: 100%;
+}
 
 .video-fondo-alliances {
-  position: fixed;
-  scale: 1;
-  opacity: 30%;
+  opacity: 50%;
   min-width: 100%;
   min-height: 100%;
   width: auto;
