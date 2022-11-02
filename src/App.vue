@@ -29,7 +29,7 @@ import Footer from "./components/Footer.vue";
     :class="{ 'video-fondo-bienvenida': index_pagina == 1, 'video-fondo-alliances': index_pagina == 2 }"
     poster="/img/fondo_binario.png">
 
-    <source src="/public/video/Full-HD-super-Lite.mp4" type="video/mp4">
+    <source src="/public/video/Full-HD-Lite-2.mp4" type="video/mp4">
     <!-- <source src="/public/video/Full-HD-Lite.webm" type="video/webm">
     <source src="/public/video/Full-HD-Lite-IPhone.mp4" type="video/mp4"> -->
     <!-- <source src="/public/video/Full-HD-Lite.mov">
@@ -502,18 +502,14 @@ export default {
 
 .video-fondo-alliances {
   position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
   scale: 1;
-  opacity: 100%;
-  border: 1px solid red;
+  opacity: 30%;
   min-width: 100%;
   min-height: 100%;
   width: auto;
   height: auto;
   z-index: 0;
+  border: 1px solid red;
 }
 
 .grabbing {
