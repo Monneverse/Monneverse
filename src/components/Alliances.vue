@@ -304,8 +304,8 @@ video {
   position: fixed;
   top: 0;
   left: 0;
-  width: 120%;
-  height: 120%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   opacity: 40%;
   z-index: 0;
