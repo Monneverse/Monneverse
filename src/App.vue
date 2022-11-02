@@ -23,6 +23,23 @@ import Footer from "./components/Footer.vue";
 </script>
 
 <template>
+  <!-- video de fondo -->
+
+  <video v-show="index_pagina == 1 || index_pagina == 2 "  preload="auto" autoplay="true" muted="true" loop="true"
+    :class="{ 'video-fondo-bienvenida': index_pagina == 1, 'video-fondo-alliances': index_pagina == 2 }"
+    poster="/img/fondo_binario.png">
+
+    <source src="/public/video/Full-HD-super-Lite.mp4" type="video/mp4">
+    <!-- <source src="/public/video/Full-HD-Lite.webm" type="video/webm">
+    <source src="/public/video/Full-HD-Lite-IPhone.mp4" type="video/mp4"> -->
+    <!-- <source src="/public/video/Full-HD-Lite.mov">
+    <source src="/public/video/Full-HD-Lite.m4v">
+    <source src="/public/video/Full-HD-Lite.ts"> -->
+    <p>Your browser doesn't support HTML5 video. Here is a <a href="/video/Full-HD-Lite.mp4">link to the video</a>
+      instead.</p>
+  </video>
+
+
   <header>
     <Header :orientacion="orientacion" :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage" :setNext="next"
       :indexPagina="index_pagina">
@@ -42,50 +59,50 @@ import Footer from "./components/Footer.vue";
     -->
 
 
-    <div v-show="index_pagina == 1 " class="container">
+    <div v-show="index_pagina == 1" class="container">
       <Bienvenida :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div  v-show="index_pagina == 2 " class="container">
+    <div v-show="index_pagina == 2" class="container">
       <Alliances :index_pagina="index_pagina" />
     </div>
 
-    <div  v-show="index_pagina == 3 " class="container">
+    <div v-show="index_pagina == 3" class="container">
       <Alianzas />
     </div>
 
-    <div  v-show="index_pagina == 4 " class="container">
-      <Calculadora  :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"  />
+    <div v-show="index_pagina == 4" class="container">
+      <Calculadora :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div  v-show="index_pagina == 5 " class="container">
+    <div v-show="index_pagina == 5" class="container">
       <ContenedorArticulo :index_pagina="index_pagina" />
     </div>
 
-    <div  v-show="index_pagina == 6 " class="container">
+    <div v-show="index_pagina == 6" class="container">
       <Exchanges />
     </div>
 
-    <div v-show="index_pagina == 7 " class="container">
+    <div v-show="index_pagina == 7" class="container">
       <Logos_auditorias />
     </div>
 
-    <div  v-show="index_pagina == 8 " class="container">
+    <div v-show="index_pagina == 8" class="container">
       <Coins :index_pagina="index_pagina" />
     </div>
 
-    <div  v-show="index_pagina == 9 " class="container">
+    <div v-show="index_pagina == 9" class="container">
       <Benefits :index_pagina="index_pagina" />
     </div>
 
-    <div  v-show="index_pagina == 10 " class="container">
+    <div v-show="index_pagina == 10" class="container">
       <Beneficio :index_pagina="index_pagina" />
     </div>
 
-    <div  v-show="index_pagina == 12" class="container">
+    <div v-show="index_pagina == 12" class="container">
       <Benefits_card :index_pagina="index_pagina" />
     </div>
-    <div  v-show="index_pagina == 12" class="container">
+    <div v-show="index_pagina == 12" class="container">
       <Benefits_card2 :index_pagina="index_pagina" />
     </div>
     <div v-show="index_pagina == 13" class="container">
@@ -470,6 +487,33 @@ export default {
   text-decoration: none;
   border: none;
   outline: none;
+}
+
+.video-fondo-bienvenida {
+  position: fixed;
+  top: 0;
+  left: -40%;
+  width: 140%;
+  scale: 2;
+  height: 100%;
+  z-index: 0;
+  opacity: 100%;
+}
+
+.video-fondo-alliances {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  scale: 1;
+  opacity: 100%;
+  border: 1px solid red;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
 }
 
 .grabbing {

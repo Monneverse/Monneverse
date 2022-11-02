@@ -280,21 +280,9 @@ section {
   height: 100%;
 }
 
-.fondo-video {
-  width: 100%;
-  height: 100%;
-}
 
-.fondo-video video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 40%;
-  z-index: 0;
-}
+
+
 
 .fondo-telefono {
   position: fixed;
