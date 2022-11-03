@@ -14,6 +14,12 @@ import Youtube from "./video_youtube.vue"
         <Youtube class="video" title="Video de youtube"
             description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.">
         </Youtube>
+        <Youtube class="video" title="Video de youtube"
+            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.">
+        </Youtube>
+        <Youtube class="video" title="Video de youtube"
+            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.">
+        </Youtube>
     </div>
 
     <div class="logo-redes">
@@ -50,6 +56,9 @@ img {
     width: 100%;
     height: 100%;
 }
+::-webkit-scrollbar {
+  display: block;
+}
 
 /* fondos */
 
@@ -78,21 +87,47 @@ img {
     left: 5%;
     width: 90%;
     height: 75%;
+    padding: 1rem;
     z-index: 2;
-    border: 1px solid red;
     box-sizing: border-box;
     display: flex;
-    justify-content: flex-start;
+    justify-content: baseline;
+    gap: 1rem;
     align-items: center;
     padding: 2rem;
-    margin: 0;
-}
+    overflow: hidden;
+    overflow-x: scroll;
+    overscroll-behavior-x: initial;
+    scroll-snap-type: x mandatory;
+  }
+
+
+  .contenido::-webkit-scrollbar:horizontal {
+    height: 10px;
+  }
+
+  .contenido::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg,
+        rgb(33, 32, 85) 0%,
+        rgba(1, 209, 88, 1) 100%);
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+  }
+
+  .contenido ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar {
+    display: block;
+  }
 
 .video {
 
     display: block;
     position: unset;
     width: 30%;
+    min-width: 25rem;
     height: 90%;
 }
 
