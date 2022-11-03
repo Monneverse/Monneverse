@@ -20,6 +20,7 @@ import Fase3 from "./components/Phase3.vue";
 import Fase4 from "./components/Phase4.vue";
 import Fase5 from "./components/Phase5.vue";
 import Footer from "./components/Footer.vue";
+import Videos from "./components/Videos.vue"
 </script>
 
 <template>
@@ -84,28 +85,31 @@ import Footer from "./components/Footer.vue";
       <Beneficio :index_pagina="index_pagina" />
     </div>
 
-    <div v-show="index_pagina == 12" class="container">
+    <div v-show="index_pagina == 11" class="container">
       <Benefits_card :index_pagina="index_pagina" />
     </div>
     <div v-show="index_pagina == 12" class="container">
       <Benefits_card2 :index_pagina="index_pagina" />
     </div>
     <div v-show="index_pagina == 13" class="container">
-      <Tokenomics :index_pagina="index_pagina" />
+      <Videos></Videos>
     </div>
     <div v-show="index_pagina == 14" class="container">
-      <News />
+      <Tokenomics :index_pagina="index_pagina" />
     </div>
     <div v-show="index_pagina == 15" class="container">
-      <Fase :index_pagina="index_pagina" />
+      <News />
     </div>
     <div v-show="index_pagina == 16" class="container">
-      <Fase2 :index_pagina="index_pagina" />
+      <Fase :index_pagina="index_pagina" />
     </div>
     <div v-show="index_pagina == 17" class="container">
-      <Fase3 :index_pagina="index_pagina" />
+      <Fase2 :index_pagina="index_pagina" />
     </div>
     <div v-show="index_pagina == 18" class="container">
+      <Fase3 :index_pagina="index_pagina" />
+    </div>
+    <div v-show="index_pagina == 19" class="container">
       <Fase4 :index_pagina="index_pagina" />
     </div>
     <div v-show="index_pagina == 19" class="container">
@@ -123,7 +127,7 @@ export default {
     return {
       index: 0,
       index_pagina: 1,
-      limite: 20,
+      limite: 21,
       isVisibleLogo: false,
       scroll: true,
       exitAnimation: false,
@@ -185,7 +189,7 @@ export default {
           this.index_pagina = 14;
           break;
         case 5:
-          this.index_pagina = 15;
+          this.index_pagina = 16;
           break;
         case 6:
           this.index_pagina = 1;
@@ -266,7 +270,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right
           }
-          this.index = 3;
+          this.index = 0;
           break;
         case 14:
           if (window.innerWidth < 900) {
@@ -274,7 +278,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right
           }
-          this.index = 4;
+          this.index = 3;
           break;
         case 15:
           if (window.innerWidth < 900) {
@@ -282,6 +286,8 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right
           }
+          
+          this.index = 4;
         case 16:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
@@ -309,6 +315,14 @@ export default {
           this.index = 5;
           break;
         case 20:
+          if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.left
+          } else {
+            this.orientacion = typeOrientacion.right
+          }
+          this.index = 0;
+          break;
+        case 21:
           this.index = 0;
           this.orientacion = typeOrientacion.none
           break;
