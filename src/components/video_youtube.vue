@@ -8,20 +8,27 @@
 
         <iframe class="video-youtube" :src="video" title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <div class="redes-videos">
-            <a  v-for="red in redes"  class="icon" :href="red.url" target="_blank">
-            <img :src="red.icon" :alt="red.name"  />
-        </a>
+            allowfullscreen>
 
+        </iframe>
+
+        <div class="redes-videos">
+            <a v-for="red in redes" class="icon" :href="red.url" target="_blank">
+                <img :src="red.icon" :alt="red.name" />
+            </a>
         </div>
+        <div class="flecha">
+            <div  v-show="this.index > 0" @click=" before()" class="left"></div>
+            <div @click="next()" class="right"></div>
+        </div>
+
     </div>
 </template>
 
 
 <script>
 export default {
-    props: ["title", "description", "list","redes"],
+    props: ["title", "description", "list", "redes"],
     computed: {
         video: {
             get() {
@@ -34,6 +41,17 @@ export default {
             index: 0
         }
 
+    },
+    methods: {
+        before() {
+            if (this.index > 0) {
+                this.index = this.index - 1;
+            }
+        }, next() {
+            if (this.index < this.list.length -1) {
+                this.index = this.index + 1;
+            }
+        }
     }
 }
 
@@ -43,8 +61,9 @@ export default {
 <style scoped>
 img {
     width: 100%;
-    height:  100%;
+    height: 100%;
 }
+
 .contenido {
     color: #fff;
     display: flex;
@@ -87,6 +106,26 @@ img {
     border-radius: 1rem;
 }
 
+.flecha {
+    width: 100%;
+    padding: 0;
+    height: 3rem;
+    position: relative;
+    top: -38%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.flecha div {
+    width: 3rem;
+    height: 3rem;
+    background-color: #fff;
+    opacity: 50%;
+    border-radius: 5rem;
+}
+
+
 .redes-videos {
     margin: .2rem auto;
     width: 80%;
@@ -98,7 +137,8 @@ img {
     align-items: center;
     gap: 1rem;
 }
-.icon{
+
+.icon {
     height: 80%;
     width: 2rem;
 }
