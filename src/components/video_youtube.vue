@@ -6,7 +6,7 @@
             <p>{{ description }}</p>
         </div>
 
-        <iframe  class="video-youtube" :src="video" title="YouTube video player" frameborder="0"
+        <iframe class="video-youtube" :src="video" title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         <div class="redes-videos">
@@ -38,7 +38,6 @@ export default {
 
 
 <style scoped>
-
 .contenido {
     color: #fff;
     display: flex;
@@ -61,11 +60,13 @@ export default {
     box-sizing: border-box;
 }
 
+
 .contenido-texto h2 {
     padding: 0;
     margin: 0;
     font-size: 3.4vh;
 }
+
 .contenido-texto p {
     padding: 0;
     margin: 0;

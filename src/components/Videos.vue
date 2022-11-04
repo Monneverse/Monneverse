@@ -70,6 +70,8 @@ body {
 img {
     width: 100%;
     height: 100%;
+    user-select: none;
+    pointer-events: none;
 }
 
 ::-webkit-scrollbar {
@@ -100,7 +102,7 @@ img {
 .contenido {
     position: relative;
     top: 25%;
-    left: 5%;
+    left: 2.5%;
     width: 95%;
     height: 75%;
     z-index: 2;
@@ -115,6 +117,22 @@ img {
     overscroll-behavior-x: initial;
     scroll-snap-type: x mandatory;
     box-sizing: border-box;
+    direction: initial;
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 1370px) {
+    .imagen-youtube {
+        width: 12rem;
+    }
+
+    .contenido {
+        left: 1%;
+        justify-content: flex-start;
+        height: 62%;
+        width: 98%;
+        padding: .1rem;
+    }
 }
 
 
