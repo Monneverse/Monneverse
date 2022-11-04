@@ -186,4 +186,14 @@ img {
     height: auto;
     margin-left: 1rem;
 }
+
+/* style mobile */
+@media screen and (max-width: 1370px) {
+    .video {
+        width: 100%;
+        min-width: 100%;
+        box-sizing: border-box;
+        padding: 0 1rem;
+    }
+}
 </style>

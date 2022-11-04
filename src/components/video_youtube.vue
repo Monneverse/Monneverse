@@ -87,4 +87,11 @@ export default {
     border-radius: 10rem;
     background-color: black;
 }
+
+/* style mobile */
+@media screen and (max-width: 1370px) {
+    .contenido {
+        gap: 2rem;
+    }
+}
 </style>
