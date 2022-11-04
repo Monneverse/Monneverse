@@ -38,6 +38,7 @@ export default {
 
 
 <style scoped>
+
 .contenido {
     color: #fff;
     display: flex;
@@ -48,7 +49,7 @@ export default {
 
 .contenido-texto {
     width: 100%;
-    height: 30%;
+    height: 35%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,20 +58,29 @@ export default {
     gap: 1rem;
     padding: 0%;
     margin: 0%;
+    box-sizing: border-box;
 }
 
 .contenido-texto h2 {
-    font-size: 4vh;
+    padding: 0;
+    margin: 0;
+    font-size: 3.4vh;
+}
+.contenido-texto p {
+    padding: 0;
+    margin: 0;
+    font-size: 2.5vh;
+    height: max-content;
 }
 
 .video-youtube {
     width: 100%;
-    height: 60%;
+    height: 50%;
     border-radius: 1rem;
 }
 
 .redes-videos {
-    margin: .5rem auto;
+    margin: .2rem auto;
     width: 80%;
     height: 3rem;
     border-radius: 10rem;

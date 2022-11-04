@@ -52,7 +52,7 @@ export default {
             }, {
                 title: "Titulo del video",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.",
-                playlist: ["https://www.youtube.com/embed/FR_ENQQwqN4", "https://www.youtube.com/embed/9x0ktT1zmlo"]
+                playlist: ["https://www.youtube.com/embed/f10mB6fKszU", "https://www.youtube.com/embed/FR_ENQQwqN4", "https://www.youtube.com/embed/9x0ktT1zmlo"]
             },
             ]
         }
@@ -101,19 +101,20 @@ img {
     position: relative;
     top: 25%;
     left: 5%;
-    width: 90%;
+    width: 95%;
     height: 75%;
     z-index: 2;
     box-sizing: border-box;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     gap: 1rem;
-    align-items: center;
+    align-items: flex-start;
     padding: 2rem;
     overflow: hidden;
     overflow-x: scroll;
     overscroll-behavior-x: initial;
     scroll-snap-type: x mandatory;
+    box-sizing: border-box;
 }
 
 
@@ -142,8 +143,11 @@ img {
     display: block;
     position: unset;
     width: 30%;
+    box-sizing: border-box;
     min-width: 25rem;
-    height: 90%;
+    padding: .5rem;
+    margin: 0;
+    height: 100%;
 }
 
 
