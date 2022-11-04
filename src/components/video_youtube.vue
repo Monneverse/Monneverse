@@ -10,6 +10,9 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         <div class="redes-videos">
+            <a  v-for="red in redes"  class="icon" :href="red.url" target="_blank">
+            <img :src="red.icon" :alt="red.name"  />
+        </a>
 
         </div>
     </div>
@@ -18,7 +21,7 @@
 
 <script>
 export default {
-    props: ["title", "description", "list"],
+    props: ["title", "description", "list","redes"],
     computed: {
         video: {
             get() {
@@ -38,6 +41,10 @@ export default {
 
 
 <style scoped>
+img {
+    width: 100%;
+    height:  100%;
+}
 .contenido {
     color: #fff;
     display: flex;
@@ -86,6 +93,14 @@ export default {
     height: 3rem;
     border-radius: 10rem;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.icon{
+    height: 80%;
+    width: 2rem;
 }
 
 /* style mobile */

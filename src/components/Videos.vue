@@ -12,7 +12,7 @@ import Youtube from "./video_youtube.vue"
     <div class="imagen-youtube"><img src="../assets/YouTube-Icon.svg" alt="Youtube image"></div>
     <div class="contenido">
         <Youtube v-for="videoy in videosPlay" class="video" :title="videoy.title" :description="videoy.description"
-            :list="videoy.playlist"></Youtube>
+            :list="videoy.playlist" :redes="videoy.redes"></Youtube>
 
 
     </div>
@@ -44,16 +44,51 @@ export default {
             videosPlay: [{
                 title: "Titulo del video",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.",
-                playlist: ["https://www.youtube.com/embed/FR_ENQQwqN4", "https://www.youtube.com/embed/9x0ktT1zmlo"]
+                playlist: ["https://www.youtube.com/embed/FR_ENQQwqN4", "https://www.youtube.com/embed/9x0ktT1zmlo"],
+                redes: [
+                    {
+                        name: "discord",
+                        url: "https://discord.com/invite/h7fRvek9dn",
+                        icon: "src/assets/discord.svg"
+                    },
+                    {
+                        name: "Telegram",
+                        url: "https://t.me/monnerversecommunity",
+                        icon: "src/assets/Telegram_logo.svg"
+                    },
+                    {
+                        name: "reddit",
+                        url: "https://www.reddit.com/user/monnerverse",
+                        icon: "src/assets/reddit-4.svg"
+                    }
+                ]
             },
             {
                 title: "Titulo del video",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.",
-                playlist: ["https://www.youtube.com/embed/9x0ktT1zmlo"]
+                playlist: ["https://www.youtube.com/embed/9x0ktT1zmlo"],
+                redes: [
+                    {
+                        name: "discord",
+                        url: "https://discord.com/invite/h7fRvek9dn",
+                        icon: "src/assets/discord.svg"
+                    }
+                ]
             }, {
                 title: "Titulo del video",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.",
-                playlist: ["https://www.youtube.com/embed/f10mB6fKszU", "https://www.youtube.com/embed/FR_ENQQwqN4", "https://www.youtube.com/embed/9x0ktT1zmlo"]
+                playlist: ["https://www.youtube.com/embed/f10mB6fKszU", "https://www.youtube.com/embed/FR_ENQQwqN4", "https://www.youtube.com/embed/9x0ktT1zmlo"],
+                redes: [
+                    {
+                        name: "discord",
+                        url: "https://discord.com/invite/h7fRvek9dn",
+                        icon: "src/assets/discord.svg"
+                    }, {
+                        name: "reddit",
+                        url: "https://www.reddit.com/user/monnerverse",
+                        icon: "src/assets/reddit-4.svg"
+                    }
+                ]
             },
             ]
         }
@@ -216,7 +251,7 @@ img {
         border-left: none;
         border-top: none;
         border-right: 4px #ffc000 solid;
-        border-bottom: 4px #ffc000  solid;
+        border-bottom: 4px #ffc000 solid;
         z-index: 999;
     }
 
@@ -228,8 +263,8 @@ img {
         margin: -10px 0 0 -10px;
         border-left: none;
         border-top: none;
-        border-right: 2px #ffc000  solid;
-        border-bottom: 2px #ffc000  solid;
+        border-right: 2px #ffc000 solid;
+        border-bottom: 2px #ffc000 solid;
         animation-duration: 2s;
         animation-iteration-count: infinite;
         animation-name: arrow;
@@ -262,8 +297,8 @@ img {
         transform: rotate(135deg);
         border-left: none;
         border-top: none;
-        border-right: 4px #ffc000  solid;
-        border-bottom: 4px #ffc000  solid;
+        border-right: 4px #ffc000 solid;
+        border-bottom: 4px #ffc000 solid;
         z-index: 999;
     }
 
@@ -276,7 +311,7 @@ img {
         border-left: none;
         border-top: none;
         border-right: 2px #ffc000 solid;
-        border-bottom: 2px #ffc000  solid;
+        border-bottom: 2px #ffc000 solid;
         animation-duration: 2s;
         animation-iteration-count: infinite;
         animation-name: arrow2;
