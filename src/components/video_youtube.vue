@@ -6,8 +6,7 @@
             <p>{{ description }}</p>
         </div>
 
-        <iframe class="video-youtube" src="https://www.youtube.com/embed/FR_ENQQwqN4" title="YouTube video player"
-            frameborder="0"
+        <iframe  class="video-youtube" :src="video" title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         <div class="redes-videos">
@@ -19,16 +18,19 @@
 
 <script>
 export default {
-    props: {
-
-        title: {
-            type: String,
-            required: true
-        },
-        description: {
-            type: String,
-            required: true
+    props: ["title", "description", "list"],
+    computed: {
+        video: {
+            get() {
+                return this.list[this.index]
+            }
         }
+    },
+    data() {
+        return {
+            index: 0
+        }
+
     }
 }
 
@@ -68,7 +70,7 @@ export default {
 }
 
 .redes-videos {
-    margin: .5rem  auto;
+    margin: .5rem auto;
     width: 80%;
     height: 3rem;
     border-radius: 10rem;

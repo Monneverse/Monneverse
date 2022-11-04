@@ -11,15 +11,10 @@ import Youtube from "./video_youtube.vue"
     </div>
     <div class="imagen-youtube"><img src="../assets/YouTube-Icon.svg" alt="Youtube image"></div>
     <div class="contenido">
-        <Youtube class="video" title="Video de youtube"
-            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.">
-        </Youtube>
-        <Youtube class="video" title="Video de youtube"
-            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.">
-        </Youtube>
-        <Youtube class="video" title="Video de youtube"
-            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.">
-        </Youtube>
+        <Youtube v-for="videoy in videosPlay" class="video" :title="videoy.title" :description="videoy.description"
+            :list="videoy.playlist"></Youtube>
+
+
     </div>
 
     <div class="logo-redes">
@@ -42,7 +37,27 @@ import Youtube from "./video_youtube.vue"
 
 
 <script>
-
+export default {
+    data() {
+        return {
+            videosPlay: [{
+                title: "Titulo del video",
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.",
+                playlist: ["https://www.youtube.com/embed/FR_ENQQwqN4", "https://www.youtube.com/embed/9x0ktT1zmlo"]
+            },
+            {
+                title: "Titulo del video",
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.",
+                playlist: ["https://www.youtube.com/embed/9x0ktT1zmlo"]
+            }, {
+                title: "Titulo del video",
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.",
+                playlist: ["https://www.youtube.com/embed/FR_ENQQwqN4", "https://www.youtube.com/embed/9x0ktT1zmlo"]
+            },
+            ]
+        }
+    }
+}
 
 </script>
 
@@ -56,8 +71,9 @@ img {
     width: 100%;
     height: 100%;
 }
+
 ::-webkit-scrollbar {
-  display: block;
+    display: block;
 }
 
 /* fondos */
@@ -87,11 +103,10 @@ img {
     left: 5%;
     width: 90%;
     height: 75%;
-    padding: 1rem;
     z-index: 2;
     box-sizing: border-box;
     display: flex;
-    justify-content: baseline;
+    justify-content: start;
     gap: 1rem;
     align-items: center;
     padding: 2rem;
@@ -99,28 +114,28 @@ img {
     overflow-x: scroll;
     overscroll-behavior-x: initial;
     scroll-snap-type: x mandatory;
-  }
+}
 
 
-  .contenido::-webkit-scrollbar:horizontal {
+.contenido::-webkit-scrollbar:horizontal {
     height: 10px;
-  }
+}
 
-  .contenido::-webkit-scrollbar-thumb {
+.contenido::-webkit-scrollbar-thumb {
     background: linear-gradient(90deg,
-        rgb(33, 32, 85) 0%,
-        rgba(1, 209, 88, 1) 100%);
+            rgb(33, 32, 85) 0%,
+            rgba(1, 209, 88, 1) 100%);
     border-radius: 20px;
     border: 2px solid #f1f2f3;
-  }
+}
 
-  .contenido ::-webkit-scrollbar-track {
+.contenido ::-webkit-scrollbar-track {
     border-radius: 10px;
-  }
+}
 
-  ::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: block;
-  }
+}
 
 .video {
 
@@ -134,19 +149,19 @@ img {
 
 /* redes sociales */
 .logo-redes {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  width: 20rem;
-  height: 5rem;
-  z-index: 14;
-  display: flex;
-  justify-content: start;
-}
-.icon {
-  width: 3rem;
-  height: auto;
-  margin-left: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    width: 20rem;
+    height: 5rem;
+    z-index: 14;
+    display: flex;
+    justify-content: start;
 }
 
+.icon {
+    width: 3rem;
+    height: auto;
+    margin-left: 1rem;
+}
 </style>
