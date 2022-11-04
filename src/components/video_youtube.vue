@@ -18,7 +18,7 @@
             </a>
         </div>
         <div class="flecha">
-            <div  v-show="this.index > 0" @click=" before()" class="left"></div>
+            <div   @click=" before()" class="left"></div>
             <div @click="next()" class="right"></div>
         </div>
 
