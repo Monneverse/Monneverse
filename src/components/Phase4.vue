@@ -82,18 +82,7 @@ defineProps({
 
 <script>
 export default {
-  data() {
-    return {
-      event: "click"
-    };
-  },
-  methods: {
-    reDirect() {
-      location.replace(
-        "https://sites.google.com/view/community-monnerverse/p%C3%A1gina-principal"
-      );
-    }
-  },
+  props: ["enterAnimation", "exitAnimation", "isRevert"]
 };
 </script>
 

@@ -35,30 +35,21 @@ import fasesComponentes from "./ComponentsPhases.vue";
       </p>
     </div>
   </div>
-  <div :class="{
-    'circulo__aparecer': this.enterAnimation && !this.isRevert,
-    'circulo__desaparecer': this.enterAnimation && this.isRevert,
-    'circulo__aparecer_revert': this.exitAnimation && this.isRevert,
-    'circulo__desaparecer_revert': this.exitAnimation && !this.isRevert,
-  }">
+
     <div :class="{
       circulo: true, circulo__1: true, 'circulo__aparecer': this.enterAnimation && !this.isRevert,
-      'circulo__desaparecer': this.enterAnimation && this.isRevert,
       'circulo__aparecer_revert': this.exitAnimation && this.isRevert,
-      'circulo__desaparecer_revert': this.exitAnimation && !this.isRevert
     }">
       <img src="../assets/aro.svg" />
     </div>
 
     <div :class="{
       circulo: true, circulo__2: true, 'circulo__aparecer': this.enterAnimation && !this.isRevert,
-      'circulo__desaparecer': this.enterAnimation && this.isRevert,
       'circulo__aparecer_revert': this.exitAnimation && this.isRevert,
-      'circulo__desaparecer_revert': this.exitAnimation && !this.isRevert
     }">
       <img src="../assets/aro.svg" />
     </div>
-  </div>
+
 
   <div :class="{
     componentes: true,
@@ -250,16 +241,6 @@ img {
 
 }
 
-.circulo__desaparecer {
-  animation: desaparecer .8s;
-}
-
-.circulo__desaparecer_revert {
-  animation: desaparecer .8s;
-  animation-direction: reverse;
-  animation-fill-mode: backwards;
-
-}
 
 .circulo__1 {
   left: 27%;
