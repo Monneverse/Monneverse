@@ -59,7 +59,7 @@ defineProps({
   <!-- <div class="textscroll">
     <h3>Scroll to Right</h3>
   </div> -->
-  <div class="logo_redes">
+  <div class="logo-redes">
     <div class="icon icon-telegram">
       <a href="https://t.me/monnerversecommunity" target="_blank">
         <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
@@ -440,12 +440,12 @@ h4 {
   color: white;
 }
 
-.logo_redes {
+.logo-redes {
   position: absolute;
-  bottom: 1%;
-  left: 1%;
-  width: 20%;
-  height: 5%;
+  bottom: 1rem;
+  left: 1rem;
+  width: 20rem;
+  height: 5rem;
   z-index: 14;
   display: flex;
   justify-content: start;
@@ -454,10 +454,8 @@ h4 {
 .icon {
   width: 3rem;
   height: auto;
-  z-index: 18;
-  margin-left: 1%;
+  margin-left: 1rem;
 }
-
 /* .textscroll {
   position: fixed;
   top: 84%;

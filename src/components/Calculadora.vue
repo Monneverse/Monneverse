@@ -814,6 +814,12 @@ img {
   justify-content: start;
 }
 
+.icon {
+  width: 3rem;
+  height: auto;
+  margin-left: 1rem;
+}
+
 .desplazar_redes {
   animation-name: redes_animation;
   animation-duration: .5s;
@@ -856,11 +862,7 @@ img {
   }
 }
 
-.icon {
-  width: 3rem;
-  height: auto;
-  margin-left: 1rem;
-}
+
 
 /* style of mobile */
 
