@@ -18,8 +18,8 @@
             </a>
         </div>
         <div class="flecha">
-            <div   @click=" before()" class="left"></div>
-            <div @click="next()" class="right"></div>
+            <div :class="{hide:index==0}" @click=" before()" class="left"></div>
+            <div :class="{hide:index==list.length-1}" @click="next()" class="right"></div>
         </div>
 
     </div>
@@ -125,6 +125,9 @@ img {
     border-radius: 5rem;
 }
 
+.flecha  .hide {
+    opacity: 0 ;
+}
 
 .redes-videos {
     margin: .2rem auto;
