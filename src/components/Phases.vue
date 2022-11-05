@@ -130,22 +130,20 @@ img {
 
 .circuito {
   position: absolute;
-  z-index: 5;
-  min-width: 30rem;
+  z-index: 4;
   height: 80%;
   width: 40%;
+  min-width: 30rem;
+  top: 20%;
 }
 
 .circuito-izquierdo {
-  left: -12%;
-  top: 18%;
+  left: -14%;
 }
 
 .circuito-derecho {
-  right: -12%;
-  top: 18%;
-
-
+  right: -14%;
+  transform: scaleY(-1);
 }
 
 /* FIN ESTILO FONDO */
