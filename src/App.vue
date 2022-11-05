@@ -183,10 +183,10 @@ export default {
           this.index_pagina = 9;
           break;
         case 3:
-          this.index_pagina = 13;
+          this.index_pagina = 14;
           break;
         case 4:
-          this.index_pagina = 14;
+          this.index_pagina = 15;
           break;
         case 5:
           this.index_pagina = 16;
@@ -288,6 +288,7 @@ export default {
           }
           
           this.index = 4;
+          break;
         case 16:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
