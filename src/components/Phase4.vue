@@ -17,7 +17,14 @@ import fasesComponentes from "./ComponentsPhases.vue";
   <!--FIN FONDO-->
   <div class="arrow"></div>
   <div class="arrow2"></div>
-  <div class="Fases">
+  <div :class="{
+    fases: true,
+    'fases__aparecer': this.enterAnimation && !this.isRevert,
+    'fases__desaparecer': this.enterAnimation && this.isRevert,
+    'fases__aparecer_revert': this.exitAnimation && this.isRevert,
+    'fases__desaparecer_revert': this.exitAnimation && !this.isRevert,
+  
+  }">
     <div class="titulo">
       <h1>phase 4</h1>
     </div>
@@ -26,14 +33,28 @@ import fasesComponentes from "./ComponentsPhases.vue";
     </div>
   </div>
 
-  <div class="circulo circulo__1">
+  <div :class="{
+    circulo: true, circulo__1: true,
+    'circulo__1_aparecer': this.enterAnimation && !this.isRevert,
+    'circulo__1_aparecer_revert': this.exitAnimation && this.isRevert,
+  }">
     <img src="../assets/aro.svg" />
   </div>
 
-  <div class="circulo circulo__2">
+  <div :class="{
+    circulo: true, circulo__2: true,
+    'circulo__2_aparecer': this.enterAnimation && !this.isRevert,
+    'circulo__2_aparecer_revert': this.exitAnimation && this.isRevert,
+  }">
     <img src="../assets/aro.svg" />
   </div>
-  <div class="componentes">
+  <div :class="{
+    componentes: true,
+    'componentes__aparecer': this.enterAnimation && !this.isRevert,
+    'componentes__desaparecer': this.enterAnimation && this.isRevert,
+    'componentes__aparecer_revert': this.exitAnimation && this.isRevert,
+    'componentes__desaparecer_revert': this.exitAnimation && !this.isRevert
+  }">
     <div class="componente componentes1">
       <fasesComponentes title="" description="Development of MonnerTrading, MonnerHosting, and MonnerBlockchaine." />
     </div>
@@ -147,7 +168,7 @@ img {
 
 /* FIN ESTILO FONDO */
 
-.Fases {
+.fases {
   justify-content: center;
   text-align: center;
   position: absolute;
@@ -156,6 +177,48 @@ img {
   z-index: 6;
   left: 27%;
   top: 50%;
+}
+
+.fases__aparecer {
+  animation: aparecer .6s;
+  animation-delay: .1;
+  animation-fill-mode: forwards;
+}
+
+.fases__aparecer_revert {
+  animation: aparecer .6s;
+  animation-delay: .1;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+
+}
+
+.fases__desaparecer {
+  animation: desaparecer .6s;
+  animation-delay: .1;
+  animation-fill-mode: forwards;
+}
+
+.fases__desaparecer_revert {
+  animation: desaparecer .6s;
+  animation-delay: .1;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes aparecer {
+  0% {
+    left: 127%;
+  }
+
+}
+
+@keyframes desaparecer {
+  0% {
+    left: -127%;
+  }
+
 }
 
 .titulo {
@@ -187,6 +250,28 @@ img {
   z-index: 5;
 }
 
+.circulo__1_aparecer {
+  animation: aparecer_circulo__1 .8s;
+}
+
+.circulo__1_aparecer_revert {
+  animation: aparecer_circulo__1 .8s;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes aparecer_circulo__1 {
+  0% {
+    left: 28%;
+    bottom: 58%;
+    width: 43%;
+    height: 25%;
+  }
+
+
+}
+
 .circulo__2 {
   position: absolute;
   left: 32.5%;
@@ -194,6 +279,61 @@ img {
   width: 35%;
   height: 30%;
   z-index: 5;
+}
+
+.circulo__2_aparecer {
+  animation: aparecer_circulo__2 .8s;
+}
+
+.circulo__2_aparecer_revert {
+  animation: aparecer_circulo__2 .8s;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+
+}
+
+
+
+@keyframes aparecer_circulo__2 {
+  0% {
+    left: 24.5%;
+    bottom: 48%;
+    width: 50%;
+    height: 30%;
+  }
+
+
+}
+
+
+.componentes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.componentes__aparecer {
+  animation: aparecer .9s;
+}
+
+.componentes__aparecer_revert {
+  animation: aparecer .9s;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+
+}
+
+.componentes__desaparecer {
+  animation: desaparecer .9s;
+}
+
+.componentes__desaparecer_revert {
+  animation: desaparecer .9s;
+  animation-direction: reverse;
+  animation-fill-mode: backwards;
+
 }
 
 .componentes1 {
