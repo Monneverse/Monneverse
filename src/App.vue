@@ -206,7 +206,7 @@ export default {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.center
-          }
+          } this.index = 0;
           break;
         case 2:
           if (window.innerWidth < 900) {
@@ -214,21 +214,21 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right
           }
-
+          this.index = 0;
           break;
         case 3:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
-          }
+          } this.index = 0;
           break
         case 4:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
-          }
+          } this.index = 0;
           break
         case 5:
           this.index = 1;
@@ -286,7 +286,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right
           }
-          
+
           this.index = 4;
           break;
         case 16:
