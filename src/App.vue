@@ -101,19 +101,19 @@ import Videos from "./components/Videos.vue"
       <News />
     </div>
     <div v-show="index_pagina == 16" class="container">
-      <Fase :index_pagina="index_pagina" />
+      <Fase :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 17" class="container">
-      <Fase2 :index_pagina="index_pagina" />
+      <Fase2  :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 18" class="container">
-      <Fase3 :index_pagina="index_pagina" />
+      <Fase3  :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 19" class="container">
-      <Fase4 :index_pagina="index_pagina" />
+      <Fase4  :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 20" class="container">
-      <Fase5 :index_pagina="index_pagina" />
+      <Fase5 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == limite" class="container">
       <Footer :index_pagina="index_pagina" :limite="limite" :enter="enterAnimation" :exit="exitAnimation"></Footer>
@@ -373,14 +373,14 @@ export default {
         }
 
 
-      }, 500);
+      }, 750);
 
       setTimeout(() => {
         this.scroll = true;
 
         this.enterAnimation = false;
 
-      }, 1000);
+      }, 1500);
     },
     DisabledZoom() {
       const handleWheel = function (e) {
