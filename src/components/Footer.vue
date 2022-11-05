@@ -195,10 +195,6 @@ img {
   }
 }
 
-.circuito-derecho {
-  right: -5%;
-}
-
 
 
 .fondo-redes-animation {
@@ -218,7 +214,7 @@ img {
 
  @keyframes fondo-redes-animation {
   0% {
-    bottom: -70%;
+    top: 120%;
   }
 
 
