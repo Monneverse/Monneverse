@@ -112,7 +112,7 @@ import Videos from "./components/Videos.vue"
     <div v-show="index_pagina == 19" class="container">
       <Fase4 :index_pagina="index_pagina" />
     </div>
-    <div v-show="index_pagina == 19" class="container">
+    <div v-show="index_pagina == 20" class="container">
       <Fase5 :index_pagina="index_pagina" />
     </div>
     <div v-show="index_pagina == limite" class="container">
