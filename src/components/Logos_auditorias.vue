@@ -49,7 +49,7 @@
         </button>
     </div>
     <div class="circulos">
-        <img src="/img/Imagen1.png" />
+        <img src="../assets/aro.svg" />
     </div>
     <div class="logo-redes">
         <div class="icon icon-telegram">

@@ -109,12 +109,12 @@ defineProps({
         </div>
       </div>
       <div class="aro">
-        <img :class="{ image1: true, 'animacion-aparecer': index_pagina == 999 }" src="/img/Imagen1.png" />
+        <img :class="{ image1: true, 'animacion-aparecer': index_pagina == 999 }" src="../assets/aro.svg" />
 
         <img :class="{
           image: true,
           'animacion-aro': index_pagina == 999,
-        }" src="/img/Imagen1.png" />
+        }" src="../assets/aro.svg" />
       </div>
     </div>
 

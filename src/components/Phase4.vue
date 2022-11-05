@@ -33,12 +33,11 @@ defineProps({
   </div>
 
   <div class="circulo circulo__1">
-    <img src="/img/Imagen1.png" />
+    <img src="../assets/aro.svg" />
   </div>
 
-
   <div class="circulo circulo__2">
-    <img src="/img/Imagen1.png" />
+    <img src="../assets/aro.svg" />
   </div>
   <div class="componentes">
     <div class="componente componentes1">
