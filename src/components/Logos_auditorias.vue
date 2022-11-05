@@ -39,7 +39,7 @@
     <div class="fondoCertik"></div>
     <br>
     <div class="logos_auditoria">
-        <a>
+        <a href="https://solidity.finance/audits/MonnerDeFi/" target="_blank">
             <img src="/img/Exchanges/solidity1.png" class="auditoria1" /></a>
         <a href="https://sites.google.com/view/certik-kyc-approved/certik-kyc-approved" target="_blank"><img
                 class="auditoria2" src="/img/Exchanges/certik.png" /></a>
