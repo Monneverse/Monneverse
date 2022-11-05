@@ -1,11 +1,6 @@
 <script setup>
 import fasesComponentes from "./ComponentsPhases.vue";
-defineProps({
-  index_pagina: {
-    type: Number,
-    required: true,
-  },
-});
+
 </script>
 
 <template>
