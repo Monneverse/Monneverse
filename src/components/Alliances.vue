@@ -76,16 +76,13 @@ defineProps({
         <section class="Alianzas">
           <div class="alianzas">
             <a href="https://www.reddit.com/user/monnerverse"><span><img
-                  src="/img/Alianzas/reddit.png" /></span>REDDIT</a>
-            <!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
+                  src="../assets/reddit-4.svg" /></span>REDDIT</a>
 
             <a href="https://t.me/monnerversecommunity"><span><img
-                  src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a>
-            <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
+                  src="../assets/Telegram_logo.svg" /></span>TELEGRAM</a>
 
             <a href="https://discord.com/invite/h7fRvek9dn"><span><img
-                  src="/img/Alianzas/discord.png" /></span>DISCORD</a>
-            <!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
+                  src="../assets/discord.svg" /></span>DISCORD</a>
           </div>
         </section>
 
@@ -473,6 +470,7 @@ section {
   width: 12rem;
   display: flex;
   justify-content: space-between;
+
 }
 
 .alianzas a {
@@ -483,6 +481,7 @@ section {
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-weight: 600;
   font-size: 2vw;
+
 }
 
 .alianzas a span {
@@ -503,7 +502,7 @@ section {
   top: 10%;
   width: 1.5rem;
   height: 1.5rem;
-  margin: auto auto;
+  margin: auto;
 }
 
 .alianzas a span:hover {
