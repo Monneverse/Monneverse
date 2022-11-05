@@ -197,6 +197,8 @@ export default {
         default:
           break;
       }
+      this.isRevert = false;
+      this.enterAnimation = true;
       this.CambiarContenedor(this.index_pagina);
     },
     UpdateNav(id) {
