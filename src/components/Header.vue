@@ -2,7 +2,7 @@
 
   <!-- logo de la página -->
   <div :class="{ logo: true, mostrar: isVisible }">
-    <a href="" @click="this.setPage(1, false)">
+    <a  @click="this.setPage(6, false)">
       <img src="/img/logo.svg" alt="logo monneverse" /></a>
   </div>
 
@@ -220,6 +220,7 @@ img {
 .menu-Burger,
 .logo {
   display: none;
+  cursor: pointer;
 }
 
 .mostrar {
