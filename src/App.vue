@@ -104,13 +104,13 @@ import Videos from "./components/Videos.vue"
       <Fase :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 17" class="container">
-      <Fase2  :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
+      <Fase2 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 18" class="container">
-      <Fase3  :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
+      <Fase3 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 19" class="container">
-      <Fase4  :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
+      <Fase4 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 20" class="container">
       <Fase5 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
@@ -177,21 +177,39 @@ export default {
       this.isVisibleLogo = visible;
       switch (this.index) {
         case 1:
+          if (this.index_pagina == 5) {
+            return;
+          }
           this.index_pagina = 5;
           break;
         case 2:
+          if (this.index_pagina == 9) {
+            return;
+          }
           this.index_pagina = 9;
           break;
         case 3:
+          if (this.index_pagina == 14) {
+            return;
+          }
           this.index_pagina = 14;
           break;
         case 4:
+          if (this.index_pagina == 15) {
+            return;
+          }
           this.index_pagina = 15;
           break;
         case 5:
+          if (this.index_pagina == 16) {
+            return;
+          }
           this.index_pagina = 16;
           break;
         case 6:
+          if (this.index_pagina == 1) {
+            return;
+          }
           this.index_pagina = 1;
           break;
         default:
