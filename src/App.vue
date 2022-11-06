@@ -50,7 +50,7 @@ import Videos from "./components/Videos.vue"
     </div>
 
     <div v-show="index_pagina == 2" class="container">
-      <Alliances :index_pagina="index_pagina" />
+      <Alliances :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
     <div v-show="index_pagina == 3" class="container">
@@ -74,7 +74,7 @@ import Videos from "./components/Videos.vue"
     </div>
 
     <div v-show="index_pagina == 8" class="container">
-      <Coins :index_pagina="index_pagina" />
+      <Coins :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
     <div v-show="index_pagina == 9" class="container">
