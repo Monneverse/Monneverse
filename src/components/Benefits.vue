@@ -505,7 +505,7 @@ p {
     margin-bottom: 0;
   }
 
-
+  .image1 {}
 
   .image {
     position: relative;

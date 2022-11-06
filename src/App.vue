@@ -62,60 +62,57 @@ import Videos from "./components/Videos.vue"
     </div>
 
     <div v-show="index_pagina == 5" class="container">
-      <ContenedorArticulo :vectorArticulo="vectorArticulo__1" />
+      <ContenedorArticulo :index_pagina="index_pagina" />
     </div>
 
     <div v-show="index_pagina == 6" class="container">
-      <ContenedorArticulo :vectorArticulo="vectorArticulo__2" />
-    </div>
-    <div v-show="index_pagina == 7" class="container">
       <Exchanges />
     </div>
 
-    <div v-show="index_pagina == 8" class="container">
+    <div v-show="index_pagina == 7" class="container">
       <Logos_auditorias />
     </div>
 
-    <div v-show="index_pagina == 9" class="container">
+    <div v-show="index_pagina == 8" class="container">
       <Coins :index_pagina="index_pagina" />
     </div>
 
-    <div v-show="index_pagina == 10" class="container">
+    <div v-show="index_pagina == 9" class="container">
       <Benefits :index_pagina="index_pagina" />
     </div>
 
-    <div v-show="index_pagina == 11" class="container">
+    <div v-show="index_pagina == 10" class="container">
       <Beneficio :index_pagina="index_pagina" />
     </div>
 
-    <div v-show="index_pagina == 12" class="container">
+    <div v-show="index_pagina == 11" class="container">
       <Benefits_card :index_pagina="index_pagina" />
     </div>
-    <div v-show="index_pagina == 13" class="container">
+    <div v-show="index_pagina == 12" class="container">
       <Benefits_card2 :index_pagina="index_pagina" />
     </div>
-    <div v-show="index_pagina == 14" class="container">
-      <Videos />
+    <div v-show="index_pagina == 13" class="container">
+      <Videos></Videos>
     </div>
-    <div v-show="index_pagina == 15" class="container">
+    <div v-show="index_pagina == 14" class="container">
       <Tokenomics :index_pagina="index_pagina" />
     </div>
-    <div v-show="index_pagina == 16" class="container">
+    <div v-show="index_pagina == 15" class="container">
       <News />
     </div>
-    <div v-show="index_pagina == 17" class="container">
+    <div v-show="index_pagina == 16" class="container">
       <Fase :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 18" class="container">
+    <div v-show="index_pagina == 17" class="container">
       <Fase2 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 19" class="container">
+    <div v-show="index_pagina == 18" class="container">
       <Fase3 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 20" class="container">
+    <div v-show="index_pagina == 19" class="container">
       <Fase4 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 21" class="container">
+    <div v-show="index_pagina == 20" class="container">
       <Fase5 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == limite" class="container">
@@ -130,7 +127,7 @@ export default {
     return {
       index: 0,
       index_pagina: 1,
-      limite: 22,
+      limite: 21,
       isVisibleLogo: false,
       scroll: true,
       exitAnimation: false,
@@ -141,40 +138,7 @@ export default {
       startY: 0,
       moveY: 0,
       position: 0,
-      orientacion: typeOrientacion.center,
-      vectorArticulo__1: [
-        {
-          titulo: "Presale and benefits For investors",
-          imagen: "/img/Articulo/articulo_lite.png",
-          link: "https://sites.google.com/view/blog-monnerverse/home/presale-and-its-benefits-for-investors",
-        },
-        {
-          titulo: "How to avoid being scammed by investing in monner coin?",
-          imagen: "/img/Articulo/articulo2_lite.png",
-          link: "https://sites.google.com/view/blog-monnerverse/home/how-to-avoid-being-scammed-by-investing-in-monner-coin",
-        },
-        {
-          titulo:
-            "Why will monner become one of the best cryptocurrencies to investin?",
-          imagen: "/img/Articulo/articulo3_lite.png",
-          link: "https://sites.google.com/view/blog-monnerverse/home/why-will-monner-become-one-of-the-best-cryptocurrencies-to-invest-in",
-        }
-      ],
-      vectorArticulo__2: [{
-        titulo: "Why invest in monner and how to secure your investment?",
-        imagen: "/img/Articulo/articulo4_lite.png",
-        link: "https://sites.google.com/view/blog-monnerverse/home/why-invest-in-monner-and-how-to-secure-your-investment",
-      },
-      {
-        titulo: "What to do to not miss any Monner news?",
-        imagen: "/img/Articulo/articulo5_lite.png",
-        link: "https://sites.google.com/view/blog-monnerverse/home/what-to-do-to-not-miss-any-monner-news",
-      },
-      {
-        titulo: "The monner coin and it’s benefits",
-        imagen: "/img/Articulo/articulo6_lite.png",
-        link: "https://sites.google.com/view/blog-monnerverse/home/the-monner-coin-and-its-benefits",
-      }]
+      orientacion: typeOrientacion.center
     };
   },
   methods: {
@@ -185,8 +149,8 @@ export default {
 
       if (this.index_pagina < this.limite) {
         newPosition = this.index_pagina + 1;
-        if (newPosition == 12) {
-          newPosition = 14;
+        if (newPosition == 11) {
+          newPosition = 13;
         }
         this.isRevert = false;
         this.CambiarContenedor(newPosition)
@@ -199,8 +163,8 @@ export default {
       let newPosition = this.index_pagina;
       if (this.index_pagina > 1) {
         newPosition = this.index_pagina - 1;
-        if (newPosition == 13) {
-          newPosition = 11;
+        if (newPosition == 12) {
+          newPosition = 10;
         }
 
         this.isRevert = true;
@@ -219,28 +183,28 @@ export default {
           this.index_pagina = 5;
           break;
         case 2:
-          if (this.index_pagina == 10) {
+          if (this.index_pagina == 9) {
             return;
           }
-          this.index_pagina = 10;
+          this.index_pagina = 9;
           break;
         case 3:
+          if (this.index_pagina == 14) {
+            return;
+          }
+          this.index_pagina = 14;
+          break;
+        case 4:
           if (this.index_pagina == 15) {
             return;
           }
           this.index_pagina = 15;
           break;
-        case 4:
+        case 5:
           if (this.index_pagina == 16) {
             return;
           }
           this.index_pagina = 16;
-          break;
-        case 5:
-          if (this.index_pagina == 17) {
-            return;
-          }
-          this.index_pagina = 17;
           break;
         case 6:
           if (this.index_pagina == 1) {
@@ -262,8 +226,7 @@ export default {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.center
-          }
-          this.index = 0;
+          } this.index = 0;
           break;
         case 2:
           if (window.innerWidth < 900) {
@@ -278,83 +241,48 @@ export default {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
-          }
-          this.index = 0;
+          } this.index = 0;
           break
         case 4:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
-          }
-          this.index = 0;
+          } this.index = 0;
           break
         case 5:
+          this.index = 1;
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
           }
-          this.index = 1;
-          break;
-        case 6:
-          if (window.innerWidth < 900) {
-            this.orientacion = typeOrientacion.left
-          } else {
-            this.orientacion = typeOrientacion.right
-          }
-          this.index = 1;
           break
-        case 7:
-
-          if (window.innerWidth < 900) {
-            this.orientacion = typeOrientacion.left
-          } else {
-            this.orientacion = typeOrientacion.right
-          }
-          this.index = 0;
-          break;
-        case 8:
-
-          if (window.innerWidth < 900) {
-            this.orientacion = typeOrientacion.left
-          } else {
-            this.orientacion = typeOrientacion.right
-          }
-          this.index = 0;
-          break;
         case 9:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
           }
-          this.index = 0;
-          break;
         case 10:
-
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
           }
-          this.index = 2;
-          break;
         case 11:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
           }
-          this.index = 2;
-          break;
         case 12:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
           }
-          this.index = 0;
+          this.index = 2;
           break;
         case 13:
           if (window.innerWidth < 900) {
@@ -370,7 +298,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right
           }
-          this.index = 0;
+          this.index = 3;
           break;
         case 15:
           if (window.innerWidth < 900) {
@@ -379,7 +307,7 @@ export default {
             this.orientacion = typeOrientacion.right
           }
 
-          this.index = 3;
+          this.index = 4;
           break;
         case 16:
           if (window.innerWidth < 900) {
@@ -387,24 +315,18 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right
           }
-          this.index = 4;
-          break;
         case 17:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
           }
-          this.index = 5;
-          break;
         case 18:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
           }
-          this.index = 5;
-          break;
         case 19:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
@@ -419,18 +341,9 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right
           }
-          this.index = 5;
+          this.index = 0;
           break;
         case 21:
-          if (window.innerWidth < 900) {
-            this.orientacion = typeOrientacion.left
-          } else {
-            this.orientacion = typeOrientacion.right
-          }
-          this.index = 5;
-          break;
-
-        case 22:
           this.index = 0;
           this.orientacion = typeOrientacion.none
           break;
@@ -455,11 +368,9 @@ export default {
     },
     CambiarContenedor(newPosition) {
       setTimeout(() => {
-        this.UpdateNav(newPosition);
         this.scroll = false;
         let mismoContenedor = this.index_pagina == newPosition;
         this.index_pagina = newPosition;
-
         this.isVisibleLogo = true;
         if (
           this.listaPaginaDondeSeOcultaLogo.filter(
@@ -475,7 +386,7 @@ export default {
           document.title,
           window.location.pathname
         );
-
+        this.UpdateNav(this.index_pagina);
         if (mismoContenedor == false) {
           this.exitAnimation = false;
           this.enterAnimation = true;
