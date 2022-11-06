@@ -18,7 +18,7 @@ defineProps({
   <div class="arrow2"></div>
   <div :class="{
     'circuito-izquierdo': true,
-    'animacion-desplazamiento': index_pagina == 88,
+    'animacion-desplazamiento': index_pagina == 9,
   }" class="circuito">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
   </div>
@@ -31,7 +31,7 @@ defineProps({
   <!--FIN FONDO-->
   <div :class="{
     contenedor_coins: true,
-    'animacion-aparecer': index_pagina == 88,
+    'animacion-aparecer': index_pagina == 9,
   }">
     <div class="card_coin">
       <coin icono="/img/coins/kucoin.svg" titulo="KuCoin token " sigla="(KCS)" texto="TOP 52 approx capitalization"
@@ -392,7 +392,7 @@ img {
   .contenedor_coins::-webkit-scrollbar-thumb {
     background: linear-gradient(90deg,
         rgb(33, 32, 85) 0%,
-        rgba(1, 209, 88, 1) 100%);
+        rgba(1, 209, 5, 1) 100%);
     border-radius: 20px;
     border: 2px solid #f1f2f3;
   }
