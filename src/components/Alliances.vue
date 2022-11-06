@@ -304,7 +304,7 @@ section {
   0% {
     position: absolute;
     top: 2rem;
-    left: 30rem;
+    left: 34rem;
     width: 25rem;
     height: 5rem;
     z-index: 1;
