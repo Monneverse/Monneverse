@@ -517,16 +517,16 @@ export default {
           if (this.index_pagina < this.limite) {
             newPosition = this.index_pagina + 1;
             this.isRevert = false;
-            if (newPosition == 11) {
-              newPosition = 13;
+            if (newPosition == 12) {
+              newPosition = 14;
             }
           }
         } else {
           if (this.index_pagina > 1) {
             newPosition = this.index_pagina - 1;
             this.isRevert = true;
-            if (newPosition == 12) {
-              newPosition = 10;
+            if (newPosition == 13) {
+              newPosition = 11;
             }
           }
         }
