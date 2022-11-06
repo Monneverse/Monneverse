@@ -421,7 +421,6 @@ export default {
     Navegar() {
 
       if (this.scroll) {
-        this.exitAnimation = true;
         this.scroll = false;
         let newPosition = this.index_pagina;
         if (event.deltaY > 0) {
@@ -441,6 +440,12 @@ export default {
             }
           }
         }
+        if (newPosition == this.index_pagina) {
+          this.isRevert = false;
+          this.scroll = true;
+          return;
+        }
+        this.exitAnimation = true;
 
 
         this.CambiarContenedor(newPosition)
