@@ -1,11 +1,5 @@
 <script setup>
 import Articulo from "./Articulo.vue";
-defineProps({
-  index_pagina: {
-    type: Number,
-    required: true,
-  },
-});
 </script>
 
 <template>
@@ -48,7 +42,7 @@ defineProps({
 
   <!-- Contenedor de Articulos -->
   <div class="containerArticulo">
-    <div v-if="index_pagina == 5" class="contenedorDeArticulo">
+    <div  class="contenedorDeArticulo">
       <Articulo v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen" :url="item.link" />
     </div>
   </div>
@@ -80,59 +74,9 @@ defineProps({
 
 <script>
 export default {
+  props:["vectorArticulo"],
   data() {
     return {
-      vectorTodo: [
-        {
-          titulo: "Presale and benefits For investors",
-          imagen: "/img/Articulo/articulo_lite.png",
-          link: "https://sites.google.com/view/blog-monnerverse/home/presale-and-its-benefits-for-investors",
-        },
-        {
-          titulo: "How to avoid being scammed by investing in monner coin?",
-          imagen: "/img/Articulo/articulo2_lite.png",
-          link: "https://sites.google.com/view/blog-monnerverse/home/how-to-avoid-being-scammed-by-investing-in-monner-coin",
-        },
-        {
-          titulo:
-            "Why will monner become one of the best cryptocurrencies to investin?",
-          imagen: "/img/Articulo/articulo3_lite.png",
-          link: "https://sites.google.com/view/blog-monnerverse/home/why-will-monner-become-one-of-the-best-cryptocurrencies-to-invest-in",
-        },
-        {
-          titulo: "Why invest in monner and how to secure your investment?",
-          imagen: "/img/Articulo/articulo4_lite.png",
-          link: "https://sites.google.com/view/blog-monnerverse/home/why-invest-in-monner-and-how-to-secure-your-investment",
-        },
-        {
-          titulo: "What to do to not miss any Monner news?",
-          imagen: "/img/Articulo/articulo5_lite.png",
-          link: "https://sites.google.com/view/blog-monnerverse/home/what-to-do-to-not-miss-any-monner-news",
-        },
-        {
-          titulo: "The monner coin and it’s benefits",
-          imagen: "/img/Articulo/articulo6_lite.png",
-          link: "https://sites.google.com/view/blog-monnerverse/home/the-monner-coin-and-its-benefits",
-        },
-      ],
-      vectorArticulo: [
-        {
-          titulo: "Presale and benefits For investors",
-          imagen: "/img/Articulo/articulo_lite.png",
-          link: "https://sites.google.com/view/blog-monnerverse/home/presale-and-its-benefits-for-investors",
-        },
-        {
-          titulo: "How to avoid being scammed by investing in monner coin?",
-          imagen: "/img/Articulo/articulo2_lite.png",
-          link: "https://sites.google.com/view/blog-monnerverse/home/how-to-avoid-being-scammed-by-investing-in-monner-coin",
-        },
-        {
-          titulo:
-            "Why will monner become one of the best cryptocurrencies to investin?",
-          imagen: "/img/Articulo/articulo3_lite.png",
-          link: "https://sites.google.com/view/blog-monnerverse/home/why-will-monner-become-one-of-the-best-cryptocurrencies-to-invest-in",
-        },
-      ],
       fechaEvento: new Date(2022, 9, 12, 4, 0, 0, 0),
       diaString: "00",
       horaString: "00",
@@ -162,19 +106,11 @@ export default {
       this.minutoString = this.AgregarCero(minutes);
       this.segundoString = this.AgregarCero(seconds);
     },
-    CambiarArticulos() {
-      this.vectorArticulo = this.vectorTodo.slice(this.inicio, this.inicio + this.salto);
-      if (this.inicio == 0) {
-        this.inicio = this.salto;
-      } else {
-        this.inicio = 0;
-      }
-    }
+
   },
   mounted() {
-    this.CambiarArticulos();
+ 
     setInterval(this.ObtenerFechaActual, 500);
-    setInterval(this.CambiarArticulos, 10000);
 
 
   },
