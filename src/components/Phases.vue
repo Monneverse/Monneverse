@@ -20,9 +20,9 @@ import fasesComponentes from "./ComponentsPhases.vue";
   <div :class="{
     fases: true,
     'fases__aparecer': this.enterAnimation && !this.isRevert,
-    'fases__desaparecer': this.enterAnimation && this.isRevert,
-    'fases__aparecer_revert': this.exitAnimation && this.isRevert,
-    'fases__desaparecer_revert': this.exitAnimation && !this.isRevert,
+    'fases__aparecer_revert': this.enterAnimation && this.isRevert,
+    'fases__desaparecer_revert': this.exitAnimation && this.isRevert,
+    'fases__desaparecer': this.exitAnimation && !this.isRevert
   
   }">
     <div class="titulo">
@@ -38,14 +38,14 @@ import fasesComponentes from "./ComponentsPhases.vue";
 
     <div :class="{
       circulo: true, circulo__1: true, 'circulo__aparecer': this.enterAnimation && !this.isRevert,
-      'circulo__aparecer_revert': this.exitAnimation && this.isRevert,
+      'circulo__desaparecer_revert': this.exitAnimation && this.isRevert,
     }">
       <img src="../assets/aro.svg" />
     </div>
 
     <div :class="{
       circulo: true, circulo__2: true, 'circulo__aparecer': this.enterAnimation && !this.isRevert,
-      'circulo__aparecer_revert': this.exitAnimation && this.isRevert,
+      'circulo__desaparecer_revert': this.exitAnimation && this.isRevert,
     }">
       <img src="../assets/aro.svg" />
     </div>
@@ -54,9 +54,9 @@ import fasesComponentes from "./ComponentsPhases.vue";
   <div :class="{
     componentes: true,
     'componentes__aparecer': this.enterAnimation && !this.isRevert,
-    'componentes__desaparecer': this.enterAnimation && this.isRevert,
-    'componentes__aparecer_revert': this.exitAnimation && this.isRevert,
-    'componentes__desaparecer_revert': this.exitAnimation && !this.isRevert
+    'componentes__aparecer_revert': this.enterAnimation && this.isRevert,
+    'componentes__desaparecer_revert': this.exitAnimation && this.isRevert,
+    'componentes__desaparecer': this.exitAnimation && !this.isRevert
   }">
     <div class="componente componente__1">
       <fasesComponentes title="collection" description="Collection of documents for important Exchanges:
@@ -167,7 +167,7 @@ img {
 }
 
 .fases__aparecer_revert {
-  animation: aparecer .6s;
+  animation: desaparecer .6s;
   animation-delay: .1;
   animation-direction: reverse;
   animation-fill-mode: forwards;
@@ -181,7 +181,7 @@ img {
 }
 
 .fases__desaparecer_revert {
-  animation: desaparecer .6s;
+  animation: aparecer .6s;
   animation-delay: .1;
   animation-direction: reverse;
   animation-fill-mode: forwards;
@@ -196,7 +196,7 @@ img {
 }
 
 @keyframes desaparecer {
-  0% {
+  100% {
     left: -127%;
   }
 
@@ -232,7 +232,7 @@ img {
   animation: aparecer .8s;
 }
 
-.circulo__aparecer_revert {
+.circulo__desaparecer_revert {
   animation: aparecer .8s;
   animation-direction: reverse;
   animation-fill-mode: forwards;
@@ -267,7 +267,7 @@ img {
 }
 
 .componentes__aparecer_revert {
-  animation: aparecer  .9s;
+  animation: desaparecer  .9s;
   animation-direction: reverse;
   animation-fill-mode: forwards;
 
@@ -278,7 +278,7 @@ img {
 }
 
 .componentes__desaparecer_revert {
-  animation: desaparecer .9s;
+  animation: aparecer .9s;
   animation-direction: reverse;
   animation-fill-mode: backwards;
 
