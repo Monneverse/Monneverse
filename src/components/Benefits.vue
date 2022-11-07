@@ -108,14 +108,7 @@ defineProps({
           </div>
         </div>
       </div>
-      <div class="aro">
-        <img :class="{ image1: true, 'animacion-aparecer': index_pagina == 999 }" src="../assets/aro.svg" />
-
-        <img :class="{
-          image: true,
-          'animacion-aro': index_pagina == 999,
-        }" src="../assets/aro.svg" />
-      </div>
+     
     </div>
 
     <div :class="{
@@ -138,6 +131,14 @@ defineProps({
         </a>
       </div>
     </div>
+    <div class="aro">
+        <img :class="{ image1: true, 'animacion-aparecer': index_pagina == 999 }" src="../assets/aro.svg" />
+
+        <img :class="{
+          image: true,
+          'animacion-aro': index_pagina == 999,
+        }" src="../assets/aro.svg" />
+      </div>
   </div>
 </template>
 
@@ -194,7 +195,7 @@ p {
   flex-direction: column;
   width: 90%;
   height: 75%;
-  top: 14%;
+  top: 6rem!important;
 }
 
 .beneficio {

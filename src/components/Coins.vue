@@ -46,6 +46,8 @@ defineProps({
       'contenedor_coins': true,
       'animacion-aparecer': this.enterAnimation && !this.isRevert,
       'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+      'animacion-desaparecer': this.enterAnimation && this.isRevert,
+      'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
     }"
   >
     <div class="card_coin">
@@ -389,20 +391,21 @@ img {
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
-.animacion-desaparecer {
-  animation-duration: 0.5s;
-  animation-name: desaparecer;
-  animation-iteration-count: 1;
-}
 .animacion-aparecer-revert {
   animation-duration: 0.8s;
   animation-name: aparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
+.animacion-desaparecer {
+  animation-duration: .8s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+}
+
 .animacion-desaparecer-revert {
-  animation-duration: 0.8s;
-  animation-name: desaparecer;
+  animation-duration: .8s;
+  animation-name: aparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
@@ -417,15 +420,7 @@ img {
   }
 }
 
-@keyframes desaparecer {
-  0% {
-    opacity: 100%;
-  }
 
-  100% {
-    opacity: 0%;
-  }
-}
 
 .animacion-desplazamiento {
   animation-name: dezplazamiento;
