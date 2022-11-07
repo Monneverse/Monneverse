@@ -1,47 +1,71 @@
 <script setup>
 defineProps({
-  index_pagina: {
-    type: Number,
+  enterAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  exitAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  isRevert: {
+    type: Boolean,
     required: true,
   },
 });
 </script>
 <template>
   <div class="contenido-general">
-    <div :class="{
-      logo: true,
-      'animacion-logo': index_pagina == 23,
-    }">
+    <div
+      :class="{
+        logo: true,
+        'animacion-logo': this.enterAnimation && !this.isRevert,
+        'animacion-logo-revert': this.exitAnimation && this.isRevert,
+      }"
+    >
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
 
     <!--FONDOS-->
-    <video preload="auto" autoplay="true" muted="true" loop="true" class="video-fondo-alliances"
-      poster="/img/fondo_binario.png">
-      <source src="/public/video/Full-HD-Lite-2.mp4" type="video/mp4">
+    <video
+      preload="auto"
+      autoplay="true"
+      muted="true"
+      loop="true"
+      class="video-fondo-alliances"
+      poster="/img/fondo_binario.png"
+    >
+      <source src="/public/video/Full-HD-Lite-2.mp4" type="video/mp4" />
       <!-- <source src="/public/video/Full-HD-Lite.webm" type="video/webm">
         <source src="/public/video/Full-HD-Lite-IPhone.mp4" type="video/mp4"> -->
       <!-- <source src="/public/video/Full-HD-Lite.mov">
     <source src="/public/video/Full-HD-Lite.m4v">
     <source src="/public/video/Full-HD-Lite.ts"> -->
-      <p>Your browser doesn't support HTML5 video. Here is a <a href="/video/Full-HD-Lite.mp4">link to the video</a>
-        instead.</p>
+      <p>
+        Your browser doesn't support HTML5 video. Here is a
+        <a href="/video/Full-HD-Lite.mp4">link to the video</a> instead.
+      </p>
     </video>
 
-
-
     <div class="fondo filtro-superior"></div>
-    <div :class="{
-      'fondo-montana': true,
-      'fondo-montana-animation': index_pagina == 23,
-    }" class="fondo">
+    <div
+      :class="{
+        'fondo-montana': true,
+        'fondo-montana-animation': index_pagina == 2,
+      }"
+      class="fondo"
+    >
       <img src="/img/fondo-montana.png" />
     </div>
     <div class="fondo fondo-oscurecer"></div>
-    <div :class="{
-      'fondo-red': true,
-      'animacion-aparecer': index_pagina == 23,
-    }" class="fondo">
+    <div
+      :class="{
+        'fondo-red': true,
+        'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+      }"
+      class="fondo"
+    >
       <img src="/img/red.png" alt="" />
     </div>
     <div class="fondo-telefono">
@@ -52,11 +76,18 @@ defineProps({
       <div class="texto"></div>
 
       <!--UPCOMING ALLIANCES-->
-      <div class="content-forms">
-        <section :class="{
-          circulos: true,
-          'animacion-aparecer': index_pagina == 23,
-        }">
+      <div :class="{
+            'content-forms': true,
+            'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+          }">
+        <section
+          :class="{
+            circulos: true,
+            'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+          }"
+        >
           <div class="circulo">
             <img src="../assets/circulo.svg" alt="" />
           </div>
@@ -66,23 +97,29 @@ defineProps({
           </div>
         </section>
         <section class="arco">
-          <div :class="{
-            semi_circulo: true,
-            'animacion-arco': index_pagina == 23,
-          }">
+          <div
+            :class="{
+              semi_circulo: true,
+              'animacion-arco': this.enterAnimation && !this.isRevert,
+              'animacion-arco-revert': this.exitAnimation && this.isRevert,
+            }"
+          >
             <img src="../assets/aro-iluminado-brillante.svg" alt="" />
           </div>
         </section>
         <section class="Alianzas">
           <div class="alianzas">
-            <a href="https://www.reddit.com/user/monnerverse"><span><img
-                  src="../assets/reddit-4.svg" /></span>REDDIT</a>
+            <a href="https://www.reddit.com/user/monnerverse"
+              ><span><img src="../assets/reddit-4.svg" /></span>REDDIT</a
+            >
 
-            <a href="https://t.me/monnerversecommunity"><span><img
-                  src="../assets/Telegram_logo.svg" /></span>TELEGRAM</a>
+            <a href="https://t.me/monnerversecommunity"
+              ><span><img src="../assets/Telegram_logo.svg" /></span>TELEGRAM</a
+            >
 
-            <a href="https://discord.com/invite/h7fRvek9dn"><span><img
-                  src="../assets/discord.svg" /></span>DISCORD</a>
+            <a href="https://discord.com/invite/h7fRvek9dn"
+              ><span><img src="../assets/discord.svg" /></span>DISCORD</a
+            >
           </div>
         </section>
 
@@ -104,10 +141,13 @@ defineProps({
       </div>
     </div>
 
-    <div :class="{
-      puntero: true,
-      'animacion-aparecer': index_pagina == 23,
-    }">
+    <div
+      :class="{
+        puntero: true,
+        'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+      }"
+    >
       <img src="/img/puntero.svg" alt="" />
     </div>
   </div>
@@ -191,11 +231,11 @@ section {
   align-items: flex-end;
 }
 
-.texto>section {
+.texto > section {
   width: 70%;
 }
 
-.texto>section p {
+.texto > section p {
   width: 80%;
   float: right;
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
@@ -246,7 +286,6 @@ section {
   width: 5rem;
   height: 5rem;
   z-index: 12;
-  display: none;
 }
 
 .animacion-logo {
@@ -255,25 +294,21 @@ section {
   animation-iteration-count: 1;
 }
 
+.animacion-logo-revert {
+  animation-name: animar-logo;
+  animation-duration: 0.8s;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
 @keyframes animar-logo {
   0% {
     position: absolute;
-    top: 10rem;
-    left: 25rem;
+    top: 2rem;
+    left: 34rem;
     width: 25rem;
     height: 5rem;
     z-index: 1;
     opacity: 10%;
-  }
-
-  100% {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    width: 5rem;
-    height: 5rem;
-    z-index: 12;
-    opacity: 100%;
   }
 }
 
@@ -301,10 +336,12 @@ section {
 .filtro-superior {
   position: absolute;
   z-index: 4;
-  background: radial-gradient(circle at center,
-      #14ec84 0%,
-      #0b5f50 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #14ec84 0%,
+    #0b5f50 50%,
+    #505863 100%
+  );
   opacity: 30%;
 }
 
@@ -470,7 +507,6 @@ section {
   width: 12rem;
   display: flex;
   justify-content: space-between;
-
 }
 
 .alianzas a {
@@ -481,7 +517,6 @@ section {
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-weight: 600;
   font-size: 2vw;
-
 }
 
 .alianzas a span {
@@ -541,13 +576,18 @@ section {
   animation-duration: 0.5s;
   animation-iteration-count: 1;
 }
+.animacion-arco-revert img {
+  animation-name: animacion-arco;
+  animation-duration: 0.8s;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
 
 @keyframes animacion-arco {
   0% {
     top: 70%;
     transform: rotateZ(-180deg);
   }
-
   100% {
     top: 0%;
     transform: rotateZ(0deg);
@@ -698,7 +738,6 @@ section {
 
 .puntero img {
   width: 16rem;
-
 }
 
 @media screen and (max-width: 769px) {
@@ -749,6 +788,23 @@ section {
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
+.animacion-desaparecer {
+  animation-duration: 0.5s;
+  animation-name: desaparecer;
+  animation-iteration-count: 1;
+}
+.animacion-aparecer-revert {
+  animation-duration: 0.8s;
+  animation-name: aparecer;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+.animacion-desaparecer-revert {
+  animation-duration: 0.8s;
+  animation-name: desaparecer;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
 
 @keyframes aparecer {
   0% {
@@ -757,6 +813,16 @@ section {
 
   100% {
     opacity: 100%;
+  }
+}
+
+@keyframes desaparecer {
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
   }
 }
 </style>
