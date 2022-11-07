@@ -10,7 +10,9 @@ defineProps({
   <!--FONDO-->
 
   <div class="fondo">
-    <div :class="{ fondo_rayos: true, 'animacion-aparecer': index_pagina == 999 }">
+    <div
+      :class="{ fondo_rayos: true, 'animacion-aparecer': index_pagina == 999 }"
+    >
       <img src="/img/rayos.png" alt="" />
     </div>
     <div class="fondo-benefit">
@@ -25,15 +27,20 @@ defineProps({
     </div>
 
     <div class="display_flex">
-      <div :class="{ benefits: true, 'animacion-aparecer': index_pagina == 999 }">
+      <div
+        :class="{ benefits: true, 'animacion-aparecer': index_pagina == 999 }"
+      >
         <div class="beneficio">
-          <img id="a" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
+          <img
+            id="a"
+            class="circulos"
+            src="/img/plus.svg"
+            alt="Plus-Beneficios"
+          />
           <div class="content-price">
             <div class="titulo-benefit">
               <h1><span>$</span>1500<b>USD-MNR</b></h1>
-              <div class="info">
-                <p>(Minimum purchase $1,5 USD)</p>
-              </div>
+              <div class="info"><p>(Minimum purchase $1,5 USD)</p></div>
             </div>
           </div>
           <div class="content-text">
@@ -44,7 +51,12 @@ defineProps({
         </div>
 
         <div class="beneficio">
-          <img id="b" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
+          <img
+            id="b"
+            class="circulos"
+            src="/img/plus.svg"
+            alt="Plus-Beneficios"
+          />
           <div class="content-price">
             <div class="titulo-two">
               <h1>Phase 1</h1>
@@ -57,11 +69,18 @@ defineProps({
           </div>
         </div>
         <div class="beneficio">
-          <img id="c" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
-          <div :class="{
-            'content-price': true,
-            'animacion-caja1': index_pagina == 999,
-          }">
+          <img
+            id="c"
+            class="circulos"
+            src="/img/plus.svg"
+            alt="Plus-Beneficios"
+          />
+          <div
+            :class="{
+              'content-price': true,
+              'animacion-caja1': index_pagina == 999,
+            }"
+          >
             <div class="titulo-two">
               <h1>6.2%<span>*</span>48h</h1>
             </div>
@@ -80,12 +99,15 @@ defineProps({
           </div>
         </div>
         <div class="beneficio">
-          <img id="d" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
+          <img
+            id="d"
+            class="circulos"
+            src="/img/plus.svg"
+            alt="Plus-Beneficios"
+          />
           <div class="content-price">
             <div class="titulo-benefit">
-              <div class="info-two">
-                <p>At PancakeSwap</p>
-              </div>
+              <div class="info-two"><p>At PancakeSwap</p></div>
               <h1><span>$</span>15,300<b>USD</b></h1>
             </div>
           </div>
@@ -108,16 +130,35 @@ defineProps({
           </div>
         </div>
       </div>
-     
+      <div class="aro">
+        <img
+          :class="{ image1: true, 'animacion-aparecer': index_pagina == 999 }"
+          src="/img/Imagen1.png"
+        />
+
+        <img
+          :class="{
+            image: true,
+            'animacion-aro': index_pagina == 999,
+          }"
+          src="/img/Imagen1.png"
+        />
+      </div>
     </div>
 
-    <div :class="{
-      'logo-redes': true,
-      'animacion-dezplazamiento': index_pagina == 999,
-    }">
+    <div
+      :class="{
+        'logo-redes': true,
+        'animacion-dezplazamiento': index_pagina == 999,
+      }"
+    >
       <div class="icon icon-telegram">
         <a href="https://t.me/monnerversecommunity" target="_blank">
-          <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+          <img
+            src="../assets/Telegram_logo.svg"
+            alt="logo telegram"
+            srcset=""
+          />
         </a>
       </div>
       <div class="icon icon-reddit">
@@ -131,30 +172,15 @@ defineProps({
         </a>
       </div>
     </div>
-    <div class="aro">
-        <img :class="{ image1: true, 'animacion-aparecer': index_pagina == 999 }" src="../assets/aro.svg" />
-
-        <img :class="{
-          image: true,
-          'animacion-aro': index_pagina == 999,
-        }" src="../assets/aro.svg" />
-      </div>
   </div>
 </template>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
-img {
-  width: 100%;
-  height: 100%;
-
-}
-
 p {
   text-align: justify;
 }
-
 .display_flex {
   display: flex;
   justify-content: space-evenly;
@@ -162,7 +188,6 @@ p {
   height: 100%;
   margin: 0 auto;
 }
-
 .logo {
   position: absolute;
   top: 2rem;
@@ -172,14 +197,12 @@ p {
   z-index: 12;
   display: none;
 }
-
 .titulo {
   position: absolute;
   top: 4.2rem;
   left: 5.5rem;
   z-index: 45;
 }
-
 .titulo h1 {
   font-size: 2.4rem;
   font-family: "Work Sans", sans-serif;
@@ -195,28 +218,23 @@ p {
   flex-direction: column;
   width: 90%;
   height: 75%;
-  top: 6rem!important;
+  top: 14%;
 }
-
 .beneficio {
   width: 100%;
   height: 25%;
   display: flex;
   flex-direction: column;
 }
-
 .beneficio:nth-child(1) {
   height: 20%;
 }
-
 .beneficio:nth-child(2) {
   height: 10%;
 }
-
 .beneficio:nth-child(3) {
   height: 10%;
 }
-
 .beneficio:nth-child(4) {
   margin-top: 15%;
   height: 45%;
@@ -226,7 +244,6 @@ p {
   width: 100%;
   height: 80%;
 }
-
 .titulo-benefit {
   margin: 0;
   width: 100;
@@ -234,7 +251,6 @@ p {
   background-color: #161431;
   border-radius: 0.4em;
 }
-
 .titulo-benefit h1 {
   font-family: "Work Sans", sans-serif;
   color: white;
@@ -242,15 +258,12 @@ p {
   font-size: 1.8rem;
   margin-left: 5%;
 }
-
 .titulo-benefit h1 span {
   color: #37f395;
 }
-
 .titulo-benefit h1 b {
   font-size: 1.5rem;
 }
-
 .info {
   font-family: "Work Sans", sans-serif;
   color: white;
@@ -259,7 +272,6 @@ p {
   left: 5%;
   font-size: 1.2rem;
 }
-
 .info-two {
   font-family: "Work Sans", sans-serif;
   color: white;
@@ -268,7 +280,6 @@ p {
   left: 15%;
   font-size: 1.2rem;
 }
-
 .titulo-two {
   height: 100%;
   width: 100%;
@@ -277,7 +288,6 @@ p {
   align-items: center;
   border-radius: 0.4em;
 }
-
 .titulo-two h1 {
   font-family: "Work Sans", sans-serif;
   color: white;
@@ -285,37 +295,30 @@ p {
   font-size: 1.8rem;
   margin-left: 5%;
 }
-
 .titulo-two h1 span {
   color: #37f395;
 }
-
 .content-text {
   height: 70%;
   width: 90%;
   margin-left: 5%;
 }
-
 .content-text h3 {
   color: white;
 }
-
 .content-text p {
   font-family: "Work Sans", sans-serif;
   color: white;
   font-size: 0.7rem;
 }
-
 .sale {
   font-family: "Work Sans", sans-serif;
   color: white;
   font-size: 0.8rem;
 }
-
 .text {
   height: 0%;
 }
-
 .fondo {
   position: absolute;
   top: 0;
@@ -324,16 +327,13 @@ p {
   height: 100%;
   background-color: #121026;
 }
-
 .scroll {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
-
 .scroll p span {
   color: yellow;
 }
-
 .fondo_rayos {
   position: absolute;
   left: -50%;
@@ -346,27 +346,22 @@ p {
 .fondo_rayos img {
   height: 100%;
 }
-
 .fondo-benefit {
   background-size: no-repeat center center fixed;
   z-index: 5;
 }
-
-.fondo-benefit>img {
+.fondo-benefit > img {
   height: 100vh;
 }
-
 @media screen and (min-width: 769px) {
   .fondo_rayos {
     z-index: -2;
     left: 0%;
   }
-
-  .fondo-benefit>img {
+  .fondo-benefit > img {
     width: 100%;
     height: 115vh;
   }
-
   .fondo_rayos img {
     width: 100%;
   }
@@ -388,16 +383,13 @@ p {
       "c d"
       "e f";
   }
-
   .titulo {
     top: 10rem;
     left: 18%;
   }
-
   .titulo h1 {
     font-size: 4.5vw;
   }
-
   .fondo_rayos {
     display: initial;
   }
@@ -405,28 +397,26 @@ p {
 
 .logo-redes {
   position: absolute;
-  bottom: 1rem;
-  left: 1rem;
+  bottom: 0%;
+  left: 3rem;
   width: 20rem;
   height: 5rem;
   z-index: 14;
   display: flex;
   justify-content: start;
+  display: none;
 }
-
-.icon {
-  width: 3rem;
-  height: auto;
-  margin-left: 1rem;
-}
-
 @media screen and (width > 768px) {
   .logo-redes {
     display: flex;
   }
 }
 
-
+.icon img {
+  width: 3.5vw;
+  height: auto;
+  margin-left: 1rem;
+}
 
 .animacion-aparecer {
   animation-duration: 0.5s;
@@ -448,7 +438,6 @@ p {
   animation-duration: 0.5s;
   animation-iteration-count: 1;
 }
-
 /* @keyframes dezplazamiento {
   0% {
     left: 0.2rem;
@@ -465,23 +454,18 @@ p {
   width: 1rem;
   z-index: 33;
 }
-
 #a {
   top: 40%;
 }
-
 #b {
   top: 50%;
 }
-
 #c {
   top: 50%;
 }
-
 #d {
   top: 22%;
 }
-
 .circulos img {
   margin: 0 auto;
   width: 4%;
@@ -499,20 +483,17 @@ p {
     width: 100%;
     height: 30%;
   }
-
   .aro img {
     width: 30%;
     margin-right: 2%;
     margin-bottom: 0;
   }
-
-  .image1 {}
-
+  .image1 {
+  }
   .image {
     position: relative;
     top: -50%;
   }
-
   .animacion-aro {
     animation-name: aro;
     animation-duration: 0.5s;
@@ -520,7 +501,6 @@ p {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
   }
-
   @keyframes aro {
     0% {
       left: -25%;
@@ -540,30 +520,24 @@ p {
     width: 8%;
     z-index: 33;
   }
-
   #a {
     top: 30%;
   }
-
   #b {
     top: 30%;
   }
-
   #c {
     top: 30%;
   }
-
   #d {
     top: 30%;
   }
-
   .beneficio {
     width: 80%;
     height: 90%;
     display: flex;
     flex-direction: column;
   }
-
   .beneficio:nth-child(1) {
     position: relative;
     top: 50%;
@@ -572,20 +546,17 @@ p {
     display: flex;
     flex-direction: column;
   }
-
   .beneficio:nth-child(2) {
     width: 80%;
     height: 150%;
     display: flex;
     flex-direction: column;
   }
-
   .beneficio:nth-child(3) {
     position: relative;
     height: 80%;
     top: 30%;
   }
-
   .beneficio:nth-child(4) {
     height: 80%;
     margin-top: 0;
@@ -595,7 +566,6 @@ p {
     width: 100%;
     height: 50%;
   }
-
   .content-text {
     width: 100%;
     height: 50%;
@@ -608,7 +578,6 @@ p {
     background-color: #161431;
     border-radius: 0.4em;
   }
-
   .titulo-benefit h1 {
     font-family: "Work Sans", sans-serif;
     color: white;
@@ -616,15 +585,12 @@ p {
     font-size: 4vw;
     margin-left: 5%;
   }
-
   .titulo-benefit h1 span {
     color: #37f395;
   }
-
   .titulo-benefit h1 b {
     font-size: 1.8vw;
   }
-
   .info {
     font-family: "Work Sans", sans-serif;
     color: white;
@@ -633,7 +599,6 @@ p {
     left: 15%;
     font-size: 1.5vw;
   }
-
   .info-two {
     font-family: "Work Sans", sans-serif;
     color: white;
@@ -643,7 +608,6 @@ p {
     font-size: 1.5vw;
     height: 15%;
   }
-
   .titulo-two {
     height: 100%;
     width: 100%;
@@ -652,7 +616,6 @@ p {
     align-items: center;
     border-radius: 0.4em;
   }
-
   .titulo-two h1 {
     font-family: "Work Sans", sans-serif;
     color: white;
@@ -660,42 +623,34 @@ p {
     font-size: 4vw;
     margin-left: 5%;
   }
-
   .titulo-two h1 span {
     color: #37f395;
   }
-
   .content-text {
     height: 50%;
     width: 100%;
     margin-left: 5%;
   }
-
   .content-text h3 {
     color: white;
   }
-
   .content-text p {
     font-family: "Work Sans", sans-serif;
     color: white;
     font-size: 1vw;
   }
-
   .sale {
     font-family: "Work Sans", sans-serif;
     color: white;
     font-size: 1.1vw;
     width: 90;
   }
-
   .sale h3 {
     font-weight: 400;
   }
-
   .text {
     height: 80%;
   }
-
   .scroll {
     scroll-snap-type: initial;
     overflow-y: hidden;
@@ -717,7 +672,6 @@ p {
     height: 80%;
     top: 30%;
   }
-
   .beneficio:nth-child(4) {
     margin-top: 0;
   }
@@ -730,7 +684,6 @@ p {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-
 @keyframes caja1 {
   0% {
     position: absolute;
