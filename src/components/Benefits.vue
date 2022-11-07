@@ -133,7 +133,7 @@ defineProps({
       <div class="aro">
         <img
           :class="{ image1: true, 'animacion-aparecer': index_pagina == 999 }"
-          src="/img/Imagen1.png"
+          src="/img/arco.svg"
         />
 
         <img
@@ -141,7 +141,7 @@ defineProps({
             image: true,
             'animacion-aro': index_pagina == 999,
           }"
-          src="/img/Imagen1.png"
+          src="/img/arco.svg"
         />
       </div>
     </div>
