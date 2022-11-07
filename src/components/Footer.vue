@@ -13,7 +13,7 @@
     <img src="/img/fondo-montana.png" />
   </div>
   <div class="fondo fondo-oscurecer"></div>
- 
+
   <div class="fondo-mundial">
     <img src="/img/fondo-mundial.png" alt="" srcset="" />
   </div>
@@ -21,11 +21,13 @@
   <div class="circuito circuito-izquierdo">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
   </div>
-
+  <div class="circuito circuito-derecho">
+    <img src="/img/calculadora/circuito-derecho.png" alt="" />
+  </div>
   <!-- Filtros azul -->
   <div class="degradado degradado_derecho"></div>
   <div class="degradado degradado_derecho"></div>
-  
+
   <!-- redes sociales -->
   <div :class="{
     'fondo-redes': true,
@@ -123,7 +125,7 @@ img {
   animation-fill-mode: forwards;
 }
 
- @keyframes logo-animation {
+@keyframes logo-animation {
   0% {
     top: 2rem;
     left: 2rem;
@@ -132,7 +134,7 @@ img {
   }
 
 
-} 
+}
 
 /* fondo */
 .fondo {
@@ -160,18 +162,23 @@ img {
   mix-blend-mode: multiply;
 }
 
+
+
+
 .fondo-montana {
-  z-index: 2;
+  height: 100%;
+  top: 20%;
+  left: 0;
+  z-index: 3;
 }
 
 .fondo-oscurecer {
-  z-index: 3;
+  z-index: 4;
   background-color: rgb(0, 0, 0);
   opacity: 60%;
   mix-blend-mode: multiply;
 }
 
-/* circuito */
 .circuito {
   position: absolute;
   z-index: 4;
@@ -182,19 +189,13 @@ img {
 }
 
 .circuito-izquierdo {
-  left: -5%;
+  left: -14%;
 }
 
-@keyframes mover_izquierdo {
-  0% {
-    left: -5%;
-  }
-
-  100% {
-    left: 0%;
-  }
+.circuito-derecho {
+  right: -14%;
+  transform: scaleY(-1);
 }
-
 
 
 .fondo-redes-animation {
@@ -212,13 +213,13 @@ img {
   animation-fill-mode: forwards;
 }
 
- @keyframes fondo-redes-animation {
+@keyframes fondo-redes-animation {
   0% {
     top: 120%;
   }
 
 
-} 
+}
 
 
 .redes:hover a img {
@@ -261,21 +262,21 @@ img {
 /* style of  mobile */
 
 @media screen and (max-width: 850px) {
-  
-.degradado {
-  background: linear-gradient(to right, #08047a 0.5%, transparent);
-  position: absolute;
-  width: 90%;
-  height:180%;
-  z-index: 7;
-  top: 0%;
-}
+
+  .degradado {
+    background: linear-gradient(to right, #08047a 0.5%, transparent);
+    position: absolute;
+    width: 90%;
+    height: 180%;
+    z-index: 7;
+    top: 0%;
+  }
 
 
-.degradado_derecho {
-  transform: rotate(230deg);
-  left: 58%;
-}
+  .degradado_derecho {
+    transform: rotate(230deg);
+    left: 58%;
+  }
 
 
   .circuito {
@@ -316,12 +317,13 @@ img {
   .logo {
     display: none;
   }
+
   .fondo-mundial {
     position: fixed;
     bottom: 0%;
     right: 0%;
     width: 100%;
-    height:  30rem;
+    height: 30rem;
     z-index: 3;
     opacity: 100%;
     scale: 1.5;

@@ -1,11 +1,5 @@
 <script setup>
 import Articulo from "./Articulo.vue";
-defineProps({
-  index_pagina: {
-    type: Number,
-    required: true,
-  },
-});
 </script>
 
 <template>
@@ -35,8 +29,9 @@ defineProps({
     <div class="separar"></div>
     <div class="buyNow">
 
-    
-      <a href="https://www.pinksale.finance/launchpad/0x8cf9cA848ECAB7781a316eFFaFa41876c585Bc48?chain=BSC" target="_blank" class="btn_moner">
+
+      <a href="https://www.pinksale.finance/launchpad/0x8cf9cA848ECAB7781a316eFFaFa41876c585Bc48?chain=BSC"
+        target="_blank" class="btn_moner">
         <div class="texto1">BUY MONNER</div>
         <div class="logos">
           <div class="binance"><img src="/./img/Articulo/BNC.svg" /></div>
@@ -48,8 +43,13 @@ defineProps({
 
   <!-- Contenedor de Articulos -->
   <div class="containerArticulo">
-    <div v-if="index_pagina == 5" class="contenedorDeArticulo">
-      <Articulo v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen" :url="item.link" />
+    <div class="contenedorDeArticulo">
+      <Articulo :class="{
+        'articulo__aparecer': this.enterAnimation && !this.isRevert,
+        'articulo__aparecer_revert': this.enterAnimation && this.isRevert,
+        'articulo__desaparecer_revert': this.exitAnimation && this.isRevert,
+        'articulo__desaparecer': this.exitAnimation && !this.isRevert,
+      }" v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen" :url="item.link" />
     </div>
   </div>
 
@@ -80,6 +80,7 @@ defineProps({
 
 <script>
 export default {
+  props: ["enterAnimation", "exitAnimation", "isRevert"],
   data() {
     return {
       vectorTodo: [
@@ -174,9 +175,6 @@ export default {
   mounted() {
     this.CambiarArticulos();
     setInterval(this.ObtenerFechaActual, 500);
-    setInterval(this.CambiarArticulos, 10000);
-
-
   },
 };
 </script>
@@ -410,6 +408,50 @@ img {
   height: 80%;
 }
 
+.articulo__aparecer {
+  position: relative;
+  left: 0;
+  animation: aparecer .8s;
+}
+
+.articulo__desaparecer_revert {
+  position: relative;
+  left: 0;
+  animation: aparecer .8s;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+
+}
+
+.articulo__desaparecer {
+  position: relative;
+  left: 0;
+  animation: desaparecer .8s;
+}
+
+.articulo__aparecer_revert {
+  position: relative;
+  left: 0;
+  animation: desaparecer .8s;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+
+}
+
+@keyframes aparecer {
+  0% {
+    left: 127%;
+  }
+
+}
+
+@keyframes desaparecer {
+  100% {
+    left: -127%;
+  }
+
+}
+
 @media screen and (width > 850px) {
   .containerArticulo {
     position: absolute;
@@ -456,6 +498,7 @@ h4 {
   height: auto;
   margin-left: 1rem;
 }
+
 /* .textscroll {
   position: fixed;
   top: 84%;
