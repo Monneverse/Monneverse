@@ -3,17 +3,18 @@
     <h1>UPCOMING ALLIANCES</h1>
   </div>
   <div class="visa_img">
-    <img src="/img/Alianzas/visa.png" />
+    <img src="../assets/methodBuy/visa.svg" />
   </div>
   <div class="mastercard_img">
-    <img src="/img/Alianzas/mastercard.png" />
+    <img src="../assets/methodBuy/masterCard.svg" />
   </div>
+
   <div class="circulos_redes">
     <div class="semi_circle">
-      <img src="/img/semi_circulo.png" />
+      <img src="../assets/aro-iluminado-brillante.svg" />
     </div>
     <div class="circle">
-      <img src="/img/semi_circulo1.png" />
+      <img src="../assets/circulo-colores.svg" />
     </div>
   </div>
   <!--FONDO-->
@@ -31,10 +32,10 @@
     <img src="/img/fondo_Tokenomics.png" alt="" />
   </div>
   <div id="logo-1" class="logo">
-    <img src="/img/logo_empresa.png" alt="" />
+    <img src="/img/logo.svg" alt="" />
   </div>
   <div id="logo-2" class="logo">
-    <img src="/img/logo_empresa.png" alt="" />
+    <img src="/img/logo.svg" alt="" />
   </div>
   <div class="circuito-izquierdo">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
@@ -175,162 +176,6 @@ img {
   left: 55%;
 }
 
-@media only screen and  (max-width: 900px) {
-
-  .degradado {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 35%;
-    left: 55%;
-    z-index: 9;
-  }
-
-  .degradado_izquierdo {
-    display: none;
-  }
-
-  .fondo-montana {
-    position: fixed;
-    top: 28%;
-    left: -60%;
-    width: 200%;
-    height: 80%;
-  }
-
-  .fondo-mundial {
-    position: fixed;
-    top: 15em;
-    left: -9em;
-    width: 50em;
-    height: 35em;
-    z-index: 3;
-    opacity: 80%;
-  }
-
-  .fondo-calculadora {
-    width: 100%;
-    height: 100%;
-  }
-
-  .circuito-derecho {
-    display: none;
-  }
-
-  .circuito-izquierdo {
-    display: none;
-  }
-
-  .fondo_rayos {
-    position: fixed;
-    left: -35%;
-    top: -30%;
-    width: 150%;
-    height: 150%;
-    opacity: 50%;
-    z-index: 0;
-    background-size: no-repeat center center fixed;
-  }
-
-  .fondo_rayos img {
-    height: 100%;
-  }
-
-  #logo-1 {
-    position: absolute;
-    top: 78%;
-    left: -4%;
-    opacity: 50%;
-    z-index: 4;
-  }
-
-  .fondoTokenomics {
-    position: fixed;
-    top: 0%;
-    left: -6%;
-    width: 140%;
-    height: 90%;
-    visibility: hidden;
-  }
-}
-
-@media only screen and  (max-width: 900px) {
-  .degradado {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 35%;
-    left: 55%;
-    z-index: 9;
-  }
-
-  .degradado_izquierdo {
-    display: none;
-  }
-
-  .fondo-montana {
-    position: fixed;
-    top: 38%;
-    left: -60%;
-    width: 200%;
-    height: 80%;
-  }
-
-  .fondo-mundial {
-    position: fixed;
-    top: 27em;
-    left: -9em;
-    width: 50em;
-    height: 35em;
-    z-index: 3;
-    opacity: 100%;
-  }
-
-  .fondo-calculadora {
-    width: 100%;
-    height: 100%;
-  }
-
-  .circuito-derecho {
-    display: none;
-  }
-
-  .circuito-izquierdo {
-    display: none;
-  }
-
-  .fondo_rayos {
-    position: fixed;
-    left: -35%;
-    top: -30%;
-    width: 150%;
-    height: 150%;
-    opacity: 50%;
-    z-index: 0;
-    background-size: no-repeat center center fixed;
-  }
-
-  .fondo_rayos img {
-    height: 100%;
-  }
-
-  #logo-1 {
-    position: absolute;
-    top: 78%;
-    left: -4%;
-    opacity: 50%;
-    z-index: 4;
-  }
-
-  .fondoTokenomics {
-    position: fixed;
-    top: 0%;
-    left: -6%;
-    width: 140%;
-    height: 90%;
-    visibility: hidden;
-  }
-}
 
 /*FIN ESTILO FONDO*/
 
@@ -376,7 +221,246 @@ img {
   transform: scale(1.2);
 }
 
+.circulos_redes {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 20%;
+  left: 0%;
+  z-index: 4;
+}
+
+.semi_circle {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  min-width: 50rem;
+  height: 100%;
+  min-height: 50rem;
+  transform: translate(-50%, 0);
+  z-index: 4;
+  opacity: 100%;
+}
+
+.circle {
+  position: fixed;
+  right: 50%;
+  top: 85%;
+  transform: translate(50%, 0);
+  width: 50%;
+  max-width: 30rem;
+  height: 100%;
+  max-height: 30rem;
+  z-index: 4;
+  opacity: 100%;
+}
+
+.rectangulo {
+  width: 50%;
+  height: 35%;
+  position: fixed;
+  top: -29%;
+  left: 25%;
+  background: rgb(8, 7, 32);
+  background: linear-gradient(90deg,
+      rgba(8, 7, 32, 1) 0%,
+      rgba(1, 209, 88, 1) 100%);
+  border-radius: 2.5rem;
+  text-align: center;
+  z-index: 5;
+}
+
+.rectangulo-medio {
+  width: 44%;
+  height: 20%;
+  background-color: white;
+  position: fixed;
+  top: -18%;
+  left: 28%;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
+  z-index: 6;
+}
+
+.logo-redes {
+  position: absolute;
+  bottom:9%;
+  left: 50%;
+  width: 20rem;
+  height: 7rem;
+  transform: translate(-50%, 0%);
+  display: flex;
+  justify-content: center;
+  z-index: 8;
+}
+
+.icon {
+  width: 3rem;
+  height: auto;
+  margin-left: 1rem;
+  z-index: 8;
+}
+
+
+/* style mobile */
+
 @media only screen and  (max-width: 900px) {
+
+.degradado {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 35%;
+  left: 55%;
+  z-index: 9;
+}
+
+.degradado_izquierdo {
+  display: none;
+}
+
+.fondo-montana {
+  position: fixed;
+  top: 28%;
+  left: -60%;
+  width: 200%;
+  height: 80%;
+}
+
+.fondo-mundial {
+  position: fixed;
+  top: 15em;
+  left: -9em;
+  width: 50em;
+  height: 35em;
+  z-index: 3;
+  opacity: 80%;
+}
+
+.fondo-calculadora {
+  width: 100%;
+  height: 100%;
+}
+
+.circuito-derecho {
+  display: none;
+}
+
+.circuito-izquierdo {
+  display: none;
+}
+
+.fondo_rayos {
+  position: fixed;
+  left: -35%;
+  top: -30%;
+  width: 150%;
+  height: 150%;
+  opacity: 50%;
+  z-index: 0;
+  background-size: no-repeat center center fixed;
+}
+
+.fondo_rayos img {
+  height: 100%;
+}
+
+#logo-1 {
+  position: absolute;
+  top: 78%;
+  left: -4%;
+  opacity: 50%;
+  z-index: 4;
+}
+
+.fondoTokenomics {
+  position: fixed;
+  top: 0%;
+  left: -6%;
+  width: 140%;
+  height: 90%;
+  visibility: hidden;
+}
+.degradado {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 35%;
+  left: 55%;
+  z-index: 9;
+}
+
+.degradado_izquierdo {
+  display: none;
+}
+
+.fondo-montana {
+  position: fixed;
+  top: 38%;
+  left: -60%;
+  width: 200%;
+  height: 80%;
+}
+
+.fondo-mundial {
+  position: fixed;
+  top: 27em;
+  left: -9em;
+  width: 50em;
+  height: 35em;
+  z-index: 3;
+  opacity: 100%;
+}
+
+.fondo-calculadora {
+  width: 100%;
+  height: 100%;
+}
+
+.circuito-derecho {
+  display: none;
+}
+
+.circuito-izquierdo {
+  display: none;
+}
+
+.fondo_rayos {
+  position: fixed;
+  left: -35%;
+  top: -30%;
+  width: 150%;
+  height: 150%;
+  opacity: 50%;
+  z-index: 0;
+  background-size: no-repeat center center fixed;
+}
+
+.fondo_rayos img {
+  height: 100%;
+}
+
+#logo-1 {
+  position: absolute;
+  top: 78%;
+  left: -4%;
+  opacity: 50%;
+  z-index: 4;
+}
+
+.fondoTokenomics {
+  position: fixed;
+  top: 0%;
+  left: -6%;
+  width: 140%;
+  height: 90%;
+  visibility: hidden;
+}
   .mastercard_img {
     position: fixed;
     width: 55%;
@@ -413,86 +497,6 @@ img {
     top: 12%;
     left: 19%;
   }
-}
-
-.circulos_redes {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  bottom: 20%;
-  left: 0%;
-  z-index: 4;
-}
-
-.semi_circle {
-  position: fixed;
-  right: 26.3%;
-  top: 74%;
-  width: 50%;
-  height: 100%;
-  z-index: 4;
-  opacity: 100%;
-  rotate: 180deg;
-}
-
-.circle {
-  position: fixed;
-  right: 26%;
-  top: 82%;
-  width: 50%;
-  height: 100%;
-  z-index: 4;
-  opacity: 100%;
-}
-
-.rectangulo {
-  width: 50%;
-  height: 35%;
-  position: fixed;
-  top: -29%;
-  left: 25%;
-  background: rgb(8, 7, 32);
-  background: linear-gradient(90deg,
-      rgba(8, 7, 32, 1) 0%,
-      rgba(1, 209, 88, 1) 100%);
-  border-radius: 2.5rem;
-  text-align: center;
-  z-index: 5;
-}
-
-.rectangulo-medio {
-  width: 44%;
-  height: 20%;
-  background-color: white;
-  position: fixed;
-  top: -18%;
-  left: 28%;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
-  box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
-  z-index: 6;
-}
-
-.logo-redes {
-  position: fixed;
-  bottom: 6.7%;
-  left: 41.9%;
-  width: 20rem;
-  height: 7rem;
-  display: flex;
-  justify-content: start;
-  z-index: 8;
-}
-
-.icon {
-  width: 3.2vw;
-  height: auto;
-  margin-left: 1rem;
-  z-index: 8;
-}
-
-@media only screen and  (max-width: 900px) {
   .circulos_redes {
     position: fixed;
     top: 10%;

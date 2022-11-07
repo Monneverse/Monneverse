@@ -39,7 +39,7 @@
     <div class="fondoCertik"></div>
     <br>
     <div class="logos_auditoria">
-        <a href="https://solidity.finance/audits/MONNERVERSE/" target="_blank">
+        <a href="https://solidity.finance/audits/MonnerDeFi/" target="_blank">
             <img src="/img/Exchanges/solidity1.png" class="auditoria1" /></a>
         <a href="https://sites.google.com/view/certik-kyc-approved/certik-kyc-approved" target="_blank"><img
                 class="auditoria2" src="/img/Exchanges/certik.png" /></a>
@@ -49,7 +49,7 @@
         </button>
     </div>
     <div class="circulos">
-        <img src="/img/Imagen1.png" />
+        <img src="../assets/aro.svg" />
     </div>
     <div class="logo-redes">
         <div class="icon icon-telegram">

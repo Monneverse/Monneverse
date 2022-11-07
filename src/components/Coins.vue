@@ -1,8 +1,16 @@
 <script setup>
 import coin from "./componentesCoins.vue";
 defineProps({
-  index_pagina: {
-    type: Number,
+  enterAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  exitAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  isRevert: {
+    type: Boolean,
     required: true,
   },
 });
@@ -16,10 +24,14 @@ defineProps({
   <div class="fondo fondo-oscurecer"></div>
   <div class="arrow"></div>
   <div class="arrow2"></div>
-  <div :class="{
-    'circuito-izquierdo': true,
-    'animacion-desplazamiento': index_pagina == 88,
-  }" class="circuito">
+  <div
+    :class="{
+      'circuito-izquierdo': true,
+      'animacion-desplazamiento':this.enterAnimation && !this.isRevert,
+      'animacion-desplazamiento-revert':this.exitAnimation && this.isRevert,
+    }"
+    class="circuito"
+  >
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
   </div>
   <div class="circuito circuito-derecho">
@@ -29,40 +41,85 @@ defineProps({
   <div class="degradado_azuliz"></div>
   <div class="degradado_azulde"></div>
   <!--FIN FONDO-->
-  <div :class="{
-    contenedor_coins: true,
-    'animacion-aparecer': index_pagina == 88,
-  }">
+  <div
+    :class="{
+      'contenedor_coins': true,
+      'animacion-aparecer': this.enterAnimation && !this.isRevert,
+      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+      'animacion-desaparecer': this.enterAnimation && this.isRevert,
+      'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+    }"
+  >
     <div class="card_coin">
-      <coin icono="/img/coins/kucoin.svg" titulo="KuCoin token " sigla="(KCS)" texto="TOP 52 approx capitalization"
+      <coin
+        icono="/img/coins/kucoin.svg"
+        titulo="KuCoin token "
+        sigla="(KCS)"
+        texto="TOP 52 approx capitalization"
         capitalizacion="900 M USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of KuCoin token (KCS) would have a value of"
-        logo="/img/logo.svg" precio="90.000" caja="/img/coins/caja.png" :index="index_pagina" />
+        logo="/img/logo.svg"
+        precio="90.000"
+        caja="/img/coins/caja.png"
+        :index="index_pagina"
+      />
     </div>
     <div class="card_coin">
-      <coin icono="/img/coins/axie.svg" titulo="Axie Infinity" sigla="(AXS)" texto="TOP 48 approx capitalization"
+      <coin
+        icono="/img/coins/axie.svg"
+        titulo="Axie Infinity"
+        sigla="(AXS)"
+        texto="TOP 48 approx capitalization"
         capitalizacion="1.05 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of AXIE INFINITY (AXS) would have a value of"
-        logo="/img/logo.svg" precio="105.000" caja="/img/coins/caja.png" :index="index_pagina" />
+        logo="/img/logo.svg"
+        precio="105.000"
+        caja="/img/coins/caja.png"
+        :index="index_pagina"
+      />
     </div>
     <div class="card_coin">
-      <coin icono="/img/coins/decentraland.svg" titulo="Decentraland" sigla="(MANA)"
-        texto="TOP 42 approx capitalization" capitalizacion="1.30 B USD"
+      <coin
+        icono="/img/coins/decentraland.svg"
+        titulo="Decentraland"
+        sigla="(MANA)"
+        texto="TOP 42 approx capitalization"
+        capitalizacion="1.30 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of Decentraland (MANA) would have a value of"
-        logo="/img/logo.svg" precio="130.000" caja="/img/coins/caja.png" :index="index_pagina" />
+        logo="/img/logo.svg"
+        precio="130.000"
+        caja="/img/coins/caja.png"
+        :index="index_pagina"
+      />
     </div>
 
     <div class="card_coin">
-      <coin icono="/img/coins/monero.svg" titulo="Monero" sigla="(XRM)" texto="TOP 28 approx capitalization"
+      <coin
+        icono="/img/coins/monero.svg"
+        titulo="Monero"
+        sigla="(XRM)"
+        texto="TOP 28 approx capitalization"
         capitalizacion="2.68 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of  Monero (XRM) would have a value of"
-        logo="/img/logo.svg" precio="268.000" caja="/img/coins/caja.png" :index="index_pagina" />
+        logo="/img/logo.svg"
+        precio="268.000"
+        caja="/img/coins/caja.png"
+        :index="index_pagina"
+      />
     </div>
     <div class="card_coin">
-      <coin icono="/img/coins/chain.svg" titulo="Chainlink" sigla="(LINK)" texto="TOP 21 approx capitalization"
+      <coin
+        icono="/img/coins/chain.svg"
+        titulo="Chainlink"
+        sigla="(LINK)"
+        texto="TOP 21 approx capitalization"
         capitalizacion="3.72 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of Chainlink (LINK) would have a value of"
-        logo="/img/coins/logo.svg" precio="372.000" caja="/img/coins/caja.png" :index="index_pagina" />
+        logo="/img/coins/logo.svg"
+        precio="372.000"
+        caja="/img/coins/caja.png"
+        :index="index_pagina"
+      />
     </div>
   </div>
 
@@ -75,6 +132,24 @@ defineProps({
   <div class="monner">
     <h3>MONNER’S TOTAL SUPPLY:</h3>
     <h1>10.000 (MNR)</h1>
+  </div>
+
+  <div class="logo-redes">
+    <div class="icon icon-telegram">
+      <a href="https://t.me/monnerversecommunity" target="_blank">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+      </a>
+    </div>
+    <div class="icon icon-reddit">
+      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
+      </a>
+    </div>
+    <div class="icon icon-discord">
+      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+      </a>
+    </div>
   </div>
 </template>
 
@@ -98,19 +173,23 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
   z-index: 1;
 }
 
 .filtro-superior {
   z-index: 2;
-  background: radial-gradient(circle at center,
-      #f9f9fa 0%,
-      #c8ced4 50%,
-      #a8aaaf 100%);
+  background: radial-gradient(
+    circle at center,
+    #f9f9fa 0%,
+    #c8ced4 50%,
+    #a8aaaf 100%
+  );
   mix-blend-mode: multiply;
 }
 
@@ -312,6 +391,24 @@ img {
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
+.animacion-aparecer-revert {
+  animation-duration: 0.8s;
+  animation-name: aparecer;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+.animacion-desaparecer {
+  animation-duration: .8s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+}
+
+.animacion-desaparecer-revert {
+  animation-duration: .8s;
+  animation-name: aparecer;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
 
 @keyframes aparecer {
   0% {
@@ -323,9 +420,17 @@ img {
   }
 }
 
+
+
 .animacion-desplazamiento {
   animation-name: dezplazamiento;
   animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+.animacion-desplazamiento-revert {
+  animation-name: dezplazamiento;
+  animation-duration: 0.8s;
+  animation-direction: reverse;
   animation-iteration-count: 1;
 }
 
@@ -334,11 +439,26 @@ img {
     left: 1em;
   }
 
-  100% {}
+  100% {
+  }
+}
+.logo-redes {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  width: 20rem;
+  height: 5rem;
+  z-index: 24;
+  display: flex;
+  justify-content: start;
 }
 
+.icon {
+  width: 3rem;
+  height: auto;
+  margin-left: 1rem;
+}
 @media screen and (max-width: 900px) {
-
   .contenedor_coins {
     overflow: hidden;
     overflow-x: scroll;
@@ -351,9 +471,11 @@ img {
   }
 
   .contenedor_coins::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg,
-        rgb(33, 32, 85) 0%,
-        rgba(1, 209, 88, 1) 100%);
+    background: linear-gradient(
+      90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 5, 1) 100%
+    );
     border-radius: 20px;
     border: 2px solid #f1f2f3;
   }
@@ -369,7 +491,7 @@ img {
   .arrow,
   .arrow:before {
     position: absolute;
-    left: 50%
+    left: 50%;
   }
 
   .arrow {
@@ -388,7 +510,7 @@ img {
   }
 
   .arrow:before {
-    content: '';
+    content: "";
     width: 15px;
     height: 15px;
     top: 30%;
@@ -416,7 +538,7 @@ img {
   .arrow2,
   .arrow2:before {
     position: absolute;
-    left: 50%
+    left: 50%;
   }
 
   .arrow2 {
@@ -435,7 +557,7 @@ img {
   }
 
   .arrow2:before {
-    content: '';
+    content: "";
     width: 15px;
     height: 15px;
     top: 30%;
@@ -459,6 +581,5 @@ img {
       transform: translate(-10px, -10px);
     }
   }
-
 }
 </style>

@@ -2,7 +2,7 @@
 
   <!-- logo de la página -->
   <div :class="{ logo: true, mostrar: isVisible }">
-    <a href="" @click="this.setPage(1, false)">
+    <a  @click="this.setPage(6, false)">
       <img src="/img/logo.svg" alt="logo monneverse" /></a>
   </div>
 
@@ -121,6 +121,10 @@ export default {
       if (window.screen.width > 850) {
         var anim = document.getElementById("animacion");
         var link = document.getElementsByClassName("home")[0];
+        if(link === undefined){
+          anim.style.minWidth =  "0px";
+          return;
+        }
         if (this.indexF == 0) {
           anim.classList.add("invisible");
         }
@@ -220,6 +224,7 @@ img {
 .menu-Burger,
 .logo {
   display: none;
+  cursor: pointer;
 }
 
 .mostrar {

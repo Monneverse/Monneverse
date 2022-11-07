@@ -2,8 +2,8 @@
   <!-- Fondo de la footer -->
   <div :class="{
     logo: true,
-    'logo-animation31152814': index_pagina == this.limite && enter,
-    'logo-animation-revert31152814': index_pagina == this.limite && exit,
+    'logo-animation': index_pagina == this.limite && enter,
+    'logo-animation-revert': index_pagina == this.limite && exit,
   }">
     <img src="/img/logo.svg" alt="logo monneverse" />
   </div>
@@ -29,8 +29,8 @@
   <!-- redes sociales -->
   <div :class="{
     'fondo-redes': true,
-    'fondo-redes-animation31152814': index_pagina == this.limite && enter,
-    'fondo-redes-animation-revert31152814': index_pagina == this.limite && exit,
+    'fondo-redes-animation': index_pagina == this.limite && enter,
+    'fondo-redes-animation-revert': index_pagina == this.limite && exit,
   }">
     <div class="redes">
       <a href="https://t.me/monnerversecommunity">
@@ -123,7 +123,7 @@ img {
   animation-fill-mode: forwards;
 }
 
-/* @keyframes logo-animation {
+ @keyframes logo-animation {
   0% {
     top: 2rem;
     left: 2rem;
@@ -131,13 +131,8 @@ img {
     height: 5rem;
   }
 
-  100% {
-    top: 20%;
-    left: 38%;
-    width: 40%;
-    height: 40%;
-  }
-} */
+
+} 
 
 /* fondo */
 .fondo {
@@ -188,10 +183,6 @@ img {
 
 .circuito-izquierdo {
   left: -5%;
-  /* animation-name: mover_izquierdo;
-  animation-duration: 5s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite; */
 }
 
 @keyframes mover_izquierdo {
@@ -204,26 +195,6 @@ img {
   }
 }
 
-.circuito-derecho {
-  right: -5%;
-  /* animation-name: mover_derecho;
-  animation-duration: 5s;
-  animation-direction: alternate-reverse;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards; */
-}
-
-/* @keyframes mover_derecho {
-  0% {
-    right: -5%;
-  }
-
-  100% {
-    right: 0%;
-  }
-} */
-
-/* redes */
 
 
 .fondo-redes-animation {
@@ -241,15 +212,13 @@ img {
   animation-fill-mode: forwards;
 }
 
-/* @keyframes fondo-redes-animation {
+ @keyframes fondo-redes-animation {
   0% {
-    bottom: -70%;
+    top: 120%;
   }
 
-  100% {
-    bottom: 10%;
-  }
-} */
+
+} 
 
 
 .redes:hover a img {

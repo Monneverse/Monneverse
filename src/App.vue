@@ -20,6 +20,7 @@ import Fase3 from "./components/Phase3.vue";
 import Fase4 from "./components/Phase4.vue";
 import Fase5 from "./components/Phase5.vue";
 import Footer from "./components/Footer.vue";
+import Videos from "./components/Videos.vue"
 </script>
 
 <template>
@@ -49,7 +50,7 @@ import Footer from "./components/Footer.vue";
     </div>
 
     <div v-show="index_pagina == 2" class="container">
-      <Alliances :index_pagina="index_pagina" />
+      <Alliances :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
     <div v-show="index_pagina == 3" class="container">
@@ -73,7 +74,7 @@ import Footer from "./components/Footer.vue";
     </div>
 
     <div v-show="index_pagina == 8" class="container">
-      <Coins :index_pagina="index_pagina" />
+      <Coins :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
     <div v-show="index_pagina == 9" class="container">
@@ -84,32 +85,35 @@ import Footer from "./components/Footer.vue";
       <Beneficio :index_pagina="index_pagina" />
     </div>
 
-    <div v-show="index_pagina == 12" class="container">
+    <div v-show="index_pagina == 11" class="container">
       <Benefits_card :index_pagina="index_pagina" />
     </div>
     <div v-show="index_pagina == 12" class="container">
       <Benefits_card2 :index_pagina="index_pagina" />
     </div>
     <div v-show="index_pagina == 13" class="container">
-      <Tokenomics :index_pagina="index_pagina" />
+      <Videos></Videos>
     </div>
     <div v-show="index_pagina == 14" class="container">
-      <News />
+      <Tokenomics :index_pagina="index_pagina" />
     </div>
     <div v-show="index_pagina == 15" class="container">
-      <Fase :index_pagina="index_pagina" />
+      <News />
     </div>
     <div v-show="index_pagina == 16" class="container">
-      <Fase2 :index_pagina="index_pagina" />
+      <Fase :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 17" class="container">
-      <Fase3 :index_pagina="index_pagina" />
+      <Fase2 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 18" class="container">
-      <Fase4 :index_pagina="index_pagina" />
+      <Fase3 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 19" class="container">
-      <Fase5 :index_pagina="index_pagina" />
+      <Fase4 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
+    </div>
+    <div v-show="index_pagina == 20" class="container">
+      <Fase5 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == limite" class="container">
       <Footer :index_pagina="index_pagina" :limite="limite" :enter="enterAnimation" :exit="exitAnimation"></Footer>
@@ -123,7 +127,7 @@ export default {
     return {
       index: 0,
       index_pagina: 1,
-      limite: 20,
+      limite: 21,
       isVisibleLogo: false,
       scroll: true,
       exitAnimation: false,
@@ -173,26 +177,46 @@ export default {
       this.isVisibleLogo = visible;
       switch (this.index) {
         case 1:
+          if (this.index_pagina == 5) {
+            return;
+          }
           this.index_pagina = 5;
           break;
         case 2:
+          if (this.index_pagina == 9) {
+            return;
+          }
           this.index_pagina = 9;
           break;
         case 3:
-          this.index_pagina = 13;
-          break;
-        case 4:
+          if (this.index_pagina == 14) {
+            return;
+          }
           this.index_pagina = 14;
           break;
-        case 5:
+        case 4:
+          if (this.index_pagina == 15) {
+            return;
+          }
           this.index_pagina = 15;
           break;
+        case 5:
+          if (this.index_pagina == 16) {
+            return;
+          }
+          this.index_pagina = 16;
+          break;
         case 6:
+          if (this.index_pagina == 1) {
+            return;
+          }
           this.index_pagina = 1;
           break;
         default:
           break;
       }
+      this.isRevert = false;
+      this.enterAnimation = true;
       this.CambiarContenedor(this.index_pagina);
     },
     UpdateNav(id) {
@@ -202,7 +226,7 @@ export default {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.center
-          }
+          } this.index = 0;
           break;
         case 2:
           if (window.innerWidth < 900) {
@@ -210,21 +234,21 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right
           }
-
+          this.index = 0;
           break;
         case 3:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
-          }
+          } this.index = 0;
           break
         case 4:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
-          }
+          } this.index = 0;
           break
         case 5:
           this.index = 1;
@@ -266,7 +290,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right
           }
-          this.index = 3;
+          this.index = 0;
           break;
         case 14:
           if (window.innerWidth < 900) {
@@ -274,7 +298,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right
           }
-          this.index = 4;
+          this.index = 3;
           break;
         case 15:
           if (window.innerWidth < 900) {
@@ -282,6 +306,9 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right
           }
+
+          this.index = 4;
+          break;
         case 16:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
@@ -309,6 +336,14 @@ export default {
           this.index = 5;
           break;
         case 20:
+          if (window.innerWidth < 900) {
+            this.orientacion = typeOrientacion.left
+          } else {
+            this.orientacion = typeOrientacion.right
+          }
+          this.index = 0;
+          break;
+        case 21:
           this.index = 0;
           this.orientacion = typeOrientacion.none
           break;
@@ -358,14 +393,14 @@ export default {
         }
 
 
-      }, 500);
+      }, 750);
 
       setTimeout(() => {
         this.scroll = true;
 
         this.enterAnimation = false;
 
-      }, 1000);
+      }, 1500);
     },
     DisabledZoom() {
       const handleWheel = function (e) {
@@ -386,7 +421,6 @@ export default {
     Navegar() {
 
       if (this.scroll) {
-        this.exitAnimation = true;
         this.scroll = false;
         let newPosition = this.index_pagina;
         if (event.deltaY > 0) {
@@ -406,6 +440,12 @@ export default {
             }
           }
         }
+        if (newPosition == this.index_pagina) {
+          this.isRevert = false;
+          this.scroll = true;
+          return;
+        }
+        this.exitAnimation = true;
 
 
         this.CambiarContenedor(newPosition)

@@ -148,6 +148,12 @@ import ComponenteIconos from "./componenteIconos.vue";
   font-stretch: semi-condensed;
 }
 
+img {
+
+  width: 100%;
+  height: 100%;
+}
+
 /* FONDO */
 .fondo {
   position: absolute;
@@ -371,6 +377,7 @@ import ComponenteIconos from "./componenteIconos.vue";
   top: 66%;
   left: 94%;
   margin: -20px 0 0 -20px;
+  transform: rotate(-50deg);
   -webkit-transform: rotate(-50deg);
   border-left: none;
   border-top: none;
@@ -417,6 +424,7 @@ import ComponenteIconos from "./componenteIconos.vue";
   top: 66%;
   left: 9%;
   margin: -20px 0 0 -20px;
+  transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
   border-left: none;
   border-top: none;
@@ -512,14 +520,19 @@ import ComponenteIconos from "./componenteIconos.vue";
 
 .logo-redes {
   position: absolute;
-  bottom: 0%;
-  left: 3rem;
+  bottom: 1rem;
+  left: 1rem;
   width: 20rem;
   height: 5rem;
   z-index: 14;
   display: flex;
   justify-content: start;
-  display: none;
+}
+
+.icon {
+  width: 3rem;
+  height: auto;
+  margin-left: 1rem;
 }
 
 @media screen and (width > 768px) {
@@ -528,11 +541,6 @@ import ComponenteIconos from "./componenteIconos.vue";
   }
 }
 
-.icon img {
-  width: 3.5vw;
-  height: auto;
-  margin-left: 1rem;
-}
 
 @media screen and (max-width: 900px) {
 

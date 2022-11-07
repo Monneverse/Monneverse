@@ -1,7 +1,15 @@
 <script setup>
 defineProps({
-  index_pagina: {
-    type: Number,
+  enterAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  exitAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  isRevert: {
+    type: Boolean,
     required: true,
   },
 });
@@ -11,25 +19,25 @@ defineProps({
     <div
       :class="{
         logo: true,
-        'animacion-logo': index_pagina == 23,
+        'animacion-logo': this.enterAnimation && !this.isRevert,
+        'animacion-logo-revert': this.exitAnimation && this.isRevert,
       }"
     >
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
 
     <!--FONDOS-->
-
-    <!-- video de fondo -->
     <video
       preload="auto"
       autoplay="true"
       muted="true"
       loop="true"
+      class="video-fondo-alliances"
       poster="/img/fondo_binario.png"
     >
-      <source src="/public/video/Full-HD-Lite.mp4" type="video/mp4" />
-      <source src="/public/video/Full-HD-Lite.webm" type="video/webm" />
-      <source src="/public/video/Full-HD-Lite-IPhone.mp4" type="video/mp4" />
+      <source src="/public/video/Full-HD-Lite-2.mp4" type="video/mp4" />
+      <!-- <source src="/public/video/Full-HD-Lite.webm" type="video/webm">
+        <source src="/public/video/Full-HD-Lite-IPhone.mp4" type="video/mp4"> -->
       <!-- <source src="/public/video/Full-HD-Lite.mov">
     <source src="/public/video/Full-HD-Lite.m4v">
     <source src="/public/video/Full-HD-Lite.ts"> -->
@@ -43,7 +51,7 @@ defineProps({
     <div
       :class="{
         'fondo-montana': true,
-        'fondo-montana-animation': index_pagina == 23,
+        'fondo-montana-animation': index_pagina == 2,
       }"
       class="fondo"
     >
@@ -53,7 +61,8 @@ defineProps({
     <div
       :class="{
         'fondo-red': true,
-        'animacion-aparecer': index_pagina == 23,
+        'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
       }"
       class="fondo"
     >
@@ -67,11 +76,16 @@ defineProps({
       <div class="texto"></div>
 
       <!--UPCOMING ALLIANCES-->
-      <div class="content-forms">
+      <div :class="{
+            'content-forms': true,
+            'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+          }">
         <section
           :class="{
             circulos: true,
-            'animacion-aparecer': index_pagina == 23,
+            'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
           }"
         >
           <div class="circulo">
@@ -86,7 +100,8 @@ defineProps({
           <div
             :class="{
               semi_circulo: true,
-              'animacion-arco': index_pagina == 23,
+              'animacion-arco': this.enterAnimation && !this.isRevert,
+              'animacion-arco-revert': this.exitAnimation && this.isRevert,
             }"
           >
             <img src="../assets/aro-iluminado-brillante.svg" alt="" />
@@ -95,19 +110,16 @@ defineProps({
         <section class="Alianzas">
           <div class="alianzas">
             <a href="https://www.reddit.com/user/monnerverse"
-              ><span><img src="/img/Alianzas/reddit.png" /></span>REDDIT</a
+              ><span><img src="../assets/reddit-4.svg" /></span>REDDIT</a
             >
-            <!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
 
             <a href="https://t.me/monnerversecommunity"
-              ><span><img src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a
+              ><span><img src="../assets/Telegram_logo.svg" /></span>TELEGRAM</a
             >
-            <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 
             <a href="https://discord.com/invite/h7fRvek9dn"
-              ><span><img src="/img/Alianzas/discord.png" /></span>DISCORD</a
+              ><span><img src="../assets/discord.svg" /></span>DISCORD</a
             >
-            <!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
           </div>
         </section>
 
@@ -132,7 +144,8 @@ defineProps({
     <div
       :class="{
         puntero: true,
-        'animacion-aparecer': index_pagina == 23,
+        'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
       }"
     >
       <img src="/img/puntero.svg" alt="" />
@@ -177,7 +190,16 @@ section {
   width: 80%;
   height: 100%;
 }
-
+.video-fondo-alliances {
+  position: fixed;
+  scale: 1;
+  opacity: 30%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 3;
+}
 .contenido-general {
   width: 100%;
   height: 100%;
@@ -264,7 +286,6 @@ section {
   width: 5rem;
   height: 5rem;
   z-index: 12;
-  display: none;
 }
 
 .animacion-logo {
@@ -273,42 +294,27 @@ section {
   animation-iteration-count: 1;
 }
 
+.animacion-logo-revert {
+  animation-name: animar-logo;
+  animation-duration: 0.8s;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
 @keyframes animar-logo {
   0% {
     position: absolute;
-    top: 10rem;
-    left: 25rem;
+    top: 2rem;
+    left: 34rem;
     width: 25rem;
     height: 5rem;
     z-index: 1;
     opacity: 10%;
-  }
-
-  100% {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    width: 5rem;
-    height: 5rem;
-    z-index: 12;
-    opacity: 100%;
   }
 }
 
 .fondo {
   width: 100%;
   height: 100%;
-}
-
-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 40%;
-  z-index: 0;
 }
 
 .fondo-telefono {
@@ -531,7 +537,7 @@ video {
   top: 10%;
   width: 1.5rem;
   height: 1.5rem;
-  margin: auto auto;
+  margin: auto;
 }
 
 .alianzas a span:hover {
@@ -570,13 +576,18 @@ video {
   animation-duration: 0.5s;
   animation-iteration-count: 1;
 }
+.animacion-arco-revert img {
+  animation-name: animacion-arco;
+  animation-duration: 0.8s;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
 
 @keyframes animacion-arco {
   0% {
     top: 70%;
     transform: rotateZ(-180deg);
   }
-
   100% {
     top: 0%;
     transform: rotateZ(0deg);
@@ -724,9 +735,9 @@ video {
   display: flex;
   justify-content: center;
 }
-.puntero img{
+
+.puntero img {
   width: 16rem;
-  
 }
 
 @media screen and (max-width: 769px) {
@@ -777,6 +788,23 @@ video {
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
+.animacion-desaparecer {
+  animation-duration: 0.5s;
+  animation-name: desaparecer;
+  animation-iteration-count: 1;
+}
+.animacion-aparecer-revert {
+  animation-duration: 0.8s;
+  animation-name: aparecer;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+.animacion-desaparecer-revert {
+  animation-duration: 0.8s;
+  animation-name: desaparecer;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
 
 @keyframes aparecer {
   0% {
@@ -785,6 +813,16 @@ video {
 
   100% {
     opacity: 100%;
+  }
+}
+
+@keyframes desaparecer {
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
   }
 }
 </style>

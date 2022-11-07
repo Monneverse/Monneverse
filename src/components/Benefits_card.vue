@@ -98,7 +98,10 @@ developed.
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
-
+img {
+  width: 100%;
+  height: 100%;
+}
 .logo {
   position: absolute;
   top: 2rem;
@@ -333,7 +336,7 @@ developed.
 
 .logo-redes {
   position: absolute;
-  bottom: 0%;
+  bottom: 1rem;
   left: 1rem;
   width: 20rem;
   height: 5rem;
@@ -341,15 +344,17 @@ developed.
   display: flex;
   justify-content: start;
 }
+
+.icon {
+  width: 3rem;
+  height: auto;
+  margin-left: 1rem;
+}
 @media screen and (width < 769px) {
   .logo-redes {
     display: none;
   }
 }
 
-.icon img {
-  width: 3.5vw;
-  height: auto;
-  margin-left: 1rem;
-}
+
 </style>

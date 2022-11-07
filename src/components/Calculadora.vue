@@ -5,7 +5,7 @@
   <div class="fondo filtro-superior"></div>
   <div :class="{
     fondo: true, 'fondo-montana': true,
-    'fondo-montana-animation31152814': this.enterAnimation && !this.isRevert,
+    'fondo-montana-animation': this.enterAnimation && !this.isRevert,
   }"><img src="/img/fondo-montana.png" /> </div>
   <div class="fondo fondo-oscurecer"></div>
 
@@ -29,19 +29,19 @@
 
       <div :class="{
         'circulo-indicador': true,
-        'circulo_indicador_animation31152814': this.enterAnimation && !this.isRevert,
-        'circulo_indicador_animation_revert31152814': this.exitAnimation && this.isRevert,
-        'circulo_indicador_animation_salida31152814': this.exitAnimation && !this.isRevert,
-        'circulo_indicador_animation_salida_revert31152814': this.enterAnimation && this.isRevert,
+        'circulo_indicador_animation': this.enterAnimation && !this.isRevert,
+        'circulo_indicador_animation_revert': this.exitAnimation && this.isRevert,
+        'circulo_indicador_animation_salida': this.exitAnimation && !this.isRevert,
+        'circulo_indicador_animation_salida_revert': this.enterAnimation && this.isRevert,
       
       }"></div>
 
 
       <div :class="{
-        'aparecer31152814': this.enterAnimation && !this.isRevert,
-        'aparecer_revert31152814': this.exitAnimation && this.isRevert,
-        'aparecer_revert31152814': this.exitAnimation && !this.isRevert,
-        'aparecer31152814': this.enterAnimation && this.isRevert,
+        'aparecer': this.enterAnimation && !this.isRevert,
+        'aparecer_revert': this.exitAnimation && this.isRevert,
+        'aparecer_revert': this.exitAnimation && !this.isRevert,
+        'aparecer': this.enterAnimation && this.isRevert,
       }">
 
         <div :class="{ circulo: true }">
@@ -68,14 +68,13 @@
       </div>
 
       <div :class="{
-        'rotar31152814': this.enterAnimation && !this.isRevert,
-        'rotar_revert31152814': this.exitAnimation && this.isRevert,
-        'rotar_derecha31152814': this.exitAnimation && !this.isRevert,
-        'rotar_derecha_revert31152814': this.enterAnimation && this.isRevert,
+        circulo_rotar: true,
+        'rotar': this.enterAnimation && !this.isRevert,
+        'rotar_revert': this.exitAnimation && this.isRevert,
+        'rotar_derecha': this.exitAnimation && !this.isRevert,
+        'rotar_derecha_revert': this.enterAnimation && this.isRevert,
       }">
-        <div :class="{
-          circulo: true,
-        }">
+        <div class="circulo circulo_rotar">
           <img src="../assets/circulo-colores-texto.svg" alt="aro-multikolor" />
         </div>
         <img :class="{
@@ -111,9 +110,9 @@
   <!-- redes sociales -->
   <div :class="{
     'logo-redes': true,
-    'desplazar_redes31152814': this.enterAnimation && !this.isRevert,
-    'desplazar_redes_revert31152814': this.exitAnimation && this.isRevert,
-    'desplazar_redes_salida31152814': this.exitAnimation && !this.isRevert,
+    'desplazar_redes': this.enterAnimation && !this.isRevert,
+    'desplazar_redes_revert': this.exitAnimation && this.isRevert,
+    'desplazar_redes_salida': this.exitAnimation && !this.isRevert,
   }">
 
     <a class="icon" href="https://t.me/monnerversecommunity" target="_blank">
@@ -435,7 +434,14 @@ img {
   justify-content: center;
   align-items: center;
 }
-
+.circulo_rotar{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 7;
+}
 .circulo-verde {
   top: 18%;
   left: 15%;
@@ -814,6 +820,12 @@ img {
   justify-content: start;
 }
 
+.icon {
+  width: 3rem;
+  height: auto;
+  margin-left: 1rem;
+}
+
 .desplazar_redes {
   animation-name: redes_animation;
   animation-duration: .5s;
@@ -856,11 +868,7 @@ img {
   }
 }
 
-.icon {
-  width: 3rem;
-  height: auto;
-  margin-left: 1rem;
-}
+
 
 /* style of mobile */
 
