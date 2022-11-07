@@ -1,7 +1,15 @@
 <script setup>
 defineProps({
-  index_pagina: {
-    type: Number,
+  enterAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  exitAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  isRevert: {
+    type: Boolean,
     required: true,
   },
 });
@@ -13,12 +21,19 @@ defineProps({
     <div
       :class="{
         fondo_rayos: true,
-        'animacion-desplazamiento': index_pagina == 101,
+        'animacion-desplazamiento': this.enterAnimation && !this.isRevert,
+        'animacion-desplazamiento-revert': this.exitAnimation && this.isRevert,
       }"
     >
       <img src="/img/rayos.png" alt="" />
     </div>
-    <div class="fondo-benefit">
+    <div
+      :class="{
+        'fondo-benefit': true,
+        'animacion-benefit': this.enterAnimation && !this.isRevert,
+        'animacion-benefit-revert': this.exitAnimation && this.isRevert,
+      }"
+    >
       <img src="/img/fondo-benefit.png" alt="" />
     </div>
 
@@ -35,15 +50,32 @@ defineProps({
 
     <div
       :class="{
+        titulo: true,
+        'animacion-desplazamiento-titulo':
+          this.enterAnimation && !this.isRevert,
+        'animacion-desplazamiento-titulo-revert':
+          this.exitAnimation && this.isRevert,
+      }"
+    >
+      <h1>BENEFITS</h1>
+    </div>
+
+    <div
+      :class="{
         benefits: true,
-        aparecer: index_pagina == 101,
       }"
     >
       <div class="contenido">
-        <div class="titulo">
-          <h1>BENEFITS</h1>
-        </div>
-        <div class="contenedor-parrafo">
+        <div
+          :class="{
+            'contenedor-parrafo': true,
+            'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+            'animacion-desaparecer': this.enterAnimation && this.isRevert,
+            'animacion-desaparecer-revert':
+              this.exitAnimation && !this.isRevert,
+          }"
+        >
           <p>
             Monner DeFi is a project based on the payment of dividends that have
             the largest shares listed on the New York Stock Exchange. We want to
@@ -65,7 +97,16 @@ defineProps({
             MonnerBlockchain, MonnerGames
           </p>
         </div>
-        <div class="buttom">
+        <div
+          :class="{
+            buttom: true,
+            'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+            'animacion-desaparecer': this.enterAnimation && this.isRevert,
+            'animacion-desaparecer-revert':
+              this.exitAnimation && !this.isRevert,
+          }"
+        >
           <buttom :class="ocultar" v-on:click="mostrarTexto" class="btn centrar"
             >READ {{ look ? "LESS" : "MORE" }}</buttom
           >
@@ -122,23 +163,40 @@ img {
 }
 
 .titulo {
+  position: absolute;
   width: 100%;
-  height: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 4.5rem;
+  text-align: center;
+  z-index: 45;
+}
+.titulo h1 {
+  font-size: 2.4rem;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  color: white;
 }
 
-.titulo h1 {
-  font-size: 10vw;
-  font-family: "WorkSans", sans-serif;
-  font-weight: 400;
-  color: white;
+.animacion-desplazamiento-titulo {
+  animation-duration: 0.5s;
+  animation-name: titulo;
+  animation-iteration-count: 1;
+}
+.animacion-desplazamiento-titulo-revert {
+  animation-duration: 0.75s;
+  animation-name: titulo;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+@keyframes titulo {
+  0% {
+    top: 10rem;
+    left: 18%;
+  }
 }
 
 .benefits {
   position: absolute;
-  top: 10%;
+  top: 20%;
   z-index: 8;
   width: 100%;
   height: 100%;
@@ -164,6 +222,8 @@ img {
 }
 .buttom {
   margin: 0 auto;
+  position: relative;
+  top: -30px;
   width: 100%;
   height: 20%;
   display: flex;
@@ -172,12 +232,8 @@ img {
 }
 @media screen and (width > 769px) {
   .buttom {
-    margin: 0 auto;
-    width: 100%;
+    top: 0;
     height: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 .btn {
@@ -205,13 +261,12 @@ img {
   color: white;
 }
 
-
 @media screen and (min-width: 769px) {
   .benefits {
     position: absolute;
-    top: 15%;
+    top: 22%;
     width: 100%;
-    height: 80%;
+    height: 75%;
   }
   .contenido {
     margin: 0;
@@ -219,13 +274,12 @@ img {
     height: 90%;
   }
   .titulo {
-    padding: 0;
+    width: 0%;
+    top: 5rem;
+    left: 30%;
   }
   .titulo h1 {
-    font-size: 4vw;
-    font-family: "WorkSans", sans-serif;
-    font-weight: 600;
-    color: white;
+    font-size: 4.5vw;
   }
 
   .contenedor-parrafo {
@@ -237,27 +291,11 @@ img {
   }
 }
 
-@media screen and (width > 500px) and (width < 769px){
+@media screen and (width > 500px) and (width < 769px) {
   .contenedor-parrafo p {
     font-size: 2.5vw;
   }
 }
-.aparecer {
-  animation-duration: 0.5s;
-  animation-name: arriba;
-  animation-iteration-count: 1;
-}
-
-/* @keyframes arriba {
-  0% {
-    top: 54%;
-    opacity: 10%;
-  }
-
-  100% {
-    opacity: 100%;
-  }
-} */
 
 .fondo_rayos {
   position: absolute;
@@ -272,8 +310,10 @@ img {
   height: 100%;
 }
 .fondo-benefit {
-  background-size: no-repeat center center fixed;
-  z-index: 45;
+  position: relative;
+  background-size: no-repeat center center;
+  top: 0%;
+  z-index: 5;
 }
 .fondo-benefit > img {
   height: 100vh;
@@ -281,7 +321,7 @@ img {
 @media screen and (min-width: 769px) {
   .fondo_rayos {
     z-index: -2;
-    left: 0%;
+    left: -10%;
   }
   .fondo-benefit > img {
     width: 100%;
@@ -297,16 +337,33 @@ img {
   animation-name: desplazamiento;
   animation-iteration-count: 1;
 }
-
-/* @keyframes desplazamiento {
+.animacion-desplazamiento-revert {
+  animation-duration: .75s;
+  animation-name: desplazamiento;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+@keyframes desplazamiento {
   0% {
-    left: -5%;
-  }
-
-  100% {
     left: 0%;
   }
-} */
+}
+.animacion-benefit {
+  animation-duration: 0.5s;
+  animation-name: abajo;
+  animation-iteration-count: 1;
+}
+.animacion-benefit-revert {
+  animation-duration: .75s;
+  animation-name: abajo;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+@keyframes abajo {
+  0% {
+    top: -5%;
+  }
+}
 
 .logo-redes {
   position: absolute;
@@ -329,7 +386,6 @@ img {
     display: none;
   }
 }
-
 
 .reflector {
   position: absolute;
@@ -418,5 +474,38 @@ img {
     rgba(184, 184, 184, 0) 100%
   );
   filter: blur(3rem);
+}
+.animacion-aparecer {
+  animation-duration: 0.5s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+}
+.animacion-aparecer-revert {
+  animation-duration: .75s;
+  animation-name: aparecer;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+.animacion-desaparecer {
+  animation-duration: .75s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+}
+
+.animacion-desaparecer-revert {
+  animation-duration: .75s;
+  animation-name: aparecer;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }
 </style>

@@ -82,7 +82,7 @@ import Videos from "./components/Videos.vue"
     </div>
 
     <div v-show="index_pagina == 10" class="container">
-      <Beneficio :index_pagina="index_pagina" />
+      <Beneficio :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
     <div v-show="index_pagina == 11" class="container">

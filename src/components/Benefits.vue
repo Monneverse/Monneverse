@@ -206,7 +206,7 @@ p {
 .titulo h1 {
   font-size: 2.4rem;
   font-family: "Work Sans", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   color: white;
 }
 
@@ -347,7 +347,9 @@ p {
   height: 100%;
 }
 .fondo-benefit {
-  background-size: no-repeat center center fixed;
+  position: relative;
+  top: -5%;
+  background-size: no-repeat center center ;
   z-index: 5;
 }
 .fondo-benefit > img {
@@ -418,35 +420,6 @@ p {
   margin-left: 1rem;
 }
 
-.animacion-aparecer {
-  animation-duration: 0.5s;
-  animation-name: aparecer;
-  animation-iteration-count: 1;
-}
-
-/* @keyframes aparecer {
-  0% {
-    opacity: 0%;
-  }
-
-  100% {
-    opacity: 100%;
-  }
-} */
-.animacion-dezplazamiento {
-  animation-name: dezplazamiento;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
-}
-/* @keyframes dezplazamiento {
-  0% {
-    left: 0.2rem;
-  }
-
-  100% {
-    left: 3rem;
-  }
-} */
 .circulos {
   position: relative;
   top: 20%;
