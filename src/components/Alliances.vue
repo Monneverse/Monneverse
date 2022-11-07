@@ -302,7 +302,7 @@ section {
 
 .animacion-logo-revert {
   animation-name: animar-logo;
-  animation-duration: 0.8s;
+  animation-duration: .78s;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
@@ -369,24 +369,24 @@ section {
 }
 
 .fondo-montana-animation img {
-  animation-duration: 0.8s;
+  animation-duration: .78s;
   animation-name: fondo-montana-animation;
   animation-iteration-count: 1;
 }
 
 .fondo-montana-animation-salida img {
-  animation-duration: 0.8s;
+  animation-duration: .78s;
   animation-name: salidaMontana;
   animation-iteration-count: 1;
 }
 .fondo-montana-animation-revert img {
-  animation-duration: 0.8s;
+  animation-duration: .78s;
   animation-name: fondo-montana-animation;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
 .fondo-montana-animation-salida-revert img {
-  animation-duration: 0.8s;
+  animation-duration: .78s;
   animation-name: salidaMontana;
   animation-direction: reverse;
   animation-iteration-count: 1;
@@ -612,7 +612,7 @@ section {
 }
 .animacion-arco-revert img {
   animation-name: animacion-arco;
-  animation-duration: 0.8s;
+  animation-duration: .78s;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
@@ -828,13 +828,13 @@ section {
   animation-iteration-count: 1;
 }
 .animacion-aparecer-revert {
-  animation-duration: 0.8s;
+  animation-duration: .78s;
   animation-name: aparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
 .animacion-desaparecer-revert {
-  animation-duration: 0.8s;
+  animation-duration: .78s;
   animation-name: desaparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;

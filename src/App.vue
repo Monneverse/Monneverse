@@ -78,7 +78,7 @@ import Videos from "./components/Videos.vue"
     </div>
 
     <div v-show="index_pagina == 9" class="container">
-      <Benefits :index_pagina="index_pagina" />
+      <Benefits :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"  />
     </div>
 
     <div v-show="index_pagina == 10" class="container">
@@ -149,9 +149,7 @@ export default {
 
       if (this.index_pagina < this.limite) {
         newPosition = this.index_pagina + 1;
-        if (newPosition == 11) {
-          newPosition = 13;
-        }
+    
         this.isRevert = false;
         this.CambiarContenedor(newPosition)
       }
@@ -162,10 +160,6 @@ export default {
       this.scroll = false;
       let newPosition = this.index_pagina;
       if (this.index_pagina > 1) {
-        newPosition = this.index_pagina - 1;
-        if (newPosition == 12) {
-          newPosition = 10;
-        }
 
         this.isRevert = true;
         this.CambiarContenedor(newPosition)
@@ -427,17 +421,11 @@ export default {
           if (this.index_pagina < this.limite) {
             newPosition = this.index_pagina + 1;
             this.isRevert = false;
-            if (newPosition == 11) {
-              newPosition = 13;
-            }
           }
         } else {
           if (this.index_pagina > 1) {
             newPosition = this.index_pagina - 1;
             this.isRevert = true;
-            if (newPosition == 12) {
-              newPosition = 10;
-            }
           }
         }
         if (newPosition == this.index_pagina) {

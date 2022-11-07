@@ -182,7 +182,7 @@ img {
   animation-iteration-count: 1;
 }
 .animacion-desplazamiento-titulo-revert {
-  animation-duration: 0.75s;
+  animation-duration: 0.8s;
   animation-name: titulo;
   animation-direction: reverse;
   animation-iteration-count: 1;
@@ -338,7 +338,7 @@ img {
   animation-iteration-count: 1;
 }
 .animacion-desplazamiento-revert {
-  animation-duration: .75s;
+  animation-duration: .8s;
   animation-name: desplazamiento;
   animation-direction: reverse;
   animation-iteration-count: 1;
@@ -354,7 +354,7 @@ img {
   animation-iteration-count: 1;
 }
 .animacion-benefit-revert {
-  animation-duration: .75s;
+  animation-duration: .8s;
   animation-name: abajo;
   animation-direction: reverse;
   animation-iteration-count: 1;
@@ -481,19 +481,19 @@ img {
   animation-iteration-count: 1;
 }
 .animacion-aparecer-revert {
-  animation-duration: .75s;
+  animation-duration: .8s;
   animation-name: aparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
 .animacion-desaparecer {
-  animation-duration: .75s;
+  animation-duration: .8s;
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
 
 .animacion-desaparecer-revert {
-  animation-duration: .75s;
+  animation-duration: .8s;
   animation-name: aparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;

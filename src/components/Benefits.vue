@@ -1,7 +1,15 @@
 <script setup>
 defineProps({
-  index_pagina: {
-    type: Number,
+  enterAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  exitAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  isRevert: {
+    type: Boolean,
     required: true,
   },
 });
@@ -22,7 +30,11 @@ defineProps({
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
 
-    <div :class="{ titulo: true, 'animacion-aparecer': index_pagina == 999 }">
+    <div :class="{
+            'titulo': true,
+            'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+          }">
       <h1>BENEFITS</h1>
     </div>
 
@@ -30,7 +42,14 @@ defineProps({
       <div
         :class="{ benefits: true, 'animacion-aparecer': index_pagina == 999 }"
       >
-        <div class="beneficio">
+        <div  :class="{
+            'beneficio': true,
+            'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+            'animacion-desaparecer': this.enterAnimation && this.isRevert,
+            'animacion-desaparecer-revert':
+              this.exitAnimation && !this.isRevert,
+          }">
           <img
             id="a"
             class="circulos"
@@ -50,7 +69,14 @@ defineProps({
           </div>
         </div>
 
-        <div class="beneficio">
+        <div :class="{
+            'beneficio': true,
+            'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+            'animacion-desaparecer': this.enterAnimation && this.isRevert,
+            'animacion-desaparecer-revert':
+              this.exitAnimation && !this.isRevert,
+          }">
           <img
             id="b"
             class="circulos"
@@ -669,6 +695,39 @@ p {
   100% {
     top: 60%;
     left: -23%;
+  }
+}
+.animacion-aparecer {
+  animation-duration: .8s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+}
+.animacion-aparecer-revert {
+  animation-duration: .8s;
+  animation-name: aparecer;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+.animacion-desaparecer {
+  animation-duration: .8s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+}
+
+.animacion-desaparecer-revert {
+  animation-duration: .8s;
+  animation-name: aparecer;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
   }
 }
 </style>
