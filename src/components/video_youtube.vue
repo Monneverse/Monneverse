@@ -18,8 +18,10 @@
             </a>
         </div>
         <div class="flecha">
-            <div :class="{hide:index==0}" @click=" before()" class="left"></div>
-            <div :class="{hide:index==list.length-1}" @click="next()" class="right"></div>
+            <div :class="{ hide: index == 0 }" @click="before()" class="left"><img src="../assets/flecha.svg"
+                    alt="arrow next" /></div>
+            <div :class="{ hide: index == list.length - 1 }" @click="next()" class="right"><img
+                    src="../assets/flecha.svg" alt="arrow next" /></div>
         </div>
 
     </div>
@@ -48,7 +50,7 @@ export default {
                 this.index = this.index - 1;
             }
         }, next() {
-            if (this.index < this.list.length -1) {
+            if (this.index < this.list.length - 1) {
                 this.index = this.index + 1;
             }
         }
@@ -120,13 +122,27 @@ img {
 .flecha div {
     width: 3rem;
     height: 3rem;
-    background-color: #fff;
-    opacity: 50%;
-    border-radius: 5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 3rem;
+    margin: 0;
+    padding: .5rem;
+    box-sizing: border-box;
+    
+    position: relative;
+    top: -38%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+}
+.left > img {
+    rotate: 90deg;
+}
+.right > img {
+    rotate: -90deg;
 }
 
-.flecha  .hide {
-    opacity: 0 ;
+.flecha .hide {
+    visibility: hidden;
 }
 
 .redes-videos {
