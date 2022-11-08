@@ -63,10 +63,10 @@ import Articulo from "./Articulo.vue";
   <div class="arrow"></div>
   <div class="arrow2"></div>
 
-  <div @click=" CambiarArticulos()" class="flecha flecha_before">
+  <div @click="CambiarArticulos()" class="flecha flecha_before">
     <img src="../assets/flecha.svg" alt="arrow before">
   </div>
-  <div @click=" CambiarArticulos()"  class="flecha flecha_next">
+  <div @click="CambiarArticulos()" class="flecha flecha_next">
     <img src="../assets/flecha.svg" alt="arrow next">
   </div>
   <!-- <div class="textscroll">
@@ -317,9 +317,11 @@ img {
   padding: .5rem;
   box-sizing: border-box;
 }
-.flecha:hover{
+
+.flecha:hover {
   padding: .7rem;
 }
+
 .flecha_before {
   margin: 0;
   left: 10%;
@@ -861,6 +863,10 @@ h4 {
   .binance {
     width: 30%;
     bottom: 10%;
+  }
+
+  .logo-redes {
+    display: none;
   }
 }
 </style>

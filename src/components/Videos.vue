@@ -328,5 +328,8 @@ img {
         }
     }
 
+    .logo-redes {
+        display: none;
+    }
 }
 </style>
