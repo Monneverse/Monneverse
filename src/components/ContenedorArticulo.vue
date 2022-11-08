@@ -408,13 +408,41 @@ img {
   height: 80%;
 }
 
-.articulo__aparecer {
+.articulo__aparecer:nth-child(1) {
   position: relative;
   left: 0;
   animation: aparecer .8s;
 }
 
-.articulo__desaparecer_revert {
+.articulo__aparecer:nth-child(2) {
+  position: relative;
+  left: 0;
+  animation: aparecer .6s;
+}
+
+.articulo__aparecer:nth-child(3) {
+  position: relative;
+  left: 0;
+  animation: aparecer .4s;
+}
+
+.articulo__desaparecer_revert:nth-child(1) {
+  position: relative;
+  left: 0;
+  animation: aparecer .4s;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+
+}
+.articulo__desaparecer_revert:nth-child(2) {
+  position: relative;
+  left: 0;
+  animation: aparecer .6s;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+
+}
+.articulo__desaparecer_revert:nth-child(3) {
   position: relative;
   left: 0;
   animation: aparecer .8s;
@@ -422,22 +450,49 @@ img {
   animation-fill-mode: forwards;
 
 }
-
-.articulo__desaparecer {
+.articulo__desaparecer:nth-child(1) {
   position: relative;
   left: 0;
   animation: desaparecer .8s;
+    animation-fill-mode: forwards;
 }
-
-.articulo__aparecer_revert {
+.articulo__desaparecer:nth-child(2) {
   position: relative;
   left: 0;
-  animation: desaparecer .8s;
+  animation: desaparecer .6s;
   animation-fill-mode: forwards;
-  animation-direction: reverse;
-
+}
+.articulo__desaparecer:nth-child(3) {
+  position: relative;
+  left: 0;
+  animation: desaparecer .4s;
+  animation-fill-mode: forwards;
 }
 
+.articulo__aparecer_revert:nth-child(1) {
+  position: relative;
+  left: 0;
+  animation: desaparecer .8s;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+
+}
+.articulo__aparecer_revert:nth-child(2) {
+  position: relative;
+  left: 0;
+  animation: desaparecer .6s;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+
+}
+.articulo__aparecer_revert:nth-child(3) {
+  position: relative;
+  left: 0;
+  animation: desaparecer .4s;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+
+}
 @keyframes aparecer {
   0% {
     left: 127%;
