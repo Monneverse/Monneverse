@@ -60,21 +60,20 @@ import Videos from "./components/Videos.vue"
     <div v-show="index_pagina == 4" class="container">
       <Calculadora :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-
     <div v-show="index_pagina == 5" class="container">
-      <ContenedorArticulo :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"/>
+      <Coins :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
     <div v-show="index_pagina == 6" class="container">
-      <Exchanges />
+      <ContenedorArticulo :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"/>
     </div>
 
     <div v-show="index_pagina == 7" class="container">
-      <Logos_auditorias />
+      <Exchanges />
     </div>
 
     <div v-show="index_pagina == 8" class="container">
-      <Coins :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
+      <Logos_auditorias />
     </div>
 
     <div v-show="index_pagina == 9" class="container">
@@ -171,10 +170,10 @@ export default {
       this.isVisibleLogo = visible;
       switch (this.index) {
         case 1:
-          if (this.index_pagina == 5) {
+          if (this.index_pagina == 6) {
             return;
           }
-          this.index_pagina = 5;
+          this.index_pagina = 6;
           break;
         case 2:
           if (this.index_pagina == 9) {
@@ -244,7 +243,7 @@ export default {
             this.orientacion = typeOrientacion.right
           } this.index = 0;
           break
-        case 5:
+        case 6:
           this.index = 1;
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left

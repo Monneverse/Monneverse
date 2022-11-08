@@ -159,7 +159,7 @@ defineProps({
       <div class="aro">
         <img
           :class="{ image1: true, 'animacion-aparecer': index_pagina == 999 }"
-          src="/img/arco.svg"
+          src="../assets/aro.svg"
         />
 
         <img
@@ -167,7 +167,7 @@ defineProps({
             image: true,
             'animacion-aro': index_pagina == 999,
           }"
-          src="/img/arco.svg"
+          src="../assets/aro.svg"
         />
       </div>
     </div>
@@ -473,7 +473,7 @@ p {
 
 @media screen and (width > 769px) {
   .aro {
-    top: -45%;
+    top: -40%;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -487,11 +487,11 @@ p {
     margin-right: 2%;
     margin-bottom: 0;
   }
-  .image1 {
-  }
+
   .image {
     position: relative;
-    top: -50%;
+    z-index: 1;
+    top: -30%;
   }
   .animacion-aro {
     animation-name: aro;
