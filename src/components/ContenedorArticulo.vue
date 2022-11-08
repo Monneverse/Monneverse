@@ -51,7 +51,7 @@ import Articulo from "./Articulo.vue";
   <div class="containerArticulo">
     <div class="contenedorDeArticulo">
       <Articulo :class="{
-        'articulo__aparecer': this.enterAnimation && !this.isRevert,
+        'articulo__aparecer': this.enterAnimation && !this.isRevert || this.isChanged,
         'articulo__aparecer_revert': this.enterAnimation && this.isRevert,
         'articulo__desaparecer_revert': this.exitAnimation && this.isRevert,
         'articulo__desaparecer': this.exitAnimation && !this.isRevert,
@@ -62,6 +62,13 @@ import Articulo from "./Articulo.vue";
   <!-- Contenedor de Redes Sociales -->
   <div class="arrow"></div>
   <div class="arrow2"></div>
+
+  <div @click=" CambiarArticulos()" class="flecha flecha_before">
+    <img src="../assets/flecha.svg" alt="arrow before">
+  </div>
+  <div @click=" CambiarArticulos()"  class="flecha flecha_next">
+    <img src="../assets/flecha.svg" alt="arrow next">
+  </div>
   <!-- <div class="textscroll">
     <h3>Scroll to Right</h3>
   </div> -->
@@ -89,6 +96,7 @@ export default {
   props: ["enterAnimation", "exitAnimation", "isRevert"],
   data() {
     return {
+      isChanged: false,
       vectorTodo: [
         {
           titulo: "Presale and benefits For investors",
@@ -150,26 +158,8 @@ export default {
     };
   },
   methods: {
-    AgregarCero(numero) {
-      if (numero > 9) return numero;
-      else return "0" + numero;
-    },
-    ObtenerFechaActual() {
-      var distance = this.fechaEvento - Date.now();
-
-      // Time calculations for days, hours, minutes and seconds
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      this.diaString = this.AgregarCero(days);
-      this.horaString = this.AgregarCero(hours);
-      this.minutoString = this.AgregarCero(minutes);
-      this.segundoString = this.AgregarCero(seconds);
-    },
     CambiarArticulos() {
+      this.isChanged = true;
       this.vectorArticulo = this.vectorTodo.slice(this.inicio, this.inicio + this.salto);
       if (this.inicio == 0) {
         this.inicio = this.salto;
@@ -315,6 +305,42 @@ img {
   left: 58%;
 }
 
+.flecha {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 3rem;
+  z-index: 10;
+  position: absolute;
+  top: 65%;
+  margin: 0;
+  padding: .5rem;
+  box-sizing: border-box;
+}
+.flecha:hover{
+  padding: .7rem;
+}
+.flecha_before {
+  margin: 0;
+  left: 10%;
+}
+
+.flecha_before>img {
+  margin: 0;
+  rotate: 90deg;
+
+}
+
+.flecha_next {
+
+  right: 10%;
+}
+
+.flecha_next>img {
+
+  rotate: -90deg;
+}
+
 /* CONTENEDOR BOTON BUYNOW */
 .btn_buyMonner {
   position: fixed;
@@ -341,6 +367,7 @@ img {
   }
 
 }
+
 
 .btn_buy__desaparecer {
   animation: btn_desaparecer .8s;
@@ -616,6 +643,15 @@ h4 {
 
 
 @media screen and (max-width: 900px) {
+
+  .flecha_before {
+
+    left: 1%;
+  }
+
+  .flecha_next {
+    right: 1%;
+  }
 
   .arrow,
   .arrow:before {
