@@ -22,7 +22,13 @@ import Articulo from "./Articulo.vue";
   </div>
 
   <!-- CONTENEDOR DE BOTON METATASK -->
-  <div class="btn_buyMonner">
+  <div :class="{
+    btn_buyMonner: true,
+    'btn_buy__aparecer': this.enterAnimation && !this.isRevert,
+    'btn_buy__desaparecer_revert': this.exitAnimation && this.isRevert,
+    'btn_buy__desaparecer': this.exitAnimation && !this.isRevert,
+    'btn_buy__aparecer_revert': this.enterAnimation && this.isRevert,
+  }">
     <div class="contrato">
       <b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span>
     </div>
@@ -318,6 +324,42 @@ img {
   height: auto;
 }
 
+.btn_buy__aparecer {
+  animation: btn_aparecer .8s;
+}
+
+.btn_buy__desaparecer_revert {
+  animation: btn_aparecer .8s;
+  animation-direction: reverse;
+}
+
+@keyframes btn_aparecer {
+  0% {
+    left: -50%;
+    top: 100%;
+    rotate: 980deg;
+  }
+
+}
+
+.btn_buy__desaparecer {
+  animation: btn_desaparecer .8s;
+}
+
+.btn_buy__aparecer_revert {
+  animation: btn_desaparecer .8s;
+  animation-direction: reverse;
+}
+
+@keyframes btn_desaparecer {
+  100% {
+    left: 80%;
+    top: 100%;
+    rotate: 980deg;
+  }
+
+}
+
 .buyNow {
   width: 100%;
   height: 100%;
@@ -434,6 +476,7 @@ img {
   animation-fill-mode: forwards;
 
 }
+
 .articulo__desaparecer_revert:nth-child(2) {
   position: relative;
   left: 0;
@@ -442,6 +485,7 @@ img {
   animation-fill-mode: forwards;
 
 }
+
 .articulo__desaparecer_revert:nth-child(3) {
   position: relative;
   left: 0;
@@ -450,18 +494,21 @@ img {
   animation-fill-mode: forwards;
 
 }
+
 .articulo__desaparecer:nth-child(1) {
   position: relative;
   left: 0;
   animation: desaparecer .8s;
-    animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
+
 .articulo__desaparecer:nth-child(2) {
   position: relative;
   left: 0;
   animation: desaparecer .6s;
   animation-fill-mode: forwards;
 }
+
 .articulo__desaparecer:nth-child(3) {
   position: relative;
   left: 0;
@@ -477,6 +524,7 @@ img {
   animation-fill-mode: forwards;
 
 }
+
 .articulo__aparecer_revert:nth-child(2) {
   position: relative;
   left: 0;
@@ -485,6 +533,7 @@ img {
   animation-fill-mode: forwards;
 
 }
+
 .articulo__aparecer_revert:nth-child(3) {
   position: relative;
   left: 0;
@@ -493,6 +542,7 @@ img {
   animation-fill-mode: forwards;
 
 }
+
 @keyframes aparecer {
   0% {
     left: 127%;
