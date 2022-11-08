@@ -335,9 +335,9 @@ img {
 
 @keyframes btn_aparecer {
   0% {
-    left: -50%;
+    left: -40%;
     top: 100%;
-    rotate: 980deg;
+    rotate: 180deg;
   }
 
 }
@@ -349,13 +349,14 @@ img {
 .btn_buy__aparecer_revert {
   animation: btn_desaparecer .8s;
   animation-direction: reverse;
+  z-index: 1000;
 }
 
 @keyframes btn_desaparecer {
   100% {
-    left: 80%;
+    left: 70%;
     top: 100%;
-    rotate: 980deg;
+    rotate: 180deg;
   }
 
 }
