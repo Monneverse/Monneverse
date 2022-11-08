@@ -15,19 +15,9 @@ defineProps({
 });
 </script>
 <template>
-  <div class="contenido-general">
-    <div
-      :class="{
-        logo: true,
-        'animacion-logo': this.enterAnimation && !this.isRevert,
-        'animacion-logo-revert': this.exitAnimation && this.isRevert,
-      }"
-    >
-      <img src="/img/logo.svg" alt="logo monneverse" />
-    </div>
 
-    <!--FONDOS-->
-    <video
+      <!--FONDOS-->
+      <video
       preload="auto"
       autoplay="true"
       muted="true"
@@ -46,6 +36,18 @@ defineProps({
         <a href="/video/Full-HD-Lite.mp4">link to the video</a> instead.
       </p>
     </video>
+
+  <div class="contenido-general">
+    <div
+      :class="{
+        logo: true,
+        'animacion-logo': this.enterAnimation && !this.isRevert,
+        'animacion-logo-revert': this.exitAnimation && this.isRevert,
+      }"
+    >
+      <img src="/img/logo.svg" alt="logo monneverse" />
+    </div>
+
 
     <div class="fondo filtro-superior"></div>
     <div
@@ -202,9 +204,10 @@ section {
 }
 .video-fondo-alliances {
   position: fixed;
+  left: -20%;
   scale: 1;
   opacity: 30%;
-  min-width: 100%;
+  min-width: 140%;
   min-height: 100%;
   width: auto;
   height: auto;
