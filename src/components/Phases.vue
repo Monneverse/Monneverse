@@ -311,7 +311,7 @@ img {
     display: none;
   }
 
-  .Fases {
+  .fases {
     left: 0%;
     top: 12%;
     display: flex;
