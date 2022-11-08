@@ -23,6 +23,8 @@ defineProps({
         fondo_rayos: true,
         'animacion-desplazamiento': this.enterAnimation && !this.isRevert,
         'animacion-desplazamiento-revert': this.exitAnimation && this.isRevert,
+        'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
       }"
     >
       <img src="/img/rayos.png" alt="" />
@@ -32,6 +34,8 @@ defineProps({
         'fondo-benefit': true,
         'animacion-benefit': this.enterAnimation && !this.isRevert,
         'animacion-benefit-revert': this.exitAnimation && this.isRevert,
+        'animacion-benefit-up': this.enterAnimation && this.isRevert,
+        'animacion-benefit-up-revert': this.exitAnimation && !this.isRevert,
       }"
     >
       <img src="/img/fondo-benefit.png" alt="" />
@@ -55,6 +59,8 @@ defineProps({
           this.enterAnimation && !this.isRevert,
         'animacion-desplazamiento-titulo-revert':
           this.exitAnimation && this.isRevert,
+        'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
       }"
     >
       <h1>BENEFITS</h1>
@@ -338,7 +344,7 @@ img {
   animation-iteration-count: 1;
 }
 .animacion-desplazamiento-revert {
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-name: desplazamiento;
   animation-direction: reverse;
   animation-iteration-count: 1;
@@ -354,12 +360,28 @@ img {
   animation-iteration-count: 1;
 }
 .animacion-benefit-revert {
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-name: abajo;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
+.animacion-benefit-up {
+  animation-duration: 0.8s;
+  animation-name: arriba;
+  animation-iteration-count: 1;
+}
+.animacion-benefit-up-revert {
+  animation-duration: 0.8s;
+  animation-name: arriba;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
 @keyframes abajo {
+  0% {
+    top: -5%;
+  }
+}
+@keyframes arriba {
   0% {
     top: -5%;
   }
@@ -481,19 +503,19 @@ img {
   animation-iteration-count: 1;
 }
 .animacion-aparecer-revert {
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-name: aparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
 .animacion-desaparecer {
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
 
 .animacion-desaparecer-revert {
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-name: aparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;

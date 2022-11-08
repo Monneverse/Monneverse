@@ -1,9 +1,16 @@
 <script setup>
 import Benefit from "./ComponenteBenefit.vue";
-import Circulos from "./ComponentesCirculo.vue";
 defineProps({
-  index_pagina: {
-    type: Number,
+  enterAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  exitAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  isRevert: {
+    type: Boolean,
     required: true,
   },
 });
@@ -12,17 +19,27 @@ defineProps({
   <!--FONDO-->
 
   <div class="fondo">
-    <div class="fondo-benefit">
+    <div
+    :class="{
+        'fondo-benefit': true,
+        'animacion-benefit': this.enterAnimation && !this.isRevert,
+        'animacion-benefit-revert': this.exitAnimation && this.isRevert,
+        'animacion-benefit-up': this.enterAnimation && this.isRevert,
+        'animacion-benefit-up-revert': this.exitAnimation && !this.isRevert,
+      }"
+    >
       <img src="/img/fondo-benefit.png" alt="" />
     </div>
     <div class="logo">
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
-
     <div
       :class="{
         benefits: true,
-        'animacion-desplazamiento': index_pagina == 11,
+        'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+        'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
       }"
     >
       <div class="cards">
@@ -75,23 +92,26 @@ developed.
         />
       </div>
     </div>
-  </div>
-
-  <div class="logo-redes">
-    <div class="icon icon-telegram">
-      <a href="https://t.me/monnerversecommunity" target="_blank">
-        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
-      </a>
-    </div>
-    <div class="icon icon-reddit">
-      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
-      </a>
-    </div>
-    <div class="icon icon-discord">
-      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
-      </a>
+    <div class="logo-redes">
+      <div class="icon icon-telegram">
+        <a href="https://t.me/monnerversecommunity" target="_blank">
+          <img
+            src="../assets/Telegram_logo.svg"
+            alt="logo telegram"
+            srcset=""
+          />
+        </a>
+      </div>
+      <div class="icon icon-reddit">
+        <a href="https://www.reddit.com/user/monnerverse" target="_blank">
+          <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
+        </a>
+      </div>
+      <div class="icon icon-discord">
+        <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+          <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -110,7 +130,6 @@ img {
   height: 5rem;
   z-index: 12;
 }
-
 @media screen and (width < 769px) {
   .logo {
     display: none;
@@ -118,14 +137,18 @@ img {
 }
 .benefits {
   position: relative;
+  margin: 0 auto;
   z-index: 8;
   width: 85%;
   height: 70%;
   top: 15%;
   display: flex;
+  scroll-snap-type: x mandatory;
+  overflow-y: hidden;
   overflow-x: scroll;
-  column-gap: 1%;
+  column-gap: 20%;
   color: #fff;
+  border-radius: 1em;
 }
 
 .cards {
@@ -153,14 +176,12 @@ img {
 .cards:hover span {
   opacity: 60%;
 }
-
 @media screen and (min-width: 769px) {
   .cards span {
     display: block;
   }
   .cards:hover {
     transform: translateY(-3%);
-
     transition: 0.5s ease-out;
   }
   .cards span:nth-child(1) {
@@ -169,7 +190,7 @@ img {
     left: 0;
     width: 120%;
     height: 3px;
-    animation: animacion1 4s linear infinite;
+    animation: animacion1 3s linear infinite;
     animation-delay: 1s;
   }
 
@@ -189,7 +210,7 @@ img {
     left: 0;
     width: 3px;
     height: 100%;
-    animation: animacion2 4s linear infinite;
+    animation: animacion2 3s linear infinite;
     animation-delay: 1s;
   }
 
@@ -211,7 +232,7 @@ img {
 
     width: 120%;
     height: 3px;
-    animation: animacion3 4s linear infinite;
+    animation: animacion3 3s linear infinite;
     animation-delay: 1s;
   }
 
@@ -233,7 +254,7 @@ img {
 
     width: 3px;
     height: 100%;
-    animation: animacion4 4s linear infinite;
+    animation: animacion4 3s linear infinite;
     animation-delay: 1s;
   }
 
@@ -246,12 +267,6 @@ img {
       transform: translateY(100%);
     }
   }
-}
-
-.animacion-aparecer {
-  animation-duration: 0.5s;
-  animation-name: aparecer;
-  animation-iteration-count: 1;
 }
 
 @keyframes aparecer {
@@ -271,6 +286,7 @@ img {
     overflow-y: initial;
     scroll-snap-type: none;
   }
+
   .cards {
     position: relative;
     width: 30%;
@@ -291,11 +307,45 @@ img {
   background-size: no-repeat center center fixed;
   z-index: 5;
 }
-.fondo-benefit > img {
+.fondo-benefit img {
   position: absolute;
+  top: -5%;
   width: 200%;
   height: 130vh;
 }
+.animacion-benefit img {
+  animation-duration: 0.8s;
+  animation-name: abajo;
+  animation-iteration-count: 1;
+}
+.animacion-benefit-revert img {
+  animation-duration: 0.8s;
+  animation-name: abajo;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+.animacion-benefit-up img {
+  animation-duration: 0.8s;
+  animation-name: arriba;
+  animation-iteration-count: 1;
+}
+.animacion-benefit-up-revert img {
+  animation-duration: 0.8s;
+  animation-name: arriba;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+@keyframes abajo {
+  0% {
+    top: -5%;
+  }
+}
+@keyframes arriba {
+  0% {
+    top: 0%;
+  }
+}
+
 @media screen and (min-width: 769px) {
   .fondo-benefit > img {
     width: 100%;
@@ -311,29 +361,13 @@ img {
 
 @keyframes desplazamiento {
   0% {
-    top: 100%;
+    left: 100%;
   }
 
   100% {
+    left: 0;
   }
 }
-
-.animacion-rotar {
-  animation-duration: 0.5s;
-  animation-name: rotar;
-  animation-iteration-count: 1;
-}
-
-@keyframes rotar {
-  0% {
-    transform: rotate(225deg);
-  }
-
-  100% {
-    transform: rotate(135deg);
-  }
-}
-
 .logo-redes {
   position: absolute;
   bottom: 1rem;
@@ -355,6 +389,37 @@ img {
     display: none;
   }
 }
+.animacion-aparecer {
+  animation-duration: .8s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+}
+.animacion-aparecer-revert {
+  animation-duration: .8s;
+  animation-name: aparecer;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+.animacion-desaparecer {
+  animation-duration: 0.8s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+}
 
+.animacion-desaparecer-revert {
+  animation-duration: 0.8s;
+  animation-name: aparecer;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
 
+@keyframes aparecer {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
 </style>
