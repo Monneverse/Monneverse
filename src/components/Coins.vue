@@ -273,6 +273,7 @@ img {
 
   .circuito-izquierdo {
     left: -10%;
+    transform: rotateX(180deg);
   }
 
   .circuito-derecho {
