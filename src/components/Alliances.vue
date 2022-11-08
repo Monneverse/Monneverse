@@ -85,6 +85,8 @@ defineProps({
           'content-forms': true,
           'animacion-aparecer': this.enterAnimation && !this.isRevert,
           'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+          'animacion-content-up': this.enterAnimation && this.isRevert,
+          'animacion-content-up-revert': this.exitAnimation && !this.isRevert,
         }"
       >
         <section
@@ -108,6 +110,8 @@ defineProps({
               semi_circulo: true,
               'animacion-arco': this.enterAnimation && !this.isRevert,
               'animacion-arco-revert': this.exitAnimation && this.isRevert,
+              'animacion-arco-salida': this.enterAnimation && this.isRevert,
+              'animacion-arco-revert-salida': this.exitAnimation && !this.isRevert,
             }"
           >
             <img src="../assets/aro-iluminado-brillante.svg" alt="" />
@@ -261,6 +265,23 @@ section {
   position: relative;
   z-index: 20;
 }
+.animacion-content-up {
+  animation-name: contentUp;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+.animacion-content-up-revert {
+  animation-name: contentUp;
+  animation-duration: 0.8s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+}
+@keyframes contentUp {
+  0% {
+    position: absolute;
+    top: -15rem;
+  }
+}
 
 @media screen and (min-width: 490px) {
   .texto {
@@ -302,7 +323,7 @@ section {
 
 .animacion-logo-revert {
   animation-name: animar-logo;
-  animation-duration: 0.8s;
+  animation-duration: 0.78s;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
@@ -369,24 +390,24 @@ section {
 }
 
 .fondo-montana-animation img {
-  animation-duration: 0.8s;
+  animation-duration: 0.78s;
   animation-name: fondo-montana-animation;
   animation-iteration-count: 1;
 }
 
 .fondo-montana-animation-salida img {
-  animation-duration: 0.8s;
+  animation-duration: 0.78s;
   animation-name: salidaMontana;
   animation-iteration-count: 1;
 }
 .fondo-montana-animation-revert img {
-  animation-duration: 0.8s;
+  animation-duration: 0.78s;
   animation-name: fondo-montana-animation;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
 .fondo-montana-animation-salida-revert img {
-  animation-duration: 0.8s;
+  animation-duration: 0.78s;
   animation-name: salidaMontana;
   animation-direction: reverse;
   animation-iteration-count: 1;
@@ -612,6 +633,17 @@ section {
 }
 .animacion-arco-revert img {
   animation-name: animacion-arco;
+  animation-duration: 0.78s;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+.animacion-arco-salida img {
+  animation-name: animacion-arco-salida;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+.animacion-arco-revert-salida img {
+  animation-name: animacion-arco-salida;
   animation-duration: 0.8s;
   animation-direction: reverse;
   animation-iteration-count: 1;
@@ -625,6 +657,16 @@ section {
   100% {
     top: 0%;
     transform: rotateZ(0deg);
+  }
+}
+@keyframes animacion-arco-salida {
+  0% {
+    position: absolute;
+    top: 100%;
+  }
+  100% {
+    position: absolute;
+    top: 0%;
   }
 }
 
@@ -649,14 +691,22 @@ section {
 }
 
 .rectangulo p {
-  top: 50%;
   position: absolute;
+  top: 50%;
   z-index: 12;
   color: #ffffff;
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-size: 3.5vw;
   font-weight: 400;
 }
+
+.animacion-parrafo{
+  animation-name: animacion-arco;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+
+}
+
 
 .rectangulo-medio {
   position: absolute;
@@ -679,7 +729,6 @@ section {
 
   .rectangulo p {
     top: 6.2rem;
-
     font-size: 2rem;
   }
 
@@ -828,13 +877,13 @@ section {
   animation-iteration-count: 1;
 }
 .animacion-aparecer-revert {
-  animation-duration: 0.8s;
+  animation-duration: 0.78s;
   animation-name: aparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
 .animacion-desaparecer-revert {
-  animation-duration: 0.8s;
+  animation-duration: 0.78s;
   animation-name: desaparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;

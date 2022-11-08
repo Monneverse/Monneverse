@@ -179,6 +179,7 @@ img {
   z-index: 4;
   height: 10%;
   width: 50%;
+  height: 100%;
   top: 12%;
 }
 
@@ -187,7 +188,7 @@ img {
 }
 
 .circuito-izquierdo img {
-  width: 85%;
+  width: 100%;
   opacity: 50%;
 }
 

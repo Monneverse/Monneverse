@@ -37,12 +37,7 @@
   <div id="logo-2" class="logo">
     <img src="/img/logo.svg" alt="" />
   </div>
-  <div class="circuito-izquierdo">
-    <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
-  </div>
-  <div class="circuito-derecho">
-    <img src="/img/calculadora/circuito-derecho.png" alt="" />
-  </div>
+
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
   <div class="rectangulo"></div>
@@ -180,17 +175,17 @@ img {
 /*FIN ESTILO FONDO*/
 
 .upcoming_alliance {
-  position: fixed;
+  position: absolute;
+  top: 17%;
+  width: 100%;
+  text-align: center;
   z-index: 4;
 }
 
 .upcoming_alliance h1 {
-  position: fixed;
-  top: 17%;
-  right: 23%;
   color: white;
-  font-size: 5vw;
-  font-weight: 500;
+  font-size: 4vw;
+  font-weight: 600;
   font-family: "Work Sans";
   z-index: 5;
 }
