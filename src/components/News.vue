@@ -47,8 +47,8 @@
         <div class="news">
           <a href=""><img src="/img/News/cryptoPotato.png" /></a>
         </div>
-        <div class="news">
-          <a href=""><img src="/img/Exchanges/Coinquora.png" /></a>
+        <div class="news svg">
+          <a href=""><img src="/img/News/Coinquora.png" /></a>
         </div>
         <div id="theCoinRepublic" class="news theCoinRepublic">
           <a href=""><img src="/img/News/TheCoinRepublic.png" /></a>
@@ -362,6 +362,9 @@ img {
   align-items: center;
   width: 70%;
   height: 30%;
+}
+.svg {
+  width: 90%;
 }
 
 .news img {
