@@ -11,8 +11,13 @@ import Youtube from "./video_youtube.vue"
     </div>
     <div class="imagen-youtube"><img src="../assets/YouTube-Icon.svg" alt="Youtube image"></div>
     <div class="contenido">
-        <Youtube v-for="videoy in videosPlay" class="video" :title="videoy.title" :description="videoy.description"
-            :list="videoy.playlist" :redes="videoy.redes"></Youtube>
+        <Youtube v-for="videoy in videosPlay" :class="{
+            video: true, 'video__aparecer': this.enterAnimation && !this.isRevert,
+            'video__aparecer_revert': this.enterAnimation && this.isRevert,
+            'video__desaparecer_revert': this.exitAnimation && this.isRevert,
+            'video__desaparecer': this.exitAnimation && !this.isRevert
+        }" :title="videoy.title" :description="videoy.description" :list="videoy.playlist" :redes="videoy.redes">
+        </Youtube>
 
 
     </div>
@@ -39,6 +44,7 @@ import Youtube from "./video_youtube.vue"
 
 <script>
 export default {
+    props: ["enterAnimation", "exitAnimation", "isRevert"],
     data() {
         return {
             videosPlay: [{
@@ -202,6 +208,125 @@ img {
     padding: .5rem;
     margin: 0;
     height: 100%;
+}
+
+.video__aparecer:nth-child(1) {
+    position: relative;
+    left: 0;
+    top: 0;
+    animation: aparecer .8s;
+}
+
+.video__aparecer:nth-child(2) {
+    position: relative;
+    left: 0;
+    top: 0;
+    animation: aparecer .6s;
+}
+
+.video__aparecer:nth-child(3) {
+    position: relative;
+    left: 0;
+    top: 0;
+    animation: aparecer .4s;
+}
+
+.video__desaparecer_revert:nth-child(1) {
+    position: relative;
+    left: 0;
+    top: 0;
+    animation: aparecer .4s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+
+}
+
+.video__desaparecer_revert:nth-child(2) {
+    position: relative;
+    left: 0;
+    top: 0;
+    animation: aparecer .6s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+
+}
+
+.video__desaparecer_revert:nth-child(3) {
+    position: relative;
+    left: 0;
+    top: 0;
+    animation: aparecer .8s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+
+}
+
+.video__desaparecer:nth-child(1) {
+    position: relative;
+    left: 0;
+    top: 0;
+    animation: desaparecer .8s;
+    animation-fill-mode: forwards;
+}
+
+.video__desaparecer:nth-child(2) {
+    position: relative;
+    left: 0;
+    top: 0;
+    animation: desaparecer .6s;
+    animation-fill-mode: forwards;
+}
+
+.video__desaparecer:nth-child(3) {
+    position: relative;
+    left: 0;
+    top: 0;
+    animation: desaparecer .4s;
+    animation-fill-mode: forwards;
+}
+
+.video__aparecer_revert:nth-child(1) {
+    position: relative;
+    left: 0;
+    top: 0;
+    animation: desaparecer .8s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+
+}
+
+.video__aparecer_revert:nth-child(2) {
+    position: relative;
+    left: 0;
+    top: 0;
+    animation: desaparecer .6s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+
+}
+
+.video__aparecer_revert:nth-child(3) {
+    position: relative;
+    left: 0;
+    top: 0;
+    animation: desaparecer .4s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes aparecer {
+    0% {
+        left: 127%;
+    }
+
+}
+
+@keyframes desaparecer {
+    100% {
+        left: -127%;
+    }
+
 }
 
 

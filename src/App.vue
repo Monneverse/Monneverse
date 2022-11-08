@@ -91,7 +91,7 @@ import Videos from "./components/Videos.vue"
       <Benefits_card2 :index_pagina="index_pagina" />
     </div>
     <div v-show="index_pagina == 13" class="container">
-      <Videos></Videos>
+      <Videos :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 14" class="container">
       <Tokenomics :index_pagina="index_pagina" />
