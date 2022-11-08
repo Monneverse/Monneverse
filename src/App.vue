@@ -97,7 +97,7 @@ import Videos from "./components/Videos.vue"
       <Tokenomics :index_pagina="index_pagina" />
     </div>
     <div v-show="index_pagina == 15" class="container">
-      <News />
+      <News :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 16" class="container">
       <Fase :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
