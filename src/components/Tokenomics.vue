@@ -29,17 +29,20 @@ defineProps({
     </div>
     <div class="arrow"></div>
     <div class="arrow2"></div>
-    <div class="fondo filtro-superior "></div>
-   <div class="fondo-oscuro"></div>
-    <div class="fondo fondo-oscurecer "></div>
-    <div 
+    <div class="fondo filtro-superior"></div>
+    <div class="fondo-oscuro"></div>
+    <div class="fondo fondo-oscurecer"></div>
+    <div
       :class="{
-        'fondoTokenomics': true,
+        fondoTokenomics: true,
         'animacion-benefit': this.enterAnimation && !this.isRevert,
         'animacion-benefit-revert': this.exitAnimation && this.isRevert,
         'animacion-benefit-up': this.enterAnimation && this.isRevert,
         'animacion-benefit-up-revert': this.exitAnimation && !this.isRevert,
-      }">
+        'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+      }"
+    >
       <img src="/img/fondo_Tokenomics.png" alt="" />
       <div class="imagen_Eclipse"></div>
     </div>
@@ -120,7 +123,10 @@ defineProps({
           <div
             :class="{
               titulo2: true,
-              'animacion-desplazamiento-titulo2': index_pagina == 13,
+              btn_buy__aparecer: this.enterAnimation && !this.isRevert,
+              btn_buy__desaparecer_revert: this.exitAnimation && this.isRevert,
+              btn_buy__desaparecer: this.exitAnimation && !this.isRevert,
+              btn_buy__aparecer_revert: this.enterAnimation && this.isRevert,
             }"
           >
             <h2>Sale Tax</h2>
@@ -147,13 +153,15 @@ defineProps({
       </div>
     </div>
   </div>
-  <div   :class="{
+  <div
+    :class="{
       'container-alianza': true,
       'animacion-aparecer': this.enterAnimation && !this.isRevert,
       'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
       'animacion-desaparecer': this.enterAnimation && this.isRevert,
       'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
-    }">
+    }"
+  >
     <div class="contenido">
       <div class="nombre_Alianza">
         <h1>UPCOMING ALLIANCES</h1>
@@ -325,12 +333,11 @@ h2 {
   position: absolute;
   z-index: 43;
   background-color: rgb(0, 0, 0);
-  opacity: 30%;
+  opacity: 20%;
   mix-blend-mode: multiply;
 }
 
 .fondoTokenomics img {
- 
   position: absolute;
   top: 0;
   left: 0;
@@ -871,7 +878,7 @@ h2 {
   }
 }
 
-.animacion-benefit-up img{
+.animacion-benefit-up img {
   animation-duration: 0.8s;
   animation-name: arriba;
   animation-iteration-count: 1;
@@ -889,5 +896,22 @@ h2 {
     opacity: 20%;
   }
 }
+.btn_buy__desaparecer {
+  animation: btn_desaparecer 0.8s forwards ease-in-out;
+}
 
+.btn_buy__aparecer_revert {
+  animation: btn_desaparecer 0.8s forwards ease-in-out;
+  animation-direction: reverse;
+  z-index: 1000;
+}
+
+@keyframes btn_desaparecer {
+  100% {
+    position: absolute;
+    left: 70%;
+    top: -100%;
+    rotate: 180deg;
+  }
+}
 </style>
