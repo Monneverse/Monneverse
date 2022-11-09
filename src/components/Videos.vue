@@ -12,11 +12,8 @@ import Youtube from "./video_youtube.vue"
         <img src="/img/rayos.png" alt="" />
     </div>
     <div :class="{
-        fondo: true, 'fondo_benefit__aparecer': this.enterAnimation && !this.isRevert,
-        'fondo__aparecer2': this.enterAnimation && this.isRevert,
-        'fondo__desaparecer': this.exitAnimation && this.isRevert,
-        'fondo__desaparecer2': this.exitAnimation && !this.isRevert
-    }">
+        fondo: true
+    }" class="fondo-benefit">
         <img src="/img/fondo-benefit.png" alt="" />
     </div>
     <div :class="{'imagen-youtube':true, animated:true, duration1s:true, lightSpeedIn:this.enterAnimation, lightSpeedOut:this.exitAnimation}"><img src="../assets/YouTube-Icon.svg" alt="Youtube image"></div>
@@ -145,36 +142,14 @@ img {
 
 }
 
-.fondo_benefit__aparecer {
-    animation: aparecer_benefit 1s ease-in-out forwards;
+.fondo-benefit {
+  background-size: no-repeat center center fixed;
+  z-index: 5;
 }
-
-.fondo_benefit__aparecer>img {
-    animation: aparecer_benefit2 1s ease-in-out forwards;
-}
-
-@keyframes aparecer_benefit {
-    0% {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #121026;
-    }
-
-
-}
-
-@keyframes aparecer_benefit2 {
-    0% {
-        position: absolute;
-        width: 200%;
-        height: 130vh;
-    }
-
-
+.fondo-benefit img {
+  position: absolute;
+  top: -5%;
+  height: 115vh;
 }
 
 .fondo__aparecer {

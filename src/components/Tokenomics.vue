@@ -835,34 +835,8 @@ h2 {
     opacity: 20%;
   }
 }
-.saletax__desaparecer {
-  animation: btn_desaparecer 0.3s forwards ease-in-out;
-}
-
-.saletax__aparecer_revert {
-  animation: btn_desaparecer 0.3s forwards ease-in-out;
-  animation-direction: reverse;
-}
-
-@keyframes btn_desaparecer {
-  0% {
-    left: 150%;
-  }
-
-  15% {
-    left: 75%;
-  }
-
-  20% {
-    left: 50%;
-  }
-
-  25% {
-    left: 25%;
-  }
-
-  100% {
-    left: 0;
-  }
+.animated.duration1s {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
 }
 </style>

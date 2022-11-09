@@ -88,7 +88,7 @@ import Videos from "./components/Videos.vue"
       <Benefits_card :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 12" class="container">
-      <Benefits_card2 :index_pagina="index_pagina" />
+      <Benefits_card2 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 13" class="container">
       <Videos :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />

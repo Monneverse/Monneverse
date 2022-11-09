@@ -763,4 +763,8 @@ p {
     opacity: 100%;
   }
 }
+.animated.duration1s {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
 </style>
