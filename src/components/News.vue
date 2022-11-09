@@ -96,7 +96,7 @@ export default {
 
 img {
   width: 100%;
-  height: 80%;
+  height: 100%;
 }
 
 /* INICIO ESTILO FONDO */
