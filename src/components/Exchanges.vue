@@ -31,11 +31,23 @@ import ComponenteIconos from "./componenteIconos.vue";
   <div class="arrow"></div>
   <div class="arrow2"></div>
   <div class="content-major">
-    <div class="exchange_text">
+    <div :class="{
+      'exchange_text': true,
+      'exchange_text_animation': this.enterAnimation && !this.isRevert,
+      'exchange_text_animation_revert': this.exitAnimation && this.isRevert,
+      'exchange_text_animation_salida': this.exitAnimation && !this.isRevert,
+      'exchange_text_animation_salida_revert': this.enterAnimation && this.isRevert
+    }">
       <p>first exchanges after our pre-sale</p>
     </div>
 
-    <div class="contenedor_crypto">
+    <div :class="{
+      'contenedor_crypto': true,
+      'contenedor_crypto_animation': this.enterAnimation && !this.isRevert,
+      'contenedor_crypto_animation_revert': this.exitAnimation && this.isRevert,
+      'contenedor_crypto_animation_salida': this.exitAnimation && !this.isRevert,
+      'contenedor_crypto_animation_salida_revert': this.enterAnimation && this.isRevert
+    }">
       <div class="caja-cryptos">
         <div class="cryptos">
           <ComponenteIconos iconos="/img/Exchanges/bunny-color.svg" iconname="pancakeswap" />
@@ -350,6 +362,63 @@ img {
   font-size: 2rem;
 }
 
+.exchange_text_animation {
+  animation-duration: .5s;
+  animation-name: exchange_text_animation;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.exchange_text_animation_reverse {
+  animation-duration: .5s;
+  animation-name: exchange_text_animation_reverse;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes exchange_text_animation {
+  0% {
+    position: relative;
+    bottom: -50%;
+    left: 0%;
+  }
+
+  100% {
+    position: relative;
+    bottom: 0%;
+  }
+}
+
+.exchange_text_animation_salida {
+  animation-duration: .5s;
+  animation-name: exchange_text_animation_salida;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.exchange_text_animation_salida_reverse {
+  animation-duration: .5s;
+  animation-name: exchange_text_animation_salida_reverse;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes exchange_text_animation_salida {
+  0% {
+    position: relative;
+    bottom: 0%;
+  }
+
+  100% {
+    position: relative;
+    bottom: -50%;
+  }
+}
+
 @media only screen and (width > 769px) {
   .exchange_text p {
     font-size: 4.5vw;
@@ -364,6 +433,27 @@ img {
   width: 70%;
   display: flex;
   overflow-x: scroll;
+  animation: contenedor_crypto_animation 2s;
+}
+
+.contenedor_crypto_animation {
+  animation-duration: .5s;
+  animation-name: contenedor_crypto_animation;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes contenedor_crypto_animation {
+  0% {
+    position: relative;
+    opacity: 0%;
+  }
+
+  100% {
+    position: relative;
+    opacity: 100%;
+  }
 }
 
 .arrow,
