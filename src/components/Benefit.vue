@@ -270,14 +270,14 @@ img {
 @media screen and (min-width: 769px) {
   .benefits {
     position: absolute;
-    top: 22%;
+    top: 24%;
     width: 100%;
     height: 75%;
   }
   .contenido {
     margin: 0;
     width: 80%;
-    height: 90%;
+    height: 80%;
   }
   .titulo {
     width: 0%;

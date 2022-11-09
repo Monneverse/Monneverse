@@ -1,6 +1,15 @@
 <template>
   <div class="texto_auditoria">
-    <p class="zoomIn animated">audited by the <br />most reliable companies</p>
+    <p
+      :class="{
+        animated: true,
+        duration1s: true,
+        zoomIn: this.enterAnimation,
+        zoomOut: this.exitAnimation,
+      }"
+    >
+      audited by the <br />most reliable companies
+    </p>
   </div>
   <div class="fondo"></div>
   <div class="fondo-oscuro1"></div>
@@ -32,13 +41,45 @@
   <div class="circuito circuito-derecho">
     <img src="/img/calculadora/circuito-derecho.png" alt="" />
   </div>
-  <div class="luces">
+  <div
+    :class="{
+      luces: true,
+      animated: true,
+      duration1s: true,
+      fadeIn: this.enterAnimation,
+      fadeOut: this.exitAnimation,
+    }"
+  >
     <img src="/img/luz.png" alt="" />
   </div>
-  <div class="fondoSolidity"></div>
-  <div class="fondoCertik"></div>
+  <div
+    class="fondoSolidity"
+    :class="{
+      animated: true,
+      duration1s: true,
+      zoomIn: this.enterAnimation,
+      zoomOut: this.exitAnimation,
+    }"
+  ></div>
+  <div
+    class="fondoCertik"
+    :class="{
+      animated: true,
+      duration1s: true,
+      zoomIn: this.enterAnimation,
+      zoomOut: this.exitAnimation,
+    }"
+  ></div>
   <br />
-  <div class="logos_auditoria">
+  <div
+    class="logos_auditoria"
+    :class="{
+      animated: true,
+      duration1s: true,
+      zoomIn: this.enterAnimation,
+      zoomOut: this.exitAnimation,
+    }"
+  >
     <a href="https://solidity.finance/audits/MonnerDeFi/" target="_blank">
       <img
         src="/img/Exchanges/solidity1.png"
@@ -49,7 +90,15 @@
       target="_blank"
       ><img class="auditoria2" src="/img/Exchanges/certik.png"
     /></a>
-    <button class="btn_registro zoonIn animated">
+    <button
+      class="btn_registro"
+      :class="{
+        animated: true,
+        duration1s: true,
+        fadeInLeft: this.enterAnimation,
+        fadeOutLeft: this.exitAnimation,
+      }"
+    >
       <a
         href="https://www.flbusinessgo.com/companies/L22000347356/"
         target="_blank"
