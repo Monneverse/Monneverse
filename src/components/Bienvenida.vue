@@ -77,9 +77,16 @@ export default {
   font-stretch: semi-condensed;
 }
 
+* {
+  user-select: none;
+  pointer-events: none;
+}
+
 img {
   width: 100%;
   height: 100%;
+  user-select: none;
+  pointer-events: none;
 }
 
 .video-fondo {
@@ -91,6 +98,8 @@ img {
   height: 100%;
   z-index: 0;
   opacity: 100%;
+  user-select: none;
+  pointer-events: none;
 }
 
 .fondo-oscuro {
@@ -105,6 +114,8 @@ img {
       #505863 100%);
   z-index: 3;
   opacity: 70%;
+  user-select: none;
+  pointer-events: none;
 }
 
 .logo {
