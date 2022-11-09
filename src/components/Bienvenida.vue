@@ -77,10 +77,6 @@ export default {
   font-stretch: semi-condensed;
 }
 
-* {
-  user-select: none;
-  pointer-events: none;
-}
 
 img {
   width: 100%;
@@ -122,6 +118,8 @@ img {
   position: fixed;
   z-index: 5;
   opacity: 40%;
+  user-select: none;
+  pointer-events: none;
 }
 
 #logo-1 {
@@ -135,6 +133,8 @@ img {
   margin: auto;
   z-index: 6;
   opacity: 90%;
+  user-select: none;
+  pointer-events: none;
 }
 
 #logo-2 {
@@ -158,6 +158,8 @@ img {
   width: 100%;
   height: 80%;
   z-index: 6;
+  user-select: none;
+  pointer-events: none;
 }
 
 .fondo-oscuro-superior {
@@ -166,6 +168,8 @@ img {
   height: 100%;
   z-index: 5;
   opacity: 100%;
+  user-select: none;
+  pointer-events: none;
 }
 
 .fondo-mundial {
@@ -178,6 +182,8 @@ img {
   min-height: 40rem;
   z-index: 7;
   opacity: 100%;
+  user-select: none;
+  pointer-events: none;
 }
 
 .semi-circle {
@@ -188,6 +194,8 @@ img {
   height: 60%;
   z-index: 7;
   opacity: 100%;
+  user-select: none;
+  pointer-events: none;
 }
 
 .animated.hinge {
@@ -203,6 +211,8 @@ img {
   z-index: 7;
   top: 0%;
   opacity: 90%;
+  user-select: none;
+  pointer-events: none;
 }
 
 .degradado_izquierdo {
@@ -405,6 +415,7 @@ img {
   width: 30%;
   z-index: 7;
   gap: .2rem;
+  z-index: 100;
 }
 
 
