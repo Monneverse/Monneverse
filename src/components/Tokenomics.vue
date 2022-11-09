@@ -123,10 +123,9 @@ defineProps({
           <div
             :class="{
               titulo2: true,
-              saletax__aparecer: this.enterAnimation && !this.isRevert,
-              saletax__desaparecer_revert: this.exitAnimation && this.isRevert,
-              saletax__desaparecer: this.exitAnimation && !this.isRevert,
-              saletax__aparecer_revert: this.enterAnimation && this.isRevert,
+              saletax__desaparecer: this.enterAnimation && this.isRevert,
+              saletax__aparecer_revert: this.exitAnimation && !this.isRevert,
+
             }"
           >
             <h2>Sale Tax</h2>
@@ -571,6 +570,7 @@ h2 {
 }
 
 .titulo2 {
+  position: relative;
   display: flex;
   align-items: center;
   height: 80%;
@@ -843,15 +843,9 @@ h2 {
 .saletax__aparecer_revert {
   animation: btn_desaparecer 0.8s forwards ease-in-out;
   animation-direction: reverse;
-  z-index: 1000;
 }
 
 @keyframes btn_desaparecer {
-  100% {
-    position: relative;
-    z-index: 9999;
-    left: 100%;
 
-  }
 }
 </style>
