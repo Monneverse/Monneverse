@@ -2,14 +2,14 @@
   <!-- Fondo de la footer -->
   <div :class="{
     logo: true,
-    'logo-animation': index_pagina == this.limite && enter,
-    'logo-animation-revert': index_pagina == this.limite && exit,
+    'logo-animation': this.enterAnimation,
+    'logo-animation-revert': this.exitAnimation,
   }">
     <img src="/img/logo.svg" alt="logo monneverse" />
   </div>
   <div class="fondo fondo-footer"></div>
   <div class="fondo filtro-superior"></div>
-  <div :class="{ fondo: true, 'fondo-montana': true }">
+  <div class="fondo fondo-montana">
     <img src="/img/fondo-montana.png" />
   </div>
   <div class="fondo fondo-oscurecer"></div>
@@ -21,7 +21,11 @@
   <div class="circuito circuito-izquierdo">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
   </div>
-  <div class="circuito circuito-derecho">
+  <div :class="{
+    circuito: true, 'circuito-derecho': true,
+    'circuito-desaparecer': this.enterAnimation,
+    'circuito-aparecer': this.exitAnimation
+  }">
     <img src="/img/calculadora/circuito-derecho.png" alt="" />
   </div>
   <!-- Filtros azul -->
@@ -31,8 +35,8 @@
   <!-- redes sociales -->
   <div :class="{
     'fondo-redes': true,
-    'fondo-redes-animation': index_pagina == this.limite && enter,
-    'fondo-redes-animation-revert': index_pagina == this.limite && exit,
+    'fondo-redes-animation':this.enterAnimation,
+    'fondo-redes-animation-revert':this.exitAnimation
   }">
     <div class="redes">
       <a href="https://t.me/monnerversecommunity">
@@ -68,24 +72,7 @@
 
 <script>
 export default {
-  props: {
-    index_pagina: {
-      type: Number,
-      required: true,
-    },
-    limite: {
-      type: Number,
-      required: true,
-    },
-    enter: {
-      type: Boolean,
-      required: true,
-    },
-    exit: {
-      type: Boolean,
-      required: true,
-    },
-  },
+  props: ["enterAnimation", "exitAnimation"]
 };
 </script>
 
@@ -193,11 +180,27 @@ img {
 }
 
 .circuito-derecho {
-  right: -14%;
+  right:  -50%;
   transform: scaleY(-1);
 }
 
+.circuito-desaparecer{
+  animation:  circuito_desaparecer .5s normal forwards ease-in-out;
+  animation-fill-mode: backwards;
+}
+.circuito-aparecer{
+  animation:  circuito_desaparecer .5s reverse forwards ease-in-out;
+}
+@keyframes circuito_desaparecer {
+  0%{
+    right: -14%;
+  }
+  100% {
+    right: -50%;
+  }
 
+
+}
 .fondo-redes-animation {
   animation-name: fondo-redes-animation;
   animation-duration: 0.5s;
@@ -261,7 +264,7 @@ img {
 
 /* style of  mobile */
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
 
   .degradado {
     background: linear-gradient(to right, #08047a 0.5%, transparent);
