@@ -51,7 +51,7 @@ import Articulo from "./Articulo.vue";
   <div class="containerArticulo">
     <div class="contenedorDeArticulo">
       <Articulo :class="{
-        'articulo__aparecer': this.enterAnimation && !this.isRevert || this.isChanged,
+        'articulo__aparecer': (this.enterAnimation && !this.isRevert) || (this.isChanged && !this.enterAnimation ),
         'articulo__aparecer_revert': this.enterAnimation && this.isRevert,
         'articulo__desaparecer_revert': this.exitAnimation && this.isRevert,
         'articulo__desaparecer': this.exitAnimation && !this.isRevert,
@@ -353,11 +353,11 @@ img {
 }
 
 .btn_buy__aparecer {
-  animation: btn_aparecer .8s;
+  animation: btn_aparecer .8s forwards ease-in-out;
 }
 
 .btn_buy__desaparecer_revert {
-  animation: btn_aparecer .8s;
+  animation: btn_aparecer .8s forwards ease-in-out;
   animation-direction: reverse;
 }
 
@@ -372,11 +372,11 @@ img {
 
 
 .btn_buy__desaparecer {
-  animation: btn_desaparecer .8s;
+  animation: btn_desaparecer .8s forwards ease-in-out;
 }
 
 .btn_buy__aparecer_revert {
-  animation: btn_desaparecer .8s;
+  animation: btn_desaparecer .8s forwards ease-in-out;
   animation-direction: reverse;
   z-index: 1000;
 }
@@ -483,93 +483,80 @@ img {
 .articulo__aparecer:nth-child(1) {
   position: relative;
   left: 0;
-  animation: aparecer .8s;
+  animation: aparecer .8s forwards ease-in-out;
 }
 
 .articulo__aparecer:nth-child(2) {
   position: relative;
   left: 0;
-  animation: aparecer .6s;
+  animation: aparecer .6s forwards ease-in-out;
 }
 
 .articulo__aparecer:nth-child(3) {
   position: relative;
   left: 0;
-  animation: aparecer .4s;
+  animation: aparecer .4s forwards ease-in-out;
 }
 
 .articulo__desaparecer_revert:nth-child(1) {
   position: relative;
   left: 0;
-  animation: aparecer .4s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
+  animation: aparecer .4s forwards ease-in-out reverse;
 
 }
 
 .articulo__desaparecer_revert:nth-child(2) {
   position: relative;
   left: 0;
-  animation: aparecer .6s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
+  animation: aparecer .6s forwards ease-in-out reverse;
 
 }
 
 .articulo__desaparecer_revert:nth-child(3) {
   position: relative;
   left: 0;
-  animation: aparecer .8s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
+  animation: aparecer .8s forwards ease-in-out reverse;
 
 }
 
 .articulo__desaparecer:nth-child(1) {
   position: relative;
   left: 0;
-  animation: desaparecer .8s;
+  animation: desaparecer .8s forwards ease-in-out;
   animation-fill-mode: forwards;
 }
 
 .articulo__desaparecer:nth-child(2) {
   position: relative;
   left: 0;
-  animation: desaparecer .6s;
+  animation: desaparecer .6s  forwards ease-in-out;
   animation-fill-mode: forwards;
 }
 
 .articulo__desaparecer:nth-child(3) {
   position: relative;
   left: 0;
-  animation: desaparecer .4s;
-  animation-fill-mode: forwards;
+  animation: desaparecer .4s forwards ease-in-out;
 }
 
 .articulo__aparecer_revert:nth-child(1) {
   position: relative;
   left: 0;
-  animation: desaparecer .8s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
+  animation: desaparecer .8s  ease-in-out reverse;
 
 }
 
 .articulo__aparecer_revert:nth-child(2) {
   position: relative;
   left: 0;
-  animation: desaparecer .6s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
+  animation: desaparecer .6s ease-in-out reverse;
 
 }
 
 .articulo__aparecer_revert:nth-child(3) {
   position: relative;
   left: 0;
-  animation: desaparecer .4s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
+  animation: desaparecer .4s  ease-in-out reverse;
 
 }
 

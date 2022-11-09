@@ -1,5 +1,6 @@
 <template>
   <!--FONDO-->
+
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
   <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
@@ -7,12 +8,7 @@
   <div id="logo-2" class="logo">
     <img src="/img/logo.svg" alt="" />
   </div>
-  <div class="circuito circuito-izquierdo">
-    <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
-  </div>
-  <div class="circuito circuito-derecho">
-    <img src="/img/calculadora/circuito-derecho.png" alt="" />
-  </div>
+
   <!-- <div class="luces">
         <img src="/img/luz.png" alt="" />
     </div> -->
@@ -34,7 +30,12 @@
   </div>
   <div class="degradado_azuliz"></div>
   <div class="degradado_azulde"></div>
-
+  <div class="circuito circuito-izquierdo">
+    <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
+  </div>
+  <div class="circuito circuito-derecho">
+    <img src="/img/calculadora/circuito-derecho.png" alt="" />
+  </div>
   <!--FIN FONDO-->
   <div class="titulo">
     <p>news</p>
@@ -48,7 +49,7 @@
           <a href=""><img src="/img/News/cryptoPotato.png" /></a>
         </div>
         <div class="news">
-          <a href=""><img src="/img/Exchanges/Coinquora.png" /></a>
+          <a href=""><img src="/img/News/Coinquora.svg" /></a>
         </div>
         <div id="theCoinRepublic" class="news theCoinRepublic">
           <a href=""><img src="/img/News/TheCoinRepublic.png" /></a>
@@ -56,7 +57,12 @@
       </div>
 
       <div class="columnas">
-        <div class="circulo"></div>
+        <div :class="{
+          circulo: true, 'circulo__aparecer': this.enterAnimation && !this.isRevert || this.isChanged,
+          'circulo__aparecer_revert': this.enterAnimation && this.isRevert,
+          'circulo__desaparecer_revert': this.exitAnimation && this.isRevert,
+          'circulo__desaparecer': this.exitAnimation && !this.isRevert
+        }"></div>
         <div class="indicador"></div>
       </div>
 
@@ -79,7 +85,11 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  props: ["enterAnimation", "exitAnimation", "isRevert"]
+}
+</script>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
@@ -108,9 +118,45 @@ img {
   left: 48%;
   width: 4.7%;
   height: 13%;
-  border-radius: 5rem;
+  border-radius: 50%;
   z-index: 8;
   background: #1a1e29;
+
+
+}
+
+.circulo__aparecer {
+  animation: aparecer_circulo .5s ease-in-out;
+}
+
+.circulo__desaparecer_revert {
+  animation: aparecer_circulo 1s ease-in-out reverse;
+}
+
+@keyframes aparecer_circulo {
+  0% {
+    position: absolute;
+    z-index: 34;
+    top: 46%;
+    left: 82%;
+    width: 30rem;
+    height: 30rem;
+    background-color: rgba(255, 255, 255, 0.3);
+
+  }
+}
+
+@keyframes desaparecer_circulo {
+  100% {
+    position: absolute;
+    z-index: 34;
+    top: 46%;
+    left: 82%;
+    width: 30rem;
+    height: 30rem;
+    background-color: rgba(255, 255, 255, 0.3);
+
+  }
 }
 
 .fondo {
@@ -199,15 +245,15 @@ img {
   height: 80%;
   width: 40%;
   min-width: 30rem;
-  top: 20%;
+  bottom: 0%;
 }
 
 .circuito-izquierdo {
-  left: -10%;
+  left: -14%;
 }
 
 .circuito-derecho {
-  right: -10%;
+  right: -14%;
   transform: scaleY(-1);
 }
 
