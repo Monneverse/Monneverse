@@ -488,16 +488,16 @@ p {
   z-index: 33;
 }
 #a {
-  top: 40%;
+  top: 2.3rem;
 }
 #b {
-  top: 50%;
+  top:  1.5rem;
 }
 #c {
-  top: 50%;
+  top:  1.5rem;
 }
 #d {
-  top: 22%;
+  top: 2.4rem;
 }
 .circulos img {
   margin: 0 auto;
