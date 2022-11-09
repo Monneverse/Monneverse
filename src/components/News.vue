@@ -49,7 +49,7 @@
           <a href=""><img src="/img/News/cryptoPotato.png" /></a>
         </div>
         <div class="news">
-          <a href=""><img src="/img/News/Coinquora.svg" /></a>
+          <a href=""><img src="/img/News/CoinQuora.png" /></a>
         </div>
         <div id="theCoinRepublic" class="news theCoinRepublic">
           <a href=""><img src="/img/News/TheCoinRepublic.png" /></a>
