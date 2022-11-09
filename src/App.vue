@@ -115,7 +115,7 @@ import Videos from "./components/Videos.vue"
       <Fase5 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == limite" class="container">
-      <Footer :index_pagina="index_pagina" :limite="limite" :enter="enterAnimation" :exit="exitAnimation"></Footer>
+      <Footer :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" />
     </div>
   </main>
 </template>
