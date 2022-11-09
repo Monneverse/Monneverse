@@ -129,6 +129,7 @@ img {
     width: 100%;
     height: 100%;
     z-index: 0;
+    
 }
 
 .imagen-youtube {
@@ -139,6 +140,7 @@ img {
     width: 15rem;
     height: auto;
     z-index: 1;
+    
 }
 
 .contenido {
@@ -161,6 +163,7 @@ img {
     box-sizing: border-box;
     direction: initial;
     scroll-behavior: smooth;
+    
 }
 
 @media screen and (max-width: 1370px) {
