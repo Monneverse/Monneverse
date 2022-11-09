@@ -123,9 +123,10 @@ defineProps({
           <div
             :class="{
               titulo2: true,
-              saletax__desaparecer: this.enterAnimation && this.isRevert,
-              saletax__aparecer_revert: this.exitAnimation && !this.isRevert,
-
+              animated: true,
+              duration1s: true,
+              fadeInRight: this.enterAnimation,
+              fadeOutRight: this.exitAnimation,
             }"
           >
             <h2>Sale Tax</h2>
@@ -374,7 +375,6 @@ h2 {
   height: 57%;
   margin: 0 auto;
   border-radius: 1vw;
-
 }
 
 .content::-webkit-scrollbar {
@@ -408,7 +408,6 @@ h2 {
     width: 100%;
     height: 57%;
     margin: 0 auto;
-
   }
 
   .content::-webkit-scrollbar {

@@ -63,8 +63,8 @@
       circulos: true,
       animated: true,
       duration1s: true,
-      zoomInLeft: this.enterAnimation,
-      zoomOutLeft: this.exitAnimation,
+      fadeInRight: this.enterAnimation,
+      fadeOutRight: this.exitAnimation,
     }"
   >
     <img src="../assets/aro.svg" />
@@ -424,16 +424,6 @@ img {
   height: 20%;
   z-index: 5;
 }
-
-/* .fondoSolidity:hover {
-    position: fixed;
-    width: 33%;
-    border: 2px solid #121026;
-    border-radius: 2%;
-    -webkit-box-shadow: 0px 2px 28px 5px #08047A;
-    -moz-box-shadow: 0px 2px 28px 5px #08047A;
-    box-shadow: 0px 2px 28px 15px #08047A;
-} */
 
 .fondoCertik {
   position: fixed;

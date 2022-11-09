@@ -193,11 +193,13 @@ defineProps({
         />
 
         <img
-          :class="{
-            image: true,
-            'animacion-aro': index_pagina == 999,
-          }"
-          class="fadeInLeft animated"
+        :class="{
+              image: true,
+              animated: true,
+              duration1s: true,
+              fadeInLeft: this.enterAnimation,
+              fadeOutLeft: this.exitAnimation,
+            }"
           src="../assets/aro.svg"
         />
       </div>
