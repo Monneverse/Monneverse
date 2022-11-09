@@ -27,8 +27,10 @@ defineProps({
   <div
     :class="{
       'circuito-izquierdo': true,
-      'animacion-desplazamiento':this.enterAnimation && !this.isRevert,
-      'animacion-desplazamiento-revert':this.exitAnimation && this.isRevert,
+      'animacion-desplazamiento': this.enterAnimation && !this.isRevert,
+      'animacion-desplazamiento-revert': this.exitAnimation && this.isRevert,
+      'animacion-desplazamiento-salida': this.enterAnimation && this.isRevert,
+      'animacion-desplazamiento-revert-salida': this.exitAnimation && !this.isRevert,
     }"
     class="circuito"
   >
@@ -43,7 +45,7 @@ defineProps({
   <!--FIN FONDO-->
   <div
     :class="{
-      'contenedor_coins': true,
+      contenedor_coins: true,
       'animacion-aparecer': this.enterAnimation && !this.isRevert,
       'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
       'animacion-desaparecer': this.enterAnimation && this.isRevert,
@@ -399,13 +401,13 @@ img {
   animation-iteration-count: 1;
 }
 .animacion-desaparecer {
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
 
 .animacion-desaparecer-revert {
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-name: aparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;
@@ -421,8 +423,6 @@ img {
   }
 }
 
-
-
 .animacion-desplazamiento {
   animation-name: dezplazamiento;
   animation-duration: 0.5s;
@@ -435,12 +435,30 @@ img {
   animation-iteration-count: 1;
 }
 
+.animacion-desplazamiento-salida {
+  animation-name: adelante;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+.animacion-desplazamiento-revert-salida {
+  animation-name: adelante;
+  animation-duration: 0.8s;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+
 @keyframes dezplazamiento {
   0% {
     left: 1em;
   }
-
-  100% {
+}
+@keyframes adelante {
+  0% {
+    right: -10%;
+    top: 15%;
+    right: -12%;
+    width: 55%;
+    height: 80%;
   }
 }
 .logo-redes {
