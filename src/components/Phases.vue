@@ -6,7 +6,11 @@ import fasesComponentes from "./ComponentsPhases.vue";
   <!--FONDO-->
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
-  <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
+  <div :class="{
+    fondo: true, 'fondo-montana': true,
+    'montana__desaparecer_revert': this.exitAnimation && this.isRevert
+  }"><img src="/img/fondo-montana.png" />
+  </div>
   <div class="fondo fondo-oscurecer"></div>
   <div class="circuito circuito-izquierdo">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
@@ -36,19 +40,19 @@ import fasesComponentes from "./ComponentsPhases.vue";
     </div>
   </div>
 
-    <div :class="{
-      circulo: true, circulo__1: true, 'circulo__aparecer': this.enterAnimation && !this.isRevert,
-      'circulo__desaparecer_revert': this.exitAnimation && this.isRevert,
-    }">
-      <img src="../assets/aro.svg" />
-    </div>
+  <div :class="{
+    circulo: true, circulo__1: true, 'circulo__aparecer': this.enterAnimation && !this.isRevert,
+    'circulo__desaparecer_revert': this.exitAnimation && this.isRevert,
+  }">
+    <img src="../assets/aro.svg" />
+  </div>
 
-    <div :class="{
-      circulo: true, circulo__2: true, 'circulo__aparecer': this.enterAnimation && !this.isRevert,
-      'circulo__desaparecer_revert': this.exitAnimation && this.isRevert,
-    }">
-      <img src="../assets/aro.svg" />
-    </div>
+  <div :class="{
+    circulo: true, circulo__2: true, 'circulo__aparecer': this.enterAnimation && !this.isRevert,
+    'circulo__desaparecer_revert': this.exitAnimation && this.isRevert,
+  }">
+    <img src="../assets/aro.svg" />
+  </div>
 
 
   <div :class="{
@@ -119,6 +123,16 @@ img {
   top: 20%;
   left: 0;
   z-index: 3;
+}
+
+.montana__desaparecer_revert {
+  animation: montana__aparecer 1s ease-in-out 0s 1 normal;
+}
+
+@keyframes montana__aparecer {
+  100% {
+    height: 80%;
+  }
 }
 
 .fondo-oscurecer {
@@ -267,14 +281,14 @@ img {
 }
 
 .componentes__aparecer_revert {
-  animation: desaparecer  .9s;
+  animation: desaparecer .9s;
   animation-direction: reverse;
   animation-fill-mode: forwards;
 
 }
 
 .componentes__desaparecer {
-  animation: desaparecer  .9s;
+  animation: desaparecer .9s;
 }
 
 .componentes__desaparecer_revert {

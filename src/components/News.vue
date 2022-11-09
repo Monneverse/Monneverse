@@ -3,7 +3,10 @@
 
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
-  <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
+  <div :class="{
+    fondo: true, 'fondo-montana': true,
+    'montana__desaparecer': this.exitAnimation && !this.isRevert
+  }"><img src="/img/fondo-montana.png" /></div>
   <div class="fondo fondo-oscurecer"></div>
   <div id="logo-2" class="logo">
     <img src="/img/logo.svg" alt="" />
@@ -121,8 +124,6 @@ img {
   border-radius: 50%;
   z-index: 8;
   background: #1a1e29;
-
-
 }
 
 .circulo__aparecer {
@@ -186,10 +187,22 @@ img {
 }
 
 .fondo-montana {
-  height: 100%;
+  height: 80%;
   top: 20%;
   left: 0;
   z-index: 3;
+}
+
+
+
+.montana__desaparecer {
+  animation: montana__aparecer 1s ease-in-out 0s 1 normal;
+}
+
+@keyframes montana__aparecer {
+  100% {
+    height: 100%;
+  }
 }
 
 .fondo-oscurecer {
