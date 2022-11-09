@@ -3,7 +3,10 @@
 
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
-  <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
+  <div :class="{
+    fondo: true, 'fondo-montana': true,
+    'montana__desaparecer': this.exitAnimation && !this.isRevert
+  }"><img src="/img/fondo-montana.png" /></div>
   <div class="fondo fondo-oscurecer"></div>
   <div id="logo-2" class="logo">
     <img src="/img/logo.svg" alt="" />
@@ -43,13 +46,17 @@
   <div class="arrow"></div>
   <div class="arrow2"></div>
   <div class="major">
-    <div class="contenido">
+    <div :class="{
+      contenido: true,
+      'contenido__aparecer_revert': this.enterAnimation && this.isRevert,
+      'contenido__desaparecer': this.exitAnimation && !this.isRevert
+    }">
       <div class="columnas">
         <div class="news">
           <a href=""><img src="/img/News/cryptoPotato.png" /></a>
         </div>
         <div class="news">
-          <a href=""><img src="/img/News/Coinquora.svg" /></a>
+          <a href=""><img src="/img/News/CoinQuora.png" /></a>
         </div>
         <div id="theCoinRepublic" class="news theCoinRepublic">
           <a href=""><img src="/img/News/TheCoinRepublic.png" /></a>
@@ -96,7 +103,7 @@ export default {
 
 img {
   width: 100%;
-  height: 80%;
+  height: 100%;
 }
 
 /* INICIO ESTILO FONDO */
@@ -121,8 +128,6 @@ img {
   border-radius: 50%;
   z-index: 8;
   background: #1a1e29;
-
-
 }
 
 .circulo__aparecer {
@@ -186,10 +191,22 @@ img {
 }
 
 .fondo-montana {
-  height: 100%;
+  height: 80%;
   top: 20%;
   left: 0;
   z-index: 3;
+}
+
+
+
+.montana__desaparecer {
+  animation: montana__aparecer 1s ease-in-out 0s 1 normal;
+}
+
+@keyframes montana__aparecer {
+  100% {
+    height: 100%;
+  }
 }
 
 .fondo-oscurecer {
@@ -388,6 +405,23 @@ img {
   display: flex;
 }
 
+.contenido__desaparecer {
+  animation: desparecer_contenido 1s ease-in-out ;
+
+}
+
+.contenido__aparecer_revert {
+  animation: desparecer_contenido 1s ease-in-out forwards reverse;
+
+}
+
+@keyframes desparecer_contenido {
+  100% {
+    opacity: 0;
+  }
+
+}
+
 .columnas {
   width: 40%;
   height: 100%;
@@ -564,6 +598,7 @@ img {
     width: 100%;
     height: 100%;
   }
+
 
   .columnas {
     width: 100%;

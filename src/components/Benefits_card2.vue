@@ -1,9 +1,16 @@
 <script setup>
 import Benefit from "./ComponenteBenefit.vue";
-import Circulos from "./ComponentesCirculo.vue";
 defineProps({
-  index_pagina: {
-    type: Number,
+  enterAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  exitAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  isRevert: {
+    type: Boolean,
     required: true,
   },
 });
@@ -12,7 +19,15 @@ defineProps({
   <!--FONDO-->
 
   <div class="fondo">
-    <div class="fondo-benefit">
+    <div
+    :class="{
+        'fondo-benefit': true,
+        'animacion-benefit': this.enterAnimation && !this.isRevert,
+        'animacion-benefit-revert': this.exitAnimation && this.isRevert,
+        'animacion-benefit-up': this.enterAnimation && this.isRevert,
+        'animacion-benefit-up-revert': this.exitAnimation && !this.isRevert,
+      }"
+    >
       <img src="/img/fondo-benefit.png" alt="" />
     </div>
     <div class="logo">
@@ -23,11 +38,18 @@ defineProps({
         <h1>BENEFITS</h1>
       </div>
   -->
-    <div class="benefits">
+    <div
+      :class="{
+        benefits: true,
+        animated: true,
+        duration1s: true,
+        fadeInRight: this.enterAnimation,
+        fadeOutRight: this.exitAnimation,
+      }"
+    >
       <div
         :class="{
           cards: true,
-          'animacion-desplazamiento': index_pagina == 12,
         }"
       >
         <span></span>
@@ -44,7 +66,6 @@ defineProps({
       <div
         :class="{
           cards: true,
-          'animacion-desplazamiento': index_pagina == 12,
         }"
       >
         <span></span>
@@ -61,7 +82,6 @@ defineProps({
       <div
         :class="{
           cards: true,
-          'animacion-desplazamiento': index_pagina == 12,
         }"
       >
         <span></span>
@@ -287,21 +307,21 @@ img {
   background-color: #121026;
 }
 .fondo-benefit {
- 
- background-size: no-repeat center center fixed ;
- z-index: 5;
+  background-size: no-repeat center center fixed;
+  z-index: 5;
 }
-.fondo-benefit > img {
- position: absolute;
- width: 200%;
- height: 130vh;
+.fondo-benefit  img {
+
+  position: absolute;
+  top: 0%;
+  width: 200%;
+  height: 130vh;
 }
 @media screen and (min-width: 769px) {
-
- .fondo-benefit > img {
-   width: 100%;
-   height: 115vh;
- }
+  .fondo-benefit > img {
+    width: 100%;
+    height: 115vh;
+  }
 }
 
 .animacion-desplazamiento {
@@ -340,6 +360,27 @@ img {
     display: none;
   }
 }
+.animated.duration1s {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
 
+
+.animacion-benefit-up img {
+  animation-duration: 0.8s;
+  animation-name: arriba;
+  animation-iteration-count: 1;
+}
+.animacion-benefit-up-revert img {
+  animation-duration: 0.8s;
+  animation-name: arriba;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+@keyframes arriba {
+  0% {
+    top: -5%;
+  }
+}
 
 </style>

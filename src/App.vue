@@ -65,19 +65,19 @@ import Videos from "./components/Videos.vue"
     </div>
 
     <div v-show="index_pagina == 6" class="container">
-      <ContenedorArticulo :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"/>
+      <ContenedorArticulo :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
     <div v-show="index_pagina == 7" class="container">
-      <Exchanges />
+      <Exchanges :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" />
     </div>
 
     <div v-show="index_pagina == 8" class="container">
-      <Logos_auditorias />
+      <Logos_auditorias :exitAnimation="exitAnimation" :enterAnimation="enterAnimation"  />
     </div>
 
     <div v-show="index_pagina == 9" class="container">
-      <Benefits :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"  />
+      <Benefits :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
     <div v-show="index_pagina == 10" class="container">
@@ -88,13 +88,13 @@ import Videos from "./components/Videos.vue"
       <Benefits_card :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 12" class="container">
-      <Benefits_card2 :index_pagina="index_pagina" />
+      <Benefits_card2 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 13" class="container">
       <Videos :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 14" class="container">
-      <Tokenomics :index_pagina="index_pagina" />
+      <Tokenomics :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 15" class="container">
       <News :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
@@ -148,7 +148,7 @@ export default {
 
       if (this.index_pagina < this.limite) {
         newPosition = this.index_pagina + 1;
-    
+
         this.isRevert = false;
         this.CambiarContenedor(newPosition)
       }
@@ -308,18 +308,24 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right
           }
+          this.index = 5;
+          break;
         case 17:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
           }
+          this.index = 5;
+          break;
         case 18:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
           }
+          this.index = 5;
+          break;
         case 19:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
@@ -334,7 +340,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right
           }
-          this.index = 0;
+          this.index = 5;
           break;
         case 21:
           this.index = 0;

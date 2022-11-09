@@ -1,18 +1,26 @@
-<script>
-export default {
-  props: {
-    index_pagina: {
-      type: Number,
-      required: true,
-    },
+<script setup>
+defineProps({
+  enterAnimation: {
+    type: Boolean,
+    required: true,
   },
-};
+  exitAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  isRevert: {
+    type: Boolean,
+    required: true,
+  },
+});
 </script>
 
 <template>
   <!-- Fondos -->
   <div class="fondo">
-    <div :class="{ fondo_rayos: true, 'animacion-aparecer': index_pagina == 9 }">
+    <div
+      :class="{ fondo_rayos: true, 'animacion-aparecer': index_pagina == 9 }"
+    >
       <img src="/img/rayos.png" alt="" />
     </div>
 
@@ -22,34 +30,59 @@ export default {
     <div class="arrow"></div>
     <div class="arrow2"></div>
     <div class="fondo filtro-superior"></div>
+    <div class="fondo-oscuro"></div>
     <div class="fondo fondo-oscurecer"></div>
-    <div class="fondoTokenomics">
+    <div
+      :class="{
+        fondoTokenomics: true,
+        'animacion-benefit': this.enterAnimation && !this.isRevert,
+        'animacion-benefit-revert': this.exitAnimation && this.isRevert,
+        'animacion-benefit-up': this.enterAnimation && this.isRevert,
+        'animacion-benefit-up-revert': this.exitAnimation && !this.isRevert,
+        'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+      }"
+    >
       <img src="/img/fondo_Tokenomics.png" alt="" />
       <div class="imagen_Eclipse"></div>
     </div>
   </div>
   <div class="fondo fondo-oscurecer"></div>
 
-
   <div>
     <h1>.........</h1>
   </div>
 
   <!-- Contenedor de Contenido -->
-  <div :class="{
-    titulo: true,
-    'animacion-desplazamiento-titulo': index_pagina == 13,
-  }">
+  <div
+    :class="{
+      titulo: true,
+      'animacion-aparecer': this.enterAnimation && !this.isRevert,
+      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+      'animacion-desaparecer': this.enterAnimation && this.isRevert,
+      'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+    }"
+  >
     <h1>TOKENOMICS</h1>
   </div>
-  <div class="content">
+  <div
+    :class="{
+      content: true,
+      'animacion-aparecer': this.enterAnimation && !this.isRevert,
+      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+      'animacion-desaparecer': this.enterAnimation && this.isRevert,
+      'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+    }"
+  >
     <div class="cards">
       <div class="purchase-tax">
         <div class="">
-          <div :class="{
-            titulo1: true,
-            'animacion-desplazamiento-titulo1': index_pagina == 13,
-          }">
+          <div
+            :class="{
+              titulo1: true,
+              'animacion-desplazamiento-titulo1': index_pagina == 13,
+            }"
+          >
             <h2>Purchase Tax</h2>
           </div>
         </div>
@@ -87,10 +120,15 @@ export default {
     <div class="cards">
       <div class="sale-tax">
         <div class="">
-          <div :class="{
-            titulo2: true,
-            'animacion-desplazamiento-titulo2': index_pagina == 13,
-          }">
+          <div
+            :class="{
+              titulo2: true,
+              animated: true,
+              duration1s: true,
+              fadeInRight: this.enterAnimation,
+              fadeOutRight: this.exitAnimation,
+            }"
+          >
             <h2>Sale Tax</h2>
           </div>
         </div>
@@ -115,7 +153,15 @@ export default {
       </div>
     </div>
   </div>
-  <div class="container-alianza">
+  <div
+    :class="{
+      'container-alianza': true,
+      'animacion-aparecer': this.enterAnimation && !this.isRevert,
+      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+      'animacion-desaparecer': this.enterAnimation && this.isRevert,
+      'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+    }"
+  >
     <div class="contenido">
       <div class="nombre_Alianza">
         <h1>UPCOMING ALLIANCES</h1>
@@ -178,7 +224,7 @@ h2 {
 
 .titulo h1 {
   color: white;
-   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-size: 7vw;
   font-weight: 500;
 }
@@ -186,7 +232,7 @@ h2 {
 @media screen and (min-width: 769px) {
   .titulo h1 {
     color: white;
-     font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
     font-size: 4vw;
     font-weight: 500;
   }
@@ -208,7 +254,6 @@ h2 {
   width: 350%;
   height: 100%;
   z-index: -23;
-
 }
 
 .fondo_rayos img {
@@ -218,19 +263,19 @@ h2 {
 
 @media screen and (width > 769px) {
   .fondo_rayos {
-
     display: none;
   }
-
 }
 
 .filtro-superior {
   position: absolute;
   z-index: 4;
-  background: radial-gradient(circle at center,
-      #14ec84 0%,
-      #0b5f50 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #14ec84 0%,
+    #0b5f50 50%,
+    #505863 100%
+  );
   opacity: 30%;
 }
 
@@ -242,6 +287,15 @@ h2 {
   mix-blend-mode: multiply;
 }
 
+.fondo-oscuro {
+  position: absolute;
+  z-index: 2;
+  background-color: rgb(0, 0, 0);
+  opacity: 30%;
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+}
 @media screen and (width < 769px) {
   .fondo {
     position: absolute;
@@ -277,9 +331,9 @@ h2 {
 
 .fondo-oscurecer {
   position: absolute;
-  z-index: 42;
+  z-index: 43;
   background-color: rgb(0, 0, 0);
-  opacity: 30%;
+  opacity: 20%;
   mix-blend-mode: multiply;
 }
 
@@ -288,8 +342,9 @@ h2 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  z-index: 1;
+  height: 115%;
+  background-size: no-repeat center center;
+  z-index: 3;
 }
 
 @media screen and (width < 769px) {
@@ -306,8 +361,9 @@ h2 {
   width: 30rem;
   height: 30rem;
   z-index: 0;
-  background-color: #fff;
+  background-color: rgb(56, 55, 55);
   border-radius: 50%;
+  opacity: 40%;
 }
 
 .content {
@@ -319,8 +375,6 @@ h2 {
   height: 57%;
   margin: 0 auto;
   border-radius: 1vw;
-  scroll-snap-type: x mandatory;
-  overflow-x: scroll;
 }
 
 .content::-webkit-scrollbar {
@@ -332,9 +386,11 @@ h2 {
 }
 
 .content::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg,
-      rgb(33, 32, 85) 0%,
-      rgba(1, 209, 88, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(33, 32, 85) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
   border-radius: 20px;
   border: 2px solid #f1f2f3;
 }
@@ -352,8 +408,6 @@ h2 {
     width: 100%;
     height: 57%;
     margin: 0 auto;
-    overflow-x: initial;
-    scroll-snap-type: none;
   }
 
   .content::-webkit-scrollbar {
@@ -384,7 +438,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   color: white;
   width: 100%;
   height: 100%;
@@ -427,9 +481,11 @@ h2 {
   align-items: center;
   height: 80%;
   width: 77%;
-  background: linear-gradient(90deg,
-      rgb(33, 32, 85) 0%,
-      rgba(1, 209, 88, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(33, 32, 85) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
   border-radius: 0.5vw;
 }
 
@@ -449,7 +505,7 @@ h2 {
 
   .titulo1 h2 {
     padding-right: 10%;
-    font-family: Calibri;
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   }
 }
 
@@ -479,7 +535,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   color: white;
   width: 100%;
   height: 100%;
@@ -518,9 +574,11 @@ h2 {
   align-items: center;
   height: 80%;
   width: 77%;
-  background: linear-gradient(90deg,
-      rgb(1, 209, 88) 0%,
-      rgba(33, 32, 85, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(1, 209, 88) 0%,
+    rgba(33, 32, 85, 1) 100%
+  );
   border-radius: 0.5vw;
 }
 
@@ -570,7 +628,7 @@ h2 {
   text-align: center;
   width: 100%;
   color: white;
-   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-size: 2.5vw;
   font-weight: 500;
 }
@@ -630,70 +688,11 @@ h2 {
   display: block;
 }
 
-.animacion-desplazamiento-titulo {
-  animation-duration: 0.5s;
-  animation-name: desplazamiento;
-  animation-iteration-count: 1;
-}
-
-/* @keyframes desplazamiento {
-  0% {
-    top: -100%;
-  }
-
-  100% {}
-} */
-
-.animacion-desplazamiento-titulo1 {
-  animation-duration: 0.5s;
-  animation-name: desplazamiento2;
-  animation-iteration-count: 1;
-}
-
-/* 
-@keyframes desplazamiento2 {
-  0% {
-    left: -10%;
-  }
-
-  100% {}
-} */
-
-.animacion-desplazamiento-titulo2 {
-  animation-duration: 0.35s;
-  animation-name: desplazamiento3;
-  animation-iteration-count: 1;
-}
-
-/* @keyframes desplazamiento3 {
-  0% {
-    left: 100%;
-  }
-
-  25% {
-    left: 75%;
-  }
-
-  50% {
-    left: 50%;
-  }
-
-  75% {
-    left: 25%;
-  }
-
-  100% {
-    left: 0;
-  }
-} */
-
-
 @media screen and (max-width: 900px) {
-
   .arrow,
   .arrow:before {
     position: absolute;
-    left: 50%
+    left: 50%;
   }
 
   .arrow {
@@ -712,7 +711,7 @@ h2 {
   }
 
   .arrow:before {
-    content: '';
+    content: "";
     width: 15px;
     height: 15px;
     top: 50%;
@@ -740,7 +739,7 @@ h2 {
   .arrow2,
   .arrow2:before {
     position: absolute;
-    left: 50%
+    left: 50%;
   }
 
   .arrow2 {
@@ -759,7 +758,7 @@ h2 {
   }
 
   .arrow2:before {
-    content: '';
+    content: "";
     width: 15px;
     height: 15px;
     top: 50%;
@@ -783,7 +782,61 @@ h2 {
       transform: translate(-10px, -10px);
     }
   }
+}
+.animacion-aparecer {
+  animation-duration: 0.5s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+}
+.animacion-aparecer-revert {
+  animation-duration: 0.8s;
+  animation-name: aparecer;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+.animacion-desaparecer {
+  animation-duration: 0.8s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+}
 
+.animacion-desaparecer-revert {
+  animation-duration: 0.8s;
+  animation-name: aparecer;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
 
+@keyframes aparecer {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+.animacion-benefit-up img {
+  animation-duration: 0.8s;
+  animation-name: arriba;
+  animation-iteration-count: 1;
+}
+.animacion-benefit-up-revert img {
+  animation-duration: 0.8s;
+  animation-name: arriba;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+@keyframes arriba {
+  0% {
+    top: -35%;
+    height: 100%;
+    opacity: 20%;
+  }
+}
+.animated.duration1s {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
 }
 </style>
