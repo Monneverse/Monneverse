@@ -557,15 +557,12 @@ img {
 
   .upcoming_alliance {
     position: fixed;
-    top: 0%;
-    left: -20%;
+    top: 15%;
+  
   }
 
   .upcoming_alliance h1 {
     font-size: 12vw;
-    width: 5%;
-    top: 12%;
-    left: 19%;
   }
   .circulos_redes {
     position: fixed;

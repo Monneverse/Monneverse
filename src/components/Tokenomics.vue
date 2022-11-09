@@ -375,6 +375,9 @@ h2 {
   height: 57%;
   margin: 0 auto;
   border-radius: 1vw;
+  scroll-snap-type: x mandatory;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 .content::-webkit-scrollbar {
@@ -408,6 +411,8 @@ h2 {
     width: 100%;
     height: 57%;
     margin: 0 auto;
+    overflow-y: initial;
+    overflow-x: initial;
   }
 
   .content::-webkit-scrollbar {

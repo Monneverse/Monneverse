@@ -322,7 +322,8 @@ img {
   z-index: 5;
 }
 .fondo-benefit > img {
-  height: 100vh;
+  width: 200%;
+  height: 115vh;
 }
 @media screen and (min-width: 769px) {
   .fondo_rayos {
