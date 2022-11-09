@@ -1,4 +1,4 @@
-<script setup>
+ <script setup >
 import Articulo from "./Articulo.vue";
 </script>
 

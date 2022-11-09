@@ -1,4 +1,4 @@
-<script setup>
+<script setup >
 import Youtube from "./video_youtube.vue"
 </script>
 <template>

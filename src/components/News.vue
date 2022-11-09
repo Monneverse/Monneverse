@@ -65,7 +65,7 @@
 
       <div class="columnas">
         <div :class="{
-          circulo: true, 'circulo__aparecer': this.enterAnimation && !this.isRevert || this.isChanged,
+          circulo: true, 'circulo__aparecer': this.enterAnimation && !this.isRevert,
           'circulo__aparecer_revert': this.enterAnimation && this.isRevert,
           'circulo__desaparecer_revert': this.exitAnimation && this.isRevert,
           'circulo__desaparecer': this.exitAnimation && !this.isRevert
@@ -92,7 +92,7 @@
   </div>
 </template>
 
-<script>
+<script lang="js">
 export default {
   props: ["enterAnimation", "exitAnimation", "isRevert"]
 }
