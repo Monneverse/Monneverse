@@ -31,70 +31,70 @@ import ComponenteIconos from "./componenteIconos.vue";
   <div class="arrow"></div>
   <div class="arrow2"></div>
   <div class="content-major">
-    <div class="exchange_text">
+    <div class="exchange_text animated  lightSpeedIn">
       <p>first exchanges after our pre-sale</p>
     </div>
 
     <div class="contenedor_crypto">
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/bunny-color.svg" iconname="pancakeswap" />
+          <ComponenteIconos class="animated zoomInLeft" iconos="/img/Exchanges/bunny-color.svg" iconname="pancakeswap" />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/Kucoin.svg" iconname="kucoin" />
+          <ComponenteIconos  class="animated zoomInLeft"  iconos="/img/Exchanges/Kucoin.svg" iconname="kucoin" />
         </div>
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/Gatebw.svg" iconname="gate.io" />
+          <ComponenteIconos  class="animated zoomInLeft"  iconos="/img/Exchanges/Gatebw.svg" iconname="gate.io" />
         </div>
       </div>
 
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/lbank2.svg" iconname="LBANK" />
+          <ComponenteIconos  class="animated zoomInLeft"  iconos="/img/Exchanges/lbank2.svg" iconname="LBANK" />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/okxlogo.svg" iconname="OKX" />
+          <ComponenteIconos class="animated zoomInLeft"  iconos="/img/Exchanges/okxlogo.svg" iconname="OKX" />
         </div>
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/CoinGecko.svg" iconname="COINGECKO" />
+          <ComponenteIconos class="animated zoomInLeft"  iconos="/img/Exchanges/CoinGecko.svg" iconname="COINGECKO" />
         </div>
       </div>
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/mexcglobal.svg" iconname="MEXC GLOBAL" />
+          <ComponenteIconos class="animated zoomInLeft"  iconos="/img/Exchanges/mexcglobal.svg" iconname="MEXC GLOBAL" />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/xtcom.svg" iconname="XT.COM" />
+          <ComponenteIconos class="animated zoomInLeft"  iconos="/img/Exchanges/xtcom.svg" iconname="XT.COM" />
         </div>
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/poloniex.svg" iconname="POLONIEX" />
+          <ComponenteIconos class="animated zoomInLeft"  iconos="/img/Exchanges/poloniex.svg" iconname="POLONIEX" />
         </div>
       </div>
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/hotbit.svg" iconname="HOTBIT" />
+          <ComponenteIconos class="animated zoomInLeft"  iconos="/img/Exchanges/hotbit.svg" iconname="HOTBIT" />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/coinmarket.svg" iconname="COINMARKET" />
+          <ComponenteIconos class="animated zoomInLeft"  iconos="/img/Exchanges/coinmarket.svg" iconname="COINMARKET" />
         </div>
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/ftx.svg" iconname="FTX" />
+          <ComponenteIconos  class="animated zoomInLeft"  iconos="/img/Exchanges/ftx.svg" iconname="FTX" />
         </div>
       </div>
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/latoken.svg" iconname="LATOKEN" />
+          <ComponenteIconos  class="animated zoomInLeft"  iconos="/img/Exchanges/latoken.svg" iconname="LATOKEN" />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/bitrue.svg" iconname="BITRUE" />
+          <ComponenteIconos class="animated zoomInLeft"  iconos="/img/Exchanges/bitrue.svg" iconname="BITRUE" />
         </div>
         <div class="cryptos">
-          <ComponenteIconos iconos="/img/Exchanges/favicon.svg" iconname="FAVICON" />
+          <ComponenteIconos class="animated zoomInLeft"  iconos="/img/Exchanges/favicon.svg" iconname="FAVICON" />
         </div>
       </div>
     </div>
