@@ -16,62 +16,48 @@ defineProps({
 </script>
 <template>
 
-      <!--FONDOS-->
-      <video
-      preload="auto"
-      autoplay="true"
-      muted="true"
-      loop="true"
-      class="video-fondo-alliances"
-      poster="/img/fondo_binario.png"
-    >
-      <source src="/video/Full-HD-Lite-2.mp4" type="video/mp4" />
-      <!-- <source src="/public/video/Full-HD-Lite.webm" type="video/webm">
+  <!--FONDOS-->
+  <video preload="auto" autoplay="true" muted="true" loop="true" class="video-fondo-alliances"
+    poster="/img/fondo_binario.png">
+    <source src="/video/Full-HD-Lite-2.mp4" type="video/mp4" />
+    <!-- <source src="/public/video/Full-HD-Lite.webm" type="video/webm">
         <source src="/public/video/Full-HD-Lite-IPhone.mp4" type="video/mp4"> -->
-      <!-- <source src="/public/video/Full-HD-Lite.mov">
+    <!-- <source src="/public/video/Full-HD-Lite.mov">
     <source src="/public/video/Full-HD-Lite.m4v">
     <source src="/public/video/Full-HD-Lite.ts"> -->
-      <p>
-        Your browser doesn't support HTML5 video. Here is a
-        <a href="/video/Full-HD-Lite.mp4">link to the video</a> instead.
-      </p>
-    </video>
+    <p>
+      Your browser doesn't support HTML5 video. Here is a
+      <a href="/video/Full-HD-Lite.mp4">link to the video</a> instead.
+    </p>
+  </video>
 
   <div class="contenido-general">
-    <div
-      :class="{
-        logo: true,
-        'animacion-logo': this.enterAnimation && !this.isRevert,
-        'animacion-logo-revert': this.exitAnimation && this.isRevert,
-      }"
-    >
+    <div :class="{
+      logo: true,
+      'animacion-logo': this.enterAnimation && !this.isRevert,
+      'animacion-logo-revert': this.exitAnimation && this.isRevert,
+    }">
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
 
 
     <div class="fondo filtro-superior"></div>
-    <div
-      :class="{
-        'fondo-montana': true,
-        'fondo-montana-animation': this.enterAnimation && !this.isRevert,
-        'fondo-montana-animation-salida': this.enterAnimation && this.isRevert,
-        'fondo-montana-animation-revert': this.exitAnimation && this.isRevert,
-        'fondo-montana-animation-salida-revert':
-          this.exitAnimation && !this.isRevert,
-      }"
-      class="fondo"
-    >
+    <div :class="{
+      'fondo-montana': true,
+      'fondo-montana-animation': this.enterAnimation && !this.isRevert,
+      'fondo-montana-animation-salida': this.enterAnimation && this.isRevert,
+      'fondo-montana-animation-revert': this.exitAnimation && this.isRevert,
+      'fondo-montana-animation-salida-revert':
+        this.exitAnimation && !this.isRevert,
+    }" class="fondo">
       <img src="/img/fondo-montana.png" />
     </div>
     <div class="fondo fondo-oscurecer"></div>
-    <div
-      :class="{
-        'fondo-red': true,
-        'animacion-aparecer': this.enterAnimation && !this.isRevert,
-        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      }"
-      class="fondo"
-    >
+    <div :class="{
+      'fondo-red': true,
+      'animacion-aparecer': this.enterAnimation && !this.isRevert,
+      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+    }" class="fondo">
       <img src="/img/red.png" alt="" />
     </div>
     <div class="fondo-telefono">
@@ -82,22 +68,18 @@ defineProps({
       <div class="texto"></div>
 
       <!--UPCOMING ALLIANCES-->
-      <div
-        :class="{
-          'content-forms': true,
+      <div :class="{
+        'content-forms': true,
+        'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+        'animacion-content-up': this.enterAnimation && this.isRevert,
+        'animacion-content-up-revert': this.exitAnimation && !this.isRevert,
+      }">
+        <section :class="{
+          circulos: true,
           'animacion-aparecer': this.enterAnimation && !this.isRevert,
           'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          'animacion-content-up': this.enterAnimation && this.isRevert,
-          'animacion-content-up-revert': this.exitAnimation && !this.isRevert,
-        }"
-      >
-        <section
-          :class="{
-            circulos: true,
-            'animacion-aparecer': this.enterAnimation && !this.isRevert,
-            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          }"
-        >
+        }">
           <div class="circulo">
             <img src="../assets/circulo.svg" alt="" />
           </div>
@@ -107,31 +89,25 @@ defineProps({
           </div>
         </section>
         <section class="arco">
-          <div
-            :class="{
-              semi_circulo: true,
-              'animacion-arco': this.enterAnimation && !this.isRevert,
-              'animacion-arco-revert': this.exitAnimation && this.isRevert,
-              'animacion-arco-salida': this.enterAnimation && this.isRevert,
-              'animacion-arco-revert-salida': this.exitAnimation && !this.isRevert,
-            }"
-          >
+          <div :class="{
+            semi_circulo: true,
+            'animacion-arco': this.enterAnimation && !this.isRevert,
+            'animacion-arco-revert': this.exitAnimation && this.isRevert,
+            'animacion-arco-salida': this.enterAnimation && this.isRevert,
+            'animacion-arco-revert-salida': this.exitAnimation && !this.isRevert,
+          }">
             <img src="../assets/aro-iluminado-brillante.svg" alt="" />
           </div>
         </section>
         <section class="Alianzas">
           <div class="alianzas">
-            <a href="https://www.reddit.com/user/monnerverse"
-              ><span><img src="../assets/reddit-4.svg" /></span>REDDIT</a
-            >
+            <a href="https://www.reddit.com/user/monnerverse"><span><img
+                  src="../assets/reddit-4.svg" /></span>REDDIT</a>
 
-            <a href="https://t.me/monnerversecommunity"
-              ><span><img src="../assets/Telegram_logo.svg" /></span>TELEGRAM</a
-            >
+            <a href="https://t.me/monnerversecommunity"><span><img
+                  src="../assets/Telegram_logo.svg" /></span>TELEGRAM</a>
 
-            <a href="https://discord.com/invite/h7fRvek9dn"
-              ><span><img src="../assets/discord.svg" /></span>DISCORD</a
-            >
+            <a href="https://discord.com/invite/h7fRvek9dn"><span><img src="../assets/discord.svg" /></span>DISCORD</a>
           </div>
         </section>
 
@@ -153,13 +129,11 @@ defineProps({
       </div>
     </div>
 
-    <div
-      :class="{
-        puntero: true,
-        'animacion-aparecer': this.enterAnimation && !this.isRevert,
-        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      }"
-    >
+    <div :class="{
+      puntero: true,
+      'animacion-aparecer': this.enterAnimation && !this.isRevert,
+      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+    }">
       <img src="/img/puntero.svg" alt="" />
     </div>
   </div>
@@ -202,6 +176,7 @@ section {
   width: 80%;
   height: 100%;
 }
+
 .video-fondo-alliances {
   position: fixed;
   left: -20%;
@@ -213,6 +188,7 @@ section {
   height: auto;
   z-index: 3;
 }
+
 .contenido-general {
   width: 100%;
   height: 100%;
@@ -244,11 +220,11 @@ section {
   align-items: flex-end;
 }
 
-.texto > section {
+.texto>section {
   width: 70%;
 }
 
-.texto > section p {
+.texto>section p {
   width: 80%;
   float: right;
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
@@ -268,17 +244,20 @@ section {
   position: relative;
   z-index: 20;
 }
+
 .animacion-content-up {
   animation-name: contentUp;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
 }
+
 .animacion-content-up-revert {
   animation-name: contentUp;
   animation-duration: 0.8s;
   animation-iteration-count: 1;
   animation-direction: reverse;
 }
+
 @keyframes contentUp {
   0% {
     position: absolute;
@@ -330,6 +309,7 @@ section {
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
+
 @keyframes animar-logo {
   0% {
     position: absolute;
@@ -366,14 +346,13 @@ section {
 .filtro-superior {
   position: absolute;
   z-index: 4;
-  background: radial-gradient(
-    circle at center,
-    #14ec84 0%,
-    #0b5f50 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #14ec84 0%,
+      #0b5f50 50%,
+      #505863 100%);
   opacity: 30%;
 }
+
 .fondo-montana {
   position: absolute;
   bottom: 0%;
@@ -403,12 +382,14 @@ section {
   animation-name: salidaMontana;
   animation-iteration-count: 1;
 }
+
 .fondo-montana-animation-revert img {
   animation-duration: 0.78s;
   animation-name: fondo-montana-animation;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
+
 .fondo-montana-animation-salida-revert img {
   animation-duration: 0.78s;
   animation-name: salidaMontana;
@@ -421,6 +402,7 @@ section {
     top: 0%;
   }
 }
+
 @keyframes salidaMontana {
   0% {
     top: 0%;
@@ -634,17 +616,20 @@ section {
   animation-duration: 0.5s;
   animation-iteration-count: 1;
 }
+
 .animacion-arco-revert img {
   animation-name: animacion-arco;
   animation-duration: 0.78s;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
+
 .animacion-arco-salida img {
   animation-name: animacion-arco-salida;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
 }
+
 .animacion-arco-revert-salida img {
   animation-name: animacion-arco-salida;
   animation-duration: 0.8s;
@@ -657,16 +642,19 @@ section {
     top: 70%;
     transform: rotateZ(-180deg);
   }
+
   100% {
     top: 0%;
     transform: rotateZ(0deg);
   }
 }
+
 @keyframes animacion-arco-salida {
   0% {
     position: absolute;
     top: 100%;
   }
+
   100% {
     position: absolute;
     top: 0%;
@@ -703,7 +691,7 @@ section {
   font-weight: 400;
 }
 
-.animacion-parrafo{
+.animacion-parrafo {
   animation-name: animacion-arco;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
@@ -858,7 +846,24 @@ section {
   right: 55%;
 }
 
-@media screen and (width <=769px) {
+@media screen and (width <=900px) {
+  .video-fondo-alliances {
+    position: fixed;
+    left: -60%;
+    top: -20%;
+    scale: 1;
+    opacity: 30%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 3;
+  }
+
+  .logo {
+    display: none;
+  }
+
   .degradado_izquierdo {
     display: none;
   }
@@ -874,17 +879,20 @@ section {
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
+
 .animacion-desaparecer {
   animation-duration: 0.5s;
   animation-name: desaparecer;
   animation-iteration-count: 1;
 }
+
 .animacion-aparecer-revert {
   animation-duration: 0.78s;
   animation-name: aparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
+
 .animacion-desaparecer-revert {
   animation-duration: 0.78s;
   animation-name: desaparecer;
