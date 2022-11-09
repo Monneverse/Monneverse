@@ -69,7 +69,7 @@ import Videos from "./components/Videos.vue"
     </div>
 
     <div v-show="index_pagina == 7" class="container">
-      <Exchanges />
+      <Exchanges :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" />
     </div>
 
     <div v-show="index_pagina == 8" class="container">
