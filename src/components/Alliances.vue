@@ -101,13 +101,13 @@ defineProps({
         </section>
         <section class="Alianzas">
           <div class="alianzas">
-            <a href="https://www.reddit.com/user/monnerverse"><span><img
+            <a href="https://www.reddit.com/user/monnerverse" target="_blank"><span><img
                   src="../assets/reddit-4.svg" /></span>REDDIT</a>
 
-            <a href="https://t.me/monnerversecommunity"><span><img
+            <a href="https://t.me/monnerversecommunity" target="_blank"><span><img
                   src="../assets/Telegram_logo.svg" /></span>TELEGRAM</a>
 
-            <a href="https://discord.com/invite/h7fRvek9dn"><span><img src="../assets/discord.svg" /></span>DISCORD</a>
+            <a href="https://discord.com/invite/h7fRvek9dn" target="_blank"><span><img src="../assets/discord.svg" /></span>DISCORD</a>
           </div>
         </section>
 
@@ -547,7 +547,7 @@ section {
   margin: 0 auto;
   position: absolute;
   top: 3.5rem;
-  z-index: 34;
+  z-index: 66;
   width: 12rem;
   display: flex;
   justify-content: space-between;
