@@ -456,7 +456,7 @@ img {
 
   .video-fondo {
     position: fixed;
-    top: 0;
+    top: -10%;
     left: -40%;
     width: 140%;
     scale: 3;
