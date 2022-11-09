@@ -51,7 +51,7 @@ import Articulo from "./Articulo.vue";
   <div class="containerArticulo">
     <div class="contenedorDeArticulo">
       <Articulo :class="{
-        'articulo__aparecer': (this.enterAnimation && !this.isRevert) || (this.isChanged && !this.enterAnimation ),
+        'articulo__aparecer': (this.enterAnimation && !this.isRevert) || (this.isChanged && !this.enterAnimation && !this.isRevert ),
         'articulo__aparecer_revert': this.enterAnimation && this.isRevert,
         'articulo__desaparecer_revert': this.exitAnimation && this.isRevert,
         'articulo__desaparecer': this.exitAnimation && !this.isRevert,
