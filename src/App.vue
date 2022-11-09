@@ -65,7 +65,7 @@ import Videos from "./components/Videos.vue"
     </div>
 
     <div v-show="index_pagina == 6" class="container">
-      <ContenedorArticulo :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"/>
+      <ContenedorArticulo :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
     <div v-show="index_pagina == 7" class="container">
@@ -77,7 +77,7 @@ import Videos from "./components/Videos.vue"
     </div>
 
     <div v-show="index_pagina == 9" class="container">
-      <Benefits :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"  />
+      <Benefits :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
     <div v-show="index_pagina == 10" class="container">
@@ -148,7 +148,7 @@ export default {
 
       if (this.index_pagina < this.limite) {
         newPosition = this.index_pagina + 1;
-    
+
         this.isRevert = false;
         this.CambiarContenedor(newPosition)
       }
@@ -308,18 +308,24 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right
           }
+          this.index = 5;
+          break;
         case 17:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
           }
+          this.index = 5;
+          break;
         case 18:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
           } else {
             this.orientacion = typeOrientacion.right
           }
+          this.index = 5;
+          break;
         case 19:
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left
@@ -334,7 +340,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right
           }
-          this.index = 0;
+          this.index = 5;
           break;
         case 21:
           this.index = 0;
