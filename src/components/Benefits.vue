@@ -399,6 +399,7 @@ p {
   left: -50%;
   width: 100%;
   height: 100%;
+  
   z-index: -23;
   background-size: no-repeat center center fixed;
 }
@@ -413,7 +414,7 @@ p {
   z-index: 5;
 }
 .fondo-benefit > img {
-  height: 100vh;
+  height: 150vh;
 }
 @media screen and (min-width: 769px) {
   .fondo_rayos {
