@@ -73,7 +73,7 @@ import Videos from "./components/Videos.vue"
     </div>
 
     <div v-show="index_pagina == 8" class="container">
-      <Logos_auditorias />
+      <Logos_auditorias :exitAnimation="exitAnimation" :enterAnimation="enterAnimation"  />
     </div>
 
     <div v-show="index_pagina == 9" class="container">
