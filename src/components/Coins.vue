@@ -274,7 +274,7 @@ img {
   }
 
   .circuito-izquierdo {
-    left: -10%;
+    left: -11%;
     transform: rotateX(180deg);
   }
 
@@ -457,7 +457,7 @@ img {
     right: -10%;
     top: 15%;
     right: -12%;
-    width: 55%;
+    width: 54%;
     height: 80%;
   }
 }
