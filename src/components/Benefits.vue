@@ -30,11 +30,13 @@ defineProps({
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
 
-    <div :class="{
-            'titulo': true,
-            'animacion-aparecer': this.enterAnimation && !this.isRevert,
-            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          }">
+    <div
+      :class="{
+        titulo: true,
+        'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+      }"
+    >
       <h1>BENEFITS</h1>
     </div>
 
@@ -42,14 +44,16 @@ defineProps({
       <div
         :class="{ benefits: true, 'animacion-aparecer': index_pagina == 999 }"
       >
-        <div  :class="{
-            'beneficio': true,
+        <div
+          :class="{
+            beneficio: true,
             'animacion-aparecer': this.enterAnimation && !this.isRevert,
             'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
             'animacion-desaparecer': this.enterAnimation && this.isRevert,
             'animacion-desaparecer-revert':
               this.exitAnimation && !this.isRevert,
-          }">
+          }"
+        >
           <img
             id="a"
             class="circulos"
@@ -69,14 +73,16 @@ defineProps({
           </div>
         </div>
 
-        <div :class="{
-            'beneficio': true,
+        <div
+          :class="{
+            beneficio: true,
             'animacion-aparecer': this.enterAnimation && !this.isRevert,
             'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
             'animacion-desaparecer': this.enterAnimation && this.isRevert,
             'animacion-desaparecer-revert':
               this.exitAnimation && !this.isRevert,
-          }">
+          }"
+        >
           <img
             id="b"
             class="circulos"
@@ -94,7 +100,16 @@ defineProps({
             </div>
           </div>
         </div>
-        <div class="beneficio">
+        <div
+        :class="{
+            beneficio: true,
+            'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+            'animacion-desaparecer': this.enterAnimation && this.isRevert,
+            'animacion-desaparecer-revert':
+              this.exitAnimation && !this.isRevert,
+          }"
+        >
           <img
             id="c"
             class="circulos"
@@ -106,6 +121,7 @@ defineProps({
               'content-price': true,
               'animacion-caja1': index_pagina == 999,
             }"
+            class="fadeInDown animated"
           >
             <div class="titulo-two">
               <h1>6.2%<span>*</span>48h</h1>
@@ -116,7 +132,7 @@ defineProps({
               <h3>Sale Price</h3>
             </div>
             <div class="text">
-              <p>
+              <p class="fadeIn animated">
                 Enter our first phase os staking buying in pre-sale and earn
                 6.2% every 48 hours of your total capital in Monnercoins after
                 the launch in Pancakeswap
@@ -124,14 +140,21 @@ defineProps({
             </div>
           </div>
         </div>
-        <div class="beneficio">
+        <div :class="{
+            beneficio: true,
+            'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+            'animacion-desaparecer': this.enterAnimation && this.isRevert,
+            'animacion-desaparecer-revert':
+              this.exitAnimation && !this.isRevert,
+          }">
           <img
             id="d"
             class="circulos"
             src="/img/plus.svg"
             alt="Plus-Beneficios"
           />
-          <div class="content-price">
+          <div class="content-price fadeInUp animated">
             <div class="titulo-benefit">
               <div class="info-two"><p>At PancakeSwap</p></div>
               <h1><span>$</span>15,300<b>USD</b></h1>
@@ -142,7 +165,7 @@ defineProps({
               <h3>Sale Price</h3>
             </div>
             <div class="scroll">
-              <p class="">
+              <p class="fadeIn animated">
                 Our Token will be more exclusive than the most valuable NFT's of
                 the moment. That's why the price of each MNR on PancakeSwap will
                 initially range from <span>$14,200 to $15,500</span> thanks to:
@@ -156,7 +179,14 @@ defineProps({
           </div>
         </div>
       </div>
-      <div class="aro">
+      <div :class="{
+            aro: true,
+            'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+            'animacion-desaparecer': this.enterAnimation && this.isRevert,
+            'animacion-desaparecer-revert':
+              this.exitAnimation && !this.isRevert,
+          }">
         <img
           :class="{ image1: true, 'animacion-aparecer': index_pagina == 999 }"
           src="../assets/aro.svg"
@@ -167,6 +197,7 @@ defineProps({
             image: true,
             'animacion-aro': index_pagina == 999,
           }"
+          class="fadeInLeft animated"
           src="../assets/aro.svg"
         />
       </div>
@@ -375,7 +406,7 @@ p {
 .fondo-benefit {
   position: relative;
   top: -5%;
-  background-size: no-repeat center center ;
+  background-size: no-repeat center center;
   z-index: 5;
 }
 .fondo-benefit > img {
@@ -698,24 +729,24 @@ p {
   }
 }
 .animacion-aparecer {
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
 .animacion-aparecer-revert {
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-name: aparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
 .animacion-desaparecer {
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
 
 .animacion-desaparecer-revert {
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-name: aparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;
