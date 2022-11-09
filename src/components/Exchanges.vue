@@ -157,7 +157,10 @@ img {
   width: 100%;
   height: 100%;
 }
-
+.animated.duration1s {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
 /* FONDO */
 .fondo {
   position: absolute;
@@ -195,10 +198,7 @@ img {
   width: 100%;
   opacity: 50%;
 }
-.animated.duration1s {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-}
+
 @media only screen and (width < 769px) {
   img {
     width: 100%;

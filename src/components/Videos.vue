@@ -118,7 +118,10 @@ export default {
 body {
     background-color: #121026;
 }
-
+.animated.duration1s {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
 img {
     width: 100%;
     height: 100%;
