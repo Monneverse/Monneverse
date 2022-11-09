@@ -582,5 +582,8 @@ img {
       transform: translate(-10px, -10px);
     }
   }
+  .logo-redes {
+    display: none;
+  }
 }
 </style>

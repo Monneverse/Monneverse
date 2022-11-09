@@ -51,7 +51,7 @@ import Articulo from "./Articulo.vue";
   <div class="containerArticulo">
     <div class="contenedorDeArticulo">
       <Articulo :class="{
-        'articulo__aparecer': this.enterAnimation && !this.isRevert,
+        'articulo__aparecer': (this.enterAnimation && !this.isRevert) || (this.isChanged && !this.enterAnimation ),
         'articulo__aparecer_revert': this.enterAnimation && this.isRevert,
         'articulo__desaparecer_revert': this.exitAnimation && this.isRevert,
         'articulo__desaparecer': this.exitAnimation && !this.isRevert,
@@ -62,6 +62,13 @@ import Articulo from "./Articulo.vue";
   <!-- Contenedor de Redes Sociales -->
   <div class="arrow"></div>
   <div class="arrow2"></div>
+
+  <div @click="CambiarArticulos()" class="flecha flecha_before">
+    <img src="../assets/flecha.svg" alt="arrow before">
+  </div>
+  <div @click="CambiarArticulos()" class="flecha flecha_next">
+    <img src="../assets/flecha.svg" alt="arrow next">
+  </div>
   <!-- <div class="textscroll">
     <h3>Scroll to Right</h3>
   </div> -->
@@ -89,6 +96,7 @@ export default {
   props: ["enterAnimation", "exitAnimation", "isRevert"],
   data() {
     return {
+      isChanged: false,
       vectorTodo: [
         {
           titulo: "Presale and benefits For investors",
@@ -150,26 +158,8 @@ export default {
     };
   },
   methods: {
-    AgregarCero(numero) {
-      if (numero > 9) return numero;
-      else return "0" + numero;
-    },
-    ObtenerFechaActual() {
-      var distance = this.fechaEvento - Date.now();
-
-      // Time calculations for days, hours, minutes and seconds
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      this.diaString = this.AgregarCero(days);
-      this.horaString = this.AgregarCero(hours);
-      this.minutoString = this.AgregarCero(minutes);
-      this.segundoString = this.AgregarCero(seconds);
-    },
     CambiarArticulos() {
+      this.isChanged = true;
       this.vectorArticulo = this.vectorTodo.slice(this.inicio, this.inicio + this.salto);
       if (this.inicio == 0) {
         this.inicio = this.salto;
@@ -315,6 +305,44 @@ img {
   left: 58%;
 }
 
+.flecha {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 3rem;
+  z-index: 10;
+  position: absolute;
+  top: 65%;
+  margin: 0;
+  padding: .5rem;
+  box-sizing: border-box;
+}
+
+.flecha:hover {
+  padding: .7rem;
+}
+
+.flecha_before {
+  margin: 0;
+  left: 10%;
+}
+
+.flecha_before>img {
+  margin: 0;
+  rotate: 90deg;
+
+}
+
+.flecha_next {
+
+  right: 10%;
+}
+
+.flecha_next>img {
+
+  rotate: -90deg;
+}
+
 /* CONTENEDOR BOTON BUYNOW */
 .btn_buyMonner {
   position: fixed;
@@ -325,11 +353,11 @@ img {
 }
 
 .btn_buy__aparecer {
-  animation: btn_aparecer .8s;
+  animation: btn_aparecer .8s forwards ease-in-out;
 }
 
 .btn_buy__desaparecer_revert {
-  animation: btn_aparecer .8s;
+  animation: btn_aparecer .8s forwards ease-in-out;
   animation-direction: reverse;
 }
 
@@ -342,12 +370,13 @@ img {
 
 }
 
+
 .btn_buy__desaparecer {
-  animation: btn_desaparecer .8s;
+  animation: btn_desaparecer .8s forwards ease-in-out;
 }
 
 .btn_buy__aparecer_revert {
-  animation: btn_desaparecer .8s;
+  animation: btn_desaparecer .8s forwards ease-in-out;
   animation-direction: reverse;
   z-index: 1000;
 }
@@ -454,93 +483,80 @@ img {
 .articulo__aparecer:nth-child(1) {
   position: relative;
   left: 0;
-  animation: aparecer .8s;
+  animation: aparecer .8s forwards ease-in-out;
 }
 
 .articulo__aparecer:nth-child(2) {
   position: relative;
   left: 0;
-  animation: aparecer .6s;
+  animation: aparecer .6s forwards ease-in-out;
 }
 
 .articulo__aparecer:nth-child(3) {
   position: relative;
   left: 0;
-  animation: aparecer .4s;
+  animation: aparecer .4s forwards ease-in-out;
 }
 
 .articulo__desaparecer_revert:nth-child(1) {
   position: relative;
   left: 0;
-  animation: aparecer .4s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
+  animation: aparecer .4s forwards ease-in-out reverse;
 
 }
 
 .articulo__desaparecer_revert:nth-child(2) {
   position: relative;
   left: 0;
-  animation: aparecer .6s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
+  animation: aparecer .6s forwards ease-in-out reverse;
 
 }
 
 .articulo__desaparecer_revert:nth-child(3) {
   position: relative;
   left: 0;
-  animation: aparecer .8s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
+  animation: aparecer .8s forwards ease-in-out reverse;
 
 }
 
 .articulo__desaparecer:nth-child(1) {
   position: relative;
   left: 0;
-  animation: desaparecer .8s;
+  animation: desaparecer .8s forwards ease-in-out;
   animation-fill-mode: forwards;
 }
 
 .articulo__desaparecer:nth-child(2) {
   position: relative;
   left: 0;
-  animation: desaparecer .6s;
+  animation: desaparecer .6s  forwards ease-in-out;
   animation-fill-mode: forwards;
 }
 
 .articulo__desaparecer:nth-child(3) {
   position: relative;
   left: 0;
-  animation: desaparecer .4s;
-  animation-fill-mode: forwards;
+  animation: desaparecer .4s forwards ease-in-out;
 }
 
 .articulo__aparecer_revert:nth-child(1) {
   position: relative;
   left: 0;
-  animation: desaparecer .8s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
+  animation: desaparecer .8s  ease-in-out reverse;
 
 }
 
 .articulo__aparecer_revert:nth-child(2) {
   position: relative;
   left: 0;
-  animation: desaparecer .6s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
+  animation: desaparecer .6s ease-in-out reverse;
 
 }
 
 .articulo__aparecer_revert:nth-child(3) {
   position: relative;
   left: 0;
-  animation: desaparecer .4s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
+  animation: desaparecer .4s  ease-in-out reverse;
 
 }
 
@@ -616,6 +632,15 @@ h4 {
 
 
 @media screen and (max-width: 900px) {
+
+  .flecha_before {
+
+    left: 1%;
+  }
+
+  .flecha_next {
+    right: 1%;
+  }
 
   .arrow,
   .arrow:before {
@@ -825,6 +850,10 @@ h4 {
   .binance {
     width: 30%;
     bottom: 10%;
+  }
+
+  .logo-redes {
+    display: none;
   }
 }
 </style>

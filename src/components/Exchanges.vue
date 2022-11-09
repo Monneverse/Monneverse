@@ -682,5 +682,8 @@ img {
     display: block;
   }
 
+  .logo-redes {
+    display: none;
+  }
 }
 </style>

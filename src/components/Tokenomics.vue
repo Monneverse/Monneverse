@@ -25,9 +25,7 @@ export default {
     <div class="fondo fondo-oscurecer"></div>
     <div class="fondoTokenomics">
       <img src="/img/fondo_Tokenomics.png" alt="" />
-      <div class="imagen_Eclipse">
-        <img src="/img/eclipse_Tokenomics.png" alt="" />
-      </div>
+      <div class="imagen_Eclipse"></div>
     </div>
   </div>
   <div class="fondo fondo-oscurecer"></div>
@@ -303,14 +301,13 @@ h2 {
 .imagen_Eclipse {
   position: absolute;
   z-index: 34;
-  bottom: -10%;
-  right: -10%;
-  height: 80%;
-  width: 40%;
+  bottom: -5%;
+  right: -5%;
+  width: 30rem;
+  height: 30rem;
   z-index: 0;
-  /*animation-duration: 4s;
-  animation-name: moverCentro;
-  animation-iteration-count: infinite;*/
+  background-color: #fff;
+  border-radius: 50%;
 }
 
 .content {
