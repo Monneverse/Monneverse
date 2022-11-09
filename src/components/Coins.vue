@@ -20,21 +20,45 @@ defineProps({
   <!--FONDO-->
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
-  <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
+  <div
+    :class="{
+      'fondo-montana': true,
+      'fondo-montana-animation': this.enterAnimation && !this.isRevert,
+      'fondo-montana-animation-salida': this.enterAnimation && this.isRevert,
+      'fondo-montana-animation-revert': this.exitAnimation && this.isRevert,
+      'fondo-montana-animation-salida-revert':
+        this.exitAnimation && !this.isRevert,
+    }"
+    class="fondo"
+  >
+    <img src="/img/fondo-montana.png" />
+  </div>
   <div class="fondo fondo-oscurecer"></div>
   <div class="arrow"></div>
   <div class="arrow2"></div>
   <div
     :class="{
       'circuito-izquierdo': true,
-      'animacion-desplazamiento':this.enterAnimation && !this.isRevert,
-      'animacion-desplazamiento-revert':this.exitAnimation && this.isRevert,
+      'animacion-desplazamiento': this.enterAnimation && !this.isRevert,
+      'animacion-desplazamiento-revert': this.exitAnimation && this.isRevert,
+      'animacion-desplazamiento-salida': this.enterAnimation && this.isRevert,
+      'animacion-desplazamiento-revert-salida':
+        this.exitAnimation && !this.isRevert,
     }"
     class="circuito"
   >
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
   </div>
-  <div class="circuito circuito-derecho">
+  <div
+    :class="{
+      'circuito-derecho': true,
+
+      'circuitoD-desplazamiento-salida': this.enterAnimation && this.isRevert,
+      'circuitoD-desplazamiento-revert-salida':
+        this.exitAnimation && !this.isRevert,
+    }"
+    class="circuito"
+  >
     <img src="/img/calculadora/circuito-derecho.png" alt="" />
   </div>
 
@@ -43,7 +67,7 @@ defineProps({
   <!--FIN FONDO-->
   <div
     :class="{
-      'contenedor_coins': true,
+      contenedor_coins: true,
       'animacion-aparecer': this.enterAnimation && !this.isRevert,
       'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
       'animacion-desaparecer': this.enterAnimation && this.isRevert,
@@ -195,6 +219,8 @@ img {
 
 .fondo-montana {
   z-index: 5;
+  position: absolute;
+  top: 0;
   background-size: no-repeat center center fixed;
   width: 300%;
   height: 100%;
@@ -204,6 +230,7 @@ img {
 @media screen and (width > 768px) {
   .fondo-montana {
     width: 100%;
+    height: 100%;
   }
 }
 
@@ -272,7 +299,7 @@ img {
   }
 
   .circuito-izquierdo {
-    left: -10%;
+    left: -11%;
     transform: rotateX(180deg);
   }
 
@@ -399,13 +426,13 @@ img {
   animation-iteration-count: 1;
 }
 .animacion-desaparecer {
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
 
 .animacion-desaparecer-revert {
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-name: aparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;
@@ -421,8 +448,6 @@ img {
   }
 }
 
-
-
 .animacion-desplazamiento {
   animation-name: dezplazamiento;
   animation-duration: 0.5s;
@@ -435,12 +460,49 @@ img {
   animation-iteration-count: 1;
 }
 
+.animacion-desplazamiento-salida {
+  animation-name: adelante;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+.animacion-desplazamiento-revert-salida {
+  animation-name: adelante;
+  animation-duration: 0.8s;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+
 @keyframes dezplazamiento {
   0% {
     left: 1em;
   }
-
-  100% {
+}
+@keyframes adelante {
+  0% {
+    top: 14.5%;
+    right: -12.5%;
+    width: 52%;
+    height: 80%;
+  }
+}
+.circuitoD-desplazamiento-salida {
+  animation-name: palante;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+.circuitoD-desplazamiento-revert-salida {
+  animation-name: palante;
+  animation-duration: 0.8s;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+@keyframes palante {
+  0% {
+    right: -10%;
+    top: 15%;
+    right: -13%;
+    height: 80%;
+    width: 55%;
   }
 }
 .logo-redes {
@@ -584,6 +646,26 @@ img {
   }
   .logo-redes {
     display: none;
+  }
+}
+
+.fondo-montana-animation-salida {
+  animation-duration: 0.78s;
+  animation-name: salidaMontana;
+  animation-iteration-count: 1;
+}
+
+.fondo-montana-animation-salida-revert {
+  animation-duration: 0.78s;
+  animation-name: salidaMontana;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+
+@keyframes salidaMontana {
+  0% {
+    top: -45%;
+    height: 155%;
   }
 }
 </style>
