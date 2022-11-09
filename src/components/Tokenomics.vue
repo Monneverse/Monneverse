@@ -123,10 +123,10 @@ defineProps({
           <div
             :class="{
               titulo2: true,
-              btn_buy__aparecer: this.enterAnimation && !this.isRevert,
-              btn_buy__desaparecer_revert: this.exitAnimation && this.isRevert,
-              btn_buy__desaparecer: this.exitAnimation && !this.isRevert,
-              btn_buy__aparecer_revert: this.enterAnimation && this.isRevert,
+              saletax__aparecer: this.enterAnimation && !this.isRevert,
+              saletax__desaparecer_revert: this.exitAnimation && this.isRevert,
+              saletax__desaparecer: this.exitAnimation && !this.isRevert,
+              saletax__aparecer_revert: this.enterAnimation && this.isRevert,
             }"
           >
             <h2>Sale Tax</h2>
@@ -375,8 +375,7 @@ h2 {
   height: 57%;
   margin: 0 auto;
   border-radius: 1vw;
-  scroll-snap-type: x mandatory;
-  overflow-x: scroll;
+
 }
 
 .content::-webkit-scrollbar {
@@ -410,8 +409,7 @@ h2 {
     width: 100%;
     height: 57%;
     margin: 0 auto;
-    overflow-x: initial;
-    scroll-snap-type: none;
+
   }
 
   .content::-webkit-scrollbar {
@@ -509,7 +507,7 @@ h2 {
 
   .titulo1 h2 {
     padding-right: 10%;
-    font-family: Calibri;
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   }
 }
 
@@ -573,7 +571,6 @@ h2 {
 }
 
 .titulo2 {
-  position: relative;
   display: flex;
   align-items: center;
   height: 80%;
@@ -691,63 +688,6 @@ h2 {
 ::-webkit-scrollbar {
   display: block;
 }
-
-.animacion-desplazamiento-titulo {
-  animation-duration: 0.5s;
-  animation-name: desplazamiento;
-  animation-iteration-count: 1;
-}
-
-/* @keyframes desplazamiento {
-  0% {
-    top: -100%;
-  }
-
-  100% {}
-} */
-
-.animacion-desplazamiento-titulo1 {
-  animation-duration: 0.5s;
-  animation-name: desplazamiento2;
-  animation-iteration-count: 1;
-}
-
-/* 
-@keyframes desplazamiento2 {
-  0% {
-    left: -10%;
-  }
-
-  100% {}
-} */
-
-.animacion-desplazamiento-titulo2 {
-  animation-duration: 0.35s;
-  animation-name: desplazamiento3;
-  animation-iteration-count: 1;
-}
-
-/* @keyframes desplazamiento3 {
-  0% {
-    left: 100%;
-  }
-
-  25% {
-    left: 75%;
-  }
-
-  50% {
-    left: 50%;
-  }
-
-  75% {
-    left: 25%;
-  }
-
-  100% {
-    left: 0;
-  }
-} */
 
 @media screen and (max-width: 900px) {
   .arrow,
@@ -896,11 +836,11 @@ h2 {
     opacity: 20%;
   }
 }
-.btn_buy__desaparecer {
+.saletax__desaparecer {
   animation: btn_desaparecer 0.8s forwards ease-in-out;
 }
 
-.btn_buy__aparecer_revert {
+.saletax__aparecer_revert {
   animation: btn_desaparecer 0.8s forwards ease-in-out;
   animation-direction: reverse;
   z-index: 1000;
@@ -908,10 +848,10 @@ h2 {
 
 @keyframes btn_desaparecer {
   100% {
-    position: absolute;
-    left: 70%;
-    top: -100%;
-    rotate: 180deg;
+    position: relative;
+    z-index: 9999;
+    left: 100%;
+
   }
 }
 </style>
