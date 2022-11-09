@@ -3,7 +3,12 @@ import Youtube from "./video_youtube.vue"
 </script>
 <template>
 
-    <div class="fondo">
+    <div :class="{
+        fondo: true, 'fondo__aparecer': this.enterAnimation && !this.isRevert,
+        'fondo__aparecer2': this.enterAnimation && this.isRevert,
+        'fondo__desaparecer': this.exitAnimation && this.isRevert,
+        'fondo__desaparecer2': this.exitAnimation && !this.isRevert
+    }">
         <img src="/img/rayos.png" alt="" />
     </div>
     <div class="fondo">
@@ -129,7 +134,29 @@ img {
     width: 100%;
     height: 100%;
     z-index: 0;
-    
+
+}
+
+.fondo__aparecer {
+    animation: aparecer_ocultar 1s ease-in-out forwards;
+}
+.fondo__desaparecer {
+    animation: aparecer_ocultar 1s ease-in-out reverse;
+}
+.fondo__aparecer2 {
+    animation: aparecer_ocultar 1s ease-in-out forwards;
+}
+.fondo__desaparecer2 {
+    animation: aparecer_ocultar 1s ease-in-out reverse;
+}
+@keyframes aparecer_ocultar {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .imagen-youtube {
@@ -140,7 +167,7 @@ img {
     width: 15rem;
     height: auto;
     z-index: 1;
-    
+
 }
 
 .contenido {
@@ -163,7 +190,7 @@ img {
     box-sizing: border-box;
     direction: initial;
     scroll-behavior: smooth;
-    
+
 }
 
 @media screen and (max-width: 1370px) {
@@ -178,28 +205,29 @@ img {
         width: 98%;
         padding: .1rem;
     }
+
+    .contenido::-webkit-scrollbar:horizontal {
+        height: 10px;
+    }
+
+    .contenido::-webkit-scrollbar-thumb {
+        background: linear-gradient(90deg,
+                rgb(33, 32, 85) 0%,
+                rgba(1, 209, 88, 1) 100%);
+        border-radius: 20px;
+        border: 2px solid #f1f2f3;
+    }
+
+    .contenido ::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar {
+        display: block;
+    }
 }
 
 
-.contenido::-webkit-scrollbar:horizontal {
-    height: 10px;
-}
-
-.contenido::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg,
-            rgb(33, 32, 85) 0%,
-            rgba(1, 209, 88, 1) 100%);
-    border-radius: 20px;
-    border: 2px solid #f1f2f3;
-}
-
-.contenido ::-webkit-scrollbar-track {
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar {
-    display: block;
-}
 
 .video {
 
@@ -217,30 +245,28 @@ img {
     position: relative;
     left: 0;
     top: 0;
-    animation: aparecer .8s;
+    animation: aparecer .8s normal 1 ease-in-out;
 }
 
 .video__aparecer:nth-child(2) {
     position: relative;
     left: 0;
     top: 0;
-    animation: aparecer .6s;
+    animation: aparecer .6s normal 1 ease-in-out;
 }
 
 .video__aparecer:nth-child(3) {
     position: relative;
     left: 0;
     top: 0;
-    animation: aparecer .4s;
+    animation: aparecer .4s normal 1 ease-in-out;
 }
 
 .video__desaparecer_revert:nth-child(1) {
     position: relative;
     left: 0;
     top: 0;
-    animation: aparecer .4s;
-    animation-direction: reverse;
-    animation-fill-mode: forwards;
+    animation: aparecer .4s reverse 1 ease-in-out forwards;
 
 }
 
@@ -248,9 +274,7 @@ img {
     position: relative;
     left: 0;
     top: 0;
-    animation: aparecer .6s;
-    animation-direction: reverse;
-    animation-fill-mode: forwards;
+    animation: aparecer .6s reverse 1 ease-in-out forwards;
 
 }
 
@@ -258,9 +282,7 @@ img {
     position: relative;
     left: 0;
     top: 0;
-    animation: aparecer .8s;
-    animation-direction: reverse;
-    animation-fill-mode: forwards;
+    animation: aparecer .8s reverse 1 ease-in-out forwards;
 
 }
 
@@ -268,33 +290,28 @@ img {
     position: relative;
     left: 0;
     top: 0;
-    animation: desaparecer .8s;
-    animation-fill-mode: forwards;
+    animation: desaparecer .8s normal 1 ease-in-out forwards;
 }
 
 .video__desaparecer:nth-child(2) {
     position: relative;
     left: 0;
     top: 0;
-    animation: desaparecer .6s;
-    animation-fill-mode: forwards;
+    animation: desaparecer .6s normal 1 ease-in-out forwards;
 }
 
 .video__desaparecer:nth-child(3) {
     position: relative;
     left: 0;
     top: 0;
-    animation: desaparecer .4s;
-    animation-fill-mode: forwards;
+    animation: desaparecer .4s normal 1 ease-in-out forwards;
 }
 
 .video__aparecer_revert:nth-child(1) {
     position: relative;
     left: 0;
     top: 0;
-    animation: desaparecer .8s;
-    animation-direction: reverse;
-    animation-fill-mode: forwards;
+    animation: desaparecer .8s reverse 1 ease-in-out forwards;
 
 }
 
@@ -302,9 +319,7 @@ img {
     position: relative;
     left: 0;
     top: 0;
-    animation: desaparecer .6s;
-    animation-direction: reverse;
-    animation-fill-mode: forwards;
+    animation: desaparecer .6s reverse 1 ease-in-out forwards;
 
 }
 
@@ -312,9 +327,7 @@ img {
     position: relative;
     left: 0;
     top: 0;
-    animation: desaparecer .4s;
-    animation-direction: reverse;
-    animation-fill-mode: forwards;
+    animation: desaparecer .4s reverse 1 ease-in-out forwards;
 
 }
 
