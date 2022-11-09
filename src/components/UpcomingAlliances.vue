@@ -1,17 +1,50 @@
 <template>
-  <div class="upcoming_alliance">
+  <div
+    class="upcoming_alliance"
+    :class="{
+      animated: true,
+      duration1s: true,
+      slideInUp: this.enterAnimation,
+      zoomOut: this.exitAnimation,
+    }"
+  >
     <h1>UPCOMING ALLIANCES</h1>
   </div>
-  <div class="visa_img">
+  <div
+    class="visa_img"
+    :class="{
+      animated: true,
+      duration1s: true,
+      fadeInUp: this.enterAnimation,
+      fadeOutDown: this.exitAnimation,
+    }"
+  >
     <img src="../assets/methodBuy/visa.svg" />
   </div>
-  <div class="mastercard_img">
+  <div
+    class="mastercard_img"
+    :class="{
+      animated: true,
+      duration1s: true,
+      fadeInUp: this.enterAnimation,
+      fadeOutDown: this.exitAnimation,
+    }"
+  >
     <img src="../assets/methodBuy/masterCard.svg" />
   </div>
 
   <div class="circulos_redes">
-    <div class="semi_circle">
-      <img src="../assets/aro-iluminado-brillante.svg" />
+    <div class="semi_circle"
+    :class="{
+          animated: true,
+          duration1s: true,
+          fadeInDown: this.enterAnimation,
+          fadeInUp: this.exitAnimation,
+        }">
+      <img
+        src="../assets/aro-iluminado-brillante.svg"
+       
+      />
     </div>
     <div class="circle">
       <img src="../assets/circulo-colores.svg" />
@@ -40,30 +73,69 @@
 
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
-  <div class="rectangulo"></div>
-  <div class="rectangulo-medio"></div>
+  <div
+    class="rectangulo"
+    :class="{
+      animated: true,
+      duration1s: true,
+      slideInUp: this.enterAnimation,
+      slideOutDown: this.exitAnimation,
+    }"
+  ></div>
+  <div
+    class="rectangulo-medio"
+    :class="{
+      animated: true,
+      duration1s: true,
+      slideInUp: this.enterAnimation,
+      slideOutDown: this.exitAnimation,
+    }"
+  ></div>
   <!--FIN FONDO-->
 
-  <div class="logo-redes">
+  <div
+    class="logo-redes"
+    :class="{
+      animated: true,
+      duration1s: true,
+      fadeInDown: this.enterAnimation,
+      fadeOutDown: this.exitAnimation,
+    }"
+  >
     <div class="icon icon-telegram">
       <a href="https://t.me/monnerversecommunity" target="_blank">
-        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
       </a>
     </div>
     <div class="icon icon-reddit">
       <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
       </a>
     </div>
-    <div class="icon icon-discord ">
+    <div class="icon icon-discord">
       <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-        <img src="../assets/discord.svg" alt="logo discord" srcset="">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
       </a>
     </div>
   </div>
 </template>
 
-<script></script>
+<script setup>
+defineProps({
+  enterAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  exitAnimation: {
+    type: Boolean,
+    required: true,
+  },
+  isRevert: {
+    type: Boolean,
+    required: true,
+  },
+});
+</script>
 
 <style scoped>
 @font-face {
@@ -90,18 +162,22 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
 }
 
 .filtro-superior {
   z-index: 1;
-  background: radial-gradient(circle at center,
-      #f9f9fa 0%,
-      #c8ced4 50%,
-      #a8aaaf 100%);
+  background: radial-gradient(
+    circle at center,
+    #f9f9fa 0%,
+    #c8ced4 50%,
+    #a8aaaf 100%
+  );
   mix-blend-mode: multiply;
 }
 
@@ -171,7 +247,6 @@ img {
   left: 55%;
 }
 
-
 /*FIN ESTILO FONDO*/
 
 .upcoming_alliance {
@@ -227,15 +302,15 @@ img {
 
 .semi_circle {
   position: absolute;
-  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 80%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  width: 50%;
-  min-width: 50rem;
+  width: 100%;
   height: 100%;
   min-height: 50rem;
-  transform: translate(-50%, 0);
   z-index: 4;
   opacity: 100%;
 }
@@ -260,9 +335,11 @@ img {
   top: -29%;
   left: 25%;
   background: rgb(8, 7, 32);
-  background: linear-gradient(90deg,
-      rgba(8, 7, 32, 1) 0%,
-      rgba(1, 209, 88, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(8, 7, 32, 1) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
   border-radius: 2.5rem;
   text-align: center;
   z-index: 5;
@@ -284,13 +361,13 @@ img {
 
 .logo-redes {
   position: absolute;
-  bottom:9%;
-  left: 50%;
-  width: 20rem;
-  height: 7rem;
-  transform: translate(-50%, 0%);
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  bottom: 9%;
+  width: 100%;
+  height: 7rem;
   z-index: 8;
 }
 
@@ -301,161 +378,159 @@ img {
   z-index: 8;
 }
 
-
 /* style mobile */
 
-@media only screen and  (max-width: 900px) {
+@media only screen and (max-width: 900px) {
+  .degradado {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 35%;
+    left: 55%;
+    z-index: 9;
+  }
 
-.degradado {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 35%;
-  left: 55%;
-  z-index: 9;
-}
+  .degradado_izquierdo {
+    display: none;
+  }
 
-.degradado_izquierdo {
-  display: none;
-}
+  .fondo-montana {
+    position: fixed;
+    top: 28%;
+    left: -60%;
+    width: 200%;
+    height: 80%;
+  }
 
-.fondo-montana {
-  position: fixed;
-  top: 28%;
-  left: -60%;
-  width: 200%;
-  height: 80%;
-}
+  .fondo-mundial {
+    position: fixed;
+    top: 15em;
+    left: -9em;
+    width: 50em;
+    height: 35em;
+    z-index: 3;
+    opacity: 80%;
+  }
 
-.fondo-mundial {
-  position: fixed;
-  top: 15em;
-  left: -9em;
-  width: 50em;
-  height: 35em;
-  z-index: 3;
-  opacity: 80%;
-}
+  .fondo-calculadora {
+    width: 100%;
+    height: 100%;
+  }
 
-.fondo-calculadora {
-  width: 100%;
-  height: 100%;
-}
+  .circuito-derecho {
+    display: none;
+  }
 
-.circuito-derecho {
-  display: none;
-}
+  .circuito-izquierdo {
+    display: none;
+  }
 
-.circuito-izquierdo {
-  display: none;
-}
+  .fondo_rayos {
+    position: fixed;
+    left: -35%;
+    top: -30%;
+    width: 150%;
+    height: 150%;
+    opacity: 50%;
+    z-index: 0;
+    background-size: no-repeat center center fixed;
+  }
 
-.fondo_rayos {
-  position: fixed;
-  left: -35%;
-  top: -30%;
-  width: 150%;
-  height: 150%;
-  opacity: 50%;
-  z-index: 0;
-  background-size: no-repeat center center fixed;
-}
+  .fondo_rayos img {
+    height: 100%;
+  }
 
-.fondo_rayos img {
-  height: 100%;
-}
+  #logo-1 {
+    position: absolute;
+    top: 78%;
+    left: -4%;
+    opacity: 50%;
+    z-index: 4;
+  }
 
-#logo-1 {
-  position: absolute;
-  top: 78%;
-  left: -4%;
-  opacity: 50%;
-  z-index: 4;
-}
+  .fondoTokenomics {
+    position: fixed;
+    top: 0%;
+    left: -6%;
+    width: 140%;
+    height: 90%;
+    visibility: hidden;
+  }
+  .degradado {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 35%;
+    left: 55%;
+    z-index: 9;
+  }
 
-.fondoTokenomics {
-  position: fixed;
-  top: 0%;
-  left: -6%;
-  width: 140%;
-  height: 90%;
-  visibility: hidden;
-}
-.degradado {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 35%;
-  left: 55%;
-  z-index: 9;
-}
+  .degradado_izquierdo {
+    display: none;
+  }
 
-.degradado_izquierdo {
-  display: none;
-}
+  .fondo-montana {
+    position: fixed;
+    top: 38%;
+    left: -60%;
+    width: 200%;
+    height: 80%;
+  }
 
-.fondo-montana {
-  position: fixed;
-  top: 38%;
-  left: -60%;
-  width: 200%;
-  height: 80%;
-}
+  .fondo-mundial {
+    position: fixed;
+    top: 27em;
+    left: -9em;
+    width: 50em;
+    height: 35em;
+    z-index: 3;
+    opacity: 100%;
+  }
 
-.fondo-mundial {
-  position: fixed;
-  top: 27em;
-  left: -9em;
-  width: 50em;
-  height: 35em;
-  z-index: 3;
-  opacity: 100%;
-}
+  .fondo-calculadora {
+    width: 100%;
+    height: 100%;
+  }
 
-.fondo-calculadora {
-  width: 100%;
-  height: 100%;
-}
+  .circuito-derecho {
+    display: none;
+  }
 
-.circuito-derecho {
-  display: none;
-}
+  .circuito-izquierdo {
+    display: none;
+  }
 
-.circuito-izquierdo {
-  display: none;
-}
+  .fondo_rayos {
+    position: fixed;
+    left: -35%;
+    top: -30%;
+    width: 150%;
+    height: 150%;
+    opacity: 50%;
+    z-index: 0;
+    background-size: no-repeat center center fixed;
+  }
 
-.fondo_rayos {
-  position: fixed;
-  left: -35%;
-  top: -30%;
-  width: 150%;
-  height: 150%;
-  opacity: 50%;
-  z-index: 0;
-  background-size: no-repeat center center fixed;
-}
+  .fondo_rayos img {
+    height: 100%;
+  }
 
-.fondo_rayos img {
-  height: 100%;
-}
+  #logo-1 {
+    position: absolute;
+    top: 78%;
+    left: -4%;
+    opacity: 50%;
+    z-index: 4;
+  }
 
-#logo-1 {
-  position: absolute;
-  top: 78%;
-  left: -4%;
-  opacity: 50%;
-  z-index: 4;
-}
-
-.fondoTokenomics {
-  position: fixed;
-  top: 0%;
-  left: -6%;
-  width: 140%;
-  height: 90%;
-  visibility: hidden;
-}
+  .fondoTokenomics {
+    position: fixed;
+    top: 0%;
+    left: -6%;
+    width: 140%;
+    height: 90%;
+    visibility: hidden;
+  }
   .mastercard_img {
     position: fixed;
     width: 55%;

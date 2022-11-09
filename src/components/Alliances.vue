@@ -154,11 +154,13 @@ defineProps({
     </div>
 
     <div
-      :class="{
-        puntero: true,
-        'animacion-aparecer': this.enterAnimation && !this.isRevert,
-        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      }"
+    :class="{
+      puntero:true,
+      animated: true,
+      duration1s: true,
+      fadeInUp: this.enterAnimation,
+      fadeOutDown: this.exitAnimation,
+    }"
     >
       <img src="/img/puntero.svg" alt="" />
     </div>
@@ -666,10 +668,12 @@ section {
   0% {
     position: absolute;
     top: 100%;
+    opacity: 0%;
   }
   100% {
     position: absolute;
     top: 0%;
+    opacity: 100%;
   }
 }
 

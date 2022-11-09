@@ -54,7 +54,7 @@ import Videos from "./components/Videos.vue"
     </div>
 
     <div v-show="index_pagina == 3" class="container">
-      <Alianzas />
+      <Alianzas :exitAnimation="exitAnimation" :enterAnimation="enterAnimation"/>
     </div>
 
     <div v-show="index_pagina == 4" class="container">
