@@ -25,7 +25,7 @@ defineProps({
       class="video-fondo-alliances"
       poster="/img/fondo_binario.png"
     >
-      <source src="/public/video/Full-HD-Lite-2.mp4" type="video/mp4" />
+      <source src="/video/Full-HD-Lite-2.mp4" type="video/mp4" />
       <!-- <source src="/public/video/Full-HD-Lite.webm" type="video/webm">
         <source src="/public/video/Full-HD-Lite-IPhone.mp4" type="video/mp4"> -->
       <!-- <source src="/public/video/Full-HD-Lite.mov">
