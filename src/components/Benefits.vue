@@ -154,7 +154,7 @@ defineProps({
             src="/img/plus.svg"
             alt="Plus-Beneficios"
           />
-          <div class="content-price fadeInUp animated">
+          <div id="contentP" class="content-price fadeInUp animated">
             <div class="titulo-benefit">
               <div class="info-two"><p>At PancakeSwap</p></div>
               <h1><span>$</span>15,300<b>USD</b></h1>
@@ -295,14 +295,15 @@ p {
   height: 10%;
 }
 .beneficio:nth-child(4) {
-  margin-top: 15%;
-  height: 45%;
+  margin-top: 4.5rem;
+  height: 25rem;
 }
 
 .content-price {
   width: 100%;
-  height: 80%;
+  height: 3.5rem;
 }
+
 .titulo-benefit {
   margin: 0;
   width: 100;
