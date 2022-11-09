@@ -46,7 +46,11 @@
   <div class="arrow"></div>
   <div class="arrow2"></div>
   <div class="major">
-    <div class="contenido">
+    <div :class="{
+      contenido: true,
+      'contenido__aparecer_revert': this.enterAnimation && this.isRevert,
+      'contenido__desaparecer': this.exitAnimation && !this.isRevert
+    }">
       <div class="columnas">
         <div class="news">
           <a href=""><img src="/img/News/cryptoPotato.png" /></a>
@@ -401,6 +405,23 @@ img {
   display: flex;
 }
 
+.contenido__desaparecer {
+  animation: desparecer_contenido 1s ease-in-out ;
+
+}
+
+.contenido__aparecer_revert {
+  animation: desparecer_contenido 1s ease-in-out forwards reverse;
+
+}
+
+@keyframes desparecer_contenido {
+  100% {
+    opacity: 0;
+  }
+
+}
+
 .columnas {
   width: 40%;
   height: 100%;
@@ -577,6 +598,7 @@ img {
     width: 100%;
     height: 100%;
   }
+
 
   .columnas {
     width: 100%;
