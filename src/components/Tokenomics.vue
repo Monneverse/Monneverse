@@ -29,17 +29,20 @@ defineProps({
     </div>
     <div class="arrow"></div>
     <div class="arrow2"></div>
-    <div class="fondo filtro-superior "></div>
-   <div class="fondo-oscuro"></div>
-    <div class="fondo fondo-oscurecer "></div>
-    <div 
+    <div class="fondo filtro-superior"></div>
+    <div class="fondo-oscuro"></div>
+    <div class="fondo fondo-oscurecer"></div>
+    <div
       :class="{
-        'fondoTokenomics': true,
+        fondoTokenomics: true,
         'animacion-benefit': this.enterAnimation && !this.isRevert,
         'animacion-benefit-revert': this.exitAnimation && this.isRevert,
         'animacion-benefit-up': this.enterAnimation && this.isRevert,
         'animacion-benefit-up-revert': this.exitAnimation && !this.isRevert,
-      }">
+        'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+      }"
+    >
       <img src="/img/fondo_Tokenomics.png" alt="" />
       <div class="imagen_Eclipse"></div>
     </div>
@@ -120,7 +123,9 @@ defineProps({
           <div
             :class="{
               titulo2: true,
-              'animacion-desplazamiento-titulo2': index_pagina == 13,
+              saletax__desaparecer: this.enterAnimation && this.isRevert,
+              saletax__aparecer_revert: this.exitAnimation && !this.isRevert,
+
             }"
           >
             <h2>Sale Tax</h2>
@@ -147,13 +152,15 @@ defineProps({
       </div>
     </div>
   </div>
-  <div   :class="{
+  <div
+    :class="{
       'container-alianza': true,
       'animacion-aparecer': this.enterAnimation && !this.isRevert,
       'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
       'animacion-desaparecer': this.enterAnimation && this.isRevert,
       'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
-    }">
+    }"
+  >
     <div class="contenido">
       <div class="nombre_Alianza">
         <h1>UPCOMING ALLIANCES</h1>
@@ -325,12 +332,11 @@ h2 {
   position: absolute;
   z-index: 43;
   background-color: rgb(0, 0, 0);
-  opacity: 30%;
+  opacity: 20%;
   mix-blend-mode: multiply;
 }
 
 .fondoTokenomics img {
- 
   position: absolute;
   top: 0;
   left: 0;
@@ -368,8 +374,7 @@ h2 {
   height: 57%;
   margin: 0 auto;
   border-radius: 1vw;
-  scroll-snap-type: x mandatory;
-  overflow-x: scroll;
+
 }
 
 .content::-webkit-scrollbar {
@@ -403,8 +408,7 @@ h2 {
     width: 100%;
     height: 57%;
     margin: 0 auto;
-    overflow-x: initial;
-    scroll-snap-type: none;
+
   }
 
   .content::-webkit-scrollbar {
@@ -502,7 +506,7 @@ h2 {
 
   .titulo1 h2 {
     padding-right: 10%;
-    font-family: Calibri;
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   }
 }
 
@@ -685,63 +689,6 @@ h2 {
   display: block;
 }
 
-.animacion-desplazamiento-titulo {
-  animation-duration: 0.5s;
-  animation-name: desplazamiento;
-  animation-iteration-count: 1;
-}
-
-/* @keyframes desplazamiento {
-  0% {
-    top: -100%;
-  }
-
-  100% {}
-} */
-
-.animacion-desplazamiento-titulo1 {
-  animation-duration: 0.5s;
-  animation-name: desplazamiento2;
-  animation-iteration-count: 1;
-}
-
-/* 
-@keyframes desplazamiento2 {
-  0% {
-    left: -10%;
-  }
-
-  100% {}
-} */
-
-.animacion-desplazamiento-titulo2 {
-  animation-duration: 0.35s;
-  animation-name: desplazamiento3;
-  animation-iteration-count: 1;
-}
-
-/* @keyframes desplazamiento3 {
-  0% {
-    left: 100%;
-  }
-
-  25% {
-    left: 75%;
-  }
-
-  50% {
-    left: 50%;
-  }
-
-  75% {
-    left: 25%;
-  }
-
-  100% {
-    left: 0;
-  }
-} */
-
 @media screen and (max-width: 900px) {
   .arrow,
   .arrow:before {
@@ -871,7 +818,7 @@ h2 {
   }
 }
 
-.animacion-benefit-up img{
+.animacion-benefit-up img {
   animation-duration: 0.8s;
   animation-name: arriba;
   animation-iteration-count: 1;
@@ -889,5 +836,16 @@ h2 {
     opacity: 20%;
   }
 }
+.saletax__desaparecer {
+  animation: btn_desaparecer 0.8s forwards ease-in-out;
+}
 
+.saletax__aparecer_revert {
+  animation: btn_desaparecer 0.8s forwards ease-in-out;
+  animation-direction: reverse;
+}
+
+@keyframes btn_desaparecer {
+
+}
 </style>
