@@ -20,7 +20,19 @@ defineProps({
   <!--FONDO-->
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
-  <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
+  <div
+    :class="{
+      'fondo-montana': true,
+      'fondo-montana-animation': this.enterAnimation && !this.isRevert,
+      'fondo-montana-animation-salida': this.enterAnimation && this.isRevert,
+      'fondo-montana-animation-revert': this.exitAnimation && this.isRevert,
+      'fondo-montana-animation-salida-revert':
+        this.exitAnimation && !this.isRevert,
+    }"
+    class="fondo"
+  >
+    <img src="/img/fondo-montana.png" />
+  </div>
   <div class="fondo fondo-oscurecer"></div>
   <div class="arrow"></div>
   <div class="arrow2"></div>
@@ -30,7 +42,8 @@ defineProps({
       'animacion-desplazamiento': this.enterAnimation && !this.isRevert,
       'animacion-desplazamiento-revert': this.exitAnimation && this.isRevert,
       'animacion-desplazamiento-salida': this.enterAnimation && this.isRevert,
-      'animacion-desplazamiento-revert-salida': this.exitAnimation && !this.isRevert,
+      'animacion-desplazamiento-revert-salida':
+        this.exitAnimation && !this.isRevert,
     }"
     class="circuito"
   >
@@ -197,6 +210,8 @@ img {
 
 .fondo-montana {
   z-index: 5;
+  position: absolute;
+  top: 0;
   background-size: no-repeat center center fixed;
   width: 300%;
   height: 100%;
@@ -206,6 +221,7 @@ img {
 @media screen and (width > 768px) {
   .fondo-montana {
     width: 100%;
+    height: 100%;
   }
 }
 
@@ -457,7 +473,7 @@ img {
     right: -10%;
     top: 15%;
     right: -12%;
-    width: 54%;
+    width: 53.5%;
     height: 80%;
   }
 }
@@ -602,6 +618,27 @@ img {
   }
   .logo-redes {
     display: none;
+  }
+}
+
+
+.fondo-montana-animation-salida  {
+  animation-duration: 0.78s;
+  animation-name: salidaMontana;
+  animation-iteration-count: 1;
+}
+
+.fondo-montana-animation-salida-revert  {
+  animation-duration: 0.78s;
+  animation-name: salidaMontana;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+
+@keyframes salidaMontana {
+  0% {
+    top: -45%;
+    height: 155%;
   }
 }
 </style>
