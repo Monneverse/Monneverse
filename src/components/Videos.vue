@@ -11,10 +11,15 @@ import Youtube from "./video_youtube.vue"
     }">
         <img src="/img/rayos.png" alt="" />
     </div>
-    <div class="fondo">
+    <div :class="{
+        fondo: true, 'fondo_benefit__aparecer': this.enterAnimation && !this.isRevert,
+        'fondo__aparecer2': this.enterAnimation && this.isRevert,
+        'fondo__desaparecer': this.exitAnimation && this.isRevert,
+        'fondo__desaparecer2': this.exitAnimation && !this.isRevert
+    }">
         <img src="/img/fondo-benefit.png" alt="" />
     </div>
-    <div class="imagen-youtube"><img src="../assets/YouTube-Icon.svg" alt="Youtube image"></div>
+    <div :class="{'imagen-youtube':true, animated:true, duration1s:true, lightSpeedIn:this.enterAnimation, lightSpeedOut:this.exitAnimation}"><img src="../assets/YouTube-Icon.svg" alt="Youtube image"></div>
     <div class="contenido">
         <Youtube v-for="videoy in videosPlay" :class="{
             video: true, 'video__aparecer': this.enterAnimation && !this.isRevert,
@@ -113,7 +118,10 @@ export default {
 body {
     background-color: #121026;
 }
-
+.animated.duration1s {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
 img {
     width: 100%;
     height: 100%;
@@ -137,18 +145,54 @@ img {
 
 }
 
+.fondo_benefit__aparecer {
+    animation: aparecer_benefit 1s ease-in-out forwards;
+}
+
+.fondo_benefit__aparecer>img {
+    animation: aparecer_benefit2 1s ease-in-out forwards;
+}
+
+@keyframes aparecer_benefit {
+    0% {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #121026;
+    }
+
+
+}
+
+@keyframes aparecer_benefit2 {
+    0% {
+        position: absolute;
+        width: 200%;
+        height: 130vh;
+    }
+
+
+}
+
 .fondo__aparecer {
     animation: aparecer_ocultar 1s ease-in-out forwards;
 }
+
 .fondo__desaparecer {
     animation: aparecer_ocultar 1s ease-in-out reverse;
 }
+
 .fondo__aparecer2 {
     animation: aparecer_ocultar 1s ease-in-out forwards;
 }
+
 .fondo__desaparecer2 {
     animation: aparecer_ocultar 1s ease-in-out reverse;
 }
+
 @keyframes aparecer_ocultar {
     0% {
         opacity: 0;
