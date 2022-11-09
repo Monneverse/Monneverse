@@ -3,7 +3,12 @@ import Youtube from "./video_youtube.vue"
 </script>
 <template>
 
-    <div class="fondo">
+    <div :class="{
+        fondo: true, 'fondo__aparecer': this.enterAnimation && !this.isRevert,
+        'fondo__aparecer2': this.enterAnimation && this.isRevert,
+        'fondo__desaparecer': this.exitAnimation && this.isRevert,
+        'fondo__desaparecer2': this.exitAnimation && !this.isRevert
+    }">
         <img src="/img/rayos.png" alt="" />
     </div>
     <div class="fondo">
@@ -130,6 +135,28 @@ img {
     height: 100%;
     z-index: 0;
 
+}
+
+.fondo__aparecer {
+    animation: aparecer_ocultar 1s ease-in-out forwards;
+}
+.fondo__desaparecer {
+    animation: aparecer_ocultar 1s ease-in-out reverse;
+}
+.fondo__aparecer2 {
+    animation: aparecer_ocultar 1s ease-in-out forwards;
+}
+.fondo__desaparecer2 {
+    animation: aparecer_ocultar 1s ease-in-out reverse;
+}
+@keyframes aparecer_ocultar {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .imagen-youtube {
