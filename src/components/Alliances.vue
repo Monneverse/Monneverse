@@ -1,19 +1,3 @@
-<script setup>
-defineProps({
-  enterAnimation: {
-    type: Boolean,
-    required: true,
-  },
-  exitAnimation: {
-    type: Boolean,
-    required: true,
-  },
-  isRevert: {
-    type: Boolean,
-    required: true,
-  },
-});
-</script>
 <template>
 
   <!--FONDOS-->
@@ -145,7 +129,11 @@ defineProps({
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
 </template>
-
+<script>
+export default {
+  props: ["enterAnimation", "exitAnimation", "isRevert"]
+}
+</script>
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
