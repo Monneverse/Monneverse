@@ -1,18 +1,7 @@
-<script setup>
-defineProps({
-  titulo: {
-    type: String,
-    required: true,
-  },
-  img: {
-    type: String,
-    required: true,
-  },
-  url: {
-    type: String,
-    required: true,
-  },
-});
+<script>
+export default {
+  props: ["titulo", "img", "url"]
+}
 </script>
 
 <template>

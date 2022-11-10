@@ -1,97 +1,6 @@
- <script setup >
-import Articulo from "./Articulo.vue";
-</script>
-
-<template>
-  <!-- Fondos -->
-  <div class="fondo">
-    <div class="fondoArticulo">
-      <img src="/img/circulo_Fondo.png" alt="" class="circuloFondo1" />
-      <img src="/img/circuloImagen.png" alt="" class="circuloFondo2" />
-    </div>
-    <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
-    <div class="fondo-oscuro"></div>
-    <div class="degradado degradado_izquierdo"></div>
-    <div class="degradado degradado_derecho"></div>
-  </div>
-  <div class="circuitoIzquierdo">
-    <img src="/img/Articulo/circuito-izquierdo.png" alt="" />
-  </div>
-  <div class="circuitoDerecho">
-    <img src="/img/Articulo/circuito-derecho.png" alt="" />
-  </div>
-
-  <!-- CONTENEDOR DE BOTON METATASK -->
-  <div :class="{
-    btn_buyMonner: true,
-    'btn_buy__aparecer': this.enterAnimation && !this.isRevert,
-    'btn_buy__desaparecer_revert': this.exitAnimation && this.isRevert,
-    'btn_buy__desaparecer': this.exitAnimation && !this.isRevert,
-    'btn_buy__aparecer_revert': this.enterAnimation && this.isRevert,
-  }">
-    <div class="contrato">
-      <b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span>
-    </div>
-    <div class="separar"></div>
-    <div class="buyNow">
-
-
-      <a href="https://www.pinksale.finance/launchpad/0x8cf9cA848ECAB7781a316eFFaFa41876c585Bc48?chain=BSC"
-        target="_blank" class="btn_moner">
-        <div class="texto1">BUY MONNER</div>
-        <div class="logos">
-          <div class="binance"><img src="/./img/Articulo/BNC.svg" /></div>
-          <div class="meta"><img src="/./img/Articulo/Meta.svg" /></div>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <!-- Contenedor de Articulos -->
-  <div class="containerArticulo">
-    <div class="contenedorDeArticulo">
-      <Articulo :class="{
-        'articulo__aparecer': (this.enterAnimation && !this.isRevert) || (this.isChanged && !this.enterAnimation && !this.isRevert ),
-        'articulo__aparecer_revert': this.enterAnimation && this.isRevert,
-        'articulo__desaparecer_revert': this.exitAnimation && this.isRevert,
-        'articulo__desaparecer': this.exitAnimation && !this.isRevert,
-      }" v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen" :url="item.link" />
-    </div>
-  </div>
-
-  <!-- Contenedor de Redes Sociales -->
-  <div class="arrow"></div>
-  <div class="arrow2"></div>
-
-  <div @click="CambiarArticulos()" class="flecha flecha_before">
-    <img src="../assets/flecha.svg" alt="arrow before">
-  </div>
-  <div @click="CambiarArticulos()" class="flecha flecha_next">
-    <img src="../assets/flecha.svg" alt="arrow next">
-  </div>
-  <!-- <div class="textscroll">
-    <h3>Scroll to Right</h3>
-  </div> -->
-  <div class="logo-redes">
-    <div class="icon icon-telegram">
-      <a href="https://t.me/monnerversecommunity" target="_blank">
-        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
-      </a>
-    </div>
-    <div class="icon icon-reddit">
-      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
-      </a>
-    </div>
-    <div class="icon icon-discord">
-      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
-      </a>
-    </div>
-  </div>
-</template>
-
 <script>
+import Articulo from "./Articulo.vue";
+
 export default {
   props: ["enterAnimation", "exitAnimation", "isRevert"],
   data() {
@@ -154,19 +63,22 @@ export default {
       minutoString: "00",
       segundoString: "00",
       inicio: 0,
-      salto: 3
+      salto: 3,
     };
   },
   methods: {
     CambiarArticulos() {
       this.isChanged = true;
-      this.vectorArticulo = this.vectorTodo.slice(this.inicio, this.inicio + this.salto);
+      this.vectorArticulo = this.vectorTodo.slice(
+        this.inicio,
+        this.inicio + this.salto
+      );
       if (this.inicio == 0) {
         this.inicio = this.salto;
       } else {
         this.inicio = 0;
       }
-    }
+    },
   },
   mounted() {
     this.CambiarArticulos();
@@ -174,6 +86,109 @@ export default {
   },
 };
 </script>
+
+
+<template>
+  <!-- Fondos -->
+  <div class="fondo">
+    <div class="fondoArticulo">
+      <img src="/img/circulo_Fondo.png" alt="" class="circuloFondo1" />
+      <img src="/img/circuloImagen.png" alt="" class="circuloFondo2" />
+    </div>
+    <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
+    <div class="fondo-oscuro"></div>
+    <div class="degradado degradado_izquierdo"></div>
+    <div class="degradado degradado_derecho"></div>
+  </div>
+  <div class="circuitoIzquierdo">
+    <img src="/img/Articulo/circuito-izquierdo.png" alt="" />
+  </div>
+  <div class="circuitoDerecho">
+    <img src="/img/Articulo/circuito-derecho.png" alt="" />
+  </div>
+
+  <!-- CONTENEDOR DE BOTON METATASK -->
+  <div
+    :class="{
+      btn_buyMonner: true,
+      btn_buy__aparecer: this.enterAnimation && !this.isRevert,
+      btn_buy__desaparecer_revert: this.exitAnimation && this.isRevert,
+      btn_buy__desaparecer: this.exitAnimation && !this.isRevert,
+      btn_buy__aparecer_revert: this.enterAnimation && this.isRevert,
+    }"
+  >
+    <div class="contrato">
+      <b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span>
+    </div>
+    <div class="separar"></div>
+    <div class="buyNow">
+      <a
+        href="https://www.pinksale.finance/launchpad/0x8cf9cA848ECAB7781a316eFFaFa41876c585Bc48?chain=BSC"
+        target="_blank"
+        class="btn_moner"
+      >
+        <div class="texto1">BUY MONNER</div>
+        <div class="logos">
+          <div class="binance"><img src="/./img/Articulo/BNC.svg" /></div>
+          <div class="meta"><img src="/./img/Articulo/Meta.svg" /></div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Contenedor de Articulos -->
+  <div class="containerArticulo">
+    <div class="contenedorDeArticulo">
+      <Articulo
+        :class="{
+          articulo__aparecer:
+            (this.enterAnimation && !this.isRevert) ||
+            (this.isChanged && !this.enterAnimation && !this.isRevert),
+          articulo__aparecer_revert: this.enterAnimation && this.isRevert,
+          articulo__desaparecer_revert: this.exitAnimation && this.isRevert,
+          articulo__desaparecer: this.exitAnimation && !this.isRevert,
+        }"
+        v-for="item in vectorArticulo"
+        :key="item"
+        :titulo="item.titulo"
+        :img="item.imagen"
+        :url="item.link"
+      />
+    </div>
+  </div>
+
+  <!-- Contenedor de Redes Sociales -->
+  <div class="arrow"></div>
+  <div class="arrow2"></div>
+
+  <div @click="CambiarArticulos()" class="flecha flecha_before">
+    <img src="../assets/flecha.svg" alt="arrow before" />
+  </div>
+  <div @click="CambiarArticulos()" class="flecha flecha_next">
+    <img src="../assets/flecha.svg" alt="arrow next" />
+  </div>
+  <!-- <div class="textscroll">
+    <h3>Scroll to Right</h3>
+  </div> -->
+  <div class="logo-redes">
+    <div class="icon icon-telegram">
+      <a href="https://t.me/monnerversecommunity" target="_blank">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+      </a>
+    </div>
+    <div class="icon icon-reddit">
+      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
+      </a>
+    </div>
+    <div class="icon icon-discord">
+      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+      </a>
+    </div>
+  </div>
+</template>
+
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
@@ -202,10 +217,12 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
   z-index: 0;
 }
 
@@ -314,12 +331,12 @@ img {
   position: absolute;
   top: 65%;
   margin: 0;
-  padding: .5rem;
+  padding: 0.5rem;
   box-sizing: border-box;
 }
 
 .flecha:hover {
-  padding: .7rem;
+  padding: 0.7rem;
 }
 
 .flecha_before {
@@ -327,19 +344,16 @@ img {
   left: 10%;
 }
 
-.flecha_before>img {
+.flecha_before > img {
   margin: 0;
   rotate: 90deg;
-
 }
 
 .flecha_next {
-
   right: 10%;
 }
 
-.flecha_next>img {
-
+.flecha_next > img {
   rotate: -90deg;
 }
 
@@ -353,11 +367,11 @@ img {
 }
 
 .btn_buy__aparecer {
-  animation: btn_aparecer .8s forwards ease-in-out;
+  animation: btn_aparecer 0.8s forwards ease-in-out;
 }
 
 .btn_buy__desaparecer_revert {
-  animation: btn_aparecer .8s forwards ease-in-out;
+  animation: btn_aparecer 0.8s forwards ease-in-out;
   animation-direction: reverse;
 }
 
@@ -367,16 +381,14 @@ img {
     top: 100%;
     rotate: 180deg;
   }
-
 }
 
-
 .btn_buy__desaparecer {
-  animation: btn_desaparecer .8s forwards ease-in-out;
+  animation: btn_desaparecer 0.8s forwards ease-in-out;
 }
 
 .btn_buy__aparecer_revert {
-  animation: btn_desaparecer .8s forwards ease-in-out;
+  animation: btn_desaparecer 0.8s forwards ease-in-out;
   animation-direction: reverse;
   z-index: 1000;
 }
@@ -387,7 +399,6 @@ img {
     top: 100%;
     rotate: 180deg;
   }
-
 }
 
 .buyNow {
@@ -396,7 +407,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .btn_moner {
@@ -412,7 +422,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .texto1 {
@@ -483,95 +492,87 @@ img {
 .articulo__aparecer:nth-child(1) {
   position: relative;
   left: 0;
-  animation: aparecer .8s forwards ease-in-out;
+  animation: aparecer 0.8s forwards ease-in-out;
 }
 
 .articulo__aparecer:nth-child(2) {
   position: relative;
   left: 0;
-  animation: aparecer .6s forwards ease-in-out;
+  animation: aparecer 0.6s forwards ease-in-out;
 }
 
 .articulo__aparecer:nth-child(3) {
   position: relative;
   left: 0;
-  animation: aparecer .4s forwards ease-in-out;
+  animation: aparecer 0.4s forwards ease-in-out;
 }
 
 .articulo__desaparecer_revert:nth-child(1) {
   position: relative;
   left: 0;
-  animation: aparecer .4s forwards ease-in-out reverse;
-
+  animation: aparecer 0.4s forwards ease-in-out reverse;
 }
 
 .articulo__desaparecer_revert:nth-child(2) {
   position: relative;
   left: 0;
-  animation: aparecer .6s forwards ease-in-out reverse;
-
+  animation: aparecer 0.6s forwards ease-in-out reverse;
 }
 
 .articulo__desaparecer_revert:nth-child(3) {
   position: relative;
   left: 0;
-  animation: aparecer .8s forwards ease-in-out reverse;
-
+  animation: aparecer 0.8s forwards ease-in-out reverse;
 }
 
 .articulo__desaparecer:nth-child(1) {
   position: relative;
   left: 0;
-  animation: desaparecer .8s forwards ease-in-out;
+  animation: desaparecer 0.8s forwards ease-in-out;
   animation-fill-mode: forwards;
 }
 
 .articulo__desaparecer:nth-child(2) {
   position: relative;
   left: 0;
-  animation: desaparecer .6s  forwards ease-in-out;
+  animation: desaparecer 0.6s forwards ease-in-out;
   animation-fill-mode: forwards;
 }
 
 .articulo__desaparecer:nth-child(3) {
   position: relative;
   left: 0;
-  animation: desaparecer .4s forwards ease-in-out;
+  animation: desaparecer 0.4s forwards ease-in-out;
 }
 
 .articulo__aparecer_revert:nth-child(1) {
   position: relative;
   left: 0;
-  animation: desaparecer .8s  ease-in-out reverse;
-
+  animation: desaparecer 0.8s ease-in-out reverse;
 }
 
 .articulo__aparecer_revert:nth-child(2) {
   position: relative;
   left: 0;
-  animation: desaparecer .6s ease-in-out reverse;
-
+  animation: desaparecer 0.6s ease-in-out reverse;
 }
 
 .articulo__aparecer_revert:nth-child(3) {
   position: relative;
   left: 0;
-  animation: desaparecer .4s  ease-in-out reverse;
-
+  animation: desaparecer 0.4s ease-in-out reverse;
 }
 
 @keyframes aparecer {
   0% {
     left: 127%;
   }
-
 }
 
 @keyframes desaparecer {
   100% {
     left: -127%;
   }
-
 }
 
 @media screen and (width > 850px) {
@@ -629,12 +630,8 @@ h4 {
   z-index: 999;
 } */
 
-
-
 @media screen and (max-width: 900px) {
-
   .flecha_before {
-
     left: 1%;
   }
 
@@ -645,7 +642,7 @@ h4 {
   .arrow,
   .arrow:before {
     position: absolute;
-    left: 50%
+    left: 50%;
   }
 
   .arrow {
@@ -664,7 +661,7 @@ h4 {
   }
 
   .arrow:before {
-    content: '';
+    content: "";
     width: 15px;
     height: 15px;
     top: 50%;
@@ -692,7 +689,7 @@ h4 {
   .arrow2,
   .arrow2:before {
     position: absolute;
-    left: 50%
+    left: 50%;
   }
 
   .arrow2 {
@@ -711,7 +708,7 @@ h4 {
   }
 
   .arrow2:before {
-    content: '';
+    content: "";
     width: 15px;
     height: 15px;
     top: 50%;
@@ -753,18 +750,18 @@ h4 {
     left: 50%;
     transform: translate(-50%, 0);
     margin: 0;
-
   }
-
 
   .containerArticulo::-webkit-scrollbar:horizontal {
     height: 10px;
   }
 
   .containerArticulo::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg,
-        rgb(33, 32, 85) 0%,
-        rgba(1, 209, 88, 1) 100%);
+    background: linear-gradient(
+      90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%
+    );
     border-radius: 20px;
     border: 2px solid #f1f2f3;
   }
@@ -794,7 +791,7 @@ h4 {
     height: 90%;
   }
 
-  .contenedorDeArticulo>* {
+  .contenedorDeArticulo > * {
     width: 100%;
     padding: 1.5rem;
     box-sizing: border-box;
@@ -831,7 +828,6 @@ h4 {
 
   .separar {
     height: 20%;
-
   }
 
   .contrato {

@@ -1,15 +1,22 @@
-<script setup>
+<script>
 import fasesComponentes from "./ComponentsPhases.vue";
+export default {
+  props: ["enterAnimation", "exitAnimation", "isRevert"],
+};
 </script>
 
 <template>
   <!--FONDO-->
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
-  <div :class="{
-    fondo: true, 'fondo-montana': true,
-    'montana__desaparecer_revert': this.exitAnimation && this.isRevert
-  }"><img src="/img/fondo-montana.png" />
+  <div
+    :class="{
+      fondo: true,
+      'fondo-montana': true,
+      montana__desaparecer_revert: this.exitAnimation && this.isRevert,
+    }"
+  >
+    <img src="/img/fondo-montana.png" />
   </div>
   <div class="fondo fondo-oscurecer"></div>
   <div class="circuito circuito-izquierdo">
@@ -21,14 +28,15 @@ import fasesComponentes from "./ComponentsPhases.vue";
   <!--FIN FONDO-->
   <div class="arrow"></div>
   <div class="arrow2"></div>
-  <div :class="{
-    fases: true,
-    'fases__aparecer': this.enterAnimation && !this.isRevert,
-    'fases__aparecer_revert': this.enterAnimation && this.isRevert,
-    'fases__desaparecer_revert': this.exitAnimation && this.isRevert,
-    'fases__desaparecer': this.exitAnimation && !this.isRevert
-  
-  }">
+  <div
+    :class="{
+      fases: true,
+      fases__aparecer: this.enterAnimation && !this.isRevert,
+      fases__aparecer_revert: this.enterAnimation && this.isRevert,
+      fases__desaparecer_revert: this.exitAnimation && this.isRevert,
+      fases__desaparecer: this.exitAnimation && !this.isRevert,
+    }"
+  >
     <div class="titulo">
       <h1>phase 1</h1>
     </div>
@@ -40,47 +48,53 @@ import fasesComponentes from "./ComponentsPhases.vue";
     </div>
   </div>
 
-  <div :class="{
-    circulo: true, circulo__1: true, 'circulo__aparecer': this.enterAnimation && !this.isRevert,
-    'circulo__desaparecer_revert': this.exitAnimation && this.isRevert,
-  }">
+  <div
+    :class="{
+      circulo: true,
+      circulo__1: true,
+      circulo__aparecer: this.enterAnimation && !this.isRevert,
+      circulo__desaparecer_revert: this.exitAnimation && this.isRevert,
+    }"
+  >
     <img src="../assets/aro.svg" />
   </div>
 
-  <div :class="{
-    circulo: true, circulo__2: true, 'circulo__aparecer': this.enterAnimation && !this.isRevert,
-    'circulo__desaparecer_revert': this.exitAnimation && this.isRevert,
-  }">
+  <div
+    :class="{
+      circulo: true,
+      circulo__2: true,
+      circulo__aparecer: this.enterAnimation && !this.isRevert,
+      circulo__desaparecer_revert: this.exitAnimation && this.isRevert,
+    }"
+  >
     <img src="../assets/aro.svg" />
   </div>
 
-
-  <div :class="{
-    componentes: true,
-    'componentes__aparecer': this.enterAnimation && !this.isRevert,
-    'componentes__aparecer_revert': this.enterAnimation && this.isRevert,
-    'componentes__desaparecer_revert': this.exitAnimation && this.isRevert,
-    'componentes__desaparecer': this.exitAnimation && !this.isRevert
-  }">
+  <div
+    :class="{
+      componentes: true,
+      componentes__aparecer: this.enterAnimation && !this.isRevert,
+      componentes__aparecer_revert: this.enterAnimation && this.isRevert,
+      componentes__desaparecer_revert: this.exitAnimation && this.isRevert,
+      componentes__desaparecer: this.exitAnimation && !this.isRevert,
+    }"
+  >
     <div class="componente componente__1">
-      <fasesComponentes title="collection" description="Collection of documents for important Exchanges:
-         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others." />
+      <fasesComponentes
+        title="collection"
+        description="Collection of documents for important Exchanges:
+         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others."
+      />
     </div>
 
     <div class="componente componente__3">
-      <fasesComponentes title="started"
-        description="Started mass advertising in more than 20 countries around the world" />
+      <fasesComponentes
+        title="started"
+        description="Started mass advertising in more than 20 countries around the world"
+      />
     </div>
-
   </div>
-
 </template>
-
-<script>
-export default {
-  props: ["enterAnimation", "exitAnimation", "isRevert"]
-};
-</script>
 
 <style scoped>
 /* style of web */
@@ -102,18 +116,22 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
   z-index: 1;
 }
 
 .filtro-superior {
-  background: radial-gradient(circle at center,
-      #f9f9fa 0%,
-      #c8ced4 50%,
-      #a8aaaf 100%);
+  background: radial-gradient(
+    circle at center,
+    #f9f9fa 0%,
+    #c8ced4 50%,
+    #a8aaaf 100%
+  );
   mix-blend-mode: multiply;
   z-index: 2;
 }
@@ -171,49 +189,44 @@ img {
   z-index: 6;
   left: 27%;
   top: 25%;
-
 }
 
 .fases__aparecer {
-  animation: aparecer .6s;
-  animation-delay: .1;
+  animation: aparecer 0.6s;
+  animation-delay: 0.1;
   animation-fill-mode: forwards;
 }
 
 .fases__aparecer_revert {
-  animation: desaparecer .6s;
-  animation-delay: .1;
+  animation: desaparecer 0.6s;
+  animation-delay: 0.1;
   animation-direction: reverse;
   animation-fill-mode: forwards;
-
 }
 
 .fases__desaparecer {
-  animation: desaparecer .6s;
-  animation-delay: .1;
+  animation: desaparecer 0.6s;
+  animation-delay: 0.1;
   animation-fill-mode: forwards;
 }
 
 .fases__desaparecer_revert {
-  animation: aparecer .6s;
-  animation-delay: .1;
+  animation: aparecer 0.6s;
+  animation-delay: 0.1;
   animation-direction: reverse;
   animation-fill-mode: forwards;
-
 }
 
 @keyframes aparecer {
   0% {
     left: 127%;
   }
-
 }
 
 @keyframes desaparecer {
   100% {
     left: -127%;
   }
-
 }
 
 .titulo {
@@ -243,16 +256,14 @@ img {
 }
 
 .circulo__aparecer {
-  animation: aparecer .8s;
+  animation: aparecer 0.8s;
 }
 
 .circulo__desaparecer_revert {
-  animation: aparecer .8s;
+  animation: aparecer 0.8s;
   animation-direction: reverse;
   animation-fill-mode: forwards;
-
 }
-
 
 .circulo__1 {
   left: 27%;
@@ -277,25 +288,23 @@ img {
 }
 
 .componentes__aparecer {
-  animation: aparecer .9s;
+  animation: aparecer 0.9s;
 }
 
 .componentes__aparecer_revert {
-  animation: desaparecer .9s;
+  animation: desaparecer 0.9s;
   animation-direction: reverse;
   animation-fill-mode: forwards;
-
 }
 
 .componentes__desaparecer {
-  animation: desaparecer .9s;
+  animation: desaparecer 0.9s;
 }
 
 .componentes__desaparecer_revert {
-  animation: aparecer .9s;
+  animation: aparecer 0.9s;
   animation-direction: reverse;
   animation-fill-mode: backwards;
-
 }
 
 .componente {
@@ -320,7 +329,6 @@ img {
 }
 
 @media screen and (max-width: 900px) {
-
   .circuito {
     display: none;
   }
@@ -332,7 +340,6 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: start;
-
   }
 
   .titulo {
@@ -352,10 +359,8 @@ img {
   }
 
   .circulo {
-
     left: 20%;
     height: 15%;
-
   }
 
   .circulo__1 {
@@ -369,7 +374,6 @@ img {
     top: 22%;
     width: 100%;
   }
-
 
   .componentes {
     position: absolute;
@@ -396,9 +400,11 @@ img {
   }
 
   .componentes::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg,
-        rgb(33, 32, 85) 0%,
-        rgba(1, 209, 88, 1) 100%);
+    background: linear-gradient(
+      90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%
+    );
     border-radius: 20px;
     border: 2px solid #f1f2f3;
   }
@@ -412,7 +418,6 @@ img {
   }
 
   .componente {
-
     box-sizing: content-box;
     position: unset;
     width: 90%;
@@ -421,11 +426,10 @@ img {
     height: 80%;
   }
 
-
   .arrow,
   .arrow:before {
     position: absolute;
-    left: 50%
+    left: 50%;
   }
 
   .arrow {
@@ -444,7 +448,7 @@ img {
   }
 
   .arrow:before {
-    content: '';
+    content: "";
     width: 15px;
     height: 15px;
     top: 60%;
@@ -472,7 +476,7 @@ img {
   .arrow2,
   .arrow2:before {
     position: absolute;
-    left: 50%
+    left: 50%;
   }
 
   .arrow2 {
@@ -491,7 +495,7 @@ img {
   }
 
   .arrow2:before {
-    content: '';
+    content: "";
     width: 15px;
     height: 15px;
     top: 60%;
@@ -515,6 +519,5 @@ img {
       transform: translate(-10px, -10px);
     }
   }
-
 }
 </style>
