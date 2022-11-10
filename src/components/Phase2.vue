@@ -18,14 +18,28 @@ import fasesComponentes from "./ComponentsPhases.vue";
 
   <div class="Fases">
     <div class="titulo">
-      <h1>phase 2</h1>
+      <h1>Phase 2: presale</h1>
     </div>
     <div class="description">
-      <p>
-        Official pre-sale of 2,000,000 monners at $1.5 publication on
-        www.monneverse.com of the portafolios by monnerstaking at the end of the
-        pre-sale.
+      <p>We will be doing 3 rounds of presale on Pinksale. All participants of the first 2 rounds will receive awesome
+        staking rewards for 2 months!</p>
+
+      <h2>Round A (nov 2022)</h2>
+      <p>666.66MNR tokens available
+        1MNR= 1500 usd
+        Mínimun buy: 1,5 usd</p>
+
+      <h2>Round B (dec 2022)</h2>
+      <p>666.66MNR tokens available
+        1MNR = 1750 usd
+        Mínimun buy: 1,75 usd
       </p>
+      <h2>Round C* (dec 2022)</h2>
+      <p>666.66MNR tokens available
+        1MNR = 2000 usd
+        Mínimun buy: 2 usd</p>
+
+      <p><i>*Will only open if round B sells out. If not, any remaining presale tokens will be BURNED</i></p>
     </div>
   </div>
 
@@ -40,69 +54,39 @@ import fasesComponentes from "./ComponentsPhases.vue";
   </div>
 
   <div class="componentes1">
-    <fasesComponentes
-      title="Enlisting"
-      description="enlist on Pancakeswap one day after our pre-sale"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Enlisting" description="enlist on Pancakeswap one day after our pre-sale"
+      :isVisible="isVisible" />
   </div>
 
   <div class="componentes2">
-    <fasesComponentes
-      title="MonnerStaking"
-      description="MonnerStaking start one day after pre-sale ends,
-             payouts of 12,6% of total capital every 48 hours"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="MonnerStaking" description="MonnerStaking start one day after pre-sale ends,
+             payouts of 12,6% of total capital every 48 hours" :isVisible="isVisible" />
   </div>
 
   <div class="componentes3">
-    <fasesComponentes
-      title="Liquidity"
-      description="liquid lock"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Liquidity" description="liquid lock" :isVisible="isVisible" />
   </div>
 
   <div class="componentes4">
-    <fasesComponentes
-      title="Schedule"
-      description="schedule burning"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Schedule" description="schedule burning" :isVisible="isVisible" />
   </div>
 
   <div class="componentes5">
-    <fasesComponentes
-      title="Certick"
-      description="certick audit"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Certick" description="certick audit" :isVisible="isVisible" />
   </div>
 
   <div class="componentes8">
-    <fasesComponentes
-      title="Official enlistment:"
-      description="coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
-        MEXC global"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Official enlistment:" description="coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
+        MEXC global" :isVisible="isVisible" />
   </div>
 
   <div class="componentes7">
-    <fasesComponentes
-      title="Increase x5"
-      description="Budget increase x5 of our advertising campaign"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Increase x5" description="Budget increase x5 of our advertising campaign"
+      :isVisible="isVisible" />
   </div>
 
   <div class="componentes6">
-    <fasesComponentes
-      title="Holders"
-      description="10.000 holders"
-      :isVisible="isVisible"
-    />
+    <fasesComponentes title="Holders" description="10.000 holders" :isVisible="isVisible" />
   </div>
 </template>
 
@@ -145,22 +129,18 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 1;
 }
 
 .filtro-superior {
-  background: radial-gradient(
-    circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
-  );
+  background: radial-gradient(circle at center,
+      #f9f9fa 0%,
+      #c8ced4 50%,
+      #a8aaaf 100%);
   mix-blend-mode: multiply;
   z-index: 2;
 }
@@ -200,6 +180,7 @@ img {
 /* FIN ESTILO FONDO */
 
 .Fases {
+  font-family: "Work Sans";
   justify-content: center;
   text-align: center;
   position: absolute;

@@ -148,6 +148,7 @@ export default {
   max-width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
+  height: max-content;
 }
 
 /* Fondo de la pagina*/
@@ -231,7 +232,6 @@ img {
   margin: 0 auto;
   border-radius: 1vw;
   scroll-snap-type: x mandatory;
-  overflow-x: scroll;
   justify-content: center;
 }
 
