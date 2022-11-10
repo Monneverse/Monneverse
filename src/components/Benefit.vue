@@ -1,18 +1,7 @@
-<script setup>
-defineProps({
-  enterAnimation: {
-    type: Boolean,
-    required: true,
-  },
-  exitAnimation: {
-    type: Boolean,
-    required: true,
-  },
-  isRevert: {
-    type: Boolean,
-    required: true,
-  },
-});
+<script>
+export default {
+  props: ["enterAnimation", "exitAnimation", "isRevert"],
+};
 </script>
 <template>
   <!--FONDO-->

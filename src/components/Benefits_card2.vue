@@ -1,26 +1,12 @@
 <script setup>
 import Benefit from "./ComponenteBenefit.vue";
-defineProps({
-  enterAnimation: {
-    type: Boolean,
-    required: true,
-  },
-  exitAnimation: {
-    type: Boolean,
-    required: true,
-  },
-  isRevert: {
-    type: Boolean,
-    required: true,
-  },
-});
 </script>
 <template>
   <!--FONDO-->
 
   <div class="fondo">
     <div
-    :class="{
+      :class="{
         'fondo-benefit': true,
         'animacion-benefit': this.enterAnimation && !this.isRevert,
         'animacion-benefit-revert': this.exitAnimation && this.isRevert,
@@ -118,6 +104,11 @@ defineProps({
     </div>
   </div>
 </template>
+<script>
+export default {
+  props: ["enterAnimation", "exitAnimation", "isRevert"],
+};
+</script>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
@@ -310,8 +301,7 @@ img {
   background-size: no-repeat center center fixed;
   z-index: 5;
 }
-.fondo-benefit  img {
-
+.fondo-benefit img {
   position: absolute;
   top: 0%;
   width: 200%;
@@ -365,7 +355,6 @@ img {
   animation-duration: 1s;
 }
 
-
 .animacion-benefit-up img {
   animation-duration: 0.8s;
   animation-name: arriba;
@@ -382,5 +371,4 @@ img {
     top: -5%;
   }
 }
-
 </style>

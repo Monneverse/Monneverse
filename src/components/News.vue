@@ -3,10 +3,15 @@
 
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
-  <div :class="{
-    fondo: true, 'fondo-montana': true,
-    'montana__desaparecer': this.exitAnimation && !this.isRevert
-  }"><img src="/img/fondo-montana.png" /></div>
+  <div
+    :class="{
+      fondo: true,
+      'fondo-montana': true,
+      montana__desaparecer: this.exitAnimation && !this.isRevert,
+    }"
+  >
+    <img src="/img/fondo-montana.png" />
+  </div>
   <div class="fondo fondo-oscurecer"></div>
   <div id="logo-2" class="logo">
     <img src="/img/logo.svg" alt="" />
@@ -46,11 +51,13 @@
   <div class="arrow"></div>
   <div class="arrow2"></div>
   <div class="major">
-    <div :class="{
-      contenido: true,
-      'contenido__aparecer_revert': this.enterAnimation && this.isRevert,
-      'contenido__desaparecer': this.exitAnimation && !this.isRevert
-    }">
+    <div
+      :class="{
+        contenido: true,
+        contenido__aparecer_revert: this.enterAnimation && this.isRevert,
+        contenido__desaparecer: this.exitAnimation && !this.isRevert,
+      }"
+    >
       <div class="columnas">
         <div class="news">
           <a href=""><img src="/img/News/cryptoPotato.png" /></a>
@@ -64,28 +71,36 @@
       </div>
 
       <div class="columnas">
-        <div :class="{
-          circulo: true, 'circulo__aparecer': this.enterAnimation && !this.isRevert,
-          'circulo__aparecer_revert': this.enterAnimation && this.isRevert,
-          'circulo__desaparecer_revert': this.exitAnimation && this.isRevert,
-          'circulo__desaparecer': this.exitAnimation && !this.isRevert
-        }"></div>
+        <div
+          :class="{
+            circulo: true,
+            circulo__aparecer: this.enterAnimation && !this.isRevert,
+            circulo__aparecer_revert: this.enterAnimation && this.isRevert,
+            circulo__desaparecer_revert: this.exitAnimation && this.isRevert,
+            circulo__desaparecer: this.exitAnimation && !this.isRevert,
+          }"
+        ></div>
         <div class="indicador"></div>
       </div>
 
       <div class="columnas">
         <div class="news">
           <a
-            href="https://criptotendencia.com/2022/08/03/por-que-monner-puede-convertirse-en-una-de-las-mejores-criptomonedas-para-invertir/"><img
-              src="/img/Exchanges/criptotend.png" /></a>
+            href="https://criptotendencia.com/2022/08/03/por-que-monner-puede-convertirse-en-una-de-las-mejores-criptomonedas-para-invertir/"
+            ><img src="/img/Exchanges/criptotend.png"
+          /></a>
         </div>
         <div class="news">
-          <a href="https://www.coinspeaker.com/monner-coin-revolutionize-crypto/"><img
-              src="/img/Exchanges/coinspeaker.png" /></a>
+          <a
+            href="https://www.coinspeaker.com/monner-coin-revolutionize-crypto/"
+            ><img src="/img/Exchanges/coinspeaker.png"
+          /></a>
         </div>
         <div class="news">
-          <a href="https://www.territoriobitcoin.com/una-nueva-criptomoneda-en-tendencia/"><img
-              src="/img/Exchanges/territoriobtc.png" /></a>
+          <a
+            href="https://www.territoriobitcoin.com/una-nueva-criptomoneda-en-tendencia/"
+            ><img src="/img/Exchanges/territoriobtc.png"
+          /></a>
         </div>
       </div>
     </div>
@@ -131,7 +146,7 @@ img {
 }
 
 .circulo__aparecer {
-  animation: aparecer_circulo .5s ease-in-out;
+  animation: aparecer_circulo 0.5s ease-in-out;
 }
 
 .circulo__desaparecer_revert {
@@ -147,7 +162,6 @@ img {
     width: 30rem;
     height: 30rem;
     background-color: rgba(255, 255, 255, 0.3);
-
   }
 }
 
@@ -160,7 +174,6 @@ img {
     width: 30rem;
     height: 30rem;
     background-color: rgba(255, 255, 255, 0.3);
-
   }
 }
 
@@ -174,19 +187,23 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
   z-index: 1;
 }
 
 .filtro-superior {
   z-index: 2;
-  background: radial-gradient(circle at center,
-      #f9f9fa 0%,
-      #c8ced4 50%,
-      #a8aaaf 100%);
+  background: radial-gradient(
+    circle at center,
+    #f9f9fa 0%,
+    #c8ced4 50%,
+    #a8aaaf 100%
+  );
   mix-blend-mode: multiply;
 }
 
@@ -196,8 +213,6 @@ img {
   left: 0;
   z-index: 3;
 }
-
-
 
 .montana__desaparecer {
   animation: montana__aparecer 1s ease-in-out 0s 1 normal;
@@ -374,7 +389,6 @@ img {
   font-family: "Work Sans", sans-serif;
 }
 
-
 @media only screen and (min-device-width: 175px) and (max-device-width: 667px) {
   .titulo {
     top: 11.5%;
@@ -406,20 +420,17 @@ img {
 }
 
 .contenido__desaparecer {
-  animation: desparecer_contenido 1s ease-in-out ;
-
+  animation: desparecer_contenido 1s ease-in-out;
 }
 
 .contenido__aparecer_revert {
   animation: desparecer_contenido 1s ease-in-out forwards reverse;
-
 }
 
 @keyframes desparecer_contenido {
   100% {
     opacity: 0;
   }
-
 }
 
 .columnas {
@@ -457,7 +468,6 @@ img {
 }
 
 @media screen and (max-width: 900px) {
-
   .major {
     overflow: hidden;
     overflow-x: scroll;
@@ -466,15 +476,16 @@ img {
     padding: 1rem;
   }
 
-
   .major::-webkit-scrollbar:horizontal {
     height: 10px;
   }
 
   .major::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg,
-        rgb(33, 32, 85) 0%,
-        rgba(1, 209, 88, 1) 100%);
+    background: linear-gradient(
+      90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%
+    );
     border-radius: 20px;
     border: 2px solid #f1f2f3;
   }
@@ -490,7 +501,7 @@ img {
   .arrow,
   .arrow:before {
     position: absolute;
-    left: 50%
+    left: 50%;
   }
 
   .arrow {
@@ -509,7 +520,7 @@ img {
   }
 
   .arrow:before {
-    content: '';
+    content: "";
     width: 15px;
     height: 15px;
     top: 50%;
@@ -537,7 +548,7 @@ img {
   .arrow2,
   .arrow2:before {
     position: absolute;
-    left: 50%
+    left: 50%;
   }
 
   .arrow2 {
@@ -556,7 +567,7 @@ img {
   }
 
   .arrow2:before {
-    content: '';
+    content: "";
     width: 15px;
     height: 15px;
     top: 50%;
@@ -598,7 +609,6 @@ img {
     width: 100%;
     height: 100%;
   }
-
 
   .columnas {
     width: 100%;
@@ -685,10 +695,12 @@ img {
   border-radius: 50%;
   bottom: -30%;
   transform: rotate(-30deg);
-  background: radial-gradient(ellipse at center,
-      rgba(255, 255, 255, 1) 0%,
-      transparent 55%,
-      rgba(184, 184, 184, 0) 100%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 1) 0%,
+    transparent 55%,
+    rgba(184, 184, 184, 0) 100%
+  );
   filter: blur(3rem);
   left: 30%;
 }
@@ -701,10 +713,12 @@ img {
   bottom: -30%;
   left: 40%;
   transform: rotate(0deg);
-  background: radial-gradient(ellipse at center,
-      rgba(255, 255, 255, 1) 0%,
-      transparent 55%,
-      rgba(184, 184, 184, 0) 100%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 1) 0%,
+    transparent 55%,
+    rgba(184, 184, 184, 0) 100%
+  );
   filter: blur(3rem);
 }
 
@@ -716,10 +730,12 @@ img {
   bottom: -30%;
   left: 55%;
   transform: rotate(-150deg);
-  background: radial-gradient(ellipse at center,
-      rgba(255, 255, 255, 1) 0%,
-      transparent 55%,
-      rgba(184, 184, 184, 0) 100%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 1) 0%,
+    transparent 55%,
+    rgba(184, 184, 184, 0) 100%
+  );
   filter: blur(3rem);
 }
 </style>
