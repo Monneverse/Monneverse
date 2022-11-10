@@ -42,9 +42,6 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {};
-  },
 };
 </script>
 

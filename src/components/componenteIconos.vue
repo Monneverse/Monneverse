@@ -1,16 +1,7 @@
-<script setup>
-defineProps({
-  //icono imagen
-  iconos: {
-    type: String,
-    required: true,
-  },
-  //nombre icono
-  iconname: {
-    type: String,
-    required: true,
-  },
-});
+<script>
+export default {
+  props: ["iconos", "iconname"],
+};
 </script>
 
 <template>
@@ -97,7 +88,7 @@ defineProps({
     font-family: "Work Sans", serif;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: white;
     width: 60%;
     height: 4rem;

@@ -1,8 +1,9 @@
-<script setup>
+<script>
 import fasesComponentes from "./ComponentsPhases.vue";
-
+export default {
+  props: ["enterAnimation", "exitAnimation", "isRevert"],
+};
 </script>
-
 <template>
   <!--FONDO-->
   <div class="fondo fondo-calculadora"></div>
@@ -99,11 +100,6 @@ import fasesComponentes from "./ComponentsPhases.vue";
 
 </template>
 
-<script>
-export default {
-  props: ["enterAnimation", "exitAnimation", "isRevert"]
-};
-</script>
 
 <style scoped>
 img {
