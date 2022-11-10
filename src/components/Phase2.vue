@@ -21,25 +21,8 @@ import fasesComponentes from "./ComponentsPhases.vue";
       <h1>Phase 2: presale</h1>
     </div>
     <div class="description">
-      <p>We will be doing 3 rounds of presale on Pinksale. All participants of the first 2 rounds will receive awesome
-        staking rewards for 2 months!</p>
-
-      <h2>Round A (nov 2022)</h2>
-      <p>666.66MNR tokens available
-        1MNR= 1500 usd
-        Mínimun buy: 1,5 usd</p>
-
-      <h2>Round B (dec 2022)</h2>
-      <p>666.66MNR tokens available
-        1MNR = 1750 usd
-        Mínimun buy: 1,75 usd
-      </p>
-      <h2>Round C* (dec 2022)</h2>
-      <p>666.66MNR tokens available
-        1MNR = 2000 usd
-        Mínimun buy: 2 usd</p>
-
-      <p><i>*Will only open if round B sells out. If not, any remaining presale tokens will be BURNED</i></p>
+      We will be doing 3 rounds of presale on Pinksale. All participants of the first 2 rounds will receive awesome
+        staking rewards for 2 months!
     </div>
   </div>
 
@@ -207,7 +190,7 @@ img {
 .description {
   color: white;
   width: 45%;
-  font-size: 1.3vw;
+  font-size: 1rem; /** Changed from 1.3vw because it was ininteligible on small screens */
   font-family: Roboto;
 }
 
