@@ -1,4 +1,5 @@
 <script>
+import Chart from "./tokenomicsChart.ts"
 export default {
   props: {
     index_pagina: {
@@ -6,7 +7,10 @@ export default {
       required: true,
     },
   },
-};
+  components: {
+    Chart,
+  },
+}
 </script>
 
 <template>
@@ -37,83 +41,11 @@ export default {
   >
     <h1>TOKENOMICS</h1>
   </div>
+  
   <div class="content">
-    <div class="cards">
-      <div class="purchase-tax">
-        <div class="">
-          <div
-            :class="{
-              titulo1: true,
-              'animacion-desplazamiento-titulo1': index_pagina == 13,
-            }"
-          >
-            <h2>Purchase Tax</h2>
-          </div>
-        </div>
-
-        <div class="">
-          <p>To buy 9% slip</p>
-        </div>
-        <div class="">
-          <p>Automatic LP 3% of order fees go back into liquidity</p>
-        </div>
-        <div class="">
-          <p>
-            Bank Security 3% of order fees are stores in BANK SECURITY for price
-            protection
-          </p>
-        </div>
-        <div class="">
-          <p>Management 1.5% of order fees go to the treasury</p>
-        </div>
-        <div class="">
-          <p>Monner Burns 1.5% is burned for stability and price increase</p>
-        </div>
-      </div>
-    </div>
-    <div class="cards">
-      <div class="plus">
-        <div class=""></div>
-        <div class=""><img src="/img/plus.svg" alt="" /></div>
-        <div class=""><img src="/img/plus.svg" alt="" /></div>
-        <div class=""><img src="/img/plus.svg" alt="" /></div>
-        <div class=""><img src="/img/plus.svg" alt="" /></div>
-        <div class=""><img src="/img/plus.svg" alt="" /></div>
-      </div>
-    </div>
-    <div class="cards">
-      <div class="sale-tax">
-        <div class="">
-          <div
-            :class="{
-              titulo2: true,
-              'animacion-desplazamiento-titulo2': index_pagina == 13,
-            }"
-          >
-            <h2>Sale Tax</h2>
-          </div>
-        </div>
-        <div class="">
-          <p>To buy 10% slip</p>
-        </div>
-        <div class="">
-          <p>Automatic LP 3% of order fees go back into liquidity</p>
-        </div>
-        <div class="">
-          <p>
-            Bank Security 3% of order fees are stored in BANK SECURITY for price
-            protection
-          </p>
-        </div>
-        <div class="">
-          <p>Management 2% of order fees go to the treasury</p>
-        </div>
-        <div class="">
-          <p>Monner Burns 2% is burned for stability and price increase</p>
-        </div>
-      </div>
-    </div>
+    <Chart />
   </div>
+
   <div class="container-alianza">
     <div class="contenido">
       <div class="nombre_Alianza">
@@ -209,15 +141,17 @@ img {
 .content {
   position: relative;
   z-index: 55;
-  top: 20%;
+  top: 30%;
   display: flex;
-  width: 80%;
+  width: 100%;
   height: 57%;
   margin: 0 auto;
   border-radius: 1vw;
   scroll-snap-type: x mandatory;
   overflow-x: scroll;
+  justify-content: center;
 }
+
 .content::-webkit-scrollbar {
   -webkit-appearance: none;
 }
@@ -240,22 +174,7 @@ img {
   border-radius: 10px;
 }
 
-@media screen and (min-width: 769px) {
-  .content {
-    top: 23%;
-    display: grid;
-    grid-template-rows: 30vw;
-    grid-template-columns: 45% 10% 45%;
-    width: 100%;
-    height: 57%;
-    margin: 0 auto;
-    overflow-x: initial;
-    scroll-snap-type: none;
-  }
-  .content::-webkit-scrollbar {
-    display: none;
-  }
-}
+
 
 .cards {
   width: 100%;
