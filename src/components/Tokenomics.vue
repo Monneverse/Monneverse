@@ -1,16 +1,91 @@
 <script>
-import Chart from "./tokenomicsChart.ts"
+import ChartDataLabels from "chartjs-plugin-datalabels"
+import { Doughnut } from "vue-chartjs"
+import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  ArcElement,
+  CategoryScale,
+} from "chart.js"
+
+ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale)
+
 export default {
+  name: 'DoughnutChart',
+  components: { Doughnut },
   props: {
-    index_pagina: {
-      type: Number,
-      required: true,
+    chartId: {
+      type: String,
+      default: 'doughnut-chart'
     },
+    datasetIdKey: {
+      type: String,
+      default: 'label'
+    },
+    cssClasses: {
+      default: 'doughnut',
+      type: String
+    },
+    plugins: {
+      type: Object,
+      default: () => [ChartDataLabels],
+    }
   },
-  components: {
-    Chart,
-  },
+  data() {
+    const percentages = [30, 30, 20, 10, 3]
+    return {
+      chartData: {
+        labels: [
+          " 30% Ecosystem",
+          " 30% Staking and DeFi",
+          " 20% Presales",
+          " 10% Initial development",
+          " 3% Airdrop and early investors",
+        ],
+        datasets: [
+          {
+            backgroundColor: ["#097561aa"],
+            data: [30, 30, 20, 10, 3],
+            hoverOffset: 2,
+            datalabels: {
+              color: "#fff",
+              formatter: function (value, context) {
+                return percentages[context.dataIndex] + "%"
+              },
+            },
+            hoverBackgroundColor: "#01d158",
+          },
+        ],
+      },
+      chartOptions: {
+        responsive: true,
+        maintainAspectRatio: false,
+        showTooltips: false,
+        plugins: {
+          tooltip: {
+            enabled: true,
+            callbacks: {
+              label: (tooltipItem) => {
+                return tooltipItem.label
+              },
+            },
+          },
+          legend: {
+            position: "left",
+            labels: {
+              font: {
+                size: 16,
+              },
+            },
+          },
+        },
+      }
+    }
+  }
 }
+
 </script>
 
 <template>
@@ -33,17 +108,16 @@ export default {
   </div>
 
   <!-- Contenedor de Contenido -->
-  <div
-    :class="{
-      titulo: true,
-      'animacion-desplazamiento-titulo': index_pagina == 13,
-    }"
-  >
+  <div :class="{
+    titulo: true,
+    'animacion-desplazamiento-titulo': index_pagina == 13,
+  }">
     <h1>TOKENOMICS</h1>
   </div>
-  
+
   <div class="content">
-    <Chart />
+    <Doughnut :chart-options="chartOptions" :chart-data="chartData" :chart-id="chartId"
+      :dataset-id-key="datasetIdKey" :plugins="plugins" :css-classes="cssClasses"/>
   </div>
 
   <div class="container-alianza">
@@ -68,6 +142,14 @@ export default {
   src: url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
 }
 
+/* Estilos del gráfico dona */
+.doughnut {
+  width: 52rem;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 /* Fondo de la pagina*/
 img {
   width: 100%;
@@ -89,6 +171,7 @@ img {
   font-size: 7vw;
   font-weight: 500;
 }
+
 @media screen and (min-width: 769px) {
   .titulo h1 {
     color: white;
@@ -161,11 +244,9 @@ img {
 }
 
 .content::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    90deg,
-    rgb(33, 32, 85) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%);
   border-radius: 20px;
   border: 2px solid #f1f2f3;
 }
@@ -187,12 +268,14 @@ img {
 .cards:nth-child(2) {
   width: 20%;
 }
+
 @media screen and (min-width: 769px) {
   .cards:nth-child(1) {
     display: flex;
     justify-content: flex-end;
   }
 }
+
 .purchase-tax {
   display: flex;
   flex-direction: column;
@@ -213,15 +296,18 @@ img {
   text-align: right;
   font-size: 1rem;
 }
+
 @media screen and (min-width: 769px) {
   .purchase-tax {
     justify-content: space-between;
     width: 90%;
     height: 100%;
   }
+
   .purchase-tax h2 {
     font-size: 2.5vw;
   }
+
   .purchase-tax p {
     font-size: 1.5vw;
   }
@@ -235,11 +321,9 @@ img {
   align-items: center;
   height: 80%;
   width: 77%;
-  background: linear-gradient(
-    90deg,
-    rgb(33, 32, 85) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%);
   border-radius: 0.5vw;
 }
 
@@ -277,12 +361,14 @@ img {
   margin: 0 auto;
   width: 50%;
 }
+
 @media screen and (min-width: 769px) {
   .plus div {
     margin: 0 auto;
     width: 100%;
   }
 }
+
 .sale-tax {
   display: flex;
   flex-direction: column;
@@ -301,15 +387,18 @@ img {
 .sale-tax p {
   font-size: 1rem;
 }
+
 @media screen and (min-width: 769px) {
   .sale-tax {
     justify-content: space-between;
     width: 90%;
     height: 100%;
   }
+
   .sale-tax h2 {
     font-size: 2.5vw;
   }
+
   .sale-tax p {
     font-size: 1.5vw;
   }
@@ -321,11 +410,9 @@ img {
   align-items: center;
   height: 80%;
   width: 77%;
-  background: linear-gradient(
-    90deg,
-    rgb(1, 209, 88) 0%,
-    rgba(33, 32, 85, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(1, 209, 88) 0%,
+      rgba(33, 32, 85, 1) 100%);
   border-radius: 0.5vw;
 }
 
@@ -333,6 +420,7 @@ img {
   padding-left: 10%;
   font-family: Calibri;
 }
+
 @media screen and (min-width: 769px) {
   .titulo2 {
     width: 50%;
@@ -382,6 +470,7 @@ img {
 .imagen-alianza:nth-child(2) {
   width: 8vw;
 }
+
 .imagen-alianza:nth-child(3) {
   width: 6.5vw;
 }
@@ -409,9 +498,11 @@ img {
   z-index: 43;
   opacity: 70%;
 }
+
 ::-webkit-scrollbar {
   display: block;
 }
+
 .animacion-desplazamiento-titulo {
   animation-duration: 0.5s;
   animation-name: desplazamiento;
@@ -423,9 +514,9 @@ img {
     top: -100%;
   }
 
-  100% {
-  }
+  100% {}
 }
+
 .animacion-desplazamiento-titulo1 {
   animation-duration: 0.5s;
   animation-name: desplazamiento2;
@@ -437,9 +528,9 @@ img {
     left: -10%;
   }
 
-  100% {
-  }
+  100% {}
 }
+
 .animacion-desplazamiento-titulo2 {
   animation-duration: 0.35s;
   animation-name: desplazamiento3;
@@ -450,6 +541,7 @@ img {
   0% {
     left: 100%;
   }
+
   25% {
     left: 75%;
   }
@@ -457,9 +549,11 @@ img {
   50% {
     left: 50%;
   }
+
   75% {
     left: 25%;
   }
+
   100% {
     left: 0;
   }
