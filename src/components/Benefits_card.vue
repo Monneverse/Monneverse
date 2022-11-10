@@ -1,26 +1,12 @@
 <script setup>
 import Benefit from "./ComponenteBenefit.vue";
-defineProps({
-  enterAnimation: {
-    type: Boolean,
-    required: true,
-  },
-  exitAnimation: {
-    type: Boolean,
-    required: true,
-  },
-  isRevert: {
-    type: Boolean,
-    required: true,
-  },
-});
 </script>
 <template>
   <!--FONDO-->
 
   <div class="fondo">
     <div
-    :class="{
+      :class="{
         'fondo-benefit': true,
         'animacion-benefit': this.enterAnimation && !this.isRevert,
         'animacion-benefit-revert': this.exitAnimation && this.isRevert,
@@ -115,6 +101,11 @@ developed.
     </div>
   </div>
 </template>
+<script>
+export default {
+  props: ["enterAnimation", "exitAnimation", "isRevert"],
+};
+</script>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
@@ -390,12 +381,12 @@ img {
   }
 }
 .animacion-aparecer {
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
 .animacion-aparecer-revert {
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-name: aparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;

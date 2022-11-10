@@ -1,18 +1,7 @@
-<script setup>
-defineProps({
-  enterAnimation: {
-    type: Boolean,
-    required: true,
-  },
-  exitAnimation: {
-    type: Boolean,
-    required: true,
-  },
-  isRevert: {
-    type: Boolean,
-    required: true,
-  },
-});
+<script >
+export default {
+  props: ["enterAnimation", "exitAnimation", "isRevert"]
+};
 </script>
 <template>
   <!--FONDO-->
@@ -154,7 +143,7 @@ defineProps({
             src="/img/plus.svg"
             alt="Plus-Beneficios"
           />
-          <div class="content-price fadeInUp animated">
+          <div id="contentP" class="content-price fadeInUp animated">
             <div class="titulo-benefit">
               <div class="info-two"><p>At PancakeSwap</p></div>
               <h1><span>$</span>15,300<b>USD</b></h1>
@@ -295,14 +284,15 @@ p {
   height: 10%;
 }
 .beneficio:nth-child(4) {
-  margin-top: 15%;
-  height: 45%;
+  margin-top: 4.5rem;
+  height: 25rem;
 }
 
 .content-price {
   width: 100%;
-  height: 80%;
+  height: 3.5rem;
 }
+
 .titulo-benefit {
   margin: 0;
   width: 100;
@@ -398,6 +388,7 @@ p {
   left: -50%;
   width: 100%;
   height: 100%;
+  
   z-index: -23;
   background-size: no-repeat center center fixed;
 }
@@ -412,7 +403,7 @@ p {
   z-index: 5;
 }
 .fondo-benefit > img {
-  height: 100vh;
+  height: 150vh;
 }
 @media screen and (min-width: 769px) {
   .fondo_rayos {
@@ -487,16 +478,16 @@ p {
   z-index: 33;
 }
 #a {
-  top: 40%;
+  top: 2.3rem;
 }
 #b {
-  top: 50%;
+  top:  1.5rem;
 }
 #c {
-  top: 50%;
+  top:  1.5rem;
 }
 #d {
-  top: 22%;
+  top: 2.4rem;
 }
 .circulos img {
   margin: 0 auto;
