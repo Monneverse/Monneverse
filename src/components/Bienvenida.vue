@@ -387,9 +387,9 @@ img {
 }
 
 .btn_new {
-  padding: 0.7rem;
+  padding: .5rem;
   margin-top: 5%;
-  min-width: 10rem;
+  min-width: 15rem;
   background: linear-gradient(
     90deg,
     #06e2ff 10%,
@@ -403,7 +403,7 @@ img {
   font-family: "Bahn";
   font-style: semibold;
   font-stretch: semi-condensed;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 900px) {
