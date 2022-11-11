@@ -54,7 +54,9 @@
     <p class="subtitle">Utilities DeFi</p>
     <p class="description">Take advantage of this opportunity and <b>reserve</b> your spot in our
       pre-sale</p>
+      <button class="btn_new">HOla</button>
   </div>
+
 </template>
 <script>
 export default {
@@ -77,7 +79,12 @@ export default {
   font-stretch: semi-condensed;
 }
 
-
+.btn_new{
+  padding: 1rem;
+  min-width: 10rem;
+  background-color: #097561;
+  border-radius: 2rem;
+}
 img {
   width: 100%;
   height: 100%;
