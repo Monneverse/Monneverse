@@ -4,6 +4,7 @@ export default {
   components: {
     ComponenteIconos,
   },
+  props: ["enterAnimation", "exitAnimation", "isRevert"],
 };
 </script>
 
@@ -273,11 +274,7 @@ export default {
 
   <!-- FIN CONTENIDO -->
 </template>
-<script>
-export default {
-  props: ["enterAnimation", "exitAnimation"],
-};
-</script>
+
 <style scoped>
 @font-face {
   font-family: "Work Sans", serif;

@@ -4,6 +4,7 @@ export default {
   components: {
     fasesComponentes,
   },
+  props: ["enterAnimation", "exitAnimation", "isRevert"],
 };
 </script>
 <template>
@@ -79,11 +80,7 @@ export default {
   </div>
 
 </template>
-<script>
-export default {
-  props: ["enterAnimation", "exitAnimation", "isRevert"],
-};
-</script>
+
 
 <style scoped>
 img {

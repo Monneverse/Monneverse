@@ -5,6 +5,7 @@ export default {
   components: {
     Benefit,
   },
+  props: ["enterAnimation", "exitAnimation", "isRevert"],
 };
 </script>
 <template>
@@ -107,11 +108,7 @@ developed.
     </div>
   </div>
 </template>
-<script>
-export default {
-  props: ["enterAnimation", "exitAnimation", "isRevert"],
-};
-</script>
+
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");

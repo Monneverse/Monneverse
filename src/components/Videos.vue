@@ -4,6 +4,75 @@ export default {
   components: {
     Youtube,
   },
+
+  props: ["enterAnimation", "exitAnimation", "isRevert"],
+  data() {
+    return {
+      videosPlay: [
+        {
+          title: "Titulo del video",
+          description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.",
+          playlist: [
+            "https://www.youtube.com/embed/FR_ENQQwqN4",
+            "https://www.youtube.com/embed/9x0ktT1zmlo",
+          ],
+          redes: [
+            {
+              name: "discord",
+              url: "https://discord.com/invite/h7fRvek9dn",
+              icon: "src/assets/discord.svg",
+            },
+            {
+              name: "Telegram",
+              url: "https://t.me/monnerversecommunity",
+              icon: "src/assets/Telegram_logo.svg",
+            },
+            {
+              name: "reddit",
+              url: "https://www.reddit.com/user/monnerverse",
+              icon: "src/assets/reddit-4.svg",
+            },
+          ],
+        },
+        {
+          title: "Titulo del video",
+          description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.",
+          playlist: ["https://www.youtube.com/embed/9x0ktT1zmlo"],
+          redes: [
+            {
+              name: "discord",
+              url: "https://discord.com/invite/h7fRvek9dn",
+              icon: "src/assets/discord.svg",
+            },
+          ],
+        },
+        {
+          title: "Titulo del video",
+          description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.",
+          playlist: [
+            "https://www.youtube.com/embed/f10mB6fKszU",
+            "https://www.youtube.com/embed/FR_ENQQwqN4",
+            "https://www.youtube.com/embed/9x0ktT1zmlo",
+          ],
+          redes: [
+            {
+              name: "discord",
+              url: "https://discord.com/invite/h7fRvek9dn",
+              icon: "src/assets/discord.svg",
+            },
+            {
+              name: "reddit",
+              url: "https://www.reddit.com/user/monnerverse",
+              icon: "src/assets/reddit-4.svg",
+            },
+          ],
+        },
+      ],
+    };
+  },
 };
 </script>
 <template>
@@ -78,79 +147,6 @@ export default {
     </a>
   </div>
 </template>
-
-<script>
-export default {
-  props: ["enterAnimation", "exitAnimation", "isRevert"],
-  data() {
-    return {
-      videosPlay: [
-        {
-          title: "Titulo del video",
-          description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.",
-          playlist: [
-            "https://www.youtube.com/embed/FR_ENQQwqN4",
-            "https://www.youtube.com/embed/9x0ktT1zmlo",
-          ],
-          redes: [
-            {
-              name: "discord",
-              url: "https://discord.com/invite/h7fRvek9dn",
-              icon: "src/assets/discord.svg",
-            },
-            {
-              name: "Telegram",
-              url: "https://t.me/monnerversecommunity",
-              icon: "src/assets/Telegram_logo.svg",
-            },
-            {
-              name: "reddit",
-              url: "https://www.reddit.com/user/monnerverse",
-              icon: "src/assets/reddit-4.svg",
-            },
-          ],
-        },
-        {
-          title: "Titulo del video",
-          description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.",
-          playlist: ["https://www.youtube.com/embed/9x0ktT1zmlo"],
-          redes: [
-            {
-              name: "discord",
-              url: "https://discord.com/invite/h7fRvek9dn",
-              icon: "src/assets/discord.svg",
-            },
-          ],
-        },
-        {
-          title: "Titulo del video",
-          description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.",
-          playlist: [
-            "https://www.youtube.com/embed/f10mB6fKszU",
-            "https://www.youtube.com/embed/FR_ENQQwqN4",
-            "https://www.youtube.com/embed/9x0ktT1zmlo",
-          ],
-          redes: [
-            {
-              name: "discord",
-              url: "https://discord.com/invite/h7fRvek9dn",
-              icon: "src/assets/discord.svg",
-            },
-            {
-              name: "reddit",
-              url: "https://www.reddit.com/user/monnerverse",
-              icon: "src/assets/reddit-4.svg",
-            },
-          ],
-        },
-      ],
-    };
-  },
-};
-</script>
 
 <style scoped>
 body {
