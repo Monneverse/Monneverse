@@ -30,11 +30,11 @@ export default {
     fases__desaparecer: this.exitAnimation && !this.isRevert,
   }">
     <div class="titulo">
-      <h1>Phase 2: <br></h1><a>pre-sale</a>
+      <h1>Phase 2: <br><a>pre-sale</a></h1>
     </div>
     <div class="description">
-      We will be doing 3 rounds of presale on Pinksale. All participants of the first 2 rounds will receive awesome
-      staking rewards for 2 months!
+      <!-- We will be doing 3 rounds of presale on Pinksale. All participants of the first 2 rounds will receive awesome
+      staking rewards for 2 months! -->
     </div>
   </div>
 
@@ -56,48 +56,49 @@ export default {
     <img src="../assets/aro.svg" />
   </div>
 
-  <!-- <div :class="{
+  <div :class="{
     componentes: true,
     componentes__aparecer: this.enterAnimation && !this.isRevert,
     componentes__aparecer_revert: this.enterAnimation && this.isRevert,
     componentes__desaparecer_revert: this.exitAnimation && this.isRevert,
     componentes__desaparecer: this.exitAnimation && !this.isRevert,
-  }"> -->
+  }">
 
-  <div class="componentes1">
-    <fasesComponentes title="Enlisting" description="enlist on Pancakeswap one day after our pre-sale"
-      :isVisible="isVisible" />
-  </div>
+    <div class="componente componentes1">
+      <fasesComponentes title="Enlisting" description="enlist on Pancakeswap one day after our pre-sale"
+        :isVisible="isVisible" />
+    </div>
 
-  <div class="componentes2">
-    <fasesComponentes title="MonnerStaking" description="MonnerStaking start one day after pre-sale ends,
+    <div class="componente componentes2">
+      <fasesComponentes title="MonnerStaking" description="MonnerStaking start one day after pre-sale ends,
       payouts of 12,6% of total capital every 48 hours" :isVisible="isVisible" />
-  </div>
+    </div>
 
-  <div class="componentes3">
-    <fasesComponentes title="Liquidity" description="liquid lock" :isVisible="isVisible" />
-  </div>
+    <div class="componente componentes3">
+      <fasesComponentes title="Liquidity" description="liquid lock" :isVisible="isVisible" />
+    </div>
 
-  <div class="componentes4">
-    <fasesComponentes title="Schedule" description="schedule burning" :isVisible="isVisible" />
-  </div>
+    <div class="componente componentes4">
+      <fasesComponentes title="Schedule" description="schedule burning" :isVisible="isVisible" />
+    </div>
 
-  <div class="componentes5">
-    <fasesComponentes title="Certick" description="certick audit" :isVisible="isVisible" />
-  </div>
+    <div class="componente componentes5">
+      <fasesComponentes title="Certick" description="certick audit" :isVisible="isVisible" />
+    </div>
 
-  <div class="componentes8">
-    <fasesComponentes title="Official enlistment:" description="coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
+    <div class="componente componentes8">
+      <fasesComponentes title="Official enlistment:" description="coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
         MEXC global" :isVisible="isVisible" />
-  </div>
+    </div>
 
-  <div class="componentes7">
-    <fasesComponentes title="Increase x5" description="Budget increase x5 of our advertising campaign"
-      :isVisible="isVisible" />
-  </div>
+    <div class="componente componentes7">
+      <fasesComponentes title="Increase x5" description="Budget increase x5 of our advertising campaign"
+        :isVisible="isVisible" />
+    </div>
 
-  <div class="componentes6">
-    <fasesComponentes title="Holders" description="10.000 holders" :isVisible="isVisible" />
+    <div class="componente componentes6">
+      <fasesComponentes title="Holders" description="10.000 holders" :isVisible="isVisible" />
+    </div>
   </div>
 </template>
 
@@ -169,7 +170,7 @@ img {
 
 /* FIN ESTILO FONDO */
 
-.Fases {
+.fases {
   font-family: "Work Sans";
   justify-content: center;
   text-align: center;
@@ -430,6 +431,11 @@ img {
     justify-content: center;
     text-align: center;
     font-size: 2rem;
+  }
+
+  .titulo a {
+    font-size: 9vw;
+    position: unset;
   }
 
   .description {
