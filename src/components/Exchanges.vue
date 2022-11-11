@@ -1,8 +1,5 @@
-<script>
+<script setup>
 import ComponenteIconos from "./componenteIconos.vue";
-export default {
-  props: ["enterAnimation", "exitAnimation"]
-}
 </script>
 
 <template>
@@ -159,7 +156,11 @@ export default {
 
   <!-- FIN CONTENIDO -->
 </template>
-
+<script>
+export default {
+  props: ["enterAnimation", "exitAnimation"]
+}
+</script>
 <style scoped>
 @font-face {
   font-family: "Work Sans", serif;

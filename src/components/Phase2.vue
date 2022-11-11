@@ -1,8 +1,5 @@
-<script>
+<script setup>
 import fasesComponentes from "./ComponentsPhases.vue";
-export default {
-  props: ["enterAnimation", "exitAnimation", "isRevert"],
-};
 </script>
 <template>
   <!--FONDO-->
@@ -99,7 +96,11 @@ export default {
   </div>
 
 </template>
-
+<script>
+export default {
+  props: ["enterAnimation", "exitAnimation", "isRevert"],
+};
+</script>
 
 <style scoped>
 img {
@@ -327,13 +328,13 @@ img {
 }
 
 .componentes__aparecer_revert {
-  animation: desaparecer  .7s;
+  animation: desaparecer .7s;
   animation-direction: reverse;
 
 }
 
 .componentes__desaparecer {
-  animation: desaparecer  .9s;
+  animation: desaparecer .9s;
 }
 
 .componentes__desaparecer_revert {
