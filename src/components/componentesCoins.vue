@@ -36,11 +36,7 @@ export default {
     caja: {
       type: String,
       required: true,
-    },
-    index: {
-      type: Number,
-      required: true,
-    },
+    }
   },
 };
 </script>

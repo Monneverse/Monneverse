@@ -102,8 +102,8 @@ export default {
               this.exitAnimation && !this.isRevert,
           }"
         >
-          <buttom :class="ocultar" v-on:click="mostrarTexto" class="btn centrar"
-            >READ {{ look ? "LESS" : "MORE" }}</buttom
+          <buttom  class="btn centrar"
+            >READ MORE</buttom
           >
         </div>
       </div>
