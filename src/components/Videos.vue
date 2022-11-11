@@ -144,7 +144,7 @@ img {
 
 .fondo-benefit {
   background-size: no-repeat center center fixed;
-  z-index: 5;
+  z-index: 1;
 }
 .fondo-benefit img {
   position: absolute;
