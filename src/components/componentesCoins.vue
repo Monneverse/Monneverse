@@ -1,43 +1,16 @@
 <script>
 export default {
-  props: {
-    icono: {
-      type: String,
-      required: true,
-    },
-    titulo: {
-      type: String,
-      required: true,
-    },
-    sigla: {
-      type: String,
-      required: true,
-    },
-    texto: {
-      type: String,
-      required: true,
-    },
-    capitalizacion: {
-      type: String,
-      required: true,
-    },
-    texto2: {
-      type: String,
-      required: true,
-    },
-    logo: {
-      type: String,
-      required: true,
-    },
-    precio: {
-      type: String,
-      required: true,
-    },
-    caja: {
-      type: String,
-      required: true,
-    }
-  },
+  props: [
+    "icono",
+    "titulo",
+    "sigla",
+    "texto",
+    "capitalizacion",
+    "texto2",
+    "logo",
+    "precio",
+    "caja",
+  ],
 };
 </script>
 
@@ -127,7 +100,6 @@ export default {
 }
 
 .container-texto span {
-
   font-size: 1rem;
 }
 .container-capi {

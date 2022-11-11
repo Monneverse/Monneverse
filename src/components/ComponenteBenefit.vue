@@ -1,23 +1,6 @@
 <script>
 export default {
-  props: {
-    titulo: {
-      type: String,
-      required: true,
-    },
-    texto: {
-      type: String,
-      required: true,
-    },
-    textOculto: {
-      type: String,
-      required: true,
-    },
-    imagen: {
-      type: String,
-      required: true,
-    },
-  },
+  props: ["titulo", "texto", "textoOculto", "imagen"],
   data() {
     return {
       look: false,
