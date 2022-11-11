@@ -1,14 +1,7 @@
-<script setup>
-defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-  description: {
-    type: String,
-    required: true,
-  }
-});
+<script>
+export default {
+  props: ["description", "icono"],
+};
 </script>
 
 <template>
@@ -27,7 +20,6 @@ img {
   width: 100%;
   height: 100%;
 }
-
 
 .contenedor__fases {
   font-family: "Work Sans", sans-serif;
@@ -49,7 +41,7 @@ img {
 .contenedor__fases p {
   font-size: 1.3vw;
   width: 90%;
-  
+
   font-family: "Work Sans", sans-serif;
 }
 
@@ -70,14 +62,13 @@ img {
   border-radius: 50%;
   border: 5px solid white;
   background: linear-gradient(to left, #029f50 0%, #0a664e 50%, #0e444d 80%);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   z-index: 10;
   cursor: pointer;
 }
 
 /* Style of mobile */
 @media screen and (max-width: 900px) {
-
   .circulo-indicador {
     position: absolute;
     top: 10%;
@@ -85,7 +76,6 @@ img {
     transform: translate(-100%, 0%);
     width: 2rem;
     height: 2rem;
-
   }
 
   .contenedor__fases {
@@ -94,18 +84,14 @@ img {
     align-items: flex-start;
   }
 
-
   .contenedor__fases p {
     font-size: 4vw;
     font-family: "Work Sans", sans-serif;
-    margin-top: .2rem;
-
+    margin-top: 0.2rem;
   }
 
   .contenedor__fases b {
     font-size: 5vw;
-
   }
-
 }
 </style>
