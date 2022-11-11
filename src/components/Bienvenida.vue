@@ -54,7 +54,7 @@
     <p class="subtitle">Utilities DeFi</p>
     <p class="description">Take advantage of this opportunity and <b>reserve</b> your spot in our
       pre-sale</p>
-      <button class="btn_new">HOla</button>
+    <button class="btn_new">Buy in pre-Sale</button>
   </div>
 
 </template>
@@ -79,12 +79,6 @@ export default {
   font-stretch: semi-condensed;
 }
 
-.btn_new{
-  padding: 1rem;
-  min-width: 10rem;
-  background-color: #097561;
-  border-radius: 2rem;
-}
 img {
   width: 100%;
   height: 100%;
@@ -455,6 +449,18 @@ img {
   text-transform: uppercase;
 }
 
+.btn_new {
+  padding: 0.7rem;
+  margin-top: 5%;
+  min-width: 10rem;
+  background: linear-gradient(90deg, #06E2FF 10%, #28A3FF 30%, #2E94FF 50%, #4070FF 70%, #5E31FF 100%);
+  border-radius: 2rem;
+  color: #fff;
+  font-family: "Bahn";
+  font-style: semibold;
+  font-stretch: semi-condensed;
+  font-size: 1.5vw;
+}
 
 @media screen and (max-width: 900px) {
   .fondo-montana {

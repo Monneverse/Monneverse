@@ -99,12 +99,8 @@ export default {
       <fasesComponentes title="" description="certik audit" />
     </div>
 
-    <div class="componente componentes8">
-      <fasesComponentes
-        title=""
-        description="Official enlistment: coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
-        MEXC global"
-      />
+    <div class="componente componentes6">
+      <fasesComponentes title="" description="10.000 holders" />
     </div>
 
     <div class="componente componentes7">
@@ -114,8 +110,9 @@ export default {
       />
     </div>
 
-    <div class="componente componentes6">
-      <fasesComponentes title="" description="10.000 holders" />
+    <div class="componente componentes8">
+      <fasesComponentes title="" description="Official enlistment: coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
+        MEXC global" />
     </div>
   </div>
 </template>
@@ -247,11 +244,11 @@ img {
 
 .titulo {
   color: white;
-  right: 28%;
-  bottom: 10%;
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  right: 46%;
+  bottom: 57%;
+  width: auto;
+  height: auto;
+  position: fixed;
   opacity: 100%;
   text-transform: uppercase;
   z-index: 6;
@@ -267,6 +264,7 @@ img {
 
 .description a {
   text-decoration: none;
+  cursor: pointer;
   color: #b48700;
 }
 
@@ -302,9 +300,9 @@ img {
 }
 
 .circulo__2 {
-  left: 22%;
+  left: 26.5%;
   bottom: 30%;
-  width: 55%;
+  width: 45%;
   height: 30%;
 }
 
