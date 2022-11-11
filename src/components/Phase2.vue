@@ -30,7 +30,7 @@ export default {
     fases__desaparecer: this.exitAnimation && !this.isRevert,
   }">
     <div class="titulo">
-      <h1>Phase 2: presale</h1>
+      <h1>Phase 2: <br></h1><a>pre-sale</a>
     </div>
     <div class="description">
       We will be doing 3 rounds of presale on Pinksale. All participants of the first 2 rounds will receive awesome
@@ -222,7 +222,7 @@ img {
 .titulo {
   color: white;
   right: 46%;
-  bottom: 57%;
+  bottom: 53%;
   width: auto;
   height: auto;
   position: fixed;
@@ -232,7 +232,21 @@ img {
   font-family: "work Sans", sans-serif;
 }
 
-.description {
+.titulo a {
+  font-family: "work Sans", sans-serif;
+  font-size: 1.5vw;
+  color: white;
+  right: 47%;
+  bottom: 49%;
+  width: auto;
+  height: auto;
+  position: fixed;
+  opacity: 100%;
+  text-transform: uppercase;
+  z-index: 6;
+}
+
+.titulo .description {
   color: white;
   width: 45%;
   font-size: 1rem;
@@ -252,9 +266,9 @@ img {
 }
 
 .circulo__1 {
-  left: 24%;
+  left: 34%;
   bottom: 40%;
-  width: 50%;
+  width: 30%;
   height: 25%;
 }
 
@@ -278,9 +292,9 @@ img {
 }
 
 .circulo__2 {
-  left: 26.5%;
+  left: 39%;
   bottom: 30%;
-  width: 45%;
+  width: 20%;
   height: 30%;
 }
 

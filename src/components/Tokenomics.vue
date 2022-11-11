@@ -184,9 +184,9 @@ export default {
 /* Estilos del gráfico dona */
 .doughnut {
   position: fixed;
-  top: 28%;
   width: 52rem;
   max-width: 100%;
+  top: 27%;
   height: max-content;
 }
 
@@ -615,6 +615,7 @@ h2 {
 }
 
 .degradado {
+  transform: rotate(300deg);
   background: linear-gradient(to right, #090380 55%, transparent);
   position: absolute;
   width: 100%;
@@ -625,6 +626,7 @@ h2 {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   top: -10%;
+  left: 0%;
   opacity: 70%;
 }
 
