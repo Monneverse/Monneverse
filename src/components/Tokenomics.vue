@@ -1,15 +1,97 @@
 <script>
+import ChartDataLabels from "chartjs-plugin-datalabels"
+import { Doughnut } from "vue-chartjs"
+import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  ArcElement,
+  CategoryScale,
+} from "chart.js"
+
+ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale)
+
 export default {
-  props: ["enterAnimation", "exitAnimation", "isRevert"],
-};
+  name: 'DoughnutChart',
+  components: { Doughnut },
+  props: {
+    chartId: {
+      type: String,
+      default: 'doughnut-chart'
+    },
+    datasetIdKey: {
+      type: String,
+      default: 'label'
+    },
+    cssClasses: {
+      default: 'doughnut',
+      type: String
+    },
+    plugins: {
+      type: Object,
+      default: () => [ChartDataLabels],
+    }
+  },
+  data() {
+    const percentages = [30, 30, 20, 10, 3]
+    return {
+      chartData: {
+        labels: [
+          " 30% Ecosystem",
+          " 30% Staking and DeFi",
+          " 20% Presales",
+          " 10% Initial development",
+          " 3% Airdrop and early investors",
+        ],
+        datasets: [
+          {
+            backgroundColor: ["#097561aa"],
+            data: [30, 30, 20, 10, 3],
+            hoverOffset: 2,
+            datalabels: {
+              color: "#fff",
+              formatter: function (value, context) {
+                return percentages[context.dataIndex] + "%"
+              },
+            },
+            hoverBackgroundColor: "#01d158",
+          },
+        ],
+      },
+      chartOptions: {
+        responsive: true,
+        maintainAspectRatio: false,
+        showTooltips: false,
+        plugins: {
+          tooltip: {
+            enabled: true,
+            callbacks: {
+              label: (tooltipItem) => {
+                return tooltipItem.label
+              },
+            },
+          },
+          legend: {
+            position: "left",
+            labels: {
+              font: {
+                size: 16,
+              },
+            },
+          },
+        },
+      }
+    }
+  }
+}
+
 </script>
 
 <template>
   <!-- Fondos -->
   <div class="fondo">
-    <div
-      :class="{ fondo_rayos: true, 'animacion-aparecer': this.enterAnimation && !this.isRevert }"
-    >
+    <div :class="{ fondo_rayos: true, 'animacion-aparecer': this.enterAnimation && !this.isRevert }">
       <img src="/img/rayos.png" alt="" />
     </div>
 
@@ -21,17 +103,15 @@ export default {
     <div class="fondo filtro-superior"></div>
     <div class="fondo-oscuro"></div>
     <div class="fondo fondo-oscurecer"></div>
-    <div
-      :class="{
-        fondoTokenomics: true,
-        'animacion-benefit': this.enterAnimation && !this.isRevert,
-        'animacion-benefit-revert': this.exitAnimation && this.isRevert,
-        'animacion-benefit-up': this.enterAnimation && this.isRevert,
-        'animacion-benefit-up-revert': this.exitAnimation && !this.isRevert,
-        'animacion-desaparecer': this.enterAnimation && this.isRevert,
-        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
-      }"
-    >
+    <div :class="{
+      fondoTokenomics: true,
+      'animacion-benefit': this.enterAnimation && !this.isRevert,
+      'animacion-benefit-revert': this.exitAnimation && this.isRevert,
+      'animacion-benefit-up': this.enterAnimation && this.isRevert,
+      'animacion-benefit-up-revert': this.exitAnimation && !this.isRevert,
+      'animacion-desaparecer': this.enterAnimation && this.isRevert,
+      'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+    }">
       <img src="/img/fondo_Tokenomics.png" alt="" />
       <div class="imagen_Eclipse"></div>
     </div>
@@ -43,114 +123,19 @@ export default {
   </div>
 
   <!-- Contenedor de Contenido -->
-  <div
-    :class="{
-      titulo: true,
-      'animacion-aparecer': this.enterAnimation && !this.isRevert,
-      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      'animacion-desaparecer': this.enterAnimation && this.isRevert,
-      'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
-    }"
-  >
+  <div :class="{
+    titulo: true,
+    'animacion-desplazamiento-titulo': index_pagina == 13,
+  }">
     <h1>TOKENOMICS</h1>
   </div>
-  <div
-    :class="{
-      content: true,
-      'animacion-aparecer': this.enterAnimation && !this.isRevert,
-      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      'animacion-desaparecer': this.enterAnimation && this.isRevert,
-      'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
-    }"
-  >
-    <div class="cards">
-      <div class="purchase-tax">
-        <div class="">
-          <div
-            :class="{
-              titulo1: true,
-              'animacion-desplazamiento-titulo1': this.enterAnimation && !this.isRevert,
-            }"
-          >
-            <h2>Purchase Tax</h2>
-          </div>
-        </div>
 
-        <div class="">
-          <p>To buy 0% slip</p>
-        </div>
-        <div class="">
-          <p>Automatic LP 0% of order fees go back into liquidity</p>
-        </div>
-        <div class="">
-          <p>
-            Bank Security 0% of order fees are stores in BANK SECURITY for price
-            protection
-          </p>
-        </div>
-        <div class="">
-          <p>Management 0% of order fees go to the treasury</p>
-        </div>
-        <div class="">
-          <p>Monner Burns 0% is burned for stability and price increase</p>
-        </div>
-      </div>
-    </div>
-    <div class="cards">
-      <div class="plus">
-        <div class=""></div>
-        <div class=""><img src="/img/plus.svg" alt="" /></div>
-        <div class=""><img src="/img/plus.svg" alt="" /></div>
-        <div class=""><img src="/img/plus.svg" alt="" /></div>
-        <div class=""><img src="/img/plus.svg" alt="" /></div>
-        <div class=""><img src="/img/plus.svg" alt="" /></div>
-      </div>
-    </div>
-    <div class="cards">
-      <div class="sale-tax">
-        <div class="">
-          <div
-            :class="{
-              titulo2: true,
-              animated: true,
-              duration1s: true,
-              fadeInRight: this.enterAnimation,
-              fadeOutRight: this.exitAnimation,
-            }"
-          >
-            <h2>Sale Tax</h2>
-          </div>
-        </div>
-        <div class="">
-          <p>To buy 0% slip</p>
-        </div>
-        <div class="">
-          <p>Automatic LP 0% of order fees go back into liquidity</p>
-        </div>
-        <div class="">
-          <p>
-            Bank Security 0% of order fees are stored in BANK SECURITY for price
-            protection
-          </p>
-        </div>
-        <div class="">
-          <p>Management 0% of order fees go to the treasury</p>
-        </div>
-        <div class="">
-          <p>Monner Burns 0% is burned for stability and price increase</p>
-        </div>
-      </div>
-    </div>
+  <div class="content">
+    <Doughnut :chart-options="chartOptions" :chart-data="chartData" :chart-id="chartId" :dataset-id-key="datasetIdKey"
+      :plugins="plugins" :css-classes="cssClasses" />
   </div>
-  <div
-    :class="{
-      'container-alianza': true,
-      'animacion-aparecer': this.enterAnimation && !this.isRevert,
-      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      'animacion-desaparecer': this.enterAnimation && this.isRevert,
-      'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
-    }"
-  >
+
+  <div class="container-alianza">
     <div class="contenido">
       <div class="nombre_Alianza">
         <h1>UPCOMING ALLIANCES</h1>
@@ -181,12 +166,14 @@ export default {
   font-style: semibold;
   font-stretch: semi-condensed;
 }
+
 @font-face {
   font-family: "Arial";
   src: url("/Fonts/arial.ttf");
   font-style: semibold;
   font-stretch: semi-condensed;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/Fonts/Montserrat-Regular.ttf");
@@ -194,14 +181,25 @@ export default {
   font-stretch: semi-condensed;
 }
 
+/* Estilos del gráfico dona */
+.doughnut {
+  position: fixed;
+  top: 28%;
+  width: 52rem;
+  max-width: 100%;
+  height: max-content;
+}
+
 /* Fondo de la pagina*/
 img {
   width: 100%;
   height: 100%;
 }
+
 h2 {
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
 }
+
 .titulo {
   position: absolute;
   width: 100%;
@@ -259,12 +257,10 @@ h2 {
 .filtro-superior {
   position: absolute;
   z-index: 4;
-  background: radial-gradient(
-    circle at center,
-    #14ec84 0%,
-    #0b5f50 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #14ec84 0%,
+      #0b5f50 50%,
+      #505863 100%);
   opacity: 30%;
 }
 
@@ -285,6 +281,7 @@ h2 {
   width: 100%;
   height: 100%;
 }
+
 @media screen and (width < 769px) {
   .fondo {
     position: absolute;
@@ -358,15 +355,14 @@ h2 {
 .content {
   position: relative;
   z-index: 55;
-  top: 20%;
+  top: 30%;
   display: flex;
-  width: 78%;
+  width: 100%;
   height: 57%;
   margin: 0 auto;
   border-radius: 1vw;
   scroll-snap-type: x mandatory;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  justify-content: center;
 }
 
 .content::-webkit-scrollbar {
@@ -378,11 +374,9 @@ h2 {
 }
 
 .content::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    90deg,
-    rgb(33, 32, 85) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%);
   border-radius: 20px;
   border: 2px solid #f1f2f3;
 }
@@ -391,23 +385,6 @@ h2 {
   border-radius: 10px;
 }
 
-@media screen and (min-width: 769px) {
-  .content {
-    top: 23%;
-    display: grid;
-    grid-template-rows: 30vw;
-    grid-template-columns: 45% 10% 45%;
-    width: 100%;
-    height: 57%;
-    margin: 0 auto;
-    overflow-y: initial;
-    overflow-x: initial;
-  }
-
-  .content::-webkit-scrollbar {
-    display: none;
-  }
-}
 
 .cards {
   width: 100%;
@@ -475,11 +452,9 @@ h2 {
   align-items: center;
   height: 80%;
   width: 77%;
-  background: linear-gradient(
-    90deg,
-    rgb(33, 32, 85) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%);
   border-radius: 0.5vw;
 }
 
@@ -568,11 +543,9 @@ h2 {
   align-items: center;
   height: 80%;
   width: 77%;
-  background: linear-gradient(
-    90deg,
-    rgb(1, 209, 88) 0%,
-    rgba(33, 32, 85, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(1, 209, 88) 0%,
+      rgba(33, 32, 85, 1) 100%);
   border-radius: 0.5vw;
 }
 
@@ -662,132 +635,79 @@ h2 {
   }
 }
 
-.degradado_izquierdo {
-  transform: rotate(-60deg);
-  right: 55%;
-}
-
-@media screen and (width <=769px) {
-  .degradado_izquierdo {
-    display: none;
-  }
-}
-
-.degradado_derecho {
-  transform: rotate(230deg);
-  left: 55%;
-}
-
 ::-webkit-scrollbar {
   display: block;
 }
 
-@media screen and (max-width: 900px) {
-  .arrow,
-  .arrow:before {
-    position: absolute;
+.animacion-desplazamiento-titulo {
+  animation-duration: 0.5s;
+  animation-name: desplazamiento;
+  animation-iteration-count: 1;
+}
+
+@keyframes desplazamiento {
+  0% {
+    top: -100%;
+  }
+
+  100% {}
+}
+
+.animacion-desplazamiento-titulo1 {
+  animation-duration: 0.5s;
+  animation-name: desplazamiento2;
+  animation-iteration-count: 1;
+}
+
+@keyframes desplazamiento2 {
+  0% {
+    left: -10%;
+  }
+
+  100% {}
+}
+
+.animacion-desplazamiento-titulo2 {
+  animation-duration: 0.35s;
+  animation-name: desplazamiento3;
+  animation-iteration-count: 1;
+}
+
+@keyframes desplazamiento3 {
+  0% {
+    left: 100%;
+  }
+
+  25% {
+    left: 75%;
+  }
+
+  50% {
     left: 50%;
   }
 
-  .arrow {
-    width: 25px;
-    height: 25px;
-    top: 56%;
-    left: 94%;
-    margin: -20px 0 0 -20px;
-    -webkit-transform: rotate(-50deg);
-    transform: rotate(-50deg);
-    border-left: none;
-    border-top: none;
-    border-right: 4px #fff solid;
-    border-bottom: 4px #fff solid;
-    z-index: 999;
+  75% {
+    left: 25%;
   }
 
-  .arrow:before {
-    content: "";
-    width: 15px;
-    height: 15px;
-    top: 50%;
-    margin: -10px 0 0 -10px;
-    border-left: none;
-    border-top: none;
-    border-right: 2px #fff solid;
-    border-bottom: 2px #fff solid;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-name: arrow;
-  }
-
-  @keyframes arrow {
-    0% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0;
-      transform: translate(-10px, -10px);
-    }
-  }
-
-  .arrow2,
-  .arrow2:before {
-    position: absolute;
-    left: 50%;
-  }
-
-  .arrow2 {
-    width: 25px;
-    height: 25px;
-    top: 56%;
-    left: 9%;
-    margin: -20px 0 0 -20px;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-    border-left: none;
-    border-top: none;
-    border-right: 4px #fff solid;
-    border-bottom: 4px #fff solid;
-    z-index: 999;
-  }
-
-  .arrow2:before {
-    content: "";
-    width: 15px;
-    height: 15px;
-    top: 50%;
-    margin: -10px 0 0 -10px;
-    border-left: none;
-    border-top: none;
-    border-right: 2px #fff solid;
-    border-bottom: 2px #fff solid;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-name: arrow2;
-  }
-
-  @keyframes arrow2 {
-    0% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0;
-      transform: translate(-10px, -10px);
-    }
+  100% {
+    left: 0;
   }
 }
+
 .animacion-aparecer {
   animation-duration: 0.5s;
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
+
 .animacion-aparecer-revert {
   animation-duration: 0.8s;
   animation-name: aparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
+
 .animacion-desaparecer {
   animation-duration: 0.8s;
   animation-name: aparecer;
@@ -816,12 +736,14 @@ h2 {
   animation-name: arriba;
   animation-iteration-count: 1;
 }
+
 .animacion-benefit-up-revert img {
   animation-duration: 0.8s;
   animation-name: arriba;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
+
 @keyframes arriba {
   0% {
     top: -35%;
@@ -829,6 +751,7 @@ h2 {
     opacity: 20%;
   }
 }
+
 .animated.duration1s {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
