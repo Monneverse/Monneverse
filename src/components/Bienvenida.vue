@@ -1,9 +1,14 @@
-
-
 <template>
   <!-- video de fondo -->
-  <video preload="auto" autoplay="true" muted="true" loop="true" class="video-fondo" poster="/img/fondo_binario.png">
-    <source src="/video/Full-HD-Lite-2.mp4" type="video/mp4">
+  <video
+    preload="auto"
+    autoplay="true"
+    muted="true"
+    loop="true"
+    class="video-fondo"
+    poster="/img/fondo_binario.png"
+  >
+    <source src="/video/Full-HD-Lite-2.mp4" type="video/mp4" />
   </video>
 
   <!-- logos de fondos -->
@@ -14,9 +19,8 @@
     <img src="/img/logo.svg" alt="" />
   </div>
 
-
   <!-- imagenes fondos -->
-  <div class="semi-circle ">
+  <div class="semi-circle">
     <img src="/img/semi_circulo.png" alt="" />
   </div>
   <div class="fondo-montana">
@@ -39,30 +43,31 @@
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
 
-
-  <div :class="{
-    welcome: true,
-    welcome_animation: exitAnimation && !isRevert,
-    welcome_animation_revert: enterAnimation && isRevert
-  }">
+  <div
+    class="welcome"
+    :class="{
+      animated: true,
+      duration1s: true,
+      fadeInLeft: this.enterAnimation,
+      fadeOutLeft: this.exitAnimation,
+    }"
+  >
     <p class="title">
-      <b :class="{
-        animacion_salida: exitAnimation && !isRevert,
-        animacion_salida_revert: enterAnimation && isRevert,
-      }">Welcome to</b> <br>Monnerverse
+      <b>Welcome to</b>
+      <br />Monnerverse
     </p>
     <p class="subtitle">Utilities DeFi</p>
-    <p class="description">Take advantage of this opportunity and <b>reserve</b> your spot in our
-      pre-sale</p>
+    <p class="description">
+      Take advantage of this opportunity and <b>reserve</b> your spot in our
+      pre-sale
+    </p>
     <button class="btn_new">Buy in pre-Sale</button>
   </div>
-
 </template>
 <script>
 export default {
-
-  props: ["enterAnimation", "exitAnimation", "isRevert"]
-}
+  props: ["enterAnimation", "exitAnimation", "isRevert"],
+};
 </script>
 
 <style scoped>
@@ -105,10 +110,12 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
   z-index: 3;
   opacity: 70%;
   user-select: none;
@@ -226,79 +233,6 @@ img {
   left: 60%;
 }
 
-.animacion_salida {
-  position: relative;
-  top: 0;
-  left: 0;
-  animation: retirar__texto 1000ms 1 normal;
-}
-
-.animacion_salida_revert {
-  position: relative;
-  top: 0;
-  left: 0;
-  animation-name: retirar__texto_revert;
-  animation-duration: 1s;
-
-}
-
-.welcome_animation {
-  animation-name: ocultar;
-  animation-duration: 1s;
-}
-
-.welcome_animation_revert {
-  animation-name: ocultar_revert;
-  animation-duration: 2s;
-
-}
-
-@keyframes ocultar {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes ocultar_revert {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes retirar__texto {
-  0% {
-    top: 0;
-    left: 0;
-  }
-
-  100% {
-    top: -5%;
-    left: -115%;
-  }
-}
-
-@keyframes retirar__texto_revert {
-  0% {
-    top: -5%;
-    left: -115%;
-  }
-
-  100% {
-    top: 0;
-    left: 0;
-  }
-
-
-}
-
 @media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
   img {
     width: 100%;
@@ -318,10 +252,12 @@ img {
     left: 0;
     width: 100em;
     height: 100em;
-    background: radial-gradient(circle at center,
-        #48d0ab 0%,
-        #097561 50%,
-        #505863 100%);
+    background: radial-gradient(
+      circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%
+    );
     z-index: 1;
   }
 
@@ -349,10 +285,12 @@ img {
     left: -15em;
     width: 50em;
     height: 80em;
-    background: radial-gradient(circle at center,
-        #48d0ab 10%,
-        #097561 30%,
-        #0F161C 100%);
+    background: radial-gradient(
+      circle at center,
+      #48d0ab 10%,
+      #097561 30%,
+      #0f161c 100%
+    );
     z-index: 3;
     opacity: 70%;
   }
@@ -415,10 +353,9 @@ img {
   left: 4rem;
   width: 30%;
   z-index: 7;
-  gap: .2rem;
+  gap: 0.2rem;
   z-index: 100;
 }
-
 
 .welcome .title {
   font-size: 6vw;
@@ -431,7 +368,7 @@ img {
 }
 
 .welcome .subtitle {
-  color: #FFC000;
+  color: #ffc000;
   font-size: 3.5vh;
   font-family: "Bahn";
 }
@@ -453,7 +390,14 @@ img {
   padding: 0.7rem;
   margin-top: 5%;
   min-width: 10rem;
-  background: linear-gradient(90deg, #06E2FF 10%, #28A3FF 30%, #2E94FF 50%, #4070FF 70%, #5E31FF 100%);
+  background: linear-gradient(
+    90deg,
+    #06e2ff 10%,
+    #28a3ff 30%,
+    #2e94ff 50%,
+    #4070ff 70%,
+    #5e31ff 100%
+  );
   border-radius: 2rem;
   color: #fff;
   font-family: "Bahn";
@@ -519,9 +463,6 @@ img {
   .degradado {
     width: 80%;
   }
-
-
-
 }
 
 @media only screen and (min-device-width: 412px) and (max-device-width: 915px) {
@@ -541,7 +482,6 @@ img {
     left: 0em;
     width: 100%;
     z-index: 6;
-
   }
 
   .welcome p {
@@ -565,7 +505,6 @@ img {
     justify-content: center;
     width: 65%;
     z-index: 9;
-
   }
 
   .welcome_text p {
@@ -578,13 +517,11 @@ img {
 
   .welcome_text p b {
     text-transform: uppercase;
-
   }
 
   .welcome_text p span {
-    color: #FFC000;
+    color: #ffc000;
     font-size: 10vw;
-
   }
 }
 </style>
