@@ -22,13 +22,15 @@ export default {
   <!--FIN FONDO-->
   <div class="arrow"></div>
   <div class="arrow2"></div>
-  <div :class="{
-    fases: true,
-    fases__aparecer: this.enterAnimation && !this.isRevert,
-    fases__aparecer_revert: this.enterAnimation && this.isRevert,
-    fases__desaparecer_revert: this.exitAnimation && this.isRevert,
-    fases__desaparecer: this.exitAnimation && !this.isRevert,
-  }">
+  <div
+    :class="{
+      fases: true,
+      fases__aparecer: this.enterAnimation && !this.isRevert,
+      fases__aparecer_revert: this.enterAnimation && this.isRevert,
+      fases__desaparecer_revert: this.exitAnimation && this.isRevert,
+      fases__desaparecer: this.exitAnimation && !this.isRevert,
+    }"
+  >
     <div class="titulo">
       <h1>Phase 2: <br><a>pre-sale</a></h1>
     </div>
