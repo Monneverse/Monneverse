@@ -248,9 +248,9 @@ img {
 
 @keyframes aparecer_circulo__1 {
   0% {
-    left: 24%;
+    left: 34%;
     bottom: 40%;
-    width: 50%;
+    width: 30%;
     height: 25%;
   }
 
@@ -279,9 +279,9 @@ img {
 
 @keyframes aparecer_circulo__2 {
   0% {
-    left: 22%;
+    left: 39%;
     bottom: 30%;
-    width: 55%;
+    width: 20%;
     height: 30%;
   }
 
@@ -301,13 +301,13 @@ img {
 }
 
 .componentes__aparecer_revert {
-  animation: desaparecer  .7s;
+  animation: desaparecer .7s;
   animation-direction: reverse;
 
 }
 
 .componentes__desaparecer {
-  animation: desaparecer  .9s;
+  animation: desaparecer .9s;
 }
 
 .componentes__desaparecer_revert {

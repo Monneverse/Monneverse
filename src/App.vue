@@ -88,6 +88,7 @@ export default {
       this.scroll = false;
       let newPosition = this.index_pagina;
       if (this.index_pagina > 1) {
+        newPosition = this.index_pagina - 1;
         this.isRevert = true;
         this.CambiarContenedor(newPosition);
       }
@@ -289,7 +290,7 @@ export default {
       this.moveY = this.touchPositionY();
       if (this.scroll) {
         if (this.startY - 100 > this.moveY) this.next();
-        else if (this.startY + 50 < this.moveY) this.before();
+        else if (this.startY + 100 < this.moveY) this.before();
       }
     },
     CambiarContenedor(newPosition) {
