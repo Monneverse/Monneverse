@@ -1,5 +1,10 @@
-<script setup>
+<script>
 import fasesComponentes from "./ComponentsPhases.vue";
+export default {
+  components: {
+    fasesComponentes,
+  },
+};
 </script>
 
 <template>

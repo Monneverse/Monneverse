@@ -1,5 +1,10 @@
-<script setup>
+<script>
 import Benefit from "./ComponenteBenefit.vue";
+export default {
+  components: {
+    Benefit,
+  },
+};
 </script>
 <template>
   <!--FONDO-->

@@ -1,5 +1,10 @@
-<script setup>
+<script>
 import fasesComponentes from "./ComponentsPhases.vue";
+export default {
+  components: {
+    fasesComponentes,
+  },
+};
 </script>
 <template>
   <!--FONDO-->
@@ -16,57 +21,70 @@ import fasesComponentes from "./ComponentsPhases.vue";
   <!--FIN FONDO-->
   <div class="arrow"></div>
   <div class="arrow2"></div>
-  <div :class="{
-    fases: true,
-    'fases__aparecer': this.enterAnimation && !this.isRevert,
-    'fases__aparecer_revert': this.enterAnimation && this.isRevert,
-    'fases__desaparecer_revert': this.exitAnimation && this.isRevert,
-    'fases__desaparecer': this.exitAnimation && !this.isRevert
-  
-  }">
+  <div
+    :class="{
+      fases: true,
+      fases__aparecer: this.enterAnimation && !this.isRevert,
+      fases__aparecer_revert: this.enterAnimation && this.isRevert,
+      fases__desaparecer_revert: this.exitAnimation && this.isRevert,
+      fases__desaparecer: this.exitAnimation && !this.isRevert,
+    }"
+  >
     <div class="titulo">
       <h1>phase 2</h1>
     </div>
     <div class="description">
       <p>
-        Official pre-sale of 2,000 monners (MNR) on <a href="www.monnerverse.com">www.monneverse.com</a> of the
-        portafolios by monnerstaking at the end of the pre-sale.
+        Official pre-sale of 2,000 monners (MNR) on
+        <a href="www.monnerverse.com">www.monneverse.com</a> of the portafolios
+        by monnerstaking at the end of the pre-sale.
       </p>
     </div>
   </div>
 
-
-  <div :class="{
-    circulo: true, circulo__1: true,
-    'circulo__1_aparecer': this.enterAnimation && !this.isRevert,
-    'circulo__1_desaparecer_revert': this.exitAnimation && this.isRevert,
-  }">
+  <div
+    :class="{
+      circulo: true,
+      circulo__1: true,
+      circulo__1_aparecer: this.enterAnimation && !this.isRevert,
+      circulo__1_desaparecer_revert: this.exitAnimation && this.isRevert,
+    }"
+  >
     <img src="../assets/aro.svg" />
   </div>
 
-  <div :class="{
-    circulo: true, circulo__2: true,
-    'circulo__2_aparecer': this.enterAnimation && !this.isRevert,
-    'circulo__2_desaparecer_revert': this.exitAnimation && this.isRevert,
-  }">
+  <div
+    :class="{
+      circulo: true,
+      circulo__2: true,
+      circulo__2_aparecer: this.enterAnimation && !this.isRevert,
+      circulo__2_desaparecer_revert: this.exitAnimation && this.isRevert,
+    }"
+  >
     <img src="../assets/aro.svg" />
   </div>
 
-
-  <div :class="{
-    componentes: true,
-    'componentes__aparecer': this.enterAnimation && !this.isRevert,
-    'componentes__aparecer_revert': this.enterAnimation && this.isRevert,
-    'componentes__desaparecer_revert': this.exitAnimation && this.isRevert,
-    'componentes__desaparecer': this.exitAnimation && !this.isRevert
-  }">
+  <div
+    :class="{
+      componentes: true,
+      componentes__aparecer: this.enterAnimation && !this.isRevert,
+      componentes__aparecer_revert: this.enterAnimation && this.isRevert,
+      componentes__desaparecer_revert: this.exitAnimation && this.isRevert,
+      componentes__desaparecer: this.exitAnimation && !this.isRevert,
+    }"
+  >
     <div class="componente componentes1">
-      <fasesComponentes title="" description="enlist on Pancakeswap one day after our pre-sale" />
+      <fasesComponentes
+        title=""
+        description="enlist on Pancakeswap one day after our pre-sale"
+      />
     </div>
 
     <div class="componente componentes2">
-      <fasesComponentes title=""
-        description="The MonnerStake startup will give its holders 6.2% every 48 hours for the first 2 months. It starts one day after the presale ends." />
+      <fasesComponentes
+        title=""
+        description="The MonnerStake startup will give its holders 6.2% every 48 hours for the first 2 months. It starts one day after the presale ends."
+      />
     </div>
 
     <div class="componente componentes3">
@@ -82,19 +100,24 @@ import fasesComponentes from "./ComponentsPhases.vue";
     </div>
 
     <div class="componente componentes8">
-      <fasesComponentes title="" description="Official enlistment: coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
-        MEXC global" />
+      <fasesComponentes
+        title=""
+        description="Official enlistment: coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
+        MEXC global"
+      />
     </div>
 
     <div class="componente componentes7">
-      <fasesComponentes title="" description=" Increase x5 Budget increase x5 of our advertising campaign" />
+      <fasesComponentes
+        title=""
+        description=" Increase x5 Budget increase x5 of our advertising campaign"
+      />
     </div>
 
     <div class="componente componentes6">
       <fasesComponentes title="" description="10.000 holders" />
     </div>
   </div>
-
 </template>
 <script>
 export default {
@@ -119,18 +142,22 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
   z-index: 1;
 }
 
 .filtro-superior {
-  background: radial-gradient(circle at center,
-      #f9f9fa 0%,
-      #c8ced4 50%,
-      #a8aaaf 100%);
+  background: radial-gradient(
+    circle at center,
+    #f9f9fa 0%,
+    #c8ced4 50%,
+    #a8aaaf 100%
+  );
   mix-blend-mode: multiply;
   z-index: 2;
 }
@@ -181,45 +208,41 @@ img {
 }
 
 .fases__aparecer {
-  animation: aparecer .6s;
-  animation-delay: .1;
+  animation: aparecer 0.6s;
+  animation-delay: 0.1;
   animation-fill-mode: forwards;
 }
 
 .fases__aparecer_revert {
-  animation: desaparecer .6s;
-  animation-delay: .1;
+  animation: desaparecer 0.6s;
+  animation-delay: 0.1;
   animation-direction: reverse;
   animation-fill-mode: forwards;
-
 }
 
 .fases__desaparecer {
-  animation: desaparecer .6s;
-  animation-delay: .1;
+  animation: desaparecer 0.6s;
+  animation-delay: 0.1;
   animation-fill-mode: forwards;
 }
 
 .fases__desaparecer_revert {
-  animation: aparecer .6s;
-  animation-delay: .1;
+  animation: aparecer 0.6s;
+  animation-delay: 0.1;
   animation-direction: reverse;
   animation-fill-mode: forwards;
-
 }
 
 @keyframes aparecer {
   0% {
     left: 127%;
   }
-
 }
 
 @keyframes desaparecer {
   100% {
     left: -127%;
   }
-
 }
 
 .titulo {
@@ -260,16 +283,14 @@ img {
 }
 
 .circulo__1_aparecer {
-  animation: aparecer_circulo__1 .8s;
+  animation: aparecer_circulo__1 0.8s;
 }
 
 .circulo__1_desaparecer_revert {
-  animation: aparecer_circulo__1 .8s;
+  animation: aparecer_circulo__1 0.8s;
   animation-direction: reverse;
   animation-fill-mode: forwards;
-
 }
-
 
 @keyframes aparecer_circulo__1 {
   0% {
@@ -278,10 +299,7 @@ img {
     width: 45%;
     height: 25%;
   }
-
-
 }
-
 
 .circulo__2 {
   left: 22%;
@@ -291,17 +309,14 @@ img {
 }
 
 .circulo__2_aparecer {
-  animation: aparecer_circulo__2 .8s;
+  animation: aparecer_circulo__2 0.8s;
 }
 
 .circulo__2_desaparecer_revert {
-  animation: aparecer_circulo__2 .8s;
+  animation: aparecer_circulo__2 0.8s;
   animation-direction: reverse;
   animation-fill-mode: forwards;
-
 }
-
-
 
 @keyframes aparecer_circulo__2 {
   0% {
@@ -310,10 +325,7 @@ img {
     width: 55%;
     height: 30%;
   }
-
-
 }
-
 
 .componentes {
   position: absolute;
@@ -324,23 +336,21 @@ img {
 }
 
 .componentes__aparecer {
-  animation: aparecer .9s;
+  animation: aparecer 0.9s;
 }
 
 .componentes__aparecer_revert {
-  animation: desaparecer .7s;
+  animation: desaparecer 0.7s;
   animation-direction: reverse;
-
 }
 
 .componentes__desaparecer {
-  animation: desaparecer .9s;
+  animation: desaparecer 0.9s;
 }
 
 .componentes__desaparecer_revert {
-  animation: aparecer .9s;
+  animation: aparecer 0.9s;
   animation-direction: reverse;
-
 }
 
 .componentes1 {
@@ -409,7 +419,6 @@ img {
 
 /* style of mobile */
 @media screen and (max-width: 900px) {
-
   .circuito {
     display: none;
   }
@@ -421,7 +430,6 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: start;
-
   }
 
   .titulo {
@@ -441,10 +449,8 @@ img {
   }
 
   .circulo {
-
     left: 20%;
     height: 15%;
-
   }
 
   .circulo__1 {
@@ -458,7 +464,6 @@ img {
     top: 22%;
     width: 100%;
   }
-
 
   .componentes {
     position: absolute;
@@ -485,9 +490,11 @@ img {
   }
 
   .componentes::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg,
-        rgb(33, 32, 85) 0%,
-        rgba(1, 209, 88, 1) 100%);
+    background: linear-gradient(
+      90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%
+    );
     border-radius: 20px;
     border: 2px solid #f1f2f3;
   }
@@ -501,7 +508,6 @@ img {
   }
 
   .componente {
-
     box-sizing: content-box;
     position: unset;
     width: 90%;
@@ -510,14 +516,10 @@ img {
     height: 80%;
   }
 
-
-
-
-
   .arrow,
   .arrow:before {
     position: absolute;
-    left: 50%
+    left: 50%;
   }
 
   .arrow {
@@ -536,7 +538,7 @@ img {
   }
 
   .arrow:before {
-    content: '';
+    content: "";
     width: 15px;
     height: 15px;
     top: 60%;
@@ -564,7 +566,7 @@ img {
   .arrow2,
   .arrow2:before {
     position: absolute;
-    left: 50%
+    left: 50%;
   }
 
   .arrow2 {
@@ -583,7 +585,7 @@ img {
   }
 
   .arrow2:before {
-    content: '';
+    content: "";
     width: 15px;
     height: 15px;
     top: 60%;

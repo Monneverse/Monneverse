@@ -1,5 +1,10 @@
-<script setup>
+<script>
 import ComponenteIconos from "./componenteIconos.vue";
+export default {
+  components: {
+    ComponenteIconos,
+  },
+};
 </script>
 
 <template>
@@ -31,70 +36,213 @@ import ComponenteIconos from "./componenteIconos.vue";
   <div class="arrow"></div>
   <div class="arrow2"></div>
   <div class="content-major">
-    <div :class="{exchange_text:true, animated:true, duration1s:true, zoomInLeft:this.enterAnimation, zoomOutLeft:this.exitAnimation}">
+    <div
+      :class="{
+        exchange_text: true,
+        animated: true,
+        duration1s: true,
+        zoomInLeft: this.enterAnimation,
+        zoomOutLeft: this.exitAnimation,
+      }"
+    >
       <p>first exchanges after our pre-sale</p>
     </div>
 
     <div class="contenedor_crypto">
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos :class="{animated:true, duration1s:true, zoomInLeft:this.enterAnimation, zoomOutLeft:this.exitAnimation}" iconos="/img/Exchanges/bunny-color.svg" iconname="pancakeswap" />
+          <ComponenteIconos
+            :class="{
+              animated: true,
+              duration1s: true,
+              zoomInLeft: this.enterAnimation,
+              zoomOutLeft: this.exitAnimation,
+            }"
+            iconos="/img/Exchanges/bunny-color.svg"
+            iconname="pancakeswap"
+          />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos  :class="{animated:true, duration1s:true, zoomInLeft:this.enterAnimation, zoomOutLeft:this.exitAnimation}"  iconos="/img/Exchanges/Kucoin.svg" iconname="kucoin" />
+          <ComponenteIconos
+            :class="{
+              animated: true,
+              duration1s: true,
+              zoomInLeft: this.enterAnimation,
+              zoomOutLeft: this.exitAnimation,
+            }"
+            iconos="/img/Exchanges/Kucoin.svg"
+            iconname="kucoin"
+          />
         </div>
         <div class="cryptos">
-          <ComponenteIconos  :class="{animated:true, duration1s:true, zoomInLeft:this.enterAnimation, zoomOutLeft:this.exitAnimation}"  iconos="/img/Exchanges/Gatebw.svg" iconname="gate.io" />
+          <ComponenteIconos
+            :class="{
+              animated: true,
+              duration1s: true,
+              zoomInLeft: this.enterAnimation,
+              zoomOutLeft: this.exitAnimation,
+            }"
+            iconos="/img/Exchanges/Gatebw.svg"
+            iconname="gate.io"
+          />
         </div>
       </div>
 
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos  :class="{animated:true, duration1s:true, zoomInLeft:this.enterAnimation, zoomOutLeft:this.exitAnimation}"  iconos="/img/Exchanges/lbank2.svg" iconname="LBANK" />
+          <ComponenteIconos
+            :class="{
+              animated: true,
+              duration1s: true,
+              zoomInLeft: this.enterAnimation,
+              zoomOutLeft: this.exitAnimation,
+            }"
+            iconos="/img/Exchanges/lbank2.svg"
+            iconname="LBANK"
+          />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos :class="{animated:true, duration1s:true, zoomInLeft:this.enterAnimation, zoomOutLeft:this.exitAnimation}"  iconos="/img/Exchanges/okxlogo.svg" iconname="OKX" />
+          <ComponenteIconos
+            :class="{
+              animated: true,
+              duration1s: true,
+              zoomInLeft: this.enterAnimation,
+              zoomOutLeft: this.exitAnimation,
+            }"
+            iconos="/img/Exchanges/okxlogo.svg"
+            iconname="OKX"
+          />
         </div>
         <div class="cryptos">
-          <ComponenteIconos :class="{animated:true, duration1s:true, zoomInLeft:this.enterAnimation, zoomOutLeft:this.exitAnimation}"  iconos="/img/Exchanges/CoinGecko.svg" iconname="COINGECKO" />
+          <ComponenteIconos
+            :class="{
+              animated: true,
+              duration1s: true,
+              zoomInLeft: this.enterAnimation,
+              zoomOutLeft: this.exitAnimation,
+            }"
+            iconos="/img/Exchanges/CoinGecko.svg"
+            iconname="COINGECKO"
+          />
         </div>
       </div>
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos :class="{animated:true, duration1s:true, zoomInLeft:this.enterAnimation, zoomOutLeft:this.exitAnimation}"  iconos="/img/Exchanges/mexcglobal.svg" iconname="MEXC GLOBAL" />
+          <ComponenteIconos
+            :class="{
+              animated: true,
+              duration1s: true,
+              zoomInLeft: this.enterAnimation,
+              zoomOutLeft: this.exitAnimation,
+            }"
+            iconos="/img/Exchanges/mexcglobal.svg"
+            iconname="MEXC GLOBAL"
+          />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos :class="{animated:true, duration1s:true, zoomInLeft:this.enterAnimation, zoomOutLeft:this.exitAnimation}"  iconos="/img/Exchanges/xtcom.svg" iconname="XT.COM" />
+          <ComponenteIconos
+            :class="{
+              animated: true,
+              duration1s: true,
+              zoomInLeft: this.enterAnimation,
+              zoomOutLeft: this.exitAnimation,
+            }"
+            iconos="/img/Exchanges/xtcom.svg"
+            iconname="XT.COM"
+          />
         </div>
         <div class="cryptos">
-          <ComponenteIconos :class="{animated:true, duration1s:true, zoomInLeft:this.enterAnimation, zoomOutLeft:this.exitAnimation}"  iconos="/img/Exchanges/poloniex.svg" iconname="POLONIEX" />
+          <ComponenteIconos
+            :class="{
+              animated: true,
+              duration1s: true,
+              zoomInLeft: this.enterAnimation,
+              zoomOutLeft: this.exitAnimation,
+            }"
+            iconos="/img/Exchanges/poloniex.svg"
+            iconname="POLONIEX"
+          />
         </div>
       </div>
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos :class="{animated:true, duration1s:true, zoomInLeft:this.enterAnimation, zoomOutLeft:this.exitAnimation}"  iconos="/img/Exchanges/hotbit.svg" iconname="HOTBIT" />
+          <ComponenteIconos
+            :class="{
+              animated: true,
+              duration1s: true,
+              zoomInLeft: this.enterAnimation,
+              zoomOutLeft: this.exitAnimation,
+            }"
+            iconos="/img/Exchanges/hotbit.svg"
+            iconname="HOTBIT"
+          />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos :class="{animated:true, duration1s:true, zoomInLeft:this.enterAnimation, zoomOutLeft:this.exitAnimation}"  iconos="/img/Exchanges/coinmarket.svg" iconname="COINMARKET" />
+          <ComponenteIconos
+            :class="{
+              animated: true,
+              duration1s: true,
+              zoomInLeft: this.enterAnimation,
+              zoomOutLeft: this.exitAnimation,
+            }"
+            iconos="/img/Exchanges/coinmarket.svg"
+            iconname="COINMARKET"
+          />
         </div>
         <div class="cryptos">
-          <ComponenteIconos  :class="{animated:true, duration1s:true, zoomInLeft:this.enterAnimation, zoomOutLeft:this.exitAnimation}"  iconos="/img/Exchanges/ftx.svg" iconname="FTX" />
+          <ComponenteIconos
+            :class="{
+              animated: true,
+              duration1s: true,
+              zoomInLeft: this.enterAnimation,
+              zoomOutLeft: this.exitAnimation,
+            }"
+            iconos="/img/Exchanges/ftx.svg"
+            iconname="FTX"
+          />
         </div>
       </div>
       <div class="caja-cryptos">
         <div class="cryptos">
-          <ComponenteIconos  :class="{animated:true, duration1s:true, zoomInLeft:this.enterAnimation, zoomOutLeft:this.exitAnimation}"  iconos="/img/Exchanges/latoken.svg" iconname="LATOKEN" />
+          <ComponenteIconos
+            :class="{
+              animated: true,
+              duration1s: true,
+              zoomInLeft: this.enterAnimation,
+              zoomOutLeft: this.exitAnimation,
+            }"
+            iconos="/img/Exchanges/latoken.svg"
+            iconname="LATOKEN"
+          />
         </div>
 
         <div class="cryptos">
-          <ComponenteIconos :class="{animated:true, duration1s:true, zoomInLeft:this.enterAnimation, zoomOutLeft:this.exitAnimation}"  iconos="/img/Exchanges/bitrue.svg" iconname="BITRUE" />
+          <ComponenteIconos
+            :class="{
+              animated: true,
+              duration1s: true,
+              zoomInLeft: this.enterAnimation,
+              zoomOutLeft: this.exitAnimation,
+            }"
+            iconos="/img/Exchanges/bitrue.svg"
+            iconname="BITRUE"
+          />
         </div>
         <div class="cryptos">
-          <ComponenteIconos :class="{animated:true, duration1s:true, zoomInLeft:this.enterAnimation, zoomOutLeft:this.exitAnimation}"  iconos="/img/Exchanges/favicon.svg" iconname="FAVICON" />
+          <ComponenteIconos
+            :class="{
+              animated: true,
+              duration1s: true,
+              zoomInLeft: this.enterAnimation,
+              zoomOutLeft: this.exitAnimation,
+            }"
+            iconos="/img/Exchanges/favicon.svg"
+            iconname="FAVICON"
+          />
         </div>
       </div>
     </div>
@@ -121,8 +269,8 @@ import ComponenteIconos from "./componenteIconos.vue";
 </template>
 <script>
 export default {
-  props: ["enterAnimation", "exitAnimation"]
-}
+  props: ["enterAnimation", "exitAnimation"],
+};
 </script>
 <style scoped>
 @font-face {
@@ -153,7 +301,6 @@ export default {
 }
 
 img {
-
   width: 100%;
   height: 100%;
 }
@@ -222,10 +369,12 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at center,
-        #48d0ab 0%,
-        #097561 50%,
-        #505863 100%);
+    background: radial-gradient(
+      circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%
+    );
     z-index: 1;
   }
 
@@ -258,10 +407,12 @@ img {
     width: 300%;
     height: 200%;
     background-size: no-repeat center center fixed;
-    background: radial-gradient(circle at center,
-        #48d0ab 10%,
-        #097561 30%,
-        #0f161c 100%);
+    background: radial-gradient(
+      circle at center,
+      #48d0ab 10%,
+      #097561 30%,
+      #0f161c 100%
+    );
     z-index: 1;
     opacity: 100%;
   }
@@ -342,12 +493,14 @@ img {
 }
 
 .exchange_text p {
-  background: linear-gradient(to right,
-      #8753c1 0%,
-      #6f6cbe 10%,
-      #38a6b7 40%,
-      #5884bb 60%,
-      #11334e 100%);
+  background: linear-gradient(
+    to right,
+    #8753c1 0%,
+    #6f6cbe 10%,
+    #38a6b7 40%,
+    #5884bb 60%,
+    #11334e 100%
+  );
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   -webkit-background-clip: text;
   background-clip: text;
@@ -494,7 +647,6 @@ img {
 }
 
 @media only screen and (width > 769px) {
-
   .caja-cryptos {
     display: flex;
     flex: initial;
@@ -549,9 +701,7 @@ img {
   }
 }
 
-
 @media screen and (max-width: 900px) {
-
   .logo {
     display: none;
   }
@@ -584,9 +734,11 @@ img {
   }
 
   .contenedor_crypto::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg,
-        rgb(33, 32, 85) 0%,
-        rgba(1, 209, 88, 1) 100%);
+    background: linear-gradient(
+      90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%
+    );
     border-radius: 20px;
     border: 2px solid #f1f2f3;
   }
