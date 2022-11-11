@@ -22,99 +22,82 @@ export default {
   <!--FIN FONDO-->
   <div class="arrow"></div>
   <div class="arrow2"></div>
-  <div
-    :class="{
-      fases: true,
-      fases__aparecer: this.enterAnimation && !this.isRevert,
-      fases__aparecer_revert: this.enterAnimation && this.isRevert,
-      fases__desaparecer_revert: this.exitAnimation && this.isRevert,
-      fases__desaparecer: this.exitAnimation && !this.isRevert,
-    }"
-  >
+  <div :class="{
+    fases: true,
+    fases__aparecer: this.enterAnimation && !this.isRevert,
+    fases__aparecer_revert: this.enterAnimation && this.isRevert,
+    fases__desaparecer_revert: this.exitAnimation && this.isRevert,
+    fases__desaparecer: this.exitAnimation && !this.isRevert,
+  }">
     <div class="titulo">
-      <h1>phase 2</h1>
+      <h1>Phase 2: <br></h1><a>pre-sale</a>
     </div>
     <div class="description">
-      <p>
-        Official pre-sale of 2,000 monners (MNR) on
-        <a href="www.monnerverse.com">www.monneverse.com</a> of the portafolios
-        by monnerstaking at the end of the pre-sale.
-      </p>
+      We will be doing 3 rounds of presale on Pinksale. All participants of the first 2 rounds will receive awesome
+      staking rewards for 2 months!
     </div>
   </div>
 
-  <div
-    :class="{
-      circulo: true,
-      circulo__1: true,
-      circulo__1_aparecer: this.enterAnimation && !this.isRevert,
-      circulo__1_desaparecer_revert: this.exitAnimation && this.isRevert,
-    }"
-  >
+  <div :class="{
+    circulo: true,
+    circulo__1: true,
+    circulo__1_aparecer: this.enterAnimation && !this.isRevert,
+    circulo__1_desaparecer_revert: this.exitAnimation && this.isRevert,
+  }">
     <img src="../assets/aro.svg" />
   </div>
 
-  <div
-    :class="{
-      circulo: true,
-      circulo__2: true,
-      circulo__2_aparecer: this.enterAnimation && !this.isRevert,
-      circulo__2_desaparecer_revert: this.exitAnimation && this.isRevert,
-    }"
-  >
+  <div :class="{
+    circulo: true,
+    circulo__2: true,
+    circulo__2_aparecer: this.enterAnimation && !this.isRevert,
+    circulo__2_desaparecer_revert: this.exitAnimation && this.isRevert,
+  }">
     <img src="../assets/aro.svg" />
   </div>
 
-  <div
-    :class="{
-      componentes: true,
-      componentes__aparecer: this.enterAnimation && !this.isRevert,
-      componentes__aparecer_revert: this.enterAnimation && this.isRevert,
-      componentes__desaparecer_revert: this.exitAnimation && this.isRevert,
-      componentes__desaparecer: this.exitAnimation && !this.isRevert,
-    }"
-  >
-    <div class="componente componentes1">
-      <fasesComponentes
-        title=""
-        description="enlist on Pancakeswap one day after our pre-sale"
-      />
-    </div>
+  <!-- <div :class="{
+    componentes: true,
+    componentes__aparecer: this.enterAnimation && !this.isRevert,
+    componentes__aparecer_revert: this.enterAnimation && this.isRevert,
+    componentes__desaparecer_revert: this.exitAnimation && this.isRevert,
+    componentes__desaparecer: this.exitAnimation && !this.isRevert,
+  }"> -->
 
-    <div class="componente componentes2">
-      <fasesComponentes
-        title=""
-        description="The MonnerStake startup will give its holders 6.2% every 48 hours for the first 2 months. It starts one day after the presale ends."
-      />
-    </div>
+  <div class="componentes1">
+    <fasesComponentes title="Enlisting" description="enlist on Pancakeswap one day after our pre-sale"
+      :isVisible="isVisible" />
+  </div>
 
-    <div class="componente componentes3">
-      <fasesComponentes title="" description="liquid lock" />
-    </div>
+  <div class="componentes2">
+    <fasesComponentes title="MonnerStaking" description="MonnerStaking start one day after pre-sale ends,
+      payouts of 12,6% of total capital every 48 hours" :isVisible="isVisible" />
+  </div>
 
-    <div class="componente componentes4">
-      <fasesComponentes title="" description="schedule burning" />
-    </div>
+  <div class="componentes3">
+    <fasesComponentes title="Liquidity" description="liquid lock" :isVisible="isVisible" />
+  </div>
 
-    <div class="componente componentes5">
-      <fasesComponentes title="" description="certik audit" />
-    </div>
+  <div class="componentes4">
+    <fasesComponentes title="Schedule" description="schedule burning" :isVisible="isVisible" />
+  </div>
 
-    <div class="componente componentes6">
-      <fasesComponentes title="" description="10.000 holders" />
-    </div>
+  <div class="componentes5">
+    <fasesComponentes title="Certick" description="certick audit" :isVisible="isVisible" />
+  </div>
 
-    <div class="componente componentes7">
-      <fasesComponentes
-        title=""
-        description=" Increase x5 Budget increase x5 of our advertising campaign"
-      />
-    </div>
+  <div class="componentes8">
+    <fasesComponentes title="Official enlistment:" description="coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
+        MEXC global" :isVisible="isVisible" />
+  </div>
 
-    <div class="componente componentes8">
-      <fasesComponentes title="" description="Official enlistment: coinMarketCap, CoinGecko, Hotbit, L-Bank, Probit, 
-        MEXC global" />
-    </div>
+  <div class="componentes7">
+    <fasesComponentes title="Increase x5" description="Budget increase x5 of our advertising campaign"
+      :isVisible="isVisible" />
+  </div>
+
+  <div class="componentes6">
+    <fasesComponentes title="Holders" description="10.000 holders" :isVisible="isVisible" />
   </div>
 </template>
 
@@ -136,22 +119,18 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 1;
 }
 
 .filtro-superior {
-  background: radial-gradient(
-    circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
-  );
+  background: radial-gradient(circle at center,
+      #f9f9fa 0%,
+      #c8ced4 50%,
+      #a8aaaf 100%);
   mix-blend-mode: multiply;
   z-index: 2;
 }
@@ -190,7 +169,8 @@ img {
 
 /* FIN ESTILO FONDO */
 
-.fases {
+.Fases {
+  font-family: "Work Sans";
   justify-content: center;
   text-align: center;
   position: absolute;
@@ -242,7 +222,7 @@ img {
 .titulo {
   color: white;
   right: 46%;
-  bottom: 57%;
+  bottom: 53%;
   width: auto;
   height: auto;
   position: fixed;
@@ -252,11 +232,26 @@ img {
   font-family: "work Sans", sans-serif;
 }
 
-.description {
+.titulo a {
+  font-family: "work Sans", sans-serif;
+  font-size: 1.5vw;
+  color: white;
+  right: 47%;
+  bottom: 49%;
+  width: auto;
+  height: auto;
+  position: fixed;
+  opacity: 100%;
+  text-transform: uppercase;
+  z-index: 6;
+}
+
+.titulo .description {
   color: white;
   width: 45%;
-  font-size: 1.3vw;
-  font-family: "work Sans", sans-serif;
+  font-size: 1rem;
+  /** Changed from 1.3vw because it was ininteligible on small screens */
+  font-family: Roboto;
 }
 
 .description a {
@@ -271,9 +266,9 @@ img {
 }
 
 .circulo__1 {
-  left: 24%;
+  left: 34%;
   bottom: 40%;
-  width: 50%;
+  width: 30%;
   height: 25%;
 }
 
@@ -297,9 +292,9 @@ img {
 }
 
 .circulo__2 {
-  left: 26.5%;
+  left: 39%;
   bottom: 30%;
-  width: 45%;
+  width: 20%;
   height: 30%;
 }
 
@@ -485,11 +480,9 @@ img {
   }
 
   .componentes::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-      90deg,
-      rgb(33, 32, 85) 0%,
-      rgba(1, 209, 88, 1) 100%
-    );
+    background: linear-gradient(90deg,
+        rgb(33, 32, 85) 0%,
+        rgba(1, 209, 88, 1) 100%);
     border-radius: 20px;
     border: 2px solid #f1f2f3;
   }
