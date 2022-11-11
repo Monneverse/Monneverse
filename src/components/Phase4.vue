@@ -1,8 +1,5 @@
-<script>
+<script setup>
 import fasesComponentes from "./ComponentsPhases.vue";
-export default {
-  props: ["enterAnimation", "exitAnimation", "isRevert"],
-};
 </script>
 
 <template>
@@ -97,7 +94,11 @@ export default {
   </div>
 
 </template>
-
+<script>
+export default {
+  props: ["enterAnimation", "exitAnimation", "isRevert"],
+};
+</script>
 <style scoped>
 img {
   width: 100%;
