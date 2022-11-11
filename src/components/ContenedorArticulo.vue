@@ -111,12 +111,12 @@ export default {
 
   <!-- CONTENEDOR DE BOTON METATASK -->
   <div
+    class="btn_buyMonner"
     :class="{
-      btn_buyMonner: true,
-      btn_buy__aparecer: this.enterAnimation && !this.isRevert,
-      btn_buy__desaparecer_revert: this.exitAnimation && this.isRevert,
-      btn_buy__desaparecer: this.exitAnimation && !this.isRevert,
-      btn_buy__aparecer_revert: this.enterAnimation && this.isRevert,
+      animated: true,
+      duration1s: true,
+      rotateDownLeft: this.enterAnimation,
+      rollOut: this.exitAnimation,
     }"
   >
     <div class="contrato">
@@ -852,5 +852,9 @@ h4 {
   .logo-redes {
     display: none;
   }
+}
+.animated.duration1s {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
 }
 </style>
