@@ -13,15 +13,6 @@ export default {
       type: String,
       required: true,
     },
-
-    index_pagina: {
-      type: Number,
-      required: true,
-    },
-    ocultar: {
-      type: String,
-      required: true,
-    },
     imagen: {
       type: String,
       required: true,

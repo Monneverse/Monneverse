@@ -53,32 +53,32 @@ import coin from "./componentesCoins.vue";
       <coin icono="/img/coins/kucoin.svg" titulo="KuCoin token " sigla="(KCS)" texto="TOP 52 approx capitalization"
         capitalizacion="900 M USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of KuCoin token (KCS) would have a value of"
-        logo="/img/logo.svg" precio="90.000" caja="/img/coins/caja.png" :index="index_pagina" />
+        logo="/img/logo.svg" precio="90.000" caja="/img/coins/caja.png"  />
     </div>
     <div class="card_coin">
       <coin icono="/img/coins/axie.svg" titulo="Axie Infinity" sigla="(AXS)" texto="TOP 48 approx capitalization"
         capitalizacion="1.05 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of AXIE INFINITY (AXS) would have a value of"
-        logo="/img/logo.svg" precio="105.000" caja="/img/coins/caja.png" :index="index_pagina" />
+        logo="/img/logo.svg" precio="105.000" caja="/img/coins/caja.png"  />
     </div>
     <div class="card_coin">
       <coin icono="/img/coins/decentraland.svg" titulo="Decentraland" sigla="(MANA)"
         texto="TOP 42 approx capitalization" capitalizacion="1.30 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of Decentraland (MANA) would have a value of"
-        logo="/img/logo.svg" precio="130.000" caja="/img/coins/caja.png" :index="index_pagina" />
+        logo="/img/logo.svg" precio="130.000" caja="/img/coins/caja.png"  />
     </div>
 
     <div class="card_coin">
       <coin icono="/img/coins/monero.svg" titulo="Monero" sigla="(XRM)" texto="TOP 28 approx capitalization"
         capitalizacion="2.68 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of  Monero (XRM) would have a value of"
-        logo="/img/logo.svg" precio="268.000" caja="/img/coins/caja.png" :index="index_pagina" />
+        logo="/img/logo.svg" precio="268.000" caja="/img/coins/caja.png"  />
     </div>
     <div class="card_coin">
       <coin icono="/img/coins/chain.svg" titulo="Chainlink" sigla="(LINK)" texto="TOP 21 approx capitalization"
         capitalizacion="3.72 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of Chainlink (LINK) would have a value of"
-        logo="/img/coins/logo.svg" precio="372.000" caja="/img/coins/caja.png" :index="index_pagina" />
+        logo="/img/coins/logo.svg" precio="372.000" caja="/img/coins/caja.png"  />
     </div>
   </div>
 
