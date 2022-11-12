@@ -105,6 +105,9 @@
       First Two Months Every 48 Hours
       <br>The Monner Will Return {{ porcentajeInteres }}% Interest
     </p>
+
+    <p id="descripcion" class="seg_linea">Staking is only for those who want it. We will have award and release
+      rules to protect the integrity of our price.</p>
   </article>
 
   <!-- redes sociales -->
@@ -223,12 +226,14 @@ export default {
   font-style: semibold;
   font-stretch: semi-condensed;
 }
+
 @font-face {
   font-family: "Arial";
   src: url("/Fonts/arial.ttf");
   font-style: semibold;
   font-stretch: semi-condensed;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/Fonts/Montserrat-Regular.ttf");
@@ -434,7 +439,8 @@ img {
   justify-content: center;
   align-items: center;
 }
-.circulo_rotar{
+
+.circulo_rotar {
   position: absolute;
   left: 0;
   top: 0;
@@ -442,6 +448,7 @@ img {
   width: 100%;
   z-index: 7;
 }
+
 .circulo-verde {
   top: 18%;
   left: 15%;
@@ -549,7 +556,7 @@ img {
 }
 
 .control>input {
-   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-size: 1.5rem;
   color: #067f4e;
   padding-right: 1rem;
@@ -573,7 +580,7 @@ img {
 }
 
 .control>label {
-   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-size: 1.5rem;
   color: white;
   padding: 0rem;
@@ -743,13 +750,13 @@ img {
   max-width: 35rem;
   width: 30%;
   z-index: 9;
- font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   color: white;
 }
 
 .informacion #title {
   font-size: 11vh;
- font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-weight: 600;
 
 }
@@ -757,7 +764,7 @@ img {
 @media screen and (max-width: 1450px) {
   .informacion #title {
     font-size: 9vh;
-   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
     font-weight: 600;
 
   }
@@ -766,7 +773,7 @@ img {
 @media screen and (max-width: 1150px) {
   .informacion #title {
     font-size: 7vh;
-     font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
     font-weight: 600;
 
   }
@@ -775,7 +782,7 @@ img {
 @media screen and (max-width: 950px) {
   .informacion #title {
     font-size: 5vh;
-     font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
     font-weight: 600;
 
   }
@@ -783,16 +790,22 @@ img {
 
 .informacion #title span {
   color: #01c28d;
-   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
 }
 
 .informacion #descripcion {
   margin-top: 2rem;
+  margin-left: 4.5rem;
+  margin-bottom: 0rem;
   text-align: start;
-   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-size: 2.5vh;
-  font-weight: 300;
+  font-weight: 400;
   width: 100%;
+}
+
+.seg_linea {
+  font-size: 2vh;
 }
 
 .titulo-imagen {
@@ -900,7 +913,7 @@ img {
     max-width: 75rem;
     width: 70%;
     z-index: 9;
-     font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
     color: white;
   }
 
@@ -908,17 +921,20 @@ img {
     margin-top: 0rem;
     margin-left: 4.56rem;
     text-align: start;
-     font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
     font-size: 2.5vh;
     font-weight: 300;
     width: 100%;
   }
 
-
-
+  .seg_linea {
+    position: fixed;
+    top: 300%;
+    font-size: 2vh;
+  }
 
   .form-controles {
-    bottom: 30%;
+    bottom: 12%;
     left: -5%;
     transform: translate(0, 100%);
     width: 100%;
