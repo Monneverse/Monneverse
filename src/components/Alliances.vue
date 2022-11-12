@@ -76,6 +76,8 @@ export default {
           'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
           'animacion-content-up': this.enterAnimation && this.isRevert,
           'animacion-content-up-revert': this.exitAnimation && !this.isRevert,
+          'animacion-desaparecer': this.enterAnimation && this.isRevert,
+          'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
         }"
       >
         <section
@@ -641,19 +643,6 @@ section {
   animation-iteration-count: 1;
 }
 
-.animacion-arco-salida img {
-  animation-name: animacion-arco-salida;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
-}
-
-.animacion-arco-revert-salida img {
-  animation-name: animacion-arco-salida;
-  animation-duration: 0.8s;
-  animation-direction: reverse;
-  animation-iteration-count: 1;
-}
-
 @keyframes animacion-arco {
   0% {
     top: 70%;
@@ -663,20 +652,6 @@ section {
   100% {
     top: 0%;
     transform: rotateZ(0deg);
-  }
-}
-
-@keyframes animacion-arco-salida {
-  0% {
-    position: absolute;
-    top: 100%;
-    opacity: 0%;
-  }
-
-  100% {
-    position: absolute;
-    top: 0%;
-    opacity: 100%;
   }
 }
 
@@ -708,12 +683,6 @@ section {
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-size: 3.5vw;
   font-weight: 400;
-}
-
-.animacion-parrafo {
-  animation-name: animacion-arco;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
 }
 
 .rectangulo-medio {
@@ -851,7 +820,7 @@ section {
   opacity: 70%;
 }
 
-@media screen and (width > 600px) {
+@media screen and (max-width:600px) {
   .degradado {
     width: 50%;
     top: 20%;
@@ -863,7 +832,7 @@ section {
   right: 55%;
 }
 
-@media screen and (width <=900px) {
+@media screen and (max-width:900px) {
   .video-fondo-alliances {
     position: fixed;
     left: -60%;
@@ -891,28 +860,43 @@ section {
   left: 55%;
 }
 
+@media only screen and (max-width: 900px) {
+  .animacion-arco-salida img {
+    animation-name: animacion-arco-salida;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+  .animacion-arco-revert-salida img {
+    animation-name: animacion-arco-salida;
+    animation-duration: 0.8s;
+    animation-direction: reverse;
+    animation-iteration-count: 1;
+  }
+  @keyframes animacion-arco-salida {
+    0% {
+      position: absolute;
+      top: 100%;
+      opacity: 0%;
+    }
+
+    100% {
+      position: absolute;
+      top: 0%;
+      opacity: 100%;
+    }
+  }
+}
+
 .animacion-aparecer {
   animation-duration: 0.5s;
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
 
-.animacion-desaparecer {
-  animation-duration: 0.5s;
-  animation-name: desaparecer;
-  animation-iteration-count: 1;
-}
-
 .animacion-aparecer-revert {
   animation-duration: 0.78s;
   animation-name: aparecer;
-  animation-direction: reverse;
-  animation-iteration-count: 1;
-}
-
-.animacion-desaparecer-revert {
-  animation-duration: 0.78s;
-  animation-name: desaparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
@@ -926,14 +910,23 @@ section {
     opacity: 100%;
   }
 }
-
-@keyframes desaparecer {
-  0% {
-    opacity: 100%;
+@media only screen and (max-width: 900px) {
+  .animacion-desaparecer {
+    animation-duration: 0.5s;
+    animation-name: desaparecer;
+    animation-iteration-count: 1;
   }
 
-  100% {
-    opacity: 0%;
+  .animacion-desaparecer-revert {
+    animation-duration: 0.78s;
+    animation-name: desaparecer;
+    animation-direction: reverse;
+    animation-iteration-count: 1;
+  }
+  @keyframes desaparecer {
+    0% {
+      opacity: 0%;
+    }
   }
 }
 </style>

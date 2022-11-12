@@ -126,7 +126,7 @@ img {
   height: 5rem;
   z-index: 12;
 }
-@media screen and (width < 769px) {
+@media screen and (max-width:769px) {
   .logo {
     display: none;
   }
@@ -347,7 +347,7 @@ img {
   height: auto;
   margin-left: 1rem;
 }
-@media screen and (width < 769px) {
+@media screen and (max-width:769px) {
   .logo-redes {
     display: none;
   }
