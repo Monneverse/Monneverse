@@ -75,15 +75,15 @@ defineProps({
         </section>
         <section class="Alianzas">
           <div class="alianzas">
-            <a href="https://www.reddit.com/user/monnerverse"><span><img
+            <a target="_blank" href="https://www.reddit.com/user/monnerverse"><span><img
                   src="/img/Alianzas/reddit.png" /></span>REDDIT</a>
             <!-- <font-awesome-icon icon="fa-brands fa-reddit" /> -->
 
-            <a href="https://t.me/monnerversecommunity"><span><img
+            <a target="_blank" href="https://t.me/monnerversecommunity"><span><img
                   src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a>
             <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 
-            <a href="https://discord.com/invite/h7fRvek9dn"><span><img
+            <a target="_blank" href="https://discord.com/invite/h7fRvek9dn"><span><img
                   src="/img/Alianzas/discord.png" /></span>DISCORD</a>
             <!-- <font-awesome-icon icon="fa-brands fa-discord" /> -->
           </div>
@@ -469,7 +469,7 @@ section {
   margin: 0 auto;
   position: absolute;
   top: 3.5rem;
-  z-index: 34;
+  z-index: 99;
   width: 12rem;
   display: flex;
   justify-content: space-between;
