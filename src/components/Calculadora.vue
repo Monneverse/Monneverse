@@ -106,7 +106,7 @@
       <br>The Monner Will Return {{ porcentajeInteres }}% Interest
     </p>
 
-    <p id="descripcion" class="seg_linea">Staking is only for those who want it. We will have award and release
+    <p id="descripcion" class="seg_linea">Note: Staking is only for those who want it. We will have award and release
       rules to protect the integrity of our price.</p>
   </article>
 
