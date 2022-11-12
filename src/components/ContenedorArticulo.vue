@@ -115,8 +115,8 @@ export default {
     :class="{
       animated: true,
       duration1s: true,
-      rotateDownLeft: this.enterAnimation,
-      rollOut: this.exitAnimation,
+      fadeInDown: this.enterAnimation,
+      fadeOutUp: this.exitAnimation,
     }"
   >
     <div class="contrato">
