@@ -820,7 +820,7 @@ section {
   opacity: 70%;
 }
 
-@media screen and (width > 600px) {
+@media screen and (max-width:600px) {
   .degradado {
     width: 50%;
     top: 20%;
@@ -832,7 +832,7 @@ section {
   right: 55%;
 }
 
-@media screen and (width <=900px) {
+@media screen and (max-width:900px) {
   .video-fondo-alliances {
     position: fixed;
     left: -60%;
@@ -860,7 +860,7 @@ section {
   left: 55%;
 }
 
-@media only screen and (width > 900px) {
+@media only screen and (max-width: 900px) {
   .animacion-arco-salida img {
     animation-name: animacion-arco-salida;
     animation-duration: 0.5s;
@@ -910,7 +910,7 @@ section {
     opacity: 100%;
   }
 }
-@media only screen and (width < 900px) {
+@media only screen and (max-width: 900px) {
   .animacion-desaparecer {
     animation-duration: 0.5s;
     animation-name: desaparecer;

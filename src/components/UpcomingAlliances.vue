@@ -596,16 +596,15 @@ img {
   .rectangulo {
     position: fixed;
     top: -6%;
-    left: 1%;
-    width: 90%;
+    left: 0%;
+    width: 100%;
     height: 10%;
   }
 
-  .rectangulo-medio {
+  .rectangulo-medio { 
     position: fixed;
     top: -8%;
-    left: 4%;
-    width: 85%;
+    width: 90%;
     height: 10%;
   }
 }

@@ -401,7 +401,7 @@ p {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .benefits {
     flex: none;
     top: 20%;
@@ -444,7 +444,7 @@ p {
   display: none;
 }
 
-@media screen and (width > 768px) {
+@media screen and (min-width:769px) {
   .logo-redes {
     display: flex;
   }
@@ -486,7 +486,7 @@ p {
   z-index: 5;
 }
 
-@media screen and (width > 769px) {
+@media screen and (min-width:769px) {
   .aro {
     top: -40%;
     display: flex;
@@ -699,7 +699,7 @@ p {
   }
 }
 
-@media (width > 769px) and (width < 900px) {
+@media (min-width:769px) and (width < 900px) {
   .beneficio:nth-child(1) {
     position: relative;
     top: 50%;
