@@ -110,25 +110,20 @@ export default {
   </div>
 
   <!-- CONTENEDOR DE BOTON METATASK -->
-  <div
-    :class="{
-      btn_buyMonner: true,
-      btn_buy__aparecer: this.enterAnimation && !this.isRevert,
-      btn_buy__desaparecer_revert: this.exitAnimation && this.isRevert,
-      btn_buy__desaparecer: this.exitAnimation && !this.isRevert,
-      btn_buy__aparecer_revert: this.enterAnimation && this.isRevert,
-    }"
-  >
+  <div :class="{
+    btn_buyMonner: true,
+    btn_buy__aparecer: this.enterAnimation && !this.isRevert,
+    btn_buy__desaparecer_revert: this.exitAnimation && this.isRevert,
+    btn_buy__desaparecer: this.exitAnimation && !this.isRevert,
+    btn_buy__aparecer_revert: this.enterAnimation && this.isRevert,
+  }">
     <div class="contrato">
       <b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span>
     </div>
     <div class="separar"></div>
     <div class="buyNow">
-      <a
-        href="https://www.pinksale.finance/launchpad/0x8cf9cA848ECAB7781a316eFFaFa41876c585Bc48?chain=BSC"
-        target="_blank"
-        class="btn_moner"
-      >
+      <a href="https://www.pinksale.finance/launchpad/0x8cf9cA848ECAB7781a316eFFaFa41876c585Bc48?chain=BSC"
+        target="_blank" class="btn_moner">
         <div class="texto1">BUY MONNER</div>
         <div class="logos">
           <div class="binance"><img src="/./img/Articulo/BNC.svg" /></div>
@@ -141,21 +136,14 @@ export default {
   <!-- Contenedor de Articulos -->
   <div class="containerArticulo">
     <div class="contenedorDeArticulo">
-      <Articulo
-        :class="{
-          articulo__aparecer:
-            (this.enterAnimation && !this.isRevert) ||
-            (this.isChanged && !this.enterAnimation && !this.isRevert),
-          articulo__aparecer_revert: this.enterAnimation && this.isRevert,
-          articulo__desaparecer_revert: this.exitAnimation && this.isRevert,
-          articulo__desaparecer: this.exitAnimation && !this.isRevert,
-        }"
-        v-for="item in vectorArticulo"
-        :key="item"
-        :titulo="item.titulo"
-        :img="item.imagen"
-        :url="item.link"
-      />
+      <Articulo :class="{
+        articulo__aparecer:
+          (this.enterAnimation && !this.isRevert) ||
+          (this.isChanged && !this.enterAnimation && !this.isRevert),
+        articulo__aparecer_revert: this.enterAnimation && this.isRevert,
+        articulo__desaparecer_revert: this.exitAnimation && this.isRevert,
+        articulo__desaparecer: this.exitAnimation && !this.isRevert,
+      }" v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen" :url="item.link" />
     </div>
   </div>
 
@@ -218,12 +206,10 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 0;
 }
 
@@ -345,7 +331,7 @@ img {
   left: 10%;
 }
 
-.flecha_before > img {
+.flecha_before>img {
   margin: 0;
   rotate: 90deg;
 }
@@ -354,15 +340,15 @@ img {
   right: 10%;
 }
 
-.flecha_next > img {
+.flecha_next>img {
   rotate: -90deg;
 }
 
 /* CONTENEDOR BOTON BUYNOW */
 .btn_buyMonner {
   position: fixed;
-  top: 19%;
-  left: 20%;
+  top: 18%;
+  left: 19%;
   width: 60%;
   height: auto;
 }
@@ -438,8 +424,8 @@ img {
 .contrato {
   font-family: "Bahn";
   position: relative;
-  left: 27%;
-  font-size: 1.3vw;
+  left: 28.5%;
+  font-size: 1vw;
   color: white;
   height: 20%;
   width: 158%;
@@ -758,11 +744,9 @@ h4 {
   }
 
   .containerArticulo::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-      90deg,
-      rgb(33, 32, 85) 0%,
-      rgba(1, 209, 88, 1) 100%
-    );
+    background: linear-gradient(90deg,
+        rgb(33, 32, 85) 0%,
+        rgba(1, 209, 88, 1) 100%);
     border-radius: 20px;
     border: 2px solid #f1f2f3;
   }
@@ -792,7 +776,7 @@ h4 {
     height: 90%;
   }
 
-  .contenedorDeArticulo > * {
+  .contenedorDeArticulo>* {
     width: 100%;
     padding: 1.5rem;
     box-sizing: border-box;
@@ -804,7 +788,7 @@ h4 {
 
   .btn_buyMonner {
     top: 20%;
-    left: 18%;
+    left: 20%;
     height: 6%;
     width: 60%;
   }
@@ -824,7 +808,7 @@ h4 {
   }
 
   .buyNow .logos .meta {
-    width: 10%;
+    width: 16%;
   }
 
   .separar {
@@ -832,12 +816,12 @@ h4 {
   }
 
   .contrato {
-    font-size: 3vw;
-    left: -2%;
+    font-size: 4.4vw;
+    left: -24%;
   }
 
   .contrato span {
-    font-size: 90%;
+    font-size: 3.5vw;
   }
 
   .buyNow .texto1 {
@@ -845,7 +829,7 @@ h4 {
   }
 
   .binance {
-    width: 30%;
+    width: 36%;
     bottom: 10%;
   }
 
