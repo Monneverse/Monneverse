@@ -99,7 +99,10 @@ defineProps({
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
-
+img {
+  width: 100%;
+  height: 100%;
+}
 .fondo {
   position: absolute;
   top: 0;
@@ -307,7 +310,7 @@ defineProps({
 
 .logo-redes {
   position: absolute;
-  bottom: 0%;
+  bottom: 1rem;
   left: 1rem;
   width: 20rem;
   height: 5rem;
@@ -315,15 +318,14 @@ defineProps({
   display: flex;
   justify-content: start;
 }
-
 @media screen and (width < 769px) {
   .logo-redes {
     display: none;
   }
 }
 
-.icon img {
-  width: 3.5vw;
+.icon {
+  width: 3rem;
   height: auto;
   margin-left: 1rem;
 }
