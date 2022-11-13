@@ -280,9 +280,9 @@ img {
   }
 }
 
-@media screen and (width > 500px) and (min-width: 900px) {
+@media screen and (width > 500px) and (width < 900px) {
   .contenedor-parrafo p {
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
 }
 
@@ -381,7 +381,7 @@ img {
   display: flex;
   justify-content: start;
 }
-@media screen and (min-width: 900px) {
+@media screen and (max-width: 900px) {
   .logo-redes {
     display: none;
   }
