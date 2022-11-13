@@ -169,11 +169,6 @@ export default {
     </div>
   </div>
   <div class="logo-redes">
-    <div class="icon icon-telegram">
-      <a href="https://t.me/MonnerverseCripto" target="_blank">
-        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
-      </a>
-    </div>
 
     <div class="logo-redes">
       <div class="icon icon-telegram">
