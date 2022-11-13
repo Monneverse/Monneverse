@@ -25,13 +25,11 @@ defineProps({
   <div class="arrow2"></div>
   <div class="Fases">
     <div class="titulo">
-      <h1>phase 2</h1>
+      <h1>Phase 2: <br><a>pre-sale</a></h1>
     </div>
     <div class="description">
-      <p>
-        Official pre-sale of 2,000 monners (MNR) on <a href="www.monnerverse.com">www.monneverse.com</a> of the
-        portafolios by monnerstaking at the end of the pre-sale.
-      </p>
+      <!-- We will be doing 3 rounds of presale on Pinksale. All participants of the first 2 rounds will receive awesome
+      staking rewards for 2 months! -->
     </div>
   </div>
 

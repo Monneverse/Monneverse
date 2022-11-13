@@ -54,7 +54,7 @@
    <p class="subtitle">Utilities DeFi</p>
    <p class="description">Take advantage of this opportunity and <b>reserve</b> your spot in our
      pre-sale</p>
-     <a href="https://www.pinksale.finance/launchpad/0x4a215a90359e5998A64ceAC48940Cd064fd7b34C?chain=BSC" class="btn_new">Buy in pre-Sale</a>
+     <a target="_blank"  href="https://www.pinksale.finance/launchpad/0x4a215a90359e5998A64ceAC48940Cd064fd7b34C?chain=BSC" class="btn_new">Buy in pre-Sale</a>
  </div>
 </template>
 <script>
