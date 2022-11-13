@@ -80,7 +80,7 @@ export default {
           //   this.exitAnimation && !this.isRevert,
         }">
           <img id="c" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
-          <div class="content-price  fadeInDown animated">
+          <div class="content-price">
             <div class="titulo-two">
               <h1>6.2%<span>*</span>48h</h1>
             </div>
@@ -90,7 +90,7 @@ export default {
               <h3>Sale Price</h3>
             </div>
             <div class="text">
-              <p class="fadeIn animated">
+              <p class="">
                 Enter our first phase os staking buying in pre-sale and earn
                 6.2% every 48 hours of your total capital in Monnercoins after
                 the launch in Pancakeswap
@@ -107,7 +107,7 @@ export default {
           //   this.exitAnimation && !this.isRevert,
         }">
           <img id="d" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
-          <div id="contentP" class="content-price fadeInUp animated">
+          <div id="contentP" class="content-price">
             <div class="titulo-benefit">
               <div class="info-two">
                 <p>At PancakeSwap</p>
@@ -120,7 +120,7 @@ export default {
               <h3>Sale Price</h3>
             </div>
             <div class="scroll">
-              <p class="fadeIn animated">
+              <p class="">
                 Our Token will be more exclusive than the most valuable NFT's of
                 the moment. That's why the price of each MNR on PancakeSwap will
                 initially range from <span>$14,200 to $15,500</span> thanks to:
@@ -510,7 +510,7 @@ p {
     z-index: 1;
     top: -30%;
   }
-
+/* 
   .animacion-aro {
     animation-name: aro;
     animation-duration: 0.5s;
@@ -527,7 +527,7 @@ p {
     100% {
       left: 0%;
     }
-  }
+  } */
 
   .circulos {
     display: flex;
@@ -721,30 +721,8 @@ p {
   }
 }
 
-.animacion-caja1 {
-  animation-name: caja1;
-  animation-duration: 5s;
 
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes caja1 {
-  0% {
-    position: absolute;
-    top: -50%;
-    left: 25%;
-    background-color: white;
-    width: 430px;
-  }
-
-  100% {
-    top: 60%;
-    left: -23%;
-  }
-}
-
-.animacion-aparecer {
+/* .animacion-aparecer {
   animation-duration: 0.8s;
   animation-name: aparecer;
   animation-iteration-count: 1;
@@ -778,7 +756,7 @@ p {
   100% {
     opacity: 100%;
   }
-}
+} */
 
 .animated.duration1s {
   -webkit-animation-duration: 1s;
