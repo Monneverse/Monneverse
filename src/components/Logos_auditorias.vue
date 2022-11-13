@@ -659,10 +659,9 @@ img {
 }
 
 .icon {
-    width: 3rem;
-    height: auto;
-    z-index: 18;
-    margin-left: 1%;
+  width: 3rem;
+  height: auto;
+  margin-left: 1rem;
 }
 
 @media only screen and (min-device-width: 75px) and (max-device-width: 900px) {
