@@ -221,17 +221,18 @@ p {
 
 .titulo {
   position: absolute;
-  top: 4.2rem;
-  left: 5.5rem;
+  width: 100%;
+  top: 4.5rem;
+  text-align: center;
   z-index: 45;
 }
-
 .titulo h1 {
   font-size: 2.4rem;
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
   color: white;
 }
+
 
 .benefits {
   position: absolute;
@@ -264,7 +265,7 @@ p {
 }
 
 .beneficio:nth-child(4) {
-    opacity: 0;
+    opacity: 0!important;
   margin-top: 4.5rem;
   height: 25rem;
 }

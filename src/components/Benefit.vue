@@ -172,7 +172,9 @@ img {
   color: white;
 }
 
-.animacion-desplazamiento-titulo {
+
+@media screen and (min-width: 769px) {
+  .animacion-desplazamiento-titulo {
   animation-duration: 0.5s;
   animation-name: titulo;
   animation-iteration-count: 1;
@@ -189,7 +191,7 @@ img {
     left: 18%;
   }
 }
-
+}
 .benefits {
   position: absolute;
   top: 20%;
