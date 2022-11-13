@@ -713,15 +713,14 @@ img {
 /* REDES */
 
 .logo-redes {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  width: 20rem;
-  height: 5rem;
-  z-index: 14;
-  display: flex;
-  justify-content: start;
-  z-index: 6;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    width: 20rem;
+    height: 5rem;
+    z-index: 14;
+    display: flex;
+    justify-content: start;
 }
 
 .icon {
@@ -732,22 +731,17 @@ img {
 }
 
 @media only screen and (min-device-width: 75px) and (max-device-width: 900px) {
-  .logo-redes {
-    left: 0.5rem;
-    bottom: 0.5rem;
-    visibility: hidden;
-  }
+    .logo-redes {
+        display: none;
+    }
 
-  .icon {
-    width: 2.3rem;
-  }
-  .logos_auditoria {
-    margin-top: 2rem;
-  }
-}
-.animated.duration1s {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+    .icon {
+        width: 2.3rem;
+    }
+
+    .logos_auditoria {
+        margin-top: 2rem;
+    }
 }
 
 /* FIN REDES */

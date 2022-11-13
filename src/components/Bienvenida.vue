@@ -210,6 +210,26 @@ img {
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
 }
+.btn_new {
+  padding: .5rem;
+  margin-top: 5%;
+  min-width: 15rem;
+  background: linear-gradient(
+    90deg,
+    #06e2ff 10%,
+    #28a3ff 30%,
+    #2e94ff 50%,
+    #4070ff 70%,
+    #5e31ff 100%
+  );
+  border-radius: 2rem;
+  color: #fff;
+  font-family: "Bahn";
+  font-style: semibold;
+  font-stretch: semi-condensed;
+  font-size: 1.5rem;
+  text-align: center;
+}
 
 .degradado {
   background: linear-gradient(to right, #090380 55%, transparent);

@@ -109,7 +109,9 @@ export default {
       </div>
     </div>
 
-    <div class="logo-redes">
+  
+  </div>
+  <div class="logo-redes">
       <div class="icon icon-telegram">
         <a href="https://t.me/MonnerverseCripto" target="_blank">
           <img
@@ -130,7 +132,6 @@ export default {
         </a>
       </div>
     </div>
-  </div>
 </template>
 
 <style scoped>
@@ -387,16 +388,16 @@ img {
   display: flex;
   justify-content: start;
 }
+@media screen and (width < 769px) {
+  .logo-redes {
+    display: none;
+  }
+}
 
 .icon {
   width: 3rem;
   height: auto;
   margin-left: 1rem;
-}
-@media screen and (width < 769px) {
-  .logo-redes {
-    display: none;
-  }
 }
 
 .reflector {

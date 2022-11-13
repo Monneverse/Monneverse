@@ -601,13 +601,11 @@ h4 {
   display: flex;
   justify-content: start;
 }
-
 .icon {
   width: 3rem;
   height: auto;
   margin-left: 1rem;
 }
-
 /* .textscroll {
   position: fixed;
   top: 84%;
@@ -758,7 +756,7 @@ h4 {
     display: block;
   }
 
-  .logo_redes {
+  .logo-redes {
     display: none;
   }
 

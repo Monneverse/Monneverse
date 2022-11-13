@@ -17,9 +17,6 @@ export default {
   <div class="fondo-montana">
     <img src="/img/fondo-montana.png" alt="" srcset="" />
   </div>
-  <div class="circuito circuito-izquierdo">
-    <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
-  </div>
 
   <div class="fondoTokenomics">
     <img src="/img/fondo_Tokenomics.png" alt="" />
@@ -623,6 +620,7 @@ img {
   margin: -20px 0 0 -20px;
   transform: rotate(-50deg);
   -webkit-transform: rotate(-50deg);
+  transform: rotate(-50deg);
   border-left: none;
   border-top: none;
   border-right: 4px #fff solid;
@@ -670,6 +668,7 @@ img {
   margin: -20px 0 0 -20px;
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
   border-left: none;
   border-top: none;
   border-right: 4px #fff solid;
@@ -767,7 +766,7 @@ img {
   left: 1rem;
   width: 20rem;
   height: 5rem;
-  z-index: 14;
+  z-index: 204;
   display: flex;
   justify-content: start;
 }

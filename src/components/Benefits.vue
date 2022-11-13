@@ -71,16 +71,23 @@ export default {
             </div>
           </div>
         </div>
-        <div :class="{
-          beneficio: true,
-          // 'animacion-aparecer': this.enterAnimation && !this.isRevert,
-          // 'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          // 'animacion-desaparecer': this.enterAnimation && this.isRevert,
-          // 'animacion-desaparecer-revert':
-          //   this.exitAnimation && !this.isRevert,
-        }">
-          <img id="c" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
-          <div class="content-price  fadeInDown animated">
+        <div
+          :class="{
+            beneficio: true,
+            //   'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            //   'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+            //   'animacion-desaparecer': this.enterAnimation && this.isRevert,
+            //   'animacion-desaparecer-revert':
+            //     this.exitAnimation && !this.isRevert,
+          }"
+        >
+          <img
+            id="c"
+            class="circulos"
+            src="/img/plus.svg"
+            alt="Plus-Beneficios"
+          />
+          <div class="content-price">
             <div class="titulo-two">
               <h1>6.2%<span>*</span>48h</h1>
             </div>
@@ -90,7 +97,7 @@ export default {
               <h3>Sale Price</h3>
             </div>
             <div class="text">
-              <p class="fadeIn animated">
+              <p class="">
                 Enter our first phase os staking buying in pre-sale and earn
                 6.2% every 48 hours of your total capital in Monnercoins after
                 the launch in Pancakeswap
@@ -98,16 +105,23 @@ export default {
             </div>
           </div>
         </div>
-        <div :class="{
-          beneficio: true,
-          // 'animacion-aparecer': this.enterAnimation && !this.isRevert,
-          // 'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          // 'animacion-desaparecer': this.enterAnimation && this.isRevert,
-          // 'animacion-desaparecer-revert':
-          //   this.exitAnimation && !this.isRevert,
-        }">
-          <img id="d" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
-          <div id="contentP" class="content-price fadeInUp animated">
+        <div
+          :class="{
+            beneficio: true,
+            //   'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            //   'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+            //   'animacion-desaparecer': this.enterAnimation && this.isRevert,
+            //   'animacion-desaparecer-revert':
+            //     this.exitAnimation && !this.isRevert,
+          }"
+        >
+          <img
+            id="d"
+            class="circulos"
+            src="/img/plus.svg"
+            alt="Plus-Beneficios"
+          />
+          <div id="contentP" class="content-price">
             <div class="titulo-benefit">
               <div class="info-two">
                 <p>At PancakeSwap</p>
@@ -152,6 +166,13 @@ export default {
           // fadeOutLeft: this.exitAnimation,
         }" src="../assets/aro.svg" />
       </div>
+    </div>
+  </div>
+  <div class="logo-redes">
+    <div class="icon icon-telegram">
+      <a href="https://t.me/MonnerverseCripto" target="_blank">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+      </a>
     </div>
 
     <div class="logo-redes">
@@ -224,7 +245,7 @@ p {
   justify-content: space-evenly;
   flex-direction: column;
   width: 90%;
-  height: 75%;
+  height: 50%;
   top: 14%;
 }
 
@@ -248,8 +269,14 @@ p {
 }
 
 .beneficio:nth-child(4) {
+    opacity: 0;
   margin-top: 4.5rem;
   height: 25rem;
+}
+@media screen and (max-width: 900px) {
+  .beneficio:nth-child(4) {
+    display: none;
+  }
 }
 
 .content-price {
@@ -438,26 +465,31 @@ p {
 
 .logo-redes {
   position: absolute;
-  bottom: 0%;
-  left: 3rem;
+  bottom: 1rem;
+  left: 1rem;
   width: 20rem;
   height: 5rem;
-  z-index: 14;
-  display: flex;
-  justify-content: start;
+  z-index: 100000;
   display: none;
+  justify-content: start;
 }
 
-@media screen and (min-width:769px) {
+.icon {
+  width: 3rem;
+  height: auto;
+  margin-left: 1rem;
+}
+
+@media screen and (min-width: 769px) {
   .logo-redes {
     display: flex;
+    z-index: 100000;
   }
 }
 
 .icon img {
-  width: 3.5vw;
-  height: auto;
-  margin-left: 1rem;
+  width: 100%;
+  height: 100%;
 }
 
 .circulos {
