@@ -788,20 +788,22 @@ img {
     display: none;
   }
 
-  .caja-cryptos {
-    gap: 3rem;
-    box-sizing: border-box;
-  }
 
   .contenedor_crypto {
     overflow: hidden;
     overflow-x: scroll;
     overscroll-behavior-x: initial;
     scroll-snap-type: x mandatory;
-    padding: 1rem;
+    padding: .5rem;
     box-sizing: border-box;
     display: flex;
     gap: 2rem;
+    width: 90%;
+    height: 38%;
+  }
+  .caja-cryptos {
+    gap: 3rem;
+    box-sizing: border-box;
   }
 
   .caja-cryptos .cryptos {

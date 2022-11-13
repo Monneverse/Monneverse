@@ -601,11 +601,13 @@ h4 {
   display: flex;
   justify-content: start;
 }
+
 .icon {
   width: 3rem;
   height: auto;
   margin-left: 1rem;
 }
+
 /* .textscroll {
   position: fixed;
   top: 84%;
@@ -717,6 +719,8 @@ h4 {
     }
   }
 
+
+
   .btn_buyMonner {
     top: 15%;
   }
@@ -785,23 +789,27 @@ h4 {
 
   .btn_buyMonner {
     top: 20%;
-    left: 20%;
-    height: 6%;
-    width: 60%;
+    left: 10%;
+    height: 7%;
+    width: 80%;
+    font-size: 3vw;
+
   }
 
   .buyNow {
     left: 10%;
     width: 100%;
     height: 130%;
+    padding: .1rem;
   }
 
   .btn_moner {
     width: 100%;
+    padding: .2rem;
   }
 
   .buyNow .logos {
-    top: -10%;
+    top: -18%;
   }
 
   .buyNow .logos .meta {
@@ -813,12 +821,13 @@ h4 {
   }
 
   .contrato {
-    font-size: 4.4vw;
-    left: -24%;
+    font-size: 3vw;
+    left: 5%;
+    
   }
 
   .contrato span {
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
 
   .buyNow .texto1 {
