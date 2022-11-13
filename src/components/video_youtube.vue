@@ -82,7 +82,7 @@ img {
     align-items: center;
     justify-content: start;
     text-align: center;
-    gap: 1rem;
+    gap: .2rem;
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
