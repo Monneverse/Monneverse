@@ -60,7 +60,7 @@
             <label for="inversion">Invert</label>
           </div>
           <div class="control">
-            <input type="text" name="interes" id="interes" v-model="interes" placeholder="$ 100" disabled />
+            <input type="text" name="interes" id="interes" v-model="interes" placeholder="$ 100" />
             <label for="interes">Interest</label>
           </div>
         </div>
