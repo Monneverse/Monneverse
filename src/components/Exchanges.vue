@@ -519,7 +519,7 @@ img {
   left: 1%;
   width: 20%;
   height: 5%;
-  z-index: 14;
+  z-index: 245;
   display: flex;
   justify-content: start;
 }
