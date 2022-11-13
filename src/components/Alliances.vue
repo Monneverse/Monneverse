@@ -820,7 +820,7 @@ section {
   opacity: 70%;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (min-width:600px) {
   .degradado {
     width: 50%;
     top: 20%;
