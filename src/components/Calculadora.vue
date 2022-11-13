@@ -911,15 +911,15 @@ img {
     top: 15%;
     left: 5%;
     max-width: 75rem;
-    width: 70%;
+    width: 90%;
     z-index: 9;
     font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
     color: white;
   }
 
   .informacion #descripcion {
-    margin-top: 0rem;
-    margin-left: 4.56rem;
+    margin-top: 1.4rem;
+    margin-left:0rem;
     text-align: start;
     font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
     font-size: 2.5vh;
