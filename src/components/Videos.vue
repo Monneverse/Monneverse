@@ -244,6 +244,7 @@ img {
   box-sizing: border-box;
   direction: initial;
   scroll-behavior: smooth;
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
 }
 
 @media screen and (max-width: 1370px) {

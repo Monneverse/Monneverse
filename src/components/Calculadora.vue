@@ -918,7 +918,7 @@ img {
   }
 
   .informacion #descripcion {
-    margin-top: 1.4rem;
+    margin-top: 2%;
     margin-left:0rem;
     text-align: start;
     font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
