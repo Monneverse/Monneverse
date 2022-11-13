@@ -115,9 +115,9 @@ export default {
               ><span><img src="../assets/reddit-4.svg" /></span>REDDIT</a
             >
 
-            <a target="_blank" href="https://t.me/MonnerverseCripto"><span><img
-                  src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a>
-            <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
+            <a href="https://t.me/monnerversecommunity" target="_blank"
+              ><span><img src="../assets/Telegram_logo.svg" /></span>TELEGRAM</a
+            >
 
             <a href="https://discord.com/invite/h7fRvek9dn" target="_blank"
               ><span><img src="../assets/discord.svg" /></span>DISCORD</a

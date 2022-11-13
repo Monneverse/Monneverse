@@ -1,87 +1,15 @@
-<script setup>
-import Articulo from "./Articulo.vue";
-defineProps({
-  index_pagina: {
-    type: Number,
-    required: true,
-  },
-});
-</script>
-
-<template>
-  <!-- Fondos -->
-  <div class="fondo">
-    <div class="fondoArticulo">
-      <img src="/img/circulo_Fondo.png" alt="" class="circuloFondo1" />
-      <img src="/img/circuloImagen.png" alt="" class="circuloFondo2" />
-    </div>
-    <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
-    <div class="fondo-oscuro"></div>
-    <div class="degradado degradado_izquierdo"></div>
-    <div class="degradado degradado_derecho"></div>
-  </div>
-  <div class="circuitoIzquierdo">
-    <img src="/img/Articulo/circuito-izquierdo.png" alt="" />
-  </div>
-  <div class="circuitoDerecho">
-    <img src="/img/Articulo/circuito-derecho.png" alt="" />
-  </div>
-
-  <!-- CONTENEDOR DE BOTON METATASK -->
-  <div class="btn_buyMonner">
-    <div class="contrato">
-      <b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span>
-    </div>
-    <div class="separar"></div>
-    <div class="buyNow">
-
-    
-      <a href="https://www.pinksale.finance/launchpad/0x8cf9cA848ECAB7781a316eFFaFa41876c585Bc48?chain=BSC" target="_blank" class="btn_moner">
-        <div class="texto1">BUY MONNER</div>
-        <div class="logos">
-          <div class="binance"><img src="/./img/Articulo/BNC.svg" /></div>
-          <div class="meta"><img src="/./img/Articulo/Meta.svg" /></div>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <!-- Contenedor de Articulos -->
-  <div class="containerArticulo">
-    <div v-if="index_pagina == 5" class="contenedorDeArticulo">
-      <Articulo v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen" :url="item.link" />
-    </div>
-  </div>
-
-  <!-- Contenedor de Redes Sociales -->
-  <div class="arrow"></div>
-  <div class="arrow2"></div>
-  <!-- <div class="textscroll">
-    <h3>Scroll to Right</h3>
-  </div> -->
-  <div class="logo_redes">
-    <div class="icon icon-telegram">
-      <a href="https://t.me/MonnerverseCripto" target="_blank">
-        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
-      </a>
-    </div>
-    <div class="icon icon-reddit">
-      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
-      </a>
-    </div>
-    <div class="icon icon-discord">
-      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
-      </a>
-    </div>
-  </div>
-</template>
-
 <script>
+import Articulo from "./Articulo.vue";
+
 export default {
+  components: {
+    Articulo,
+  },
+
+  props: ["enterAnimation", "exitAnimation", "isRevert"],
   data() {
     return {
+      isChanged: false,
       vectorTodo: [
         {
           titulo: "Presale and benefits For investors",
@@ -139,47 +67,116 @@ export default {
       minutoString: "00",
       segundoString: "00",
       inicio: 0,
-      salto: 3
+      salto: 3,
     };
   },
   methods: {
-    AgregarCero(numero) {
-      if (numero > 9) return numero;
-      else return "0" + numero;
-    },
-    ObtenerFechaActual() {
-      var distance = this.fechaEvento - Date.now();
-
-      // Time calculations for days, hours, minutes and seconds
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      this.diaString = this.AgregarCero(days);
-      this.horaString = this.AgregarCero(hours);
-      this.minutoString = this.AgregarCero(minutes);
-      this.segundoString = this.AgregarCero(seconds);
-    },
     CambiarArticulos() {
-      this.vectorArticulo = this.vectorTodo.slice(this.inicio, this.inicio + this.salto);
+      this.isChanged = true;
+      this.vectorArticulo = this.vectorTodo.slice(
+        this.inicio,
+        this.inicio + this.salto
+      );
       if (this.inicio == 0) {
         this.inicio = this.salto;
       } else {
         this.inicio = 0;
       }
-    }
+    },
   },
   mounted() {
     this.CambiarArticulos();
     setInterval(this.ObtenerFechaActual, 500);
-    setInterval(this.CambiarArticulos, 10000);
-
-
   },
 };
 </script>
+<template>
+  <!-- Fondos -->
+  <div class="fondo">
+    <div class="fondoArticulo">
+      <img src="/img/circulo_Fondo.png" alt="" class="circuloFondo1" />
+      <img src="/img/circuloImagen.png" alt="" class="circuloFondo2" />
+    </div>
+    <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
+    <div class="fondo-oscuro"></div>
+    <div class="degradado degradado_izquierdo"></div>
+    <div class="degradado degradado_derecho"></div>
+  </div>
+  <div class="circuitoIzquierdo">
+    <img src="/img/Articulo/circuito-izquierdo.png" alt="" />
+  </div>
+  <div class="circuitoDerecho">
+    <img src="/img/Articulo/circuito-derecho.png" alt="" />
+  </div>
+
+  <!-- CONTENEDOR DE BOTON METATASK -->
+  <div class="btn_buyMonner" :class="{
+    animated: true,
+    duration1s: true,
+    fadeInDown: this.enterAnimation,
+    fadeOutUp: this.exitAnimation,
+  }">
+    <div class="contrato">
+      <b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span>
+    </div>
+    <div class="separar"></div>
+    <div class="buyNow">
+      <a href="https://www.pinksale.finance/launchpad/0x8cf9cA848ECAB7781a316eFFaFa41876c585Bc48?chain=BSC"
+        target="_blank" class="btn_moner">
+        <div class="texto1">BUY MONNER</div>
+        <div class="logos">
+          <div class="binance"><img src="/./img/Articulo/BNC.svg" /></div>
+          <div class="meta"><img src="/./img/Articulo/Meta.svg" /></div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Contenedor de Articulos -->
+  <div class="containerArticulo">
+    <div class="contenedorDeArticulo">
+      <Articulo :class="{
+        articulo__aparecer:
+          (this.enterAnimation && !this.isRevert) ||
+          (this.isChanged && !this.enterAnimation && !this.isRevert),
+        articulo__aparecer_revert: this.enterAnimation && this.isRevert,
+        articulo__desaparecer_revert: this.exitAnimation && this.isRevert,
+        articulo__desaparecer: this.exitAnimation && !this.isRevert,
+      }" v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen" :url="item.link" />
+    </div>
+  </div>
+
+  <!-- Contenedor de Redes Sociales -->
+  <div class="arrow"></div>
+  <div class="arrow2"></div>
+
+  <div @click="CambiarArticulos()" class="flecha flecha_before">
+    <img src="../assets/flecha.svg" alt="arrow before" />
+  </div>
+  <div @click="CambiarArticulos()" class="flecha flecha_next">
+    <img src="../assets/flecha.svg" alt="arrow next" />
+  </div>
+  <!-- <div class="textscroll">
+    <h3>Scroll to Right</h3>
+  </div> -->
+  <div class="logo-redes">
+    <div class="icon icon-telegram">
+      <a href="https://t.me/monnerversecommunity" target="_blank">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+      </a>
+    </div>
+    <div class="icon icon-reddit">
+      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
+      </a>
+    </div>
+    <div class="icon icon-discord">
+      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+      </a>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
@@ -311,13 +308,83 @@ img {
   left: 58%;
 }
 
+.flecha {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 3rem;
+  z-index: 10;
+  position: absolute;
+  top: 65%;
+  margin: 0;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.flecha:hover {
+  padding: 0.7rem;
+}
+
+.flecha_before {
+  margin: 0;
+  left: 10%;
+}
+
+.flecha_before>img {
+  margin: 0;
+  rotate: 90deg;
+}
+
+.flecha_next {
+  right: 10%;
+}
+
+.flecha_next>img {
+  rotate: -90deg;
+}
+
 /* CONTENEDOR BOTON BUYNOW */
 .btn_buyMonner {
   position: fixed;
-  top: 19%;
-  left: 20%;
+  top: 18%;
+  left: 19%;
   width: 60%;
   height: auto;
+}
+
+.btn_buy__aparecer {
+  animation: btn_aparecer 0.8s forwards ease-in-out;
+}
+
+.btn_buy__desaparecer_revert {
+  animation: btn_aparecer 0.8s forwards ease-in-out;
+  animation-direction: reverse;
+}
+
+@keyframes btn_aparecer {
+  0% {
+    left: -40%;
+    top: 100%;
+    rotate: 180deg;
+  }
+}
+
+.btn_buy__desaparecer {
+  animation: btn_desaparecer 0.8s forwards ease-in-out;
+}
+
+.btn_buy__aparecer_revert {
+  animation: btn_desaparecer 0.8s forwards ease-in-out;
+  animation-direction: reverse;
+  z-index: 1000;
+}
+
+@keyframes btn_desaparecer {
+  100% {
+    left: 70%;
+    top: 100%;
+    rotate: 180deg;
+  }
 }
 
 .buyNow {
@@ -326,7 +393,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .btn_moner {
@@ -342,7 +408,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .texto1 {
@@ -358,8 +423,8 @@ img {
 .contrato {
   font-family: "Bahn";
   position: relative;
-  left: 27%;
-  font-size: 1.3vw;
+  left: 28.5%;
+  font-size: 1vw;
   color: white;
   height: 20%;
   width: 158%;
@@ -410,6 +475,92 @@ img {
   height: 80%;
 }
 
+.articulo__aparecer:nth-child(1) {
+  position: relative;
+  left: 0;
+  animation: aparecer 0.8s forwards ease-in-out;
+}
+
+.articulo__aparecer:nth-child(2) {
+  position: relative;
+  left: 0;
+  animation: aparecer 0.6s forwards ease-in-out;
+}
+
+.articulo__aparecer:nth-child(3) {
+  position: relative;
+  left: 0;
+  animation: aparecer 0.4s forwards ease-in-out;
+}
+
+.articulo__desaparecer_revert:nth-child(1) {
+  position: relative;
+  left: 0;
+  animation: aparecer 0.4s forwards ease-in-out reverse;
+}
+
+.articulo__desaparecer_revert:nth-child(2) {
+  position: relative;
+  left: 0;
+  animation: aparecer 0.6s forwards ease-in-out reverse;
+}
+
+.articulo__desaparecer_revert:nth-child(3) {
+  position: relative;
+  left: 0;
+  animation: aparecer 0.8s forwards ease-in-out reverse;
+}
+
+.articulo__desaparecer:nth-child(1) {
+  position: relative;
+  left: 0;
+  animation: desaparecer 0.8s forwards ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.articulo__desaparecer:nth-child(2) {
+  position: relative;
+  left: 0;
+  animation: desaparecer 0.6s forwards ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.articulo__desaparecer:nth-child(3) {
+  position: relative;
+  left: 0;
+  animation: desaparecer 0.4s forwards ease-in-out;
+}
+
+.articulo__aparecer_revert:nth-child(1) {
+  position: relative;
+  left: 0;
+  animation: desaparecer 0.8s ease-in-out reverse;
+}
+
+.articulo__aparecer_revert:nth-child(2) {
+  position: relative;
+  left: 0;
+  animation: desaparecer 0.6s ease-in-out reverse;
+}
+
+.articulo__aparecer_revert:nth-child(3) {
+  position: relative;
+  left: 0;
+  animation: desaparecer 0.4s ease-in-out reverse;
+}
+
+@keyframes aparecer {
+  0% {
+    left: 127%;
+  }
+}
+
+@keyframes desaparecer {
+  100% {
+    left: -127%;
+  }
+}
+
 @media screen and (width > 850px) {
   .containerArticulo {
     position: absolute;
@@ -440,12 +591,12 @@ h4 {
   color: white;
 }
 
-.logo_redes {
+.logo-redes {
   position: absolute;
-  bottom: 1%;
-  left: 1%;
-  width: 20%;
-  height: 5%;
+  bottom: 1rem;
+  left: 1rem;
+  width: 20rem;
+  height: 5rem;
   z-index: 14;
   display: flex;
   justify-content: start;
@@ -454,8 +605,7 @@ h4 {
 .icon {
   width: 3rem;
   height: auto;
-  z-index: 18;
-  margin-left: 1%;
+  margin-left: 1rem;
 }
 
 /* .textscroll {
@@ -466,14 +616,19 @@ h4 {
   z-index: 999;
 } */
 
-
-
 @media screen and (max-width: 900px) {
+  .flecha_before {
+    left: 1%;
+  }
+
+  .flecha_next {
+    right: 1%;
+  }
 
   .arrow,
   .arrow:before {
     position: absolute;
-    left: 50%
+    left: 50%;
   }
 
   .arrow {
@@ -492,7 +647,7 @@ h4 {
   }
 
   .arrow:before {
-    content: '';
+    content: "";
     width: 15px;
     height: 15px;
     top: 50%;
@@ -520,7 +675,7 @@ h4 {
   .arrow2,
   .arrow2:before {
     position: absolute;
-    left: 50%
+    left: 50%;
   }
 
   .arrow2 {
@@ -539,7 +694,7 @@ h4 {
   }
 
   .arrow2:before {
-    content: '';
+    content: "";
     width: 15px;
     height: 15px;
     top: 50%;
@@ -581,9 +736,7 @@ h4 {
     left: 50%;
     transform: translate(-50%, 0);
     margin: 0;
-
   }
-
 
   .containerArticulo::-webkit-scrollbar:horizontal {
     height: 10px;
@@ -634,7 +787,7 @@ h4 {
 
   .btn_buyMonner {
     top: 20%;
-    left: 18%;
+    left: 20%;
     height: 6%;
     width: 60%;
   }
@@ -654,21 +807,20 @@ h4 {
   }
 
   .buyNow .logos .meta {
-    width: 10%;
+    width: 16%;
   }
 
   .separar {
     height: 20%;
-
   }
 
   .contrato {
-    font-size: 3vw;
-    left: -2%;
+    font-size: 4.4vw;
+    left: -24%;
   }
 
   .contrato span {
-    font-size: 90%;
+    font-size: 3.5vw;
   }
 
   .buyNow .texto1 {
@@ -676,8 +828,17 @@ h4 {
   }
 
   .binance {
-    width: 30%;
+    width: 36%;
     bottom: 10%;
   }
+
+  .logo-redes {
+    display: none;
+  }
+}
+
+.animated.duration1s {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
 }
 </style>
