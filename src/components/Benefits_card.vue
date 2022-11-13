@@ -87,7 +87,7 @@ developed.
     </div>
     <div class="logo-redes">
       <div class="icon icon-telegram">
-        <a href="https://t.me/monnerversecommunity" target="_blank">
+        <a href="https://t.me/MonnerverseCripto" target="_blank">
           <img
             src="../assets/Telegram_logo.svg"
             alt="logo telegram"
