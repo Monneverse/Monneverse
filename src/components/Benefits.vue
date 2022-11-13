@@ -1,6 +1,6 @@
-<script>
+<script >
 export default {
-  props: ["enterAnimation", "exitAnimation", "isRevert"],
+  props: ["enterAnimation", "exitAnimation", "isRevert"]
 };
 </script>
 <template>
@@ -17,34 +17,25 @@ export default {
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
 
-    <div
-      :class="{
-        titulo: true,
-        // 'animacion-aparecer': this.enterAnimation && !this.isRevert,
-        // 'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      }"
-    >
+    <div :class="{
+      titulo: true,
+    //   'animacion-aparecer': this.enterAnimation && !this.isRevert,
+    //   'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+    }">
       <h1>BENEFITS</h1>
     </div>
 
     <div class="display_flex">
       <div class="benefits">
-        <div
-          :class="{
-            beneficio: true,
-            // 'animacion-aparecer': this.enterAnimation && !this.isRevert,
-            // 'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-            // 'animacion-desaparecer': this.enterAnimation && this.isRevert,
-            // 'animacion-desaparecer-revert':
-            //   this.exitAnimation && !this.isRevert,
-          }"
-        >
-          <img
-            id="a"
-            class="circulos"
-            src="/img/plus.svg"
-            alt="Plus-Beneficios"
-          />
+        <div :class="{
+          beneficio: true,
+        //   'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        //   'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+        //   'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        //   'animacion-desaparecer-revert':
+        //     this.exitAnimation && !this.isRevert,
+        }">
+          <img id="a" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
             <div class="titulo-benefit">
               <h1><span>$</span>1500<b>USD-MNR</b></h1>
@@ -60,22 +51,15 @@ export default {
           </div>
         </div>
 
-        <div
-          :class="{
-            beneficio: true,
-            // 'animacion-aparecer': this.enterAnimation && !this.isRevert,
-            // 'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-            // 'animacion-desaparecer': this.enterAnimation && this.isRevert,
-            // 'animacion-desaparecer-revert':
-            //   this.exitAnimation && !this.isRevert,
-          }"
-        >
-          <img
-            id="b"
-            class="circulos"
-            src="/img/plus.svg"
-            alt="Plus-Beneficios"
-          />
+        <div :class="{
+          beneficio: true,
+        //   'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        //   'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+        //   'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        //   'animacion-desaparecer-revert':
+        //     this.exitAnimation && !this.isRevert,
+        }">
+          <img id="b" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
             <div class="titulo-two">
               <h1>Phase 1</h1>
@@ -87,22 +71,15 @@ export default {
             </div>
           </div>
         </div>
-        <div
-          :class="{
-            beneficio: true,
-            // 'animacion-aparecer': this.enterAnimation && !this.isRevert,
-            // 'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-            // 'animacion-desaparecer': this.enterAnimation && this.isRevert,
-            // 'animacion-desaparecer-revert':
-            //   this.exitAnimation && !this.isRevert,
-          }"
-        >
-          <img
-            id="c"
-            class="circulos"
-            src="/img/plus.svg"
-            alt="Plus-Beneficios"
-          />
+        <div :class="{
+          beneficio: true,
+        //   'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        //   'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+        //   'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        //   'animacion-desaparecer-revert':
+        //     this.exitAnimation && !this.isRevert,
+        }">
+          <img id="c" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
             <div class="titulo-two">
               <h1>6.2%<span>*</span>48h</h1>
@@ -121,22 +98,15 @@ export default {
             </div>
           </div>
         </div>
-        <div
-          :class="{
-            beneficio: true,
-            // 'animacion-aparecer': this.enterAnimation && !this.isRevert,
-            // 'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-            // 'animacion-desaparecer': this.enterAnimation && this.isRevert,
-            // 'animacion-desaparecer-revert':
-            //   this.exitAnimation && !this.isRevert,
-          }"
-        >
-          <img
-            id="d"
-            class="circulos"
-            src="/img/plus.svg"
-            alt="Plus-Beneficios"
-          />
+        <div :class="{
+          beneficio: true,
+        //   'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        //   'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+        //   'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        //   'animacion-desaparecer-revert':
+        //     this.exitAnimation && !this.isRevert,
+        }">
+          <img id="d" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div id="contentP" class="content-price">
             <div class="titulo-benefit">
               <div class="info-two">
@@ -164,38 +134,30 @@ export default {
           </div>
         </div>
       </div>
-      <div
-        :class="{
-          aro: true,
-          // 'animacion-aparecer': this.enterAnimation && !this.isRevert,
-          // 'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          // 'animacion-desaparecer': this.enterAnimation && this.isRevert,
-          // 'animacion-desaparecer-revert':
-          //   this.exitAnimation && !this.isRevert,
-        }"
-      >
-        <img class="image1" src="/img/aro.svg" />
+      <div :class="{
+        aro: true,
+        // 'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        // 'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+        // 'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        // 'animacion-desaparecer-revert':
+        //   this.exitAnimation && !this.isRevert,
+      }">
+        <img class="image1" src="../assets/aro.svg" />
 
-        <img
-          :class="{
-            image: true,
-            // animated: true,
-            // duration1s: true,
-            // fadeInLeft: this.enterAnimation,
-            // fadeOutLeft: this.exitAnimation,
-          }"
-          src="/img/aro.svg"
-        />
+        <img :class="{
+          image: true,
+          animated: true,
+          duration1s: true,
+          fadeInLeft: this.enterAnimation,
+          fadeOutLeft: this.exitAnimation,
+        }" src="../assets/aro.svg" />
       </div>
     </div>
+
     <div class="logo-redes">
       <div class="icon icon-telegram">
         <a href="https://t.me/MonnerverseCripto" target="_blank">
-          <img
-            src="../assets/Telegram_logo.svg"
-            alt="logo telegram"
-            srcset=""
-          />
+          <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
         </a>
       </div>
       <div class="icon icon-reddit">
@@ -214,10 +176,7 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
-img {
-  width: 100%;
-  height: 100%;
-}
+
 p {
   text-align: justify;
 }
@@ -422,7 +381,7 @@ p {
   z-index: 5;
 }
 
-.fondo-benefit > img {
+.fondo-benefit>img {
   height: 150vh;
 }
 
@@ -432,7 +391,7 @@ p {
     left: 0%;
   }
 
-  .fondo-benefit > img {
+  .fondo-benefit>img {
     width: 100%;
     height: 115vh;
   }
@@ -473,28 +432,33 @@ p {
   }
 }
 
-
 .logo-redes {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
   width: 20rem;
   height: 5rem;
-  z-index: 14;
-  display: flex;
+  z-index: 100000;
+  display: none;
   justify-content: start;
 }
 
-@media screen and (min-width:769px) {
-  .logo-redes {
-    display: none;
-  }
-}
-
 .icon {
+  
   width: 3rem;
   height: auto;
   margin-left: 1rem;
+}
+@media screen and (min-width:769px) {
+  .logo-redes {
+    display: flex;
+    z-index: 100000;
+  }
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
 }
 
 .circulos {
@@ -527,14 +491,14 @@ p {
   z-index: 5;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width:769px) {
   .aro {
     top: -40%;
     display: flex;
     flex-direction: column;
     position: relative;
     align-items: flex-end;
-    z-index: 99;
+    z-index: 999;
     width: 100%;
     height: 30%;
   }
@@ -550,7 +514,7 @@ p {
     z-index: 1;
     top: -30%;
   }
-  /* 
+
   .animacion-aro {
     animation-name: aro;
     animation-duration: 0.5s;
@@ -567,7 +531,7 @@ p {
     100% {
       left: 0%;
     }
-  } */
+  }
 
   .circulos {
     display: flex;
@@ -740,7 +704,7 @@ p {
   }
 }
 
-@media (min-width: 769px) and (width < 900px) {
+@media (min-width:769px) and (width < 900px) {
   .beneficio:nth-child(1) {
     position: relative;
     top: 50%;
@@ -761,7 +725,30 @@ p {
   }
 }
 
-/* .animacion-aparecer {
+.animacion-caja1 {
+  animation-name: caja1;
+  animation-duration: 5s;
+
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes caja1 {
+  0% {
+    position: absolute;
+    top: -50%;
+    left: 25%;
+    background-color: white;
+    width: 430px;
+  }
+
+  100% {
+    top: 60%;
+    left: -23%;
+  }
+}
+
+.animacion-aparecer {
   animation-duration: 0.8s;
   animation-name: aparecer;
   animation-iteration-count: 1;
@@ -795,7 +782,7 @@ p {
   100% {
     opacity: 100%;
   }
-} */
+}
 
 .animated.duration1s {
   -webkit-animation-duration: 1s;
