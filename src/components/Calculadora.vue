@@ -106,6 +106,9 @@
       First Two Months Every 48 Hours
       <br>The Monner Will Return {{ porcentajeInteres }}% Interest
     </p>
+
+    <p id="descripcion" class="seg_linea">Note: Staking is only for those who want it. We will have award and release
+      rules to protect the integrity of our price.</p>
   </article>
 
   <!-- redes sociales -->
@@ -224,12 +227,14 @@ export default {
   font-style: semibold;
   font-stretch: semi-condensed;
 }
+
 @font-face {
   font-family: "Arial";
   src: url("/Fonts/arial.ttf");
   font-style: semibold;
   font-stretch: semi-condensed;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/Fonts/Montserrat-Regular.ttf");
@@ -543,7 +548,7 @@ img {
 }
 
 .control>input {
-   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-size: 1.5rem;
   color: #067f4e;
   padding-right: 1rem;
@@ -567,7 +572,7 @@ img {
 }
 
 .control>label {
-   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-size: 1.5rem;
   color: white;
   padding: 0rem;
@@ -737,13 +742,13 @@ img {
   max-width: 35rem;
   width: 30%;
   z-index: 9;
- font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   color: white;
 }
 
 .informacion #title {
   font-size: 11vh;
- font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-weight: 600;
 
 }
@@ -751,7 +756,7 @@ img {
 @media screen and (max-width: 1450px) {
   .informacion #title {
     font-size: 9vh;
-   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
     font-weight: 600;
 
   }
@@ -760,7 +765,7 @@ img {
 @media screen and (max-width: 1150px) {
   .informacion #title {
     font-size: 7vh;
-     font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
     font-weight: 600;
 
   }
@@ -769,7 +774,7 @@ img {
 @media screen and (max-width: 950px) {
   .informacion #title {
     font-size: 5vh;
-     font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
     font-weight: 600;
 
   }
@@ -777,13 +782,14 @@ img {
 
 .informacion #title span {
   color: #01c28d;
-   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
 }
 
 .informacion #descripcion {
   margin-top: 2rem;
+  margin-left: 4rem;
   text-align: start;
-   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-size: 2.5vh;
   font-weight: 300;
   width: 100%;
@@ -890,24 +896,25 @@ img {
     top: 15%;
     left: 5%;
     max-width: 75rem;
-    width: 70%;
+    width: 90%;
     z-index: 9;
-     font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
     color: white;
   }
 
   .informacion #descripcion {
     margin-top: 0rem;
-    margin-left: 4.56rem;
+    margin-left: 2rem;
     text-align: start;
-     font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
-    font-size: 2.5vh;
+    font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+    font-size: 2vh;
     font-weight: 300;
     width: 100%;
   }
 
-
-
+  .informacion .seg_linea {
+    margin-top: .5rem !important;
+  }
 
   .form-controles {
     bottom: 30%;
