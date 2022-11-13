@@ -147,10 +147,12 @@ import ComponenteIconos from "./componenteIconos.vue";
   font-style: semibold;
   font-stretch: semi-condensed;
 }
+
 img {
   width: 100%;
   height: 100%;
 }
+
 /* FONDO */
 .fondo {
   position: absolute;
@@ -512,13 +514,14 @@ img {
     margin-right: 0.5%;
   }
 }
+
 .logo-redes {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
   width: 20rem;
   height: 5rem;
-  z-index: 14;
+  z-index: 204;
   display: flex;
   justify-content: start;
 }
@@ -578,5 +581,8 @@ img {
     display: block;
   }
 
+  .logo-redes {
+    display: none;
+  }
 }
 </style>
