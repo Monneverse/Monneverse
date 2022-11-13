@@ -33,7 +33,7 @@
     'fondo-redes-animation-revert31152814': index_pagina == this.limite && exit,
   }">
     <div class="redes">
-      <a href="https://t.me/monnerversecommunity">
+      <a href="https://t.me/MonnerverseCripto">
         <img src="../assets/footer/telegram.svg" alt="" />
       </a>
     </div>

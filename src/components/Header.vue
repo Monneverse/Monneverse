@@ -50,7 +50,7 @@
 
       <!-- redes -->
       <div class="logo-redes">
-        <a class="icon" href="https://t.me/monnerversecommunity" target="_blank">
+        <a class="icon" href="https://t.me/MonnerverseCripto" target="_blank">
           <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
         </a>
 
