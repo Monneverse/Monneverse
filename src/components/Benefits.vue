@@ -19,8 +19,8 @@ export default {
 
     <div :class="{
       titulo: true,
-      'animacion-aparecer': this.enterAnimation && !this.isRevert,
-      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+      // 'animacion-aparecer': this.enterAnimation && !this.isRevert,
+      // 'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
     }">
       <h1>BENEFITS</h1>
     </div>
@@ -29,11 +29,11 @@ export default {
       <div class="benefits">
         <div :class="{
           beneficio: true,
-          'animacion-aparecer': this.enterAnimation && !this.isRevert,
-          'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          'animacion-desaparecer': this.enterAnimation && this.isRevert,
-          'animacion-desaparecer-revert':
-            this.exitAnimation && !this.isRevert,
+          // 'animacion-aparecer': this.enterAnimation && !this.isRevert,
+          // 'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+          // 'animacion-desaparecer': this.enterAnimation && this.isRevert,
+          // 'animacion-desaparecer-revert':
+          //   this.exitAnimation && !this.isRevert,
         }">
           <img id="a" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
@@ -53,11 +53,11 @@ export default {
 
         <div :class="{
           beneficio: true,
-          'animacion-aparecer': this.enterAnimation && !this.isRevert,
-          'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          'animacion-desaparecer': this.enterAnimation && this.isRevert,
-          'animacion-desaparecer-revert':
-            this.exitAnimation && !this.isRevert,
+          // 'animacion-aparecer': this.enterAnimation && !this.isRevert,
+          // 'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+          // 'animacion-desaparecer': this.enterAnimation && this.isRevert,
+          // 'animacion-desaparecer-revert':
+          //   this.exitAnimation && !this.isRevert,
         }">
           <img id="b" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
@@ -73,11 +73,11 @@ export default {
         </div>
         <div :class="{
           beneficio: true,
-          'animacion-aparecer': this.enterAnimation && !this.isRevert,
-          'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          'animacion-desaparecer': this.enterAnimation && this.isRevert,
-          'animacion-desaparecer-revert':
-            this.exitAnimation && !this.isRevert,
+          // 'animacion-aparecer': this.enterAnimation && !this.isRevert,
+          // 'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+          // 'animacion-desaparecer': this.enterAnimation && this.isRevert,
+          // 'animacion-desaparecer-revert':
+          //   this.exitAnimation && !this.isRevert,
         }">
           <img id="c" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price  fadeInDown animated">
@@ -100,11 +100,11 @@ export default {
         </div>
         <div :class="{
           beneficio: true,
-          'animacion-aparecer': this.enterAnimation && !this.isRevert,
-          'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          'animacion-desaparecer': this.enterAnimation && this.isRevert,
-          'animacion-desaparecer-revert':
-            this.exitAnimation && !this.isRevert,
+          // 'animacion-aparecer': this.enterAnimation && !this.isRevert,
+          // 'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+          // 'animacion-desaparecer': this.enterAnimation && this.isRevert,
+          // 'animacion-desaparecer-revert':
+          //   this.exitAnimation && !this.isRevert,
         }">
           <img id="d" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div id="contentP" class="content-price fadeInUp animated">
@@ -136,20 +136,20 @@ export default {
       </div>
       <div :class="{
         aro: true,
-        'animacion-aparecer': this.enterAnimation && !this.isRevert,
-        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-        'animacion-desaparecer': this.enterAnimation && this.isRevert,
-        'animacion-desaparecer-revert':
-          this.exitAnimation && !this.isRevert,
+        // 'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        // 'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+        // 'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        // 'animacion-desaparecer-revert':
+        //   this.exitAnimation && !this.isRevert,
       }">
         <img class="image1" src="../assets/aro.svg" />
 
         <img :class="{
           image: true,
-          animated: true,
-          duration1s: true,
-          fadeInLeft: this.enterAnimation,
-          fadeOutLeft: this.exitAnimation,
+          // animated: true,
+          // duration1s: true,
+          // fadeInLeft: this.enterAnimation,
+          // fadeOutLeft: this.exitAnimation,
         }" src="../assets/aro.svg" />
       </div>
     </div>
