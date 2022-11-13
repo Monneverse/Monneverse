@@ -11,9 +11,6 @@ import ComponenteIconos from "./componenteIconos.vue";
   <div class="fondo-montana">
     <img src="/img/fondo-montana.png" alt="" srcset="" />
   </div>
-  <div class="circuito circuito-izquierdo">
-    <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
-  </div>
 
   <div class="fondoTokenomics">
     <img src="/img/fondo_Tokenomics.png" alt="" />
