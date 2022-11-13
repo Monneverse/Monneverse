@@ -101,12 +101,12 @@
       <p id="title">{{ porcentajeInteres }}%<span>*</span>48h</p>
     </div>
 
-    <p id="descripcion">
+    <p class="descripcion_information">
       First Two Months Every 48 Hours
       <br>The Monner Will Return {{ porcentajeInteres }}% Interest
     </p>
 
-    <p id="descripcion" class="seg_linea">Note: Staking is only for those who want it. We will have award and release
+    <p class="descripcion_information seg_linea">Note: Staking is only for those who want it. We will have award and release
       rules to protect the integrity of our price.</p>
   </article>
 
@@ -573,7 +573,7 @@ img {
 
 
 
-#interes:disabled {
+#interes {
   background-color: white;
   user-select: none;
   pointer-events: none;
@@ -793,7 +793,7 @@ img {
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
 }
 
-.informacion #descripcion {
+.informacion .descripcion_information {
   margin-top: 2rem;
   margin-left: 4.5rem;
   margin-bottom: 0rem;
@@ -917,7 +917,7 @@ img {
     color: white;
   }
 
-  .informacion #descripcion {
+  .informacion .descripcion_information {
     margin-top: 2%;
     margin-left:0rem;
     text-align: start;
@@ -927,11 +927,6 @@ img {
     width: 100%;
   }
 
-  .seg_linea {
-    position: fixed;
-    top: 300%;
-    font-size: 2vh;
-  }
 
   .form-controles {
     bottom: 12%;
