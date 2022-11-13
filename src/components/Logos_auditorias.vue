@@ -7,7 +7,7 @@
     <div class="fondo-oscuro"></div>
     <div id="logo-1" class="logo">
         <img src="/img/logo_Grande.png" alt="" />
-    </div> 
+    </div>
     <div class="fondo-montana">
         <img src="/img/fondo-montana.png" alt="" srcset="" />
     </div>
@@ -51,7 +51,7 @@
     <div class="circulos">
         <img src="/img/Imagen1.png" />
     </div>
-    <div class="logo-redes">
+    <div class="logo_redes">
         <div class="icon icon-telegram">
             <a href="https://t.me/MonnerverseCripto" target="_blank">
                 <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
@@ -514,7 +514,7 @@ img {
     }
 
     .fondoCertik {
-        top:55%;
+        top: 55%;
         left: 26%;
         width: 50%;
         height: 15%;
@@ -647,23 +647,22 @@ img {
 
 /* REDES */
 
-.logo-redes {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    width: 20rem;
-    height: 5rem;
-    z-index: 14;
-    display: flex;
-    justify-content: start;
-    z-index: 6;
+.logo_redes {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+  width: 20%;
+  height: 5%;
+  z-index: 14;
+  display: flex;
+  justify-content: start;
 }
 
 .icon {
-    width: 3rem;
-    height: auto;
-    z-index: 18;
-    margin-left: 1rem;
+  width: 3rem;
+  height: auto;
+  z-index: 18;
+  margin-left: 1%;
 }
 
 @media only screen and (min-device-width: 75px) and (max-device-width: 900px) {
@@ -676,7 +675,8 @@ img {
     .icon {
         width: 2.3rem;
     }
-    .logos_auditoria{
+
+    .logos_auditoria {
         margin-top: 2rem;
     }
 }
