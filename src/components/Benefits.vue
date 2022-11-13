@@ -154,23 +154,28 @@ export default {
       </div>
     </div>
 
-    <div class="logo-redes">
-      <div class="icon icon-telegram">
-        <a href="https://t.me/MonnerverseCripto" target="_blank">
-          <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
-        </a>
-      </div>
-      <div class="icon icon-reddit">
-        <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-          <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
-        </a>
-      </div>
-      <div class="icon icon-discord">
-        <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-          <img src="../assets/discord.svg" alt="logo discord" srcset="" />
-        </a>
-      </div>
+
+  </div>
+  <div class="logo-redes">
+
+    <div class="icon icon-telegram">
+      <a href="https://t.me/MonnerverseCripto" target="_blank">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+      </a>
     </div>
+
+    <div class="icon icon-reddit">
+      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
+      </a>
+    </div>
+
+    <div class="icon icon-discord">
+      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+      </a>
+    </div>
+
   </div>
 </template>
 
@@ -444,11 +449,12 @@ p {
 }
 
 .icon {
-  
+
   width: 3rem;
   height: auto;
   margin-left: 1rem;
 }
+
 @media screen and (min-width:769px) {
   .logo-redes {
     display: flex;

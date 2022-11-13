@@ -73,7 +73,9 @@ defineProps({
       </div>
     </div>
 
-    <div class="logo-redes">
+  
+  </div>
+  <div class="logo-redes">
       <div class="icon icon-telegram">
         <a href="https://t.me/MonnerverseCripto" target="_blank">
           <img
@@ -94,7 +96,6 @@ defineProps({
         </a>
       </div>
     </div>
-  </div>
 </template>
 
 <style scoped>
