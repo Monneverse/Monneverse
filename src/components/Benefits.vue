@@ -446,6 +446,7 @@ p {
   }
 
   .titulo {
+    width: 0;
     top: 10rem;
     left: 18%;
   }
