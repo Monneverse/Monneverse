@@ -174,7 +174,7 @@ export default {
           //   this.exitAnimation && !this.isRevert,
         }"
       >
-        <img class="image1" src="../assets/aro.svg" />
+        <img class="image1" src="/img/aro.svg" />
 
         <img
           :class="{
@@ -184,7 +184,7 @@ export default {
             // fadeInLeft: this.enterAnimation,
             // fadeOutLeft: this.exitAnimation,
           }"
-          src="../assets/aro.svg"
+          src="/img/aro.svg"
         />
       </div>
     </div>
