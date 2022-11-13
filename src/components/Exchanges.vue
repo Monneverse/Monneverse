@@ -96,7 +96,7 @@ import ComponenteIconos from "./componenteIconos.vue";
       </div>
     </div>
   </div>
-  <div class="logo_redes">
+  <div class="logo-redes">
     <div class="icon icon-telegram">
       <a href="https://t.me/MonnerverseCripto" target="_blank">
         <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
@@ -144,10 +144,12 @@ import ComponenteIconos from "./componenteIconos.vue";
   font-style: semibold;
   font-stretch: semi-condensed;
 }
+
 img {
   width: 100%;
   height: 100%;
 }
+
 /* FONDO */
 .fondo {
   position: absolute;
@@ -510,13 +512,13 @@ img {
   }
 }
 
-.logo_redes {
+.logo-redes {
   position: absolute;
-  bottom: 1%;
-  left: 1%;
-  width: 20%;
-  height: 5%;
-  z-index: 245;
+  bottom: 1rem;
+  left: 1rem;
+  width: 20rem;
+  height: 5rem;
+  z-index: 204;
   display: flex;
   justify-content: start;
 }
@@ -524,8 +526,7 @@ img {
 .icon {
   width: 3rem;
   height: auto;
-  z-index: 18;
-  margin-left: 1%;
+  margin-left: 1rem;
 }
 
 @media screen and (max-width: 900px) {
@@ -577,5 +578,8 @@ img {
     display: block;
   }
 
+  .logo-redes {
+    display: none;
+  }
 }
 </style>

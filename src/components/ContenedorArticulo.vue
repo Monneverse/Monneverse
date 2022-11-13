@@ -59,22 +59,21 @@ defineProps({
   <!-- <div class="textscroll">
     <h3>Scroll to Right</h3>
   </div> -->
-  <div class="logo_redes">
-    <div class="icon icon-telegram">
-      <a href="https://t.me/MonnerverseCripto" target="_blank">
-        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
-      </a>
-    </div>
-    <div class="icon icon-reddit">
-      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
-      </a>
-    </div>
-    <div class="icon icon-discord">
-      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
-      </a>
-    </div>
+  <div class="logo-redes">
+
+    <a class="icon" href="https://t.me/MonnerverseCripto" target="_blank">
+      <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+    </a>
+
+    <a class="icon" href="https://www.reddit.com/user/monnerverse" target="_blank">
+      <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
+    </a>
+
+
+    <a class="icon" href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+      <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+    </a>
+
   </div>
 </template>
 
@@ -440,24 +439,21 @@ h4 {
   color: white;
 }
 
-.logo_redes {
+.logo-redes {
   position: absolute;
-  bottom: 1%;
-  left: 1%;
-  width: 20%;
-  height: 5%;
+  bottom: 1rem;
+  left: 1rem;
+  width: 20rem;
+  height: 5rem;
   z-index: 14;
   display: flex;
   justify-content: start;
 }
-
 .icon {
   width: 3rem;
   height: auto;
-  z-index: 18;
-  margin-left: 1%;
+  margin-left: 1rem;
 }
-
 /* .textscroll {
   position: fixed;
   top: 84%;
@@ -605,7 +601,7 @@ h4 {
     display: block;
   }
 
-  .logo_redes {
+  .logo-redes {
     display: none;
   }
 

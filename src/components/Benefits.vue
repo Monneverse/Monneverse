@@ -214,7 +214,10 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
-
+img {
+  width: 100%;
+  height: 100%;
+}
 p {
   text-align: justify;
 }
@@ -477,25 +480,19 @@ p {
   left: 1rem;
   width: 20rem;
   height: 5rem;
-  z-index: 999;
+  z-index: 14;
   display: flex;
   justify-content: start;
 }
-.icon {
-  width: 3rem;
-  height: auto;
-  margin-left: 1rem;
-  cursor: pointer;
-}
 
-@media screen and (max-width: 769px) {
+@media screen and (min-width:769px) {
   .logo-redes {
     display: none;
   }
 }
 
-.icon img {
-  width: 3.5vw;
+.icon {
+  width: 3rem;
   height: auto;
   margin-left: 1rem;
 }
