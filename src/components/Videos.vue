@@ -21,17 +21,17 @@ export default {
             {
               name: "discord",
               url: "https://discord.com/invite/h7fRvek9dn",
-              icon: "src/assets/discord.svg",
+              icon: "img/video-redes/discord.svg",
             },
             {
               name: "Telegram",
               url: "https://t.me/monnerversecommunity",
-              icon: "src/assets/Telegram_logo.svg",
+              icon: "img/video-redes/Telegram_logo.svg",
             },
             {
               name: "reddit",
               url: "https://www.reddit.com/user/monnerverse",
-              icon: "src/assets/reddit-4.svg",
+              icon: "img/video-redes/reddit-4.svg",
             },
           ],
         },
@@ -44,7 +44,7 @@ export default {
             {
               name: "discord",
               url: "https://discord.com/invite/h7fRvek9dn",
-              icon: "src/assets/discord.svg",
+              icon: "img/video-redes/discord.svg",
             },
           ],
         },
@@ -61,12 +61,12 @@ export default {
             {
               name: "discord",
               url: "https://discord.com/invite/h7fRvek9dn",
-              icon: "src/assets/discord.svg",
+              icon: "img/video-redes/discord.svg",
             },
             {
               name: "reddit",
               url: "https://www.reddit.com/user/monnerverse",
-              icon: "src/assets/reddit-4.svg",
+              icon: "img/video-redes/reddit-4.svg",
             },
           ],
         },
