@@ -153,27 +153,22 @@ export default {
         }" src="../assets/aro.svg" />
       </div>
     </div>
-
     <div class="logo-redes">
-      <div class="icon icon-telegram">
-        <a href="https://t.me/MonnerverseCripto" target="_blank">
-          <img
-            src="../assets/Telegram_logo.svg"
-            alt="logo telegram"
-            srcset=""
-          />
-        </a>
-      </div>
-      <div class="icon icon-reddit">
-        <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-          <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
-        </a>
-      </div>
-      <div class="icon icon-discord">
-        <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-          <img src="../assets/discord.svg" alt="logo discord" srcset="" />
-        </a>
-      </div>
+        <div class="icon icon-telegram">
+            <a href="https://t.me/MonnerverseCripto" target="_blank">
+                <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+            </a>
+        </div>
+        <div class="icon icon-reddit">
+            <a href="https://www.reddit.com/user/monnerverse" target="_blank">
+                <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
+            </a>
+        </div>
+        <div class="icon icon-discord">
+            <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+                <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+            </a>
+        </div>
     </div>
   </div>
 </template>
@@ -437,19 +432,21 @@ p {
 }
 
 .logo-redes {
-  position: absolute;
-  bottom: 0%;
-  left: 3rem;
-  width: 20rem;
-  height: 5rem;
-  z-index: 14;
-  display: flex;
-  justify-content: start;
-  display: none;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    width: 20rem;
+    height: 5rem;
+    display: flex;
+    justify-content: start;
+    z-index: 6;
+    display: none;
 }
+
 
 @media screen and (min-width:769px) {
   .logo-redes {
+    z-index: 1000;
     display: flex;
   }
 }
@@ -497,7 +494,7 @@ p {
     flex-direction: column;
     position: relative;
     align-items: flex-end;
-    z-index: 999;
+    z-index: 99;
     width: 100%;
     height: 30%;
   }
