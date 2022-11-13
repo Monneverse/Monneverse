@@ -98,7 +98,7 @@ img {
 .contenido-texto p {
     padding: 0;
     margin: 0;
-    font-size: 2.5vh;
+    font-size: 2vh;
     height: max-content;
 }
 
