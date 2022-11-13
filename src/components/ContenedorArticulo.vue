@@ -117,7 +117,7 @@ export default {
     fadeOutUp: this.exitAnimation,
   }">
     <div class="contrato">
-      <b>Contract:</b> <span>0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span>
+      <span>Contract:0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span>
     </div>
     <div class="separar"></div>
     <div class="buyNow">
@@ -813,7 +813,8 @@ h4 {
   }
 
   .buyNow .logos .meta {
-    width: 16%;
+    top: -10%;
+    width: 10%;
   }
 
   .separar {
@@ -822,15 +823,19 @@ h4 {
 
   .contrato {
     font-size: 3vw;
-    left: 5%;
-    
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .contrato span {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 
   .buyNow .texto1 {
+    font-size: 1.5rem;
     top: 30%;
   }
 

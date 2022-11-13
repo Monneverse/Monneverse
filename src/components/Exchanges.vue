@@ -471,7 +471,7 @@ img {
   flex-direction: column;
 }
 
-@media only screen and (width > 769px) {
+@media only screen and (min-width:900px) {
   .content-major {
     flex-direction: row;
   }
@@ -487,7 +487,7 @@ img {
   align-items: center;
 }
 
-@media only screen and (width > 769px) {
+@media only screen and (min-width:900px) {
   .exchange_text {
     width: 40%;
     height: 100%;
@@ -569,7 +569,7 @@ img {
   }
 }
 
-@media only screen and (width > 769px) {
+@media only screen and (min-width:900px) {
   .exchange_text p {
     font-size: 4.5vw;
     margin-top: 0%;
@@ -702,7 +702,7 @@ img {
   }
 }
 
-@media only screen and (width > 769px) {
+@media only screen and (min-width:900px) {
   .contenedor_crypto {
     position: relative;
     top: 17%;
@@ -728,7 +728,7 @@ img {
   box-sizing: border-box;
 }
 
-@media only screen and (width > 769px) {
+@media only screen and (min-width:900px) {
   .caja-cryptos {
     display: flex;
     flex: initial;
@@ -753,7 +753,7 @@ img {
   height: 30%;
 }
 
-@media only screen and (width > 769px) {
+@media only screen and (min-width:900px) {
   .cryptos {
     width: 33%;
     margin-right: 0.5%;

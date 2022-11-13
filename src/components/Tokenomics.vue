@@ -618,7 +618,7 @@ h2 {
   transform: rotate(300deg);
   background: linear-gradient(to right, #090380 55%, transparent);
   position: absolute;
-  width: 100%;
+  width: 130%;
   height: 180%;
   z-index: 19;
   animation-duration: 3s;
@@ -626,7 +626,7 @@ h2 {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   top: -10%;
-  left: 0%;
+  left: -15%;
   opacity: 70%;
 }
 
@@ -634,6 +634,7 @@ h2 {
   .degradado {
     width: 50%;
     top: 20%;
+    left: 0;
   }
 }
 

@@ -102,36 +102,28 @@ export default {
               this.exitAnimation && !this.isRevert,
           }"
         >
-          <buttom  class="btn centrar"
-            >READ MORE</buttom
-          >
+          <buttom class="btn centrar">READ MORE</buttom>
         </div>
       </div>
     </div>
-
-  
   </div>
   <div class="logo-redes">
-      <div class="icon icon-telegram">
-        <a href="https://t.me/MonnerverseCripto" target="_blank">
-          <img
-            src="../assets/Telegram_logo.svg"
-            alt="logo telegram"
-            srcset=""
-          />
-        </a>
-      </div>
-      <div class="icon icon-reddit">
-        <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-          <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
-        </a>
-      </div>
-      <div class="icon icon-discord">
-        <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-          <img src="../assets/discord.svg" alt="logo discord" srcset="" />
-        </a>
-      </div>
+    <div class="icon icon-telegram">
+      <a href="https://t.me/MonnerverseCripto" target="_blank">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+      </a>
     </div>
+    <div class="icon icon-reddit">
+      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
+      </a>
+    </div>
+    <div class="icon icon-discord">
+      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+      </a>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -172,25 +164,24 @@ img {
   color: white;
 }
 
-
 @media screen and (min-width: 769px) {
   .animacion-desplazamiento-titulo {
-  animation-duration: 0.5s;
-  animation-name: titulo;
-  animation-iteration-count: 1;
-}
-.animacion-desplazamiento-titulo-revert {
-  animation-duration: 0.8s;
-  animation-name: titulo;
-  animation-direction: reverse;
-  animation-iteration-count: 1;
-}
-@keyframes titulo {
-  0% {
-    top: 10rem;
-    left: 18%;
+    animation-duration: 0.5s;
+    animation-name: titulo;
+    animation-iteration-count: 1;
   }
-}
+  .animacion-desplazamiento-titulo-revert {
+    animation-duration: 0.8s;
+    animation-name: titulo;
+    animation-direction: reverse;
+    animation-iteration-count: 1;
+  }
+  @keyframes titulo {
+    0% {
+      top: 10rem;
+      left: 18%;
+    }
+  }
 }
 .benefits {
   position: absolute;
@@ -289,7 +280,7 @@ img {
   }
 }
 
-@media screen and (width > 500px) and (width < 769px) {
+@media screen and (width > 500px) and (min-width: 900px) {
   .contenedor-parrafo p {
     font-size: 2.5vw;
   }
@@ -390,7 +381,7 @@ img {
   display: flex;
   justify-content: start;
 }
-@media screen and (width < 769px) {
+@media screen and (min-width: 900px) {
   .logo-redes {
     display: none;
   }
