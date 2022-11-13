@@ -39,7 +39,7 @@
     'fondo-redes-animation-revert':this.exitAnimation
   }">
     <div class="redes">
-      <a href="https://t.me/monnerversecommunity">
+      <a href="https://t.me/MonnerverseCripto">
         <img src="../assets/footer/telegram.svg" alt="" />
       </a>
     </div>

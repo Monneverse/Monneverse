@@ -1,38 +1,28 @@
-<script>
+<script setup>
 import Benefit from "./ComponenteBenefit.vue";
-
-export default {
-  components: {
-    Benefit,
+import Circulos from "./ComponentesCirculo.vue";
+defineProps({
+  index_pagina: {
+    type: Number,
+    required: true,
   },
-  props: ["enterAnimation", "exitAnimation", "isRevert"],
-};
+});
 </script>
 <template>
   <!--FONDO-->
 
   <div class="fondo">
-    <div
-      :class="{
-        'fondo-benefit': true,
-        'animacion-benefit': this.enterAnimation && !this.isRevert,
-        'animacion-benefit-revert': this.exitAnimation && this.isRevert,
-        'animacion-benefit-up': this.enterAnimation && this.isRevert,
-        'animacion-benefit-up-revert': this.exitAnimation && !this.isRevert,
-      }"
-    >
+    <div class="fondo-benefit">
       <img src="/img/fondo-benefit.png" alt="" />
     </div>
     <div class="logo">
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
+
     <div
       :class="{
         benefits: true,
-        'animacion-aparecer': this.enterAnimation && !this.isRevert,
-        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-        'animacion-desaparecer': this.enterAnimation && this.isRevert,
-        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+        'animacion-desplazamiento': index_pagina == 11,
       }"
     >
       <div class="cards">
@@ -60,7 +50,7 @@ many other add-ons to the
 MonnerMetaverse will be
 developed.
 "
-          imagen="img/benefits/staking.jpg"
+          imagen="/img/benefits/staking.jpg"
         />
       </div>
       <div class="cards">
@@ -72,7 +62,7 @@ developed.
           titulo="MonnerHosting and MonnerBlockchain"
           texto="Open a window of possibilities for all those creators who wish to design their"
           textOculto="own token from scratch and sell it worldwide with fees never seen before. Our goal is to create a safe environment on which every token fulfills a series of standards of qualification such as the KYC Verification, residential addres and back-up liquidity. this way we can protect you from any scam. MonnerBlockchain will handle the lowest fees of the hest market beside one of the best times of execution. this will bring more liquidity, stability and exponential growing"
-          imagen="img/benefits/monner.png"
+          imagen="/img/benefits/monner.png"
         />
       </div>
       <div class="cards">
@@ -81,41 +71,34 @@ developed.
           titulo="The universe in the pocket of your Wallet!"
           texto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
           textOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
-          imagen="img/benefits/visa.png"
+          imagen="/img/benefits/visa.png"
         />
       </div>
     </div>
-    <div class="logo-redes">
-      <div class="icon icon-telegram">
-        <a href="https://t.me/monnerversecommunity" target="_blank">
-          <img
-            src="../assets/Telegram_logo.svg"
-            alt="logo telegram"
-            srcset=""
-          />
-        </a>
-      </div>
-      <div class="icon icon-reddit">
-        <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-          <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
-        </a>
-      </div>
-      <div class="icon icon-discord">
-        <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-          <img src="../assets/discord.svg" alt="logo discord" srcset="" />
-        </a>
-      </div>
+  </div>
+
+  <div class="logo-redes">
+    <div class="icon icon-telegram">
+      <a href="https://t.me/MonnerverseCripto" target="_blank">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+      </a>
+    </div>
+    <div class="icon icon-reddit">
+      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
+      </a>
+    </div>
+    <div class="icon icon-discord">
+      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+      </a>
     </div>
   </div>
 </template>
 
-
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
-img {
-  width: 100%;
-  height: 100%;
-}
+
 .logo {
   position: absolute;
   top: 2rem;
@@ -124,25 +107,22 @@ img {
   height: 5rem;
   z-index: 12;
 }
-@media screen and (max-width:769px) {
+
+@media screen and (width < 769px) {
   .logo {
     display: none;
   }
 }
 .benefits {
   position: relative;
-  margin: 0 auto;
   z-index: 8;
   width: 85%;
   height: 70%;
   top: 15%;
   display: flex;
-  scroll-snap-type: x mandatory;
-  overflow-y: hidden;
   overflow-x: scroll;
-  column-gap: 20%;
+  column-gap: 1%;
   color: #fff;
-  border-radius: 1em;
 }
 
 .cards {
@@ -170,12 +150,14 @@ img {
 .cards:hover span {
   opacity: 60%;
 }
+
 @media screen and (min-width: 769px) {
   .cards span {
     display: block;
   }
   .cards:hover {
     transform: translateY(-3%);
+
     transition: 0.5s ease-out;
   }
   .cards span:nth-child(1) {
@@ -184,7 +166,7 @@ img {
     left: 0;
     width: 120%;
     height: 3px;
-    animation: animacion1 3s linear infinite;
+    animation: animacion1 4s linear infinite;
     animation-delay: 1s;
   }
 
@@ -204,7 +186,7 @@ img {
     left: 0;
     width: 3px;
     height: 100%;
-    animation: animacion2 3s linear infinite;
+    animation: animacion2 4s linear infinite;
     animation-delay: 1s;
   }
 
@@ -226,7 +208,7 @@ img {
 
     width: 120%;
     height: 3px;
-    animation: animacion3 3s linear infinite;
+    animation: animacion3 4s linear infinite;
     animation-delay: 1s;
   }
 
@@ -248,7 +230,7 @@ img {
 
     width: 3px;
     height: 100%;
-    animation: animacion4 3s linear infinite;
+    animation: animacion4 4s linear infinite;
     animation-delay: 1s;
   }
 
@@ -261,6 +243,12 @@ img {
       transform: translateY(100%);
     }
   }
+}
+
+.animacion-aparecer {
+  animation-duration: 0.5s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
 }
 
 @keyframes aparecer {
@@ -280,7 +268,6 @@ img {
     overflow-y: initial;
     scroll-snap-type: none;
   }
-
   .cards {
     position: relative;
     width: 30%;
@@ -301,45 +288,11 @@ img {
   background-size: no-repeat center center fixed;
   z-index: 5;
 }
-.fondo-benefit img {
+.fondo-benefit > img {
   position: absolute;
-  top: -5%;
   width: 200%;
   height: 130vh;
 }
-.animacion-benefit img {
-  animation-duration: 0.8s;
-  animation-name: abajo;
-  animation-iteration-count: 1;
-}
-.animacion-benefit-revert img {
-  animation-duration: 0.8s;
-  animation-name: abajo;
-  animation-direction: reverse;
-  animation-iteration-count: 1;
-}
-.animacion-benefit-up img {
-  animation-duration: 0.8s;
-  animation-name: arriba;
-  animation-iteration-count: 1;
-}
-.animacion-benefit-up-revert img {
-  animation-duration: 0.8s;
-  animation-name: arriba;
-  animation-direction: reverse;
-  animation-iteration-count: 1;
-}
-@keyframes abajo {
-  0% {
-    top: -5%;
-  }
-}
-@keyframes arriba {
-  0% {
-    top: 0%;
-  }
-}
-
 @media screen and (min-width: 769px) {
   .fondo-benefit > img {
     width: 100%;
@@ -355,16 +308,32 @@ img {
 
 @keyframes desplazamiento {
   0% {
-    left: 100%;
+    top: 100%;
   }
 
   100% {
-    left: 0;
   }
 }
+
+.animacion-rotar {
+  animation-duration: 0.5s;
+  animation-name: rotar;
+  animation-iteration-count: 1;
+}
+
+@keyframes rotar {
+  0% {
+    transform: rotate(225deg);
+  }
+
+  100% {
+    transform: rotate(135deg);
+  }
+}
+
 .logo-redes {
   position: absolute;
-  bottom: 1rem;
+  bottom: 0%;
   left: 1rem;
   width: 20rem;
   height: 5rem;
@@ -372,48 +341,15 @@ img {
   display: flex;
   justify-content: start;
 }
-
-.icon {
-  width: 3rem;
-  height: auto;
-  margin-left: 1rem;
-}
-@media screen and (max-width:769px) {
+@media screen and (width < 769px) {
   .logo-redes {
     display: none;
   }
 }
-.animacion-aparecer {
-  animation-duration: 0.8s;
-  animation-name: aparecer;
-  animation-iteration-count: 1;
-}
-.animacion-aparecer-revert {
-  animation-duration: 0.8s;
-  animation-name: aparecer;
-  animation-direction: reverse;
-  animation-iteration-count: 1;
-}
-.animacion-desaparecer {
-  animation-duration: 0.8s;
-  animation-name: aparecer;
-  animation-iteration-count: 1;
-}
 
-.animacion-desaparecer-revert {
-  animation-duration: 0.8s;
-  animation-name: aparecer;
-  animation-direction: reverse;
-  animation-iteration-count: 1;
-}
-
-@keyframes aparecer {
-  0% {
-    opacity: 0%;
-  }
-
-  100% {
-    opacity: 100%;
-  }
+.icon img {
+  width: 3.5vw;
+  height: auto;
+  margin-left: 1rem;
 }
 </style>

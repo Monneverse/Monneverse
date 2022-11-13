@@ -1,53 +1,19 @@
 <template>
-  <div
-    class="upcoming_alliance"
-    :class="{
-      animated: true,
-      duration1s: true,
-      slideInUp: this.enterAnimation,
-      zoomOut: this.exitAnimation,
-    }"
-  >
+  <div class="upcoming_alliance">
     <h1>UPCOMING ALLIANCES</h1>
   </div>
-  <div
-    class="visa_img"
-    :class="{
-      animated: true,
-      duration1s: true,
-      fadeInUp: this.enterAnimation,
-      fadeOutDown: this.exitAnimation,
-    }"
-  >
-    <img src="../assets/methodBuy/visa.svg" />
+  <div class="visa_img">
+    <img src="/img/Alianzas/visa.png" />
   </div>
-  <div
-    class="mastercard_img"
-    :class="{
-      animated: true,
-      duration1s: true,
-      fadeInUp: this.enterAnimation,
-      fadeOutDown: this.exitAnimation,
-    }"
-  >
-    <img src="../assets/methodBuy/masterCard.svg" />
+  <div class="mastercard_img">
+    <img src="/img/Alianzas/mastercard.png" />
   </div>
-
   <div class="circulos_redes">
-    <div class="semi_circle"
-    :class="{
-          animated: true,
-          duration1s: true,
-          fadeInDown: this.enterAnimation,
-          fadeInUp: this.exitAnimation,
-        }">
-      <img
-        src="../assets/aro-iluminado-brillante.svg"
-       
-      />
+    <div class="semi_circle">
+      <img src="/img/semi_circulo.png" />
     </div>
     <div class="circle">
-      <img src="../assets/circulo-colores.svg" />
+      <img src="/img/semi_circulo1.png" />
     </div>
   </div>
   <!--FONDO-->
@@ -65,65 +31,43 @@
     <img src="/img/fondo_Tokenomics.png" alt="" />
   </div>
   <div id="logo-1" class="logo">
-    <img src="/img/logo.svg" alt="" />
+    <img src="/img/logo_empresa.png" alt="" />
   </div>
   <div id="logo-2" class="logo">
-    <img src="/img/logo.svg" alt="" />
+    <img src="/img/logo_empresa.png" alt="" />
   </div>
-
+  <div class="circuito-izquierdo">
+    <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
+  </div>
+  <div class="circuito-derecho">
+    <img src="/img/calculadora/circuito-derecho.png" alt="" />
+  </div>
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
-  <div
-    class="rectangulo"
-    :class="{
-      animated: true,
-      duration1s: true,
-      slideInUp: this.enterAnimation,
-      slideOutDown: this.exitAnimation,
-    }"
-  ></div>
-  <div
-    class="rectangulo-medio"
-    :class="{
-      animated: true,
-      duration1s: true,
-      slideInUp: this.enterAnimation,
-      slideOutDown: this.exitAnimation,
-    }"
-  ></div>
+  <div class="rectangulo"></div>
+  <div class="rectangulo-medio"></div>
   <!--FIN FONDO-->
 
-  <div
-    class="logo-redes"
-    :class="{
-      animated: true,
-      duration1s: true,
-      fadeInDown: this.enterAnimation,
-      fadeOutDown: this.exitAnimation,
-    }"
-  >
+  <div class="logo-redes">
     <div class="icon icon-telegram">
-      <a href="https://t.me/monnerversecommunity" target="_blank">
-        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+      <a href="https://t.me/MonnerverseCripto" target="_blank">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="">
       </a>
     </div>
     <div class="icon icon-reddit">
       <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="">
       </a>
     </div>
-    <div class="icon icon-discord">
+    <div class="icon icon-discord ">
       <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+        <img src="../assets/discord.svg" alt="logo discord" srcset="">
       </a>
     </div>
   </div>
 </template>
-<script >
-export default {
-  props: ["enterAnimation", "exitAnimation", "isRevert"]
-};
-</script>
+
+<script></script>
 
 <style scoped>
 @font-face {
@@ -150,22 +94,18 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
 }
 
 .filtro-superior {
   z-index: 1;
-  background: radial-gradient(
-    circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
-  );
+  background: radial-gradient(circle at center,
+      #f9f9fa 0%,
+      #c8ced4 50%,
+      #a8aaaf 100%);
   mix-blend-mode: multiply;
 }
 
@@ -235,140 +175,8 @@ img {
   left: 55%;
 }
 
-/*FIN ESTILO FONDO*/
+@media only screen and  (max-width: 900px) {
 
-.upcoming_alliance {
-  position: absolute;
-  top: 17%;
-  width: 100%;
-  text-align: center;
-  z-index: 4;
-}
-
-.upcoming_alliance h1 {
-  color: white;
-  font-size: 4vw;
-  font-weight: 600;
-  font-family: "Work Sans";
-  z-index: 5;
-}
-
-.visa_img {
-  position: fixed;
-  width: 20%;
-  height: 31%;
-  top: 37%;
-  left: 21%;
-  z-index: 7;
-}
-
-.visa_img img:hover {
-  transform: scale(1.2);
-}
-
-.mastercard_img {
-  position: fixed;
-  width: 18%;
-  height: 32%;
-  top: 37%;
-  right: 23%;
-  z-index: 7;
-}
-
-.mastercard_img img:hover {
-  transform: scale(1.2);
-}
-
-.circulos_redes {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  bottom: 20%;
-  left: 0%;
-  z-index: 4;
-}
-
-.semi_circle {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 80%;
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 50rem;
-  z-index: 4;
-  opacity: 100%;
-}
-
-.circle {
-  position: fixed;
-  right: 50%;
-  top: 85%;
-  transform: translate(50%, 0);
-  width: 50%;
-  max-width: 30rem;
-  height: 100%;
-  max-height: 30rem;
-  z-index: 4;
-  opacity: 100%;
-}
-
-.rectangulo {
-  width: 50%;
-  height: 35%;
-  position: fixed;
-  top: -29%;
-  left: 25%;
-  background: rgb(8, 7, 32);
-  background: linear-gradient(
-    90deg,
-    rgba(8, 7, 32, 1) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
-  border-radius: 2.5rem;
-  text-align: center;
-  z-index: 5;
-}
-
-.rectangulo-medio {
-  width: 44%;
-  height: 20%;
-  background-color: white;
-  position: fixed;
-  top: -18%;
-  left: 28%;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
-  box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
-  z-index: 6;
-}
-
-.logo-redes {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  bottom: 9%;
-  width: 100%;
-  height: 7rem;
-  z-index: 8;
-}
-
-.icon {
-  width: 3rem;
-  height: auto;
-  margin-left: 1rem;
-  z-index: 8;
-}
-
-/* style mobile */
-
-@media only screen and (max-width: 900px) {
   .degradado {
     position: fixed;
     height: 100%;
@@ -444,6 +252,9 @@ img {
     height: 90%;
     visibility: hidden;
   }
+}
+
+@media only screen and  (max-width: 900px) {
   .degradado {
     position: fixed;
     height: 100%;
@@ -519,6 +330,53 @@ img {
     height: 90%;
     visibility: hidden;
   }
+}
+
+/*FIN ESTILO FONDO*/
+
+.upcoming_alliance {
+  position: fixed;
+  z-index: 4;
+}
+
+.upcoming_alliance h1 {
+  position: fixed;
+  top: 17%;
+  right: 23%;
+  color: white;
+  font-size: 5vw;
+  font-weight: 500;
+  font-family: "Work Sans";
+  z-index: 5;
+}
+
+.visa_img {
+  position: fixed;
+  width: 20%;
+  height: 31%;
+  top: 37%;
+  left: 21%;
+  z-index: 7;
+}
+
+.visa_img img:hover {
+  transform: scale(1.2);
+}
+
+.mastercard_img {
+  position: fixed;
+  width: 18%;
+  height: 32%;
+  top: 37%;
+  right: 23%;
+  z-index: 7;
+}
+
+.mastercard_img img:hover {
+  transform: scale(1.2);
+}
+
+@media only screen and  (max-width: 900px) {
   .mastercard_img {
     position: fixed;
     width: 55%;
@@ -545,13 +403,96 @@ img {
 
   .upcoming_alliance {
     position: fixed;
-    top: 15%;
-  
+    top: 0%;
+    left: -20%;
   }
 
   .upcoming_alliance h1 {
     font-size: 12vw;
+    width: 5%;
+    top: 12%;
+    left: 19%;
   }
+}
+
+.circulos_redes {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 20%;
+  left: 0%;
+  z-index: 4;
+}
+
+.semi_circle {
+  position: fixed;
+  right: 26.3%;
+  top: 74%;
+  width: 50%;
+  height: 100%;
+  z-index: 4;
+  opacity: 100%;
+  rotate: 180deg;
+}
+
+.circle {
+  position: fixed;
+  right: 26%;
+  top: 82%;
+  width: 50%;
+  height: 100%;
+  z-index: 4;
+  opacity: 100%;
+}
+
+.rectangulo {
+  width: 50%;
+  height: 35%;
+  position: fixed;
+  top: -29%;
+  left: 25%;
+  background: rgb(8, 7, 32);
+  background: linear-gradient(90deg,
+      rgba(8, 7, 32, 1) 0%,
+      rgba(1, 209, 88, 1) 100%);
+  border-radius: 2.5rem;
+  text-align: center;
+  z-index: 5;
+}
+
+.rectangulo-medio {
+  width: 44%;
+  height: 20%;
+  background-color: white;
+  position: fixed;
+  top: -18%;
+  left: 28%;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 4px 72px -8px rgba(0, 0, 0, 0.75);
+  z-index: 6;
+}
+
+.logo-redes {
+  position: fixed;
+  bottom: 6.7%;
+  left: 41.9%;
+  width: 20rem;
+  height: 7rem;
+  display: flex;
+  justify-content: start;
+  z-index: 8;
+}
+
+.icon {
+  width: 3.2vw;
+  height: auto;
+  margin-left: 1rem;
+  z-index: 8;
+}
+
+@media only screen and  (max-width: 900px) {
   .circulos_redes {
     position: fixed;
     top: 10%;
@@ -596,15 +537,16 @@ img {
   .rectangulo {
     position: fixed;
     top: -6%;
-    left: 0%;
-    width: 100%;
+    left: 1%;
+    width: 90%;
     height: 10%;
   }
 
-  .rectangulo-medio { 
+  .rectangulo-medio {
     position: fixed;
     top: -8%;
-    width: 90%;
+    left: 4%;
+    width: 85%;
     height: 10%;
   }
 }
