@@ -922,14 +922,14 @@ img {
     margin-left:0rem;
     text-align: start;
     font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
-    font-size: 2vh;
+    font-size: 1.5vh;
     font-weight: 300;
     width: 100%;
   }
 
 
   .form-controles {
-    bottom: 12%;
+    bottom: 70%;
     left: -5%;
     transform: translate(0, 100%);
     width: 100%;
