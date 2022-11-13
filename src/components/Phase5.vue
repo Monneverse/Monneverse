@@ -242,15 +242,17 @@ img {
   z-index: 5;
 }
 
-.circulo__1_aparecer {
-  animation: aparecer_circulo__1 .8s;
-}
+@media screen and (min-width: 900px) {
+  .circulo__1_aparecer {
+    animation: aparecer_circulo__1 .8s;
+  }
 
-.circulo__1_desaparecer_revert {
-  animation: aparecer_circulo__1 .8s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
+  .circulo__1_desaparecer_revert {
+    animation: aparecer_circulo__1 .8s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
 
+  }
 }
 
 @keyframes aparecer_circulo__1 {
@@ -274,17 +276,18 @@ img {
   z-index: 5;
 }
 
-.circulo__2_aparecer {
-  animation: aparecer_circulo__2 .8s;
+@media screen and (min-width: 900px) {
+  .circulo__2_aparecer {
+    animation: aparecer_circulo__2 .8s;
+  }
+
+  .circulo__2_desaparecer_revert {
+    animation: aparecer_circulo__2 .8s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+
+  }
 }
-
-.circulo__2_desaparecer_revert {
-  animation: aparecer_circulo__2 .8s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
-
-}
-
 
 
 @keyframes aparecer_circulo__2 {
@@ -311,13 +314,13 @@ img {
 }
 
 .componentes__aparecer_revert {
-  animation: desaparecer  .7s;
+  animation: desaparecer .7s;
   animation-direction: reverse;
 
 }
 
 .componentes__desaparecer {
-  animation: desaparecer  .9s;
+  animation: desaparecer .9s;
 }
 
 .componentes__desaparecer_revert {

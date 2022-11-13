@@ -12,13 +12,11 @@ export default {
   <!--FONDO-->
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
-  <div
-    :class="{
-      fondo: true,
-      'fondo-montana': true,
-      montana__desaparecer_revert: this.exitAnimation && this.isRevert,
-    }"
-  >
+  <div :class="{
+    fondo: true,
+    'fondo-montana': true,
+    montana__desaparecer_revert: this.exitAnimation && this.isRevert,
+  }">
     <img src="/img/fondo-montana.png" />
   </div>
   <div class="fondo fondo-oscurecer"></div>
@@ -31,15 +29,13 @@ export default {
   <!--FIN FONDO-->
   <div class="arrow"></div>
   <div class="arrow2"></div>
-  <div
-    :class="{
-      fases: true,
-      fases__aparecer: this.enterAnimation && !this.isRevert,
-      fases__aparecer_revert: this.enterAnimation && this.isRevert,
-      fases__desaparecer_revert: this.exitAnimation && this.isRevert,
-      fases__desaparecer: this.exitAnimation && !this.isRevert,
-    }"
-  >
+  <div :class="{
+    fases: true,
+    fases__aparecer: this.enterAnimation && !this.isRevert,
+    fases__aparecer_revert: this.enterAnimation && this.isRevert,
+    fases__desaparecer_revert: this.exitAnimation && this.isRevert,
+    fases__desaparecer: this.exitAnimation && !this.isRevert,
+  }">
     <div class="titulo">
       <h1>phase 1</h1>
     </div>
@@ -51,50 +47,39 @@ export default {
     </div>
   </div>
 
-  <div
-    :class="{
-      circulo: true,
-      circulo__1: true,
-      circulo__aparecer: this.enterAnimation && !this.isRevert,
-      circulo__desaparecer_revert: this.exitAnimation && this.isRevert,
-    }"
-  >
+  <div :class="{
+    circulo: true,
+    circulo__1: true,
+    circulo__aparecer: this.enterAnimation && !this.isRevert,
+    circulo__desaparecer_revert: this.exitAnimation && this.isRevert,
+  }">
     <img src="../assets/aro.svg" />
   </div>
 
-  <div
-    :class="{
-      circulo: true,
-      circulo__2: true,
-      circulo__aparecer: this.enterAnimation && !this.isRevert,
-      circulo__desaparecer_revert: this.exitAnimation && this.isRevert,
-    }"
-  >
+  <div :class="{
+    circulo: true,
+    circulo__2: true,
+    circulo__aparecer: this.enterAnimation && !this.isRevert,
+    circulo__desaparecer_revert: this.exitAnimation && this.isRevert,
+  }">
     <img src="../assets/aro.svg" />
   </div>
 
-  <div
-    :class="{
-      componentes: true,
-      componentes__aparecer: this.enterAnimation && !this.isRevert,
-      componentes__aparecer_revert: this.enterAnimation && this.isRevert,
-      componentes__desaparecer_revert: this.exitAnimation && this.isRevert,
-      componentes__desaparecer: this.exitAnimation && !this.isRevert,
-    }"
-  >
+  <div :class="{
+    componentes: true,
+    componentes__aparecer: this.enterAnimation && !this.isRevert,
+    componentes__aparecer_revert: this.enterAnimation && this.isRevert,
+    componentes__desaparecer_revert: this.exitAnimation && this.isRevert,
+    componentes__desaparecer: this.exitAnimation && !this.isRevert,
+  }">
     <div class="componente componente__1">
-      <fasesComponentes
-        title="collection"
-        description="Collection of documents for important Exchanges:
-         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others."
-      />
+      <fasesComponentes title="collection" description="Collection of documents for important Exchanges:
+         CoinGecko,CoinMarketCap, Poloniex, L-Bank, Hotbit, KuCoin, LAKATOKEN,Probit, MEXC global among others." />
     </div>
 
     <div class="componente componente__3">
-      <fasesComponentes
-        title="started"
-        description="Started mass advertising in more than 20 countries around the world"
-      />
+      <fasesComponentes title="started"
+        description="Started mass advertising in more than 20 countries around the world" />
     </div>
   </div>
 </template>
@@ -119,22 +104,18 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 1;
 }
 
 .filtro-superior {
-  background: radial-gradient(
-    circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
-  );
+  background: radial-gradient(circle at center,
+      #f9f9fa 0%,
+      #c8ced4 50%,
+      #a8aaaf 100%);
   mix-blend-mode: multiply;
   z-index: 2;
 }
@@ -258,14 +239,16 @@ img {
   z-index: 5;
 }
 
-.circulo__aparecer {
-  animation: aparecer 0.8s;
-}
+@media screen and (min-width: 900px) {
+  .circulo__aparecer {
+    animation: aparecer 0.8s;
+  }
 
-.circulo__desaparecer_revert {
-  animation: aparecer 0.8s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
+  .circulo__desaparecer_revert {
+    animation: aparecer 0.8s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+  }
 }
 
 .circulo__1 {
@@ -403,11 +386,9 @@ img {
   }
 
   .componentes::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-      90deg,
-      rgb(33, 32, 85) 0%,
-      rgba(1, 209, 88, 1) 100%
-    );
+    background: linear-gradient(90deg,
+        rgb(33, 32, 85) 0%,
+        rgba(1, 209, 88, 1) 100%);
     border-radius: 20px;
     border: 2px solid #f1f2f3;
   }

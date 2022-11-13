@@ -22,15 +22,13 @@ export default {
   <!--FIN FONDO-->
   <div class="arrow"></div>
   <div class="arrow2"></div>
-  <div
-    :class="{
-      fases: true,
-      fases__aparecer: this.enterAnimation && !this.isRevert,
-      fases__aparecer_revert: this.enterAnimation && this.isRevert,
-      fases__desaparecer_revert: this.exitAnimation && this.isRevert,
-      fases__desaparecer: this.exitAnimation && !this.isRevert,
-    }"
-  >
+  <div :class="{
+    fases: true,
+    fases__aparecer: this.enterAnimation && !this.isRevert,
+    fases__aparecer_revert: this.enterAnimation && this.isRevert,
+    fases__desaparecer_revert: this.exitAnimation && this.isRevert,
+    fases__desaparecer: this.exitAnimation && !this.isRevert,
+  }">
     <div class="titulo">
       <h1>Phase 2: <br><a>pre-sale</a></h1>
     </div>
@@ -275,14 +273,16 @@ img {
   height: 25%;
 }
 
-.circulo__1_aparecer {
-  animation: aparecer_circulo__1 0.8s;
-}
+@media screen and (min-width: 900px) {
+  .circulo__1_aparecer {
+    animation: aparecer_circulo__1 0.8s;
+  }
 
-.circulo__1_desaparecer_revert {
-  animation: aparecer_circulo__1 0.8s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
+  .circulo__1_desaparecer_revert {
+    animation: aparecer_circulo__1 0.8s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+  }
 }
 
 @keyframes aparecer_circulo__1 {
@@ -301,14 +301,16 @@ img {
   height: 30%;
 }
 
-.circulo__2_aparecer {
-  animation: aparecer_circulo__2 0.8s;
-}
+@media screen and (min-width: 900px) {
+  .circulo__2_aparecer {
+    animation: aparecer_circulo__2 0.8s;
+  }
 
-.circulo__2_desaparecer_revert {
-  animation: aparecer_circulo__2 0.8s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
+  .circulo__2_desaparecer_revert {
+    animation: aparecer_circulo__2 0.8s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+  }
 }
 
 @keyframes aparecer_circulo__2 {
