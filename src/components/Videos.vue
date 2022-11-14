@@ -28,6 +28,7 @@ export default {
               icon: "img/video-redes/Telegram_logo.svg",
             },
           ],
+          imglang: "img/video-redes/Telegram_logo.svg",
         },
         {
           title: "ZettaTrading | Vídeos De Inversiones Diarios ",
@@ -56,6 +57,7 @@ export default {
               icon: "img/video-redes/internet.png",
             },
           ],
+          imglang: "img/video-redes/Telegram_logo.svg",
         },
         {
           title: "CryptoDexWorld",
@@ -69,6 +71,7 @@ export default {
               icon: "img/video-redes/Telegram_logo.svg",
             },
           ],
+          imglang: "img/video-redes/Telegram_logo.svg",
         },
       ],
     };
