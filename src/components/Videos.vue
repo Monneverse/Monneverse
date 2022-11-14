@@ -14,25 +14,24 @@ export default {
           description:
             "Monner DeFi Token Presale LIVE 🚀 Certik KYC Approved, Registered LLC, Partners, Next 100x Crypto! 💰",
           playlist: [
-            "https://www.youtube.com/embed/kaZXz3IalmE",
-            "",
+            "https://www.youtube.com/embed/kaZXz3IalmE"
           ],
           redes: [
-            {
-              name: "discord",
-              url: "https://discord.com/invite/h7fRvek9dn",
-              icon: "img/video-redes/discord.svg",
-            },
-            {
-              name: "Telegram",
-              url: "https://t.me/MonnerverseCripto",
-              icon: "img/video-redes/Telegram_logo.svg",
-            },
-            {
-              name: "reddit",
-              url: "https://www.reddit.com/user/monnerverse",
-              icon: "img/video-redes/reddit-4.svg",
-            },
+            // {
+            //   name: "discord",
+            //   url: "https://discord.com/invite/h7fRvek9dn",
+            //   icon: "img/video-redes/discord.svg",
+            // },
+            // {
+            //   name: "Telegram",
+            //   url: "https://t.me/MonnerverseCripto",
+            //   icon: "img/video-redes/Telegram_logo.svg",
+            // },
+            // {
+            //   name: "reddit",
+            //   url: "https://www.reddit.com/user/monnerverse",
+            //   icon: "img/video-redes/reddit-4.svg",
+            // },
           ],
         },
         {
@@ -41,33 +40,24 @@ export default {
             "MONNERVERSE IS THE FUTURE OF CRYPTO?! | FIRST TWO MONTHS EARN 6.2% INTEREST DAILY?!!",
           playlist: ["https://www.youtube.com/embed/yCm_91DZHV0"],
           redes: [
-            {
-              name: "discord",
-              url: "https://discord.com/invite/h7fRvek9dn",
-              icon: "img/video-redes/discord.svg",
-            },
+            // {
+            //   name: "discord",
+            //   url: "https://discord.com/invite/h7fRvek9dn",
+            //   icon: "img/video-redes/discord.svg",
+            // },
           ],
         },
         {
-          title: "Titulo del video",
+          title: "ZettaTrading | Vídeos De Inversiones Diarios ",
           description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.",
-          playlist: [
-            "https://www.youtube.com/embed/f10mB6fKszU",
-            "https://www.youtube.com/embed/FR_ENQQwqN4",
-            "https://www.youtube.com/embed/9x0ktT1zmlo",
-          ],
+            "ESTA CRYPTO SUPERARA A BITCOIN! SOLO TIENE 10.000 UNIDADES! | CRYPTO CON AUDITORIA Y KYC | GEMA 2022",
+          playlist: ["https://www.youtube.com/embed/A4m0jspo_g4"],
           redes: [
-            {
-              name: "discord",
-              url: "https://discord.com/invite/h7fRvek9dn",
-              icon: "img/video-redes/discord.svg",
-            },
-            {
-              name: "reddit",
-              url: "https://www.reddit.com/user/monnerverse",
-              icon: "img/video-redes/reddit-4.svg",
-            },
+            // {
+            //   name: "discord",
+            //   url: "https://discord.com/invite/h7fRvek9dn",
+            //   icon: "img/video-redes/discord.svg",
+            // },
           ],
         },
       ],
