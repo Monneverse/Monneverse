@@ -26,10 +26,10 @@ export default {
             {
               name: "Telegram",
               url: "https://t.me/UPNEXTCRYPTO",
-              icon: "img/video-redes/Telegram_logo.svg",
-              img_lang: "img/language/estados_unidos_redondeado.png",
+              icon: "img/video-redes/Telegram_logo.svg"
             },
           ],
+          imglang: "img/video-redes/Telegram_logo.svg",
         },
         {
           title: "ZettaTrading",
@@ -58,6 +58,7 @@ export default {
               icon: "img/video-redes/internet.png",
             },
           ],
+          imglang: "img/video-redes/Telegram_logo.svg",
         },
         {
           title: "CryptoDexWorld",
@@ -71,6 +72,7 @@ export default {
               icon: "img/video-redes/Telegram_logo.svg",
             },
           ],
+          imglang: "img/video-redes/Telegram_logo.svg",
         },
       ],
     };

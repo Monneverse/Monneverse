@@ -4,7 +4,7 @@
         <div class="contenido-texto">
             <div class="title">
                 <h2>{{ title }}    </h2>
-            <img style="height: 2rem;" :src="imglang" alt="languaje" srcset="" />
+            <img style="height: 2rem;" :src="imglang" alt="languaje"/>
            
             </div>
          <p>{{ description }}</p>
