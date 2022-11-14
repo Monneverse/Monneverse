@@ -67,26 +67,7 @@ export default {
             "Monnerverse Review 2022: PRESALE NOW! 100% Decentralized Project with Future VISA and MasterVisa",
           playlist: ["https://www.youtube.com/embed/yoeKHAKl9vU"],
           redes: [
-            {
-              name: "Twitter",
-              url: "https://twitter.com/zettaindahouse",
-              icon: "img/video-redes/gorjeo.png",
-            },
-            {
-              name: "Instagram",
-              url: "https://www.instagram.com/szettatrading/",
-              icon: "img/video-redes/instagram.png",
-            },
-            {
-              name: "Telegram",
-              url: "https://t.me/goldenpicksadmin",
-              icon: "img/video-redes/Telegram_logo.svg",
-            },
-            {
-              name: "web site",
-              url: "https://goldenpicks.es/",
-              icon: "img/video-redes/internet.png",
-            },
+           
           ],
         },
       ],
@@ -247,7 +228,7 @@ img {
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
 }
 
-@media screen and (max-width: 1370px) {
+
   .imagen-youtube {
     width: 12rem;
   }
@@ -279,7 +260,7 @@ img {
   ::-webkit-scrollbar {
     display: block;
   }
-}
+
 
 .video {
   display: block;
