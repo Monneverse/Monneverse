@@ -2,8 +2,12 @@
 
     <div class="contenido">
         <div class="contenido-texto">
-            <h2>{{ title }}</h2>
-            <p>{{ description }}</p>
+            <div class="title">
+                <h2>{{ title }}    </h2>
+            <img style="height: 2rem;" :src="imglang" alt="languaje" srcset="" />
+           
+            </div>
+         <p>{{ description }}</p>
         </div>
 
         <iframe class="video-youtube" :src="video" title="YouTube video player" frameborder="0"
@@ -30,7 +34,7 @@
 
 <script>
 export default {
-    props: ["title", "description", "list", "redes"],
+    props: ["title", "description", "list", "redes","imglang"],
     computed: {
         video: {
             get() {
@@ -87,8 +91,18 @@ img {
     margin: 0%;
     box-sizing: border-box;
 }
-
-
+.title{
+    display: flex;
+}
+.title h2{
+    width: 90%;
+    min-width: 90%;
+    margin-bottom: .1rem;
+    border: 1px solid red;
+}
+.title img{
+    margin-left: 1rem;
+}
 .contenido-texto h2 {
     padding: 0;
     margin: 0;
