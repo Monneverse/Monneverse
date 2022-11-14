@@ -10,12 +10,12 @@ export default {
     return {
       videosPlay: [
         {
-          title: "Titulo del video",
+          title: "Jim Crypto",
           description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.",
+            "Monner DeFi Token Presale LIVE 🚀 Certik KYC Approved, Registered LLC, Partners, Next 100x Crypto! 💰",
           playlist: [
-            "https://www.youtube.com/embed/FR_ENQQwqN4",
-            "https://www.youtube.com/embed/9x0ktT1zmlo",
+            "https://www.youtube.com/embed/kaZXz3IalmE",
+            "",
           ],
           redes: [
             {
@@ -36,10 +36,10 @@ export default {
           ],
         },
         {
-          title: "Titulo del video",
+          title: "UP NEXT CRYPTO",
           description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, dolor aperiam labore porro dolorum quod qui odit quia sit quis inventore. Dignissimos iste excepturi ipsa. Quam quas at veritatis harum.",
-          playlist: ["https://www.youtube.com/embed/9x0ktT1zmlo"],
+            "MONNERVERSE IS THE FUTURE OF CRYPTO?! | FIRST TWO MONTHS EARN 6.2% INTEREST DAILY?!!",
+          playlist: ["https://www.youtube.com/embed/yCm_91DZHV0"],
           redes: [
             {
               name: "discord",

@@ -360,14 +360,14 @@ export default {
             newPosition = this.index_pagina + 1;
             this.isRevert = false;
             if (this.index_pagina == 10) {
-              newPosition = 14;
+              newPosition = 13;
             }
           }
         } else {
           if (this.index_pagina > 1) {
             newPosition = this.index_pagina - 1;
             this.isRevert = true;
-            if (this.index_pagina == 14) {
+            if (this.index_pagina == 13) {
               newPosition = 10;
             }
           }
