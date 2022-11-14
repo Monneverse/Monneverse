@@ -13,11 +13,8 @@ export default {
           title: "Jim Crypto",
           description:
             "Monner DeFi Token Presale LIVE 🚀 Certik KYC Approved, Registered LLC, Partners, Next 100x Crypto! 💰",
-          playlist: [
-            "https://www.youtube.com/embed/kaZXz3IalmE"
-          ],
-          redes: [
-          ],
+          playlist: ["https://www.youtube.com/embed/kaZXz3IalmE"],
+          redes: [],
         },
         {
           title: "UP NEXT CRYPTO",
@@ -25,12 +22,11 @@ export default {
             "MONNERVERSE IS THE FUTURE OF CRYPTO?! | FIRST TWO MONTHS EARN 6.2% INTEREST DAILY?!!",
           playlist: ["https://www.youtube.com/embed/yCm_91DZHV0"],
           redes: [
-
             {
               name: "Telegram",
               url: "https://t.me/UPNEXTCRYPTO",
               icon: "img/video-redes/Telegram_logo.svg",
-            }
+            },
           ],
         },
         {
@@ -67,51 +63,64 @@ export default {
             "Monnerverse Review 2022: PRESALE NOW! 100% Decentralized Project with Future VISA and MasterVisa",
           playlist: ["https://www.youtube.com/embed/yoeKHAKl9vU"],
           redes: [
-          {
+            {
               name: "Telegram",
               url: "https://t.me/CDWMANAGER",
               icon: "img/video-redes/Telegram_logo.svg",
-            }
+            },
           ],
         },
-        
       ],
     };
   },
 };
 </script>
 <template>
-  <div :class="{
-    fondo: true,
-    fondo__aparecer: this.enterAnimation && !this.isRevert,
-    fondo__aparecer2: this.enterAnimation && this.isRevert,
-    fondo__desaparecer: this.exitAnimation && this.isRevert,
-    fondo__desaparecer2: this.exitAnimation && !this.isRevert,
-  }">
+  <div
+    :class="{
+      fondo: true,
+      fondo__aparecer: this.enterAnimation && !this.isRevert,
+      fondo__aparecer2: this.enterAnimation && this.isRevert,
+      fondo__desaparecer: this.exitAnimation && this.isRevert,
+      fondo__desaparecer2: this.exitAnimation && !this.isRevert,
+    }"
+  >
     <img src="/img/rayos.png" alt="" />
   </div>
-  <div :class="{
-    fondo: true,
-  }" class="fondo-benefit">
+  <div
+    :class="{
+      fondo: true,
+    }"
+    class="fondo-benefit"
+  >
     <img src="/img/fondo-benefit.png" alt="" />
   </div>
-  <div :class="{
-    'imagen-youtube': true,
-    animated: true,
-    duration1s: true,
-    lightSpeedIn: this.enterAnimation,
-    lightSpeedOut: this.exitAnimation,
-  }">
+  <div
+    :class="{
+      'imagen-youtube': true,
+      animated: true,
+      duration1s: true,
+      fadeInRight: this.enterAnimation,
+      lightSpeedOut: this.exitAnimation,
+    }"
+  >
     <img src="../assets/YouTube-Icon.svg" alt="Youtube image" />
   </div>
   <div class="contenido">
-    <Youtube v-for="videoy in videosPlay" :class="{
-      video: true,
-      video__aparecer: this.enterAnimation && !this.isRevert,
-      video__aparecer_revert: this.enterAnimation && this.isRevert,
-      video__desaparecer_revert: this.exitAnimation && this.isRevert,
-      video__desaparecer: this.exitAnimation && !this.isRevert,
-    }" :title="videoy.title" :description="videoy.description" :list="videoy.playlist" :redes="videoy.redes">
+    <Youtube
+      v-for="videoy in videosPlay"
+      :class="{
+        video: true,
+        video__aparecer: this.enterAnimation && !this.isRevert,
+        video__aparecer_revert: this.enterAnimation && this.isRevert,
+        video__desaparecer_revert: this.exitAnimation && this.isRevert,
+        video__desaparecer: this.exitAnimation && !this.isRevert,
+      }"
+      :title="videoy.title"
+      :description="videoy.description"
+      :list="videoy.playlist"
+      :redes="videoy.redes"
+    >
     </Youtube>
   </div>
   <div class="arrow"></div>
@@ -121,11 +130,19 @@ export default {
       <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
     </a>
 
-    <a class="icon" href="https://www.reddit.com/user/monnerverse" target="_blank">
+    <a
+      class="icon"
+      href="https://www.reddit.com/user/monnerverse"
+      target="_blank"
+    >
       <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
     </a>
 
-    <a class="icon" href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+    <a
+      class="icon"
+      href="https://discord.com/invite/h7fRvek9dn"
+      target="_blank"
+    >
       <img src="../assets/discord.svg" alt="logo discord" srcset="" />
     </a>
   </div>
@@ -233,39 +250,39 @@ img {
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
 }
 
+.imagen-youtube {
+  width: 12rem;
+}
 
-  .imagen-youtube {
-    width: 12rem;
-  }
+.contenido {
+  left: 1%;
+  justify-content: flex-start;
+  height: 62%;
+  width: 98%;
+  padding: 0.1rem;
+}
 
-  .contenido {
-    left: 1%;
-    justify-content: flex-start;
-    height: 62%;
-    width: 98%;
-    padding: 0.1rem;
-  }
+.contenido::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
 
-  .contenido::-webkit-scrollbar:horizontal {
-    height: 10px;
-  }
+.contenido::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    90deg,
+    rgb(33, 32, 85) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
 
-  .contenido::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg,
-        rgb(33, 32, 85) 0%,
-        rgba(1, 209, 88, 1) 100%);
-    border-radius: 20px;
-    border: 2px solid #f1f2f3;
-  }
+.contenido ::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
 
-  .contenido ::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar {
-    display: block;
-  }
-
+::-webkit-scrollbar {
+  display: block;
+}
 
 .video {
   display: block;
@@ -277,7 +294,7 @@ img {
   margin: 0;
   height: 100%;
 }
-.video__aparecer{
+.video__aparecer {
   position: relative;
   left: 0;
   top: 0;
@@ -303,7 +320,7 @@ img {
   top: 0;
   animation: aparecer 0.4s normal 1 ease-in-out;
 }
-.video__desaparecer_revert  {
+.video__desaparecer_revert {
   position: relative;
   left: 0;
   top: 0;
