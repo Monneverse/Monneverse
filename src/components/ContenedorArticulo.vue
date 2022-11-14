@@ -121,7 +121,7 @@ export default {
     </div>
     <div class="separar"></div>
     <div class="buyNow">
-      <a href="https://www.pinksale.finance/launchpad/0x8cf9cA848ECAB7781a316eFFaFa41876c585Bc48?chain=BSC"
+      <a href="https://www.pinksale.finance/launchpad/0x4a215a90359e5998A64ceAC48940Cd064fd7b34C?chain=BSC"
         target="_blank" class="btn_moner">
         <div class="texto1">BUY MONNER</div>
         <div class="logos">
