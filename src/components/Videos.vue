@@ -17,25 +17,10 @@ export default {
             "https://www.youtube.com/embed/kaZXz3IalmE"
           ],
           redes: [
-            // {
-            //   name: "discord",
-            //   url: "https://discord.com/invite/h7fRvek9dn",
-            //   icon: "img/video-redes/discord.svg",
-            // },
-            // {
-            //   name: "Telegram",
-            //   url: "https://t.me/MonnerverseCripto",
-            //   icon: "img/video-redes/Telegram_logo.svg",
-            // },
-            // {
-            //   name: "reddit",
-            //   url: "https://www.reddit.com/user/monnerverse",
-            //   icon: "img/video-redes/reddit-4.svg",
-            // },
           ],
         },
         {
-          title: "UP NEXT CRYPTO 🇸🇬",
+          title: "UP NEXT CRYPTO",
           description:
             "MONNERVERSE IS THE FUTURE OF CRYPTO?! | FIRST TWO MONTHS EARN 6.2% INTEREST DAILY?!!",
           playlist: ["https://www.youtube.com/embed/yCm_91DZHV0"],
@@ -53,6 +38,34 @@ export default {
           description:
             "ESTA CRYPTO SUPERARA A BITCOIN! SOLO TIENE 10.000 UNIDADES! | CRYPTO CON AUDITORIA Y KYC | GEMA 2022",
           playlist: ["https://www.youtube.com/embed/A4m0jspo_g4"],
+          redes: [
+            {
+              name: "Twitter",
+              url: "https://twitter.com/zettaindahouse",
+              icon: "img/video-redes/gorjeo.png",
+            },
+            {
+              name: "Instagram",
+              url: "https://www.instagram.com/szettatrading/",
+              icon: "img/video-redes/instagram.png",
+            },
+            {
+              name: "Telegram",
+              url: "https://t.me/goldenpicksadmin",
+              icon: "img/video-redes/Telegram_logo.svg",
+            },
+            {
+              name: "web site",
+              url: "https://goldenpicks.es/",
+              icon: "img/video-redes/internet.png",
+            },
+          ],
+        },
+        {
+          title: "CryptoDexWorld",
+          description:
+            "Monnerverse Review 2022: PRESALE NOW! 100% Decentralized Project with Future VISA and MasterVisa",
+          playlist: ["https://www.youtube.com/embed/yoeKHAKl9vU"],
           redes: [
             {
               name: "Twitter",
