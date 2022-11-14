@@ -15,6 +15,7 @@ export default {
             "Monner DeFi Token Presale LIVE 🚀 Certik KYC Approved, Registered LLC, Partners, Next 100x Crypto! 💰",
           playlist: ["https://www.youtube.com/embed/kaZXz3IalmE"],
           redes: [],
+          imglang: "img/language/estados_unidos_redondeado.png",
         },
         {
           title: "UP NEXT CRYPTO",
@@ -28,10 +29,10 @@ export default {
               icon: "img/video-redes/Telegram_logo.svg",
             },
           ],
-          imglang: "img/video-redes/Telegram_logo.svg",
+          imglang: "img/language/estados_unidos_redondeado.png",
         },
         {
-          title: "ZettaTrading | Vídeos De Inversiones Diarios ",
+          title: "ZettaTrading",
           description:
             "ESTA CRYPTO SUPERARA A BITCOIN! SOLO TIENE 10.000 UNIDADES! | CRYPTO CON AUDITORIA Y KYC | GEMA 2022",
           playlist: ["https://www.youtube.com/embed/A4m0jspo_g4"],
@@ -57,7 +58,7 @@ export default {
               icon: "img/video-redes/internet.png",
             },
           ],
-          imglang: "img/video-redes/Telegram_logo.svg",
+          imglang: "img/language/espana_redondeado.png",
         },
         {
           title: "CryptoDexWorld",
@@ -71,7 +72,7 @@ export default {
               icon: "img/video-redes/Telegram_logo.svg",
             },
           ],
-          imglang: "img/video-redes/Telegram_logo.svg",
+          imglang: "img/language/estados_unidos_redondeado.png",
         },
       ],
     };
@@ -123,6 +124,7 @@ export default {
       :description="videoy.description"
       :list="videoy.playlist"
       :redes="videoy.redes"
+      :imglang = "videoy.imglang"
     >
     </Youtube>
   </div>

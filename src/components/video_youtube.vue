@@ -3,7 +3,7 @@
     <div class="contenido-texto">
       <div class="title">
         <h2>{{ title }}</h2>
-        <img style="height: 2rem" :src="imglang" alt="languaje" />
+        <img style="height: 2rem; width: 2rem;" :src="imglang" alt="lang" />
       </div>
       <p>{{ description }}</p>
     </div>
@@ -102,7 +102,6 @@ img {
   width: 90%;
   min-width: 90%;
   margin-bottom: 0.1rem;
-  border: 1px solid red;
 }
 .title img {
   margin-left: 1rem;
