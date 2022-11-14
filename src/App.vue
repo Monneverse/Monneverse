@@ -80,7 +80,7 @@ export default {
         this.scroll = false;
         this.isRevert = false;
         if (this.index_pagina == 10) {
-          newPosition = 14;
+          newPosition = 13;
         }
 
         this.CambiarContenedor(newPosition);
@@ -93,7 +93,7 @@ export default {
         this.scroll = false;
         newPosition = this.index_pagina - 1;
         this.isRevert = true;
-        if (this.index_pagina == 14) {
+        if (this.index_pagina == 13) {
           newPosition = 10;
         }
         this.CambiarContenedor(newPosition);
