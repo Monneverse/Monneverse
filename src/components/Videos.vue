@@ -277,7 +277,12 @@ img {
   margin: 0;
   height: 100%;
 }
-
+.video__aparecer{
+  position: relative;
+  left: 0;
+  top: 0;
+  animation: aparecer 0.3s normal 1 ease-in-out;
+}
 .video__aparecer:nth-child(1) {
   position: relative;
   left: 0;
@@ -297,6 +302,12 @@ img {
   left: 0;
   top: 0;
   animation: aparecer 0.4s normal 1 ease-in-out;
+}
+.video__desaparecer_revert  {
+  position: relative;
+  left: 0;
+  top: 0;
+  animation: aparecer 0.9s reverse 1 ease-in-out forwards;
 }
 
 .video__desaparecer_revert:nth-child(1) {
@@ -319,7 +330,12 @@ img {
   top: 0;
   animation: aparecer 0.8s reverse 1 ease-in-out forwards;
 }
-
+.video__desaparecer {
+  position: relative;
+  left: 0;
+  top: 0;
+  animation: desaparecer 0.3s normal 1 ease-in-out forwards;
+}
 .video__desaparecer:nth-child(1) {
   position: relative;
   left: 0;
@@ -339,6 +355,12 @@ img {
   left: 0;
   top: 0;
   animation: desaparecer 0.4s normal 1 ease-in-out forwards;
+}
+.video__aparecer_revert {
+  position: relative;
+  left: 0;
+  top: 0;
+  animation: desaparecer 0.3s reverse 1 ease-in-out forwards;
 }
 
 .video__aparecer_revert:nth-child(1) {
