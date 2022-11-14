@@ -67,9 +67,14 @@ export default {
             "Monnerverse Review 2022: PRESALE NOW! 100% Decentralized Project with Future VISA and MasterVisa",
           playlist: ["https://www.youtube.com/embed/yoeKHAKl9vU"],
           redes: [
-           
+          {
+              name: "Telegram",
+              url: "https://t.me/CDWMANAGER",
+              icon: "img/video-redes/Telegram_logo.svg",
+            }
           ],
         },
+        
       ],
     };
   },
