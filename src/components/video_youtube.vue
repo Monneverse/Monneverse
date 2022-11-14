@@ -158,7 +158,7 @@ img {
 }
 
 .icon {
-    height: 80%;
+    height: 2rem;
     width: 2rem;
 }
 

@@ -35,16 +35,17 @@ export default {
           ],
         },
         {
-          title: "UP NEXT CRYPTO",
+          title: "UP NEXT CRYPTO 🇸🇬",
           description:
             "MONNERVERSE IS THE FUTURE OF CRYPTO?! | FIRST TWO MONTHS EARN 6.2% INTEREST DAILY?!!",
           playlist: ["https://www.youtube.com/embed/yCm_91DZHV0"],
           redes: [
-            // {
-            //   name: "discord",
-            //   url: "https://discord.com/invite/h7fRvek9dn",
-            //   icon: "img/video-redes/discord.svg",
-            // },
+
+            {
+              name: "Telegram",
+              url: "https://t.me/UPNEXTCRYPTO",
+              icon: "img/video-redes/Telegram_logo.svg",
+            }
           ],
         },
         {
@@ -53,11 +54,26 @@ export default {
             "ESTA CRYPTO SUPERARA A BITCOIN! SOLO TIENE 10.000 UNIDADES! | CRYPTO CON AUDITORIA Y KYC | GEMA 2022",
           playlist: ["https://www.youtube.com/embed/A4m0jspo_g4"],
           redes: [
-            // {
-            //   name: "discord",
-            //   url: "https://discord.com/invite/h7fRvek9dn",
-            //   icon: "img/video-redes/discord.svg",
-            // },
+            {
+              name: "Twitter",
+              url: "https://twitter.com/zettaindahouse",
+              icon: "img/video-redes/gorjeo.png",
+            },
+            {
+              name: "Instagram",
+              url: "https://www.instagram.com/szettatrading/",
+              icon: "img/video-redes/instagram.png",
+            },
+            {
+              name: "Telegram",
+              url: "https://t.me/goldenpicksadmin",
+              icon: "img/video-redes/Telegram_logo.svg",
+            },
+            {
+              name: "web site",
+              url: "https://goldenpicks.es/",
+              icon: "img/video-redes/internet.png",
+            },
           ],
         },
       ],
@@ -66,51 +82,37 @@ export default {
 };
 </script>
 <template>
-  <div
-    :class="{
-      fondo: true,
-      fondo__aparecer: this.enterAnimation && !this.isRevert,
-      fondo__aparecer2: this.enterAnimation && this.isRevert,
-      fondo__desaparecer: this.exitAnimation && this.isRevert,
-      fondo__desaparecer2: this.exitAnimation && !this.isRevert,
-    }"
-  >
+  <div :class="{
+    fondo: true,
+    fondo__aparecer: this.enterAnimation && !this.isRevert,
+    fondo__aparecer2: this.enterAnimation && this.isRevert,
+    fondo__desaparecer: this.exitAnimation && this.isRevert,
+    fondo__desaparecer2: this.exitAnimation && !this.isRevert,
+  }">
     <img src="/img/rayos.png" alt="" />
   </div>
-  <div
-    :class="{
-      fondo: true,
-    }"
-    class="fondo-benefit"
-  >
+  <div :class="{
+    fondo: true,
+  }" class="fondo-benefit">
     <img src="/img/fondo-benefit.png" alt="" />
   </div>
-  <div
-    :class="{
-      'imagen-youtube': true,
-      animated: true,
-      duration1s: true,
-      lightSpeedIn: this.enterAnimation,
-      lightSpeedOut: this.exitAnimation,
-    }"
-  >
+  <div :class="{
+    'imagen-youtube': true,
+    animated: true,
+    duration1s: true,
+    lightSpeedIn: this.enterAnimation,
+    lightSpeedOut: this.exitAnimation,
+  }">
     <img src="../assets/YouTube-Icon.svg" alt="Youtube image" />
   </div>
   <div class="contenido">
-    <Youtube
-      v-for="videoy in videosPlay"
-      :class="{
-        video: true,
-        video__aparecer: this.enterAnimation && !this.isRevert,
-        video__aparecer_revert: this.enterAnimation && this.isRevert,
-        video__desaparecer_revert: this.exitAnimation && this.isRevert,
-        video__desaparecer: this.exitAnimation && !this.isRevert,
-      }"
-      :title="videoy.title"
-      :description="videoy.description"
-      :list="videoy.playlist"
-      :redes="videoy.redes"
-    >
+    <Youtube v-for="videoy in videosPlay" :class="{
+      video: true,
+      video__aparecer: this.enterAnimation && !this.isRevert,
+      video__aparecer_revert: this.enterAnimation && this.isRevert,
+      video__desaparecer_revert: this.exitAnimation && this.isRevert,
+      video__desaparecer: this.exitAnimation && !this.isRevert,
+    }" :title="videoy.title" :description="videoy.description" :list="videoy.playlist" :redes="videoy.redes">
     </Youtube>
   </div>
   <div class="arrow"></div>
@@ -120,19 +122,11 @@ export default {
       <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
     </a>
 
-    <a
-      class="icon"
-      href="https://www.reddit.com/user/monnerverse"
-      target="_blank"
-    >
+    <a class="icon" href="https://www.reddit.com/user/monnerverse" target="_blank">
       <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
     </a>
 
-    <a
-      class="icon"
-      href="https://discord.com/invite/h7fRvek9dn"
-      target="_blank"
-    >
+    <a class="icon" href="https://discord.com/invite/h7fRvek9dn" target="_blank">
       <img src="../assets/discord.svg" alt="logo discord" srcset="" />
     </a>
   </div>
@@ -142,10 +136,12 @@ export default {
 body {
   background-color: #121026;
 }
+
 .animated.duration1s {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
+
 img {
   width: 100%;
   height: 100%;
@@ -172,6 +168,7 @@ img {
   background-size: no-repeat center center fixed;
   z-index: 1;
 }
+
 .fondo-benefit img {
   position: absolute;
   top: -5%;
@@ -255,11 +252,9 @@ img {
   }
 
   .contenido::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-      90deg,
-      rgb(33, 32, 85) 0%,
-      rgba(1, 209, 88, 1) 100%
-    );
+    background: linear-gradient(90deg,
+        rgb(33, 32, 85) 0%,
+        rgba(1, 209, 88, 1) 100%);
     border-radius: 20px;
     border: 2px solid #f1f2f3;
   }
