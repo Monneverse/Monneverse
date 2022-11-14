@@ -15,7 +15,6 @@ export default {
             "Monner DeFi Token Presale LIVE 🚀 Certik KYC Approved, Registered LLC, Partners, Next 100x Crypto! 💰",
           playlist: ["https://www.youtube.com/embed/kaZXz3IalmE"],
           redes: [],
-          imglang: "img/video-redes/Telegram_logo.svg",
         },
         {
           title: "UP NEXT CRYPTO",
@@ -27,12 +26,11 @@ export default {
               name: "Telegram",
               url: "https://t.me/UPNEXTCRYPTO",
               icon: "img/video-redes/Telegram_logo.svg",
-              img_lang: "img/language/estados_unidos_redondeado.png",
             },
           ],
         },
         {
-          title: "ZettaTrading",
+          title: "ZettaTrading | Vídeos De Inversiones Diarios ",
           description:
             "ESTA CRYPTO SUPERARA A BITCOIN! SOLO TIENE 10.000 UNIDADES! | CRYPTO CON AUDITORIA Y KYC | GEMA 2022",
           playlist: ["https://www.youtube.com/embed/A4m0jspo_g4"],
@@ -78,37 +76,51 @@ export default {
 };
 </script>
 <template>
-  <div :class="{
-    fondo: true,
-    fondo__aparecer: this.enterAnimation && !this.isRevert,
-    fondo__aparecer2: this.enterAnimation && this.isRevert,
-    fondo__desaparecer: this.exitAnimation && this.isRevert,
-    fondo__desaparecer2: this.exitAnimation && !this.isRevert,
-  }">
+  <div
+    :class="{
+      fondo: true,
+      fondo__aparecer: this.enterAnimation && !this.isRevert,
+      fondo__aparecer2: this.enterAnimation && this.isRevert,
+      fondo__desaparecer: this.exitAnimation && this.isRevert,
+      fondo__desaparecer2: this.exitAnimation && !this.isRevert,
+    }"
+  >
     <img src="/img/rayos.png" alt="" />
   </div>
-  <div :class="{
-    fondo: true,
-  }" class="fondo-benefit">
+  <div
+    :class="{
+      fondo: true,
+    }"
+    class="fondo-benefit"
+  >
     <img src="/img/fondo-benefit.png" alt="" />
   </div>
-  <div :class="{
-    'imagen-youtube': true,
-    animated: true,
-    duration1s: true,
-    fadeInRight: this.enterAnimation,
-    lightSpeedOut: this.exitAnimation,
-  }">
+  <div
+    :class="{
+      'imagen-youtube': true,
+      animated: true,
+      duration1s: true,
+      fadeInRight: this.enterAnimation,
+      lightSpeedOut: this.exitAnimation,
+    }"
+  >
     <img src="../assets/YouTube-Icon.svg" alt="Youtube image" />
   </div>
   <div class="contenido">
-    <Youtube v-for="videoy in videosPlay" :class="{
-      video: true,
-      video__aparecer: this.enterAnimation && !this.isRevert,
-      video__aparecer_revert: this.enterAnimation && this.isRevert,
-      video__desaparecer_revert: this.exitAnimation && this.isRevert,
-      video__desaparecer: this.exitAnimation && !this.isRevert,
-    }" :title="videoy.title" :description="videoy.description" :list="videoy.playlist" :redes="videoy.redes">
+    <Youtube
+      v-for="videoy in videosPlay"
+      :class="{
+        video: true,
+        video__aparecer: this.enterAnimation && !this.isRevert,
+        video__aparecer_revert: this.enterAnimation && this.isRevert,
+        video__desaparecer_revert: this.exitAnimation && this.isRevert,
+        video__desaparecer: this.exitAnimation && !this.isRevert,
+      }"
+      :title="videoy.title"
+      :description="videoy.description"
+      :list="videoy.playlist"
+      :redes="videoy.redes"
+    >
     </Youtube>
   </div>
   <div class="arrow"></div>
@@ -118,11 +130,19 @@ export default {
       <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
     </a>
 
-    <a class="icon" href="https://www.reddit.com/user/monnerverse" target="_blank">
+    <a
+      class="icon"
+      href="https://www.reddit.com/user/monnerverse"
+      target="_blank"
+    >
       <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
     </a>
 
-    <a class="icon" href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+    <a
+      class="icon"
+      href="https://discord.com/invite/h7fRvek9dn"
+      target="_blank"
+    >
       <img src="../assets/discord.svg" alt="logo discord" srcset="" />
     </a>
   </div>
@@ -247,9 +267,11 @@ img {
 }
 
 .contenido::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg,
-      rgb(33, 32, 85) 0%,
-      rgba(1, 209, 88, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(33, 32, 85) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
   border-radius: 20px;
   border: 2px solid #f1f2f3;
 }
@@ -272,14 +294,12 @@ img {
   margin: 0;
   height: 100%;
 }
-
 .video__aparecer {
   position: relative;
   left: 0;
   top: 0;
   animation: aparecer 0.3s normal 1 ease-in-out;
 }
-
 .video__aparecer:nth-child(1) {
   position: relative;
   left: 0;
@@ -300,7 +320,6 @@ img {
   top: 0;
   animation: aparecer 0.4s normal 1 ease-in-out;
 }
-
 .video__desaparecer_revert {
   position: relative;
   left: 0;
@@ -328,14 +347,12 @@ img {
   top: 0;
   animation: aparecer 0.8s reverse 1 ease-in-out forwards;
 }
-
 .video__desaparecer {
   position: relative;
   left: 0;
   top: 0;
   animation: desaparecer 0.3s normal 1 ease-in-out forwards;
 }
-
 .video__desaparecer:nth-child(1) {
   position: relative;
   left: 0;
@@ -356,7 +373,6 @@ img {
   top: 0;
   animation: desaparecer 0.4s normal 1 ease-in-out forwards;
 }
-
 .video__aparecer_revert {
   position: relative;
   left: 0;
