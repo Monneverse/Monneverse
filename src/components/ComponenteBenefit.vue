@@ -111,7 +111,7 @@ export default {
 .buttom {
   width: 100%;
   position: absolute;
-  bottom: -10%;
+  bottom: -12%;
   height: 25%;
 }
 
