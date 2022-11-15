@@ -87,7 +87,7 @@ export default {
   height: 15%;
   align-items: center;
   font-weight: 400;
-  font-size: 3.6vw;
+  font-size: 3vw;
 }
 
 .contenido img {
@@ -103,10 +103,38 @@ export default {
   }
 }
 
-.texto-oculto {
-  font-size: 1vw;
-  height: 45%;
+.contenido .texto-oculto {
+  font-size: .9vw;
+  padding: .4rem;
+  height: 37%;
   text-align: justify;
+  overflow: hidden;
+  overflow-y: scroll;
+  overscroll-behavior-y: initial;
+  scroll-snap-type: y mandatory;
+  box-sizing: border-box;
+}
+
+.contenido .texto-oculto::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+
+.contenido .texto-oculto::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    90deg,
+    rgb(33, 32, 85) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.contenido .texto-oculto::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  display: block;
 }
 .buttom {
   width: 100%;
