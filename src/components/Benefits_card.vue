@@ -6,6 +6,11 @@ export default {
     Benefit,
   },
   props: ["enterAnimation", "exitAnimation", "isRevert"],
+  data(){
+    return {
+      
+    }
+  }
 };
 </script>
 <template>
@@ -32,9 +37,13 @@ export default {
       'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
     }">
       <div class="cards">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
         <Benefit titulo="Monner Staking"
           texto="We do this to reward holders who stay with us after the day of our official launch to the public, one day after we finish our 3-phase pre-sale and token offering. 2000 MNR will be sold in total, during the phases."
-          textOculto="We really feel very proud of the system that we have and that we have studied for many years to benefit our first investors, to be able to raise the price and maintain it over time. The dividends of each holder who maintains his Monner will be 186% in the first 2 months. There will be 30 payments of 6.2% Every 48 hours. We will make a list that will be published on our official page at the end of the presale. • This white list will bring the wallets that have invested in pre-sale and that will receive payments of 6.2% average day
+          textoOculto="We really feel very proud of the system that we have and that we have studied for many years to benefit our first investors, to be able to raise the price and maintain it over time. The dividends of each holder who maintains his Monner will be 186% in the first 2 months. There will be 30 payments of 6.2% Every 48 hours. We will make a list that will be published on our official page at the end of the presale. • This white list will bring the wallets that have invested in pre-sale and that will receive payments of 6.2% average day
           NOTE: Staking is only for those who want it. We will have award and release rules to protect the integrity of our price."
           imagen="img/benefits/staking.jpg" />
       </div>
@@ -45,7 +54,7 @@ export default {
         <span></span>
         <Benefit titulo="MonnerPlanet"
           texto="Our mission with MonnerPlanet is to provide a solution for humanity with our renewable energy that our company offers, making American homes and industries 100% autonomous and ecological."
-          textOculto="Our first goal with MonnerPlanet is to implement our energy system over 5000 homes through all american territory.
+          textoOculto="Our first goal with MonnerPlanet is to implement our energy system over 5000 homes through all american territory.
           Until this day, we have 2377 solar panels working and with a guaranteed lifespan for the next 20 years.
           We also have vendors closing sales in Panama, Brazil, Hawaii, Colombia and Venezuela. MonnerPlanet will be a reference on solar energy and will spread through all the world.
           We want to offer available equipment for everyone. Our panels have the highest quality (20 years lifespan) and the lowest prices in market."
@@ -55,65 +64,59 @@ export default {
         <span></span><span></span><span></span><span></span>
         <Benefit titulo="The universe in the pocket of your Wallet!"
           texto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
-          textOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
+          textoOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
           imagen="img/benefits/visa.png" />
       </div>
       <div class="cards">
         <span></span><span></span><span></span><span></span>
         <Benefit titulo="The universe in the pocket of your Wallet!"
           texto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
-          textOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
+          textoOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
           imagen="img/benefits/visa.png" />
       </div>
       <div class="cards">
         <span></span><span></span><span></span><span></span>
         <Benefit titulo="The universe in the pocket of your Wallet!"
           texto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
-          textOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
+          textoOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
           imagen="img/benefits/visa.png" />
       </div>
       <div class="cards">
         <span></span><span></span><span></span><span></span>
         <Benefit titulo="The universe in the pocket of your Wallet!"
           texto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
-          textOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
+          textoOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
           imagen="img/benefits/visa.png" />
       </div>
       <div class="cards">
         <span></span><span></span><span></span><span></span>
         <Benefit titulo="The universe in the pocket of your Wallet!"
           texto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
-          textOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
+          textoOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
           imagen="img/benefits/visa.png" />
       </div>
       <div class="cards">
         <span></span><span></span><span></span><span></span>
         <Benefit titulo="The universe in the pocket of your Wallet!"
           texto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
-          textOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
+          textoOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
           imagen="img/benefits/visa.png" />
       </div>
       <div class="cards">
         <span></span><span></span><span></span><span></span>
         <Benefit titulo="The universe in the pocket of your Wallet!"
           texto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
-          textOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
+          textoOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
           imagen="img/benefits/visa.png" />
       </div>
       <div class="cards">
         <span></span><span></span><span></span><span></span>
         <Benefit titulo="The universe in the pocket of your Wallet!"
           texto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
-          textOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
+          textoOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
           imagen="img/benefits/visa.png" />
       </div>
-      <div class="cards">
-        <span></span><span></span><span></span><span></span>
-        <Benefit titulo="The universe in the pocket of your Wallet!"
-          texto="Is our option design exclusively for the Monnerverse; a brand new platform built from the latest "
-          textOculto="safest archetypes of this era. We wish to offer our holders a Blockchain web with the lowest fees in the market, high security and the fastest transaction speed. Through MonnerWallet you’ll have a huge spectrum of exchange choices including the most popular and audited tokens, with the MonnerSwap and MonnerTrading add-ons circling around its environment. Change your Monner for ANY token."
-          imagen="img/benefits/visa.png" />
-      </div>
+     
     </div>
     <div class="logo-redes">
       <div class="icon icon-telegram">
@@ -164,8 +167,8 @@ img {
   padding: 1rem ;
   z-index: 8;
   width: 95%;
-  height: 70%;
-  top: 15%;
+  height: 80%;
+  top: 10%;
   display: flex;
   column-gap: 20%;
   color: #fff;

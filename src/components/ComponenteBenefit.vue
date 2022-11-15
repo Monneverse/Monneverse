@@ -28,7 +28,7 @@ export default {
       <div class="linea"></div>
       <transition name="fade">
         <p v-show="look" class="texto-oculto" transition="fade">
-          {{ textOculto }}
+          {{ textoOculto }}
         </p>
       </transition>
       <div class="buttom">
