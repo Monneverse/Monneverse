@@ -41,25 +41,10 @@ export default {
         <span></span>
         <span></span>
         <Benefit
-          titulo="Bank Segurity"
-          texto="A bank that will shield the stability of our prices and supports the financial security of our holders, protects our system"
-          textOculto="Between the many protections
-measures Bank Security offers to
-us, we can find a reliable anti-
-whale system, anti-Rug Pulls
-mechanisms, purchase values that
-don't exceed 10% and a massive-
-selling ban. Monnerverse prices
-will NEVER decrease to their pre-
-sale version.Out first goal is to
-reach at least a 998 USD price in
-three months. Phase Two:
-MonnerHosting, MonnerTrading
-and MonnerBlockChain, as so
-many other add-ons to the
-MonnerMetaverse will be
-developed.
-"
+          titulo="Monner Staking"
+          texto="We do this to reward holders who stay with us after the day of our official launch to the public, one day after we finish our 3-phase pre-sale and token offering. 2000 MNR will be sold in total, during the phases."
+          textOculto="We really feel very proud of the system that we have and that we have studied for many years to benefit our first investors, to be able to raise the price and maintain it over time. The dividends of each holder who maintains his Monner will be 186% in the first 2 months. There will be 30 payments of 6.2% Every 48 hours. We will make a list that will be published on our official page at the end of the presale. • This white list will bring the wallets that have invested in pre-sale and that will receive payments of 6.2% average day
+          NOTE: Staking is only for those who want it. We will have award and release rules to protect the integrity of our price."
           imagen="img/benefits/staking.jpg"
         />
       </div>
@@ -69,9 +54,12 @@ developed.
         <span></span>
         <span></span>
         <Benefit
-          titulo="MonnerHosting and MonnerBlockchain"
-          texto="Open a window of possibilities for all those creators who wish to design their"
-          textOculto="own token from scratch and sell it worldwide with fees never seen before. Our goal is to create a safe environment on which every token fulfills a series of standards of qualification such as the KYC Verification, residential addres and back-up liquidity. this way we can protect you from any scam. MonnerBlockchain will handle the lowest fees of the hest market beside one of the best times of execution. this will bring more liquidity, stability and exponential growing"
+          titulo="MonnerPlanet"
+          texto="Our mission with MonnerPlanet is to provide a solution for humanity with our renewable energy that our company offers, making American homes and industries 100% autonomous and ecological."
+          textOculto="Our first goal with MonnerPlanet is to implement our energy system over 5000 homes through all american territory.
+          Until this day, we have 2377 solar panels working and with a guaranteed lifespan for the next 20 years.
+          We also have vendors closing sales in Panama, Brazil, Hawaii, Colombia and Venezuela. MonnerPlanet will be a reference on solar energy and will spread through all the world.
+          We want to offer available equipment for everyone. Our panels have the highest quality (20 years lifespan) and the lowest prices in market."
           imagen="img/benefits/monner.png"
         />
       </div>
@@ -109,7 +97,6 @@ developed.
   </div>
 </template>
 
-
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 img {
@@ -124,7 +111,7 @@ img {
   height: 5rem;
   z-index: 12;
 }
-@media screen and (max-width:769px) {
+@media screen and (max-width: 769px) {
   .logo {
     display: none;
   }
@@ -378,7 +365,7 @@ img {
   height: auto;
   margin-left: 1rem;
 }
-@media screen and (max-width:769px) {
+@media screen and (max-width: 769px) {
   .logo-redes {
     display: none;
   }
