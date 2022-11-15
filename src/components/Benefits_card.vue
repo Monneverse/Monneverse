@@ -5,7 +5,7 @@ export default {
   components: {
     Benefit,
   },
-  props: ["enterAnimation", "exitAnimation", "isRevert"],
+  props: ["enterAnimation", "exitAnimation", "isRevert","SetBloquearScroll"],
   data() {
     return {
       listBenefits: [
@@ -110,7 +110,7 @@ export default {
         <span></span>
         <span></span>
         <Benefit :titulo="benefit.titulo" :texto="benefit.texto" :textoOculto="benefit.textoOculto"
-          :imagen="benefit.imagen" />
+          :imagen="benefit.imagen" :SetBloquearScroll="SetBloquearScroll" />
       </div>
 
 

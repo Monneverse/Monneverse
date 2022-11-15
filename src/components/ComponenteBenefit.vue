@@ -1,6 +1,6 @@
 <script>
 export default {
-  props: ["titulo", "texto", "textoOculto", "imagen"],
+  props: ["titulo", "texto", "textoOculto", "imagen","SetBloquearScroll"],
   data() {
     return {
       look: false,
@@ -27,7 +27,7 @@ export default {
 
       <div class="linea"></div>
       <transition name="fade">
-        <p v-show="look" class="texto-oculto" transition="fade">
+        <p @mouseenter="this.SetBloquearScroll(false)" @mouseleave="this.SetBloquearScroll(true)" v-show="look" class="texto-oculto" transition="fade">
           {{ textoOculto }}
         </p>
       </transition>
