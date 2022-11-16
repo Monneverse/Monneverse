@@ -70,26 +70,31 @@ export default {
   },
   methods: {
     next() {
-      let newPosition = this.index_pagina;
+      if (this.scroll) {
+        let newPosition = this.index_pagina;
 
-      if (this.index_pagina < this.limite) {
-        this.exitAnimation = true;
-        newPosition = this.index_pagina + 1;
-        this.scroll = false;
-        this.isRevert = false;
+        if (this.index_pagina < this.limite) {
+          this.exitAnimation = true;
+          newPosition = this.index_pagina + 1;
+          this.scroll = false;
+          this.isRevert = false;
 
-        this.CambiarContenedor(newPosition);
+          this.CambiarContenedor(newPosition);
+        }
       }
     },
     before() {
-      let newPosition = this.index_pagina;
-      if (this.index_pagina > 1) {
-        this.exitAnimation = true;
-        this.scroll = false;
-        newPosition = this.index_pagina - 1;
-        this.isRevert = true;
-        this.CambiarContenedor(newPosition);
+      if (this.scroll) {
+        let newPosition = this.index_pagina;
+        if (this.index_pagina > 1) {
+          this.exitAnimation = true;
+          this.scroll = false;
+          newPosition = this.index_pagina - 1;
+          this.isRevert = true;
+          this.CambiarContenedor(newPosition);
+        }
       }
+
     },
     setOnPage(id, visible = true) {
       this.index = id;
@@ -453,7 +458,8 @@ export default {
     </div>
 
     <div v-show="index_pagina == 11" class="container">
-      <Benefits_card :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" :SetBloquearScroll="SetBloquearScroll" />
+      <Benefits_card :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"
+        :SetBloquearScroll="SetBloquearScroll" />
     </div>
     <div v-show="index_pagina == 12" class="container">
       <Videos :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />

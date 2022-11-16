@@ -27,7 +27,7 @@ export default {
 
       <div class="linea"></div>
       <transition name="fade">
-        <p @mouseenter="this.SetBloquearScroll(false)" @mouseleave="this.SetBloquearScroll(true)" v-show="look"
+        <p @mouseenter="this.SetBloquearScroll(false)" @touchstart="this.SetBloquearScroll(false)" @touchend="this.SetBloquearScroll(true)" @mouseleave="this.SetBloquearScroll(true)" v-show="look"
           class="texto-oculto" transition="fade">
           {{ textoOculto }}
         </p>
