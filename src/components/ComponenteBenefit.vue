@@ -1,6 +1,6 @@
 <script>
 export default {
-  props: ["titulo", "texto", "textoOculto", "imagen","SetBloquearScroll"],
+  props: ["titulo", "texto", "textoOculto", "imagen", "SetBloquearScroll"],
   data() {
     return {
       look: false,
@@ -27,14 +27,14 @@ export default {
 
       <div class="linea"></div>
       <transition name="fade">
-        <p @mouseenter="this.SetBloquearScroll(false)" @mouseleave="this.SetBloquearScroll(true)" v-show="look" class="texto-oculto" transition="fade">
+        <p @mouseenter="this.SetBloquearScroll(false)" @mouseleave="this.SetBloquearScroll(true)" v-show="look"
+          class="texto-oculto" transition="fade">
           {{ textoOculto }}
         </p>
       </transition>
       <div class="buttom">
-        <buttom :class="ocultar" v-on:click="mostrarTexto" class="btn centrar"
-          >READ {{ look ? "LESS" : "MORE" }}</buttom
-        >
+        <buttom :class="ocultar" v-on:click="mostrarTexto" class="btn centrar">READ {{ look ? "LESS" : "MORE" }}
+        </buttom>
       </div>
     </div>
   </div>
@@ -95,6 +95,7 @@ export default {
   height: 20%;
   margin: 0 auto;
 }
+
 @media screen and (width > 769px) {
   .contenido img {
     width: 50%;
@@ -104,7 +105,7 @@ export default {
 }
 
 .contenido .texto-oculto {
-  font-size: .9vw;
+  font-size: 3vw;
   padding: .4rem;
   height: 37%;
   text-align: justify;
@@ -120,11 +121,9 @@ export default {
 }
 
 .contenido .texto-oculto::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    90deg,
-    rgb(33, 32, 85) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%);
   border-radius: 20px;
   border: 2px solid #f1f2f3;
 }
@@ -136,22 +135,22 @@ export default {
 ::-webkit-scrollbar {
   display: block;
 }
+
 .buttom {
   width: 100%;
   position: absolute;
-  bottom: -12%;
+  bottom: -10%;
   height: 25%;
 }
 
 .texto-oculto::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    90deg,
-    rgb(33, 32, 85) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%);
   border-radius: 20px;
   border: 2px solid #f1f2f3;
 }
+
 .texto-oculto::-webkit-scrollbar-track {
   border-radius: 10px;
 }
@@ -159,37 +158,58 @@ export default {
 .fade-enter-active {
   animation: opacity 0.5s linear;
 }
+
 @keyframes opacity {
   0% {
     opacity: 0%;
   }
+
   50% {
     opacity: 50%;
   }
+
   100% {
     opacity: 100%;
   }
 }
-.fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+.fade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+  {
   animation: opacity2 0.5s linear;
 }
+
 @keyframes opacity2 {
   0% {
     opacity: 100%;
   }
+
   50% {
     opacity: 50%;
   }
+
   100% {
     opacity: 0%;
   }
 }
+
+.contenido p {
+  font-weight: 400;
+  font-size: 3vw;
+}
+
 @media screen and (min-width: 769px) {
+  .contenido .texto-oculto {
+    font-size: 1vw;
+  }
+
   .contenido h2 {
     font-size: 1.5vw;
     font-weight: 600;
     text-align: center;
   }
+
   .contenido p {
     font-weight: 400;
     font-size: 1vw;
@@ -199,11 +219,9 @@ export default {
 .btn {
   position: relative;
   bottom: -15%;
-  background: linear-gradient(
-    90deg,
-    rgb(18, 17, 65) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(18, 17, 65) 0%,
+      rgba(1, 209, 88, 1) 100%);
   padding: 2% 5%;
   border-radius: 1.5vw;
   cursor: pointer;
@@ -235,6 +253,7 @@ export default {
   justify-content: center;
   text-align: center;
 }
+
 .ocultar {
   display: none;
 }
