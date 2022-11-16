@@ -192,7 +192,7 @@ img {
 
 .fondo-benefit img {
   position: absolute;
-  top: -5%;
+  top: 0%;
   height: 115vh;
 }
 
