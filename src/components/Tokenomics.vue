@@ -64,9 +64,11 @@ export default {
         maintainAspectRatio: false,
         showTooltips: false,
         plugins: {
+          
           tooltip: {
             enabled: true,
             callbacks: {
+             
               label: (tooltipItem) => {
                 return tooltipItem.label
               },
@@ -75,6 +77,7 @@ export default {
           legend: {
             position: "left",
             labels: {
+              color: 'white',
               font: {
                 size: 16,
               },
