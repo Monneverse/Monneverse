@@ -164,8 +164,8 @@ img {
   padding: 1rem;
   z-index: 8;
   width: 95%;
-  height: 82%;
-  top: 12%;
+  height: 72%;
+  top: 15%;
   display: flex;
   column-gap: 20%;
   color: #fff;
