@@ -201,7 +201,7 @@ export default {
 
 @media screen and (min-width: 769px) {
   .contenido .texto-oculto {
-    font-size: 1vw;
+    font-size: .8vw;
   }
 
   .contenido h2 {
@@ -213,6 +213,14 @@ export default {
   .contenido p {
     font-weight: 400;
     font-size: 1vw;
+  }
+
+  .buttom {
+    font-size: 1vw;
+    width: 100%;
+    position: absolute;
+    bottom: -8%;
+    height: 20%;
   }
 }
 
