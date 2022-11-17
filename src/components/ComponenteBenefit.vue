@@ -27,7 +27,8 @@ export default {
 
       <div class="linea"></div>
       <transition name="fade">
-        <p @mouseenter="this.SetBloquearScroll(false)" @touchstart="this.SetBloquearScroll(false)" @touchend="this.SetBloquearScroll(true)" @mouseleave="this.SetBloquearScroll(true)" v-show="look"
+        <p @mouseenter="this.SetBloquearScroll(false)" @touchstart="this.SetBloquearScroll(false)"
+          @touchend="this.SetBloquearScroll(true)" @mouseleave="this.SetBloquearScroll(true)" v-show="look"
           class="texto-oculto" transition="fade">
           {{ textoOculto }}
         </p>
@@ -106,8 +107,8 @@ export default {
 
 .contenido .texto-oculto {
   font-size: 3vw;
-  padding: .4rem;
-  height: 37%;
+  padding: .3rem;
+  height: 12%;
   text-align: justify;
   overflow: hidden;
   overflow-y: scroll;
