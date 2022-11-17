@@ -27,13 +27,21 @@ export default {
 
       <div class="linea"></div>
       <transition name="fade">
-        <p @mouseenter="this.SetBloquearScroll(false)" @touchstart="this.SetBloquearScroll(false)" @touchend="this.SetBloquearScroll(true)" @mouseleave="this.SetBloquearScroll(true)" v-show="look"
-          class="texto-oculto" transition="fade">
+        <p
+          @mouseenter="this.SetBloquearScroll(false)"
+          @touchstart="this.SetBloquearScroll(false)"
+          @touchend="this.SetBloquearScroll(true)"
+          @mouseleave="this.SetBloquearScroll(true)"
+          v-show="look"
+          class="texto-oculto"
+          transition="fade"
+        >
           {{ textoOculto }}
         </p>
       </transition>
       <div class="buttom">
-        <buttom :class="ocultar" v-on:click="mostrarTexto" class="btn centrar">READ {{ look ? "LESS" : "MORE" }}
+        <buttom :class="ocultar" v-on:click="mostrarTexto" class="btn centrar"
+          >READ {{ look ? "LESS" : "MORE" }}
         </buttom>
       </div>
     </div>
@@ -92,7 +100,7 @@ export default {
 
 .contenido img {
   width: 60%;
-  height: 20%;
+  height: 5.5rem;
   margin: 0 auto;
 }
 
@@ -106,8 +114,8 @@ export default {
 
 .contenido .texto-oculto {
   font-size: 3vw;
-  padding: .4rem;
-  height: 37%;
+  padding: 0.4rem;
+  height: 10rem;
   text-align: justify;
   overflow: hidden;
   overflow-y: scroll;
@@ -121,9 +129,11 @@ export default {
 }
 
 .contenido .texto-oculto::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg,
-      rgb(33, 32, 85) 0%,
-      rgba(1, 209, 88, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(33, 32, 85) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
   border-radius: 20px;
   border: 2px solid #f1f2f3;
 }
@@ -139,14 +149,16 @@ export default {
 .buttom {
   width: 100%;
   position: absolute;
-  bottom: -10%;
-  height: 25%;
+  bottom: 3%;
+  height: 10%;
 }
 
 .texto-oculto::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg,
-      rgb(33, 32, 85) 0%,
-      rgba(1, 209, 88, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(33, 32, 85) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
   border-radius: 20px;
   border: 2px solid #f1f2f3;
 }
@@ -175,8 +187,7 @@ export default {
 
 .fade-leave-to
 
-/* .fade-leave-active below version 2.1.8 */
-  {
+/* .fade-leave-active below version 2.1.8 */ {
   animation: opacity2 0.5s linear;
 }
 
@@ -196,12 +207,13 @@ export default {
 
 .contenido p {
   font-weight: 400;
-  font-size: 3vw;
+  font-size: .8rem;
 }
 
 @media screen and (min-width: 769px) {
   .contenido .texto-oculto {
-    font-size: .8vw;
+    height: 12rem;
+    font-size: 0.8vw;
   }
 
   .contenido h2 {
@@ -217,24 +229,25 @@ export default {
 
   .buttom {
     font-size: 1vw;
-    width: 100%;
+    width: 70%;
     position: absolute;
-    bottom: -8%;
-    height: 20%;
+    bottom: 0%;
+    height: 10%;
   }
 }
 
 .btn {
-  position: relative;
-  bottom: -15%;
-  background: linear-gradient(90deg,
-      rgb(18, 17, 65) 0%,
-      rgba(1, 209, 88, 1) 100%);
+
+  background: linear-gradient(
+    90deg,
+    rgb(18, 17, 65) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
   padding: 2% 5%;
   border-radius: 1.5vw;
   cursor: pointer;
   width: 30%;
-  height: 20%;
+  height: 50%;
   font-size: 4vw;
   font-family: "WorkSans", sans-serif;
   align-items: center;
