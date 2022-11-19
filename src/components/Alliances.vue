@@ -5,20 +5,9 @@ export default {
 </script>
 <template>
   <!--FONDOS-->
-  <video
-    preload="auto"
-    autoplay="true"
-    muted="true"
-    loop="true"
-    class="video-fondo-alliances"
-    poster="/img/fondo_binario.png"
-  >
-    <source src="/video/Full-HD-Lite-2.mp4" type="video/mp4" />
-    <!-- <source src="/public/video/Full-HD-Lite.webm" type="video/webm">
-        <source src="/public/video/Full-HD-Lite-IPhone.mp4" type="video/mp4"> -->
-    <!-- <source src="/public/video/Full-HD-Lite.mov">
-    <source src="/public/video/Full-HD-Lite.m4v">
-    <source src="/public/video/Full-HD-Lite.ts"> -->
+  <video preload="auto" autoplay="true" muted="true" loop="true" class="video-fondo-alliances"
+    poster="/img/fondo_binario.png">
+    <source src="/video/Full-HD-Lite-2.mov" type="video/mp4" />
     <p>
       Your browser doesn't support HTML5 video. Here is a
       <a href="/video/Full-HD-Lite.mp4">link to the video</a> instead.
@@ -26,39 +15,31 @@ export default {
   </video>
 
   <div class="contenido-general">
-    <div
-      :class="{
-        logo: true,
-        'animacion-logo': this.enterAnimation && !this.isRevert,
-        'animacion-logo-revert': this.exitAnimation && this.isRevert,
-      }"
-    >
+    <div :class="{
+      logo: true,
+      'animacion-logo': this.enterAnimation && !this.isRevert,
+      'animacion-logo-revert': this.exitAnimation && this.isRevert,
+    }">
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
 
     <div class="fondo filtro-superior"></div>
-    <div
-      :class="{
-        'fondo-montana': true,
-        'fondo-montana-animation': this.enterAnimation && !this.isRevert,
-        'fondo-montana-animation-salida': this.enterAnimation && this.isRevert,
-        'fondo-montana-animation-revert': this.exitAnimation && this.isRevert,
-        'fondo-montana-animation-salida-revert':
-          this.exitAnimation && !this.isRevert,
-      }"
-      class="fondo"
-    >
+    <div :class="{
+      'fondo-montana': true,
+      'fondo-montana-animation': this.enterAnimation && !this.isRevert,
+      'fondo-montana-animation-salida': this.enterAnimation && this.isRevert,
+      'fondo-montana-animation-revert': this.exitAnimation && this.isRevert,
+      'fondo-montana-animation-salida-revert':
+        this.exitAnimation && !this.isRevert,
+    }" class="fondo">
       <img src="/img/fondo-montana.png" />
     </div>
     <div class="fondo fondo-oscurecer"></div>
-    <div
-      :class="{
-        'fondo-red': true,
-        'animacion-aparecer': this.enterAnimation && !this.isRevert,
-        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      }"
-      class="fondo"
-    >
+    <div :class="{
+      'fondo-red': true,
+      'animacion-aparecer': this.enterAnimation && !this.isRevert,
+      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+    }" class="fondo">
       <img src="/img/red.png" alt="" />
     </div>
     <div class="fondo-telefono">
@@ -69,24 +50,20 @@ export default {
       <div class="texto"></div>
 
       <!--UPCOMING ALLIANCES-->
-      <div
-        :class="{
-          'content-forms': true,
+      <div :class="{
+        'content-forms': true,
+        'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+        'animacion-content-up': this.enterAnimation && this.isRevert,
+        'animacion-content-up-revert': this.exitAnimation && !this.isRevert,
+        'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+      }">
+        <section :class="{
+          circulos: true,
           'animacion-aparecer': this.enterAnimation && !this.isRevert,
           'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          'animacion-content-up': this.enterAnimation && this.isRevert,
-          'animacion-content-up-revert': this.exitAnimation && !this.isRevert,
-          'animacion-desaparecer': this.enterAnimation && this.isRevert,
-          'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
-        }"
-      >
-        <section
-          :class="{
-            circulos: true,
-            'animacion-aparecer': this.enterAnimation && !this.isRevert,
-            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          }"
-        >
+        }">
           <div class="circulo">
             <img src="../assets/circulo.svg" alt="" />
           </div>
@@ -96,32 +73,28 @@ export default {
           </div>
         </section>
         <section class="arco">
-          <div
-            :class="{
-              semi_circulo: true,
-              'animacion-arco': this.enterAnimation && !this.isRevert,
-              'animacion-arco-revert': this.exitAnimation && this.isRevert,
-              'animacion-arco-salida': this.enterAnimation && this.isRevert,
-              'animacion-arco-revert-salida':
-                this.exitAnimation && !this.isRevert,
-            }"
-          >
+          <div :class="{
+            semi_circulo: true,
+            'animacion-arco': this.enterAnimation && !this.isRevert,
+            'animacion-arco-revert': this.exitAnimation && this.isRevert,
+            'animacion-arco-salida': this.enterAnimation && this.isRevert,
+            'animacion-arco-revert-salida':
+              this.exitAnimation && !this.isRevert,
+          }">
             <img src="../assets/aro-iluminado-brillante.svg" alt="" />
           </div>
         </section>
         <section class="Alianzas">
           <div class="alianzas">
-            <a href="https://www.reddit.com/user/monnerverse" target="_blank"
-              ><span><img src="../assets/reddit-4.svg" /></span>REDDIT</a
-            >
+            <a href="https://www.reddit.com/user/monnerverse" target="_blank"><span><img
+                  src="../assets/reddit-4.svg" /></span>REDDIT</a>
 
             <a target="_blank" href="https://t.me/MonnerverseCripto"><span><img
                   src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a>
             <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 
-            <a href="https://discord.com/invite/h7fRvek9dn" target="_blank"
-              ><span><img src="../assets/discord.svg" /></span>DISCORD</a
-            >
+            <a href="https://discord.com/invite/h7fRvek9dn" target="_blank"><span><img
+                  src="../assets/discord.svg" /></span>DISCORD</a>
           </div>
         </section>
 
@@ -143,15 +116,13 @@ export default {
       </div>
     </div>
 
-    <div
-      :class="{
-        puntero: true,
-        animated: true,
-        duration1s: true,
-        fadeInUp: this.enterAnimation,
-        fadeOutDown: this.exitAnimation,
-      }"
-    >
+    <div :class="{
+      puntero: true,
+      animated: true,
+      duration1s: true,
+      fadeInUp: this.enterAnimation,
+      fadeOutDown: this.exitAnimation,
+    }">
       <img src="/img/puntero.svg" alt="" />
     </div>
   </div>
@@ -237,11 +208,11 @@ section {
   align-items: flex-end;
 }
 
-.texto > section {
+.texto>section {
   width: 70%;
 }
 
-.texto > section p {
+.texto>section p {
   width: 80%;
   float: right;
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
@@ -363,12 +334,10 @@ section {
 .filtro-superior {
   position: absolute;
   z-index: 4;
-  background: radial-gradient(
-    circle at center,
-    #14ec84 0%,
-    #0b5f50 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #14ec84 0%,
+      #0b5f50 50%,
+      #505863 100%);
   opacity: 30%;
 }
 
@@ -873,6 +842,7 @@ section {
     animation-direction: reverse;
     animation-iteration-count: 1;
   }
+
   @keyframes animacion-arco-salida {
     0% {
       position: absolute;
@@ -910,6 +880,7 @@ section {
     opacity: 100%;
   }
 }
+
 @media only screen and (max-width: 900px) {
   .animacion-desaparecer {
     animation-duration: 0.5s;
@@ -923,6 +894,7 @@ section {
     animation-direction: reverse;
     animation-iteration-count: 1;
   }
+
   @keyframes desaparecer {
     0% {
       opacity: 0%;
