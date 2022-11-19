@@ -7,7 +7,7 @@ export default {
   <!--FONDOS-->
   <video preload="auto" autoplay="true" muted="true" loop="true" class="video-fondo-alliances"
     poster="/img/fondo_binario.png">
-    <source src="/video/Full-HD-Lite-2.mov" type="video/mp4" />
+    <source src="/video/Full-HD-Lite-2.mp4" type="video/mp4" />
     <p>
       Your browser doesn't support HTML5 video. Here is a
       <a href="/video/Full-HD-Lite.mp4">link to the video</a> instead.

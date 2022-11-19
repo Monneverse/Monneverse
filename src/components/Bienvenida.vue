@@ -8,7 +8,7 @@
     class="video-fondo"
     poster="/img/fondo_binario.png"
   >
-    <source src="/video/Full-HD-Lite-2.mov" type="video/mp4" />
+    <source src="/video/Full-HD-Lite-2.mp4" type="video/mp4" />
   </video>
 
   <!-- logos de fondos -->
