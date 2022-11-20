@@ -115,8 +115,8 @@ img {
     #097561 50%,
     #505863 100%
   );
-  z-index: 3;
-  opacity: 70%;
+  z-index: 0;
+  opacity: 40%;
   user-select: none;
   pointer-events: none;
 }
