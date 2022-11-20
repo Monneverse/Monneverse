@@ -13,7 +13,7 @@
 
   <!-- logos de fondos -->
   <div id="logo-1" class="logo">
-    <img src="/img/logo_Grande.png" alt="" />
+    <img src="/img/logo.svg" alt="" />
   </div>
   <div id="logo-2" class="logo">
     <img src="/img/logo.svg" alt="" />
@@ -130,7 +130,7 @@ img {
 }
 
 #logo-1 {
-  width: 34%;
+  width: 28%;
   height: fit-content;
   position: fixed;
   top: 0;
