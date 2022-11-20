@@ -725,7 +725,7 @@ img {
 
 .icon {
   width: 3rem;
-  height: auto;
+  height:  3rem;
   z-index: 18;
   margin-left: 1rem;
 }

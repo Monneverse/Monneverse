@@ -93,20 +93,19 @@ export default {
 <template>
   <!-- Fondos -->
   <div class="fondo">
-    <div class="fondoArticulo">
-      <img src="/img/circulo_Fondo.png" alt="" class="circuloFondo1" />
-      <img src="/img/circuloImagen.png" alt="" class="circuloFondo2" />
-    </div>
+    <div class="fondoArticulo"></div>
+    <div class="circuloFondo circuloFondo1"></div>
+    <div class="circuloFondo circuloFondo2"></div>
     <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
     <div class="fondo-oscuro"></div>
     <div class="degradado degradado_izquierdo"></div>
     <div class="degradado degradado_derecho"></div>
   </div>
   <div class="circuitoIzquierdo">
-    <img src="/img/Articulo/circuito-izquierdo.png" alt="" />
+    <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
   </div>
   <div class="circuitoDerecho">
-    <img src="/img/Articulo/circuito-derecho.png" alt="" />
+    <img src="/img/calculadora/circuito-derecho.png" alt="" />
   </div>
 
   <!-- CONTENEDOR DE BOTON METATASK -->
@@ -160,17 +159,17 @@ export default {
     <h3>Scroll to Right</h3>
   </div> -->
   <div class="logo-redes">
-    <div class="icon icon-telegram">
+    <div class="icon">
       <a href="https://t.me/MonnerverseCripto" target="_blank">
         <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
       </a>
     </div>
-    <div class="icon icon-reddit">
+    <div class="icon">
       <a href="https://www.reddit.com/user/monnerverse" target="_blank">
         <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
       </a>
     </div>
-    <div class="icon icon-discord">
+    <div class="icon">
       <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
         <img src="../assets/discord.svg" alt="logo discord" srcset="" />
       </a>
@@ -239,30 +238,29 @@ img {
   background-color: rgb(0, 0, 0);
   opacity: 60%;
   mix-blend-mode: multiply;
+  border: 2px solid red;
 }
-
-.circuloFondo1 {
-  top: 15%;
-  left: 38%;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-  width: 23%;
-  height: 50%;
-}
-
-.circuloFondo2 {
-  top: 10%;
-  left: 34%;
+.circuloFondo{
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 6px  solid #164B2E;
   z-index: 2;
-  width: 30%;
-  height: 65%;
+  opacity: .3;
+}
+.circuloFondo1 {
+  width: 15rem;
+  height:  15rem;
+}
+
+.circuloFondo2 {
+  width: 30rem;
+  height:  30rem;
 }
 
 .circuitoIzquierdo {
@@ -604,7 +602,7 @@ h4 {
 
 .icon {
   width: 3rem;
-  height: auto;
+  height: 3rem;
   margin-left: 1rem;
 }
 

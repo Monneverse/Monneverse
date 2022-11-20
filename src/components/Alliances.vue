@@ -43,7 +43,7 @@ export default {
       <img src="/img/red.png" alt="" />
     </div>
     <div class="fondo-telefono">
-      <img src="/img/celFondo.svg" alt="" srcset="" />
+      <img src="/img/fondo_Cel.png" alt="" srcset="" />
     </div>
 
     <div class="contenido-principal">
@@ -90,7 +90,7 @@ export default {
                   src="../assets/reddit-4.svg" /></span>REDDIT</a>
 
             <a target="_blank" href="https://t.me/MonnerverseCripto"><span><img
-                  src="/img/Alianzas/telegram.png" /></span>TELEGRAM</a>
+                  src="../assets/Telegram_logo.svg" /></span>TELEGRAM</a>
             <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 
             <a href="https://discord.com/invite/h7fRvek9dn" target="_blank"><span><img
@@ -317,12 +317,12 @@ section {
 
 .fondo-telefono {
   position: fixed;
-  top: 44%;
-  left: -12em;
-  width: 50em;
-  height: 40em;
+  bottom: 30%;
+  left: -150%;
+  width: 40%;
+  height: 50%;
   z-index: 4;
-  opacity: 30%;
+  opacity: 20%;
 }
 
 @media screen and (width > 500px) {

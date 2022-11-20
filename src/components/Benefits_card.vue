@@ -430,7 +430,7 @@ img {
 
 .logo-redes {
   position: absolute;
-  bottom: 1rem;
+  bottom: .2rem;
   left: 1rem;
   width: 20rem;
   height: 5rem;
@@ -441,7 +441,7 @@ img {
 
 .icon {
   width: 3rem;
-  height: auto;
+  height:  3rem;
   margin-left: 1rem;
 }
 

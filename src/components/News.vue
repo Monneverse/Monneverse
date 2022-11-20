@@ -31,7 +31,7 @@
     <div class="luz-3"></div>
   </div>
   <div class="fondo-mundial">
-    <img src="/img/fondo-mundial.png" alt="" srcset="" />
+    <img src="/img/fondo_Cel.png" alt="" srcset="" />
   </div>
   <div class="fondo_rayos">
     <img src="/img/rayos.png" alt="" />

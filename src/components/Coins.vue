@@ -514,7 +514,7 @@ img {
 
 .icon {
   width: 3rem;
-  height: auto;
+  height:  3rem;
   margin-left: 1rem;
 }
 

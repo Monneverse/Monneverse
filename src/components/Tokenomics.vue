@@ -99,7 +99,7 @@ export default {
     </div>
 
     <div class="fondo-telefono">
-      <img src="/img/celFondo.svg" alt="" srcset="" />
+      <img src="/img/fondo_Cel.png" alt="" srcset="" />
     </div>
     <div class="arrow"></div>
     <div class="arrow2"></div>

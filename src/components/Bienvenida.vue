@@ -21,7 +21,7 @@
 
   <!-- imagenes fondos -->
   <div class="semi-circle">
-    <img src="/img/semi_circulo.png" alt="" />
+    <img src="../assets/aro-iluminado-brillante.svg" alt="" />
   </div>
   <div class="fondo-montana">
     <img src="/img/fondo-montana.png" alt="" srcset="" />
@@ -33,9 +33,7 @@
     <img src="/img/fondo-montana.png" alt="" srcset="" />
   </div>
   <div class="fondo-oscuro"></div>
-  <div class="fondo-oscuro-superior">
-    <img src="/img/fondo-oscuro-superior.png" alt="" srcset="" />
-  </div>
+  <div class="fondo-oscuro-superior"> </div>
   <div class="iluminacionLogo"></div>
   <div class="fondo-mundial">
     <img src="/img/fondo_Cel.png" alt="" srcset="" />
@@ -179,6 +177,8 @@ img {
   opacity: 100%;
   user-select: none;
   pointer-events: none;
+  background-color: #0f161c;
+  opacity: 70%;
 }
 
 .fondo-mundial {
@@ -197,14 +197,16 @@ img {
 
 .semi-circle {
   position: fixed;
-  left: 38%;
+  left: 52%;
   top: 75%;
-  width: 30%;
+  width: 40%;
   height: 60%;
+  transform: translate(50%,0%);
   z-index: 7;
   opacity: 100%;
   user-select: none;
   pointer-events: none;
+  rotate: 180deg;
 }
 
 .animated.hinge {

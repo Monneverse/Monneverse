@@ -56,7 +56,7 @@
   <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
   <div class="fondo fondo-oscurecer"></div>
   <div class="fondo-mundial">
-    <img src="/img/fondo-mundial.png" alt="" srcset="" />
+    <img src="/img/fondo_Cel.png" alt="" srcset="" />
   </div>
   <div class="fondo_rayos">
     <img src="/img/rayos.png" alt="" />
