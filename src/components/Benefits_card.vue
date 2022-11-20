@@ -73,7 +73,7 @@ export default {
             + "• Black jack Monner"
             + "• Enter others in development. Remember that the earnings of each of our mentioned projects will automatically be converted into liquidity."
             + "At Monnerverse our main priority is to be innovative in all fields that have to do with Cryptocurrencies and since the Metaverse is linked to them in some way, we have decided to create our own world of augmented reality working hand in hand with MonnerGame. We will also have a room where anyone can meet with friends or strangers and play games of chance, bet and share while at the same time we are using Monner as the main currency and reducing its supply with the constant burning of all our projects. Our game and virtual reality room are being developed by the best engineers of the moment. Investing in our metaverse is the most important and we are giving it the highest priority.",
-          imagen: "img/Proyectos/staking.png"
+          imagen: "img/Proyectos/mETAVERSE.png"
         },
       ]
 
