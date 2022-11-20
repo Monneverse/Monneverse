@@ -240,7 +240,8 @@ img {
   mix-blend-mode: multiply;
   border: 2px solid red;
 }
-.circuloFondo{
+
+.circuloFondo {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -249,18 +250,19 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: 6px  solid #164B2E;
+  border: 6px solid #164B2E;
   z-index: 2;
   opacity: .3;
 }
+
 .circuloFondo1 {
   width: 15rem;
-  height:  15rem;
+  height: 15rem;
 }
 
 .circuloFondo2 {
   width: 30rem;
-  height:  30rem;
+  height: 30rem;
 }
 
 .circuitoIzquierdo {
@@ -844,6 +846,16 @@ h4 {
 
   .logo-redes {
     display: none;
+  }
+
+  .circuitoIzquierdo,
+  .circuitoDerecho {
+    visibility: hidden;
+  }
+
+  .fondo-montana {
+    top: 0%;
+    height: 80%;
   }
 }
 
