@@ -170,7 +170,7 @@ img {
   user-select: none;
   pointer-events: none;
   background-color: #0f161c;
-  opacity: 80%;
+  opacity: 70%;
 }
 
 .fondo-mundial {

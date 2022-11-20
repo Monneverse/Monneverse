@@ -173,7 +173,7 @@ section {
   position: fixed;
   left: -20%;
   scale: 1;
-  opacity: 30%;
+  opacity: 70%;
   min-width: 140%;
   min-height: 100%;
   width: auto;
