@@ -6,7 +6,9 @@ export default {
 <template>
   <!--FONDOS-->
   <video preload="auto" autoplay webkit-playsinline playsinline muted loop  class="video-fondo-alliances"
-   >
+  poster="/img/fondo_binario.png"
+ 
+  >
     <source data-src="/video/Full-HD-Lite-2.mp4" type="video/mp4"
     src="/video/Full-HD-Lite-2.mp4" />
 
