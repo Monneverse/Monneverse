@@ -15,7 +15,7 @@
   <div class="fondo-oscuro1"></div>
   <div class="fondo-oscuro"></div>
   <div id="logo-1" class="logo">
-    <img src="/img/logo_Grande.png" alt="" />
+    <img src="/img/logo.svg" alt="" />
   </div>
   <div class="fondo-montana">
     <img src="/img/fondo-montana.png" alt="" srcset="" />

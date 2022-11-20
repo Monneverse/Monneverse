@@ -27,7 +27,7 @@ export default {
     <img src="/img/fondo_Cel.png" alt="" srcset="" />
   </div>
   <div id="logo-1" class="logo">
-    <img src="/img/logo_Grande.png" alt="" />
+    <img src="/img/logo.svg" alt="" />
   </div>
   <!-- FIN FONDO -->
   <!-- CONTENIDO -->
