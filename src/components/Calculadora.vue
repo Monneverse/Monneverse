@@ -6,6 +6,9 @@
   <div :class="{
     fondo: true, 'fondo-montana': true,
     'fondo-montana-animation': this.enterAnimation && !this.isRevert,
+    'fondo-montana-animation2': this.enterAnimation && this.isRevert,
+    fondo_montana_animation_enter_revert:this.exitAnimation && this.isRevert,
+    fondo_montana_animation_enter_revert2:this.exitAnimation && !this.isRevert,
   }"><img src="/img/fondo-montana.png" /> </div>
   <div class="fondo fondo-oscurecer"></div>
 
@@ -296,11 +299,30 @@ img {
   animation-name: fondo-montana-animation;
   animation-iteration-count: 1;
 }
+.fondo-montana-animation2 {
+  animation-duration: .5s;
+  animation-name: fondo-montana-animation;
+  animation-iteration-count: 1;
+}
+.fondo_montana_animation_enter_revert{
+  animation-duration: .5s;
+  animation-name: fondo-montana-animation;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
 
+.fondo_montana_animation_enter_revert2{
+  animation-duration: .5s;
+  animation-name: fondo-montana-animation;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
 @keyframes fondo-montana-animation {
   0% {
-    height: 50%;
-    top: 50%;
+    height: 100%;
+    top: 20%;
   }
 
 
