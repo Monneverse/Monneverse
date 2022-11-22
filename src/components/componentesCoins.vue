@@ -264,8 +264,11 @@ export default {
   text-align: center;
 }
 .animacion-desplazamiento {
-  animation-duration: 5s;
-  animation-name: desplazamiento;
+    animation-duration: 5s;
+  -webkit-animation-duration: 5s;
+    animation-name: desplazamiento;
+  -webkit-animation-name: desplazamiento;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 

@@ -5,12 +5,9 @@ export default {
 </script>
 <template>
   <!--FONDOS-->
-  <video preload="auto" autoplay webkit-playsinline playsinline muted loop  class="video-fondo-alliances"
-  poster="/img/fondo_binario.png"
- 
-  >
-    <source data-src="/video/Full-HD-Lite-2.mp4" type="video/mp4"
-    src="/video/Full-HD-Lite-2.mp4" />
+  <video preload="auto" autoplay webkit-playsinline playsinline muted loop class="video-fondo-alliances"
+    poster="/img/fondo_binario.png">
+    <source data-src="/video/Full-HD-Lite-2.mp4" type="video/mp4" src="/video/Full-HD-Lite-2.mp4" />
 
     <p>
       Your browser doesn't support HTML5 video. Here is a
@@ -238,16 +235,26 @@ section {
 }
 
 .animacion-content-up {
+  -webkit-animation-name: contentUp;
   animation-name: contentUp;
+  -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-content-up-revert {
+  -webkit-animation-name: contentUp;
   animation-name: contentUp;
+  -webkit-animation-duration: 0.8s;
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+  -webkit-animation-direction: reverse;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
 }
 
 @keyframes contentUp {
@@ -290,15 +297,26 @@ section {
 }
 
 .animacion-logo {
+  -webkit-animation-name: animar-logo;
   animation-name: animar-logo;
+  -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-logo-revert {
+  -webkit-animation-name: animar-logo;
   animation-name: animar-logo;
+  -webkit-animation-duration: 0.78s;
   animation-duration: 0.78s;
+  -webkit-animation-duration: 0.78s;
+  animation-duration: 0.78s;
+  -webkit-animation-direction: reverse;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -364,28 +382,43 @@ section {
 }
 
 .fondo-montana-animation img {
+  -webkit-animation-duration: 0.78s;
   animation-duration: 0.78s;
+  -webkit-animation-duration: 0.78s;
+  -webkit-animation-name: fondo-montana-animation;
   animation-name: fondo-montana-animation;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .fondo-montana-animation-salida img {
+  -webkit-animation-duration: 0.78s;
   animation-duration: 0.78s;
   animation-name: salidaMontana;
+  -webkit-animation-name: salidaMontana;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .fondo-montana-animation-revert img {
+  -webkit-animation-duration: 0.78s;
   animation-duration: 0.78s;
+  -webkit-animation-name: fondo-montana-animation;
   animation-name: fondo-montana-animation;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .fondo-montana-animation-salida-revert img {
+  -webkit-animation-duration: 0.78s;
   animation-duration: 0.78s;
   animation-name: salidaMontana;
+  -webkit-animation-name: salidaMontana;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -604,15 +637,22 @@ section {
 }
 
 .animacion-arco img {
+  -webkit-animation-name: animacion-arco;
   animation-name: animacion-arco;
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-arco-revert img {
+  -webkit-animation-name: animacion-arco;
   animation-name: animacion-arco;
+  -webkit-animation-duration: 0.78s;
   animation-duration: 0.78s;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -785,10 +825,14 @@ section {
   width: 100%;
   height: 180%;
   z-index: 19;
+  -webkit-animation-duration: 3s;
   animation-duration: 3s;
   animation-name: luz;
+  -webkit-animation-name: luz;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  -webkit-animation-direction: alternate;
   top: -10%;
   opacity: 70%;
 }
@@ -836,14 +880,21 @@ section {
 @media only screen and (max-width: 900px) {
   .animacion-arco-salida img {
     animation-name: animacion-arco-salida;
+    -webkit-animation-name: animacion-arco-salida;
     animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
 
   .animacion-arco-revert-salida img {
     animation-name: animacion-arco-salida;
+    -webkit-animation-name: animacion-arco-salida;
     animation-duration: 0.8s;
+    -webkit-animation-duration: 0.8s;
     animation-direction: reverse;
+    -webkit-animation-direction: reverse;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
 
@@ -864,14 +915,21 @@ section {
 
 .animacion-aparecer {
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-aparecer-revert {
+  -webkit-animation-duration: 0.78s;
   animation-duration: 0.78s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -888,14 +946,21 @@ section {
 @media only screen and (max-width: 900px) {
   .animacion-desaparecer {
     animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
     animation-name: desaparecer;
+    -webkit-animation-name: desaparecer;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
 
   .animacion-desaparecer-revert {
+    -webkit-animation-duration: 0.78s;
     animation-duration: 0.78s;
     animation-name: desaparecer;
+    -webkit-animation-name: desaparecer;
     animation-direction: reverse;
+    -webkit-animation-direction: reverse;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
 

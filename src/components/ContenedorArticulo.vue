@@ -354,11 +354,14 @@ img {
 
 .btn_buy__aparecer {
   animation: btn_aparecer 0.8s forwards ease-in-out;
+  -webkit-animation: btn_aparecer 0.8s forwards ease-in-out;
 }
 
 .btn_buy__desaparecer_revert {
   animation: btn_aparecer 0.8s forwards ease-in-out;
+  -webkit-animation: btn_aparecer 0.8s forwards ease-in-out;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
 }
 
 @keyframes btn_aparecer {
@@ -371,11 +374,14 @@ img {
 
 .btn_buy__desaparecer {
   animation: btn_desaparecer 0.8s forwards ease-in-out;
+  -webkit-animation: btn_desaparecer 0.8s forwards ease-in-out;
 }
 
 .btn_buy__aparecer_revert {
   animation: btn_desaparecer 0.8s forwards ease-in-out;
+  -webkit-animation: btn_desaparecer 0.8s forwards ease-in-out;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
   z-index: 1000;
 }
 
@@ -479,74 +485,84 @@ img {
   position: relative;
   left: 0;
   animation: aparecer 0.8s forwards ease-in-out;
+  -webkit-animation: aparecer 0.8s forwards ease-in-out;
 }
 
 .articulo__aparecer:nth-child(2) {
   position: relative;
   left: 0;
   animation: aparecer 0.6s forwards ease-in-out;
+  -webkit-animation: aparecer 0.6s forwards ease-in-out;
 }
 
 .articulo__aparecer:nth-child(3) {
   position: relative;
   left: 0;
   animation: aparecer 0.4s forwards ease-in-out;
+  -webkit-animation: aparecer 0.4s forwards ease-in-out;
 }
 
 .articulo__desaparecer_revert:nth-child(1) {
   position: relative;
   left: 0;
   animation: aparecer 0.4s forwards ease-in-out reverse;
+  -webkit-animation: aparecer 0.4s forwards ease-in-out reverse;
 }
 
 .articulo__desaparecer_revert:nth-child(2) {
   position: relative;
   left: 0;
   animation: aparecer 0.6s forwards ease-in-out reverse;
+  -webkit-animation: aparecer 0.6s forwards ease-in-out reverse;
 }
 
 .articulo__desaparecer_revert:nth-child(3) {
   position: relative;
   left: 0;
   animation: aparecer 0.8s forwards ease-in-out reverse;
+  -webkit-animation: aparecer 0.8s forwards ease-in-out reverse;
 }
 
 .articulo__desaparecer:nth-child(1) {
   position: relative;
   left: 0;
   animation: desaparecer 0.8s forwards ease-in-out;
-  animation-fill-mode: forwards;
+  -webkit-animation: desaparecer 0.8s forwards ease-in-out;
 }
 
 .articulo__desaparecer:nth-child(2) {
   position: relative;
   left: 0;
   animation: desaparecer 0.6s forwards ease-in-out;
-  animation-fill-mode: forwards;
+  -webkit-animation: desaparecer 0.6s forwards ease-in-out;
 }
 
 .articulo__desaparecer:nth-child(3) {
   position: relative;
   left: 0;
   animation: desaparecer 0.4s forwards ease-in-out;
+  -webkit-animation: desaparecer 0.4s forwards ease-in-out;
 }
 
 .articulo__aparecer_revert:nth-child(1) {
   position: relative;
   left: 0;
   animation: desaparecer 0.8s ease-in-out reverse;
+  -webkit-animation: desaparecer 0.8s ease-in-out reverse;
 }
 
 .articulo__aparecer_revert:nth-child(2) {
   position: relative;
   left: 0;
   animation: desaparecer 0.6s ease-in-out reverse;
+  -webkit-animation: desaparecer 0.6s ease-in-out reverse;
 }
 
 .articulo__aparecer_revert:nth-child(3) {
   position: relative;
   left: 0;
   animation: desaparecer 0.4s ease-in-out reverse;
+  -webkit-animation: desaparecer 0.4s ease-in-out reverse;
 }
 
 @keyframes aparecer {
@@ -657,8 +673,11 @@ h4 {
     border-right: 2px #fff solid;
     border-bottom: 2px #fff solid;
     animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     animation-name: arrow;
+    -webkit-animation-name: arrow;
   }
 
   @keyframes arrow {
@@ -669,6 +688,7 @@ h4 {
     100% {
       opacity: 0;
       transform: translate(-10px, -10px);
+      -webkit-transform: translate(-10px, -10px);
     }
   }
 
@@ -704,8 +724,11 @@ h4 {
     border-right: 2px #fff solid;
     border-bottom: 2px #fff solid;
     animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     animation-name: arrow2;
+    -webkit-animation-name: arrow2;
   }
 
   @keyframes arrow2 {
@@ -716,6 +739,7 @@ h4 {
     100% {
       opacity: 0;
       transform: translate(-10px, -10px);
+      -webkit-transform: translate(-10px, -10px);
     }
   }
 

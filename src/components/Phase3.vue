@@ -162,29 +162,43 @@ img {
 
 .fases__aparecer {
   animation: aparecer .6s;
+  -webkit-animation: aparecer .6s;
   animation-delay: .1;
+  -webkit-animation-delay: .1;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .fases__aparecer_revert {
   animation: desaparecer .6s;
+  -webkit-animation: desaparecer .6s;
   animation-delay: .1;
+  -webkit-animation-delay: .1;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 
 }
 
 .fases__desaparecer {
   animation: desaparecer .6s;
+  -webkit-animation: desaparecer .6s;
   animation-delay: .1;
+  -webkit-animation-delay: .1;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .fases__desaparecer_revert {
   animation: aparecer .6s;
+  -webkit-animation: aparecer .6s;
   animation-delay: .1;
+  -webkit-animation-delay: .1;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 
 }
 
@@ -238,12 +252,16 @@ img {
 @media screen and (min-width: 900px) {
   .circulo__1_aparecer {
     animation: aparecer_circulo__1 .8s;
+    -webkit-animation: aparecer_circulo__1 .8s;
   }
 
   .circulo__1_desaparecer_revert {
     animation: aparecer_circulo__1 .8s;
+    -webkit-animation: aparecer_circulo__1 .8s;
     animation-direction: reverse;
+    -webkit-animation-direction: reverse;
     animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
 
   }
 }
@@ -269,12 +287,16 @@ img {
 @media screen and (min-width: 900px) {
   .circulo__2_aparecer {
     animation: aparecer_circulo__2 .8s;
+    -webkit-animation: aparecer_circulo__2 .8s;
   }
 
   .circulo__2_desaparecer_revert {
     animation: aparecer_circulo__2 .8s;
+    -webkit-animation: aparecer_circulo__2 .8s;
     animation-direction: reverse;
+    -webkit-animation-direction: reverse;
     animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
 
   }
 
@@ -301,21 +323,27 @@ img {
 
 .componentes__aparecer {
   animation: aparecer .9s;
+  -webkit-animation: aparecer .9s;
 }
 
 .componentes__aparecer_revert {
   animation: desaparecer .7s;
+  -webkit-animation: desaparecer .7s;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
 
 }
 
 .componentes__desaparecer {
   animation: desaparecer .9s;
+  -webkit-animation: desaparecer .9s;
 }
 
 .componentes__desaparecer_revert {
   animation: aparecer .9s;
+  -webkit-animation: aparecer .9s;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
 
 }
 
@@ -481,8 +509,11 @@ img {
     border-right: 2px #fff solid;
     border-bottom: 2px #fff solid;
     animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     animation-name: arrow;
+    -webkit-animation-name: arrow;
   }
 
   @keyframes arrow {
@@ -493,6 +524,7 @@ img {
     100% {
       opacity: 0;
       transform: translate(-10px, -10px);
+      -webkit-transform: translate(-10px, -10px);
     }
   }
 
@@ -528,8 +560,11 @@ img {
     border-right: 2px #fff solid;
     border-bottom: 2px #fff solid;
     animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     animation-name: arrow2;
+    -webkit-animation-name: arrow2;
   }
 
   @keyframes arrow2 {
@@ -540,6 +575,7 @@ img {
     100% {
       opacity: 0;
       transform: translate(-10px, -10px);
+      -webkit-transform: translate(-10px, -10px);
     }
   }
 

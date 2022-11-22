@@ -1,10 +1,9 @@
 <template>
   <!-- video de fondo -->
   <video preload="auto" autoplay webkit-playsinline playsinline muted loop class="video-fondo"
-  poster="/img/fondo_binario.png"
-  >
-    <source data-src="/video/Full-HD-Lite-2.mp4" type="video/mp4"
-    src="/video/Full-HD-Lite-2.mp4" />  </video>
+    poster="/img/fondo_binario.png">
+    <source data-src="/video/Full-HD-Lite-2.mp4" type="video/mp4" src="/video/Full-HD-Lite-2.mp4" />
+  </video>
 
   <!-- logos de fondos -->
   <div id="logo-1" class="logo">

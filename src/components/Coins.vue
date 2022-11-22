@@ -12,125 +12,79 @@ export default {
   <!--FONDO-->
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
-  <div
-    :class="{
-      'fondo-montana': true,
-      'fondo-montana-animation': this.enterAnimation && !this.isRevert,
-      'fondo-montana-animation-salida': this.enterAnimation && this.isRevert,
-      'fondo-montana-animation-revert': this.exitAnimation && this.isRevert,
-      'fondo-montana-animation-salida-revert':
-        this.exitAnimation && !this.isRevert,
-    }"
-    class="fondo"
-  >
+  <div :class="{
+    'fondo-montana': true,
+    'fondo-montana-animation': this.enterAnimation && !this.isRevert,
+    'fondo-montana-animation-salida': this.enterAnimation && this.isRevert,
+    'fondo-montana-animation-revert': this.exitAnimation && this.isRevert,
+    'fondo-montana-animation-salida-revert':
+      this.exitAnimation && !this.isRevert,
+  }" class="fondo">
     <img src="/img/fondo-montana.png" />
   </div>
   <div class="fondo fondo-oscurecer"></div>
   <div class="arrow"></div>
   <div class="arrow2"></div>
-  <div
-    :class="{
-      'circuito-izquierdo': true,
-      'animacion-desplazamiento': this.enterAnimation && !this.isRevert,
-      'animacion-desplazamiento-revert': this.exitAnimation && this.isRevert,
-      'animacion-desplazamiento-salida': this.enterAnimation && this.isRevert,
-      'animacion-desplazamiento-revert-salida':
-        this.exitAnimation && !this.isRevert,
-    }"
-    class="circuito"
-  >
+  <div :class="{
+    'circuito-izquierdo': true,
+    'animacion-desplazamiento': this.enterAnimation && !this.isRevert,
+    'animacion-desplazamiento-revert': this.exitAnimation && this.isRevert,
+    'animacion-desplazamiento-salida': this.enterAnimation && this.isRevert,
+    'animacion-desplazamiento-revert-salida':
+      this.exitAnimation && !this.isRevert,
+  }" class="circuito">
     <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
   </div>
-  <div
-    :class="{
-      'circuito-derecho': true,
-
-      'circuitoD-desplazamiento-salida': this.enterAnimation && this.isRevert,
-      'circuitoD-desplazamiento-revert-salida':
-        this.exitAnimation && !this.isRevert,
-    }"
-    class="circuito"
-  >
+  <div :class="{
+    'circuito-derecho': true,
+  
+    'circuitoD-desplazamiento-salida': this.enterAnimation && this.isRevert,
+    'circuitoD-desplazamiento-revert-salida':
+      this.exitAnimation && !this.isRevert,
+  }" class="circuito">
     <img src="/img/calculadora/circuito-derecho.png" alt="" />
   </div>
 
   <div class="degradado_azuliz"></div>
   <div class="degradado_azulde"></div>
   <!--FIN FONDO-->
-  <div
-    :class="{
-      contenedor_coins: true,
-      'animacion-aparecer': this.enterAnimation && !this.isRevert,
-      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      'animacion-desaparecer': this.enterAnimation && this.isRevert,
-      'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
-    }"
-  >
+  <div :class="{
+    contenedor_coins: true,
+    'animacion-aparecer': this.enterAnimation && !this.isRevert,
+    'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+    'animacion-desaparecer': this.enterAnimation && this.isRevert,
+    'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+  }">
     <div class="card_coin">
-      <coin
-        icono="/img/coins/kucoin.svg"
-        titulo="KuCoin token "
-        sigla="(KCS)"
-        texto="TOP 52 approx capitalization"
+      <coin icono="/img/coins/kucoin.svg" titulo="KuCoin token " sigla="(KCS)" texto="TOP 52 approx capitalization"
         capitalizacion="900 M USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of KuCoin token (KCS) would have a value of"
-        logo="/img/logo.svg"
-        precio="90.000"
-        caja="/img/coins/caja.png"
-      />
+        logo="/img/logo.svg" precio="90.000" caja="/img/coins/caja.png" />
     </div>
     <div class="card_coin">
-      <coin
-        icono="/img/coins/axie.svg"
-        titulo="Axie Infinity"
-        sigla="(AXS)"
-        texto="TOP 48 approx capitalization"
+      <coin icono="/img/coins/axie.svg" titulo="Axie Infinity" sigla="(AXS)" texto="TOP 48 approx capitalization"
         capitalizacion="1.05 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of AXIE INFINITY (AXS) would have a value of"
-        logo="/img/logo.svg"
-        precio="105.000"
-        caja="/img/coins/caja.png"
-      />
+        logo="/img/logo.svg" precio="105.000" caja="/img/coins/caja.png" />
     </div>
     <div class="card_coin">
-      <coin
-        icono="/img/coins/decentraland.svg"
-        titulo="Decentraland"
-        sigla="(MANA)"
-        texto="TOP 42 approx capitalization"
-        capitalizacion="1.30 B USD"
+      <coin icono="/img/coins/decentraland.svg" titulo="Decentraland" sigla="(MANA)"
+        texto="TOP 42 approx capitalization" capitalizacion="1.30 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of Decentraland (MANA) would have a value of"
-        logo="/img/logo.svg"
-        precio="130.000"
-        caja="/img/coins/caja.png"
-      />
+        logo="/img/logo.svg" precio="130.000" caja="/img/coins/caja.png" />
     </div>
 
     <div class="card_coin">
-      <coin
-        icono="/img/coins/monero.svg"
-        titulo="Monero"
-        sigla="(XRM)"
-        texto="TOP 28 approx capitalization"
+      <coin icono="/img/coins/monero.svg" titulo="Monero" sigla="(XRM)" texto="TOP 28 approx capitalization"
         capitalizacion="2.68 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of  Monero (XRM) would have a value of"
-        logo="/img/logo.svg"
-        precio="268.000"
-        caja="/img/coins/caja.png"
-      />
+        logo="/img/logo.svg" precio="268.000" caja="/img/coins/caja.png" />
     </div>
     <div class="card_coin">
-      <coin
-        icono="/img/coins/chain.svg"
-        titulo="Chainlink"
-        sigla="(LINK)"
-        texto="TOP 21 approx capitalization"
+      <coin icono="/img/coins/chain.svg" titulo="Chainlink" sigla="(LINK)" texto="TOP 21 approx capitalization"
         capitalizacion="3.72 B USD"
         texto2="Each Monner DeFi (MRN) with this capitalization of Chainlink (LINK) would have a value of"
-        logo="/img/coins/logo.svg"
-        precio="372.000"
-        caja="/img/coins/caja.png"
-      />
+        logo="/img/coins/logo.svg" precio="372.000" caja="/img/coins/caja.png" />
     </div>
   </div>
 
@@ -184,23 +138,19 @@ img {
 
 .fondo-calculadora {
   z-index: 0;
-  background: radial-gradient(
-    circle at center,
-    #48d0ab 0%,
-    #097561 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%);
   z-index: 1;
 }
 
 .filtro-superior {
   z-index: 2;
-  background: radial-gradient(
-    circle at center,
-    #f9f9fa 0%,
-    #c8ced4 50%,
-    #a8aaaf 100%
-  );
+  background: radial-gradient(circle at center,
+      #f9f9fa 0%,
+      #c8ced4 50%,
+      #a8aaaf 100%);
   mix-blend-mode: multiply;
 }
 
@@ -403,27 +353,41 @@ img {
 
 .animacion-aparecer {
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-aparecer-revert {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-desaparecer {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-desaparecer-revert {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -439,27 +403,41 @@ img {
 
 .animacion-desplazamiento {
   animation-name: dezplazamiento;
+  -webkit-animation-name: desplazamiento;
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-desplazamiento-revert {
   animation-name: dezplazamiento;
+  -webkit-animation-name: desplazamiento;
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-desplazamiento-salida {
   animation-name: adelante;
+  -webkit-animation-name: adelante;
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-desplazamiento-revert-salida {
   animation-name: adelante;
+  -webkit-animation-name: adelante;
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -480,14 +458,21 @@ img {
 
 .circuitoD-desplazamiento-salida {
   animation-name: palante;
+  -webkit-animation-name: palante;
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .circuitoD-desplazamiento-revert-salida {
   animation-name: palante;
+  -webkit-animation-name: palante;
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -514,7 +499,7 @@ img {
 
 .icon {
   width: 3rem;
-  height:  3rem;
+  height: 3rem;
   margin-left: 1rem;
 }
 
@@ -531,11 +516,9 @@ img {
   }
 
   .contenedor_coins::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-      90deg,
-      rgb(33, 32, 85) 0%,
-      rgba(1, 209, 5, 1) 100%
-    );
+    background: linear-gradient(90deg,
+        rgb(33, 32, 85) 0%,
+        rgba(1, 209, 5, 1) 100%);
     border-radius: 20px;
     border: 2px solid #f1f2f3;
   }
@@ -580,8 +563,11 @@ img {
     border-right: 2px #fff solid;
     border-bottom: 2px #fff solid;
     animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     animation-name: arrow;
+    -webkit-animation-name: arrow;
   }
 
   @keyframes arrow {
@@ -627,8 +613,11 @@ img {
     border-right: 2px #fff solid;
     border-bottom: 2px #fff solid;
     animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     animation-name: arrow2;
+    -webkit-animation-name: arrow2;
   }
 
   @keyframes arrow2 {
@@ -648,15 +637,22 @@ img {
 }
 
 .fondo-montana-animation-salida {
+  -webkit-animation-duration: 0.78s;
   animation-duration: 0.78s;
   animation-name: salidaMontana;
+  -webkit-animation-name: salidaMontana;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .fondo-montana-animation-salida-revert {
+  -webkit-animation-duration: 0.78s;
   animation-duration: 0.78s;
   animation-name: salidaMontana;
+  -webkit-animation-name: salidaMontana;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 

@@ -7,26 +7,22 @@ export default {
   <!--FONDO-->
 
   <div class="fondo">
-    <div
-      :class="{
-        fondo_rayos: true,
-        'animacion-desplazamiento': this.enterAnimation && !this.isRevert,
-        'animacion-desplazamiento-revert': this.exitAnimation && this.isRevert,
-        'animacion-desaparecer': this.enterAnimation && this.isRevert,
-        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
-      }"
-    >
+    <div :class="{
+      fondo_rayos: true,
+      'animacion-desplazamiento': this.enterAnimation && !this.isRevert,
+      'animacion-desplazamiento-revert': this.exitAnimation && this.isRevert,
+      'animacion-desaparecer': this.enterAnimation && this.isRevert,
+      'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+    }">
       <img src="/img/rayos.png" alt="" />
     </div>
-    <div
-      :class="{
-        'fondo-benefit': true,
-        'animacion-benefit': this.enterAnimation && !this.isRevert,
-        'animacion-benefit-revert': this.exitAnimation && this.isRevert,
-        'animacion-benefit-up': this.enterAnimation && this.isRevert,
-        'animacion-benefit-up-revert': this.exitAnimation && !this.isRevert,
-      }"
-    >
+    <div :class="{
+      'fondo-benefit': true,
+      'animacion-benefit': this.enterAnimation && !this.isRevert,
+      'animacion-benefit-revert': this.exitAnimation && this.isRevert,
+      'animacion-benefit-up': this.enterAnimation && this.isRevert,
+      'animacion-benefit-up-revert': this.exitAnimation && !this.isRevert,
+    }">
       <img src="/img/fondo-benefit.png" alt="" />
     </div>
 
@@ -41,36 +37,30 @@ export default {
       <div class="luz-3"></div>
     </div>
 
-    <div
-      :class="{
-        titulo: true,
-        'animacion-desplazamiento-titulo':
-          this.enterAnimation && !this.isRevert,
-        'animacion-desplazamiento-titulo-revert':
-          this.exitAnimation && this.isRevert,
-        'animacion-desaparecer': this.enterAnimation && this.isRevert,
-        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
-      }"
-    >
+    <div :class="{
+      titulo: true,
+      'animacion-desplazamiento-titulo':
+        this.enterAnimation && !this.isRevert,
+      'animacion-desplazamiento-titulo-revert':
+        this.exitAnimation && this.isRevert,
+      'animacion-desaparecer': this.enterAnimation && this.isRevert,
+      'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+    }">
       <h1>BENEFITS</h1>
     </div>
 
-    <div
-      :class="{
-        benefits: true,
-      }"
-    >
+    <div :class="{
+      benefits: true,
+    }">
       <div class="contenido">
-        <div
-          :class="{
-            'contenedor-parrafo': true,
-            'animacion-aparecer': this.enterAnimation && !this.isRevert,
-            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-            'animacion-desaparecer': this.enterAnimation && this.isRevert,
-            'animacion-desaparecer-revert':
-              this.exitAnimation && !this.isRevert,
-          }"
-        >
+        <div :class="{
+          'contenedor-parrafo': true,
+          'animacion-aparecer': this.enterAnimation && !this.isRevert,
+          'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+          'animacion-desaparecer': this.enterAnimation && this.isRevert,
+          'animacion-desaparecer-revert':
+            this.exitAnimation && !this.isRevert,
+        }">
           <p>
             Monner DeFi is a project based on the payment of dividends that have
             the largest shares listed on the New York Stock Exchange. We want to
@@ -92,16 +82,14 @@ export default {
             MonnerBlockchain, MonnerGames
           </p>
         </div>
-        <div
-          :class="{
-            buttom: true,
-            'animacion-aparecer': this.enterAnimation && !this.isRevert,
-            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-            'animacion-desaparecer': this.enterAnimation && this.isRevert,
-            'animacion-desaparecer-revert':
-              this.exitAnimation && !this.isRevert,
-          }"
-        >
+        <div :class="{
+          buttom: true,
+          'animacion-aparecer': this.enterAnimation && !this.isRevert,
+          'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+          'animacion-desaparecer': this.enterAnimation && this.isRevert,
+          'animacion-desaparecer-revert':
+            this.exitAnimation && !this.isRevert,
+        }">
           <buttom class="btn centrar">READ MORE</buttom>
         </div>
       </div>
@@ -128,10 +116,12 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+
 img {
   width: 100%;
   height: 100%;
 }
+
 .fondo {
   position: absolute;
   top: 0;
@@ -157,6 +147,7 @@ img {
   text-align: center;
   z-index: 45;
 }
+
 .titulo h1 {
   font-size: 2.4rem;
   font-family: "Work Sans", sans-serif;
@@ -167,15 +158,24 @@ img {
 @media screen and (min-width: 769px) {
   .animacion-desplazamiento-titulo {
     animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
     animation-name: titulo;
+    -webkit-animation-name: titulo;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
+
   .animacion-desplazamiento-titulo-revert {
     animation-duration: 0.8s;
+    -webkit-animation-duration: 0.8s;
     animation-name: titulo;
+    -webkit-animation-name: titulo;
     animation-direction: reverse;
+    -webkit-animation-direction: reverse;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
+
   @keyframes titulo {
     0% {
       top: 10rem;
@@ -183,6 +183,7 @@ img {
     }
   }
 }
+
 .benefits {
   position: absolute;
   top: 20%;
@@ -191,6 +192,7 @@ img {
   height: 100%;
   row-gap: 5%;
 }
+
 .contenido {
   margin: 0 auto;
   display: flex;
@@ -199,6 +201,7 @@ img {
   width: 90%;
   height: 80%;
 }
+
 .contenedor-parrafo {
   display: flex;
   justify-content: center;
@@ -209,6 +212,7 @@ img {
   margin: 0 auto;
   border-radius: 3vw;
 }
+
 .buttom {
   margin: 0 auto;
   position: relative;
@@ -219,19 +223,19 @@ img {
   justify-content: center;
   align-items: center;
 }
+
 @media screen and (width > 769px) {
   .buttom {
     top: 0;
     height: 10%;
   }
 }
+
 .btn {
   padding: 10px;
-  background: linear-gradient(
-    90deg,
-    rgb(18, 17, 65) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(18, 17, 65) 0%,
+      rgba(1, 209, 88, 1) 100%);
   border-radius: 0.5vw;
   cursor: pointer;
   width: 7rem;
@@ -257,16 +261,19 @@ img {
     width: 100%;
     height: 75%;
   }
+
   .contenido {
     margin: 0;
     width: 80%;
     height: 80%;
   }
+
   .titulo {
     width: 0%;
     top: 5rem;
     left: 30%;
   }
+
   .titulo h1 {
     font-size: 4.5vw;
   }
@@ -275,6 +282,7 @@ img {
     width: 85%;
     height: 100%;
   }
+
   .contenedor-parrafo p {
     font-size: 1.5vw;
   }
@@ -298,25 +306,30 @@ img {
 .fondo_rayos img {
   height: 100%;
 }
+
 .fondo-benefit {
   position: relative;
   background-size: no-repeat center center;
   top: 0%;
   z-index: 5;
 }
-.fondo-benefit > img {
+
+.fondo-benefit>img {
   width: 200%;
   height: 115vh;
 }
+
 @media screen and (min-width: 769px) {
   .fondo_rayos {
     z-index: -2;
     left: -10%;
   }
-  .fondo-benefit > img {
+
+  .fondo-benefit>img {
     width: 100%;
     height: 115vh;
   }
+
   .fondo_rayos img {
     width: 100%;
   }
@@ -324,47 +337,76 @@ img {
 
 .animacion-desplazamiento {
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
   animation-name: desplazamiento;
+  -webkit-animation-name: desplazamiento;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+
 .animacion-desplazamiento-revert {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: desplazamiento;
+  -webkit-animation-name: desplazamiento;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+
 @keyframes desplazamiento {
   0% {
     left: 0%;
   }
 }
+
 .animacion-benefit {
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
   animation-name: abajo;
+  -webkit-animation-name: abajo;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+
 .animacion-benefit-revert {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: abajo;
+  -webkit-animation-name: abajo;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+
 .animacion-benefit-up {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: arriba;
+  -webkit-animation-name: arriba;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+
 .animacion-benefit-up-revert {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: arriba;
+  -webkit-animation-name: arriba;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+
 @keyframes abajo {
   0% {
     top: -5%;
   }
 }
+
 @keyframes arriba {
   0% {
     top: -5%;
@@ -381,6 +423,7 @@ img {
   display: flex;
   justify-content: start;
 }
+
 @media screen and (max-width: 900px) {
   .logo-redes {
     display: none;
@@ -389,7 +432,7 @@ img {
 
 .icon {
   width: 3rem;
-  height:  3rem;
+  height: 3rem;
   margin-left: 1rem;
 }
 
@@ -403,10 +446,15 @@ img {
   z-index: 1;
   display: none;
   animation-duration: 6s;
+  -webkit-animation-duration: 6s;
   animation-name: reflector;
+  -webkit-animation-name: reflector;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  -webkit-animation-direction: alternate;
 }
+
 /* 
 @keyframes reflector {
   0% {
@@ -438,12 +486,10 @@ img {
   border-radius: 50%;
   bottom: -30%;
   transform: rotate(-30deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.5) 0%,
-    transparent 47%,
-    rgba(184, 184, 184, 0) 100%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.5) 0%,
+      transparent 47%,
+      rgba(184, 184, 184, 0) 100%);
   filter: blur(3rem);
   left: 30%;
 }
@@ -456,12 +502,10 @@ img {
   bottom: -30%;
   left: 40%;
   transform: rotate(0deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.8) 0%,
-    transparent 47%,
-    rgba(184, 184, 184, 0) 100%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.8) 0%,
+      transparent 47%,
+      rgba(184, 184, 184, 0) 100%);
   filter: blur(3rem);
 }
 
@@ -473,35 +517,50 @@ img {
   bottom: -30%;
   left: 55%;
   transform: rotate(-150deg);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.8) 0%,
-    transparent 47%,
-    rgba(184, 184, 184, 0) 100%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.8) 0%,
+      transparent 47%,
+      rgba(184, 184, 184, 0) 100%);
   filter: blur(3rem);
 }
+
 .animacion-aparecer {
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+
 .animacion-aparecer-revert {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+
 .animacion-desaparecer {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-desaparecer-revert {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 

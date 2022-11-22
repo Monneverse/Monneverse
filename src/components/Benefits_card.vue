@@ -5,7 +5,7 @@ export default {
   components: {
     Benefit,
   },
-  props: ["enterAnimation", "exitAnimation", "isRevert","SetBloquearScroll"],
+  props: ["enterAnimation", "exitAnimation", "isRevert", "SetBloquearScroll"],
   data() {
     return {
       listBenefits: [
@@ -247,6 +247,7 @@ img {
     height: 3px;
     animation: animacion1 3s linear infinite;
     animation-delay: 1s;
+    -webkit-animation-delay: 1s;
   }
 
   @keyframes animacion1 {
@@ -266,7 +267,9 @@ img {
     width: 3px;
     height: 100%;
     animation: animacion2 3s linear infinite;
+    -webkit-animation: animacion2 3s linear infinite;
     animation-delay: 1s;
+    -webkit-animation-delay: 1s;
   }
 
   @keyframes animacion2 {
@@ -288,7 +291,9 @@ img {
     width: 120%;
     height: 3px;
     animation: animacion3 3s linear infinite;
+    -webkit-animation: animacion3 3s linear infinite;
     animation-delay: 1s;
+    -webkit-animation-delay: 1s;
   }
 
   @keyframes animacion3 {
@@ -310,7 +315,9 @@ img {
     width: 3px;
     height: 100%;
     animation: animacion4 3s linear infinite;
+    -webkit-animation: animacion4 3s linear infinite;
     animation-delay: 1s;
+    -webkit-animation-delay: 1s;
   }
 
   @keyframes animacion4 {
@@ -369,27 +376,41 @@ img {
 
 .animacion-benefit img {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: abajo;
+  -webkit-animation-name: abajo;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-benefit-revert img {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: abajo;
+  -webkit-animation-name: abajo;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-benefit-up img {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: arriba;
+  -webkit-animation-name: arriba;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-benefit-up-revert img {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: arriba;
+  -webkit-animation-name: arriba;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -414,7 +435,10 @@ img {
 
 .animacion-desplazamiento {
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
   animation-name: desplazamiento;
+  -webkit-animation-name: desplazamiento;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -441,7 +465,7 @@ img {
 
 .icon {
   width: 3rem;
-  height:  3rem;
+  height: 3rem;
   margin-left: 1rem;
 }
 
@@ -453,27 +477,41 @@ img {
 
 .animacion-aparecer {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-aparecer-revert {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-desaparecer {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-desaparecer-revert {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 

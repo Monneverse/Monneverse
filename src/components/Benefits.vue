@@ -71,22 +71,15 @@ export default {
             </div>
           </div>
         </div>
-        <div
-          :class="{
-            beneficio: true,
-              'animacion-aparecer': this.enterAnimation && !this.isRevert,
-              'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-              'animacion-desaparecer': this.enterAnimation && this.isRevert,
-              'animacion-desaparecer-revert':
-                this.exitAnimation && !this.isRevert,
-          }"
-        >
-          <img
-            id="c"
-            class="circulos"
-            src="/img/plus.svg"
-            alt="Plus-Beneficios"
-          />
+        <div :class="{
+          beneficio: true,
+          'animacion-aparecer': this.enterAnimation && !this.isRevert,
+          'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+          'animacion-desaparecer': this.enterAnimation && this.isRevert,
+          'animacion-desaparecer-revert':
+            this.exitAnimation && !this.isRevert,
+        }">
+          <img id="c" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
             <div class="titulo-two">
               <h1>6.2%<span>*</span>48h</h1>
@@ -105,22 +98,15 @@ export default {
             </div>
           </div>
         </div>
-        <div
-          :class="{
-            beneficio: true,
-              'animacion-aparecer': this.enterAnimation && !this.isRevert,
-              'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-              'animacion-desaparecer': this.enterAnimation && this.isRevert,
-              'animacion-desaparecer-revert':
-                this.exitAnimation && !this.isRevert,
-          }"
-        >
-          <img
-            id="d"
-            class="circulos"
-            src="/img/plus.svg"
-            alt="Plus-Beneficios"
-          />
+        <div :class="{
+          beneficio: true,
+          'animacion-aparecer': this.enterAnimation && !this.isRevert,
+          'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+          'animacion-desaparecer': this.enterAnimation && this.isRevert,
+          'animacion-desaparecer-revert':
+            this.exitAnimation && !this.isRevert,
+        }">
+          <img id="d" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div id="contentP" class="content-price">
             <div class="titulo-benefit">
               <div class="info-two">
@@ -173,11 +159,7 @@ export default {
     <div class="logo-redes">
       <div class="icon icon-telegram">
         <a href="https://t.me/MonnerverseCripto" target="_blank">
-          <img
-            src="../assets/Telegram_logo.svg"
-            alt="logo telegram"
-            srcset=""
-          />
+          <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
         </a>
       </div>
       <div class="icon icon-reddit">
@@ -226,6 +208,7 @@ p {
   text-align: center;
   z-index: 45;
 }
+
 .titulo h1 {
   font-size: 2.4rem;
   font-family: "Work Sans", sans-serif;
@@ -265,10 +248,11 @@ p {
 }
 
 .beneficio:nth-child(4) {
-    opacity: 0!important;
+  opacity: 0 !important;
   margin-top: 4.5rem;
   height: 25rem;
 }
+
 @media screen and (max-width: 900px) {
   .beneficio:nth-child(4) {
     display: none;
@@ -473,7 +457,7 @@ p {
 
 .icon {
   width: 3rem;
-    height:  3rem;
+  height: 3rem;
   margin-left: 1rem;
 }
 
@@ -545,10 +529,13 @@ p {
 
   .animacion-aro {
     animation-name: aro;
+    -webkit-animation-name: aro;
     animation-duration: 0.5s;
-
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
   }
 
   @keyframes aro {
@@ -755,10 +742,13 @@ p {
 
 .animacion-caja1 {
   animation-name: caja1;
+  -webkit-animation-name: caja1;
   animation-duration: 5s;
-
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes caja1 {
@@ -778,27 +768,41 @@ p {
 
 .animacion-aparecer {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-aparecer-revert {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-desaparecer {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-desaparecer-revert {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 

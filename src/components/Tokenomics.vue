@@ -64,11 +64,11 @@ export default {
         maintainAspectRatio: false,
         showTooltips: false,
         plugins: {
-          
+
           tooltip: {
             enabled: true,
             callbacks: {
-             
+
               label: (tooltipItem) => {
                 return tooltipItem.label
               },
@@ -624,10 +624,15 @@ h2 {
   width: 130%;
   height: 180%;
   z-index: 19;
+  z-index: 19;
+  -webkit-animation-duration: 3s;
   animation-duration: 3s;
   animation-name: luz;
+  -webkit-animation-name: luz;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  -webkit-animation-direction: alternate;
   top: -10%;
   left: -15%;
   opacity: 70%;
@@ -647,7 +652,10 @@ h2 {
 
 .animacion-desplazamiento-titulo {
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
   animation-name: desplazamiento;
+  -webkit-animation-name: desplazamiento;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -661,7 +669,10 @@ h2 {
 
 .animacion-desplazamiento-titulo1 {
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
   animation-name: desplazamiento2;
+  -webkit-animation-name: desplazamiento2;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -676,6 +687,8 @@ h2 {
 .animacion-desplazamiento-titulo2 {
   animation-duration: 0.35s;
   animation-name: desplazamiento3;
+  -webkit-animation-name: desplazamiento3;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -703,27 +716,41 @@ h2 {
 
 .animacion-aparecer {
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-aparecer-revert {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-desaparecer {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-desaparecer-revert {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: aparecer;
+  -webkit-animation-name: aparecer;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -739,14 +766,21 @@ h2 {
 
 .animacion-benefit-up img {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: arriba;
+  -webkit-animation-name: arriba;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .animacion-benefit-up-revert img {
   animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
   animation-name: arriba;
+  -webkit-animation-name: arriba;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 

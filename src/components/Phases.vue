@@ -129,6 +129,7 @@ img {
 
 .montana__desaparecer_revert {
   animation: montana__aparecer 1s ease-in-out 0s 1 normal;
+  -webkit-animation: montana__aparecer 1s ease-in-out 0s 1 normal;
 }
 
 @keyframes montana__aparecer {
@@ -177,28 +178,42 @@ img {
 
 .fases__aparecer {
   animation: aparecer 0.6s;
+  -webkit-animation: aparecer 0.6s;
   animation-delay: 0.1;
+  -webkit-animation-delay: 0.1s;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .fases__aparecer_revert {
   animation: desaparecer 0.6s;
+  -webkit-animation: desaparecer 0.6s;
   animation-delay: 0.1;
+  -webkit-animation-delay: 0.1s;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .fases__desaparecer {
   animation: desaparecer 0.6s;
+  -webkit-animation: desaparecer 0.6s;
   animation-delay: 0.1;
+  -webkit-animation-delay: 0.1s;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .fases__desaparecer_revert {
   animation: aparecer 0.6s;
+  -webkit-animation: aparecer 0.6s;
   animation-delay: 0.1;
+  -webkit-animation-delay: 0.1s;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes aparecer {
@@ -246,8 +261,11 @@ img {
 
   .circulo__desaparecer_revert {
     animation: aparecer 0.8s;
+    -webkit-animation: aparecer 0.8s;
     animation-direction: reverse;
+    -webkit-animation-direction: reverse;
     animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
   }
 }
 
@@ -279,18 +297,25 @@ img {
 
 .componentes__aparecer_revert {
   animation: desaparecer 0.9s;
+  -webkit-animation: desaparecer 0.9s;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .componentes__desaparecer {
   animation: desaparecer 0.9s;
+  -webkit-animation: desaparecer 0.9s;
 }
 
 .componentes__desaparecer_revert {
   animation: aparecer 0.9s;
+  -webkit-animation: aparecer 0.9s;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
   animation-fill-mode: backwards;
+  -webkit-animation-fill-mode: backwards;
 }
 
 .componente {
@@ -442,8 +467,11 @@ img {
     border-right: 2px #fff solid;
     border-bottom: 2px #fff solid;
     animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     animation-name: arrow;
+    -webkit-animation-name: arrow;
   }
 
   @keyframes arrow {
@@ -454,6 +482,7 @@ img {
     100% {
       opacity: 0;
       transform: translate(-10px, -10px);
+      -webkit-transform: translate(-10px, -10px);
     }
   }
 
@@ -489,8 +518,11 @@ img {
     border-right: 2px #fff solid;
     border-bottom: 2px #fff solid;
     animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     animation-name: arrow2;
+    -webkit-animation-name: arrow2;
   }
 
   @keyframes arrow2 {
@@ -501,6 +533,7 @@ img {
     100% {
       opacity: 0;
       transform: translate(-10px, -10px);
+      -webkit-transform: translate(-10px, -10px);
     }
   }
 }

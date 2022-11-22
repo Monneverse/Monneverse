@@ -7,8 +7,8 @@
     fondo: true, 'fondo-montana': true,
     'fondo-montana-animation': this.enterAnimation && !this.isRevert,
     'fondo-montana-animation2': this.enterAnimation && this.isRevert,
-    fondo_montana_animation_enter_revert:this.exitAnimation && this.isRevert,
-    fondo_montana_animation_enter_revert2:this.exitAnimation && !this.isRevert,
+    fondo_montana_animation_enter_revert: this.exitAnimation && this.isRevert,
+    fondo_montana_animation_enter_revert2: this.exitAnimation && !this.isRevert,
   }"><img src="/img/fondo-montana.png" /> </div>
   <div class="fondo fondo-oscurecer"></div>
 
@@ -109,7 +109,8 @@
       <br>The Monner Will Return {{ porcentajeInteres }}% Interest
     </p>
 
-    <p class="descripcion_information seg_linea">Note: Staking is only for those who want it. We will have award and release
+    <p class="descripcion_information seg_linea">Note: Staking is only for those who want it. We will have award and
+      release
       rules to protect the integrity of our price.</p>
   </article>
 
@@ -295,30 +296,49 @@ img {
 /* Fondo calculadora animacion */
 
 .fondo-montana-animation {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: fondo-montana-animation;
   animation-name: fondo-montana-animation;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-}
-.fondo-montana-animation2 {
-  animation-duration: .5s;
-  animation-name: fondo-montana-animation;
-  animation-iteration-count: 1;
-}
-.fondo_montana_animation_enter_revert{
-  animation-duration: .5s;
-  animation-name: fondo-montana-animation;
-  animation-iteration-count: 1;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
 }
 
-.fondo_montana_animation_enter_revert2{
-  animation-duration: .5s;
+.fondo-montana-animation2 {
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: fondo-montana-animation;
   animation-name: fondo-montana-animation;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+.fondo_montana_animation_enter_revert {
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: fondo-montana-animation;
+  animation-name: fondo-montana-animation;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
+
+.fondo_montana_animation_enter_revert2 {
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: fondo-montana-animation;
+  animation-name: fondo-montana-animation;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
 @keyframes fondo-montana-animation {
   0% {
     height: 100%;
@@ -360,9 +380,13 @@ img {
   height: 180%;
   z-index: 3;
   animation-duration: 5s;
+  -webkit-animation-duration: 5s;
   animation-name: luz;
+  -webkit-animation-name: luz;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  -webkit-animation-direction: alternate;
   top: 0%;
   visibility: hidden;
 }
@@ -420,16 +444,24 @@ img {
 
 .aparecer {
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
   animation-name: aparecer-animation;
+  -webkit-animation-name: aparecer-animation;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .aparecer_revert {
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
   animation-name: aparecer-animation;
+  -webkit-animation-name: aparecer-animation;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes aparecer-animation {
@@ -483,40 +515,62 @@ img {
 
 .circulo-superior-animation {
   animation-name: circulo-superior-animation;
-  animation-duration: .5s;
+  -webkit-animation-name: circulo-superior-animation;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 
 }
 
 .rotar_revert {
   animation-name: rotar;
-  animation-duration: .5s;
+  -webkit-animation-name: rotar;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .rotar {
   animation-name: rotar;
-  animation-duration: .5s;
+  -webkit-animation-name: rotar;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .rotar_derecha {
   animation-name: rotar_derecha;
-  animation-duration: .5s;
+  -webkit-animation-name: rotar_derecha;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .rotar_derecha_revert {
   animation-name: rotar_derecha;
-  animation-duration: .5s;
+  -webkit-animation-name: rotar_derecha;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   animation-direction: normal;
+  -webkit-animation-direction: normal;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes rotar {
@@ -646,18 +700,28 @@ img {
 
 
 .circulo_indicador_animation {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
   animation-name: circulo-indicador-animation;
+  -webkit-animation-name: circulo-indicador-animation;
   animation-direction: normal;
+  -webkit-animation-direction: normal;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .circulo_indicador_animation_revert {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
   animation-name: circulo-indicador-animation;
+  -webkit-animation-name: circulo-indicador-animation;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -682,18 +746,28 @@ img {
 }
 
 .circulo_indicador_animation_salida {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
   animation-name: circulo_indicador_salida;
+  -webkit-animation-name: circulo_indicador_salida;
   animation-direction: normal;
+  -webkit-animation-direction: normal;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .circulo_indicador_animation_salida_revert {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
   animation-name: circulo_indicador_salida;
+  -webkit-animation-name: circulo_indicador_salida;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -854,30 +928,33 @@ img {
 
 .icon {
   width: 3rem;
-  height:  3rem;
+  height: 3rem;
   margin-left: 1rem;
 }
 
 .desplazar_redes {
   animation-name: redes_animation;
-  animation-duration: .5s;
+  -webkit-animation-name: redes_animation;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
 .desplazar_redes_revert {
   animation-name: redes_animation;
-  animation-duration: .5s;
+  -webkit-animation-name: redes_animation;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
-/* .desplazar_redes_salida {
-  animation-name: redes_animation_salida;
-  animation-duration: .5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-} */
+
 @keyframes redes_animation {
   0% {
     left: 45%;
@@ -888,17 +965,6 @@ img {
   }
 }
 
-@keyframes redes_animation_salida {
-  0% {
-    left: 1rem;
-    bottom: 1rem;
-  }
-
-  100% {
-    left: -10rem;
-    bottom: -10rem;
-  }
-}
 
 
 
@@ -938,7 +1004,7 @@ img {
 
   .informacion .descripcion_information {
     margin-top: 2%;
-    margin-left:0rem;
+    margin-left: 0rem;
     text-align: start;
     font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
     font-size: 1.5vh;

@@ -35,6 +35,7 @@ Copyright (c) 2014 Daniel Eden
 .duration-sm {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
 }
 
 .duration-md {
@@ -116,6 +117,7 @@ Copyright (c) 2014 Daniel Eden
 
 .iteration-1 {
   -webkit-animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -150,11 +152,13 @@ or from end to start, or both.*/
 .direction-reverse {
   -webkit-animation-direction: reverse;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
 }
 
 .direction-alternate {
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
+  -webkit-animation-direction: alternate;
 }
 
 .direction-alternate-reverse {
@@ -170,8 +174,10 @@ or from end to start, or both.*/
 }
 
 .fill-mode-forwards {
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  -webkit-    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .fill-mode-backwards {

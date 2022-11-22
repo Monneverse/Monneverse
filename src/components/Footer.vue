@@ -35,8 +35,8 @@
   <!-- redes sociales -->
   <div :class="{
     'fondo-redes': true,
-    'fondo-redes-animation':this.enterAnimation,
-    'fondo-redes-animation-revert':this.exitAnimation
+    'fondo-redes-animation': this.enterAnimation,
+    'fondo-redes-animation-revert': this.exitAnimation
   }">
     <div class="redes">
       <a href="https://t.me/MonnerverseCripto">
@@ -98,18 +98,26 @@ img {
 
 .logo-animation {
   animation-name: logo-animation;
+  -webkit-animation-name: logo-animation;
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .logo-animation-revert {
   animation-name: logo-animation;
+  -webkit-animation-name: logo-animation;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-  /* para que las animaciones se queden donde se terminaron de animar */
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes logo-animation {
@@ -180,40 +188,53 @@ img {
 }
 
 .circuito-derecho {
-  right:  -50%;
+  right: -50%;
   transform: scaleY(-1);
 }
 
-.circuito-desaparecer{
-  animation:  circuito_desaparecer .5s normal forwards ease-in-out;
-  animation-fill-mode: backwards;
+.circuito-desaparecer {
+  animation: circuito_desaparecer .5s normal forwards ease-in-out;
+  -webkit-animation: circuito_desaparecer .5s normal forwards ease-in-out;
 }
-.circuito-aparecer{
-  animation:  circuito_desaparecer .5s reverse forwards ease-in-out;
+
+.circuito-aparecer {
+  animation: circuito_desaparecer .5s reverse backwards ease-in-out;
+  -webkit-animation: circuito_desaparecer .5s reverse backwards ease-in-out;
 }
+
 @keyframes circuito_desaparecer {
-  0%{
+  0% {
     right: -14%;
   }
+
   100% {
     right: -50%;
   }
 
 
 }
+
 .fondo-redes-animation {
   animation-name: fondo-redes-animation;
+  -webkit-animation-name: fondo-redes-animation;
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .fondo-redes-animation-revert {
   animation-name: fondo-redes-animation;
+  -webkit-animation-name: fondo-redes-animation;
   animation-direction: reverse;
+  -webkit-animation-direction: reverse;
   animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes fondo-redes-animation {
@@ -228,6 +249,7 @@ img {
 .redes:hover a img {
   transition: 0.5s ease-in-out;
   transform: translate(-20px, -40px) rotate(-25deg) scale(1.2);
+  -webkit-transform: translate(-20px, -40px) rotate(-25deg) scale(1.2);
 }
 
 .fondo-redes {

@@ -80,52 +80,38 @@ export default {
 };
 </script>
 <template>
-  <div
-    :class="{
-      fondo: true,
-      fondo__aparecer: this.enterAnimation && !this.isRevert,
-      fondo__aparecer2: this.enterAnimation && this.isRevert,
-      fondo__desaparecer: this.exitAnimation && this.isRevert,
-      fondo__desaparecer2: this.exitAnimation && !this.isRevert,
-    }"
-  >
+  <div :class="{
+    fondo: true,
+    fondo__aparecer: this.enterAnimation && !this.isRevert,
+    fondo__aparecer2: this.enterAnimation && this.isRevert,
+    fondo__desaparecer: this.exitAnimation && this.isRevert,
+    fondo__desaparecer2: this.exitAnimation && !this.isRevert,
+  }">
     <img src="/img/rayos.png" alt="" />
   </div>
-  <div
-    :class="{
-      fondo: true,
-    }"
-    class="fondo-benefit"
-  >
+  <div :class="{
+    fondo: true,
+  }" class="fondo-benefit">
     <img src="/img/fondo-benefit.png" alt="" />
   </div>
-  <div
-    :class="{
-      'imagen-youtube': true,
-      animated: true,
-      duration1s: true,
-      fadeInRight: this.enterAnimation,
-      lightSpeedOut: this.exitAnimation,
-    }"
-  >
+  <div :class="{
+    'imagen-youtube': true,
+    animated: true,
+    duration1s: true,
+    fadeInRight: this.enterAnimation,
+    lightSpeedOut: this.exitAnimation,
+  }">
     <img src="../assets/YouTube-Icon.svg" alt="Youtube image" />
   </div>
   <div class="contenido">
-    <Youtube
-      v-for="videoy in videosPlay"
-      :class="{
-        video: true,
-        video__aparecer: this.enterAnimation && !this.isRevert,
-        video__aparecer_revert: this.enterAnimation && this.isRevert,
-        video__desaparecer_revert: this.exitAnimation && this.isRevert,
-        video__desaparecer: this.exitAnimation && !this.isRevert,
-      }"
-      :title="videoy.title"
-      :description="videoy.description"
-      :list="videoy.playlist"
-      :redes="videoy.redes"
-      :imglang = "videoy.imglang"
-    >
+    <Youtube v-for="videoy in videosPlay" :class="{
+      video: true,
+      video__aparecer: this.enterAnimation && !this.isRevert,
+      video__aparecer_revert: this.enterAnimation && this.isRevert,
+      video__desaparecer_revert: this.exitAnimation && this.isRevert,
+      video__desaparecer: this.exitAnimation && !this.isRevert,
+    }" :title="videoy.title" :description="videoy.description" :list="videoy.playlist" :redes="videoy.redes"
+      :imglang="videoy.imglang">
     </Youtube>
   </div>
   <div class="arrow"></div>
@@ -135,19 +121,11 @@ export default {
       <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
     </a>
 
-    <a
-      class="icon"
-      href="https://www.reddit.com/user/monnerverse"
-      target="_blank"
-    >
+    <a class="icon" href="https://www.reddit.com/user/monnerverse" target="_blank">
       <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
     </a>
 
-    <a
-      class="icon"
-      href="https://discord.com/invite/h7fRvek9dn"
-      target="_blank"
-    >
+    <a class="icon" href="https://discord.com/invite/h7fRvek9dn" target="_blank">
       <img src="../assets/discord.svg" alt="logo discord" srcset="" />
     </a>
   </div>
@@ -198,18 +176,22 @@ img {
 
 .fondo__aparecer {
   animation: aparecer_ocultar 1s ease-in-out forwards;
+  -webkit-animation: aparecer_ocultar 1s ease-in-out forwards;
 }
 
 .fondo__desaparecer {
   animation: aparecer_ocultar 1s ease-in-out reverse;
+  -webkit-animation: aparecer_ocultar 1s ease-in-out reverse;
 }
 
 .fondo__aparecer2 {
   animation: aparecer_ocultar 1s ease-in-out forwards;
+  -webkit-animation: aparecer_ocultar 1s ease-in-out forwards;
 }
 
 .fondo__desaparecer2 {
   animation: aparecer_ocultar 1s ease-in-out reverse;
+  -webkit-animation: aparecer_ocultar 1s ease-in-out reverse;
 }
 
 @keyframes aparecer_ocultar {
@@ -272,11 +254,9 @@ img {
 }
 
 .contenido::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    90deg,
-    rgb(33, 32, 85) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%);
   border-radius: 20px;
   border: 2px solid #f1f2f3;
 }
@@ -299,17 +279,21 @@ img {
   margin: 0;
   height: 100%;
 }
+
 .video__aparecer {
   position: relative;
   left: 0;
   top: 0;
   animation: aparecer 0.3s normal 1 ease-in-out;
+  -webkit-animation: aparecer 0.3s normal 1 ease-in-out;
 }
+
 .video__aparecer:nth-child(1) {
   position: relative;
   left: 0;
   top: 0;
   animation: aparecer 0.8s normal 1 ease-in-out;
+  -webkit-animation: aparecer 0.8s normal 1 ease-in-out;
 }
 
 .video__aparecer:nth-child(2) {
@@ -317,6 +301,7 @@ img {
   left: 0;
   top: 0;
   animation: aparecer 0.6s normal 1 ease-in-out;
+  -webkit-animation: aparecer 0.6s normal 1 ease-in-out;
 }
 
 .video__aparecer:nth-child(3) {
@@ -324,12 +309,15 @@ img {
   left: 0;
   top: 0;
   animation: aparecer 0.4s normal 1 ease-in-out;
+  -webkit-animation: aparecer 0.4s normal 1 ease-in-out;
 }
+
 .video__desaparecer_revert {
   position: relative;
   left: 0;
   top: 0;
   animation: aparecer 0.9s reverse 1 ease-in-out forwards;
+  -webkit-animation: aparecer 0.9s normal 1 ease-in-out;
 }
 
 .video__desaparecer_revert:nth-child(1) {
@@ -337,6 +325,7 @@ img {
   left: 0;
   top: 0;
   animation: aparecer 0.4s reverse 1 ease-in-out forwards;
+  -webkit-animation: aparecer 0.4s reverse 1 ease-in-out forwards;
 }
 
 .video__desaparecer_revert:nth-child(2) {
@@ -344,6 +333,7 @@ img {
   left: 0;
   top: 0;
   animation: aparecer 0.6s reverse 1 ease-in-out forwards;
+  -webkit-animation: aparecer 0.6s reverse 1 ease-in-out forwards;
 }
 
 .video__desaparecer_revert:nth-child(3) {
@@ -351,18 +341,23 @@ img {
   left: 0;
   top: 0;
   animation: aparecer 0.8s reverse 1 ease-in-out forwards;
+  -webkit-animation: aparecer 0.8s reverse 1 ease-in-out forwards;
 }
+
 .video__desaparecer {
   position: relative;
   left: 0;
   top: 0;
   animation: desaparecer 0.3s normal 1 ease-in-out forwards;
+  -webkit-animation: desaparecer 0.3s normal 1 ease-in-out forwards;
 }
+
 .video__desaparecer:nth-child(1) {
   position: relative;
   left: 0;
   top: 0;
   animation: desaparecer 0.8s normal 1 ease-in-out forwards;
+  -webkit-animation: desaparecer 0.8s normal 1 ease-in-out forwards;
 }
 
 .video__desaparecer:nth-child(2) {
@@ -370,6 +365,7 @@ img {
   left: 0;
   top: 0;
   animation: desaparecer 0.6s normal 1 ease-in-out forwards;
+  -webkit-animation: desaparecer 0.6s normal 1 ease-in-out forwards;
 }
 
 .video__desaparecer:nth-child(3) {
@@ -377,12 +373,15 @@ img {
   left: 0;
   top: 0;
   animation: desaparecer 0.4s normal 1 ease-in-out forwards;
+  -webkit-animation: desaparecer 0.4s normal 1 ease-in-out forwards;
 }
+
 .video__aparecer_revert {
   position: relative;
   left: 0;
   top: 0;
   animation: desaparecer 0.3s reverse 1 ease-in-out forwards;
+  -webkit-animation: desaparecer 0.3s reverse 1 ease-in-out forwards;
 }
 
 .video__aparecer_revert:nth-child(1) {
@@ -390,6 +389,7 @@ img {
   left: 0;
   top: 0;
   animation: desaparecer 0.8s reverse 1 ease-in-out forwards;
+  -webkit-animation: desaparecer 0.8s reverse 1 ease-in-out forwards;
 }
 
 .video__aparecer_revert:nth-child(2) {
@@ -397,6 +397,7 @@ img {
   left: 0;
   top: 0;
   animation: desaparecer 0.6s reverse 1 ease-in-out forwards;
+  -webkit-animation: desaparecer 0.6s reverse 1 ease-in-out forwards;
 }
 
 .video__aparecer_revert:nth-child(3) {
@@ -404,6 +405,7 @@ img {
   left: 0;
   top: 0;
   animation: desaparecer 0.4s reverse 1 ease-in-out forwards;
+  -webkit-animation: desaparecer 0.4s reverse 1 ease-in-out forwards;
 }
 
 @keyframes aparecer {
@@ -432,7 +434,7 @@ img {
 
 .icon {
   width: 3rem;
-  height:  3rem;
+  height: 3rem;
   margin-left: 1rem;
 }
 
@@ -478,8 +480,11 @@ img {
     border-right: 2px #ffc000 solid;
     border-bottom: 2px #ffc000 solid;
     animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     animation-name: arrow;
+    -webkit-animation-name: arrow;
   }
 
   @keyframes arrow {
@@ -525,8 +530,11 @@ img {
     border-right: 2px #ffc000 solid;
     border-bottom: 2px #ffc000 solid;
     animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     animation-name: arrow2;
+    -webkit-animation-name: arrow2;
   }
 
   @keyframes arrow2 {

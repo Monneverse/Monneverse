@@ -263,7 +263,8 @@ img {
 }
 
 .visa_img img:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
+  -webkit-transform: scale(1.2);
 }
 
 .mastercard_img {
@@ -276,7 +277,8 @@ img {
 }
 
 .mastercard_img img:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
+  -webkit-transform: scale(1.2);
 }
 
 .circulos_redes {
@@ -308,6 +310,7 @@ img {
   right: 50%;
   top: 85%;
   transform: translate(50%, 0);
+  -webkit-transform: translate(50%, 0);
   width: 50%;
   max-width: 30rem;
   height: 100%;
@@ -529,6 +532,7 @@ img {
 
   .mastercard_img img:hover {
     transform: scale(1.1);
+    -webkit-transform: scale(1.1);
   }
 
   .visa_img {
@@ -541,6 +545,7 @@ img {
 
   .visa_img img:hover {
     transform: scale(1.1);
+    -webkit-transform: scale(1.1);
   }
 
   .upcoming_alliance {
@@ -612,6 +617,7 @@ img {
 }
 
 .icon:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
+  -webkit-transform: scale(1.2);
 }
 </style>
