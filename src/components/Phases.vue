@@ -179,8 +179,6 @@ img {
 .fases__aparecer {
   animation: aparecer 0.6s;
   -webkit-animation: aparecer 0.6s;
-  animation-delay: 0.1;
-  -webkit-animation-delay: 0.1s;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
@@ -188,8 +186,6 @@ img {
 .fases__aparecer_revert {
   animation: desaparecer 0.6s;
   -webkit-animation: desaparecer 0.6s;
-  animation-delay: 0.1;
-  -webkit-animation-delay: 0.1s;
   animation-direction: reverse;
   -webkit-animation-direction: reverse;
   animation-fill-mode: forwards;
@@ -199,8 +195,6 @@ img {
 .fases__desaparecer {
   animation: desaparecer 0.6s;
   -webkit-animation: desaparecer 0.6s;
-  animation-delay: 0.1;
-  -webkit-animation-delay: 0.1s;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
@@ -208,8 +202,6 @@ img {
 .fases__desaparecer_revert {
   animation: aparecer 0.6s;
   -webkit-animation: aparecer 0.6s;
-  animation-delay: 0.1;
-  -webkit-animation-delay: 0.1s;
   animation-direction: reverse;
   -webkit-animation-direction: reverse;
   animation-fill-mode: forwards;
