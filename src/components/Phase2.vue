@@ -23,14 +23,14 @@ export default {
   <div class="arrow"></div>
   <div class="arrow2"></div>
   <div :class="{
-    fases: true,
+  fases: true,
     fases__aparecer: this.enterAnimation && !this.isRevert,
     fases__aparecer_revert: this.enterAnimation && this.isRevert,
     fases__desaparecer_revert: this.exitAnimation && this.isRevert,
     fases__desaparecer: this.exitAnimation && !this.isRevert,
   }">
     <div class="titulo">
-      <h1>Phase 2: <br><a>pre-sale</a></h1>
+      <h1>Phase 2: <br><span>pre-sale</span></h1>
     </div>
     <div class="description">
       <!-- We will be doing 3 rounds of presale on Pinksale. All participants of the first 2 rounds will receive awesome
@@ -172,21 +172,21 @@ img {
 
 .fases {
   font-family: "Work Sans";
+  display: flex;
   justify-content: center;
   text-align: center;
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 30%;
+  width: 30%;
   z-index: 6;
-  left: 27%;
-  top: 45%;
+  position: absolute;
+  left: 34%;
+  top: 40%;
 }
 
 .fases__aparecer {
   animation: aparecer 0.6s;
   -webkit-animation: aparecer 0.6s;
-  animation-delay: 0.1;
-  -webkit-animation-delay: 0.1s;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
@@ -194,8 +194,6 @@ img {
 .fases__aparecer_revert {
   animation: desaparecer 0.6s;
   -webkit-animation: desaparecer 0.6s;
-  animation-delay: 0.1;
-  -webkit-animation-delay: 0.1s;
   animation-direction: reverse;
   -webkit-animation-direction: reverse;
   animation-fill-mode: forwards;
@@ -205,8 +203,6 @@ img {
 .fases__desaparecer {
   animation: desaparecer 0.6s;
   -webkit-animation: desaparecer 0.6s;
-  animation-delay: 0.1;
-  -webkit-animation-delay: 0.1s;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
@@ -214,13 +210,12 @@ img {
 .fases__desaparecer_revert {
   animation: aparecer 0.6s;
   -webkit-animation: aparecer 0.6s;
-  animation-delay: 0.1;
-  -webkit-animation-delay: 0.1s;
   animation-direction: reverse;
   -webkit-animation-direction: reverse;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
+
 
 @keyframes aparecer {
   0% {
@@ -236,27 +231,23 @@ img {
 
 .titulo {
   color: white;
-  right: 46%;
-  bottom: 53%;
-  width: auto;
+  width: 10rem;
   height: auto;
-  position: fixed;
+  position: absolute;
   opacity: 100%;
   text-transform: uppercase;
   z-index: 6;
   font-family: "work Sans", sans-serif;
 }
 
-.titulo a {
+.titulo span {
   font-family: "work Sans", sans-serif;
   font-size: 1.5vw;
   color: white;
-  right: 47%;
-  bottom: 49%;
   width: auto;
   height: auto;
-  position: fixed;
   opacity: 100%;
+  width: 10rem;
   text-transform: uppercase;
   z-index: 6;
 }
@@ -440,6 +431,7 @@ img {
 
   .fases {
     left: 0%;
+    width: 100%;
     top: 12%;
     display: flex;
     flex-direction: column;
@@ -457,7 +449,7 @@ img {
     font-size: 2rem;
   }
 
-  .titulo a {
+  .titulo span {
     font-size: 9vw;
     position: unset;
   }
