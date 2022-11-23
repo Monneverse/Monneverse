@@ -109,9 +109,7 @@
       <br>The Monner Will Return {{ porcentajeInteres }}% Interest
     </p>
 
-    <p class="descripcion_information seg_linea">Note: Staking is only for those who want it. We will have award and
-      release
-      rules to protect the integrity of our price.</p>
+    <p class="descripcion_information seg_linea">Note: Our Staking is only for the first <span>320</span>  holders that enter our pre-sale</p>
   </article>
 
   <!-- redes sociales -->
@@ -795,7 +793,7 @@ img {
   color: white;
   position: absolute;
   width: 100%;
-  top: 2rem;
+  top: 1.5rem;
   left: 0rem;
   height: 100%;
   display: flex;
@@ -812,7 +810,7 @@ img {
   user-select: none;
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   color: #c27e01;
-  font-size: 6vh;
+  font-size: 5vh;
   font-weight: 600;
 }
 
@@ -837,7 +835,7 @@ img {
 /* Informacion*/
 .informacion {
   position: absolute;
-  top: 50%;
+  top: 30%;
   transform: translate(0, -10%);
   left: 3rem;
   max-width: 35rem;
@@ -896,7 +894,10 @@ img {
   font-weight: 400;
   width: 100%;
 }
-
+.informacion .descripcion_information span {
+  color: #ffc000;
+  font-weight: 900;
+}
 .seg_linea {
   font-size: 2vh;
 }
