@@ -96,7 +96,7 @@
   </div>
 </template>
 
-<script lang="js">
+<script >
 export default {
   props: ["enterAnimation", "exitAnimation", "isRevert"]
 }
@@ -458,33 +458,12 @@ img {
 }
 
 @media screen and (max-width: 900px) {
-  .major {
-    overflow: hidden;
-    overflow-x: scroll;
-    overscroll-behavior-x: initial;
-    scroll-snap-type: x mandatory;
-    padding: 1rem;
-  }
+  /* .news {
+    width: 100% !important;
+    z-index: -1000;
+    border: 1px solid red;
+  } */
 
-  .major::-webkit-scrollbar:horizontal {
-    height: 10px;
-  }
-
-  .major::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg,
-        rgb(33, 32, 85) 0%,
-        rgba(1, 209, 88, 1) 100%);
-    border-radius: 20px;
-    border: 2px solid #f1f2f3;
-  }
-
-  .major ::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar {
-    display: block;
-  }
 
   .arrow,
   .arrow:before {
@@ -597,10 +576,32 @@ img {
     z-index: 8;
     background-color: rgba(44, 109, 128, 0.1);
     border-radius: 20px;
+    overflow: hidden;
     overflow-x: scroll;
-    overflow-y: hidden;
+    overscroll-behavior-x: initial;
+    scroll-snap-type: x mandatory;
+    padding: 1rem;
   }
 
+  .major::-webkit-scrollbar:horizontal {
+    height: 10px;
+  }
+
+  .major::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg,
+        rgb(33, 32, 85) 0%,
+        rgba(1, 209, 88, 1) 100%);
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+  }
+
+  .major ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar {
+    display: block;
+  }
   .contenido {
     width: 100%;
     height: 100%;
@@ -702,6 +703,7 @@ img {
       rgba(184, 184, 184, 0) 100%);
   filter: blur(3rem);
   left: 30%;
+  opacity: .5;
 }
 
 .luz-2 {
@@ -717,6 +719,7 @@ img {
       transparent 55%,
       rgba(184, 184, 184, 0) 100%);
   filter: blur(3rem);
+  opacity: .5;
 }
 
 .luz-3 {
@@ -732,5 +735,6 @@ img {
       transparent 55%,
       rgba(184, 184, 184, 0) 100%);
   filter: blur(3rem);
+  opacity: .5;
 }
 </style>
