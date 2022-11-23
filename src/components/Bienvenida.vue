@@ -43,7 +43,7 @@
   }">
     <p class="title">
       <b>Welcome to</b>
-      <br />Monnerverse
+      <br />Monner <span>$MNR</span> Energy Project
     </p>
     <p class="subtitle">Utilities DeFi</p>
     <p class="description">
@@ -355,24 +355,27 @@ img {
   justify-content: start;
   flex-direction: column;
   align-items: flex-start;
-  top: 21%;
+  top: 20%;
   left: 4rem;
-  width: 30%;
+  width: 50%;
   z-index: 7;
   gap: 0.2rem;
   z-index: 100;
 }
 
 .welcome .title {
-  font-size: 6vw;
+  font-size: 4.5vw;
   font-family: "Bahn";
   font-stretch: semi-condensed;
   font-style: semibold;
   color: white;
   text-align: left;
   font-weight: 600;
+  margin-bottom: 2rem;
 }
-
+.welcome .title span{
+  color: #ffc000;
+}
 .welcome .subtitle {
   color: #ffc000;
   font-size: 3.5vh;
