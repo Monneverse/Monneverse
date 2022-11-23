@@ -89,6 +89,12 @@ export default {
           this.scroll = false;
           this.isRevert = false;
 
+          if (newPosition == 5) {
+            newPosition = 6;
+          }
+          if (newPosition == 11) {
+            newPosition = 12;
+          }
           this.CambiarContenedor(newPosition);
         }
       }
@@ -101,6 +107,13 @@ export default {
           this.scroll = false;
           newPosition = this.index_pagina - 1;
           this.isRevert = true;
+
+          if (newPosition == 5) {
+            newPosition = 4;
+          }
+          if (newPosition == 11) {
+            newPosition = 10;
+          }
           this.CambiarContenedor(newPosition);
         }
       }
@@ -362,14 +375,28 @@ export default {
       if (this.scroll) {
         this.scroll = false;
         let newPosition = this.index_pagina;
+
         if (event.deltaY > 0) {
           if (this.index_pagina < this.limite) {
             newPosition = this.index_pagina + 1;
+            if (newPosition == 5) {
+              newPosition = 6;
+            }
+            if (newPosition == 11) {
+              newPosition = 12;
+            }
             this.isRevert = false;
           }
         } else {
           if (this.index_pagina > 1) {
             newPosition = this.index_pagina - 1;
+
+            if (newPosition == 5) {
+              newPosition = 4;
+            }
+            if (newPosition == 11) {
+              newPosition = 10;
+            }
             this.isRevert = true;
           }
         }
@@ -431,70 +458,70 @@ export default {
       <Bienvenida :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="index_pagina == 2" v-if="IsPagesVisible(2)"  class="container">
+    <div v-show="index_pagina == 2" v-if="IsPagesVisible(2)" class="container">
       <Alliances :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="index_pagina == 3" v-if="IsPagesVisible(3)"  class="container">
+    <div v-show="index_pagina == 3" v-if="IsPagesVisible(3)" class="container">
       <Alianzas :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="index_pagina == 4" v-if="IsPagesVisible(4)"  class="container">
+    <div v-show="index_pagina == 4" v-if="IsPagesVisible(4)" class="container">
       <Calculadora :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 5" v-if="IsPagesVisible(5)"  class="container">
+    <div v-show="index_pagina == 5" v-if="IsPagesVisible(5)" class="container">
       <Coins :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="index_pagina == 6" v-if="IsPagesVisible(6)"  class="container">
+    <div v-show="index_pagina == 6" v-if="IsPagesVisible(6)" class="container">
       <ContenedorArticulo :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="index_pagina == 7" v-if="IsPagesVisible(7)"  class="container">
+    <div v-show="index_pagina == 7" v-if="IsPagesVisible(7)" class="container">
       <Exchanges :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="index_pagina == 8" v-if="IsPagesVisible(8)"  class="container">
+    <div v-show="index_pagina == 8" v-if="IsPagesVisible(8)" class="container">
       <Logos_auditorias :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="index_pagina == 9" v-if="IsPagesVisible(9)"  class="container">
+    <div v-show="index_pagina == 9" v-if="IsPagesVisible(9)" class="container">
       <Benefits :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="index_pagina == 10" v-if="IsPagesVisible(10)"  class="container">
+    <div v-show="index_pagina == 10" v-if="IsPagesVisible(10)" class="container">
       <Beneficio :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="index_pagina == 11" v-if="IsPagesVisible(11)"  class="container">
+    <div v-show="index_pagina == 11" v-if="IsPagesVisible(11)" class="container">
       <Benefits_card :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"
         :SetBloquearScroll="SetBloquearScroll" />
     </div>
-    <div v-show="index_pagina == 12" v-if="IsPagesVisible(12)"  class="container">
+    <div v-show="index_pagina == 12" v-if="IsPagesVisible(12)" class="container">
       <Videos :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 13" v-if="IsPagesVisible(13)"  class="container">
+    <div v-show="index_pagina == 13" v-if="IsPagesVisible(13)" class="container">
       <Tokenomics :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 14" v-if="IsPagesVisible(14)"  class="container">
+    <div v-show="index_pagina == 14" v-if="IsPagesVisible(14)" class="container">
       <News :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 15" v-if="IsPagesVisible(15)"  class="container">
+    <div v-show="index_pagina == 15" v-if="IsPagesVisible(15)" class="container">
       <Fase :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 16" v-if="IsPagesVisible(16)"  class="container">
+    <div v-show="index_pagina == 16" v-if="IsPagesVisible(16)" class="container">
       <Fase2 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 17" v-if="IsPagesVisible(17)"  class="container">
+    <div v-show="index_pagina == 17" v-if="IsPagesVisible(17)" class="container">
       <Fase3 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 18" v-if="IsPagesVisible(18)"  class="container">
+    <div v-show="index_pagina == 18" v-if="IsPagesVisible(18)" class="container">
       <Fase4 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 19" v-if="IsPagesVisible(19)"  class="container">
+    <div v-show="index_pagina == 19" v-if="IsPagesVisible(19)" class="container">
       <Fase5 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == limite" v-if="IsPagesVisible(20)"  class="container">
+    <div v-show="index_pagina == limite" v-if="IsPagesVisible(20)" class="container">
       <Footer :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
   </main>
