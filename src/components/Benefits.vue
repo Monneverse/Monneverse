@@ -80,7 +80,7 @@ export default {
           <img id="b" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
             <div class="titulo-two">
-              <h1><span>$</span>17.5<b>USD</b></h1>
+              <h1><span>$</span>17.5<b> USD</b></h1>
             </div>
           </div>
           <div class="content-text">
@@ -112,7 +112,7 @@ export default {
               <p class="">
                 Enter our first phase os staking buying in pre-sale and earn
                 6.2% every 48 hours of your total capital in Monnercoins after
-                the launch in Pancakeswap
+                the launch in Pancakeswap.  <span  class="amarrillo">Only for the first 320 holders</span>
               </p>
             </div>
           </div>
@@ -184,7 +184,10 @@ p {
   z-index: 12;
   display: none;
 }
-
+.amarrillo{
+  color: #ffc000;
+  font-weight: 600;
+}
 .titulo {
   position: absolute;
   width: 100%;
