@@ -80,7 +80,7 @@ export default {
           <img id="b" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
             <div class="titulo-two">
-              <h1><span>$</span>17.5<b> USD</b></h1>
+              <h2><span>$</span>17.5  <b> USD</b>   in PancakeSwap <img src="img/cakelogo.png" alt="" srcset=""></h2>
             </div>
           </div>
           <div class="content-text">
@@ -280,6 +280,13 @@ p {
 .titulo-benefit h1 b {
   font-size: 1.5rem;
 }
+.titulo-benefit h2 {
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  margin: 0;
+  font-size: 1rem;
+  margin-left: 5%;
+}
 
 .info {
   font-family: "Work Sans", sans-serif;
@@ -315,7 +322,20 @@ p {
   font-size: 1.8rem;
   margin-left: 5%;
 }
+.titulo-two h2 {
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  margin: 0;
+  font-size: 1.2rem;
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+}
 
+.titulo-two h2 img {
+  margin-left: 1rem;
+  height: 2rem;
+}
 .titulo-two h1 span {
   color: #37f395;
 }
@@ -403,6 +423,9 @@ p {
   .fondo_rayos img {
     width: 100%;
   }
+  .titulo-two h2 {
+  font-size: 1.5rem;
+}
 }
 
 @media screen and (min-width: 769px) {
