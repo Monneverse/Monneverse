@@ -95,6 +95,9 @@ export default {
           if (newPosition == 11) {
             newPosition = 12;
           }
+          if(newPosition == 13){
+            newPosition = 14;
+          }
           this.CambiarContenedor(newPosition);
         }
       }
@@ -113,6 +116,9 @@ export default {
           }
           if (newPosition == 11) {
             newPosition = 10;
+          }
+          if(newPosition == 13){
+            newPosition = 12;
           }
           this.CambiarContenedor(newPosition);
         }
@@ -385,6 +391,9 @@ export default {
             if (newPosition == 11) {
               newPosition = 12;
             }
+            if(newPosition == 13){
+            newPosition = 14;
+          }
             this.isRevert = false;
           }
         } else {
@@ -397,6 +406,9 @@ export default {
             if (newPosition == 11) {
               newPosition = 10;
             }
+            if(newPosition == 13){
+            newPosition = 12;
+          }
             this.isRevert = true;
           }
         }

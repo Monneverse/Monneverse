@@ -29,7 +29,7 @@
         @click="this.setPage(1); isExpanded = false;">articles</a>
       <a id="a2" :class="{ link: true, home: indexF == 2 }" @mouseover="hover_mover('a2')"
         @click="this.setPage(2); isExpanded = false;">benefits</a>
-      <a id="a3" :class="{ link: true, home: indexF == 3 }" @mouseover="hover_mover('a3')"
+      <a v-show="false"  id="a3" :class="{ link: true, home: indexF == 3 }" @mouseover="hover_mover('a3')"
         @click="this.setPage(3); isExpanded = false;">tokenomics</a>
       <a id="a4" :class="{ link: true, home: indexF == 4 }" @mouseover="hover_mover('a4')"
         @click="this.setPage(4); isExpanded = false;">news</a>
