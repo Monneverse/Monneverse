@@ -445,16 +445,17 @@ img {
     top: 15%;
     left: 2rem;
     width: 90%;
+    margin-bottom: 0rem;
   }
 
   .welcome .title {
-    font-size: 8vh;
+    font-size: 7vh;
   }
 
   .welcome .subtitle {
     font-size: 6vh;
 
-    margin-top: 1rem;
+    margin-top: 0rem;
   }
 
   .welcome .description {
