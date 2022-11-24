@@ -167,7 +167,7 @@ img {
   width: 80%;
   height: 3rem;
   border-radius: 10rem;
-  background-color: black;
+  background-color: rgba(255, 255, 255, 0.399);
   display: flex;
   justify-content: center;
   align-items: center;
