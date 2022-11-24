@@ -14,6 +14,7 @@ import Logos_auditorias from "./components/Logos_auditorias.vue";
 import News from "./components/News.vue";
 import Tokenomics from "./components/Tokenomics.vue";
 import Fase from "./components/Phases.vue";
+import FaseNew from "./components/PhaseNew.vue";
 import Fase2 from "./components/Phase2.vue";
 import Fase3 from "./components/Phase3.vue";
 import Fase4 from "./components/Phase4.vue";
@@ -42,6 +43,7 @@ export default {
     Logos_auditorias,
     News,
     Tokenomics,
+    FaseNew,
     Fase,
     Fase2,
     Fase3,
@@ -54,7 +56,7 @@ export default {
     return {
       index: 0,
       index_pagina: 1,
-      limite: 20,
+      limite: 21,
       pagesVisible: [1, 2],
       isVisibleLogo: false,
       scroll: true,
@@ -95,9 +97,12 @@ export default {
           if (newPosition == 11) {
             newPosition = 12;
           }
-          if(newPosition == 13){
+          if (newPosition == 13) {
             newPosition = 14;
           }
+          if(newPosition==16){
+              newPosition = 21;
+            }
           this.CambiarContenedor(newPosition);
         }
       }
@@ -117,9 +122,12 @@ export default {
           if (newPosition == 11) {
             newPosition = 10;
           }
-          if(newPosition == 13){
+          if (newPosition == 13) {
             newPosition = 12;
           }
+          if(newPosition==20){
+              newPosition = 15;
+            }
           this.CambiarContenedor(newPosition);
         }
       }
@@ -391,9 +399,12 @@ export default {
             if (newPosition == 11) {
               newPosition = 12;
             }
-            if(newPosition == 13){
-            newPosition = 14;
-          }
+            if (newPosition == 13) {
+              newPosition = 14;
+            }
+            if(newPosition==16){
+              newPosition = 21;
+            }
             this.isRevert = false;
           }
         } else {
@@ -406,9 +417,12 @@ export default {
             if (newPosition == 11) {
               newPosition = 10;
             }
-            if(newPosition == 13){
-            newPosition = 12;
-          }
+            if (newPosition == 13) {
+              newPosition = 12;
+            }
+            if(newPosition==20){
+              newPosition = 15;
+            }
             this.isRevert = true;
           }
         }
@@ -519,21 +533,25 @@ export default {
       <News :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 15" v-if="IsPagesVisible(15)" class="container">
-      <Fase :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
+      <FaseNew :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 16" v-if="IsPagesVisible(16)" class="container">
+      <Fase :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
+    </div>
+
+    <div v-show="index_pagina == 17" v-if="IsPagesVisible(17)" class="container">
       <Fase2 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 17" v-if="IsPagesVisible(17)" class="container">
+    <div v-show="index_pagina == 18" v-if="IsPagesVisible(18)" class="container">
       <Fase3 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 18" v-if="IsPagesVisible(18)" class="container">
+    <div v-show="index_pagina == 19" v-if="IsPagesVisible(19)" class="container">
       <Fase4 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 19" v-if="IsPagesVisible(19)" class="container">
+    <div v-show="index_pagina == 20" v-if="IsPagesVisible(20)" class="container">
       <Fase5 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == limite" v-if="IsPagesVisible(20)" class="container">
+    <div v-show="index_pagina == limite" v-if="IsPagesVisible(21)" class="container">
       <Footer :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
   </main>
