@@ -71,7 +71,7 @@ export default {
 
     <div class="componente componentes2">
       <fasesComponentes title="MonnerStaking" description="MonnerStaking start one day after pre-sale ends,
-      payouts of 12,6% of total capital every 48 hours" :isVisible="isVisible" />
+      payouts of 6,2% of total capital every 48 hours" :isVisible="isVisible" />
     </div>
 
     <div class="componente componentes3">

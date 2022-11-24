@@ -80,12 +80,12 @@ export default {
           <img id="b" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
             <div class="titulo-two">
-              <h1><span>$</span>16.5<b>USD</b></h1>
+              <h1><span>$</span>17.5<b>USD</b></h1>
             </div>
           </div>
           <div class="content-text">
               <div class="text">
-                <p>Sale Price <br> The price Pancakeswap for purchase and sales will be $16.5 one day after the pre-sale
+                <p>Sale Price <br> The price Pancakeswap for purchase and sales will be $17.5 one day after the pre-sale
                   of our first 2,000,000 the public ends</p>
               </div>
           </div>
