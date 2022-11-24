@@ -62,7 +62,8 @@ export default {
             this.exitAnimation && !this.isRevert,
         }">
           <p>
-            MNR was created in order to solve the energy problems that the common world and the crypto ecosystem have at
+            <span>MNR</span> was created in order to solve the energy problems that the common world and the crypto
+            ecosystem have at
             the moment. We want to supply homes and industries from different continents of the planet with our
             renewable energy generating plates, in addition to offering our energy supply system to the largest mining
             parks in the world, at a very low cost and with the immediate option of transforming the current mining .
@@ -190,6 +191,7 @@ img {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  line-height: 1.8rem;
   width: 90%;
   height: 80%;
 }
