@@ -62,24 +62,16 @@ export default {
             this.exitAnimation && !this.isRevert,
         }">
           <p>
-            Monner DeFi is a project based on the payment of dividends that have
-            the largest shares listed on the New York Stock Exchange. We want to
-            reward our customers for holding our token and follow its evolution
-            through time. Monner is a 100% descentralized contract that will
-            guarantee security to its investors under any measure. Our mission
-            is to position the MNR token between the top 50 charts of
-            CoinMarketCap thus giving it an approximate value of 90.000$ per
-            MNR. <br />
+            MNR was created in order to solve the energy problems that the common world and the crypto ecosystem have at
+            the moment. We want to supply homes and industries from different continents of the planet with our
+            renewable energy generating plates, in addition to offering our energy supply system to the largest mining
+            parks in the world, at a very low cost and with the immediate option of transforming the current mining .
+            for ecological mining. In addition, we have different projects that seek to improve the cryptographic
+            ecosystem and make it more accessible to anyone. We recommend you read our Whitepaper and find out about our
+            future alliances with <span>Visa</span> and <span>Mastercard</span> and the projects under development that
+            will raise the
+            price of our token. <br />
             <br />
-
-            Our main projects, such as MonnerPlanet (whose mission is to change
-            the way energy is distributed to each american home with its
-            patented renewable energy plates) and MonnerMinner (whose mission is
-            to create crypto-mining farms at an industrial level, powered by
-            solar energy) will be fundamental for our mission of giving worth to
-            our ecosystem and currency. Other projects that can be summarized in
-            our list are MonnerStaking, MonnerCard (with Visa and MasterCard),
-            MonnerBlockchain, MonnerGames
           </p>
         </div>
         <div :class="{
@@ -200,6 +192,10 @@ img {
   flex-direction: column;
   width: 90%;
   height: 80%;
+}
+
+.contenido span {
+  color: var(--color-secundario);
 }
 
 .contenedor-parrafo {

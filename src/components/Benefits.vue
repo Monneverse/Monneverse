@@ -76,6 +76,27 @@ export default {
           'animacion-desaparecer-revert':
             this.exitAnimation && !this.isRevert,
         }">
+          <img id="b" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
+          <div class="content-text">
+            <div class="titulo-benefit">
+              <h1><span>$</span>22,5<b>USD</b></h1>
+            </div>
+            <div class="content-text">
+              <div class="text">
+                <p>Sale Price <br> The price Pancakeswap for purchase and sales will be $22,6 one day after the pre-sale
+                  of our first 2,000,000 the public ends</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div :class="{
+          beneficio: true,
+          'animacion-aparecer': this.enterAnimation && !this.isRevert,
+          'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+          'animacion-desaparecer': this.enterAnimation && this.isRevert,
+          'animacion-desaparecer-revert':
+            this.exitAnimation && !this.isRevert,
+        }">
           <img id="c" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
             <div class="titulo-two">
@@ -95,7 +116,7 @@ export default {
             </div>
           </div>
         </div>
-        <div :class="{
+        <!-- <div :class="{
           beneficio: true,
           'animacion-aparecer': this.enterAnimation && !this.isRevert,
           'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
@@ -129,7 +150,7 @@ export default {
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
       <div :class="{
         aro: true,
@@ -244,7 +265,7 @@ p {
   height: 10%;
 }
 
-.beneficio:nth-child(4) {
+.beneficio:nth-child(5) {
   opacity: 0 !important;
   margin-top: 4.5rem;
   height: 25rem;
