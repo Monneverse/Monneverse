@@ -37,8 +37,8 @@ export default {
         }">
           <img id="a" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
-            <div class="titulo-benefit">
-              <h1><span>$</span>1,5<b>USD</b></h1>
+            <div class="titulo-two">
+              <h2><span>$ </span>1,5  <b>USD</b>  in Pinksale <img src="/img/pinksale.png" alt="" srcset=""></h2>
             </div>
           </div>
           <div class="content-text">
@@ -80,7 +80,7 @@ export default {
           <img id="b" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
             <div class="titulo-two">
-              <h2><span>$</span>17.5  <b> USD</b>   in PancakeSwap <img src="img/cakelogo.png" alt="" srcset=""></h2>
+              <h2><span>$ </span>17.5  <b> USD</b>   in PancakeSwap <img src="/img/cakelogo.png" alt="" srcset=""></h2>
             </div>
           </div>
           <div class="content-text">
@@ -108,6 +108,7 @@ export default {
             <div class="sale">
               <h3>Sale Price</h3>
             </div>
+
             <div class="text">
               <p class="">
                 Enter our first phase os staking buying in pre-sale and earn
@@ -225,7 +226,7 @@ p {
   height: auto;
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+  margin-top: .5rem;
 }
 
 .beneficio:nth-child(1) {
