@@ -109,13 +109,14 @@ img {
 .contenido-texto h2 {
   padding: 0;
   margin: 0;
-  font-size: 3.4vh;
+  font-size: 3vh;
+  margin-bottom: .5rem;
 }
 
 .contenido-texto p {
   padding: 0;
   margin: 0;
-  font-size: 2vh;
+  font-size: 1.6vh;
   height: max-content;
 }
 

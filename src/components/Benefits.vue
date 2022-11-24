@@ -78,7 +78,7 @@ export default {
         }">
           <img id="b" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-text">
-            <div class="titulo-benefit">
+            <div class="titulo-two" >
               <h1><span>$</span>22,5<b>USD</b></h1>
             </div>
             <div class="content-text">
@@ -240,17 +240,19 @@ p {
   z-index: 14;
   display: flex;
   justify-content: space-evenly;
+  align-items: flex-start;
   flex-direction: column;
   width: 90%;
-  height: 50%;
+  height: auto;
   top: 14%;
 }
 
 .beneficio {
   width: 100%;
-  height: 25%;
+  height: auto;
   display: flex;
   flex-direction: column;
+  margin-top: 1rem;
 }
 
 .beneficio:nth-child(1) {
@@ -273,7 +275,7 @@ p {
 
 @media screen and (max-width: 900px) {
   .beneficio:nth-child(4) {
-    display: none;
+    display: block;
   }
 }
 
