@@ -74,6 +74,24 @@ export default {
           ],
           imglang: "img/language/estados_unidos_redondeado.png",
         },
+        {
+          title: "MONNERVERSE REVIEW",
+          description: "IS THIS 100X COIN ? I Private Sale 1.5$ I Staking payout 12.6% every 48 hours",
+          playlist: ["https://www.youtube.com/embed/tVG_ioYFb6s"],
+          redes: [
+            {
+            name: "Telegram",
+            url: "https://t.me/techperfectionist10",
+            icon: "img/video-redes/Telegram_logo.svg"
+            },
+            {
+            name: "Twitter",
+            url: "https://twitter.com/HamzaAboutTech",
+            icon: "img/video-redes/gorjeo.png",
+            },
+          ],
+          imglang: "img/language/estados_unidos_redondeado.png"
+        },
       ],
     };
   },
