@@ -68,7 +68,8 @@ export default {
             </div>
           </div>
         </div>
-        <div :class="{
+
+          <div :class="{
           beneficio: true,
           'animacion-aparecer': this.enterAnimation && !this.isRevert,
           'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
@@ -77,16 +78,16 @@ export default {
             this.exitAnimation && !this.isRevert,
         }">
           <img id="b" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
-          <div class="content-text">
-            <div class="titulo-two" >
+          <div class="content-price">
+            <div class="titulo-two">
               <h1><span>$</span>22,5<b>USD</b></h1>
             </div>
-            <div class="content-text">
+          </div>
+          <div class="content-text">
               <div class="text">
                 <p>Sale Price <br> The price Pancakeswap for purchase and sales will be $22,6 one day after the pre-sale
                   of our first 2,000,000 the public ends</p>
               </div>
-            </div>
           </div>
         </div>
         <div :class="{
@@ -97,7 +98,7 @@ export default {
           'animacion-desaparecer-revert':
             this.exitAnimation && !this.isRevert,
         }">
-          <img id="c" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
+          <img id="d" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
             <div class="titulo-two">
               <h1>6.2%<span>*</span>48h</h1>
@@ -116,41 +117,6 @@ export default {
             </div>
           </div>
         </div>
-        <!-- <div :class="{
-          beneficio: true,
-          'animacion-aparecer': this.enterAnimation && !this.isRevert,
-          'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          'animacion-desaparecer': this.enterAnimation && this.isRevert,
-          'animacion-desaparecer-revert':
-            this.exitAnimation && !this.isRevert,
-        }">
-          <img id="d" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
-          <div id="contentP" class="content-price">
-            <div class="titulo-benefit">
-              <div class="info-two">
-                <p>At PancakeSwap</p>
-              </div>
-              <h1><span>$</span>15,300<b>USD</b></h1>
-            </div>
-          </div>
-          <div class="content-text">
-            <div class="sale">
-              <h3>Sale Price</h3>
-            </div>
-            <div class="scroll">
-              <p class="fadeIn animated">
-                Our Token will be more exclusive than the most valuable NFT's of
-                the moment. That's why the price of each MNR on PancakeSwap will
-                initially range from <span>$14,200 to $15,500</span> thanks to:
-                Our limited supply of <span> 10,000 MNR</span>. scheduled burns.
-                -Our sponsors. - The GREAT injection of liquidity made by our
-                team with its line of credit from the USA and private investors.
-                We will take into account all the tools that allow us to grow
-                our prices
-              </p>
-            </div>
-          </div>
-        </div> -->
       </div>
       <div :class="{
         aro: true,
@@ -234,7 +200,11 @@ p {
   color: white;
 }
 
-
+#titulo22{
+  width: 1005;
+  margin-left: 0;
+  border-radius: 1px solid red;
+}
 .benefits {
   position: absolute;
   z-index: 14;
@@ -502,11 +472,11 @@ p {
 }
 
 #a {
-  top: 2.3rem;
+  top: 2.5rem;
 }
 
 #b {
-  top: 1.5rem;
+  top: 2.5rem;
 }
 
 #c {
@@ -514,7 +484,7 @@ p {
 }
 
 #d {
-  top: 2.4rem;
+  top: 2.5rem;
 }
 
 .circulos img {
