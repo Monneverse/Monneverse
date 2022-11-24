@@ -10,87 +10,137 @@ export default {
     return {
       videosPlay: [
         {
-          title: "Jim Crypto",
-          description:
-            "Monner DeFi Token Presale LIVE 🚀 Certik KYC Approved, Registered LLC, Partners, Next 100x Crypto! 💰",
-          playlist: ["https://www.youtube.com/embed/kaZXz3IalmE"],
-          redes: [],
-          imglang: "img/language/estados_unidos_redondeado.png",
-        },
-        {
-          title: "UP NEXT CRYPTO",
-          description:
-            "MONNERVERSE IS THE FUTURE OF CRYPTO?! | FIRST TWO MONTHS EARN 6.2% INTEREST DAILY?!!",
-          playlist: ["https://www.youtube.com/embed/yCm_91DZHV0"],
+          title: "Transcendente NFTs",
+          description: "Nossa plataforma de staking é segura e confiável. Oferecemos-lhe um sistema que funciona por fases, apoiado por Bank Security, onde o Monnercoin será o seu bilhete de entrada para um mundo muito mais vasto! Queremos que o Monner se torne uma das 25 principais criptomoedas do mundo",
+          playlist: ["https://www.youtube.com/embed/cLGSuaYAZtE"],
           redes: [
             {
-              name: "Telegram",
-              url: "https://t.me/UPNEXTCRYPTO",
-              icon: "img/video-redes/Telegram_logo.svg",
+              name: "Instagram",
+              url: "https://www.instagram.com/transcendentecripto",
+              icon: "img/video-redes/instagram.png"
             },
+            {
+              name: "Twitter",
+              url: "https://twitter.com/Transcendente03",
+              icon: "img/video-redes/gorjeo.png"
+            },
+            {
+              name: "Twitch",
+              url: "https://www.twitch.tv/transcendentecripto",
+              icon: "img/video-redes/twitch.png"
+            },
+            {
+              name: "Tik tok",
+              url: "https://www.tiktok.com/@transcendenteuniversal",
+              icon: "img/video-redes/tiktok.png"
+            }
           ],
-          imglang: "img/language/estados_unidos_redondeado.png",
+          imglang: "img/language/brasil.png"
         },
         {
           title: "ZettaTrading",
-          description:
-            "ESTA CRYPTO SUPERARA A BITCOIN! SOLO TIENE 10.000 UNIDADES! | CRYPTO CON AUDITORIA Y KYC | GEMA 2022",
-          playlist: ["https://www.youtube.com/embed/A4m0jspo_g4"],
+          description: "80.000% EN DÍAS CON ESTA CRIPTOMONEDA | PREVENTA DE 1.5$ Y LANZAMIENTO DE 22.5$ | NUEVA CRIPTOMONEDA",
+          playlist: ["https://www.youtube.com/embed/RcpzFrI_IGI"],
           redes: [
-            {
-              name: "Twitter",
-              url: "https://twitter.com/zettaindahouse",
-              icon: "img/video-redes/gorjeo.png",
-            },
             {
               name: "Instagram",
               url: "https://www.instagram.com/szettatrading/",
-              icon: "img/video-redes/instagram.png",
+              icon: "img/video-redes/instagram.png"
+            },
+            {
+              name: "Twitter",
+              url: "https://twitter.com/zettaindahouse",
+              icon: "img/video-redes/gorjeo.png"
             },
             {
               name: "Telegram",
               url: "https://t.me/goldenpicksadmin",
-              icon: "img/video-redes/Telegram_logo.svg",
-            },
-            {
-              name: "web site",
-              url: "https://goldenpicks.es/",
-              icon: "img/video-redes/internet.png",
-            },
+              icon: "img/video-redes/Telegram_logo.svg"
+            }
           ],
-          imglang: "img/language/espana_redondeado.png",
+          imglang: "img/language/espana_redondeado.png"
         },
         {
-          title: "CryptoDexWorld",
-          description:
-            "Monnerverse Review 2022: PRESALE NOW! 100% Decentralized Project with Future VISA and MasterVisa",
-          playlist: ["https://www.youtube.com/embed/yoeKHAKl9vU"],
+          title: "CriptoRosas",
+          description: "🔥MONNEVERSE NUEVO PROYECTO 😱PREVENTA A 1.5 LISTADO EN 22.5$ 🤭AIRDROP",
+          playlist: ["https://www.youtube.com/embed/yvJCkzpiqOw"],
+          redes: [
+            {
+              name: "Instagram",
+              url: "https://www.instagram.com/enriquerosass/",
+              icon: "img/video-redes/instagram.png"
+            },
+            {
+              name: "Twitter",
+              url: "https://twitter.com/criptorosass",
+              icon: "img/video-redes/gorjeo.png"
+            }
+          ],
+          imglang: "img/language/espana_redondeado.png"
+        },
+        {
+          title: "Rankoo Crypto",
+          description: "Monnerverse | إنها العملة الافتراضية الجديدة التي أتت لتدمير الإنترنت وتضع نفسها بين الأفضل في السوق",
+          playlist: ["https://www.youtube.com/embed/fNpKoECddtA"],
           redes: [
             {
               name: "Telegram",
-              url: "https://t.me/CDWMANAGER",
-              icon: "img/video-redes/Telegram_logo.svg",
+              url: "https://t.me/RankooCrypto",
+              icon: "img/video-redes/Telegram_logo.svg"
             },
+            {
+              name: "Twitter",
+              url: "https://twitter.com/RankooCrypto",
+              icon: "img/video-redes/gorjeo.png"
+            }
           ],
-          imglang: "img/language/estados_unidos_redondeado.png",
+          imglang: "img/language/emiratos-arabes-unidos.png"
         },
         {
-          title: "MONNERVERSE REVIEW",
+          title: "Tech Perfectionist",
           description: "IS THIS 100X COIN ? I Private Sale 1.5$ I Staking payout 12.6% every 48 hours",
           playlist: ["https://www.youtube.com/embed/tVG_ioYFb6s"],
           redes: [
-            {
-            name: "Telegram",
-            url: "https://t.me/techperfectionist10",
-            icon: "img/video-redes/Telegram_logo.svg"
+          {
+              name: "Instagram",
+              url: "https://www.instagram.com/its_hk_/",
+              icon: "img/video-redes/instagram.png"
             },
             {
-            name: "Twitter",
-            url: "https://twitter.com/HamzaAboutTech",
-            icon: "img/video-redes/gorjeo.png",
+              name: "Telegram",
+              url: "https://t.me/techperfectionist10",
+              icon: "img/video-redes/Telegram_logo.svg"
+            },
+            {
+              name: "Twitter",
+              url: "https://twitter.com/HamzaAboutTech",
+              icon: "img/video-redes/gorjeo.png",
             },
           ],
           imglang: "img/language/estados_unidos_redondeado.png"
+        },
+        {
+          title: "LUCHOUSL",
+          description: "🤩 ¡MONNERVERSE LLC UN PROYECTO QUE SUBIRA UN 1500%! 🥇 PREVENTA DE $1.5 USD ✅ Y SORTEO TOKENS!!! 💥",
+          playlist: ["https://www.youtube.com/embed/gtHXbt8BZcE"],
+          redes: [
+          {
+              name: "Instagram",
+              url: "https://www.instagram.com/luchousl/",
+              icon: "img/video-redes/instagram.png"
+            },
+            {
+              name: "Telegram",
+              url: "https://t.me/Uslclub",
+              icon: "img/video-redes/Telegram_logo.svg"
+            },
+            {
+              name: "Twitter",
+              url: "https://twitter.com/luchousl",
+              icon: "img/video-redes/gorjeo.png",
+            },
+          ],
+          imglang: "img/language/espana_redondeado.png"
         },
       ],
     };
