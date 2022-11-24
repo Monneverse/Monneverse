@@ -38,15 +38,12 @@ export default {
           <img id="a" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
             <div class="titulo-benefit">
-              <h1><span>$</span>1500<b>USD-MNR</b></h1>
-              <div class="info">
-                <p>(Minimum purchase $1,5 USD)</p>
-              </div>
+              <h1><span>$</span>1,5<b>USD</b></h1>
             </div>
           </div>
           <div class="content-text">
             <div class="sale">
-              <h3>Minimum purchase $1,5 USD Pre-sale Price</h3>
+              <h3>Pre-sale Price</h3>
             </div>
           </div>
         </div>
