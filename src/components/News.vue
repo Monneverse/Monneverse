@@ -573,7 +573,7 @@ img {
     top: 20%;
     width: 80%;
     height: 60%;
-    z-index: 8;
+    z-index: 1000;
     background-color: rgba(44, 109, 128, 0.1);
     border-radius: 20px;
     overflow: hidden;
