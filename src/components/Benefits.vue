@@ -198,7 +198,7 @@ p {
 }
 
 .titulo h1 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
   color: white;
@@ -320,14 +320,14 @@ p {
   font-family: "Work Sans", sans-serif;
   color: white;
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.3rem ;
   margin-left: 5%;
 }
 .titulo-two h2 {
   font-family: "Work Sans", sans-serif;
   color: white;
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-left: 5%;
   display: flex;
   align-items: center;
