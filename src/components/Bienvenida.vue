@@ -43,7 +43,7 @@
   }">
     <p class="title">
       <b>Welcome to</b>
-      <br />Monner <span>$MNR</span> Energy Project
+      <br /> <span>$MNR</span> Energy Project
     </p>
     <p class="subtitle">Utilities DeFi</p>
     <p class="description">
