@@ -80,7 +80,7 @@
       zoomOut: this.exitAnimation,
     }"
   >
-    <a href="https://solidity.finance/audits/MonnerDeFi/" target="_blank">
+    <a href="" target="_blank">
       <img
         src="/img/Exchanges/solidity1.png"
         class="auditoria1 zoomIn animated"
