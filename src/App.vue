@@ -102,7 +102,7 @@ export default {
           if (newPosition == 13) {
             newPosition = 14;
           }
-          if(newPosition==16){
+          if(newPosition==17){
               newPosition = 22;
             }
           this.CambiarContenedor(newPosition);
@@ -127,8 +127,8 @@ export default {
           if (newPosition == 13) {
             newPosition = 12;
           }
-          if(newPosition==20){
-              newPosition = 15;
+          if(newPosition==22){
+              newPosition = 17;
             }
           this.CambiarContenedor(newPosition);
         }
