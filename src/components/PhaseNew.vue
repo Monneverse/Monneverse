@@ -1,9 +1,5 @@
 <script>
-import fasesComponentes from "./ComponentsPhases.vue";
 export default {
-    components: {
-        fasesComponentes,
-    },
     props: ["enterAnimation", "exitAnimation", "isRevert", "SetBloquearScroll"],
     mounted() {
         var panel = document.getElementById("contenido__fase");
@@ -30,14 +26,12 @@ export default {
     <div class="contenido" @mouseenter="this.SetBloquearScroll(false)" @touchstart="this.SetBloquearScroll(false)"
         @touchend="this.SetBloquearScroll(true)" @mouseleave="this.SetBloquearScroll(true)">
 
-        <div id="contenido__fase" @mouseenter="this.SetBloquearScroll(false)"
-            @touchstart="this.SetBloquearScroll(false)" @touchend="this.SetBloquearScroll(true)"
-            @mouseleave="this.SetBloquearScroll(true)" class="contenido__fase">
+        <div id="contenido__fase" class="contenido__fase">
             <div class="contenido__fase__linea"></div>
             <div class="contenido__fase__circulo contenido__fase__circulo_start"></div>
             <div class="contenido__fase__circulo contenido__fase__circulo_end"></div>
             <!-- Fase Q1 -->
-            <div class="fase">
+            <div class="fase" >
                 <div class="reloj">
                     <img src="/img/reloj.png" alt="reloj">
                 </div>
@@ -67,7 +61,7 @@ export default {
 
             </div>
             <!-- Fase Q2 -->
-            <div class="fase Q2">
+            <div class="fase Q2" >
                 <div class="reloj">
                     <img src="/img/reloj.png" alt="reloj">
                 </div>
@@ -99,7 +93,7 @@ export default {
             </div>
 
             <!-- Fase Q3 -->
-            <div class="fase">
+            <div class="fase" >
                 <div class="reloj">
                     <img src="/img/reloj.png" alt="reloj">
                 </div>
