@@ -5,6 +5,11 @@ export default {
         fasesComponentes,
     },
     props: ["enterAnimation", "exitAnimation", "isRevert", "SetBloquearScroll"],
+    mounted() {
+        var panel = document.getElementById("contenido__fase");
+        console.log(panel.offsetHeight);
+        panel.style.height = (panel.offsetHeight) + "px";
+    }
 };
 </script>
 <template >
@@ -25,7 +30,7 @@ export default {
     <div class="contenido" @mouseenter="this.SetBloquearScroll(false)" @touchstart="this.SetBloquearScroll(false)"
         @touchend="this.SetBloquearScroll(true)" @mouseleave="this.SetBloquearScroll(true)">
 
-        <div class="contenido__fase">
+        <div id="contenido__fase" class="contenido__fase">
             <div class="contenido__fase__linea"></div>
             <div class="contenido__fase__circulo contenido__fase__circulo_start"></div>
             <div class="contenido__fase__circulo contenido__fase__circulo_end"></div>
@@ -57,7 +62,7 @@ export default {
                     </ul>
 
                 </div>
-           
+
             </div>
             <!-- Fase Q2 -->
             <div class="fase">
@@ -88,7 +93,7 @@ export default {
                     </ul>
 
                 </div>
-           
+
             </div>
 
             <!-- Fase Q3 -->
@@ -233,6 +238,7 @@ img {
     box-sizing: border-box;
     direction: initial;
     scroll-behavior: smooth;
+    padding-bottom: 0;
 }
 
 h2 {
@@ -267,13 +273,14 @@ h2 {
 .contenido__fase {
 
     width: 100%;
-    height: 330%;
     padding: 1rem;
-
+    padding-bottom: 0;
 }
 
 .contenido__fase__linea {
     position: relative;
+    top: 0;
+    left: 0;
     width: .3rem;
     border-radius: 2rem;
     background-color: bisque;
@@ -308,6 +315,7 @@ h2 {
     color: white;
     padding: 2rem;
     box-sizing: border-box;
+    padding-bottom: 0;
 
 }
 
@@ -329,6 +337,7 @@ h2 {
 
 .fase .fase__contenido ul {
     position: relative;
+    padding: 0;
 }
 
 .reloj {
@@ -367,7 +376,7 @@ h2 {
         width: 25%;
         z-index: 3;
     }
- 
+
 
 }
 </style>
