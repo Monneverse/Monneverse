@@ -533,7 +533,8 @@ export default {
       <News :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 15" v-if="IsPagesVisible(15)" class="container">
-      <FaseNew :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
+      <FaseNew :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"
+        :SetBloquearScroll="SetBloquearScroll" />
     </div>
     <div v-show="index_pagina == 16" v-if="IsPagesVisible(16)" class="container">
       <Fase :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
