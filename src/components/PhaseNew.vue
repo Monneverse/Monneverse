@@ -31,11 +31,13 @@ export default {
             <div class="contenido__fase__circulo contenido__fase__circulo_end"></div>
             <!-- Fase Q1 -->
             <div class="fase">
+                <div class="reloj">
+                    <img src="/img/reloj.png" alt="reloj">
+                </div>
                 <h3>Q1</h3>
+
                 <div class="fase__contenido">
-                    <div class="reloj">
-                        <img src="/img/reloj.png" alt="reloj">
-                    </div>
+
                     <ul>
                         <li>
                             -Development of our entire ecosystem
@@ -55,49 +57,56 @@ export default {
                     </ul>
 
                 </div>
-
+           
             </div>
             <!-- Fase Q2 -->
             <div class="fase">
+                <div class="reloj">
+                    <img src="/img/reloj.png" alt="reloj">
+                </div>
                 <h3>Q2</h3>
                 <div class="fase__contenido">
-                    <div class="reloj">
-                        <img src="/img/reloj.png" alt="reloj">
-                    </div>
+
                     <ul>
                         <li>
                             -Start of staking for awarded holders.
 
                         </li>
-                        <li> -Listed on <span class="resaltar">Bitmart</span> and <span class="resaltar">Gate.io</span></li>
+                        <li> -Listed on <span class="resaltar">Bitmart</span> and <span class="resaltar">Gate.io</span>
+                        </li>
                         <li> -Opening to the public (holders) of our main facilities</li>
-                        <li> -Conference in NY before private investors on our renewable energy patents (<span class="resaltar">MonnerPlaner</span>
-                            and <span class="resaltar">MonnerMinner</span>) with the lowest costs and the highest quality standards. <span class="resaltar">50%</span> of the
+                        <li> -Conference in NY before private investors on our renewable energy patents (<span
+                                class="resaltar">MonnerPlaner</span>
+                            and <span class="resaltar">MonnerMinner</span>) with the lowest costs and the highest
+                            quality standards. <span class="resaltar">50%</span> of the
                             investment raised will go towards our locked liquidity to boost our price.
                         </li>
-                        <li> -Official launch of <span class="resaltar">MonnerCard, MonnerWallet, MonneTrading.</span></li>
+                        <li> -Official launch of <span class="resaltar">MonnerCard, MonnerWallet, MonneTrading.</span>
+                        </li>
                         <li> -Certik Audit</li>
                         <li>-Audit of Financial Soundness</li>
                     </ul>
 
                 </div>
-
+           
             </div>
 
             <!-- Fase Q3 -->
             <div class="fase">
+                <div class="reloj">
+                    <img src="/img/reloj.png" alt="reloj">
+                </div>
                 <h3>Q3</h3>
                 <div class="fase__contenido">
-                    <div class="reloj">
-                        <img src="/img/reloj.png" alt="reloj">
-                    </div>
+
                     <ul>
                         <li>
                             - 20,000 headlines
 
                         </li>
                         <li> - 45,000 members on Telegram</li>
-                        <li> - Implementation of <span class="resaltar">MonnerHosting</span> and development of <span class="resaltar">Monner BlockChain</span></li>
+                        <li> - Implementation of <span class="resaltar">MonnerHosting</span> and development of <span
+                                class="resaltar">Monner BlockChain</span></li>
                         <li> - Opening of <span class="resaltar">MonnerGame</span> (betting center) in virtual reality.
                         </li>
                     </ul>
@@ -107,11 +116,12 @@ export default {
             </div>
             <!-- Fase Q4 -->
             <div class="fase">
+                <div class="reloj">
+                    <img src="/img/reloj.png" alt="reloj">
+                </div>
                 <h3>Q4</h3>
                 <div class="fase__contenido">
-                    <div class="reloj">
-                        <img src="/img/reloj.png" alt="reloj">
-                    </div>
+
                     <ul>
                         <li>
                             - Expansion of our marketing campaign
@@ -119,11 +129,13 @@ export default {
                         </li>
                         <li> - 7 high power solar mining farms that will send daily liquidity to our token.</li>
                         <li> - 5,000 homes in the US, BRAZIL, PANAMA, GUATEMALA, COLOMBIA and others with renewable
-                            energy boards patented under the <span class="resaltar">MNR</span> name with a 20-year guarantee.
+                            energy boards patented under the <span class="resaltar">MNR</span> name with a 20-year
+                            guarantee.
                         </li>
                         <li> - Publication of Q-5, Q-6, Q-7, Q-8.
                         </li>
-                        <li> - <span class="resaltar">Monner</span> will innovate year after year until it becomes the project with the greatest
+                        <li> - <span class="resaltar">Monner</span> will innovate year after year until it becomes the
+                            project with the greatest
                             potential in the world.</li>
                     </ul>
 
@@ -211,7 +223,7 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    padding-left: .2rem;
+    padding-left: .5rem;
     height: 70%;
     z-index: 6;
     overflow: hidden;
@@ -255,7 +267,7 @@ h2 {
 .contenido__fase {
 
     width: 100%;
-    height: 300%;
+    height: 330%;
     padding: 1rem;
 
 }
@@ -274,7 +286,7 @@ h2 {
     left: 0;
     transform: translate(-30%, 0);
     border-radius: 50%;
-    z-index: 2;
+    z-index: 2000;
     background-color: bisque;
     width: .8rem;
     height: .8rem;
@@ -306,22 +318,22 @@ h2 {
 }
 
 .fase .fase__contenido {
-    font-size: .9rem;
+    font-size: 2vh;
     border-left: 2px solid white;
     padding-left: 1.5rem;
 }
-.fase .fase__contenido .resaltar{
+
+.fase .fase__contenido .resaltar {
     color: var(--color-secundario);
 }
 
 .fase .fase__contenido ul {
     position: relative;
-    margin-top: -17%;
 }
 
 .reloj {
-    width: 2rem;
-    height: 2rem;
+    width: 1.8rem;
+    height: 1.8rem;
     background-color: #05874F;
     border-radius: 50%;
     display: flex;
@@ -330,8 +342,8 @@ h2 {
     padding: .1rem;
     border: 2px solid white;
     position: relative;
-    left: -35%;
-    top: -40%;
+    left: -20%;
+    top: -80%;
     z-index: 11;
 }
 
