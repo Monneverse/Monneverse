@@ -10,21 +10,23 @@ export default {
 </script>
 <template >
     <!-- Comienzo fondo -->
-    <div class="fondo fondo-degradiente"></div>
-    <div class="fondo fondo-oscurecer"></div>
-    <div class="circuito">
-        <img src="/img/circuitoFaseNew.png" alt="" />
+
+    <div class="fondo ">
+        <img src="/img/rayos.png" alt="" />
     </div>
-    <div class="fondo fondo-oscurecer"></div>
-    <div class="logo">
-        <img src="/img/logo.svg" alt="" />
+    <div class="fondo">
+        <img src="/img/fondo-benefit.png" alt="" />
     </div>
 
-    <div class="degradado degradado_derecho"></div>
+    <div class="aro">
+        <img src="../assets/aro.svg" />
+        <img  src="../assets/aro.svg" />
+      </div>
     <!-- Fin fondo -->
     <h2>ROAD MAP</h2>
-    <div class="contenido" @mousemove="this.SetBloquearScroll(false)" @mouseenter="this.SetBloquearScroll(false)" @touchstart="this.SetBloquearScroll(false)"
-        @touchend="this.SetBloquearScroll(true)" @mouseleave="this.SetBloquearScroll(true)">
+    <div id="contenido" class="contenido" @mousemove="this.SetBloquearScroll(false)" @mouseenter="this.SetBloquearScroll(false)"
+        @touchstart="this.SetBloquearScroll(false)" @touchend="this.SetBloquearScroll(true)"
+        @mouseleave="this.SetBloquearScroll(true)">
 
         <div id="contenido__fase" class="contenido__fase">
             <div id="linea" class="contenido__fase__linea"></div>
@@ -178,10 +180,10 @@ img {
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("/Fonts/Montserrat-Regular.ttf");
-  font-style: semibold;
-  font-stretch: semi-condensed;
+    font-family: "Montserrat";
+    src: url("/Fonts/Montserrat-Regular.ttf");
+    font-style: semibold;
+    font-stretch: semi-condensed;
 }
 
 /* INICIO ESTILO FONDO */
@@ -217,15 +219,31 @@ img {
     z-index: 2;
 }
 
+
 .logo {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    opacity: .5;
+    top: 2rem;
+    left: 2rem;
+    width: 5rem;
+    height: 5rem;
+    z-index: 12;
+    display: none;
 }
+  .aro {
+    top: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+    left: 68%;
+    width: 30%;
+  }
+  .aro img:nth-child(2) {
+    margin-top: -4rem;
+    width: 90%;
+  }
+
 
 .degradado {
     background: linear-gradient(to right, #090380 55%, transparent);
@@ -403,48 +421,28 @@ h2 {
         width: 25%;
         z-index: 3;
     }
+
     .contenido {
         height: 81%;
         top: 57%;
         padding-bottom: 2.5rem;
         box-sizing: border-box;
     }
+
     .contenido__fase {
 
         width: 50%;
         position: relative;
-        left: 50%;
+        left: 25%;
 
         height: 200%;
     }
 
 
-    .Q2,
-    .Q4 {
-        position: relative;
-        left: -50%;
-        transform: translate(-50%, 0);
-        text-align: end;
-    }
 
-    .Q2 h3,
-    .Q4 h3 {
-        margin-right: 1rem;
-    }
 
-    .Q2 .fase__contenido,
-    .Q4 .fase__contenido {
-        border-left: none;
-        border-right: 2px solid white;
-        padding-right: .8rem;
-    }
 
-    .Q2 .reloj,
-    .Q4 .reloj {
-        position: relative;
-        left: 106%;
-        z-index: 100;
-    }
+
 
     .contenido__fase__linea {
         position: relative;
