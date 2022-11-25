@@ -87,9 +87,11 @@ img {
 .logo {
   position: absolute;
   top: 20%;
-  left: 38%;
+  left: 50%;
   width: 40%;
   height: 40%;
+  transform: translate(-50%,0);
+
   z-index: 9;
   max-width: 20rem;
   max-height: 20rem;
