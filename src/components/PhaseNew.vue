@@ -178,11 +178,12 @@ img {
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("/Fonts/Montserrat-Regular.ttf");
-  font-style: semibold;
-  font-stretch: semi-condensed;
+    font-family: "Montserrat 2";
+    src: url("/Fonts/Montserrat-Bold.ttf");
+    font-style: normal;
+    font-stretch: semi-condensed;
 }
+
 /* INICIO ESTILO FONDO */
 .fondo {
     position: absolute;
@@ -271,7 +272,8 @@ h2 {
     top: 11.5%;
     width: 100%;
     z-index: 5;
-    font-family: "Montserrat", "Work Sans";
+    font-family: "Montserrat 2", "Work Sans";
+    font-style: italic;
 }
 
 .contenido::-webkit-scrollbar:vertical {
