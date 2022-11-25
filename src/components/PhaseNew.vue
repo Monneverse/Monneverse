@@ -403,7 +403,12 @@ h2 {
         width: 25%;
         z-index: 3;
     }
-
+    .contenido {
+        height: 81%;
+        top: 57%;
+        padding-bottom: 2.5rem;
+        box-sizing: border-box;
+    }
     .contenido__fase {
 
         width: 50%;
