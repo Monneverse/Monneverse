@@ -342,8 +342,8 @@ h2 {
     padding: .1rem;
     border: 2px solid white;
     position: relative;
-    left: -20%;
-    top: -80%;
+    left: -3rem;
+    top: 4.5rem;
     z-index: 11;
 }
 
@@ -367,5 +367,7 @@ h2 {
         width: 25%;
         z-index: 3;
     }
+ 
+
 }
 </style>
