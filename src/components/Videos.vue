@@ -271,7 +271,7 @@ img {
   top: 10%;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 15rem;
+  width: 10rem;
   height: auto;
   z-index: 1;
 }
@@ -299,9 +299,6 @@ img {
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
 }
 
-.imagen-youtube {
-  width: 12rem;
-}
 
 .contenido {
   left: 1%;
@@ -485,7 +482,7 @@ img {
 /* redes sociales */
 .logo-redes {
   position: absolute;
-  bottom: 1rem;
+  bottom: 0rem;
   left: 1rem;
   width: 20rem;
   height: 5rem;
