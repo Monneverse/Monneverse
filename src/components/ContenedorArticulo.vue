@@ -115,13 +115,12 @@ export default {
     fadeInDown: this.enterAnimation,
     fadeOutUp: this.exitAnimation,
   }">
-    <div class="contrato">
+    <!-- <div class="contrato">
       <span>Contract:0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span>
-    </div>
+    </div> -->
     <div class="separar"></div>
     <div class="buyNow">
-      <a href="https://www.pinksale.finance/launchpad/0x4a215a90359e5998A64ceAC48940Cd064fd7b34C?chain=BSC"
-        target="_blank" class="btn_moner">
+      <a href="" target="_blank" class="btn_moner">
         <div class="texto1">BUY MONNER</div>
         <div class="logos">
           <div class="binance"><img src="/./img/Articulo/BNC.svg" /></div>

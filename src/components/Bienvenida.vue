@@ -50,9 +50,7 @@
       Take advantage of this opportunity and <b>reserve</b> your spot in our
       pre-sale
     </p>
-    <a target="_blank"
-      href="https://www.pinksale.finance/launchpad/0x4a215a90359e5998A64ceAC48940Cd064fd7b34C?chain=BSC"
-      class="btn_new">Buy in pre-Sale</a>
+    <a target="_blank" href="" class="btn_new">Buy in pre-Sale</a>
 
   </div>
 </template>
@@ -373,9 +371,11 @@ img {
   font-weight: 600;
   margin-bottom: 2rem;
 }
-.welcome .title span{
+
+.welcome .title span {
   color: #ffc000;
 }
+
 .welcome .subtitle {
   color: #ffc000;
   font-size: 3.5vh;
