@@ -1,18 +1,36 @@
 <script>
-import Youtube from "./video_youtube.vue";
+import Team from "./componenteTeam.vue";
 export default {
   components: {
-    Youtube,
+  Team,
   },
 
   props: ["enterAnimation", "exitAnimation", "isRevert"],
   data() {
     return {
-      videosPlay: [
+      group: [
+      {
+          title: " CEO Brayan Rogelio Gómez Rodriguez.",
+          description: "Trader certificado en S&P500 y Nasdaq, director de fondos de inversión privados. Gerente de ventas en MonnerPlanet.",
+          img: "/img/logo.svg",
+          redes: [
+            {
+              name: "Instagram",
+              url: "https://www.instagram.com/enriquerosass/",
+              icon: "img/video-redes/instagram.png"
+            },
+            {
+              name: "Twitter",
+              url: "https://twitter.com/criptorosass",
+              icon: "img/video-redes/gorjeo.png"
+            }
+          ],
+    
+        },
         {
-          title: "Transcendente NFTs",
-          description: "Nossa plataforma de staking é segura e confiável. Oferecemos-lhe um sistema que funciona por fases, apoiado por Bank Security, onde o Monnercoin será o seu bilhete de entrada para um mundo muito mais vasto! Queremos que o Monner se torne uma das 25 principais criptomoedas do mundo",
-          playlist: ["https://www.youtube.com/embed/cLGSuaYAZtE"],
+          title: "CMO Anderson Ledezma",
+          description: "Administrador y desarrollador de proyectos criptográficos por más de 8 años.",
+          img: "/img/logo.svg",
           redes: [
             {
               name: "Instagram",
@@ -35,12 +53,32 @@ export default {
               icon: "img/video-redes/tiktok.png"
             }
           ],
-          imglang: "img/language/brasil.png"
+     
+        },
+   
+       
+        {
+          title: "Kevin Canacuan CMO",
+          description: "Desarrollado de proyectos NFT, desarrollador de software. Acceso de marketing y negocios en MNR y MonnerPlanet. ",
+          img: "/img/Team/kev.jpg",
+          redes: [
+            {
+              name: "Telegram",
+              url: "https://t.me/RankooCrypto",
+              icon: "img/video-redes/Telegram_logo.svg"
+            },
+            {
+              name: "Twitter",
+              url: "https://twitter.com/RankooCrypto",
+              icon: "img/video-redes/gorjeo.png"
+            }
+          ],
+         
         },
         {
-          title: "ZettaTrading",
-          description: "80.000% EN DÍAS CON ESTA CRIPTOMONEDA | PREVENTA DE 1.5$ Y LANZAMIENTO DE 22.5$ | NUEVA CRIPTOMONEDA",
-          playlist: ["https://www.youtube.com/embed/RcpzFrI_IGI"],
+          title: "María Ortiz",
+          description: "Apasionada al mundo cripto, administradora de fondos de inversión, experencia en marketing por más de 7 años.",
+          img: "img/Team/mar.jpg",
           redes: [
             {
               name: "Instagram",
@@ -58,90 +96,9 @@ export default {
               icon: "img/video-redes/Telegram_logo.svg"
             }
           ],
-          imglang: "img/language/espana_redondeado.png"
+        
         },
-        {
-          title: "CriptoRosas",
-          description: "🔥MONNEVERSE NUEVO PROYECTO 😱PREVENTA A 1.5 LISTADO EN 22.5$ 🤭AIRDROP",
-          playlist: ["https://www.youtube.com/embed/yvJCkzpiqOw"],
-          redes: [
-            {
-              name: "Instagram",
-              url: "https://www.instagram.com/enriquerosass/",
-              icon: "img/video-redes/instagram.png"
-            },
-            {
-              name: "Twitter",
-              url: "https://twitter.com/criptorosass",
-              icon: "img/video-redes/gorjeo.png"
-            }
-          ],
-          imglang: "img/language/espana_redondeado.png"
-        },
-        {
-          title: "Rankoo Crypto",
-          description: "Monnerverse | إنها العملة الافتراضية الجديدة التي أتت لتدمير الإنترنت وتضع نفسها بين الأفضل في السوق",
-          playlist: ["https://www.youtube.com/embed/fNpKoECddtA"],
-          redes: [
-            {
-              name: "Telegram",
-              url: "https://t.me/RankooCrypto",
-              icon: "img/video-redes/Telegram_logo.svg"
-            },
-            {
-              name: "Twitter",
-              url: "https://twitter.com/RankooCrypto",
-              icon: "img/video-redes/gorjeo.png"
-            }
-          ],
-          imglang: "img/language/emiratos-arabes-unidos.png"
-        },
-        {
-          title: "Tech Perfectionist",
-          description: "IS THIS 100X COIN ? I Private Sale 1.5$ I Staking payout 12.6% every 48 hours",
-          playlist: ["https://www.youtube.com/embed/tVG_ioYFb6s"],
-          redes: [
-          {
-              name: "Instagram",
-              url: "https://www.instagram.com/its_hk_/",
-              icon: "img/video-redes/instagram.png"
-            },
-            {
-              name: "Telegram",
-              url: "https://t.me/techperfectionist10",
-              icon: "img/video-redes/Telegram_logo.svg"
-            },
-            {
-              name: "Twitter",
-              url: "https://twitter.com/HamzaAboutTech",
-              icon: "img/video-redes/gorjeo.png",
-            },
-          ],
-          imglang: "img/language/estados_unidos_redondeado.png"
-        },
-        {
-          title: "LUCHOUSL",
-          description: "🤩 ¡MONNERVERSE LLC UN PROYECTO QUE SUBIRA UN 1500%! 🥇 PREVENTA DE $1.5 USD ✅ Y SORTEO TOKENS!!! 💥",
-          playlist: ["https://www.youtube.com/embed/gtHXbt8BZcE"],
-          redes: [
-          {
-              name: "Instagram",
-              url: "https://www.instagram.com/luchousl/",
-              icon: "img/video-redes/instagram.png"
-            },
-            {
-              name: "Telegram",
-              url: "https://t.me/Uslclub",
-              icon: "img/video-redes/Telegram_logo.svg"
-            },
-            {
-              name: "Twitter",
-              url: "https://twitter.com/luchousl",
-              icon: "img/video-redes/gorjeo.png",
-            },
-          ],
-          imglang: "img/language/espana_redondeado.png"
-        },
+       
       ],
     };
   },
@@ -162,19 +119,21 @@ export default {
   }" class="fondo-benefit">
     <img src="/img/fondo-benefit.png" alt="" />
   </div>
-  <div class="imagen-youtube">
-    <img src="../assets/YouTube-Icon.svg" alt="Youtube image" />
+
+  <div class="titulo">
+     <h1>TEAM</h1>
   </div>
+
   <div class="contenido">
-    <Youtube v-for="videoy in videosPlay" :class="{
+    <Team v-for="team in group" :class="{
       video: true,
       video__aparecer: this.enterAnimation && !this.isRevert,
       video__aparecer_revert: this.enterAnimation && this.isRevert,
       video__desaparecer_revert: this.exitAnimation && this.isRevert,
       video__desaparecer: this.exitAnimation && !this.isRevert,
-    }" :title="videoy.title" :description="videoy.description" :list="videoy.playlist" :redes="videoy.redes"
-      :imglang="videoy.imglang">
-    </Youtube>
+    }" :title="team.title" :description="team.description" :redes="team.redes" :img="team.img"
+  >
+    </Team>
   </div>
   <div class="arrow"></div>
   <div class="arrow2"></div>
@@ -266,15 +225,20 @@ img {
   }
 }
 
-.imagen-youtube {
+.titulo {
   position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 10rem;
+  top: 15%;
+  width: 100%;
   height: auto;
   z-index: 1;
+  
 }
+.titulo h1{
+  text-align: center;
+  color: #ffc000;
+  font-family: "Montserrat", "Work Sans";
+}
+
 
 .contenido {
   position: relative;

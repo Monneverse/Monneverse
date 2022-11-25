@@ -21,6 +21,7 @@ import Fase4 from "./components/Phase4.vue";
 import Fase5 from "./components/Phase5.vue";
 import Footer from "./components/Footer.vue";
 import Videos from "./components/Videos.vue";
+import Team from "./components/Team.vue";
 const typeOrientacion = Object.freeze({
   left: 1,
   center: 2,
@@ -51,12 +52,13 @@ export default {
     Fase5,
     Footer,
     Videos,
+    Team,
   },
   data() {
     return {
       index: 0,
       index_pagina: 1,
-      limite: 21,
+      limite: 22,
       pagesVisible: [1, 2,12],
       isVisibleLogo: false,
       scroll: true,
@@ -101,7 +103,7 @@ export default {
             newPosition = 14;
           }
           if(newPosition==16){
-              newPosition = 21;
+              newPosition = 22;
             }
           this.CambiarContenedor(newPosition);
         }
@@ -285,7 +287,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right;
           }
-          this.index = 5;
+          this.index = 0;
           break;
         case 17:
           if (window.innerWidth < 900) {
@@ -402,8 +404,8 @@ export default {
             if (newPosition == 13) {
               newPosition = 14;
             }
-            if(newPosition==16){
-              newPosition = 21;
+            if(newPosition==17){
+              newPosition = 22;
             }
             this.isRevert = false;
           }
@@ -420,8 +422,8 @@ export default {
             if (newPosition == 13) {
               newPosition = 12;
             }
-            if(newPosition==20){
-              newPosition = 15;
+            if(newPosition==21){
+              newPosition = 16;
             }
             this.isRevert = true;
           }
@@ -537,22 +539,26 @@ export default {
         :SetBloquearScroll="SetBloquearScroll" />
     </div>
     <div v-show="index_pagina == 16" v-if="IsPagesVisible(16)" class="container">
+      <Team :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"
+        :SetBloquearScroll="SetBloquearScroll" />
+    </div>
+    <div v-show="index_pagina == 17" v-if="IsPagesVisible(17)" class="container">
       <Fase :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="index_pagina == 17" v-if="IsPagesVisible(17)" class="container">
+    <div v-show="index_pagina == 18" v-if="IsPagesVisible(18)" class="container">
       <Fase2 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 18" v-if="IsPagesVisible(18)" class="container">
+    <div v-show="index_pagina == 19" v-if="IsPagesVisible(19)" class="container">
       <Fase3 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 19" v-if="IsPagesVisible(19)" class="container">
+    <div v-show="index_pagina == 20" v-if="IsPagesVisible(20)" class="container">
       <Fase4 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 20" v-if="IsPagesVisible(20)" class="container">
+    <div v-show="index_pagina == 21" v-if="IsPagesVisible(21)" class="container">
       <Fase5 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == limite" v-if="IsPagesVisible(21)" class="container">
+    <div v-show="index_pagina == limite" v-if="IsPagesVisible(22)" class="container">
       <Footer :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
   </main>

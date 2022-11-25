@@ -1,46 +1,26 @@
 <template>
   <div class="contenido">
+    <div class="imagen">
+      <img class="img-team" :src="img" alt="Team" srcset="" />
+    </div>
+
     <div class="contenido-texto">
       <div class="title">
         <h2>{{ title }}</h2>
-        <img style="height: 1.2rem; width: 1.2rem" :src="imglang" alt="Lang" />
       </div>
       <p>{{ description }}</p>
     </div>
-
-    <iframe
-      class="video-youtube"
-      :src="video"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    >
-    </iframe>
-
-    <div class="redes-videos">
+    <!-- <div class="redes-videos">
       <a v-for="red in redes" class="icon" :href="red.url" target="_blank">
         <img :src="red.icon" :alt="red.name" />
       </a>
-    </div>
-    <div class="flecha">
-      <div :class="{ hide: index == 0 }" @click="before()" class="left">
-        <img src="../assets/flecha.svg" alt="arrow next" />
-      </div>
-      <div
-        :class="{ hide: index == list.length - 1 }"
-        @click="next()"
-        class="right"
-      >
-        <img src="../assets/flecha.svg" alt="arrow next" />
-      </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 export default {
-  props: ["title", "description", "list", "redes", "imglang", "imglang2"],
+  props: ["title", "description", "redes", "img"],
   computed: {
     video: {
       get() {
@@ -84,7 +64,7 @@ img {
 
 .contenido-texto {
   width: 100%;
-  height: 35%;
+  height: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,13 +79,11 @@ img {
   display: flex;
 }
 .title h2 {
-  width: 90%;
+  width: 100%;
   min-width: 90%;
   margin-bottom: 0.1rem;
 }
-.title img {
-  margin-left: 1rem;
-}
+
 .contenido-texto h2 {
   padding: 0;
   margin: 0;
@@ -120,10 +98,20 @@ img {
   height: max-content;
 }
 
-.video-youtube {
+.imagen {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  height: 13rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.imagen img {
   width: 100%;
-  height: 50%;
-  border-radius: 1rem;
+  height: auto;
 }
 
 .flecha {
