@@ -23,7 +23,7 @@ export default {
     <div class="degradado degradado_derecho"></div>
     <!-- Fin fondo -->
     <h2>ROAD MAP</h2>
-    <div class="contenido" @mouseenter="this.SetBloquearScroll(false)" @touchstart="this.SetBloquearScroll(false)"
+    <div class="contenido" @mousemove="this.SetBloquearScroll(false)" @mouseenter="this.SetBloquearScroll(false)" @touchstart="this.SetBloquearScroll(false)"
         @touchend="this.SetBloquearScroll(true)" @mouseleave="this.SetBloquearScroll(true)">
 
         <div id="contenido__fase" class="contenido__fase">
