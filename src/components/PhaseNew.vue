@@ -2,9 +2,9 @@
 export default {
     props: ["enterAnimation", "exitAnimation", "isRevert", "SetBloquearScroll"],
     mounted() {
-        var panel = document.getElementById("contenido__fase");
-        console.log(panel.offsetHeight);
-        panel.style.height = (panel.offsetHeight) + "px";
+
+        // var panel = document.getElementById("contenido__fase");
+        // panel.style.height = (panel.clientHeight) + "px";
     }
 };
 </script>
@@ -27,11 +27,11 @@ export default {
         @touchend="this.SetBloquearScroll(true)" @mouseleave="this.SetBloquearScroll(true)">
 
         <div id="contenido__fase" class="contenido__fase">
-            <div class="contenido__fase__linea"></div>
+            <div id="linea" class="contenido__fase__linea"></div>
             <div class="contenido__fase__circulo contenido__fase__circulo_start"></div>
             <div class="contenido__fase__circulo contenido__fase__circulo_end"></div>
             <!-- Fase Q1 -->
-            <div class="fase" >
+            <div class="fase">
                 <div class="reloj">
                     <img src="/img/reloj.png" alt="reloj">
                 </div>
@@ -61,7 +61,7 @@ export default {
 
             </div>
             <!-- Fase Q2 -->
-            <div class="fase Q2" >
+            <div class="fase Q2">
                 <div class="reloj">
                     <img src="/img/reloj.png" alt="reloj">
                 </div>
@@ -93,7 +93,7 @@ export default {
             </div>
 
             <!-- Fase Q3 -->
-            <div class="fase" >
+            <div class="fase">
                 <div class="reloj">
                     <img src="/img/reloj.png" alt="reloj">
                 </div>
@@ -271,6 +271,7 @@ h2 {
     width: 100%;
     padding: 1rem;
     padding-bottom: 0;
+    height: 300%;
 }
 
 .contenido__fase__linea {
@@ -379,7 +380,10 @@ h2 {
         width: 50%;
         position: relative;
         left: 50%;
+
+        height: 200%;
     }
+
 
     .Q2,
     .Q4 {
@@ -388,11 +392,14 @@ h2 {
         transform: translate(-50%, 0);
         text-align: end;
     }
+
     .Q2 h3,
     .Q4 h3 {
-      margin-right: 1rem;
+        margin-right: 1rem;
     }
-     .Q2 .fase__contenido,  .Q4 .fase__contenido{
+
+    .Q2 .fase__contenido,
+    .Q4 .fase__contenido {
         border-left: none;
         border-right: 2px solid white;
         padding-right: .8rem;
