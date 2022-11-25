@@ -30,7 +30,7 @@ export default {
         {
           title: "CMO Anderson Ledezma",
           description: "Administrador y desarrollador de proyectos criptográficos por más de 8 años.",
-          img: "/img/logo.svg",
+          img: "/img/Team/ale.jpg",
           redes: [
             {
               name: "Instagram",
@@ -58,7 +58,7 @@ export default {
    
        
         {
-          title: "Kevin Canacuan CMO",
+          title: "CMO Kevin Canacuan ",
           description: "Desarrollado de proyectos NFT, desarrollador de software. Acceso de marketing y negocios en MNR y MonnerPlanet. ",
           img: "/img/Team/kev.jpg",
           redes: [
