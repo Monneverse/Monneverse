@@ -60,7 +60,7 @@ img {
     left: 50%;
     width: 200%;
     transform: translate(-50%, -50%);
-    z-index: 3;
+    z-index: 2;
 }
 
 .logo {
@@ -78,9 +78,9 @@ img {
   position: fixed;
   width: 50%;
   height: 180%;
-  z-index: 7;
+  z-index: 2;
   top: 0%;
-  opacity: 90%;
+  opacity: 70%;
   user-select: none;
   pointer-events: none;
 }
