@@ -127,8 +127,8 @@ export default {
           if (newPosition == 13) {
             newPosition = 12;
           }
-          if(newPosition==22){
-              newPosition = 17;
+          if(newPosition==21){
+              newPosition = 16;
             }
           this.CambiarContenedor(newPosition);
         }
@@ -540,7 +540,7 @@ export default {
     </div>
     <div v-show="index_pagina == 16" v-if="IsPagesVisible(16)" class="container">
       <Team :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"
-        :SetBloquearScroll="SetBloquearScroll" />
+      />
     </div>
     <div v-show="index_pagina == 17" v-if="IsPagesVisible(17)" class="container">
       <Fase :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
