@@ -162,13 +162,7 @@ export default {
   }" class="fondo-benefit">
     <img src="/img/fondo-benefit.png" alt="" />
   </div>
-  <div :class="{
-    'imagen-youtube': true,
-    animated: true,
-    duration1s: true,
-    fadeInRight: this.enterAnimation,
-    lightSpeedOut: this.exitAnimation,
-  }">
+  <div class="imagen-youtube">
     <img src="../assets/YouTube-Icon.svg" alt="Youtube image" />
   </div>
   <div class="contenido">

@@ -120,7 +120,7 @@ export default {
     </div> -->
     <div class="separar"></div>
     <div class="buyNow">
-      <a href="" target="_blank" class="btn_moner">
+      <a  target="_blank" class="btn_moner">
         <div class="texto1">BUY MONNER</div>
         <div class="logos">
           <div class="binance"><img src="/./img/Articulo/BNC.svg" /></div>

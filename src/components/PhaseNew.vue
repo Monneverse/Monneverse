@@ -157,6 +157,33 @@ img {
     height: 100%;
 }
 
+@font-face {
+    font-family: "Work Sans", serif;
+    src: url("/Fonts/WorkSans.ttf");
+    font-style: semibold;
+}
+
+@font-face {
+    font-family: "Bahn";
+    src: url("/Fonts/BAHNSCHRIFT9.ttf");
+    font-style: semibold;
+    font-stretch: semi-condensed;
+}
+
+@font-face {
+    font-family: "Arial";
+    src: url("/Fonts/arial.ttf");
+    font-style: semibold;
+    font-stretch: semi-condensed;
+}
+
+@font-face {
+    font-family: "Montserrat 2";
+    src: url("/Fonts/Montserrat-Bold.ttf");
+    font-style: normal;
+    font-stretch: semi-condensed;
+}
+
 /* INICIO ESTILO FONDO */
 .fondo {
     position: absolute;
@@ -218,13 +245,14 @@ img {
 }
 
 .contenido {
-    font-family: "BAHNSCHRIFT9.ttf", "Arial", "Montserrat", "Work Sans";
+    font-family: "BAHNSCHRIFT9", "Arial", "Montserrat", "Work Sans";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
     padding-left: .5rem;
+    margin-top: 1rem;
     height: 70%;
     z-index: 6;
     overflow: hidden;
@@ -241,9 +269,11 @@ h2 {
     color: var(--color-secundario);
     text-align: center;
     position: absolute;
-    top: 12%;
+    top: 11.5%;
     width: 100%;
     z-index: 5;
+    font-family: "Montserrat 2", "Work Sans";
+    font-style: italic;
 }
 
 .contenido::-webkit-scrollbar:vertical {
