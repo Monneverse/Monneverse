@@ -30,7 +30,9 @@ export default {
     <div class="contenido" @mouseenter="this.SetBloquearScroll(false)" @touchstart="this.SetBloquearScroll(false)"
         @touchend="this.SetBloquearScroll(true)" @mouseleave="this.SetBloquearScroll(true)">
 
-        <div id="contenido__fase" class="contenido__fase">
+        <div id="contenido__fase" @mouseenter="this.SetBloquearScroll(false)"
+            @touchstart="this.SetBloquearScroll(false)" @touchend="this.SetBloquearScroll(true)"
+            @mouseleave="this.SetBloquearScroll(true)" class="contenido__fase">
             <div class="contenido__fase__linea"></div>
             <div class="contenido__fase__circulo contenido__fase__circulo_start"></div>
             <div class="contenido__fase__circulo contenido__fase__circulo_end"></div>
@@ -65,7 +67,7 @@ export default {
 
             </div>
             <!-- Fase Q2 -->
-            <div class="fase">
+            <div class="fase Q2">
                 <div class="reloj">
                     <img src="/img/reloj.png" alt="reloj">
                 </div>
@@ -120,7 +122,7 @@ export default {
 
             </div>
             <!-- Fase Q4 -->
-            <div class="fase">
+            <div class="fase Q4">
                 <div class="reloj">
                     <img src="/img/reloj.png" alt="reloj">
                 </div>
@@ -293,7 +295,6 @@ h2 {
     left: 0;
     transform: translate(-30%, 0);
     border-radius: 50%;
-    z-index: 2000;
     background-color: bisque;
     width: .8rem;
     height: .8rem;
@@ -305,7 +306,7 @@ h2 {
 }
 
 .contenido__fase__circulo_end {
-    top: -1%;
+    top: -1rem;
 }
 
 .fase {
@@ -316,6 +317,7 @@ h2 {
     padding: 2rem;
     box-sizing: border-box;
     padding-bottom: 0;
+    z-index: 100;
 
 }
 
@@ -329,6 +331,7 @@ h2 {
     font-size: 2vh;
     border-left: 2px solid white;
     padding-left: 1.5rem;
+    z-index: 100;
 }
 
 .fase .fase__contenido .resaltar {
@@ -353,7 +356,7 @@ h2 {
     position: relative;
     left: -3rem;
     top: 4.5rem;
-    z-index: 11;
+    z-index: 100;
 }
 
 .reloj img {
@@ -377,6 +380,40 @@ h2 {
         z-index: 3;
     }
 
+    .contenido__fase {
 
+        width: 50%;
+        position: relative;
+        left: 50%;
+    }
+
+    .Q2,
+    .Q4 {
+        position: relative;
+        left: -50%;
+        transform: translate(-50%, 0);
+        text-align: end;
+    }
+    .Q2 h3,
+    .Q4 h3 {
+      margin-right: 1rem;
+    }
+     .Q2 .fase__contenido,  .Q4 .fase__contenido{
+        border-left: none;
+        border-right: 2px solid white;
+        padding-right: .8rem;
+    }
+
+    .Q2 .reloj,
+    .Q4 .reloj {
+        position: relative;
+        left: 106%;
+        z-index: 100;
+    }
+
+    .contenido__fase__linea {
+        position: relative;
+        z-index: 10;
+    }
 }
 </style>
