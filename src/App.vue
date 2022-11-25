@@ -57,7 +57,7 @@ export default {
       index: 0,
       index_pagina: 1,
       limite: 21,
-      pagesVisible: [1, 2],
+      pagesVisible: [1, 2,12],
       isVisibleLogo: false,
       scroll: true,
       exitAnimation: false,
@@ -560,8 +560,8 @@ export default {
 
 <style>
 /* Fuentes Aquí */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 @font-face {
   font-family: "Work Sans", serif;
