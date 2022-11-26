@@ -11,7 +11,7 @@ export default {
       group: [
       {
           title: " CEO Brayan Rogelio Gómez Rodriguez.",
-          description: "Trader certificado en S&P500 y Nasdaq, director de fondos de inversión privados. Gerente de ventas en MonnerPlanet.",
+          description: "Certified trader in S&P500 and Nasdaq, director of private investment funds. Sales Manager at MonnerPlanet.",
           img: "/img/logo.svg",
           redes: [
             {
@@ -29,7 +29,7 @@ export default {
         },
         {
           title: "CMO Anderson Ledezma",
-          description: "Administrador y desarrollador de proyectos criptográficos por más de 8 años.",
+          description: "7 years of experience in crypto market, NFT project developer, passionate about marketing and product expansion.",
           img: "/img/Team/ale.jpg",
           redes: [
             {
@@ -59,7 +59,7 @@ export default {
        
         {
           title: "CMO Kevin Canacuan ",
-          description: "Desarrollado de proyectos NFT, desarrollador de software. Acceso de marketing y negocios en MNR y MonnerPlanet. ",
+          description: "Developer of NFT projects, software developer. Marketing and business access on MNR and MonnerPlanet.",
           img: "/img/Team/kev.jpg",
           redes: [
             {
@@ -77,7 +77,7 @@ export default {
         },
         {
           title: "María Ortiz",
-          description: "Apasionada al mundo cripto, administradora de fondos de inversión, experencia en marketing por más de 7 años.",
+          description: "Graphic designer, lover of crypto culture and the development of projects with high growth potential.",
           img: "img/Team/mar.jpg",
           redes: [
             {
