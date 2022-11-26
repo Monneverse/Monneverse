@@ -7,7 +7,7 @@ export default {
   <!--FONDOS-->
   <video preload="auto" autoplay webkit-playsinline playsinline muted loop class="video-fondo-alliances"
     poster="/img/fondo_binario.png">
-    <source data-src="/video/Full-HD-Lite-2cort.mp4" type="video/mp4" src="/video/Full-HD-Lite-2.mp4cort" />
+    <source data-src="/video/Full-HD-Lite-2cort.mp4" type="video/mp4" src="/video/Full-HD-Lite-2cort.mp4" />
 
     <p>
       Your browser doesn't support HTML5 video. Here is a
