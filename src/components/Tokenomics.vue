@@ -14,7 +14,7 @@ export default {
     </div>
 
     <div class="fondo-telefono">
-      <img src="/img/celFondo.svg" alt="" srcset="" />
+      <img src="/img/fondo_Cel.png" alt="" srcset="" />
     </div>
     <div class="arrow"></div>
     <div class="arrow2"></div>
@@ -77,13 +77,15 @@ export default {
         </div>
 
         <div class="">
-          <p>0% Intended for Monner liquidity locked for 100 years.</p>
+          <p>
+            <span>0%</span> Intended for Monner liquidity locked for 100 years.
+          </p>
         </div>
         <div class="">
-          <p>0% Destined to Marketing.</p>
+          <p><span>0%</span> Destined to Marketing.</p>
         </div>
         <div class="">
-          <p>0% For development.</p>
+          <p><span>0%</span> For development.</p>
         </div>
         <div class="">
           <p></p>
@@ -96,7 +98,7 @@ export default {
     <div class="cards">
       <div class="plus">
         <div class=""></div>
-        
+
         <div class=""><img src="/img/plus.svg" alt="" /></div>
         <div class=""><img src="/img/plus.svg" alt="" /></div>
         <div class=""><img src="/img/plus.svg" alt="" /></div>
@@ -118,13 +120,15 @@ export default {
           </div>
         </div>
         <div class="">
-          <p>7% Destined for Monner liquidity blocked for 100 years.</p>
+          <p>
+            <span>7%</span> Destined for Monner liquidity blocked for 100 years.
+          </p>
         </div>
         <div class="">
-          <p>2% Destined to Marketing.</p>
+          <p><span>2%</span> Destined to Marketing.</p>
         </div>
         <div class="">
-          <p>1% For development.</p>
+          <p><span>1%</span> For development.</p>
         </div>
         <div class="">
           <p></p>
@@ -187,6 +191,10 @@ export default {
   font-stretch: semi-condensed;
 }
 
+p span {
+  color: #e1aa04;
+}
+
 /* Fondo de la pagina*/
 img {
   width: 100%;
@@ -211,7 +219,7 @@ h2 {
   font-weight: 500;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 950px) {
   .titulo h1 {
     color: white;
     font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
@@ -384,7 +392,7 @@ h2 {
   border-radius: 10px;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 950px) {
   .content {
     top: 23%;
     display: grid;
@@ -411,10 +419,11 @@ h2 {
 }
 
 .cards:nth-child(2) {
-  width: 20%;
+  width: 50%;
+  margin: 0 auto;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 950px) {
   .cards:nth-child(1) {
     display: flex;
     justify-content: flex-end;
@@ -432,8 +441,8 @@ h2 {
 }
 
 .purchase-tax h2 {
+  margin: 0;
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
-  text-align: right;
   font-size: 8vw;
   font-weight: 500;
 }
@@ -441,10 +450,10 @@ h2 {
 .purchase-tax p {
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   text-align: right;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 950px) {
   .purchase-tax {
     justify-content: space-between;
     width: 90%;
@@ -452,7 +461,7 @@ h2 {
   }
 
   .purchase-tax h2 {
-    font-size: 2vw;
+    font-size: 2.3vw;
   }
 
   .purchase-tax p {
@@ -462,12 +471,12 @@ h2 {
 
 .titulo1 {
   position: relative;
-  left: 23%;
+  left: 0%;
   display: flex;
   justify-content: right;
   align-items: center;
   height: 80%;
-  width: 77%;
+  width: 100%;
   background: linear-gradient(
     90deg,
     rgb(33, 32, 85) 0%,
@@ -481,11 +490,11 @@ h2 {
   padding-right: 10%;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 950px) {
   .titulo1 {
     left: 45%;
-
-    width: 55%;   
+    height: 100%;
+    width: 55%;
 
     border-radius: 0.5vw;
   }
@@ -497,9 +506,10 @@ h2 {
 }
 
 .plus {
- 
+  position: relative;
+  top: 4%;
   width: 80%;
-  height: 88%;
+  height: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -508,16 +518,20 @@ h2 {
 }
 
 .plus div {
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
   width: 50%;
 }
+.plus div img {
+  width: 1.7rem;
+}
 
-@media screen and (min-width: 769px) {
-  .plus{
+@media screen and (min-width: 950px) {
+  .plus {
+    width: 100%;
     height: 85%;
   }
   .plus div {
-    
     margin: 0 auto;
     width: 100%;
   }
@@ -541,10 +555,10 @@ h2 {
 
 .sale-tax p {
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 950px) {
   .sale-tax {
     justify-content: space-between;
     width: 90%;
@@ -552,7 +566,7 @@ h2 {
   }
 
   .sale-tax h2 {
-    font-size: 2vw;
+    font-size: 2.3vw;
   }
 
   .sale-tax p {
@@ -565,7 +579,7 @@ h2 {
   display: flex;
   align-items: center;
   height: 80%;
-  width: 77%;
+  width: 100%;
   background: linear-gradient(90deg, rgb(209, 1, 1) 0%, rgb(18, 0, 73) 100%);
   border-radius: 0.5vw;
 }
@@ -575,8 +589,9 @@ h2 {
   padding-left: 10%;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 950px) {
   .titulo2 {
+    height: 100%;
     width: 55%;
   }
 }
