@@ -99,9 +99,7 @@ export default {
           if (newPosition == 11) {
             newPosition = 12;
           }
-          if (newPosition == 13) {
-            newPosition = 14;
-          }
+        
           if(newPosition==17){
               newPosition = 22;
             }
@@ -124,9 +122,7 @@ export default {
           if (newPosition == 11) {
             newPosition = 10;
           }
-          if (newPosition == 13) {
-            newPosition = 12;
-          }
+         
           if(newPosition==21){
               newPosition = 16;
             }
@@ -152,10 +148,10 @@ export default {
           this.index_pagina = 9;
           break;
         case 3:
-          if (this.index_pagina == 13) {
+          if (this.index_pagina == 12) {
             return;
           }
-          this.index_pagina = 13;
+          this.index_pagina = 12;
           break;
         case 4:
           if (this.index_pagina == 14) {
@@ -254,7 +250,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right;
           }
-          this.index = 0;
+          this.index = 3;
           break;
         case 13:
           if (window.innerWidth < 900) {
@@ -262,7 +258,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right;
           }
-          this.index = 3;
+          this.index = 0;
           break;
         case 14:
           if (window.innerWidth < 900) {
@@ -401,9 +397,9 @@ export default {
             if (newPosition == 11) {
               newPosition = 12;
             }
-            if (newPosition == 13) {
-              newPosition = 14;
-            }
+            // if (newPosition == 13) {
+            //   newPosition = 14;
+            // }
             if(newPosition==17){
               newPosition = 22;
             }
@@ -419,9 +415,9 @@ export default {
             if (newPosition == 11) {
               newPosition = 10;
             }
-            if (newPosition == 13) {
-              newPosition = 12;
-            }
+            // if (newPosition == 13) {
+            //   newPosition = 12;
+            // }
             if(newPosition==21){
               newPosition = 16;
             }
@@ -525,11 +521,12 @@ export default {
       <Benefits_card :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"
         :SetBloquearScroll="SetBloquearScroll" />
     </div>
-    <div v-show="index_pagina == 12" v-if="IsPagesVisible(12)" class="container">
-      <Videos :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
-    </div>
-    <div v-show="index_pagina == 13" v-if="IsPagesVisible(13)" class="container">
+   
+    <div v-show="index_pagina == 12" v-if="IsPagesVisible(13)" class="container">
       <Tokenomics :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
+    </div>
+    <div v-show="index_pagina == 13" v-if="IsPagesVisible(12)" class="container">
+      <Videos :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 14" v-if="IsPagesVisible(14)" class="container">
       <News :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
