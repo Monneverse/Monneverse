@@ -212,7 +212,7 @@ export default {
 
 /* Global y util */
 
-img {
+.arrow-2 img {
   width: 40%;
   position: relative;
   left: 50%;
