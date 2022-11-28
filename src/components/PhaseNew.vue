@@ -1,10 +1,23 @@
 <script>
 export default {
-    props: ["enterAnimation", "exitAnimation", "isRevert", "SetBloquearScroll"],
+    props: ["enterAnimation", "exitAnimation", "isRevert", "SetBloquearScroll", "next", "before"],
     mounted() {
-
+       
         // var panel = document.getElementById("contenido__fase");
         // panel.style.height = (panel.clientHeight) + "px";
+        let roadmap = document.getElementById("contenido");
+        roadmap.addEventListener('scroll', (event) => {
+
+            if (roadmap.scrollTop == 0) {
+                this.SetBloquearScroll(true);
+                this.before();
+            }
+
+            if (roadmap.offsetHeight + roadmap.scrollTop + 2 >= roadmap.scrollHeight) {
+                this.SetBloquearScroll(true);
+                this.next();
+            }
+        });
     }
 };
 </script>
@@ -20,13 +33,13 @@ export default {
 
     <div class="aro">
         <img src="../assets/aro.svg" />
-        <img  src="../assets/aro.svg" />
-      </div>
+        <img src="../assets/aro.svg" />
+    </div>
     <!-- Fin fondo -->
     <h2>ROAD MAP</h2>
-    <div id="contenido" class="contenido" @mousemove="this.SetBloquearScroll(false)" @mouseenter="this.SetBloquearScroll(false)"
-        @touchstart="this.SetBloquearScroll(false)" @touchend="this.SetBloquearScroll(true)"
-        @mouseleave="this.SetBloquearScroll(true)">
+    <div id="contenido" class="contenido" @click=" this.SetBloquearScroll(false)" @mousemove="this.SetBloquearScroll(false)"
+        @mouseenter="this.SetBloquearScroll(false)" @touchstart="this.SetBloquearScroll(false)"
+        @touchend="this.SetBloquearScroll(true)" @mouseleave="this.SetBloquearScroll(true)">
 
         <div id="contenido__fase" class="contenido__fase">
             <div id="linea" class="contenido__fase__linea"></div>
@@ -229,7 +242,8 @@ img {
     z-index: 12;
     display: none;
 }
-  .aro {
+
+.aro {
     top: 75%;
     display: flex;
     flex-direction: column;
@@ -238,11 +252,12 @@ img {
     z-index: 999;
     left: 68%;
     width: 30%;
-  }
-  .aro img:nth-child(2) {
+}
+
+.aro img:nth-child(2) {
     margin-top: -4rem;
     width: 90%;
-  }
+}
 
 
 .degradado {

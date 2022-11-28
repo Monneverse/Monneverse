@@ -543,7 +543,7 @@ export default {
     </div>
     <div v-show="index_pagina == 15" v-if="IsPagesVisible(15)" class="container">
       <FaseNew :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"
-        :SetBloquearScroll="SetBloquearScroll" />
+        :SetBloquearScroll="SetBloquearScroll" :next="next" :before="before" />
     </div>
     <div v-show="index_pagina == 16" v-if="IsPagesVisible(16)" class="container">
       <Team :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
