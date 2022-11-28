@@ -215,13 +215,7 @@ img {
   width: 100%;
   height: 100%;
 }
-.arrow-2 img {
-  width: 40%;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-}
+
 
 .invisible {
   opacity: 0;
@@ -424,13 +418,17 @@ img {
   top: 0%;
   left: 0%;
   z-index: 1;
-  display: table;
   margin: 0%;
   padding: 0%;
   cursor: pointer;
   user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.arrow-2 img {
+  width: 40%;
+}
 .arrow-2:hover {
   background: var(--color-secundario-hover);
 }
