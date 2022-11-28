@@ -74,7 +74,7 @@
     right: this.orientacion == 3, center: this.orientacion == 2, left: this.orientacion == 1, none: this.orientacion == 4
   }">
     <div @click="this.setNext()" class="arrow-2">
-      <i class="fa fa-angle-down"></i>
+      <img src="../assets/angle-down.svg" alt="icon down">
     </div>
     <div class="arrow-1 animated hinge infinite zoomIn"></div>
   </div>
@@ -213,8 +213,11 @@ export default {
 /* Global y util */
 
 img {
-  width: 100%;
-  height: 100%;
+  width: 40%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
 
 .invisible {
