@@ -59,7 +59,7 @@ export default {
       index: 0,
       index_pagina: 1,
       limite: 22,
-      pagesVisible: [1, 2,12],
+      pagesVisible: [1, 2, 12],
       isVisibleLogo: false,
       scroll: true,
       exitAnimation: false,
@@ -99,10 +99,10 @@ export default {
           if (newPosition == 11) {
             newPosition = 12;
           }
-        
-          if(newPosition==17){
-              newPosition = 22;
-            }
+
+          if (newPosition == 17) {
+            newPosition = 22;
+          }
           this.CambiarContenedor(newPosition);
         }
       }
@@ -122,10 +122,10 @@ export default {
           if (newPosition == 11) {
             newPosition = 10;
           }
-         
-          if(newPosition==21){
-              newPosition = 16;
-            }
+
+          if (newPosition == 21) {
+            newPosition = 16;
+          }
           this.CambiarContenedor(newPosition);
         }
       }
@@ -370,6 +370,7 @@ export default {
       };
       window.addEventListener("wheel", handleWheel, { passive: false });
       document.addEventListener("keydown", function () {
+
         if (
           event.ctrlKey == true &&
           (event.which == "61" ||
@@ -380,8 +381,29 @@ export default {
             event.which == "189")
         ) {
           event.preventDefault();
+
         }
       });
+
+    },
+    ctrlKey() {
+
+      var key = event;
+      console.log(key);
+      // if (event.code == "ArrowUp") {
+      //   console.log("Up");
+      // } 
+      // else if (event.code == "ArrowDown") {
+
+      //   console.log("Down");
+      // } else if (event.code == "ArrowLeft") {
+
+      //   console.log("Left");
+      // } else if (event.code == "ArrowRight") {
+
+      //   console.log("Right");
+      // }
+
     },
     Navegar() {
       if (this.scroll) {
@@ -400,7 +422,7 @@ export default {
             // if (newPosition == 13) {
             //   newPosition = 14;
             // }
-            if(newPosition==17){
+            if (newPosition == 17) {
               newPosition = 22;
             }
             this.isRevert = false;
@@ -418,7 +440,7 @@ export default {
             // if (newPosition == 13) {
             //   newPosition = 12;
             // }
-            if(newPosition==21){
+            if (newPosition == 21) {
               newPosition = 16;
             }
             this.isRevert = true;
@@ -452,6 +474,19 @@ export default {
     },
   },
   mounted() {
+
+    document.addEventListener('keydown', event => {
+      if (event.code == "ArrowUp") {
+        this.before();
+      }
+      else if (event.code == "ArrowDown") {
+        this.next();
+      } else if (event.code == "ArrowLeft") {
+        this.before();
+      } else if (event.code == "ArrowRight") {
+        this.next();
+      }
+    });
     document.addEventListener("wheel", this.Navegar);
 
     this.DisabledZoom();
@@ -462,6 +497,12 @@ export default {
     this.orientacion = typeOrientacion.center;
     this.CambiarContenedor(1);
   },
+  created() {
+
+    this.ctrlKey();
+  }
+
+
 };
 </script>
 
@@ -521,7 +562,7 @@ export default {
       <Benefits_card :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"
         :SetBloquearScroll="SetBloquearScroll" />
     </div>
-   
+
     <div v-show="index_pagina == 12" v-if="IsPagesVisible(13)" class="container">
       <Tokenomics :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
@@ -536,8 +577,7 @@ export default {
         :SetBloquearScroll="SetBloquearScroll" />
     </div>
     <div v-show="index_pagina == 16" v-if="IsPagesVisible(16)" class="container">
-      <Team :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"
-      />
+      <Team :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 17" v-if="IsPagesVisible(17)" class="container">
       <Fase :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
