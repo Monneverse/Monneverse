@@ -211,7 +211,10 @@ export default {
 /* Style of web */
 
 /* Global y util */
-
+img {
+  width: 100%;
+  height: 100%;
+}
 .arrow-2 img {
   width: 40%;
   position: relative;
