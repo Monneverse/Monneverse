@@ -22,6 +22,7 @@ import Fase5 from "./components/Phase5.vue";
 import Footer from "./components/Footer.vue";
 import Videos from "./components/Videos.vue";
 import Team from "./components/Team.vue";
+import Diagram from "./components/Diagram.vue";
 const typeOrientacion = Object.freeze({
   left: 1,
   center: 2,
@@ -53,12 +54,13 @@ export default {
     Footer,
     Videos,
     Team,
+    Diagram,
   },
   data() {
     return {
       index: 0,
       index_pagina: 1,
-      limite: 22,
+      limite: 23,
       pagesVisible: [1, 2],
       isVisibleLogo: false,
       scroll: true,
@@ -100,8 +102,8 @@ export default {
             newPosition = 12;
           }
 
-          if (newPosition == 17) {
-            newPosition = 22;
+          if (newPosition == 18) {
+            newPosition = 23;
           }
           this.CambiarContenedor(newPosition);
         }
@@ -123,8 +125,8 @@ export default {
             newPosition = 10;
           }
 
-          if (newPosition == 21) {
-            newPosition = 16;
+          if (newPosition == 22) {
+            newPosition = 17;
           }
           this.CambiarContenedor(newPosition);
         }
@@ -154,16 +156,16 @@ export default {
           this.index_pagina = 12;
           break;
         case 4:
-          if (this.index_pagina == 14) {
-            return;
-          }
-          this.index_pagina = 14;
-          break;
-        case 5:
           if (this.index_pagina == 15) {
             return;
           }
           this.index_pagina = 15;
+          break;
+        case 5:
+          if (this.index_pagina == 16) {
+            return;
+          }
+          this.index_pagina = 16;
           break;
         case 6:
           if (this.index_pagina == 1) {
@@ -258,7 +260,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right;
           }
-          this.index = 0;
+          this.index = 3;
           break;
         case 14:
           if (window.innerWidth < 900) {
@@ -266,7 +268,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right;
           }
-          this.index = 4;
+          this.index = 0;
           break;
         case 15:
           if (window.innerWidth < 900) {
@@ -275,7 +277,7 @@ export default {
             this.orientacion = typeOrientacion.left;
           }
 
-          this.index = 5;
+          this.index = 4;
           break;
         case 16:
           if (window.innerWidth < 900) {
@@ -283,7 +285,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right;
           }
-          this.index = 0;
+          this.index = 5;
           break;
         case 17:
           if (window.innerWidth < 900) {
@@ -291,7 +293,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right;
           }
-          this.index = 5;
+          this.index = 0;
           break;
         case 18:
           if (window.innerWidth < 900) {
@@ -299,7 +301,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right;
           }
-          this.index = 5;
+          this.index = 0;
           break;
         case 19:
           if (window.innerWidth < 900) {
@@ -400,8 +402,8 @@ export default {
             if (newPosition == 11) {
               newPosition = 12;
             }
-            if (newPosition == 17) {
-              newPosition = 22;
+            if (newPosition == 18) {
+              newPosition = 23;
             }
             this.isRevert = false;
           }
@@ -415,8 +417,8 @@ export default {
             if (newPosition == 11) {
               newPosition = 10;
             }
-            if (newPosition == 21) {
-              newPosition = 16;
+            if (newPosition == 22) {
+              newPosition = 17;
             }
             this.isRevert = true;
           }
@@ -532,39 +534,42 @@ export default {
         :SetBloquearScroll="SetBloquearScroll" />
     </div>
 
-    <div v-show="index_pagina == 12" v-if="IsPagesVisible(13)" class="container">
+    <div v-show="index_pagina == 12" v-if="IsPagesVisible(12)" class="container">
       <Tokenomics :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 13" v-if="IsPagesVisible(12)" class="container">
-      <Videos :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
+    <div v-show="index_pagina == 13" v-if="IsPagesVisible(13)" class="container">
+      <Diagram :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 14" v-if="IsPagesVisible(14)" class="container">
-      <News :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
+      <Videos :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
     <div v-show="index_pagina == 15" v-if="IsPagesVisible(15)" class="container">
+      <News :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
+    </div>
+    <div v-show="index_pagina == 16" v-if="IsPagesVisible(16)" class="container">
       <FaseNew :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"
         :SetBloquearScroll="SetBloquearScroll" :next="next" :before="before" />
     </div>
-    <div v-show="index_pagina == 16" v-if="IsPagesVisible(16)" class="container">
+    <div v-show="index_pagina == 17" v-if="IsPagesVisible(17)" class="container">
       <Team :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 17" v-if="IsPagesVisible(17)" class="container">
+    <div v-show="index_pagina == 18" v-if="IsPagesVisible(18)" class="container">
       <Fase :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="index_pagina == 18" v-if="IsPagesVisible(18)" class="container">
+    <div v-show="index_pagina == 19" v-if="IsPagesVisible(19)" class="container">
       <Fase2 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 19" v-if="IsPagesVisible(19)" class="container">
+    <div v-show="index_pagina == 20" v-if="IsPagesVisible(20)" class="container">
       <Fase3 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 20" v-if="IsPagesVisible(20)" class="container">
+    <div v-show="index_pagina == 21" v-if="IsPagesVisible(21)" class="container">
       <Fase4 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == 21" v-if="IsPagesVisible(21)" class="container">
+    <div v-show="index_pagina == 22" v-if="IsPagesVisible(22)" class="container">
       <Fase5 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == limite" v-if="IsPagesVisible(22)" class="container">
+    <div v-show="index_pagina == limite" v-if="IsPagesVisible(23)" class="container">
       <Footer :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
   </main>
