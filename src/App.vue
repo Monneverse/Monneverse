@@ -59,7 +59,7 @@ export default {
       index: 0,
       index_pagina: 1,
       limite: 22,
-      pagesVisible: [1, 2, 12],
+      pagesVisible: [1, 2],
       isVisibleLogo: false,
       scroll: true,
       exitAnimation: false,
@@ -386,25 +386,6 @@ export default {
       });
 
     },
-    ctrlKey() {
-
-      var key = event;
-      console.log(key);
-      // if (event.code == "ArrowUp") {
-      //   console.log("Up");
-      // } 
-      // else if (event.code == "ArrowDown") {
-
-      //   console.log("Down");
-      // } else if (event.code == "ArrowLeft") {
-
-      //   console.log("Left");
-      // } else if (event.code == "ArrowRight") {
-
-      //   console.log("Right");
-      // }
-
-    },
     Navegar() {
       if (this.scroll) {
         this.scroll = false;
@@ -419,9 +400,6 @@ export default {
             if (newPosition == 11) {
               newPosition = 12;
             }
-            // if (newPosition == 13) {
-            //   newPosition = 14;
-            // }
             if (newPosition == 17) {
               newPosition = 22;
             }
@@ -437,9 +415,6 @@ export default {
             if (newPosition == 11) {
               newPosition = 10;
             }
-            // if (newPosition == 13) {
-            //   newPosition = 12;
-            // }
             if (newPosition == 21) {
               newPosition = 16;
             }
@@ -487,6 +462,10 @@ export default {
         this.next();
       }
     });
+    setTimeout(()=>{
+
+      this.pagesVisible.push(12);
+    }, 10000);
     document.addEventListener("wheel", this.Navegar);
 
     this.DisabledZoom();
@@ -496,12 +475,7 @@ export default {
     this.orientacion = typeOrientacion.none;
     this.orientacion = typeOrientacion.center;
     this.CambiarContenedor(1);
-  },
-  created() {
-
-    this.ctrlKey();
   }
-
 
 };
 </script>
@@ -514,11 +488,6 @@ export default {
   </header>
 
   <main class="scroll-main">
-    <!-- 
-    Fonts para el proyecto calibri, Bahnschrift semibold semiconden, work sans, work sans Semibold
-     LCD, LCD MOno, Roboto
-    -->
-
     <div v-show="index_pagina == 1" v-if="IsPagesVisible(1)" class="container">
       <Bienvenida :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
