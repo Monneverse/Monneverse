@@ -285,7 +285,7 @@ img {
     transform: translate(-50%, -50%);
     width: 90%;
     padding-left: .5rem;
-    margin-top: 1rem;
+    margin-top: .5rem;
     height: 70%;
     z-index: 6;
     overflow: hidden;
@@ -302,7 +302,7 @@ h2 {
     color: var(--color-secundario);
     text-align: center;
     position: absolute;
-    top: 11.5%;
+    top: 5rem;
     width: 100%;
     z-index: 5;
     font-family: "Montserrat", "Work Sans";
