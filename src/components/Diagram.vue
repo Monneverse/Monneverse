@@ -26,10 +26,10 @@ export default {};
   </div>
 
   <div class="contenido">
-    <img class="web" src="/img/Diagram/TNK1.png" alt="diagram" srcset="" />
+    <img class="web" src="/img/Diagram/TKN1.png" alt="diagram" srcset="" />
     <img
       class="movil"
-      src="/img/Diagram/TNK2.png"
+      src="/img/Diagram/TKN2.png"
       alt="diagram"
       srcset=""
     />
@@ -155,7 +155,7 @@ img {
 
 .contenido {
   position: relative;
-  top: 10%;
+  top: 18%;
   z-index: 29;
   box-sizing: border-box;
   display: flex;
@@ -164,8 +164,12 @@ img {
   padding: 2rem;
   left: 0%;
   height: auto;
-  width: 80%;
+  width: 75%;
 }
+.contenido img {
+    width: 50rem;
+    height: auto;
+  }
 
 
 @keyframes aparecer {
@@ -204,6 +208,7 @@ img {
     top: 15%;
     width: 100%;
     height: 90%;
+    
   }
   .contenido img {
     width: auto;
