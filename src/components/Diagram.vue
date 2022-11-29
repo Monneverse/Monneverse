@@ -191,7 +191,7 @@ img {
   left: 1rem;
   width: 20rem;
   height: 5rem;
-  z-index: 14;
+  z-index: 999;
   display: flex;
   justify-content: start;
 }
