@@ -451,7 +451,10 @@ export default {
     },
   },
   mounted() {
+    window.addEventListener('resize', () => {
 
+      this.UpdateNav(this.index_pagina);
+    });
     document.addEventListener('keydown', event => {
       if (event.code == "ArrowUp") {
         this.before();
@@ -464,7 +467,7 @@ export default {
         this.next();
       }
     });
-    setTimeout(()=>{
+    setTimeout(() => {
 
       this.pagesVisible.push(12);
     }, 10000);
