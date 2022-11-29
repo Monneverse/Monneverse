@@ -26,10 +26,10 @@ export default {};
   </div>
 
   <div class="contenido">
-    <img class="web" src="/img/Diagram/token2.png" alt="diagram" srcset="" />
+    <img class="web" src="/img/Diagram/TNK1.png" alt="diagram" srcset="" />
     <img
       class="movil"
-      src="/img/Diagram/token1.png"
+      src="/img/Diagram/TNK2.png"
       alt="diagram"
       srcset=""
     />
