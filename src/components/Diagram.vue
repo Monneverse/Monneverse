@@ -26,10 +26,10 @@ export default {};
   </div>
 
   <div class="contenido">
-    <img class="web" src="/img/Diagram/diagramW.png" alt="diagram" srcset="" />
+    <img class="web" src="/img/Diagram/token2.png" alt="diagram" srcset="" />
     <img
       class="movil"
-      src="/img/Diagram/diagramM.png"
+      src="/img/Diagram/token1.png"
       alt="diagram"
       srcset=""
     />
@@ -146,9 +146,11 @@ img {
   z-index: 1;
 }
 .titulo h1 {
-  text-align: center;
-  color: #ffc000;
-  font-family: "Montserrat", "Work Sans";
+  text-align: center ;
+  color: white;
+  font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
+  font-size: 2.5rem;
+  font-weight: 500;
 }
 
 .contenido {
@@ -164,6 +166,7 @@ img {
   height: auto;
   width: 80%;
 }
+
 
 @keyframes aparecer {
   0% {
