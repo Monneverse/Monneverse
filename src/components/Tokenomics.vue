@@ -450,7 +450,7 @@ h2 {
 .purchase-tax p {
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   text-align: right;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
 @media screen and (min-width: 950px) {
@@ -507,7 +507,7 @@ h2 {
 
 .plus {
   position: relative;
-  top: 4%;
+  top: 8%;
   width: 80%;
   height: 80%;
   margin: 0 auto;
@@ -528,6 +528,7 @@ h2 {
 
 @media screen and (min-width: 950px) {
   .plus {
+    top: 4%;
     width: 100%;
     height: 85%;
   }
@@ -555,7 +556,7 @@ h2 {
 
 .sale-tax p {
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 @media screen and (min-width: 950px) {
