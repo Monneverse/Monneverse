@@ -109,7 +109,7 @@
       <br>The Monner Will Return {{ porcentajeInteres }}% Interest
     </p>
 
-    <p class="descripcion_information seg_linea">Note: Our Staking is only for the first <span>320</span>  holders that enter our pre-sale</p>
+    <p class="descripcion_information seg_linea">Note: Our Staking is only for the first <span>600</span>  holders that enter our pre-sale</p>
   </article>
 
   <!-- redes sociales -->
