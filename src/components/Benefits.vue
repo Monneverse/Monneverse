@@ -80,13 +80,12 @@ export default {
           <img id="b" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
           <div class="content-price">
             <div class="titulo-two">
-              <h2><span>$ </span>17.5  <b> USD</b>   in PancakeSwap <img src="/img/cakelogo.png" alt="" srcset=""></h2>
+              <h2><span>$ </span>7.0  <b> USD</b>   in PancakeSwap <img src="/img/cakelogo.png" alt="" srcset=""></h2>
             </div>
           </div>
           <div class="content-text">
               <div class="text">
-                <p>Sale Price <br> The price Pancakeswap for purchase and sales will be $17.5 one day after the pre-sale
-                  of our first 2,000,000 the public ends</p>
+                <p>Price is bought and sold: <br>  MNR will be priced at $7.0 on your listing at a PancakeSwap Right at the time our pre-sale ends.</p>
               </div>
           </div>
         </div>
@@ -113,7 +112,7 @@ export default {
               <p class="">
                 Enter our first phase os staking buying in pre-sale and earn
                 6.2% every 48 hours of your total capital in Monnercoins after
-                the launch in Pancakeswap.  <span  class="amarrillo">Only for the first 320 holders</span>
+                the launch in Pancakeswap.  <span  class="amarrillo">Only for the first 600 holders</span>
               </p>
             </div>
           </div>
