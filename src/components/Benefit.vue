@@ -75,16 +75,7 @@ export default {
             <br />
           </p>
         </div>
-        <div :class="{
-          buttom: true,
-          'animacion-aparecer': this.enterAnimation && !this.isRevert,
-          'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          'animacion-desaparecer': this.enterAnimation && this.isRevert,
-          'animacion-desaparecer-revert':
-            this.exitAnimation && !this.isRevert,
-        }">
-          <buttom class="btn centrar">READ MORE</buttom>
-        </div>
+       
       </div>
     </div>
   </div>
@@ -135,8 +126,9 @@ img {
 
 .titulo {
   position: absolute;
+
   width: 100%;
-  top: 4.5rem;
+  top: 5rem;
   text-align: center;
   z-index: 45;
 }
@@ -179,7 +171,7 @@ img {
 
 .benefits {
   position: absolute;
-  top: 20%;
+  top: 12%;
   z-index: 8;
   width: 100%;
   height: 100%;
@@ -211,37 +203,7 @@ img {
   border-radius: 3vw;
 }
 
-.buttom {
-  margin: 0 auto;
-  position: relative;
-  top: -30px;
-  width: 100%;
-  height: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-@media screen and (width > 769px) {
-  .buttom {
-    top: 0;
-    height: 10%;
-  }
-}
-
-.btn {
-  padding: 10px;
-  background: linear-gradient(90deg,
-      rgb(18, 17, 65) 0%,
-      rgba(1, 209, 88, 1) 100%);
-  border-radius: 0.5vw;
-  cursor: pointer;
-  width: 7rem;
-  font-size: 1rem;
-  font-family: "WorkSans", sans-serif;
-  text-align: center;
-  color: white;
-}
 
 .contenedor-parrafo p {
   font-size: 3vw;
