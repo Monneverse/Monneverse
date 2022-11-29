@@ -50,7 +50,7 @@ export default {
                 <div class="reloj">
                     <img src="/img/reloj.png" alt="reloj">
                 </div>
-                <h3>Q1</h3>
+                <h3>F1</h3>
 
                 <div class="fase__contenido">
 
@@ -63,7 +63,7 @@ export default {
                         <li> -Audits and KYC approved</li>
                         <li> -working mining farms</li>
                         <li>-Start of <span class="resaltar">MNR</span> pre-sale in Pinksale</li>
-                        <li>-listed on PancakeSwap at <span class="resaltar">17.5usd</span></li>
+                        <li>-listed on PancakeSwap at <span class="resaltar">$ 7.0 usd</span></li>
                         <li> -Injection of liquidity to raise our price after its first listing and protect it from
                             sales.
                         </li>
@@ -80,7 +80,7 @@ export default {
                 <div class="reloj">
                     <img src="/img/reloj.png" alt="reloj">
                 </div>
-                <h3>Q2</h3>
+                <h3>F2</h3>
                 <div class="fase__contenido">
 
                     <ul>
@@ -112,7 +112,7 @@ export default {
                 <div class="reloj">
                     <img src="/img/reloj.png" alt="reloj">
                 </div>
-                <h3>Q3</h3>
+                <h3>F3</h3>
                 <div class="fase__contenido">
 
                     <ul>
@@ -135,7 +135,7 @@ export default {
                 <div class="reloj">
                     <img src="/img/reloj.png" alt="reloj">
                 </div>
-                <h3>Q4</h3>
+                <h3>F4</h3>
                 <div class="fase__contenido">
 
                     <ul>
