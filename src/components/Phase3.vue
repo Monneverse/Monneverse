@@ -11,13 +11,13 @@ export default {
   <!--FONDO-->
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
-  <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
+  <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" alt="Background-montain" /></div>
   <div class="fondo fondo-oscurecer"></div>
   <div class="circuito circuito-izquierdo">
-    <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
+    <img src="/img/calculadora/circuito-izquierdo.png" alt="circuit" />
   </div>
   <div class="circuito circuito-derecho">
-    <img src="/img/calculadora/circuito-derecho.png" alt="" />
+    <img src="/img/calculadora/circuito-derecho.png" alt="circuit" />
   </div>
   <!--FIN FONDO-->
   <div class="arrow"></div>
@@ -46,7 +46,7 @@ export default {
     'circulo__1_aparecer': this.enterAnimation && !this.isRevert,
     'circulo__1_desaparecer_revert': this.exitAnimation && this.isRevert,
   }">
-    <img src="../assets/aro.svg" />
+    <img src="../assets/aro.svg" alt="Ring" />
   </div>
 
   <div :class="{
@@ -54,7 +54,7 @@ export default {
     'circulo__2_aparecer': this.enterAnimation && !this.isRevert,
     'circulo__2_desaparecer_revert': this.exitAnimation && this.isRevert,
   }">
-    <img src="../assets/aro.svg" />
+    <img src="../assets/aro.svg" alt="Ring" />
   </div>
 
   <div :class="{
