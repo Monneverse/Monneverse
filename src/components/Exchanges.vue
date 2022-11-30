@@ -5,16 +5,21 @@ export default {
     ComponenteIconos,
   },
   props: ["enterAnimation", "exitAnimation", "isRevert"],
-  methods:{
+  methods: {
     next() {
       let panel = document.getElementById('contenidoExchange');
-      panel.scrollLeft += panel.offsetWidth  ;
+      let count = parseInt((panel.scrollLeft + panel.offsetWidth +5) / panel.offsetWidth);
+      panel.scrollLeft = panel.clientWidth * count;
 
     },
     before() {
       let panel = document.getElementById('contenidoExchange');
-      panel.scrollLeft -= panel.offsetWidth;
+      let count = parseInt((panel.scrollLeft - panel.offsetWidth -5) / panel.offsetWidth);
 
+      if (count != (panel.scrollLeft - panel.offsetWidth-5) / panel.offsetWidth) {
+        count++;
+      }
+      panel.scrollLeft = panel.offsetWidth * count;
     }
   }
 };
@@ -63,7 +68,7 @@ export default {
       'contenedor_crypto_animation_salida': this.exitAnimation && !this.isRevert,
       'contenedor_crypto_animation_salida_revert': this.enterAnimation && this.isRevert
     }">
-      <div  class="caja-cryptos">
+      <div class="caja-cryptos">
         <div class="cryptos">
           <ComponenteIconos :class="{
             animated: true,

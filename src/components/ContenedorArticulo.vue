@@ -61,11 +61,6 @@ export default {
           link: "https://sites.google.com/view/blog-monnerverse/home/why-will-monner-become-one-of-the-best-cryptocurrencies-to-invest-in",
         },
       ],
-      fechaEvento: new Date(2022, 9, 12, 4, 0, 0, 0),
-      diaString: "00",
-      horaString: "00",
-      minutoString: "00",
-      segundoString: "00",
       inicio: 0,
       salto: 3,
     };
