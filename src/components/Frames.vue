@@ -22,7 +22,7 @@ export default {};
     <img src="/img/fondo-benefit.png" alt="Background-monner" />
   </div>
   <div class="titulo">
-    <h1>TOKENOMIC</h1>
+    <h1>BENEFITS</h1>
   </div>
 
   <div class="contenido">
