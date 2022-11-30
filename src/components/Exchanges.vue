@@ -254,9 +254,7 @@ img {
   width: 100%;
   height: 100%;
 }
-*{
-  border: 1px solid red;
-}
+
 .animated.duration1s {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
