@@ -15,31 +15,31 @@
   <div class="fondo-oscuro1"></div>
   <div class="fondo-oscuro"></div>
   <div id="logo-1" class="logo">
-    <img src="/img/logo.svg" alt="" />
+    <img src="/img/logo.svg" alt="logo" />
   </div>
   <div class="fondo-montana">
-    <img src="/img/fondo-montana.png" alt="" srcset="" />
+    <img src="/img/fondo-montana.png" alt="Background-montain" srcset="" />
   </div>
   <div class="fondo-montana">
-    <img src="/img/fondo-montana.png" alt="" srcset="" />
+    <img src="/img/fondo-montana.png" alt="Background-montain" srcset="" />
   </div>
   <div class="fondo-montana">
-    <img src="/img/fondo-montana.png" alt="" srcset="" />
+    <img src="/img/fondo-montana.png" alt="Background-montain" srcset="" />
   </div>
   <div class="fondo-mundial">
-    <img src="/img/fondo_Cel.png" alt="" srcset="" />
+    <img src="/img/fondo_Cel.png" alt="Background-cell" srcset="" />
   </div>
   <div class="circuito circuito-izquierdo">
-    <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
+    <img src="/img/calculadora/circuito-izquierdo.png" alt="Circuit" />
   </div>
   <div class="circuito circuito-derecho">
-    <img src="/img/calculadora/circuito-derecho.png" alt="" />
+    <img src="/img/calculadora/circuito-derecho.png" alt="Circuit" />
   </div>
   <div class="circuito circuito-izquierdo">
-    <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
+    <img src="/img/calculadora/circuito-izquierdo.png" alt="Circuit" />
   </div>
   <div class="circuito circuito-derecho">
-    <img src="/img/calculadora/circuito-derecho.png" alt="" />
+    <img src="/img/calculadora/circuito-derecho.png" alt="Circuit" />
   </div>
   <div
     :class="{
@@ -50,7 +50,7 @@
       fadeOut: this.exitAnimation,
     }"
   >
-    <img src="/img/luz.png" alt="" />
+    <img src="/img/luz.png" alt="Light" />
   </div>
   <div
     class="fondoSolidity"
@@ -84,11 +84,12 @@
       <img
         src="/img/Exchanges/solidity1.png"
         class="auditoria1 zoomIn animated"
+        alt="Solidity"
     /></a>
     <a
       href="https://sites.google.com/view/certik-kyc-approved/certik-kyc-approved"
       target="_blank"
-      ><img class="auditoria2" src="/img/Exchanges/certik.png"
+      ><img class="auditoria2" src="/img/Exchanges/certik.png" alt="Certik"
     /></a>
     <button
       class="btn_registro"
@@ -713,35 +714,35 @@ img {
 /* REDES */
 
 .logo-redes {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    width: 20rem;
-    height: 5rem;
-    z-index: 14;
-    display: flex;
-    justify-content: start;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  width: 20rem;
+  height: 5rem;
+  z-index: 14;
+  display: flex;
+  justify-content: start;
 }
 
 .icon {
   width: 3rem;
-  height:  3rem;
+  height: 3rem;
   z-index: 18;
   margin-left: 1rem;
 }
 
 @media only screen and (min-device-width: 75px) and (max-device-width: 900px) {
-    .logo-redes {
-        display: none;
-    }
+  .logo-redes {
+    display: none;
+  }
 
-    .icon {
-        width: 2.3rem;
-    }
+  .icon {
+    width: 2.3rem;
+  }
 
-    .logos_auditoria {
-        margin-top: 2rem;
-    }
+  .logos_auditoria {
+    margin-top: 2rem;
+  }
 }
 
 /* FIN REDES */

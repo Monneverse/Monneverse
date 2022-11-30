@@ -132,7 +132,7 @@ export default {
       fondo__desaparecer2: this.exitAnimation && !this.isRevert,
     }"
   >
-    <img src="/img/rayos.png" alt="" />
+    <img src="/img/rayos.png" alt="Background-ray" />
   </div>
   <div
     :class="{
@@ -140,7 +140,7 @@ export default {
     }"
     class="fondo-benefit"
   >
-    <img src="/img/fondo-benefit.png" alt="" />
+    <img src="/img/fondo-benefit.png" alt="Background-monner" />
   </div>
 
   <div class="titulo">

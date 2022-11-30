@@ -19,7 +19,7 @@
       fadeOutDown: this.exitAnimation,
     }"
   >
-    <img src="../assets/methodBuy/visa.svg" />
+    <img src="../assets/methodBuy/visa.svg" alt="Visa"/>
   </div>
   <div
     class="mastercard_img"
@@ -30,7 +30,7 @@
       fadeOutDown: this.exitAnimation,
     }"
   >
-    <img src="../assets/methodBuy/masterCard.svg" />
+    <img src="../assets/methodBuy/masterCard.svg" alt="MasterdCard" />
   </div>
 
   <div class="circulos_redes">
@@ -43,32 +43,33 @@
         }">
       <img
         src="../assets/aro-iluminado-brillante.svg"
+        alt="circle-illuminated"
        
       />
     </div>
     <div class="circle">
-      <img src="../assets/circulo-colores.svg" />
+      <img src="../assets/circulo-colores.svg" alt="Circle-colors"/>
     </div>
   </div>
   <!--FONDO-->
   <div class="fondo fondo-calculadora"></div>
   <div class="fondo filtro-superior"></div>
-  <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
+  <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" alt="Background-montain" /></div>
   <div class="fondo fondo-oscurecer"></div>
   <div class="fondo-mundial">
-    <img src="/img/fondo_Cel.png" alt="" srcset="" />
+    <img src="/img/fondo_Cel.png" alt="Background-cell" srcset="" />
   </div>
   <div class="fondo_rayos">
-    <img src="/img/rayos.png" alt="" />
+    <img src="/img/rayos.png" alt="Background-ray" />
   </div>
   <div class="fondoTokenomics">
-    <img src="/img/fondo_Tokenomics.png" alt="" />
+    <img src="/img/fondo_Tokenomics.png" alt="Background-monner" />
   </div>
   <div id="logo-1" class="logo">
-    <img src="/img/logo.svg" alt="" />
+    <img src="/img/logo.svg" alt="logo" />
   </div>
   <div id="logo-2" class="logo">
-    <img src="/img/logo.svg" alt="" />
+    <img src="/img/logo.svg" alt="logo" />
   </div>
 
   <div class="degradado degradado_izquierdo"></div>

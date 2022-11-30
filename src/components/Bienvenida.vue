@@ -7,10 +7,10 @@
 
   <!-- logos de fondos -->
   <div id="logo-1" class="logo">
-    <img src="/img/logo.svg" alt="" />
+    <img src="/img/logo.svg" alt="logo-monner" />
   </div>
   <div id="logo-2" class="logo">
-    <img src="/img/logo.svg" alt="" />
+    <img src="/img/logo.svg" alt="logo-monner" />
   </div>
 
   <!-- imagenes fondos -->
@@ -18,19 +18,19 @@
     <img src="../assets/aro-iluminado-brillante.svg" alt="" />
   </div>
   <div class="fondo-montana">
-    <img src="/img/fondo-montana.png" alt="" srcset="" />
+    <img src="/img/fondo-montana.png" alt="Background-montain"  />
   </div>
   <div class="fondo-montana">
-    <img src="/img/fondo-montana.png" alt="" srcset="" />
+    <img src="/img/fondo-montana.png" alt="Background-montain"  />
   </div>
   <div class="fondo-montana">
-    <img src="/img/fondo-montana.png" alt="" srcset="" />
+    <img src="/img/fondo-montana.png" alt="Background-montain"  />
   </div>
   <div class="fondo-oscuro"></div>
   <div class="fondo-oscuro-superior"> </div>
   <div class="iluminacionLogo"></div>
   <div class="fondo-mundial">
-    <img src="/img/fondo_Cel.png" alt="" srcset="" />
+    <img src="/img/fondo_Cel.png" alt="Background-cell"  />
   </div>
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
