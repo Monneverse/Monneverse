@@ -1,37 +1,47 @@
 <script>
 export default {
   props: ["enterAnimation", "exitAnimation", "isRevert"],
+  methods: {
+    next() {
+      let panel = document.getElementById('contenidoTokenomic');
+      panel.scrollLeft = panel.scrollWidth;
+
+    },
+    before() {
+
+      let panel = document.getElementById('contenidoTokenomic');
+      panel.scrollLeft = 0;
+
+    }
+  }
 };
 </script>
 
 <template>
   <!-- Fondos -->
+  <div class="arrow" @click="next()"></div>
+  <div class="arrow2" @click="before()"></div>
   <div class="fondo">
-    <div
-      class="fondo_rayos"
-    >
+    <div class="fondo_rayos">
       <img src="/img/rayos.png" alt="" />
     </div>
 
     <div class="fondo-telefono">
       <img src="/img/fondo_Cel.png" alt="" srcset="" />
     </div>
-    <div class="arrow"></div>
-    <div class="arrow2"></div>
+
     <div class="fondo filtro-superior"></div>
     <div class="fondo-oscuro"></div>
     <div class="fondo fondo-oscurecer"></div>
-    <div
-      :class="{
-        fondoTokenomics: true,
-        'animacion-benefit': this.enterAnimation && !this.isRevert,
-        'animacion-benefit-revert': this.exitAnimation && this.isRevert,
-        'animacion-benefit-up': this.enterAnimation && this.isRevert,
-        'animacion-benefit-up-revert': this.exitAnimation && !this.isRevert,
-        'animacion-desaparecer': this.enterAnimation && this.isRevert,
-        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
-      }"
-    >
+    <div  :class="{
+      fondoTokenomics: true,
+      'animacion-benefit': this.enterAnimation && !this.isRevert,
+      'animacion-benefit-revert': this.exitAnimation && this.isRevert,
+      'animacion-benefit-up': this.enterAnimation && this.isRevert,
+      'animacion-benefit-up-revert': this.exitAnimation && !this.isRevert,
+      'animacion-desaparecer': this.enterAnimation && this.isRevert,
+      'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+    }">
       <img src="/img/fondo_Tokenomics.png" alt="" />
       <div class="imagen_Eclipse"></div>
     </div>
@@ -43,32 +53,26 @@ export default {
   </div>
 
   <!-- Contenedor de Contenido -->
-  <div
-    :class="{
-      titulo: true,
-      'animacion-aparecer': this.enterAnimation && !this.isRevert,
-      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      'animacion-desaparecer': this.enterAnimation && this.isRevert,
-      'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
-    }"
-  >
+  <div :class="{
+    titulo: true,
+    'animacion-aparecer': this.enterAnimation && !this.isRevert,
+    'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+    'animacion-desaparecer': this.enterAnimation && this.isRevert,
+    'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+  }">
     <h1>TOKENOMICS</h1>
   </div>
-  <div
-    :class="{
-      content: true,
-      'animacion-aparecer': this.enterAnimation && !this.isRevert,
-      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      'animacion-desaparecer': this.enterAnimation && this.isRevert,
-      'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
-    }"
-  >
+  <div id="contenidoTokenomic" :class="{
+    content: true,
+    'animacion-aparecer': this.enterAnimation && !this.isRevert,
+    'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+    'animacion-desaparecer': this.enterAnimation && this.isRevert,
+    'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+  }">
     <div class="cards">
       <div class="purchase-tax">
         <div class="">
-          <div
-            class="titulo1"
-          >
+          <div class="titulo1">
             <h2>Purchase Tax 0%</h2>
           </div>
         </div>
@@ -104,15 +108,13 @@ export default {
     <div class="cards">
       <div class="sale-tax">
         <div class="">
-          <div
-            :class="{
-              titulo2: true,
-              animated: true,
-              duration1s: true,
-              fadeInRight: this.enterAnimation,
-              fadeOutRight: this.exitAnimation,
-            }"
-          >
+          <div :class="{
+            titulo2: true,
+            animated: true,
+            duration1s: true,
+            fadeInRight: this.enterAnimation,
+            fadeOutRight: this.exitAnimation,
+          }">
             <h2>Sale Tax 15%</h2>
           </div>
         </div>
@@ -136,15 +138,13 @@ export default {
       </div>
     </div>
   </div>
-  <div
-    :class="{
-      'container-alianza': true,
-      'animacion-aparecer': this.enterAnimation && !this.isRevert,
-      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      'animacion-desaparecer': this.enterAnimation && this.isRevert,
-      'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
-    }"
-  >
+  <div :class="{
+    'container-alianza': true,
+    'animacion-aparecer': this.enterAnimation && !this.isRevert,
+    'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+    'animacion-desaparecer': this.enterAnimation && this.isRevert,
+    'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+  }">
     <div class="contenido">
       <div class="nombre_Alianza">
         <h1>UPCOMING ALLIANCES</h1>
@@ -175,12 +175,14 @@ export default {
   font-style: semibold;
   font-stretch: semi-condensed;
 }
+
 @font-face {
   font-family: "Arial";
   src: url("/Fonts/arial.ttf");
   font-style: semibold;
   font-stretch: semi-condensed;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/Fonts/Montserrat-Regular.ttf");
@@ -197,9 +199,11 @@ img {
   width: 100%;
   height: 100%;
 }
+
 h2 {
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
 }
+
 .titulo {
   position: absolute;
   width: 100%;
@@ -257,12 +261,10 @@ h2 {
 .filtro-superior {
   position: absolute;
   z-index: 4;
-  background: radial-gradient(
-    circle at center,
-    #14ec84 0%,
-    #0b5f50 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #14ec84 0%,
+      #0b5f50 50%,
+      #505863 100%);
   opacity: 30%;
 }
 
@@ -283,6 +285,7 @@ h2 {
   width: 100%;
   height: 100%;
 }
+
 @media screen and (width < 769px) {
   .fondo {
     position: absolute;
@@ -376,11 +379,9 @@ h2 {
 }
 
 .content::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    90deg,
-    rgb(33, 32, 85) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%);
   border-radius: 20px;
   border: 2px solid #f1f2f3;
 }
@@ -474,11 +475,9 @@ h2 {
   align-items: center;
   height: 80%;
   width: 100%;
-  background: linear-gradient(
-    90deg,
-    rgb(33, 32, 85) 0%,
-    rgba(1, 209, 88, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%);
   border-radius: 0.5vw;
 }
 
@@ -519,6 +518,7 @@ h2 {
   justify-content: center;
   width: 50%;
 }
+
 .plus div img {
   width: 1.7rem;
 }
@@ -529,6 +529,7 @@ h2 {
     width: 100%;
     height: 85%;
   }
+
   .plus div {
     margin: 0 auto;
     width: 100%;
@@ -690,6 +691,7 @@ h2 {
 }
 
 @media screen and (max-width: 900px) {
+
   .arrow,
   .arrow:before {
     position: absolute;
@@ -784,17 +786,20 @@ h2 {
     }
   }
 }
+
 .animacion-aparecer {
   animation-duration: 0.5s;
   animation-name: aparecer;
   animation-iteration-count: 1;
 }
+
 .animacion-aparecer-revert {
   animation-duration: 0.8s;
   animation-name: aparecer;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
+
 .animacion-desaparecer {
   animation-duration: 0.8s;
   animation-name: aparecer;
@@ -823,12 +828,14 @@ h2 {
   animation-name: arriba;
   animation-iteration-count: 1;
 }
+
 .animacion-benefit-up-revert img {
   animation-duration: 0.8s;
   animation-name: arriba;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
+
 @keyframes arriba {
   0% {
     top: -35%;
@@ -836,6 +843,7 @@ h2 {
     opacity: 20%;
   }
 }
+
 .animated.duration1s {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
