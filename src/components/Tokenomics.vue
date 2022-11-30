@@ -202,6 +202,7 @@ p span {
 
 /* Fondo de la pagina*/
 img {
+  
   width: 100%;
   height: 100%;
 }
@@ -364,7 +365,7 @@ h2 {
 
 .content {
   position: relative;
-  z-index: 55;
+  z-index: 5;
   top: 20%;
   display: flex;
   width: 78%;
@@ -374,6 +375,7 @@ h2 {
   scroll-snap-type: x mandatory;
   overflow-y: hidden;
   overflow-x: scroll;
+  opacity: 1000%;
 }
 
 .content::-webkit-scrollbar {
@@ -607,7 +609,7 @@ h2 {
   bottom: 0%;
   width: 100%;
   height: 10%;
-  z-index: 50;
+  z-index: 20;
   display: flex;
   justify-content: center;
 }
@@ -624,7 +626,7 @@ h2 {
   display: grid;
   grid-template-columns: 60% 20% 20%;
   align-items: center;
-  opacity: 70%;
+  opacity: 100%;
 }
 
 .nombre_Alianza {
