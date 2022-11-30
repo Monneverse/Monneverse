@@ -521,7 +521,7 @@ export default {
     </div>
 
     <div v-show="index_pagina == 8" v-if="IsPagesVisible(8)" class="container">
-      <Logos_auditorias :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
+      <Logos_auditorias :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" />
     </div>
 
     <div v-show="index_pagina == 9" v-if="IsPagesVisible(9)" class="container">

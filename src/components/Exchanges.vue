@@ -5,6 +5,18 @@ export default {
     ComponenteIconos,
   },
   props: ["enterAnimation", "exitAnimation", "isRevert"],
+  methods:{
+    next() {
+      let panel = document.getElementById('contenidoExchange');
+      panel.scrollLeft += panel.offsetWidth  ;
+
+    },
+    before() {
+      let panel = document.getElementById('contenidoExchange');
+      panel.scrollLeft -= panel.offsetWidth;
+
+    }
+  }
 };
 </script>
 
@@ -31,8 +43,8 @@ export default {
   </div>
   <!-- FIN FONDO -->
   <!-- CONTENIDO -->
-  <div class="arrow"></div>
-  <div class="arrow2"></div>
+  <div class="arrow" @click="next()"></div>
+  <div class="arrow2" @click="before()"></div>
   <div class="content-major">
     <div :class="{
       exchange_text: true,
@@ -44,14 +56,14 @@ export default {
       <p>first exchanges after our pre-sale</p>
     </div>
 
-    <div :class="{
+    <div id="contenidoExchange" :class="{
       'contenedor_crypto': true,
       'contenedor_crypto_animation': this.enterAnimation && !this.isRevert,
       'contenedor_crypto_animation_revert': this.exitAnimation && this.isRevert,
       'contenedor_crypto_animation_salida': this.exitAnimation && !this.isRevert,
       'contenedor_crypto_animation_salida_revert': this.enterAnimation && this.isRevert
     }">
-      <div class="caja-cryptos">
+      <div  class="caja-cryptos">
         <div class="cryptos">
           <ComponenteIconos :class="{
             animated: true,
@@ -242,7 +254,9 @@ img {
   width: 100%;
   height: 100%;
 }
-
+*{
+  border: 1px solid red;
+}
 .animated.duration1s {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -530,7 +544,7 @@ img {
 }
 
 .contenedor_crypto {
-  margin: 0 auto;
+  margin: 0;
   height: 35%;
   width: 70%;
   display: flex;
@@ -684,12 +698,11 @@ img {
 }
 
 .caja-cryptos {
-  margin: 0 auto;
-  width: 100%;
+  margin: 0;
+  width: 95%;
   height: 100%;
   flex: none;
-  margin-right: 5%;
-  gap: 3rem;
+  gap: 0rem;
   box-sizing: border-box;
 }
 
@@ -762,13 +775,15 @@ img {
     padding: .5rem;
     box-sizing: border-box;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     width: 90%;
     height: 38%;
   }
 
   .caja-cryptos {
-    gap: 3rem;
+    gap: 2rem;
+    box-sizing: border-box;
+    margin-left: 1rem;
     box-sizing: border-box;
   }
 
@@ -777,6 +792,7 @@ img {
     min-width: 100%;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
   }
 
   .contenedor_crypto::-webkit-scrollbar:horizontal {

@@ -8,7 +8,7 @@ export default {
   <!-- Fondos -->
   <div class="fondo">
     <div
-      :class="{ fondo_rayos: true, 'animacion-aparecer': index_pagina == 9 }"
+      class="fondo_rayos"
     >
       <img src="/img/rayos.png" alt="" />
     </div>
@@ -67,10 +67,7 @@ export default {
       <div class="purchase-tax">
         <div class="">
           <div
-            :class="{
-              titulo1: true,
-              'animacion-desplazamiento-titulo1': index_pagina == 13,
-            }"
+            class="titulo1"
           >
             <h2>Purchase Tax 0%</h2>
           </div>
