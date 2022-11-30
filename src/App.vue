@@ -62,7 +62,7 @@ export default {
     return {
       index: 0,
       index_pagina: 1,
-      limite: 23,
+      limite: 24,
       pagesVisible: [1, 2],
       isVisibleLogo: false,
       scroll: true,
@@ -104,9 +104,9 @@ export default {
             newPosition = 12;
           }
 
-          if (newPosition == 18) {
-            newPosition = 23;
-          }
+          if (newPosition == 19) {
+              newPosition = 24;
+            }
           this.CambiarContenedor(newPosition);
         }
       }
@@ -127,9 +127,9 @@ export default {
             newPosition = 10;
           }
 
-          if (newPosition == 22) {
-            newPosition = 17;
-          }
+          if (newPosition == 23) {
+              newPosition = 18;
+            }
           this.CambiarContenedor(newPosition);
         }
       }
@@ -157,16 +157,16 @@ export default {
           this.index_pagina = 12;
           break;
         case 4:
-          if (this.index_pagina == 15) {
-            return;
-          }
-          this.index_pagina = 15;
-          break;
-        case 5:
           if (this.index_pagina == 16) {
             return;
           }
           this.index_pagina = 16;
+          break;
+        case 5:
+          if (this.index_pagina == 17) {
+            return;
+          }
+          this.index_pagina = 17;
           break;
         case 6:
           if (this.index_pagina == 1) {
@@ -269,7 +269,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right;
           }
-          this.index = 0;
+          this.index = 3;
           break;
         case 15:
           if (window.innerWidth < 900) {
@@ -278,7 +278,7 @@ export default {
             this.orientacion = typeOrientacion.left;
           }
 
-          this.index = 4;
+          this.index = 0;
           break;
         case 16:
           if (window.innerWidth < 900) {
@@ -286,7 +286,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right;
           }
-          this.index = 5;
+          this.index = 4;
           break;
         case 17:
           if (window.innerWidth < 900) {
@@ -294,7 +294,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right;
           }
-          this.index = 0;
+          this.index = 5;
           break;
         case 18:
           if (window.innerWidth < 900) {
@@ -310,7 +310,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right;
           }
-          this.index = 5;
+          this.index = 0;
           break;
         case 20:
           this.index = 0;
@@ -400,8 +400,8 @@ export default {
             if (newPosition == 11) {
               newPosition = 12;
             }
-            if (newPosition == 18) {
-              newPosition = 23;
+            if (newPosition == 19) {
+              newPosition = 24;
             }
             this.isRevert = false;
           }
@@ -415,8 +415,8 @@ export default {
             if (newPosition == 11) {
               newPosition = 10;
             }
-            if (newPosition == 22) {
-              newPosition = 17;
+            if (newPosition == 23) {
+              newPosition = 18;
             }
             this.isRevert = true;
           }
@@ -611,8 +611,19 @@ export default {
       />
     </div>
     <div
-      v-show="index_pagina == 14"
+      v-show="(index_pagina == 14)"
       v-if="IsPagesVisible(14)"
+      class="container"
+    >
+      <Frame
+        :exitAnimation="exitAnimation"
+        :enterAnimation="enterAnimation"
+        :isRevert="isRevert"
+      />
+    </div>
+    <div
+      v-show="(index_pagina == 15)"
+      v-if="IsPagesVisible(15)"
       class="container"
     >
       <Videos
@@ -622,8 +633,8 @@ export default {
       />
     </div>
     <div
-      v-show="index_pagina == 15"
-      v-if="IsPagesVisible(15)"
+      v-show="(index_pagina == 16)"
+      v-if="IsPagesVisible(16)"
       class="container"
     >
       <News
@@ -633,8 +644,8 @@ export default {
       />
     </div>
     <div
-      v-show="index_pagina == 16"
-      v-if="IsPagesVisible(16)"
+      v-show="(index_pagina == 17)"
+      v-if="IsPagesVisible(17)"
       class="container"
     >
       <FaseNew
@@ -647,8 +658,8 @@ export default {
       />
     </div>
     <div
-      v-show="index_pagina == 17"
-      v-if="IsPagesVisible(17)"
+      v-show="(index_pagina == 18)"
+      v-if="IsPagesVisible(18)"
       class="container"
     >
       <Team
@@ -658,8 +669,8 @@ export default {
       />
     </div>
     <div
-      v-show="index_pagina == 18"
-      v-if="IsPagesVisible(18)"
+      v-show="(index_pagina == 19)"
+      v-if="IsPagesVisible(19)"
       class="container"
     >
       <Fase
@@ -670,8 +681,8 @@ export default {
     </div>
 
     <div
-      v-show="index_pagina == 19"
-      v-if="IsPagesVisible(19)"
+      v-show="(index_pagina == 20)"
+      v-if="IsPagesVisible(20)"
       class="container"
     >
       <Fase2
@@ -681,8 +692,8 @@ export default {
       />
     </div>
     <div
-      v-show="index_pagina == 20"
-      v-if="IsPagesVisible(20)"
+      v-show="(index_pagina == 21)"
+      v-if="IsPagesVisible(21)"
       class="container"
     >
       <Fase3
@@ -692,8 +703,8 @@ export default {
       />
     </div>
     <div
-      v-show="index_pagina == 21"
-      v-if="IsPagesVisible(21)"
+      v-show="(index_pagina == 22)"
+      v-if="IsPagesVisible(22)"
       class="container"
     >
       <Fase4
@@ -703,8 +714,8 @@ export default {
       />
     </div>
     <div
-      v-show="index_pagina == 22"
-      v-if="IsPagesVisible(22)"
+      v-show="(index_pagina == 23)"
+      v-if="IsPagesVisible(23)"
       class="container"
     >
       <Fase5
@@ -715,7 +726,7 @@ export default {
     </div>
     <div
       v-show="index_pagina == limite"
-      v-if="IsPagesVisible(23)"
+      v-if="IsPagesVisible(24)"
       class="container"
     >
       <Footer

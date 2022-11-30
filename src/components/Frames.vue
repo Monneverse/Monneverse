@@ -26,10 +26,10 @@ export default {};
   </div>
 
   <div class="contenido">
-    <img class="web" src="/img/Frame/framw.png" alt="Diagram" srcset="" />
+    <img class="web" src="/img/Frames/framw.png" alt="Diagram" srcset="" />
     <img
       class="movil"
-      src="/img/Frame/fram.png" 
+      src="/img/Frames/fram.png" 
       alt="Diagram"
       srcset=""
     />
@@ -155,19 +155,18 @@ img {
 
 .contenido {
   position: relative;
-  top: 18%;
+  top: 15%;
   z-index: 29;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  gap: 1rem;
   padding: 2rem;
   left: 0%;
   height: auto;
-  width: 75%;
+  width: 100%;
 }
 .contenido img {
-    width: 50rem;
+    width: 65rem;
     height: auto;
   }
 
@@ -205,10 +204,9 @@ img {
 /* style mobile */
 @media screen and (max-width: 900px) {
   .contenido {
-    top: 15%;
-    width: 100%;
-    height: 90%;
-    
+    top: 18%;
+    height: 35rem;
+    left: 6.5%;
   }
   .contenido img {
     width: auto;
