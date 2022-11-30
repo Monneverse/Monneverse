@@ -86,23 +86,29 @@ export default {
     next() {
       let panel = document.getElementById('contenido');
       let count = parseInt((panel.scrollLeft + panel.offsetWidth) / panel.offsetWidth);
+      if (panel.offsetWidth + panel.scrollLeft + 2 >= panel.scrollWidth) {
+        this.CambiarArticulos();
+        panel.scrollLeft = 0;
+        return;
+      }
       panel.scrollLeft = panel.offsetWidth * count;
 
     },
     before() {
       let panel = document.getElementById('contenido');
       let count = parseInt((panel.scrollLeft - panel.offsetWidth) / panel.offsetWidth);
-      if(count!=(panel.scrollLeft - panel.offsetWidth) / panel.offsetWidth){
+      if (count != (panel.scrollLeft - panel.offsetWidth) / panel.offsetWidth) {
         count++;
       }
+      if (panel.scrollLeft == 0) {
+        this.CambiarArticulos();
+      }
       panel.scrollLeft = panel.offsetWidth * count;
-
+    
     }
   },
   mounted() {
     this.CambiarArticulos();
-    setInterval(this.ObtenerFechaActual, 500);
-
   },
 };
 </script>
@@ -164,12 +170,6 @@ export default {
   <div class="arrow" @click="next()"></div>
   <div class="arrow2" @click="before()"></div>
 
-  <div @click="CambiarArticulos()" class="flecha flecha_before">
-    <img src="../assets/flecha.svg" alt="arrow before" />
-  </div>
-  <div @click="CambiarArticulos()" class="flecha flecha_next">
-    <img src="../assets/flecha.svg" alt="arrow next" />
-  </div>
   <!-- <div class="textscroll">
     <h3>Scroll to Right</h3>
   </div> -->
@@ -321,41 +321,6 @@ img {
 .degradado_derecho {
   transform: rotate(230deg);
   left: 58%;
-}
-
-.flecha {
-  width: 3rem;
-  height: 3rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 3rem;
-  z-index: 10;
-  position: absolute;
-  top: 65%;
-  margin: 0;
-  padding: 0.5rem;
-  box-sizing: border-box;
-}
-
-.flecha:hover {
-  padding: 0.7rem;
-}
-
-.flecha_before {
-  margin: 0;
-  left: 10%;
-}
-
-.flecha_before>img {
-  margin: 0;
-  rotate: 90deg;
-}
-
-.flecha_next {
-  right: 10%;
-}
-
-.flecha_next>img {
-  rotate: -90deg;
 }
 
 /* CONTENEDOR BOTON BUYNOW */
@@ -648,14 +613,6 @@ h4 {
 } */
 
 @media screen and (max-width: 900px) {
-  .flecha_before {
-    left: 1%;
-  }
-
-  .flecha_next {
-    right: 1%;
-  }
-
   .arrow,
   .arrow:before {
     position: absolute;
