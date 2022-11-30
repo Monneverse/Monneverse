@@ -1,3 +1,23 @@
+<script >
+export default {
+  props: ["enterAnimation", "exitAnimation", "isRevert"],
+  methods: {
+    next() {
+      console.log("hello :)");
+      let panel = document.getElementById('contenidoNew');
+      panel.scrollLeft = panel.scrollWidth;
+
+    },
+    before() {
+
+      let panel = document.getElementById('contenidoNew');
+      panel.scrollLeft = 0;
+
+    }
+  }
+}
+</script>
+
 <template>
   <!--FONDO-->
 
@@ -46,9 +66,9 @@
   <div class="titulo">
     <p>news</p>
   </div>
-  <div class="arrow"></div>
-  <div class="arrow2"></div>
-  <div class="major">
+  <div class="arrow" @click="next()"></div>
+  <div class="arrow2" @click="before()"></div>
+  <div id="contenidoNew"  class="major">
     <div :class="{
       contenido: true,
       contenido__aparecer_revert: this.enterAnimation && this.isRevert,
@@ -96,11 +116,7 @@
   </div>
 </template>
 
-<script >
-export default {
-  props: ["enterAnimation", "exitAnimation", "isRevert"]
-}
-</script>
+
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
