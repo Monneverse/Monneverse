@@ -83,10 +83,26 @@ export default {
         this.inicio = 0;
       }
     },
+    next() {
+      let panel = document.getElementById('contenido');
+      let count = parseInt((panel.scrollLeft + panel.offsetWidth) / panel.offsetWidth);
+      panel.scrollLeft = panel.offsetWidth * count;
+
+    },
+    before() {
+      let panel = document.getElementById('contenido');
+      let count = parseInt((panel.scrollLeft - panel.offsetWidth) / panel.offsetWidth);
+      if(count!=(panel.scrollLeft - panel.offsetWidth) / panel.offsetWidth){
+        count++;
+      }
+      panel.scrollLeft = panel.offsetWidth * count;
+
+    }
   },
   mounted() {
     this.CambiarArticulos();
     setInterval(this.ObtenerFechaActual, 500);
+
   },
 };
 </script>
@@ -120,7 +136,7 @@ export default {
     </div> -->
     <div class="separar"></div>
     <div class="buyNow">
-      <a  target="_blank" class="btn_moner">
+      <a target="_blank" class="btn_moner">
         <div class="texto1">BUY MONNER</div>
         <div class="logos">
           <div class="binance"><img src="/./img/Articulo/BNC.svg" /></div>
@@ -131,7 +147,7 @@ export default {
   </div>
 
   <!-- Contenedor de Articulos -->
-  <div class="containerArticulo">
+  <div id="contenido" class="containerArticulo">
     <div class="contenedorDeArticulo">
       <Articulo :class="{
         articulo__aparecer:
@@ -145,8 +161,8 @@ export default {
   </div>
 
   <!-- Contenedor de Redes Sociales -->
-  <div class="arrow"></div>
-  <div class="arrow2"></div>
+  <div class="arrow" @click="next()"></div>
+  <div class="arrow2" @click="before()"></div>
 
   <div @click="CambiarArticulos()" class="flecha flecha_before">
     <img src="../assets/flecha.svg" alt="arrow before" />
