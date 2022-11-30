@@ -5,16 +5,21 @@ export default {
     ComponenteIconos,
   },
   props: ["enterAnimation", "exitAnimation", "isRevert"],
-  methods:{
+  methods: {
     next() {
       let panel = document.getElementById('contenidoExchange');
-      panel.scrollLeft += panel.offsetWidth  ;
+      let count = parseInt((panel.scrollLeft + panel.offsetWidth +5) / panel.offsetWidth);
+      panel.scrollLeft = panel.clientWidth * count;
 
     },
     before() {
       let panel = document.getElementById('contenidoExchange');
-      panel.scrollLeft -= panel.offsetWidth;
+      let count = parseInt((panel.scrollLeft - panel.offsetWidth -5) / panel.offsetWidth);
 
+      if (count != (panel.scrollLeft - panel.offsetWidth-5) / panel.offsetWidth) {
+        count++;
+      }
+      panel.scrollLeft = panel.offsetWidth * count;
     }
   }
 };
@@ -63,7 +68,7 @@ export default {
       'contenedor_crypto_animation_salida': this.exitAnimation && !this.isRevert,
       'contenedor_crypto_animation_salida_revert': this.enterAnimation && this.isRevert
     }">
-      <div  class="caja-cryptos">
+      <div class="caja-cryptos">
         <div class="cryptos">
           <ComponenteIconos :class="{
             animated: true,
@@ -592,8 +597,8 @@ img {
   transform: rotate(-50deg);
   border-left: none;
   border-top: none;
-  border-right: 4px #fff solid;
-  border-bottom: 4px #fff solid;
+  border-right: 4px #ffc000 solid;
+  border-bottom: 4px #ffc000 solid;
   z-index: 999;
 }
 
@@ -605,8 +610,8 @@ img {
   margin: -10px 0 0 -10px;
   border-left: none;
   border-top: none;
-  border-right: 2px #fff solid;
-  border-bottom: 2px #fff solid;
+  border-right: 2px #ffc000 solid;
+  border-bottom: 2px #ffc000 solid;
   animation-duration: 2s;
   -webkit-animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
@@ -644,8 +649,8 @@ img {
   transform: rotate(135deg);
   border-left: none;
   border-top: none;
-  border-right: 4px #fff solid;
-  border-bottom: 4px #fff solid;
+  border-right: 4px #ffc000 solid;
+  border-bottom: 4px #ffc000 solid;
   z-index: 999;
 }
 
@@ -657,8 +662,8 @@ img {
   margin: -10px 0 0 -10px;
   border-left: none;
   border-top: none;
-  border-right: 2px #fff solid;
-  border-bottom: 2px #fff solid;
+  border-right: 2px #ffc000 solid;
+  border-bottom: 2px #ffc000 solid;
   animation-duration: 2s;
   -webkit-animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;

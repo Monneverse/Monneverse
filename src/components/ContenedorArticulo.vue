@@ -61,11 +61,6 @@ export default {
           link: "https://sites.google.com/view/blog-monnerverse/home/why-will-monner-become-one-of-the-best-cryptocurrencies-to-invest-in",
         },
       ],
-      fechaEvento: new Date(2022, 9, 12, 4, 0, 0, 0),
-      diaString: "00",
-      horaString: "00",
-      minutoString: "00",
-      segundoString: "00",
       inicio: 0,
       salto: 3,
     };
@@ -670,8 +665,8 @@ h4 {
     transform: rotate(-50deg);
     border-left: none;
     border-top: none;
-    border-right: 4px #fff solid;
-    border-bottom: 4px #fff solid;
+    border-right: 4px #ffc000 solid;
+    border-bottom: 4px #ffc000 solid;
     z-index: 999;
   }
 
@@ -683,8 +678,8 @@ h4 {
     margin: -10px 0 0 -10px;
     border-left: none;
     border-top: none;
-    border-right: 2px #fff solid;
-    border-bottom: 2px #fff solid;
+    border-right: 2px #ffc000 solid;
+    border-bottom: 2px #ffc000 solid;
     animation-duration: 2s;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
@@ -721,8 +716,8 @@ h4 {
     transform: rotate(135deg);
     border-left: none;
     border-top: none;
-    border-right: 4px #fff solid;
-    border-bottom: 4px #fff solid;
+    border-right: 4px #ffc000 solid;
+    border-bottom: 4px #ffc000 solid;
     z-index: 999;
   }
 
@@ -734,8 +729,8 @@ h4 {
     margin: -10px 0 0 -10px;
     border-left: none;
     border-top: none;
-    border-right: 2px #fff solid;
-    border-bottom: 2px #fff solid;
+    border-right: 2px #ffc000 solid;
+    border-bottom: 2px #ffc000 solid;
     animation-duration: 2s;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
