@@ -20,7 +20,7 @@ export default {
       <h2 class="centrar">
         {{ titulo }}
       </h2>
-      <img :src="imagen" alt="Imagenes-Beneficios" />
+      <img :src="imagen" alt="Images-Benefits" />
       <p class="centrar">
         {{ texto }}
       </p>

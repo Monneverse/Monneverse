@@ -113,16 +113,16 @@ export default {
     <div class="fondoArticulo"></div>
     <div class="circuloFondo circuloFondo1"></div>
     <div class="circuloFondo circuloFondo2"></div>
-    <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" /></div>
+    <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" alt="Background-montain" /></div>
     <div class="fondo-oscuro"></div>
     <div class="degradado degradado_izquierdo"></div>
     <div class="degradado degradado_derecho"></div>
   </div>
   <div class="circuitoIzquierdo">
-    <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
+    <img src="/img/calculadora/circuito-izquierdo.png" alt="Circuit-left" />
   </div>
   <div class="circuitoDerecho">
-    <img src="/img/calculadora/circuito-derecho.png" alt="" />
+    <img src="/img/calculadora/circuito-derecho.png" alt="Circuit-right" />
   </div>
 
   <!-- CONTENEDOR DE BOTON METATASK -->

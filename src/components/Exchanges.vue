@@ -32,19 +32,19 @@ export default {
   <div class="fondo-oscuro"></div>
 
   <div class="fondo-montana">
-    <img src="/img/fondo-montana.png" alt="" srcset="" />
+    <img src="/img/fondo-montana.png" alt="Background-montain" srcset="" />
   </div>
 
   <div class="fondoTokenomics">
-    <img src="/img/fondo_Tokenomics.png" alt="" />
+    <img src="/img/fondo_Tokenomics.png" alt="Background-monner" />
   </div>
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
   <div class="fondo-mundial">
-    <img src="/img/fondo_Cel.png" alt="" srcset="" />
+    <img src="/img/fondo_Cel.png" alt="Background-cell" srcset="" />
   </div>
   <div id="logo-1" class="logo">
-    <img src="/img/logo.svg" alt="" />
+    <img src="/img/logo.svg" alt="logo" />
   </div>
   <!-- FIN FONDO -->
   <!-- CONTENIDO -->

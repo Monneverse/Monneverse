@@ -7,7 +7,7 @@ export default {
 <template>
   <div class="contenedor_icono">
     <div class="icon">
-      <img :src="iconos" class="icon_coin" />
+      <img :src="iconos" class="icon_coin" alt="icon" />
     </div>
     <div class="name_coin">
       <p>{{ iconname }}</p>

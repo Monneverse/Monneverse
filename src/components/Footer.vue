@@ -10,23 +10,23 @@
   <div class="fondo fondo-footer"></div>
   <div class="fondo filtro-superior"></div>
   <div class="fondo fondo-montana">
-    <img src="/img/fondo-montana.png" />
+    <img src="/img/fondo-montana.png" alt="Background-montain"/>
   </div>
   <div class="fondo fondo-oscurecer"></div>
 
   <div class="fondo-mundial">
-    <img src="/img/fondo_Cel.png" alt="" srcset="" />
+    <img src="/img/fondo_Cel.png" alt="Background-cell" srcset="" />
   </div>
   <!-- Circuitos -->
   <div class="circuito circuito-izquierdo">
-    <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
+    <img src="/img/calculadora/circuito-izquierdo.png" alt="Circuit-left" />
   </div>
   <div :class="{
     circuito: true, 'circuito-derecho': true,
     'circuito-desaparecer': this.enterAnimation,
     'circuito-aparecer': this.exitAnimation
   }">
-    <img src="/img/calculadora/circuito-derecho.png" alt="" />
+    <img src="/img/calculadora/circuito-derecho.png" alt="Circuit-right" />
   </div>
   <!-- Filtros azul -->
   <div class="degradado degradado_derecho"></div>
@@ -40,31 +40,31 @@
   }">
     <div class="redes">
       <a href="https://t.me/MonnerverseCripto">
-        <img src="../assets/footer/telegram.svg" alt="" />
+        <img src="../assets/footer/telegram.svg" alt="Telegram" />
       </a>
     </div>
     <div class="redes">
       <a href="https://www.facebook.com/Monnerverse-community-101148059377702/?ref=page_internal">
-        <img src="../assets/footer/facebook.svg" alt="" />
+        <img src="../assets/footer/facebook.svg" alt="Facebook" />
       </a>
     </div>
     <div class="redes">
       <a href="https://www.reddit.com/user/monnerverse">
-        <img src="../assets/footer/reddit.svg" alt="" />
+        <img src="../assets/footer/reddit.svg" alt="Reddit" />
       </a>
     </div>
     <div class="redes">
       <a href="https://twitter.com/monnerverse">
-        <img src="../assets/footer/twitter.svg" alt="" />
+        <img src="../assets/footer/twitter.svg" alt="Twitter" />
       </a>
     </div>
     <div class="redes">
       <a href="https://t.me/monnerverse_community">
-        <img src="../assets/footer/instagram.svg" alt="" /></a>
+        <img src="../assets/footer/instagram.svg" alt="Instagram" /></a>
     </div>
     <div class="redes">
       <a href="https://discord.com/invite/h7fRvek9dn">
-        <img src="../assets/footer/discord.svg" alt="" />
+        <img src="../assets/footer/discord.svg" alt="Discord" />
       </a>
     </div>
   </div>
