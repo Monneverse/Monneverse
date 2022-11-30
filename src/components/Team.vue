@@ -2,151 +2,190 @@
 import Team from "./componenteTeam.vue";
 export default {
   components: {
-  Team,
+    Team,
   },
 
   props: ["enterAnimation", "exitAnimation", "isRevert"],
   data() {
     return {
       group: [
-      {
+        {
           title: " CEO Brayan Rogelio Gómez Rodriguez.",
-          description: "Certified trader in S&P500 and Nasdaq, director of private investment funds. Sales Manager at MonnerPlanet.",
+          description:
+            "Certified trader in S&P500 and Nasdaq, director of private investment funds. Sales Manager at MonnerPlanet.",
           img: "/img/logo.svg",
           redes: [
             {
               name: "Instagram",
               url: "https://www.instagram.com/enriquerosass/",
-              icon: "img/video-redes/instagram.png"
+              icon: "img/video-redes/instagram.png",
             },
             {
               name: "Twitter",
               url: "https://twitter.com/criptorosass",
-              icon: "img/video-redes/gorjeo.png"
-            }
+              icon: "img/video-redes/gorjeo.png",
+            },
           ],
-    
         },
         {
           title: "CMO Anderson Ledezma",
-          description: "7 years of experience in crypto market, NFT project developer, passionate about marketing and product expansion.",
+          description:
+            "7 years of experience in crypto market, NFT project developer, passionate about marketing and product expansion.",
           img: "/img/Team/ale.jpg",
           redes: [
             {
               name: "Instagram",
               url: "https://www.instagram.com/transcendentecripto",
-              icon: "img/video-redes/instagram.png"
+              icon: "img/video-redes/instagram.png",
             },
             {
               name: "Twitter",
               url: "https://twitter.com/Transcendente03",
-              icon: "img/video-redes/gorjeo.png"
+              icon: "img/video-redes/gorjeo.png",
             },
             {
               name: "Twitch",
               url: "https://www.twitch.tv/transcendentecripto",
-              icon: "img/video-redes/twitch.png"
+              icon: "img/video-redes/twitch.png",
             },
             {
               name: "Tik tok",
               url: "https://www.tiktok.com/@transcendenteuniversal",
-              icon: "img/video-redes/tiktok.png"
-            }
+              icon: "img/video-redes/tiktok.png",
+            },
           ],
-     
         },
-   
-       
+
         {
           title: "CMO Kevin Canacuan ",
-          description: "Developer of NFT projects, software developer. Marketing and business access on MNR and MonnerPlanet.",
+          description:
+            "Developer of NFT projects, software developer. Marketing and business access on MNR and MonnerPlanet.",
           img: "/img/Team/kev.jpg",
           redes: [
             {
               name: "Telegram",
               url: "https://t.me/RankooCrypto",
-              icon: "img/video-redes/Telegram_logo.svg"
+              icon: "img/video-redes/Telegram_logo.svg",
             },
             {
               name: "Twitter",
               url: "https://twitter.com/RankooCrypto",
-              icon: "img/video-redes/gorjeo.png"
-            }
+              icon: "img/video-redes/gorjeo.png",
+            },
           ],
-         
         },
         {
           title: "María Ortiz",
-          description: "Graphic designer, lover of crypto culture and the development of projects with high growth potential.",
+          description:
+            "Graphic designer, lover of crypto culture and the development of projects with high growth potential.",
           img: "img/Team/mar.jpg",
           redes: [
             {
               name: "Instagram",
               url: "https://www.instagram.com/szettatrading/",
-              icon: "img/video-redes/instagram.png"
+              icon: "img/video-redes/instagram.png",
             },
             {
               name: "Twitter",
               url: "https://twitter.com/zettaindahouse",
-              icon: "img/video-redes/gorjeo.png"
+              icon: "img/video-redes/gorjeo.png",
             },
             {
               name: "Telegram",
               url: "https://t.me/goldenpicksadmin",
-              icon: "img/video-redes/Telegram_logo.svg"
-            }
+              icon: "img/video-redes/Telegram_logo.svg",
+            },
           ],
-        
         },
-       
       ],
     };
+  },
+  methods: {
+    next() {
+      let panel = document.getElementById('contenidoTeam');
+      let count = parseInt(( panel.scrollLeft + panel.offsetWidth) / panel.offsetWidth);
+      console.log('Este es el ancho del componente'+ panel.offsetWidth);
+      console.log('Este es el scroll que se ha hecho'+panel.scrollLeft);
+      
+     
+      panel.scrollLeft = panel.offsetWidth * count;
+
+    },
+    before() {
+      let panel = document.getElementById('contenidoTeam');
+      let count = parseInt((panel.scrollLeft - panel.offsetWidth) / panel.offsetWidth);
+      if (count != (panel.scrollLeft - panel.offsetWidth) / panel.offsetWidth) {
+        count++;
+      }
+   
+      panel.scrollLeft = panel.offsetWidth * count ;
+    
+    },
   },
 };
 </script>
 <template>
-  <div :class="{
-    fondo: true,
-    fondo__aparecer: this.enterAnimation && !this.isRevert,
-    fondo__aparecer2: this.enterAnimation && this.isRevert,
-    fondo__desaparecer: this.exitAnimation && this.isRevert,
-    fondo__desaparecer2: this.exitAnimation && !this.isRevert,
-  }">
+  <div
+    :class="{
+      fondo: true,
+      fondo__aparecer: this.enterAnimation && !this.isRevert,
+      fondo__aparecer2: this.enterAnimation && this.isRevert,
+      fondo__desaparecer: this.exitAnimation && this.isRevert,
+      fondo__desaparecer2: this.exitAnimation && !this.isRevert,
+    }"
+  >
     <img src="/img/rayos.png" alt="" />
   </div>
-  <div :class="{
-    fondo: true,
-  }" class="fondo-benefit">
+  <div
+    :class="{
+      fondo: true,
+    }"
+    class="fondo-benefit"
+  >
     <img src="/img/fondo-benefit.png" alt="" />
   </div>
 
   <div class="titulo">
-     <h1>TEAM</h1>
+    <h1>TEAM</h1>
   </div>
 
-  <div class="contenido">
-    <Team v-for="team in group" :class="{
-      video: true,
-      video__aparecer: this.enterAnimation && !this.isRevert,
-      video__aparecer_revert: this.enterAnimation && this.isRevert,
-      video__desaparecer_revert: this.exitAnimation && this.isRevert,
-      video__desaparecer: this.exitAnimation && !this.isRevert,
-    }" :title="team.title" :description="team.description" :redes="team.redes" :img="team.img"
-  >
+  <div id="contenidoTeam" class="contenido">
+    <Team
+      v-for="team in group"
+      :class="{
+        video: true,
+        video__aparecer: this.enterAnimation && !this.isRevert,
+        video__aparecer_revert: this.enterAnimation && this.isRevert,
+        video__desaparecer_revert: this.exitAnimation && this.isRevert,
+        video__desaparecer: this.exitAnimation && !this.isRevert,
+      }"
+      :title="team.title"
+      :description="team.description"
+      :redes="team.redes"
+      :img="team.img"
+    >
     </Team>
   </div>
-  <div class="arrow"></div>
-  <div class="arrow2"></div>
+  <div class="arrow" @click="next()"></div>
+  <div class="arrow2" @click="before()"></div>
   <div class="logo-redes">
     <a class="icon" href="https://t.me/MonnerverseCripto" target="_blank">
       <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
     </a>
 
-    <a class="icon" href="https://www.reddit.com/user/monnerverse" target="_blank">
+    <a
+      class="icon"
+      href="https://www.reddit.com/user/monnerverse"
+      target="_blank"
+    >
       <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
     </a>
 
-    <a class="icon" href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+    <a
+      class="icon"
+      href="https://discord.com/invite/h7fRvek9dn"
+      target="_blank"
+    >
       <img src="../assets/discord.svg" alt="logo discord" srcset="" />
     </a>
   </div>
@@ -231,14 +270,12 @@ img {
   width: 100%;
   height: auto;
   z-index: 1;
-  
 }
-.titulo h1{
+.titulo h1 {
   text-align: center;
   color: #ffc000;
   font-family: "Montserrat", "Work Sans";
 }
-
 
 .contenido {
   position: relative;
@@ -250,7 +287,6 @@ img {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  gap: 1rem;
   align-items: flex-start;
   padding: 2rem;
   overflow: hidden;
@@ -262,7 +298,6 @@ img {
   scroll-behavior: smooth;
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
 }
-
 
 .contenido {
   left: 1%;
@@ -277,9 +312,11 @@ img {
 }
 
 .contenido::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg,
-      rgb(33, 32, 85) 0%,
-      rgba(1, 209, 88, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(33, 32, 85) 0%,
+    rgba(1, 209, 88, 1) 100%
+  );
   border-radius: 20px;
   border: 2px solid #f1f2f3;
 }
