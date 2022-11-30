@@ -169,7 +169,12 @@ export default {
   <!-- Contenedor de Redes Sociales -->
   <div class="arrow" @click="next()"></div>
   <div class="arrow2" @click="before()"></div>
-
+  <div @click="CambiarArticulos()" class="flecha flecha_before">
+    <img src="../assets/flecha.svg" alt="arrow before" />
+  </div>
+  <div @click="CambiarArticulos()" class="flecha flecha_next">
+    <img src="../assets/flecha.svg" alt="arrow next" />
+  </div>
   <!-- <div class="textscroll">
     <h3>Scroll to Right</h3>
   </div> -->
@@ -611,8 +616,44 @@ h4 {
   color: white;
   z-index: 999;
 } */
+.flecha {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 3rem;
+  z-index: 10;
+  position: absolute;
+  top: 65%;
+  margin: 0;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
 
+.flecha:hover {
+  padding: 0.7rem;
+}
+
+.flecha_before {
+  margin: 0;
+  left: 10%;
+}
+
+.flecha_before>img {
+  margin: 0;
+  rotate: 90deg;
+}
+
+.flecha_next {
+  right: 10%;
+}
+
+.flecha_next>img {
+  rotate: -90deg;
+}
 @media screen and (max-width: 900px) {
+  .flecha {
+    display: none;
+  }
   .arrow,
   .arrow:before {
     position: absolute;
