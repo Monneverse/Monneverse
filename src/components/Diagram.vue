@@ -1,5 +1,5 @@
 <script>
-export default {};
+export default {  props: ["enterAnimation", "exitAnimation", "isRevert"],};
 </script>
 <template>
   <div
@@ -25,7 +25,13 @@ export default {};
     <h1>TOKENOMIC</h1>
   </div>
 
-  <div class="contenido">
+  <div :class="{
+      contenido: true,
+      animated: true,
+      duration1s: true,
+      fadeInUp: this.enterAnimation,
+      fadeOut: this.exitAnimation,
+    }">
     <img class="web" src="/img/Diagram/TKN1.png" alt="Diagram" srcset="" />
     <img
       class="movil"
@@ -91,9 +97,11 @@ img {
   width: 100%;
   height: 100%;
   z-index: 0;
+  background-color: #121026!important;
 }
 
 .fondo-benefit {
+  background-color: #121026;
   background-size: no-repeat center center fixed;
   z-index: 1;
 }
@@ -264,4 +272,5 @@ img {
   transform: rotate(230deg);
   left: 55%;
 }
+
 </style>

@@ -511,7 +511,7 @@ p {
   width: 20rem;
   height: 5rem;
   z-index: 14;
-  display: flex;
+  display: none;
   justify-content: start;
 }
 
