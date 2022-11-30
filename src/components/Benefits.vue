@@ -138,7 +138,7 @@ export default {
       </div>
     </div>
   </div>
-  <div class="logo-redes">
+ 
 
     <div class="logo-redes">
       <div class="icon icon-telegram">
@@ -157,7 +157,7 @@ export default {
         </a>
       </div>
     </div>
-  </div>
+  
 </template>
 
 <style scoped>
@@ -466,8 +466,8 @@ p {
   left: 1rem;
   width: 20rem;
   height: 5rem;
-  z-index: 100000;
-  display: none;
+  z-index: 14;
+  display: flex;
   justify-content: start;
 }
 

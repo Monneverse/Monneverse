@@ -5,9 +5,21 @@ export default {
 </script>
 <template>
   <!--FONDOS-->
-  <video preload="auto" autoplay webkit-playsinline playsinline muted loop class="video-fondo-alliances"
-    poster="/img/fondo_binario.png">
-    <source data-src="/video/Full-HD-Lite-2.mp4" type="video/mp4" src="/video/Full-HD-Lite-2.mp4" />
+  <video
+    preload="auto"
+    autoplay
+    webkit-playsinline
+    playsinline
+    muted
+    loop
+    class="video-fondo-alliances"
+    poster="/img/fondo_binario.png"
+  >
+    <source
+      data-src="/video/Full-HD-Lite-2.mp4"
+      type="video/mp4"
+      src="/video/Full-HD-Lite-2.mp4"
+    />
 
     <p>
       Your browser doesn't support HTML5 video. Here is a
@@ -16,31 +28,39 @@ export default {
   </video>
 
   <div class="contenido-general">
-    <div :class="{
-      logo: true,
-      'animacion-logo': this.enterAnimation && !this.isRevert,
-      'animacion-logo-revert': this.exitAnimation && this.isRevert,
-    }">
+    <div
+      :class="{
+        logo: true,
+        'animacion-logo': this.enterAnimation && !this.isRevert,
+        'animacion-logo-revert': this.exitAnimation && this.isRevert,
+      }"
+    >
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
 
     <div class="fondo filtro-superior"></div>
-    <div :class="{
-      'fondo-montana': true,
-      'fondo-montana-animation': this.enterAnimation && !this.isRevert,
-      'fondo-montana-animation-salida': this.enterAnimation && this.isRevert,
-      'fondo-montana-animation-revert': this.exitAnimation && this.isRevert,
-      'fondo-montana-animation-salida-revert':
-        this.exitAnimation && !this.isRevert,
-    }" class="fondo">
+    <div
+      :class="{
+        'fondo-montana': true,
+        'fondo-montana-animation': this.enterAnimation && !this.isRevert,
+        'fondo-montana-animation-salida': this.enterAnimation && this.isRevert,
+        'fondo-montana-animation-revert': this.exitAnimation && this.isRevert,
+        'fondo-montana-animation-salida-revert':
+          this.exitAnimation && !this.isRevert,
+      }"
+      class="fondo"
+    >
       <img src="/img/fondo-montana.png" />
     </div>
     <div class="fondo fondo-oscurecer"></div>
-    <div :class="{
-      'fondo-red': true,
-      'animacion-aparecer': this.enterAnimation && !this.isRevert,
-      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-    }" class="fondo">
+    <div
+      :class="{
+        'fondo-red': true,
+        'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+      }"
+      class="fondo"
+    >
       <img src="/img/red.png" alt="" />
     </div>
     <div class="fondo-telefono">
@@ -51,80 +71,97 @@ export default {
       <div class="texto"></div>
 
       <!--UPCOMING ALLIANCES-->
-      <div :class="{
-        'content-forms': true,
-        'animacion-aparecer': this.enterAnimation && !this.isRevert,
-        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-        'animacion-content-up': this.enterAnimation && this.isRevert,
-        'animacion-content-up-revert': this.exitAnimation && !this.isRevert,
-        'animacion-desaparecer': this.enterAnimation && this.isRevert,
-        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
-      }">
-        <section :class="{
-          circulos: true,
+      <div
+        :class="{
+          'content-forms': true,
           'animacion-aparecer': this.enterAnimation && !this.isRevert,
           'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-        }">
+          'animacion-content-up': this.enterAnimation && this.isRevert,
+          'animacion-content-up-revert': this.exitAnimation && !this.isRevert,
+          'animacion-desaparecer': this.enterAnimation && this.isRevert,
+          'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+        }"
+      >
+        <section
+          :class="{
+            circulos: true,
+            'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+          }"
+        >
           <div class="circulo">
-            <img src="../assets/circulo.svg" alt="" />
+            <img src="../assets/circulo.svg" alt="circle-alliances" />
           </div>
 
           <div class="circulo-medio">
-            <img src="../assets/circulo-medio.svg" alt="" />
+            <img src="../assets/circulo-medio.svg" alt="circle-alliances" />
           </div>
         </section>
         <section class="arco">
-          <div :class="{
-            semi_circulo: true,
-            'animacion-arco': this.enterAnimation && !this.isRevert,
-            'animacion-arco-revert': this.exitAnimation && this.isRevert,
-            'animacion-arco-salida': this.enterAnimation && this.isRevert,
-            'animacion-arco-revert-salida':
-              this.exitAnimation && !this.isRevert,
-          }">
-            <img src="../assets/aro-iluminado-brillante.svg" alt="" />
+          <div
+            :class="{
+              semi_circulo: true,
+              'animacion-arco': this.enterAnimation && !this.isRevert,
+              'animacion-arco-revert': this.exitAnimation && this.isRevert,
+              'animacion-arco-salida': this.enterAnimation && this.isRevert,
+              'animacion-arco-revert-salida':
+                this.exitAnimation && !this.isRevert,
+            }"
+          >
+            <img
+              src="../assets/aro-iluminado-brillante.svg"
+              alt="ring-illuminated"
+            />
           </div>
         </section>
         <section class="Alianzas">
           <div class="alianzas">
-            <a href="https://www.reddit.com/user/monnerverse" target="_blank"><span><img
-                  src="../assets/reddit-4.svg" /></span>REDDIT</a>
+            <a href="https://www.reddit.com/user/monnerverse" target="_blank"
+              ><span><img src="../assets/reddit-4.svg" /></span>REDDIT</a
+            >
 
-            <a target="_blank" href="https://t.me/MonnerverseCripto"><span><img
-                  src="../assets/Telegram_logo.svg" /></span>TELEGRAM</a>
+            <a target="_blank" href="https://t.me/MonnerverseCripto"
+              ><span><img src="../assets/Telegram_logo.svg" /></span>TELEGRAM</a
+            >
             <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 
-            <a href="https://discord.com/invite/h7fRvek9dn" target="_blank"><span><img
-                  src="../assets/discord.svg" /></span>DISCORD</a>
+            <a href="https://discord.com/invite/h7fRvek9dn" target="_blank"
+              ><span><img src="../assets/discord.svg" /></span>DISCORD</a
+            >
           </div>
         </section>
 
         <section class="rectangulos">
           <div class="rectangulo-medio">
             <div class="contenido">
-              <img src="../assets/rectangulo-medio.svg" alt="" />
+              <img
+                src="../assets/rectangulo-medio.svg"
+                alt="rectangle-medium"
+              />
               <div class="imagenes">
-                <img src="../assets/methodBuy/visa.svg" alt="" />
-                <img src="../assets/methodBuy/masterCard.svg" alt="" />
+                <img src="../assets/methodBuy/visa.svg" alt="visa" />
+                <img src="../assets/methodBuy/masterCard.svg" alt="masterdCard" />
               </div>
             </div>
           </div>
           <div class="rectangulo">
-            <img src="/img/rectangulo.svg" alt="" />
+            <img src="/img/rectangulo.svg" alt="rectangle" />
             <p>UPCOMING ALLIANCES</p>
           </div>
         </section>
       </div>
     </div>
 
-    <div :class="{
-      puntero: true,
-      animated: true,
-      duration1s: true,
-      fadeInUp: this.enterAnimation,
-      fadeOutDown: this.exitAnimation,
-    }">
-      <img src="/img/puntero.svg" alt="" />
+    <div
+      :class="{
+        puntero: true,
+        animated: true,
+        duration1s: true,
+        fadeInUp: this.enterAnimation,
+        fadeOutDown: this.exitAnimation,
+      }"
+    >
+      <img src="/img/puntero.svg" alt="puntero" />
     </div>
   </div>
 
@@ -209,11 +246,11 @@ section {
   align-items: flex-end;
 }
 
-.texto>section {
+.texto > section {
   width: 70%;
 }
 
-.texto>section p {
+.texto > section p {
   width: 80%;
   float: right;
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
@@ -356,10 +393,12 @@ section {
 .filtro-superior {
   position: absolute;
   z-index: 4;
-  background: radial-gradient(circle at center,
-      #14ec84 0%,
-      #0b5f50 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #14ec84 0%,
+    #0b5f50 50%,
+    #505863 100%
+  );
   opacity: 30%;
 }
 
@@ -837,7 +876,7 @@ section {
   opacity: 70%;
 }
 
-@media screen and (min-width:600px) {
+@media screen and (min-width: 600px) {
   .degradado {
     width: 50%;
     top: 20%;
@@ -849,7 +888,7 @@ section {
   right: 55%;
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width: 900px) {
   .video-fondo-alliances {
     position: fixed;
     left: -60%;
