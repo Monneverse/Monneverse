@@ -6,6 +6,18 @@ export default {
   },
 
   props: ["enterAnimation", "exitAnimation", "isRevert"],
+  methods: {
+    next() {
+      let panel = document.getElementById('contenidoVideo');
+      panel.scrollLeft += panel.offsetWidth;
+
+    },
+    before() {
+      let panel = document.getElementById('contenidoVideo');
+      panel.scrollLeft -= panel.offsetWidth;
+
+    }
+  },
   data() {
     return {
       videosPlay: [
@@ -101,7 +113,7 @@ export default {
           description: "IS THIS 100X COIN ? I Private Sale 1.5$ I Staking payout 12.6% every 48 hours",
           playlist: ["https://www.youtube.com/embed/tVG_ioYFb6s"],
           redes: [
-          {
+            {
               name: "Instagram",
               url: "https://www.instagram.com/its_hk_/",
               icon: "img/video-redes/instagram.png"
@@ -124,7 +136,7 @@ export default {
           description: "🤩 ¡MONNERVERSE LLC UN PROYECTO QUE SUBIRA UN 1500%! 🥇 PREVENTA DE $1.5 USD ✅ Y SORTEO TOKENS!!! 💥",
           playlist: ["https://www.youtube.com/embed/gtHXbt8BZcE"],
           redes: [
-          {
+            {
               name: "Instagram",
               url: "https://www.instagram.com/luchousl/",
               icon: "img/video-redes/instagram.png"
@@ -165,7 +177,7 @@ export default {
   <div class="imagen-youtube">
     <img src="../assets/YouTube-Icon.svg" alt="Youtube image" />
   </div>
-  <div class="contenido">
+  <div id="contenidoVideo" class="contenido">
     <Youtube v-for="videoy in videosPlay" :class="{
       video: true,
       video__aparecer: this.enterAnimation && !this.isRevert,
@@ -176,8 +188,8 @@ export default {
       :imglang="videoy.imglang">
     </Youtube>
   </div>
-  <div class="arrow"></div>
-  <div class="arrow2"></div>
+  <div class="arrow" @click="next()"></div>
+  <div class="arrow2" @click="before()"></div>
   <div class="logo-redes">
     <a class="icon" href="https://t.me/MonnerverseCripto" target="_blank">
       <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
@@ -286,7 +298,6 @@ img {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  gap: 1rem;
   align-items: flex-start;
   padding: 2rem;
   overflow: hidden;
