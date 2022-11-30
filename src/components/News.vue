@@ -3,7 +3,6 @@ export default {
   props: ["enterAnimation", "exitAnimation", "isRevert"],
   methods: {
     next() {
-      console.log("hello :)");
       let panel = document.getElementById('contenidoNew');
       panel.scrollLeft = panel.scrollWidth;
 
