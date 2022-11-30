@@ -180,7 +180,7 @@ export default {
   <div :class="{
     fondo: true,
   }" class="fondo-benefit">
-    <img src="/img/fondo-benefit.png" alt="" />
+    <img src="/img/fondo-benefit.png" alt="Background-monner" />
   </div>
   <div class="imagen-youtube">
     <img src="../assets/YouTube-Icon.svg" alt="Youtube image" />
