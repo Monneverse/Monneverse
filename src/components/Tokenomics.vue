@@ -72,7 +72,13 @@ export default {
     <div class="cards">
       <div class="purchase-tax">
         <div class="">
-          <div class="titulo1">
+          <div :class="{
+            titulo1: true,
+            animated: true,
+            duration1s: true,
+            fadeInLeft: this.enterAnimation,
+            fadeOutLeft: this.exitAnimation,
+          }">
             <h2>Purchase Tax 0%</h2>
           </div>
         </div>
