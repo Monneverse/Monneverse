@@ -23,11 +23,11 @@ export default {
   <div class="arrow2" @click="before()"></div>
   <div class="fondo">
     <div class="fondo_rayos">
-      <img src="/img/rayos.png" alt="" />
+      <img src="/img/rayos.png" alt="Background-Ray" />
     </div>
 
     <div class="fondo-telefono">
-      <img src="/img/fondo_Cel.png" alt="" srcset="" />
+      <img src="/img/fondo_Cel.png" alt="Background-cell" srcset="" />
     </div>
 
     <div class="fondo filtro-superior"></div>
@@ -42,7 +42,7 @@ export default {
       'animacion-desaparecer': this.enterAnimation && this.isRevert,
       'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
     }">
-      <img src="/img/fondo_Tokenomics.png" alt="" />
+      <img src="/img/fondo_Tokenomics.png" alt="Background-monner" />
       <div class="imagen_Eclipse"></div>
     </div>
   </div>
@@ -156,11 +156,11 @@ export default {
         <h1>UPCOMING ALLIANCES</h1>
       </div>
       <div class="imagen-alianza">
-        <img src="../assets/methodBuy/visa.svg" alt="" />
+        <img src="../assets/methodBuy/visa.svg" alt="Visa" />
       </div>
 
       <div class="imagen-alianza">
-        <img src="../assets/methodBuy/masterCard.svg" alt="" />
+        <img src="../assets/methodBuy/masterCard.svg" alt="MasterdCard" />
       </div>
     </div>
   </div>

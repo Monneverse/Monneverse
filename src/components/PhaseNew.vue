@@ -25,15 +25,15 @@ export default {
     <!-- Comienzo fondo -->
 
     <div class="fondo ">
-        <img src="/img/rayos.png" alt="" />
+        <img src="/img/rayos.png" alt="Background-Ray" />
     </div>
     <div class="fondo">
-        <img src="/img/fondo-benefit.png" alt="" />
+        <img src="/img/fondo-benefit.png" alt="Background-monner" />
     </div>
 
     <div class="aro">
-        <img src="../assets/aro.svg" />
-        <img src="../assets/aro.svg" />
+        <img src="../assets/aro.svg" alt="Ring"/>
+        <img src="../assets/aro.svg" alt="Ring"/>
     </div>
     <!-- Fin fondo -->
     <h2>ROAD MAP</h2>

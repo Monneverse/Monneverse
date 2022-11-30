@@ -17,7 +17,7 @@ export default {
 <template>
   <div class="coin">
     <div class="icono">
-      <img :src="icono" alt="" />
+      <img :src="icono" alt="Icon" />
     </div>
 
     <div class="container-titulo">
@@ -33,12 +33,12 @@ export default {
     <div class="container-text2">
       <p class="texto2">{{ texto2 }}</p>
       <div class="triangulo">
-        <img src="/img/coins/triangulo.png" alt="" />
+        <img src="/img/coins/triangulo.png" alt="Triangle" />
       </div>
     </div>
 
     <div class="logo">
-      <img :src="logo" alt="" />
+      <img :src="logo" alt="logo" />
     </div>
     <div class="container-precio">
       <div class="caja">

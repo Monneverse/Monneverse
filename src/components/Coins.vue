@@ -20,7 +20,7 @@ export default {
     'fondo-montana-animation-salida-revert':
       this.exitAnimation && !this.isRevert,
   }" class="fondo">
-    <img src="/img/fondo-montana.png" />
+    <img src="/img/fondo-montana.png" alt="Background-montain"/>
   </div>
   <div class="fondo fondo-oscurecer"></div>
   <div class="arrow"></div>
@@ -33,7 +33,7 @@ export default {
     'animacion-desplazamiento-revert-salida':
       this.exitAnimation && !this.isRevert,
   }" class="circuito">
-    <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
+    <img src="/img/calculadora/circuito-izquierdo.png" alt="circuit-left" />
   </div>
   <div :class="{
     'circuito-derecho': true,
@@ -42,7 +42,7 @@ export default {
     'circuitoD-desplazamiento-revert-salida':
       this.exitAnimation && !this.isRevert,
   }" class="circuito">
-    <img src="/img/calculadora/circuito-derecho.png" alt="" />
+    <img src="/img/calculadora/circuito-derecho.png" alt="Circuit-right" />
   </div>
 
   <div class="degradado_azuliz"></div>
@@ -89,10 +89,10 @@ export default {
   </div>
 
   <div class="cuadros-derecho">
-    <img src="/img/coins/cuadros.svg" alt="" />
+    <img src="/img/coins/cuadros.svg" alt="Frame" />
   </div>
   <div class="cuadros-izquierdo">
-    <img src="/img/coins/cuadros.svg" alt="" />
+    <img src="/img/coins/cuadros.svg" alt="Frame" />
   </div>
   <div class="monner">
     <h3>MONNER’S TOTAL SUPPLY:</h3>

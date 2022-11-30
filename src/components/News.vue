@@ -27,11 +27,11 @@ export default {
     'fondo-montana': true,
     montana__desaparecer: this.exitAnimation && !this.isRevert,
   }">
-    <img src="/img/fondo-montana.png" />
+    <img src="/img/fondo-montana.png" alt="Background-montain"/>
   </div>
   <div class="fondo fondo-oscurecer"></div>
   <div id="logo-2" class="logo">
-    <img src="/img/logo.svg" alt="" />
+    <img src="/img/logo.svg" alt="logo" />
   </div>
 
   <!-- <div class="luces">
@@ -48,18 +48,18 @@ export default {
     <div class="luz-3"></div>
   </div>
   <div class="fondo-mundial">
-    <img src="/img/fondo_Cel.png" alt="" srcset="" />
+    <img src="/img/fondo_Cel.png" alt="Background-cell" srcset="" />
   </div>
   <div class="fondo_rayos">
-    <img src="/img/rayos.png" alt="" />
+    <img src="/img/rayos.png" alt="Background-ray" />
   </div>
   <div class="degradado_azuliz"></div>
   <div class="degradado_azulde"></div>
   <div class="circuito circuito-izquierdo">
-    <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
+    <img src="/img/calculadora/circuito-izquierdo.png" alt="Circuit" />
   </div>
   <div class="circuito circuito-derecho">
-    <img src="/img/calculadora/circuito-derecho.png" alt="" />
+    <img src="/img/calculadora/circuito-derecho.png" alt="Circuit" />
   </div>
   <!--FIN FONDO-->
   <div class="titulo">
@@ -75,13 +75,13 @@ export default {
     }">
       <div class="columnas">
         <div class="news">
-          <a href=""><img src="/img/News/cryptoPotato.png" /></a>
+          <a href=""><img src="/img/News/cryptoPotato.png" alt="CryptoPotato"/></a>
         </div>
         <div class="news">
-          <a href=""><img src="/img/News/CoinQuora.png" /></a>
+          <a href=""><img src="/img/News/CoinQuora.png" alt="CoinQuora"/></a>
         </div>
         <div id="theCoinRepublic" class="news theCoinRepublic">
-          <a href=""><img src="/img/News/TheCoinRepublic.png" /></a>
+          <a href=""><img src="/img/News/TheCoinRepublic.png" alt="Republic" /></a>
         </div>
       </div>
 
@@ -100,15 +100,15 @@ export default {
         <div class="news">
           <a
             href="https://criptotendencia.com/2022/08/03/por-que-monner-puede-convertirse-en-una-de-las-mejores-criptomonedas-para-invertir/"><img
-              src="/img/Exchanges/criptotend.png" /></a>
+              src="/img/Exchanges/criptotend.png" alt="Criptotend" /></a>
         </div>
         <div class="news">
           <a href="https://www.coinspeaker.com/monner-coin-revolutionize-crypto/"><img
-              src="/img/Exchanges/coinspeaker.png" /></a>
+              src="/img/Exchanges/coinspeaker.png" alt="Coinspeaker"/></a>
         </div>
         <div class="news">
           <a href="https://www.territoriobitcoin.com/una-nueva-criptomoneda-en-tendencia/"><img
-              src="/img/Exchanges/territoriobtc.png" /></a>
+              src="/img/Exchanges/territoriobtc.png" alt="Territorio" /></a>
         </div>
       </div>
     </div>

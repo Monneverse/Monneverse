@@ -9,16 +9,16 @@
     'fondo-montana-animation2': this.enterAnimation && this.isRevert,
     fondo_montana_animation_enter_revert: this.exitAnimation && this.isRevert,
     fondo_montana_animation_enter_revert2: this.exitAnimation && !this.isRevert,
-  }"><img src="/img/fondo-montana.png" /> </div>
+  }"><img src="/img/fondo-montana.png" alt="Background-montain" /> </div>
   <div class="fondo fondo-oscurecer"></div>
 
   <!-- circuitos -->
 
   <div class="circuito circuito-izquierdo">
-    <img src="/img/calculadora/circuito-izquierdo.png" alt="" />
+    <img src="/img/calculadora/circuito-izquierdo.png" alt="circuit-left" />
   </div>
   <div class="circuito circuito-derecho">
-    <img src="/img/calculadora/circuito-derecho.png" alt="" />
+    <img src="/img/calculadora/circuito-derecho.png" alt="circuit-right" />
   </div>
 
   <!-- filtro azul -->
@@ -48,7 +48,7 @@
       }">
 
         <div :class="{ circulo: true }">
-          <img src="../assets/circulo-blanco.svg" />
+          <img src="../assets/circulo-blanco.svg" alt="Circle-white" />
         </div>
         <div @click="CambiarMonth" class="descripcion">
           <p>{{ porcentajeInteres }}%</p>

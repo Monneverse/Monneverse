@@ -23,7 +23,7 @@ export default {
       'animacion-benefit-up': this.enterAnimation && this.isRevert,
       'animacion-benefit-up-revert': this.exitAnimation && !this.isRevert,
     }">
-      <img src="/img/fondo-benefit.png" alt="" />
+      <img src="/img/fondo-benefit.png" alt="Background-monner" />
     </div>
 
     <div class="reflector reflector-izquierdo">

@@ -19,18 +19,18 @@ export default {};
     }"
     class="fondo-benefit"
   >
-    <img src="/img/fondo-benefit.png" alt="" />
+    <img src="/img/fondo-benefit.png" alt="Background-monner" />
   </div>
   <div class="titulo">
     <h1>TOKENOMIC</h1>
   </div>
 
   <div class="contenido">
-    <img class="web" src="/img/Diagram/TKN1.png" alt="diagram" srcset="" />
+    <img class="web" src="/img/Diagram/TKN1.png" alt="Diagram" srcset="" />
     <img
       class="movil"
       src="/img/Diagram/TKN2.png"
-      alt="diagram"
+      alt="Diagram"
       srcset=""
     />
   </div>
