@@ -1,6 +1,6 @@
-<script >
+<script>
 export default {
-  props: ["enterAnimation", "exitAnimation", "isRevert"]
+  props: ["enterAnimation", "exitAnimation", "isRevert"],
 };
 </script>
 <template>
@@ -8,37 +8,49 @@ export default {
 
   <div class="fondo">
     <div class="fondo_rayos">
-      <img src="/img/rayos.png" alt="" />
+      <img src="/img/rayos.png" alt="Background-ray" />
     </div>
     <div class="fondo-benefit">
-      <img src="/img/fondo-benefit.png" alt="" />
+      <img src="/img/fondo-benefit.png" alt="Background-monner" />
     </div>
     <div class="logo">
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
 
-    <div :class="{
-      titulo: true,
-      'animacion-aparecer': this.enterAnimation && !this.isRevert,
-      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-    }">
+    <div
+      :class="{
+        titulo: true,
+        'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+      }"
+    >
       <h1>BENEFITS</h1>
     </div>
 
     <div class="display_flex">
       <div class="benefits">
-        <div :class="{
-          beneficio: true,
-          'animacion-aparecer': this.enterAnimation && !this.isRevert,
-          'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          'animacion-desaparecer': this.enterAnimation && this.isRevert,
-          'animacion-desaparecer-revert':
-            this.exitAnimation && !this.isRevert,
-        }">
-          <img id="a" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
+        <div
+          :class="{
+            beneficio: true,
+            'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+            'animacion-desaparecer': this.enterAnimation && this.isRevert,
+            'animacion-desaparecer-revert':
+              this.exitAnimation && !this.isRevert,
+          }"
+        >
+          <img
+            id="a"
+            class="circulos"
+            src="/img/plus.svg"
+            alt="Plus-Benefits"
+          />
           <div class="content-price">
             <div class="titulo-two">
-              <h2><span>$ </span>1,5  <b>USD</b>  in Pinksale <img src="/img/pinksale.png" alt="" srcset=""></h2>
+              <h2>
+                <span>$ </span>1,5  <b>USD</b>  in Pinksale
+                <img src="/img/pinksale.png" alt="Pinksale" srcset="" />
+              </h2>
             </div>
           </div>
           <div class="content-text">
@@ -48,15 +60,22 @@ export default {
           </div>
         </div>
 
-        <div :class="{
-          beneficio: true,
-          'animacion-aparecer': this.enterAnimation && !this.isRevert,
-          'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          'animacion-desaparecer': this.enterAnimation && this.isRevert,
-          'animacion-desaparecer-revert':
-            this.exitAnimation && !this.isRevert,
-        }">
-          <img id="b" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
+        <div
+          :class="{
+            beneficio: true,
+            'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+            'animacion-desaparecer': this.enterAnimation && this.isRevert,
+            'animacion-desaparecer-revert':
+              this.exitAnimation && !this.isRevert,
+          }"
+        >
+          <img
+            id="b"
+            class="circulos"
+            src="/img/plus.svg"
+            alt="Plus-Benefits"
+          />
           <div class="content-price">
             <div class="titulo-two">
               <h1>Phase 1</h1>
@@ -69,35 +88,56 @@ export default {
           </div>
         </div>
 
-          <div :class="{
-          beneficio: true,
-          'animacion-aparecer': this.enterAnimation && !this.isRevert,
-          'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          'animacion-desaparecer': this.enterAnimation && this.isRevert,
-          'animacion-desaparecer-revert':
-            this.exitAnimation && !this.isRevert,
-        }">
-          <img id="b" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
+        <div
+          :class="{
+            beneficio: true,
+            'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+            'animacion-desaparecer': this.enterAnimation && this.isRevert,
+            'animacion-desaparecer-revert':
+              this.exitAnimation && !this.isRevert,
+          }"
+        >
+          <img
+            id="b"
+            class="circulos"
+            src="/img/plus.svg"
+            alt="Plus-Benefits"
+          />
           <div class="content-price">
             <div class="titulo-two">
-              <h2><span>$ </span>7.0  <b> USD</b>   in PancakeSwap <img src="/img/cakelogo.png" alt="" srcset=""></h2>
+              <h2>
+                <span>$ </span>7.0  <b> USD</b>  in PancakeSwap
+                <img src="/img/cakelogo.png" alt="Cake" srcset="" />
+              </h2>
             </div>
           </div>
           <div class="content-text">
-              <div class="text">
-                <p>Price is bought and sold: <br>  MNR will be priced at $7.0 on your listing at a PancakeSwap Right at the time our pre-sale ends.</p>
-              </div>
+            <div class="text">
+              <p>
+                Price is bought and sold: <br />
+                MNR will be priced at $7.0 on your listing at a PancakeSwap
+                Right at the time our pre-sale ends.
+              </p>
+            </div>
           </div>
         </div>
-        <div :class="{
-          beneficio: true,
-          'animacion-aparecer': this.enterAnimation && !this.isRevert,
-          'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          'animacion-desaparecer': this.enterAnimation && this.isRevert,
-          'animacion-desaparecer-revert':
-            this.exitAnimation && !this.isRevert,
-        }">
-          <img id="d" class="circulos" src="/img/plus.svg" alt="Plus-Beneficios" />
+        <div
+          :class="{
+            beneficio: true,
+            'animacion-aparecer': this.enterAnimation && !this.isRevert,
+            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+            'animacion-desaparecer': this.enterAnimation && this.isRevert,
+            'animacion-desaparecer-revert':
+              this.exitAnimation && !this.isRevert,
+          }"
+        >
+          <img
+            id="d"
+            class="circulos"
+            src="/img/plus.svg"
+            alt="Plus-Benefits"
+          />
           <div class="content-price">
             <div class="titulo-two">
               <h1>6.2%<span>*</span>48h</h1>
@@ -112,52 +152,56 @@ export default {
               <p class="">
                 Enter our first phase os staking buying in pre-sale and earn
                 6.2% every 48 hours of your total capital in Monnercoins after
-                the launch in Pancakeswap.  <span  class="amarrillo">Only for the first 600 holders</span>
+                the launch in Pancakeswap.
+                <span class="amarrillo">Only for the first 600 holders</span>
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div :class="{
-        aro: true,
-        'animacion-aparecer': this.enterAnimation && !this.isRevert,
-        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-        'animacion-desaparecer': this.enterAnimation && this.isRevert,
-        'animacion-desaparecer-revert':
-          this.exitAnimation && !this.isRevert,
-      }">
-        <img class="image1" src="../assets/aro.svg" />
+      <div
+        :class="{
+          aro: true,
+          'animacion-aparecer': this.enterAnimation && !this.isRevert,
+          'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+          'animacion-desaparecer': this.enterAnimation && this.isRevert,
+          'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+        }"
+      >
+        <img class="image1" src="../assets/aro.svg" alt="Ring" />
 
-        <img :class="{
-          image: true,
-          animated: true,
-          duration1s: true,
-          fadeInLeft: this.enterAnimation,
-          fadeOutLeft: this.exitAnimation,
-        }" src="../assets/aro.svg" />
+        <img
+          :class="{
+            image: true,
+            animated: true,
+            duration1s: true,
+            fadeInLeft: this.enterAnimation,
+            fadeOutLeft: this.exitAnimation,
+          }"
+          src="../assets/aro.svg"
+          alt="Ring"
+        />
       </div>
     </div>
   </div>
- 
 
-    <div class="logo-redes">
-      <div class="icon icon-telegram">
-        <a href="https://t.me/MonnerverseCripto" target="_blank">
-          <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
-        </a>
-      </div>
-      <div class="icon icon-reddit">
-        <a href="https://www.reddit.com/user/monnerverse" target="_blank">
-          <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
-        </a>
-      </div>
-      <div class="icon icon-discord">
-        <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
-          <img src="../assets/discord.svg" alt="logo discord" srcset="" />
-        </a>
-      </div>
+  <div class="logo-redes">
+    <div class="icon icon-telegram">
+      <a href="https://t.me/MonnerverseCripto" target="_blank">
+        <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
+      </a>
     </div>
-  
+    <div class="icon icon-reddit">
+      <a href="https://www.reddit.com/user/monnerverse" target="_blank">
+        <img src="../assets/reddit-4.svg" alt="logo reddit" srcset="" />
+      </a>
+    </div>
+    <div class="icon icon-discord">
+      <a href="https://discord.com/invite/h7fRvek9dn" target="_blank">
+        <img src="../assets/discord.svg" alt="logo discord" srcset="" />
+      </a>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -184,7 +228,7 @@ p {
   z-index: 12;
   display: none;
 }
-.amarrillo{
+.amarrillo {
   color: #ffc000;
   font-weight: 600;
 }
@@ -203,7 +247,7 @@ p {
   color: white;
 }
 
-#titulo22{
+#titulo22 {
   width: 1005;
   margin-left: 0;
   border-radius: 1px solid red;
@@ -225,7 +269,7 @@ p {
   height: auto;
   display: flex;
   flex-direction: column;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .beneficio:nth-child(1) {
@@ -319,7 +363,7 @@ p {
   font-family: "Work Sans", sans-serif;
   color: white;
   margin: 0;
-  font-size: 1.3rem ;
+  font-size: 1.3rem;
   margin-left: 5%;
 }
 .titulo-two h2 {
@@ -405,7 +449,7 @@ p {
   z-index: 5;
 }
 
-.fondo-benefit>img {
+.fondo-benefit > img {
   height: 150vh;
 }
 
@@ -415,7 +459,7 @@ p {
     left: 0%;
   }
 
-  .fondo-benefit>img {
+  .fondo-benefit > img {
     width: 100%;
     height: 115vh;
   }
@@ -424,8 +468,8 @@ p {
     width: 100%;
   }
   .titulo-two h2 {
-  font-size: 1.5rem;
-}
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -519,7 +563,7 @@ p {
   z-index: 5;
 }
 
-@media screen and (min-width:769px) {
+@media screen and (min-width: 769px) {
   .aro {
     top: -40%;
     display: flex;
@@ -735,7 +779,7 @@ p {
   }
 }
 
-@media (min-width:769px) and (width < 900px) {
+@media (min-width: 769px) and (width < 900px) {
   .beneficio:nth-child(1) {
     position: relative;
     top: 50%;
