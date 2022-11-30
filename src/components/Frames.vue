@@ -204,8 +204,8 @@ img {
 /* style mobile */
 @media screen and (max-width: 900px) {
   .contenido {
-    top: 18%;
-    height: 35rem;
+    top: 12%;
+    height: 33rem;
     left: 6.5%;
   }
   .contenido img {
