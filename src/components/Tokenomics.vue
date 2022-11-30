@@ -708,8 +708,8 @@ h2 {
     transform: rotate(-50deg);
     border-left: none;
     border-top: none;
-    border-right: 4px #fff solid;
-    border-bottom: 4px #fff solid;
+    border-right: 4px #ffc000 solid;
+    border-bottom: 4px #ffc000 solid;
     z-index: 999;
   }
 
@@ -721,8 +721,8 @@ h2 {
     margin: -10px 0 0 -10px;
     border-left: none;
     border-top: none;
-    border-right: 2px #fff solid;
-    border-bottom: 2px #fff solid;
+    border-right: 2px #ffc000 solid;
+    border-bottom: 2px #ffc000 solid;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-name: arrow;
@@ -755,8 +755,8 @@ h2 {
     transform: rotate(135deg);
     border-left: none;
     border-top: none;
-    border-right: 4px #fff solid;
-    border-bottom: 4px #fff solid;
+    border-right: 4px #ffc000 solid;
+    border-bottom: 4px #ffc000 solid;
     z-index: 999;
   }
 
@@ -768,8 +768,8 @@ h2 {
     margin: -10px 0 0 -10px;
     border-left: none;
     border-top: none;
-    border-right: 2px #fff solid;
-    border-bottom: 2px #fff solid;
+    border-right: 2px #ffc000 solid;
+    border-bottom: 2px #ffc000 solid;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-name: arrow2;
