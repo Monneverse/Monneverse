@@ -9,14 +9,22 @@ export default {
   methods: {
     next() {
       let panel = document.getElementById('contenidoVideo');
-      panel.scrollLeft += panel.offsetWidth;
+      let count = parseInt(( panel.scrollLeft + panel.offsetWidth) / panel.offsetWidth);
+ 
+     
+      panel.scrollLeft = panel.offsetWidth * count;
 
     },
     before() {
       let panel = document.getElementById('contenidoVideo');
-      panel.scrollLeft -= panel.offsetWidth;
-
-    }
+      let count = parseInt((panel.scrollLeft - panel.offsetWidth) / panel.offsetWidth);
+      if (count != (panel.scrollLeft - panel.offsetWidth) / panel.offsetWidth) {
+        count++;
+      }
+   
+      panel.scrollLeft = panel.offsetWidth * count ;
+    
+    },
   },
   data() {
     return {
@@ -291,15 +299,14 @@ img {
 .contenido {
   position: relative;
   top: 25%;
-  left: 2.5%;
-  width: 95%;
-  height: 75%;
+  left: 1%;
+  height: 62%;
+  width: 98%;
   z-index: 2;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  padding: 2rem;
   overflow: hidden;
   overflow-x: scroll;
   overscroll-behavior-x: initial;
@@ -310,14 +317,14 @@ img {
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
 }
 
-
-.contenido {
-  left: 1%;
-  justify-content: flex-start;
-  height: 62%;
-  width: 98%;
-  padding: 0.1rem;
+@media screen and (min-width:900px) {
+  .contenido{
+    padding: 2rem;
+  }
+  
 }
+
+
 
 .contenido::-webkit-scrollbar:horizontal {
   height: 10px;

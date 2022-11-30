@@ -104,9 +104,7 @@ export default {
     next() {
       let panel = document.getElementById('contenidoTeam');
       let count = parseInt(( panel.scrollLeft + panel.offsetWidth) / panel.offsetWidth);
-      console.log('Este es el ancho del componente'+ panel.offsetWidth);
-      console.log('Este es el scroll que se ha hecho'+panel.scrollLeft);
-      
+   
      
       panel.scrollLeft = panel.offsetWidth * count;
 
