@@ -148,7 +148,7 @@ export default {
                             energy boards patented under the <span class="resaltar">MNR</span> name with a 20-year
                             guarantee.
                         </li>
-                        <li> - Publication of Q-5, Q-6, Q-7, Q-8.
+                        <li> - Publication of F5, F6, F7, F8.
                         </li>
                         <li> - <span class="resaltar">Monner</span> will innovate year after year until it becomes the
                             project with the greatest
