@@ -2,9 +2,6 @@
 export default {
     props: ["enterAnimation", "exitAnimation", "isRevert", "SetBloquearScroll", "next", "before"],
     mounted() {
-       
-        // var panel = document.getElementById("contenido__fase");
-        // panel.style.height = (panel.clientHeight) + "px";
         let roadmap = document.getElementById("contenido");
         roadmap.addEventListener('scroll', (event) => {
 
@@ -13,7 +10,7 @@ export default {
                 this.before();
             }
 
-            if (roadmap.offsetHeight + roadmap.scrollTop + 2 >= roadmap.scrollHeight) {
+            if (roadmap.offsetHeight + roadmap.scrollTop + 5 >= roadmap.scrollHeight) {
                 this.SetBloquearScroll(true);
                 this.next();
             }
