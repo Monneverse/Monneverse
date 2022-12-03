@@ -34,7 +34,7 @@ export default {
     </div>
     <!-- Fin fondo -->
     <h2>ROAD MAP</h2>
-    <div id="contenido" class="contenido" @click=" this.SetBloquearScroll(false)" @mousemove="this.SetBloquearScroll(false)"
+    <div id="contenido" class="contenido" @click=" this.SetBloquearScroll(false)" 
         @mouseenter="this.SetBloquearScroll(false)" @touchstart="this.SetBloquearScroll(false)"
         @touchend="this.SetBloquearScroll(true)" @mouseleave="this.SetBloquearScroll(true)">
 
