@@ -151,10 +151,10 @@ export default {
           this.index_pagina = 9;
           break;
         case 3:
-          if (this.index_pagina == 12) {
+          if (this.index_pagina == 13) {
             return;
           }
-          this.index_pagina = 12;
+          this.index_pagina = 13;
           break;
         case 4:
           if (this.index_pagina == 16) {

@@ -11,7 +11,7 @@ export default {  props: ["enterAnimation", "exitAnimation", "isRevert"],};
       fondo__desaparecer2: this.exitAnimation && !this.isRevert,
     }"
   >
-    <img src="/img/rayos.png" alt="" />
+    <img class="web" src="/img/rayos.png" alt="ray" />
   </div>
   <div
     :class="{
@@ -97,7 +97,7 @@ img {
   width: 100%;
   height: 100%;
   z-index: 0;
-  background-color: #121026!important;
+ 
 }
 
 .fondo-benefit {
