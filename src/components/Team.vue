@@ -10,10 +10,10 @@ export default {
     return {
       group: [
         {
-          title: " CEO Brayan Rogelio Gómez Rodriguez.",
+          title: "Brayan Gómez",
           description:
             "Certified trader in S&P500 and Nasdaq, director of private investment funds. Sales Manager at MonnerPlanet.",
-          img: "/img/logo.svg",
+          img: "/img/Team/bra.jpg",
           redes: [
             {
               name: "Instagram",
