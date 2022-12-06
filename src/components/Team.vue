@@ -10,7 +10,7 @@ export default {
     return {
       group: [
         {
-          title: "Brayan Gómez",
+          title: "CEO Brayan Gómez",
           description:
             "Certified trader in S&P500 and Nasdaq, director of private investment funds. Sales Manager at MonnerPlanet.",
           img: "/img/Team/bra.jpg",

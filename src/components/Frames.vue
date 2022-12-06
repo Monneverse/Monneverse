@@ -27,16 +27,11 @@ export default {};
 
   <div class="contenido">
     <img class="web" src="/img/Frames/fram.png" alt="Diagram" srcset="" />
-    <img
-      class="movil"
-      src="/img/Frames/framw.png" 
-      alt="Diagram"
-      srcset=""
-    />
+    <img class="movil" src="/img/Frames/framw.png" alt="Diagram" srcset="" />
   </div>
   <div class="arrow"></div>
   <div class="arrow2"></div>
-  <div class="logo-redes">
+<!-- <div class="logo-redes">
     <a class="icon" href="https://t.me/MonnerverseCripto" target="_blank">
       <img src="../assets/Telegram_logo.svg" alt="logo telegram" srcset="" />
     </a>
@@ -56,7 +51,7 @@ export default {};
     >
       <img src="../assets/discord.svg" alt="logo discord" srcset="" />
     </a>
-  </div>
+  </div>  -->
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
 </template>
@@ -140,13 +135,13 @@ img {
 
 .titulo {
   position: absolute;
-  top: 15%;
+  top: 12%;
   width: 100%;
   height: auto;
   z-index: 1;
 }
 .titulo h1 {
-  text-align: center ;
+  text-align: center;
   color: white;
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
   font-size: 2.5rem;
@@ -155,7 +150,7 @@ img {
 
 .contenido {
   position: relative;
-  top: 15%;
+  top: 10%;
   z-index: 29;
   box-sizing: border-box;
   display: flex;
@@ -166,10 +161,9 @@ img {
   width: 100%;
 }
 .contenido img {
-    width: 65rem;
-    height: auto;
-  }
-
+  width: 65rem;
+  height: 30rem;
+}
 
 @keyframes aparecer {
   0% {

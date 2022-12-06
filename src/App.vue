@@ -275,7 +275,7 @@ export default {
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left;
           } else {
-            this.orientacion = typeOrientacion.left;
+            this.orientacion = typeOrientacion.right;
           }
 
           this.index = 0;
