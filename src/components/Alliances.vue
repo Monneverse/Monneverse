@@ -67,6 +67,24 @@ export default {
       <img src="/img/fondo_Cel.png" alt="" srcset="" />
     </div>
 
+    <div class="video-banner">
+      <video
+        preload="auto"
+        autoplay
+        webkit-playsinline
+        playsinline
+        muted
+        loop
+        class="banner"
+      >
+        <source
+          data-src="/video/banner.mp4"
+          type="video/mp4"
+          src="/video/banner.mp4"
+        />
+      </video>
+    </div>
+
     <div class="contenido-principal">
       <div class="texto"></div>
 
@@ -140,7 +158,10 @@ export default {
               />
               <div class="imagenes">
                 <img src="../assets/methodBuy/visa.svg" alt="visa" />
-                <img src="../assets/methodBuy/masterCard.svg" alt="masterdCard" />
+                <img
+                  src="../assets/methodBuy/masterCard.svg"
+                  alt="masterdCard"
+                />
               </div>
             </div>
           </div>
@@ -214,7 +235,23 @@ section {
   height: auto;
   z-index: 3;
 }
-
+.video-banner {
+  position: absolute;
+  z-index: 999;
+  top: 15%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.video-banner video {
+  width: 18rem;
+}
+@media screen and (min-width: 900px) {
+  .video-banner {
+    top: 15%;
+  }
+}
 .contenido-general {
   width: 100%;
   height: 100%;
@@ -235,6 +272,11 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 900px) {
+  .contenido-principal {
+    top: 15%;
+  }
 }
 
 .texto {
@@ -306,13 +348,9 @@ section {
     z-index: 45;
     display: none;
   }
-
-  .content-forms {
-    height: 100%;
-  }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 900px) {
   .texto {
     display: none;
   }
@@ -843,7 +881,7 @@ section {
   height: 40%;
   padding: 0;
   margin: 0;
-  top: 33.5rem;
+  top: 38rem;
   display: flex;
   justify-content: center;
 }
