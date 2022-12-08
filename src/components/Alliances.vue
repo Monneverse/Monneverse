@@ -245,7 +245,7 @@ section {
   justify-content: center;
 }
 .video-banner video {
-  width: 18rem;
+  width:  18rem;
 }
 @media screen and (min-width: 900px) {
   .video-banner {
