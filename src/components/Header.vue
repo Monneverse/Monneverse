@@ -43,6 +43,7 @@
 
       <!-- boton WHITEPAPER -->
       <div class="container-whitepaper">
+        
         <button class="btn" @click="reDirect">WHITEPAPER </button>
       </div>
 
@@ -185,7 +186,7 @@ export default {
       }
     },
     reDirect() {
-      location.replace(
+      window.open(
         "https://sites.google.com/view/whiterpaper-monnerverse/p%C3%A1gina-principal"
       );
     },
@@ -319,6 +320,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -344,7 +346,7 @@ img {
   font-family: "Bahn";
   transition: ease-in all .5s;
   animation: btnMeta infinite alternate 5s;
-  cursor: hand;
+  cursor: pointer;
 }
 
 @keyframes add {

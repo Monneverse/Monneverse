@@ -170,13 +170,14 @@ export default {
       fadeInDown: this.enterAnimation,
       fadeOutUp: this.exitAnimation,
     }"
+    @click="addTokenFunction()"
   >
     <!-- <div class="contrato">
       <span>Contract:0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span>
     </div> -->
     <div class="separar"></div>
     <div class="buyNow">
-      <a target="_blank" @click="addTokenFunction()" class="btn_moner">
+      <a target="_blank" class="btn_moner">
         <div class="texto1">BUY MONNER</div>
         <div class="logos">
           <div class="binance"><img src="/./img/Articulo/BNC.svg" /></div>
@@ -378,6 +379,7 @@ img {
   left: 19%;
   width: 60%;
   height: auto;
+  z-index: 999;
 }
 
 .btn_buy__aparecer {
@@ -444,7 +446,6 @@ img {
   align-items: center;
   cursor: pointer;
 }
-
 .texto1 {
   font-size: 3vw;
   color: white;
