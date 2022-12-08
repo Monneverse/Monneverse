@@ -10,6 +10,10 @@ export default {
   data() {
     return {
       isChanged: false,
+      tokenAddress: "0x7be216c3B4BF56Afb2770A6982F1B19650f680B0",
+      tokenSymbol: "MNR",
+      tokenDecimals: 18,
+      tokenImage: "https://i.postimg.cc/13c46n08/32-32-MONNER.png",
       vectorTodo: [
         {
           titulo: "Presale and benefits For investors",
@@ -66,6 +70,34 @@ export default {
     };
   },
   methods: {
+    async addTokenFunction() {
+      if (window.ethereum) {
+        console.log("MetaMask is installed");
+        try {
+          const wasAdded = await window.ethereum.request({
+            method: "wallet_watchAsset",
+            params: {
+              type: "ERC20",
+              options: {
+                address: this.tokenAddress,
+                symbol: this.tokenSymbol,
+                decimals: this.tokenDecimals,
+                image: this.tokenImage,
+              },
+            },
+          });
+
+          if (wasAdded) {
+            console.log("MNR Added Successfuly");
+          } else {
+            console.log("The currency has not been added");
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    },
+
     CambiarArticulos() {
       this.isChanged = true;
       this.vectorArticulo = this.vectorTodo.slice(
@@ -79,19 +111,22 @@ export default {
       }
     },
     next() {
-      let panel = document.getElementById('contenido');
-      let count = parseInt((panel.scrollLeft + panel.offsetWidth) / panel.offsetWidth);
+      let panel = document.getElementById("contenido");
+      let count = parseInt(
+        (panel.scrollLeft + panel.offsetWidth) / panel.offsetWidth
+      );
       if (panel.offsetWidth + panel.scrollLeft + 2 >= panel.scrollWidth) {
         this.CambiarArticulos();
         panel.scrollLeft = 0;
         return;
       }
       panel.scrollLeft = panel.offsetWidth * count;
-
     },
     before() {
-      let panel = document.getElementById('contenido');
-      let count = parseInt((panel.scrollLeft - panel.offsetWidth) / panel.offsetWidth);
+      let panel = document.getElementById("contenido");
+      let count = parseInt(
+        (panel.scrollLeft - panel.offsetWidth) / panel.offsetWidth
+      );
       if (count != (panel.scrollLeft - panel.offsetWidth) / panel.offsetWidth) {
         count++;
       }
@@ -99,8 +134,7 @@ export default {
         this.CambiarArticulos();
       }
       panel.scrollLeft = panel.offsetWidth * count;
-    
-    }
+    },
   },
   mounted() {
     this.CambiarArticulos();
@@ -113,7 +147,9 @@ export default {
     <div class="fondoArticulo"></div>
     <div class="circuloFondo circuloFondo1"></div>
     <div class="circuloFondo circuloFondo2"></div>
-    <div class="fondo fondo-montana"><img src="/img/fondo-montana.png" alt="Background-montain" /></div>
+    <div class="fondo fondo-montana">
+      <img src="/img/fondo-montana.png" alt="Background-montain" />
+    </div>
     <div class="fondo-oscuro"></div>
     <div class="degradado degradado_izquierdo"></div>
     <div class="degradado degradado_derecho"></div>
@@ -126,18 +162,21 @@ export default {
   </div>
 
   <!-- CONTENEDOR DE BOTON METATASK -->
-  <div class="btn_buyMonner" :class="{
-    animated: true,
-    duration1s: true,
-    fadeInDown: this.enterAnimation,
-    fadeOutUp: this.exitAnimation,
-  }">
+  <div
+    class="btn_buyMonner"
+    :class="{
+      animated: true,
+      duration1s: true,
+      fadeInDown: this.enterAnimation,
+      fadeOutUp: this.exitAnimation,
+    }"
+  >
     <!-- <div class="contrato">
       <span>Contract:0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span>
     </div> -->
     <div class="separar"></div>
     <div class="buyNow">
-      <a target="_blank" class="btn_moner">
+      <a target="_blank" @click="addTokenFunction()" class="btn_moner">
         <div class="texto1">BUY MONNER</div>
         <div class="logos">
           <div class="binance"><img src="/./img/Articulo/BNC.svg" /></div>
@@ -150,14 +189,21 @@ export default {
   <!-- Contenedor de Articulos -->
   <div id="contenido" class="containerArticulo">
     <div class="contenedorDeArticulo">
-      <Articulo :class="{
-        articulo__aparecer:
-          (this.enterAnimation && !this.isRevert) ||
-          (this.isChanged && !this.enterAnimation && !this.isRevert),
-        articulo__aparecer_revert: this.enterAnimation && this.isRevert,
-        articulo__desaparecer_revert: this.exitAnimation && this.isRevert,
-        articulo__desaparecer: this.exitAnimation && !this.isRevert,
-      }" v-for="item in vectorArticulo" :key="item" :titulo="item.titulo" :img="item.imagen" :url="item.link" />
+      <Articulo
+        :class="{
+          articulo__aparecer:
+            (this.enterAnimation && !this.isRevert) ||
+            (this.isChanged && !this.enterAnimation && !this.isRevert),
+          articulo__aparecer_revert: this.enterAnimation && this.isRevert,
+          articulo__desaparecer_revert: this.exitAnimation && this.isRevert,
+          articulo__desaparecer: this.exitAnimation && !this.isRevert,
+        }"
+        v-for="item in vectorArticulo"
+        :key="item"
+        :titulo="item.titulo"
+        :img="item.imagen"
+        :url="item.link"
+      />
     </div>
   </div>
 
@@ -219,10 +265,12 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
   z-index: 0;
 }
 
@@ -265,9 +313,9 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: 6px solid #164B2E;
+  border: 6px solid #164b2e;
   z-index: 2;
-  opacity: .3;
+  opacity: 0.3;
 }
 
 .circuloFondo1 {
@@ -394,6 +442,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 .texto1 {
@@ -633,7 +682,7 @@ h4 {
   left: 10%;
 }
 
-.flecha_before>img {
+.flecha_before > img {
   margin: 0;
   rotate: 90deg;
 }
@@ -642,7 +691,7 @@ h4 {
   right: 10%;
 }
 
-.flecha_next>img {
+.flecha_next > img {
   rotate: -90deg;
 }
 @media screen and (max-width: 900px) {
@@ -751,8 +800,6 @@ h4 {
     }
   }
 
-
-
   .btn_buyMonner {
     top: 15%;
   }
@@ -777,9 +824,11 @@ h4 {
   }
 
   .containerArticulo::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg,
-        rgb(33, 32, 85) 0%,
-        rgba(1, 209, 88, 1) 100%);
+    background: linear-gradient(
+      90deg,
+      rgb(33, 32, 85) 0%,
+      rgba(1, 209, 88, 1) 100%
+    );
     border-radius: 20px;
     border: 2px solid #f1f2f3;
   }
@@ -809,7 +858,7 @@ h4 {
     height: 90%;
   }
 
-  .contenedorDeArticulo>* {
+  .contenedorDeArticulo > * {
     width: 100%;
     padding: 1.5rem;
     box-sizing: border-box;
@@ -825,23 +874,23 @@ h4 {
     height: 7%;
     width: 80%;
     font-size: 3vw;
-
   }
 
   .buyNow {
     left: 10%;
     width: 100%;
     height: 130%;
-    padding: .1rem;
+    padding: 0.1rem;
   }
 
   .btn_moner {
     width: 100%;
-    padding: .2rem;
+    padding: 0.2rem;
   }
 
   .buyNow .logos {
     top: -18%;
+    height: 4.5rem;
   }
 
   .buyNow .logos .meta {
