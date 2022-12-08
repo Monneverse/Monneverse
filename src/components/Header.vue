@@ -334,14 +334,14 @@ img {
 
 .add {
   border: none;
-  width: min-content;
-  min-width: 15rem;
+  min-width: 12rem;
+  padding: 1rem;
   height: auto;
   background: linear-gradient(90deg, rgba(85, 0, 255, 1) 35%, rgba(214, 0, 255, 1) 100%);
   border-radius: 3rem;
   color: var(--color-letra);
   font-size: 1.2rem;
-  padding: .5rem;
+  padding: .6rem;
   margin-left: 1rem;
   font-family: "Bahn";
   transition: ease-in all .5s;
@@ -650,7 +650,7 @@ img {
   .btnMeta {
     position: fixed;
     top: 2rem;
-    right: 2rem;
+    right: .5rem;
   }
 }
 </style>
