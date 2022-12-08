@@ -14,11 +14,13 @@ export default {
     loop
     class="video-fondo-alliances"
     poster="/img/fondo_binario.png"
+
   >
     <source
       data-src="/video/Full-HD-Lite-2.mp4"
       type="video/mp4"
-      src="/video/Full-HD-Lite-2.mp4"
+      srcset="/video/Full-HD-Lite-2.mp4"
+
     />
 
     <p>
@@ -76,12 +78,19 @@ export default {
         muted
         loop
         class="banner"
+
       >
         <source
           data-src="/video/banner.mp4"
           type="video/mp4"
-          src="/video/banner.mp4"
+          srcset="/video/banner.mp4"
+          media="max-width:900px"
         />
+        <source
+        data-src="/video/banner_web.mp4"
+        type="video/mp4"
+        src="/video/banner_web.mp4"
+      />
       </video>
     </div>
 
