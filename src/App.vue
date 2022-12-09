@@ -24,7 +24,6 @@ import Videos from "./components/Videos.vue";
 import Team from "./components/Team.vue";
 import Diagram from "./components/Diagram.vue";
 import Frame from "./components/Frames.vue";
-import Banner from "./components/banner.vue";
 const typeOrientacion = Object.freeze({
   left: 1,
   center: 2,
@@ -35,7 +34,6 @@ export default {
   components: {
     Header,
     Bienvenida,
-    Banner,
     Calculadora,
     Alliances,
     ContenedorArticulo,
@@ -64,7 +62,7 @@ export default {
     return {
       index: 0,
       index_pagina: 1,
-      limite: 25,
+      limite: 24,
       pagesVisible: [1, 2],
       isVisibleLogo: false,
       scroll: true,
@@ -98,18 +96,16 @@ export default {
           newPosition = this.index_pagina + 1;
           this.scroll = false;
           this.isRevert = false;
-          if (newPosition == 2 && screen.width < 900) {
-            newPosition = 3;
+
+          if (newPosition == 5) {
+            newPosition = 6;
           }
-          if (newPosition == 6) {
-            newPosition = 7;
-          }
-          if (newPosition == 12) {
-            newPosition = 13;
+          if (newPosition == 11) {
+            newPosition = 12;
           }
 
-          if (newPosition == 20) {
-            newPosition = 25;
+          if (newPosition == 19) {
+            newPosition = 24;
           }
           this.CambiarContenedor(newPosition);
         }
@@ -123,18 +119,16 @@ export default {
           this.scroll = false;
           newPosition = this.index_pagina - 1;
           this.isRevert = true;
-          if (newPosition == 2) {
-            newPosition = 1;
+
+          if (newPosition == 5) {
+            newPosition = 4;
           }
-          if (newPosition == 6) {
-            newPosition = 5;
-          }
-          if (newPosition == 12) {
-            newPosition = 11;
+          if (newPosition == 11) {
+            newPosition = 10;
           }
 
-          if (newPosition == 24) {
-            newPosition = 19;
+          if (newPosition == 23) {
+            newPosition = 18;
           }
           this.CambiarContenedor(newPosition);
         }
@@ -145,34 +139,34 @@ export default {
       this.isVisibleLogo = visible;
       switch (this.index) {
         case 1:
-          if (this.index_pagina == 7) {
+          if (this.index_pagina == 6) {
             return;
           }
-          this.index_pagina = 7;
+          this.index_pagina = 6;
           break;
         case 2:
-          if (this.index_pagina == 10) {
+          if (this.index_pagina == 9) {
             return;
           }
-          this.index_pagina = 10;
+          this.index_pagina = 9;
           break;
         case 3:
-          if (this.index_pagina == 14) {
+          if (this.index_pagina == 13) {
             return;
           }
-          this.index_pagina = 14;
+          this.index_pagina = 13;
           break;
         case 4:
+          if (this.index_pagina == 16) {
+            return;
+          }
+          this.index_pagina = 16;
+          break;
+        case 5:
           if (this.index_pagina == 17) {
             return;
           }
           this.index_pagina = 17;
-          break;
-        case 5:
-          if (this.index_pagina == 18) {
-            return;
-          }
-          this.index_pagina = 18;
           break;
         case 6:
           if (this.index_pagina == 1) {
@@ -222,14 +216,6 @@ export default {
           this.index = 0;
           break;
         case 6:
-          this.index = 0;
-          if (window.innerWidth < 900) {
-            this.orientacion = typeOrientacion.left;
-          } else {
-            this.orientacion = typeOrientacion.right;
-          }
-          break;
-        case 7:
           this.index = 1;
           if (window.innerWidth < 900) {
             this.orientacion = typeOrientacion.left;
@@ -243,7 +229,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right;
           }
-          this.index = 0;
+          this.index = 2;
           break;
         case 10:
           if (window.innerWidth < 900) {
@@ -275,7 +261,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right;
           }
-          this.index = 2;
+          this.index = 3;
           break;
         case 14:
           if (window.innerWidth < 900) {
@@ -292,7 +278,7 @@ export default {
             this.orientacion = typeOrientacion.right;
           }
 
-          this.index = 3;
+          this.index = 0;
           break;
         case 16:
           if (window.innerWidth < 900) {
@@ -300,7 +286,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right;
           }
-          this.index = 0;
+          this.index = 4;
           break;
         case 17:
           if (window.innerWidth < 900) {
@@ -308,7 +294,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right;
           }
-          this.index = 4;
+          this.index = 5;
           break;
         case 18:
           if (window.innerWidth < 900) {
@@ -316,7 +302,7 @@ export default {
           } else {
             this.orientacion = typeOrientacion.right;
           }
-          this.index = 5;
+          this.index = 0;
           break;
         case 19:
           if (window.innerWidth < 900) {
@@ -327,7 +313,7 @@ export default {
           this.index = 0;
           break;
         case 20:
-          this.index = 5;
+          this.index = 0;
           this.orientacion = typeOrientacion.none;
           break;
         default:
@@ -408,37 +394,31 @@ export default {
         if (event.deltaY > 0) {
           if (this.index_pagina < this.limite) {
             newPosition = this.index_pagina + 1;
-            if (newPosition == 6) {
-              newPosition = 7;
+            if (newPosition == 5) {
+              newPosition = 6;
             }
-            if (newPosition == 12) {
-              newPosition = 13;
+            if (newPosition == 11) {
+              newPosition = 12;
             }
-            if (newPosition == 20) {
-              newPosition = 25;
+            if (newPosition == 19) {
+              newPosition = 24;
             }
             this.isRevert = false;
-            if (newPosition == 2 && screen.width < 900) {
-              newPosition = 3;
-            }
           }
         } else {
           if (this.index_pagina > 1) {
             newPosition = this.index_pagina - 1;
 
-            if (newPosition == 6) {
-              newPosition = 5;
+            if (newPosition == 5) {
+              newPosition = 4;
             }
-            if (newPosition == 12) {
-              newPosition = 11;
+            if (newPosition == 11) {
+              newPosition = 10;
             }
-            if (newPosition == 24) {
-              newPosition = 19;
+            if (newPosition == 23) {
+              newPosition = 18;
             }
             this.isRevert = true;
-            if (newPosition == 2 && screen.width < 900) {
-              newPosition = 1;
-            }
           }
         }
 
@@ -504,7 +484,6 @@ export default {
     <Header :orientacion="orientacion" :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage" :setNext="next"
       :indexPagina="index_pagina">
     </Header>
-
   </header>
 
   <main class="scroll-main">
@@ -513,89 +492,86 @@ export default {
     </div>
 
     <div v-show="index_pagina == 2" v-if="IsPagesVisible(2)" class="container">
-      <Banner></Banner>
-    </div>
-    <div v-show="(index_pagina == 3)" v-if="IsPagesVisible(3)" class="container">
       <Alliances :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="(index_pagina == 4)" v-if="IsPagesVisible(4)" class="container">
+    <div v-show="index_pagina == 3" v-if="IsPagesVisible(3)" class="container">
       <Alianzas :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="(index_pagina == 5)" v-if="IsPagesVisible(5)" class="container">
+    <div v-show="index_pagina == 4" v-if="IsPagesVisible(4)" class="container">
       <Calculadora :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="(index_pagina == 6)" v-if="IsPagesVisible(6)" class="container">
+    <div v-show="index_pagina == 5" v-if="IsPagesVisible(5)" class="container">
       <Coins :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="(index_pagina == 7)" v-if="IsPagesVisible(7)" class="container">
+    <div v-show="index_pagina == 6" v-if="IsPagesVisible(6)" class="container">
       <ContenedorArticulo :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="(index_pagina == 8)" v-if="IsPagesVisible(8)" class="container">
+    <div v-show="index_pagina == 7" v-if="IsPagesVisible(7)" class="container">
       <Exchanges :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="(index_pagina == 9)" v-if="IsPagesVisible(9)" class="container">
+    <div v-show="index_pagina == 8" v-if="IsPagesVisible(8)" class="container">
       <Logos_auditorias :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" />
     </div>
 
-    <div v-show="(index_pagina == 10)" v-if="IsPagesVisible(10)" class="container">
+    <div v-show="index_pagina == 9" v-if="IsPagesVisible(9)" class="container">
       <Benefits :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="(index_pagina == 11)" v-if="IsPagesVisible(11)" class="container">
+    <div v-show="index_pagina == 10" v-if="IsPagesVisible(10)" class="container">
       <Frame :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="(index_pagina == 12)" v-if="IsPagesVisible(12)" class="container">
+    <div v-show="index_pagina == 11" v-if="IsPagesVisible(11)" class="container">
       <Benefits_card :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"
         :SetBloquearScroll="SetBloquearScroll" />
     </div>
 
-    <div v-show="(index_pagina == 13)" v-if="IsPagesVisible(13)" class="container">
+    <div v-show="index_pagina == 12" v-if="IsPagesVisible(12)" class="container">
       <Beneficio :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
 
     </div>
-    <div v-show="(index_pagina == 14)" v-if="IsPagesVisible(14)" class="container">
+    <div v-show="index_pagina == 13" v-if="IsPagesVisible(13)" class="container">
       <Tokenomics :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
 
     </div>
-    <div v-show="(index_pagina == 15)" v-if="IsPagesVisible(15)" class="container">
+    <div v-show="(index_pagina == 14)" v-if="IsPagesVisible(14)" class="container">
       <Diagram :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="(index_pagina == 16)" v-if="IsPagesVisible(16)" class="container">
+    <div v-show="(index_pagina == 15)" v-if="IsPagesVisible(15)" class="container">
       <Videos :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="(index_pagina == 17)" v-if="IsPagesVisible(17)" class="container">
+    <div v-show="(index_pagina == 16)" v-if="IsPagesVisible(16)" class="container">
       <News :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="(index_pagina == 18)" v-if="IsPagesVisible(18)" class="container">
+    <div v-show="(index_pagina == 17)" v-if="IsPagesVisible(17)" class="container">
       <FaseNew :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert"
         :SetBloquearScroll="SetBloquearScroll" :next="next" :before="before" />
     </div>
-    <div v-show="(index_pagina == 19)" v-if="IsPagesVisible(19)" class="container">
+    <div v-show="(index_pagina == 18)" v-if="IsPagesVisible(18)" class="container">
       <Team :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="(index_pagina == 19)" v-if="IsPagesVisible(false)" class="container">
+    <div v-show="(index_pagina == 19)" v-if="IsPagesVisible(19)" class="container">
       <Fase :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
 
-    <div v-show="(index_pagina == 21)" v-if="IsPagesVisible(false)" class="container">
+    <div v-show="(index_pagina == 20)" v-if="IsPagesVisible(20)" class="container">
       <Fase2 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="(index_pagina == 22)" v-if="IsPagesVisible(false)" class="container">
+    <div v-show="(index_pagina == 21)" v-if="IsPagesVisible(21)" class="container">
       <Fase3 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="(index_pagina == 23)" v-if="IsPagesVisible(false)" class="container">
+    <div v-show="(index_pagina == 22)" v-if="IsPagesVisible(22)" class="container">
       <Fase4 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="(index_pagina == 24)" v-if="IsPagesVisible(false)" class="container">
+    <div v-show="(index_pagina == 23)" v-if="IsPagesVisible(23)" class="container">
       <Fase5 :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
-    <div v-show="index_pagina == limite" v-if="IsPagesVisible(25)" class="container">
+    <div v-show="index_pagina == limite" v-if="IsPagesVisible(24)" class="container">
       <Footer :exitAnimation="exitAnimation" :enterAnimation="enterAnimation" :isRevert="isRevert" />
     </div>
   </main>
