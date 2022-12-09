@@ -5,21 +5,9 @@ export default {
 </script>
 <template>
   <!--FONDOS-->
-  <video
-    preload="auto"
-    autoplay
-    webkit-playsinline
-    playsinline
-    muted
-    loop
-    class="video-fondo-alliances"
-    poster="/img/fondo_binario.png"
-  >
-    <source
-      src="/video/Full-HD-Lite-2.mp4"
-      type="video/mp4"
-      srcset="/video/Full-HD-Lite-2.mp4"
-    />
+  <video preload="auto" autoplay webkit-playsinline playsinline muted loop class="video-fondo-alliances"
+    poster="/img/fondo_binario.png">
+    <source src="/video/Full-HD-Lite-2.mp4" type="video/mp4" srcset="/video/Full-HD-Lite-2.mp4" />
 
     <p>
       Your browser doesn't support HTML5 video. Here is a
@@ -28,39 +16,31 @@ export default {
   </video>
 
   <div class="contenido-general">
-    <div
-      :class="{
-        logo: true,
-        'animacion-logo': this.enterAnimation && !this.isRevert,
-        'animacion-logo-revert': this.exitAnimation && this.isRevert,
-      }"
-    >
+    <div :class="{
+      logo: true,
+      'animacion-logo': this.enterAnimation && !this.isRevert,
+      'animacion-logo-revert': this.exitAnimation && this.isRevert,
+    }">
       <img src="/img/logo.svg" alt="logo monneverse" />
     </div>
 
     <div class="fondo filtro-superior"></div>
-    <div
-      :class="{
-        'fondo-montana': true,
-        'fondo-montana-animation': this.enterAnimation && !this.isRevert,
-        'fondo-montana-animation-salida': this.enterAnimation && this.isRevert,
-        'fondo-montana-animation-revert': this.exitAnimation && this.isRevert,
-        'fondo-montana-animation-salida-revert':
-          this.exitAnimation && !this.isRevert,
-      }"
-      class="fondo"
-    >
+    <div :class="{
+      'fondo-montana': true,
+      'fondo-montana-animation': this.enterAnimation && !this.isRevert,
+      'fondo-montana-animation-salida': this.enterAnimation && this.isRevert,
+      'fondo-montana-animation-revert': this.exitAnimation && this.isRevert,
+      'fondo-montana-animation-salida-revert':
+        this.exitAnimation && !this.isRevert,
+    }" class="fondo">
       <img src="/img/fondo-montana.png" />
     </div>
     <div class="fondo fondo-oscurecer"></div>
-    <div
-      :class="{
-        'fondo-red': true,
-        'animacion-aparecer': this.enterAnimation && !this.isRevert,
-        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      }"
-      class="fondo"
-    >
+    <div :class="{
+      'fondo-red': true,
+      'animacion-aparecer': this.enterAnimation && !this.isRevert,
+      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+    }" class="fondo">
       <img src="/img/red.png" alt="" />
     </div>
     <div class="fondo-telefono">
@@ -68,26 +48,16 @@ export default {
     </div>
 
     <div class="video-banner">
-      <video
-        preload="auto"
-        autoplay
-        webkit-playsinline
-        playsinline
-        muted
-        loop
-        class="banner"
-      >
-        <source
-          data-src="/video/banner.mp4"
-          type="video/mp4"
-          srcset="/video/banner.mp4"
-          media="max-width:900px"
-        />
-        <source
-          data-src="/video/banner_web.mp4"
-          type="video/mp4"
-          src="/video/banner_web.mp4"
-        />
+      <video preload="auto" autoplay webkit-playsinline playsinline muted loop class="banner banner_web">
+        <source data-src="/video/banner_web.mp4" data-mw="900" media="(min-width:900px)" type="video/mp4"
+          src="/video/banner_web.mp4" />
+      </video>
+
+      <video preload="auto" autoplay webkit-playsinline playsinline muted loop class="banner banner_movil">
+  
+        <source data-src="/video/banner.mp4" src="/video/banner.mp4" type="video/mp4" />
+
+
       </video>
     </div>
 
@@ -95,24 +65,20 @@ export default {
       <div class="texto"></div>
 
       <!--UPCOMING ALLIANCES-->
-      <div
-        :class="{
-          'content-forms': true,
+      <div :class="{
+        'content-forms': true,
+        'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+        'animacion-content-up': this.enterAnimation && this.isRevert,
+        'animacion-content-up-revert': this.exitAnimation && !this.isRevert,
+        'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+      }">
+        <section :class="{
+          circulos: true,
           'animacion-aparecer': this.enterAnimation && !this.isRevert,
           'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          'animacion-content-up': this.enterAnimation && this.isRevert,
-          'animacion-content-up-revert': this.exitAnimation && !this.isRevert,
-          'animacion-desaparecer': this.enterAnimation && this.isRevert,
-          'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
-        }"
-      >
-        <section
-          :class="{
-            circulos: true,
-            'animacion-aparecer': this.enterAnimation && !this.isRevert,
-            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-          }"
-        >
+        }">
           <div class="circulo">
             <img src="../assets/circulo.svg" alt="circle-alliances" />
           </div>
@@ -122,52 +88,38 @@ export default {
           </div>
         </section>
         <section class="arco">
-          <div
-            :class="{
-              semi_circulo: true,
-              'animacion-arco': this.enterAnimation && !this.isRevert,
-              'animacion-arco-revert': this.exitAnimation && this.isRevert,
-              'animacion-arco-salida': this.enterAnimation && this.isRevert,
-              'animacion-arco-revert-salida':
-                this.exitAnimation && !this.isRevert,
-            }"
-          >
-            <img
-              src="../assets/aro-iluminado-brillante.svg"
-              alt="ring-illuminated"
-            />
+          <div :class="{
+            semi_circulo: true,
+            'animacion-arco': this.enterAnimation && !this.isRevert,
+            'animacion-arco-revert': this.exitAnimation && this.isRevert,
+            'animacion-arco-salida': this.enterAnimation && this.isRevert,
+            'animacion-arco-revert-salida':
+              this.exitAnimation && !this.isRevert,
+          }">
+            <img src="../assets/aro-iluminado-brillante.svg" alt="ring-illuminated" />
           </div>
         </section>
         <section class="Alianzas">
           <div class="alianzas">
-            <a href="https://www.reddit.com/user/monnerverse" target="_blank"
-              ><span><img src="../assets/reddit-4.svg" /></span>REDDIT</a
-            >
+            <a href="https://www.reddit.com/user/monnerverse" target="_blank"><span><img
+                  src="../assets/reddit-4.svg" /></span>REDDIT</a>
 
-            <a target="_blank" href="https://t.me/MonnerverseCripto"
-              ><span><img src="../assets/Telegram_logo.svg" /></span>TELEGRAM</a
-            >
+            <a target="_blank" href="https://t.me/MonnerverseCripto"><span><img
+                  src="../assets/Telegram_logo.svg" /></span>TELEGRAM</a>
             <!-- <font-awesome-icon icon="fa-brands fa-telegram" /> -->
 
-            <a href="https://discord.com/invite/h7fRvek9dn" target="_blank"
-              ><span><img src="../assets/discord.svg" /></span>DISCORD</a
-            >
+            <a href="https://discord.com/invite/h7fRvek9dn" target="_blank"><span><img
+                  src="../assets/discord.svg" /></span>DISCORD</a>
           </div>
         </section>
 
         <section class="rectangulos">
           <div class="rectangulo-medio">
             <div class="contenido">
-              <img
-                src="../assets/rectangulo-medio.svg"
-                alt="rectangle-medium"
-              />
+              <img src="../assets/rectangulo-medio.svg" alt="rectangle-medium" />
               <div class="imagenes">
                 <img src="../assets/methodBuy/visa.svg" alt="visa" />
-                <img
-                  src="../assets/methodBuy/masterCard.svg"
-                  alt="masterdCard"
-                />
+                <img src="../assets/methodBuy/masterCard.svg" alt="masterdCard" />
               </div>
             </div>
           </div>
@@ -179,15 +131,13 @@ export default {
       </div>
     </div>
 
-    <div
-      :class="{
-        puntero: true,
-        animated: true,
-        duration1s: true,
-        fadeInUp: this.enterAnimation,
-        fadeOutDown: this.exitAnimation,
-      }"
-    >
+    <div :class="{
+      puntero: true,
+      animated: true,
+      duration1s: true,
+      fadeInUp: this.enterAnimation,
+      fadeOutDown: this.exitAnimation,
+    }">
       <img src="/img/puntero.svg" alt="puntero" />
     </div>
   </div>
@@ -252,20 +202,31 @@ section {
   justify-content: center;
 }
 
-.video-banner video {
+.video-banner .banner {
   width: 100%;
+  display: none;
 }
-
-@media screen and (width >=768px) {
-  .video-banner {
-    visibility: hidden;
+.video-banner .banner_movil {
+    display: inline;
   }
-}
 
-@media screen and (min-width: 900px) {
+
+
+@media screen and (min-width: 500px) {
   .video-banner {
-    top: 15%;
+    top: 0%;
+    z-index: 111;
   }
+
+  .video-banner .banner_movil {
+    display: none;
+  }
+
+  .video-banner .banner_web {
+    display: inline;
+  }
+
+
 }
 
 .contenido-general {
@@ -305,11 +266,11 @@ section {
   align-items: flex-end;
 }
 
-.texto > section {
+.texto>section {
   width: 70%;
 }
 
-.texto > section p {
+.texto>section p {
   width: 80%;
   float: right;
   font-family: "Work Sans", "BAHNSCHRIFT9.ttf", "Arial", "Montserrat";
@@ -381,7 +342,7 @@ section {
 
 .logo {
   position: absolute;
-  top: 2rem;
+  top: 5rem;
   left: 2rem;
   width: 5rem;
   height: 5rem;
@@ -448,12 +409,10 @@ section {
 .filtro-superior {
   position: absolute;
   z-index: 4;
-  background: radial-gradient(
-    circle at center,
-    #14ec84 0%,
-    #0b5f50 50%,
-    #505863 100%
-  );
+  background: radial-gradient(circle at center,
+      #14ec84 0%,
+      #0b5f50 50%,
+      #505863 100%);
   opacity: 30%;
 }
 

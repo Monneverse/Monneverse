@@ -14,7 +14,7 @@
   </div>
 
   <!-- navagacion -->
-  <div id="barra" :class="{ 'barra-navegacion': true, 'barra-navegacion-active': isExpanded }">
+  <div id="barra" :class="{ 'barra-navegacion': true, 'barra-navegacion-active': isExpanded, 'barra_with_banner':indexPagina == 2 }">
 
     <nav class="barra" @mouseout="exit_mouse">
       <!-- logo menu -->
@@ -254,6 +254,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 1s;
 }
 
 .barra {
@@ -264,7 +265,9 @@ img {
   height: 100%;
   max-width: 50rem;
 }
-
+.barra_with_banner  {
+  margin-top: 3%;
+}
 
 .barra a {
   display: flex;

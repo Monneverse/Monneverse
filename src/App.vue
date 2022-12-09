@@ -480,8 +480,8 @@ export default {
 </script>
 
 <template>
-  <header>
-    <Header :orientacion="orientacion" :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage" :setNext="next"
+  <header >
+    <Header id ="header" class="header" :orientacion="orientacion" :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage" :setNext="next"
       :indexPagina="index_pagina">
     </Header>
   </header>
@@ -636,9 +636,8 @@ header,
 Header {
   width: 100%;
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
 }
-
 main {
   z-index: 0;
   position: relative;
@@ -661,4 +660,5 @@ main {
 .mostrar-container {
   visibility: visible;
 }
+
 </style>
