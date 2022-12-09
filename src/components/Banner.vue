@@ -1,7 +1,3 @@
-<script>
-
-</script>
-
 <template>
       <!-- Fondos -->
   <div class="fondo">
@@ -229,8 +225,8 @@
   justify-content: center;
 }
 .icon {
-  width: 3rem;
-  height: 3rem;
+  width: 6rem;
+  height: 6rem;
   margin-left: 1rem;
 }
 </style>
