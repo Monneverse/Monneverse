@@ -98,7 +98,7 @@ export default {
           newPosition = this.index_pagina + 1;
           this.scroll = false;
           this.isRevert = false;
-          if (newPosition == 2) {
+          if (newPosition == 2 && screen.width < 900) {
             newPosition = 3;
           }
           if (newPosition == 6) {
