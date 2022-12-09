@@ -158,10 +158,10 @@ export default {
       }
     },
     async addTokenFunction() {
-      const tokenAddress = '0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893';
+      const tokenAddress = '0x7be216c3B4BF56Afb2770A6982F1B19650f680B0';
       const tokenSymbol = 'MNR';
       const tokenDecimals = 18;
-      const tokenImage = 'https://i.postimg.cc/xCHLP8sw/icon-32x32.png';
+      const tokenImage = 'https://i.postimg.cc/bJNW9hNg/2.png';
 
       try {
         const wasAdded = await ethereum.request({
@@ -335,13 +335,12 @@ img {
 .add {
   border: none;
   min-width: 12rem;
-  padding: 1rem;
   height: auto;
   background: linear-gradient(90deg, rgba(85, 0, 255, 1) 35%, rgba(214, 0, 255, 1) 100%);
   border-radius: 3rem;
   color: var(--color-letra);
   font-size: 1.2rem;
-  padding: .6rem;
+  padding: .497rem;
   margin-left: 1rem;
   font-family: "Bahn";
   transition: ease-in all .5s;

@@ -13,7 +13,7 @@ export default {
       tokenAddress: "0x7be216c3B4BF56Afb2770A6982F1B19650f680B0",
       tokenSymbol: "MNR",
       tokenDecimals: 18,
-      tokenImage: "https://i.postimg.cc/13c46n08/32-32-MONNER.png",
+      tokenImage: "https://i.postimg.cc/bJNW9hNg/2.png",
       vectorTodo: [
         {
           titulo: "Presale and benefits For investors",
