@@ -24,7 +24,7 @@ export default {
       this.exitAnimation && !this.isRevert
   }" -->
   <div class="contenido">
-    <h1 :class="{
+    <h1 class="contenido_title" :class="{
       'animacion-aparecer': this.enterAnimation && !this.isRevert,
       'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
     }">BENEFITS</h1>
@@ -59,7 +59,7 @@ export default {
       <div class="benefit_title">
         <img class="benefit_img_plus" src="/img/plus.svg" alt="Plus-Benefits">
         <h2 class="title">
-          7.5% <span class="highlight">*</span> 24h
+          7.5% <span class="highlight"> * </span> 24h
         </h2>
       </div>
       <p class="description"><span class="highlight">Important Note : <br> </span>
@@ -308,7 +308,7 @@ img {
   font-family: "Work Sans", sans-serif;
 }
 
-.contenido h1 {
+.contenido .contenido_title {
   color: white;
   font-size: 4rem;
   margin: 4% 0 0 4%;
@@ -379,7 +379,7 @@ img {
     margin-top: 1.5rem;
   }
 
-  .contenido h1 {
+  .contenido .contenido_title {
     margin: 1rem auto;
     font-size: 3rem;
   }
