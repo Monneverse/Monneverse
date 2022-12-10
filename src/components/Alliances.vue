@@ -66,7 +66,7 @@ export default {
     <div class="fondo-telefono">
       <img src="/img/fondo_Cel.png" alt="" srcset="" />
     </div>
-
+<!-- 
     <div class="video-banner">
       <video
         preload="auto"
@@ -85,7 +85,7 @@ export default {
           src="/video/banner_web.mp4"
         />
       </video>
-    </div>
+    </div> -->
 
     <div class="contenido-principal">
       <div class="texto"></div>
