@@ -109,7 +109,7 @@
       <br>The Monner Will Return {{ porcentajeInteres }}% Interest
     </p>
 
-    <p class="descripcion_information seg_linea">Note: Our Staking is only for the first <span>600</span>  holders that enter our pre-sale</p>
+    <p class="descripcion_information seg_linea">Note: Our Staking is only for holders who invest in our <span>FAIR LAUNCH</span>.  We will reward you with many benefits for being part of the project from the beginning.</p>
   </article>
 
   <!-- redes sociales -->
