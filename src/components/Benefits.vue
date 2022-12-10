@@ -15,7 +15,6 @@ export default {
     </div>
   </div>
 
-
   <!-- :class="{
     'animacion-aparecer': this.enterAnimation && !this.isRevert,
     'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
@@ -24,94 +23,118 @@ export default {
       this.exitAnimation && !this.isRevert
   }" -->
   <div class="contenido">
-    <h1 class="contenido_title" :class="{
-      'animacion-aparecer': this.enterAnimation && !this.isRevert,
-      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-    }">BENEFITS</h1>
+    <h1
+      class="contenido_title"
+      :class="{
+        'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+      }"
+    >
+      BENEFITS
+    </h1>
 
-
-
-
-    <div class="benefit" :class="{
-      'animacion-aparecer': this.enterAnimation && !this.isRevert,
-      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      'animacion-desaparecer': this.enterAnimation && this.isRevert,
-      'animacion-desaparecer-revert':
-        this.exitAnimation && !this.isRevert
-    }">
+    <div
+      class="benefit"
+      :class="{
+        'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+        'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+      }"
+    >
       <div class="benefit_title">
-        <img class="benefit_img_plus" src="/img/plus.svg" alt="Plus-Benefits">
+        <img class="benefit_img_plus" src="/img/plus.svg" alt="Plus-Benefits" />
         <h2 class="title">
-          <span class="highlight">$ </span>1,5  <span class="highlight">USD</span>  in Pinksale
-          <img class="title_img" src="/img/pinksale.png" alt="Pinksale" srcset="" />
+          <span class="highlight">$ </span>1,5  <span class="highlight"
+            >USD</span
+          >
+           in Pinksale
+          <img
+            class="title_img"
+            src="/img/pinksale.png"
+            alt="Pinksale"
+            srcset=""
+          />
         </h2>
       </div>
-      <p class="description">Starting price at <span class="highlight">LAUNCH FAIR</span></p>
-    </div>
-
-    <div class="benefit" :class="{
-      'animacion-aparecer': this.enterAnimation && !this.isRevert,
-      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      'animacion-desaparecer': this.enterAnimation && this.isRevert,
-      'animacion-desaparecer-revert':
-        this.exitAnimation && !this.isRevert
-    }">
-      <div class="benefit_title">
-        <img class="benefit_img_plus" src="/img/plus.svg" alt="Plus-Benefits">
-        <h2 class="title">
-          7.5% <span class="highlight"> * </span> 24h
-        </h2>
-      </div>
-      <p class="description"><span class="highlight">Important Note : <br> </span>
-        Starking 7.5% every 48 hours is only for the wallets that invested to our
-        <span class="highlight">LAUNCH FAIR</span>
+      <p class="description">
+        Starting price at <span class="highlight">FAIR LAUNCH</span>
       </p>
     </div>
 
-    <div class="benefit" :class="{
-      'animacion-aparecer': this.enterAnimation && !this.isRevert,
-      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      'animacion-desaparecer': this.enterAnimation && this.isRevert,
-      'animacion-desaparecer-revert':
-        this.exitAnimation && !this.isRevert
-    }">
+    <div
+      class="benefit"
+      :class="{
+        'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+        'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+      }"
+    >
       <div class="benefit_title">
-        <img class="benefit_img_plus" src="/img/plus.svg" alt="Plus-Benefits">
-        <h2 class="title">
-          Benefits for our early investors
-        </h2>
+        <img class="benefit_img_plus" src="/img/plus.svg" alt="Plus-Benefits" />
+        <h2 class="title">7.5% <span class="highlight"> * </span> 24h</h2>
       </div>
-      <p class="description"> Investors of our Fair Launch will have access to our daily payment of 7.5% of their
-        investment. will get
+      <p class="description">
+        <span class="highlight">Important Note : <br /> </span>
+        Starking 7.5% every 48 hours is only for the wallets that invested to
+        our
+        <span class="highlight">FAIR LAUNCH</span>
+      </p>
+    </div>
+
+    <div
+      class="benefit"
+      :class="{
+        'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+        'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+      }"
+    >
+      <div class="benefit_title">
+        <img class="benefit_img_plus" src="/img/plus.svg" alt="Plus-Benefits" />
+        <h2 class="title">Benefits for our early investors</h2>
+      </div>
+      <p class="description">
+        Investors of our <span class="highlight">FAIR LAUNCH</span> will have
+        access to our daily payment of 7.5% of their investment. will get
         <span class="highlight">$300</span>
         in bonus MNR in our
         <span class="highlight">MonnerGame</span>
-        game center (available soon). And founder privileges in all our projects from
-        <span class="highlight">$300</span> and up. <span class="highlight">Note : </span>
-        The Wallets that invested in Fair Launch will be published on our official website and will be recognized as a
-        benefited wallet
+        game center (available soon). And founder privileges in all our projects
+        from
+        <span class="highlight">$300</span> and up.
+        <span class="highlight">Note : </span>
+        The Wallets that invested in Fair Launch will be published on our
+        official website and will be recognized as a benefited wallet
       </p>
     </div>
 
-    <div :class="{
-      aro: true,
-      'animacion-aparecer': this.enterAnimation && !this.isRevert,
-      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      'animacion-desaparecer': this.enterAnimation && this.isRevert,
-      'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
-    }">
+    <div
+      :class="{
+        aro: true,
+        'animacion-aparecer': this.enterAnimation && !this.isRevert,
+        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+        'animacion-desaparecer': this.enterAnimation && this.isRevert,
+        'animacion-desaparecer-revert': this.exitAnimation && !this.isRevert,
+      }"
+    >
       <img class="aro_superior" src="../assets/aro.svg" alt="Ring" />
 
-      <img :class="{
-        aro_inferior:true,
-        animated: true,
-        duration1s: true,
-        fadeInLeft: this.enterAnimation,
-        fadeOutLeft: this.exitAnimation,
-      }" src="../assets/aro.svg" alt="Ring" />
+      <img
+        :class="{
+          aro_inferior: true,
+          animated: true,
+          duration1s: true,
+          fadeInLeft: this.enterAnimation,
+          fadeOutLeft: this.exitAnimation,
+        }"
+        src="../assets/aro.svg"
+        alt="Ring"
+      />
     </div>
   </div>
-
 
   <!-- redes sociales -->
 
@@ -207,7 +230,6 @@ img {
   color: white;
   font-size: 4rem;
   margin: 3.8% 0 0 4%;
-
 }
 
 .contenido .benefit {
@@ -238,7 +260,7 @@ img {
 }
 
 .contenido .benefit .benefit_title .title .highlight {
-  color: #37F395;
+  color: #37f395;
   font-size: 1.9rem;
 }
 
@@ -256,7 +278,7 @@ img {
 }
 
 .contenido .benefit .description .highlight {
-  color: #FFC007;
+  color: #ffc007;
   font-weight: 500;
 }
 
@@ -287,7 +309,6 @@ img {
   }
 
   .contenido .benefit .benefit_title {
-
     padding: 0.2rem;
     -webkit-box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.93);
     -moz-box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.93);
@@ -304,9 +325,8 @@ img {
     font-size: 1rem;
   }
 
-
   .contenido .benefit .benefit_title .title .highlight {
-    color: #37F395;
+    color: #37f395;
     font-size: 1.2rem;
   }
 
@@ -362,9 +382,7 @@ img {
     z-index: 1;
     top: -45%;
   }
-
 }
-
 
 /* Animaciones */
 .animacion-aparecer {

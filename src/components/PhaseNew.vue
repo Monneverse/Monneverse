@@ -73,11 +73,14 @@ export default {
             <li>-Audits and KYC approved</li>
             <li>-working mining farms</li>
             <li>
-              -Start of <span class="resaltar">MNR FAIR LAUCH</span> in Pinksale
-              (SAFU, DOXX, AUDIT, KYC)
+              -Start of the <span class="resaltar">FAIR LAUNCH</span> in
+              Pinksale (SAFU, DOXX, AUDIT, KYC)
             </li>
-            <li>-listed on PancakeSwap</li>
-            <li>Start of staking for the briefcase that participated in the <span class="resaltar">FAIR LUNCH</span> </li>
+            <li id="sub">-Listed on PancakeSwap</li>
+            <li id="sub">
+              -Began of staking for the briefcase that participated in the
+              <span class="resaltar">FAIR LUNCH </span>
+            </li>
             <li>
               -Injection of liquidity to raise our price after its first listing
               and protect it from sales.
@@ -220,6 +223,9 @@ img {
   width: 100%;
   left: 0;
   top: 0;
+}
+#sub{
+  margin-left: 2rem;
 }
 
 .fondo-degradiente {
