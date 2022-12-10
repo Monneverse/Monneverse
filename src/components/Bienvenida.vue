@@ -486,6 +486,7 @@ img {
 
   .welcome .title {
     font-size: 7vh;
+    margin-bottom: 0;
   }
 
   .welcome .subtitle {
@@ -496,7 +497,6 @@ img {
 
   .welcome .description {
     font-size: 5vw;
-    margin-top: 1rem;
   }
 
   .degradado {
