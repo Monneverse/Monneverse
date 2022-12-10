@@ -7,27 +7,69 @@ export default {
   <!--FONDO-->
 
   <div class="fondo">
-    <div class="fondo_rayos">
-      <img src="/img/rayos.png" alt="Background-ray" />
+    <div class="fondo fondo_rayos">
+      <img src="/img/rayos.png" alt="Background ray" />
     </div>
-    <div class="fondo-benefit">
-      <img src="/img/fondo-benefit.png" alt="Background-monner" />
+    <div class="fondo fondo_benefit">
+      <img src="/img/fondo-benefit.png" alt="Background monner" />
     </div>
-    <div class="logo">
-      <img src="/img/logo.svg" alt="logo monneverse" />
+  </div>
+
+
+  <!-- :class="{
+    'animacion-aparecer': this.enterAnimation && !this.isRevert,
+    'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+    'animacion-desaparecer': this.enterAnimation && this.isRevert,
+    'animacion-desaparecer-revert':
+      this.exitAnimation && !this.isRevert
+  }" -->
+  <div class="contenido">
+    <h1 :class="{
+      'animacion-aparecer': this.enterAnimation && !this.isRevert,
+      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+    }">BENEFITS</h1>
+
+    <div class="benefit">
+      <div class="benefit_title">
+        <img class="benefit_img_plus" src="/img/plus.svg" alt="Plus-Benefits">
+        <h2 class="title">
+          <span class="highlight">$ </span>1,5  <span class="highlight">USD</span>  in Pinksale
+          <img class="title_img" src="/img/pinksale.png" alt="Pinksale" srcset="" />
+        </h2>
+      </div>
+      <p class="description">Starting price at <span class="highlight">LAUNCH FAIR</span></p>
     </div>
 
-    <div
-      :class="{
-        titulo: true,
-        'animacion-aparecer': this.enterAnimation && !this.isRevert,
-        'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-      }"
-    >
-      <h1>BENEFITS</h1>
+    <div class="benefit">
+      <div class="benefit_title">
+        <img class="benefit_img_plus" src="/img/plus.svg" alt="Plus-Benefits">
+        <h2 class="title">
+          7.5% <span class="highlight">*</span> 24h
+        </h2>
+      </div>
+      <p class="description"><span class="highlight">Important Note : <br> </span>
+        Starking 7.5% every 48 hours is only for the wallets that invested to our
+        <span class="highlight">LAUNCH FAIR</span>
+      </p>
     </div>
 
-    <div class="display_flex">
+    <div class="benefit">
+      <div class="benefit_title">
+        <img class="benefit_img_plus" src="/img/plus.svg" alt="Plus-Benefits">
+        <h2 class="title">
+        Benfits for our early investors
+        </h2>
+      </div>
+      <p class="description"> Investors of our Fair Launch will have access to our daily payment of 7.5% of their investment. will get 
+        <span class="highlight">$300</span>
+        in bonus MNR in our 
+        <span class="highlight">MonnerGame</span>
+        game center (available soon). And founder privileges in all our projects from
+        <span class="highlight">$300</span> and up.   <span class="highlight">Note : </span> 
+        The Wallets that invested in Fair Launch will be published on our official website and will be recognized as a benefited wallet 
+      </p>
+    </div>
+    <!--       
       <div class="benefits">
         <div
           :class="{
@@ -78,50 +120,16 @@ export default {
           />
           <div class="content-price">
             <div class="titulo-two">
-              <h1>Phase 1</h1>
+              <h1>Benefits for our early investors</h1>
             </div>
           </div>
           <div class="content-text">
             <div class="text">
-              <p>Phase 1 of staking only for users who buy in pre-sale</p>
+              <p>Investors of our Fair Launch will have access to our daily payment of 7.5% of their investment.  will get $300 in bonus MNR in our MonnerGame game center (available soon).    And founder privileges in all our projects from $300 and up.  Note: The Wallets that invested in Fair Launch will be published on our official website and will be recognized as a benefited wallet.. remarca las letras importantes con amarillo que se vea cool.</p>
             </div>
           </div>
         </div>
 
-        <div
-          :class="{
-            beneficio: true,
-            'animacion-aparecer': this.enterAnimation && !this.isRevert,
-            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-            'animacion-desaparecer': this.enterAnimation && this.isRevert,
-            'animacion-desaparecer-revert':
-              this.exitAnimation && !this.isRevert,
-          }"
-        >
-          <img
-            id="b"
-            class="circulos"
-            src="/img/plus.svg"
-            alt="Plus-Benefits"
-          />
-          <div class="content-price">
-            <div class="titulo-two">
-              <h2>
-                <span>$ </span>7.0  <b> USD</b>  in PancakeSwap
-                <img src="/img/cakelogo.png" alt="Cake" srcset="" />
-              </h2>
-            </div>
-          </div>
-          <div class="content-text">
-            <div class="text">
-              <p>
-                Price is bought and sold: <br />
-                MNR will be priced at $7.0 on your listing at a PancakeSwap
-                Right at the time our pre-sale ends.
-              </p>
-            </div>
-          </div>
-        </div>
         <div
           :class="{
             beneficio: true,
@@ -140,26 +148,26 @@ export default {
           />
           <div class="content-price">
             <div class="titulo-two">
-              <h1>6.2%<span>*</span>48h</h1>
+              <h1>7.5%<span>*</span>24h</h1>
             </div>
           </div>
           <div class="content-text">
             <div class="sale">
-              <h3>Sale Price</h3>
+              <h3>Important</h3>
             </div>
 
             <div class="text">
               <p class="">
-                Enter our first phase os staking buying in pre-sale and earn
-                6.2% every 48 hours of your total capital in Monnercoins after
-                the launch in Pancakeswap.
-                <span class="amarrillo">Only for the first 600 holders</span>
+                Note: y en el texto colocamos esto: Staking 7.5% every 48 hours is only for the wallets that invested to our LAUNCH FAIR  🔥
+
+              
               </p>
             </div>
           </div>
         </div>
-      </div>
-      <div
+      </div> -->
+
+    <!-- <div
         :class="{
           aro: true,
           'animacion-aparecer': this.enterAnimation && !this.isRevert,
@@ -182,8 +190,11 @@ export default {
           alt="Ring"
         />
       </div>
-    </div>
+       -->
   </div>
+
+
+  <!-- redes sociales -->
 
   <div class="logo-redes">
     <div class="icon icon-telegram">
@@ -207,6 +218,130 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.fondo_rayos {
+  z-index: 2;
+}
+
+.fondo_benefit {
+  z-index: 3;
+  height: 100%;
+}
+
+.fondo_benefit img {
+  position: relative;
+  top: -5%;
+  height: 115vh;
+}
+
+/* redes sociales */
+.logo-redes {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  width: 20rem;
+  height: 5rem;
+  z-index: 14;
+  display: flex;
+  justify-content: start;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1rem;
+}
+
+/* Contenido Principal */
+
+.contenido {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -48%);
+  width: 70%;
+  height: 70%;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  flex-wrap: wrap;
+  padding: 1rem;
+  font-family: "Work Sans", sans-serif;
+}
+
+.contenido h1 {
+  color: white;
+  font-size: 4rem;
+  margin: 4% 0 0 4%;
+
+}
+
+.contenido .benefit {
+  width: 42%;
+  color: white;
+  margin-top: 1rem;
+}
+
+.contenido .benefit .benefit_title {
+  border-radius: 0.2rem;
+  background-color: #161431;
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.contenido .benefit .benefit_title .benefit_img_plus {
+  width: 2rem;
+  height: 2rem;
+  margin-left: -2rem;
+}
+
+.contenido .benefit .benefit_title .title {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+}
+
+.contenido .benefit .benefit_title .title .highlight {
+  color: #37F395;
+  font-size: 1.9rem;
+}
+
+.contenido .benefit .benefit_title .title .title_img {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 1rem;
+}
+
+.contenido .benefit .description {
+  margin-top: 0.8rem;
+  margin-left: 3rem;
+  font-size: 1.3rem;
+  text-align: justify;
+}
+
+.contenido .benefit .description .highlight {
+  color: #FFC007;
+  font-weight: 500;
+}
+
+/* 
 p {
   text-align: justify;
 }
@@ -219,19 +354,12 @@ p {
   margin: 0 auto;
 }
 
-.logo {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  width: 5rem;
-  height: 5rem;
-  z-index: 12;
-  display: none;
-}
+
 .amarrillo {
   color: #ffc000;
   font-weight: 600;
 }
+
 .titulo {
   position: absolute;
   width: 100%;
@@ -252,6 +380,7 @@ p {
   margin-left: 0;
   border-radius: 1px solid red;
 }
+
 .benefits {
   position: absolute;
   z-index: 14;
@@ -324,6 +453,7 @@ p {
 .titulo-benefit h1 b {
   font-size: 1.5rem;
 }
+
 .titulo-benefit h2 {
   font-family: "Work Sans", sans-serif;
   color: white;
@@ -366,6 +496,7 @@ p {
   font-size: 1.3rem;
   margin-left: 5%;
 }
+
 .titulo-two h2 {
   font-family: "Work Sans", sans-serif;
   color: white;
@@ -380,6 +511,7 @@ p {
   margin-left: 1rem;
   height: 2rem;
 }
+
 .titulo-two h1 span {
   color: #37f395;
 }
@@ -410,14 +542,7 @@ p {
   height: 0%;
 }
 
-.fondo {
-  position: absolute;
-  top: 0;
-  z-index: -1233;
-  width: 100%;
-  height: 100%;
-  background-color: #121026;
-}
+
 
 .scroll {
   scroll-snap-type: y mandatory;
@@ -428,30 +553,8 @@ p {
   color: yellow;
 }
 
-.fondo_rayos {
-  position: absolute;
-  left: -50%;
-  width: 100%;
-  height: 100%;
 
-  z-index: -23;
-  background-size: no-repeat center center fixed;
-}
 
-.fondo_rayos img {
-  height: 100%;
-}
-
-.fondo-benefit {
-  position: relative;
-  top: -5%;
-  background-size: no-repeat center center;
-  z-index: 5;
-}
-
-.fondo-benefit > img {
-  height: 150vh;
-}
 
 @media screen and (min-width: 769px) {
   .fondo_rayos {
@@ -459,7 +562,7 @@ p {
     left: 0%;
   }
 
-  .fondo-benefit > img {
+  .fondo-benefit>img {
     width: 100%;
     height: 115vh;
   }
@@ -467,6 +570,7 @@ p {
   .fondo_rayos img {
     width: 100%;
   }
+
   .titulo-two h2 {
     font-size: 1.5rem;
   }
@@ -825,7 +929,9 @@ p {
     left: -23%;
   }
 }
+*/
 
+/* Animaciones */
 .animacion-aparecer {
   animation-duration: 0.8s;
   -webkit-animation-duration: 0.8s;
