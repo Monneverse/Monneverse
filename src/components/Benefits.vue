@@ -29,7 +29,16 @@ export default {
       'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
     }">BENEFITS</h1>
 
-    <div class="benefit">
+
+
+
+    <div class="benefit" :class="{
+      'animacion-aparecer': this.enterAnimation && !this.isRevert,
+      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+      'animacion-desaparecer': this.enterAnimation && this.isRevert,
+      'animacion-desaparecer-revert':
+        this.exitAnimation && !this.isRevert
+    }">
       <div class="benefit_title">
         <img class="benefit_img_plus" src="/img/plus.svg" alt="Plus-Benefits">
         <h2 class="title">
@@ -40,7 +49,13 @@ export default {
       <p class="description">Starting price at <span class="highlight">LAUNCH FAIR</span></p>
     </div>
 
-    <div class="benefit">
+    <div class="benefit" :class="{
+      'animacion-aparecer': this.enterAnimation && !this.isRevert,
+      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+      'animacion-desaparecer': this.enterAnimation && this.isRevert,
+      'animacion-desaparecer-revert':
+        this.exitAnimation && !this.isRevert
+    }">
       <div class="benefit_title">
         <img class="benefit_img_plus" src="/img/plus.svg" alt="Plus-Benefits">
         <h2 class="title">
@@ -53,7 +68,13 @@ export default {
       </p>
     </div>
 
-    <div class="benefit">
+    <div class="benefit" :class="{
+      'animacion-aparecer': this.enterAnimation && !this.isRevert,
+      'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
+      'animacion-desaparecer': this.enterAnimation && this.isRevert,
+      'animacion-desaparecer-revert':
+        this.exitAnimation && !this.isRevert
+    }">
       <div class="benefit_title">
         <img class="benefit_img_plus" src="/img/plus.svg" alt="Plus-Benefits">
         <h2 class="title">
@@ -71,6 +92,7 @@ export default {
         benefited wallet
       </p>
     </div>
+
     <!--       
       <div class="benefits">
         <div
@@ -342,10 +364,74 @@ img {
   color: #FFC007;
   font-weight: 500;
 }
+
 /* version tablet */
 @media screen and (max-width: 1250px) {
   .contenido {
     width: 95%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .contenido {
+    width: 98%;
+    height: 90%;
+    margin-top: 1.5rem;
+  }
+
+  .contenido h1 {
+    margin: 1rem auto;
+    font-size: 3rem;
+  }
+
+  .contenido .benefit {
+    margin: 0 auto;
+    width: 80%;
+    color: white;
+    margin-top: 0.5rem;
+  }
+
+  .contenido .benefit .benefit_title {
+
+    padding: 0.2rem;
+    -webkit-box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.93);
+    -moz-box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.93);
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.93);
+  }
+
+  .contenido .benefit .benefit_title .benefit_img_plus {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-left: -1rem;
+  }
+
+  .contenido .benefit .benefit_title .title {
+    font-size: 1rem;
+  }
+
+
+  .contenido .benefit .benefit_title .title .highlight {
+    color: #37F395;
+    font-size: 1.2rem;
+  }
+
+  .contenido .benefit .benefit_title .title .title_img {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-left: 1rem;
+  }
+
+  .contenido .benefit .description {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .logo-redes {
+    display: none;
+  }
+
+  .fondo_benefit {
+    display: none;
   }
 }
 
