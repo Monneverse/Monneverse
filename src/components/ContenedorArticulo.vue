@@ -240,19 +240,7 @@ export default {
 </template>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
-@font-face {
-  font-family: LCDFONT;
-  src: url("/Fonts/LCDFONT.TTF");
-}
-
-@font-face {
-  font-family: "Bahn";
-  src: url("/Fonts/BAHNSCHRIFT.TTF");
-  font-stretch: semi-condensed;
-  font-style: semibold;
-}
 
 img {
   height: 100%;
@@ -654,13 +642,6 @@ h4 {
   margin-left: 1rem;
 }
 
-/* .textscroll {
-  position: fixed;
-  top: 84%;
-  left: 26%;
-  color: white;
-  z-index: 999;
-} */
 .flecha {
   width: 3rem;
   height: 3rem;

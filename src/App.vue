@@ -493,7 +493,7 @@ export default {
 
 <template>
   <header >
-    <Header id ="header" class="header" :orientacion="orientacion" :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage" :setNext="next"
+    <Header :orientacion="orientacion" :index="index" :isVisible="isVisibleLogo" :setPage="setOnPage" :setNext="next"
       :indexPagina="index_pagina">
     </Header>
   </header>
@@ -600,6 +600,17 @@ export default {
   font-style: semibold;
 }
 
+@font-face {
+  font-family: LCDFONT;
+  src: url("/Fonts/LCDFONT.TTF");
+}
+
+@font-face {
+  font-family: "Bahn";
+  src: url("/Fonts/BAHNSCHRIFT.TTF");
+  font-stretch: semi-condensed;
+  font-style: semibold;
+}
 /* Variables */
 :root {
   /* colores */
