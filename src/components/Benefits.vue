@@ -15,13 +15,6 @@ export default {
     </div>
   </div>
 
-  <!-- :class="{
-    'animacion-aparecer': this.enterAnimation && !this.isRevert,
-    'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-    'animacion-desaparecer': this.enterAnimation && this.isRevert,
-    'animacion-desaparecer-revert':
-      this.exitAnimation && !this.isRevert
-  }" -->
   <div class="contenido">
     <h1
       class="contenido_title"

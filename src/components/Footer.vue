@@ -1,3 +1,8 @@
+<script>
+export default {
+  props: ["enterAnimation", "exitAnimation"]
+};
+</script>
 <template>
   <!-- Fondo de la footer -->
   <div :class="{
@@ -70,11 +75,7 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: ["enterAnimation", "exitAnimation"]
-};
-</script>
+
 
 <style scoped>
 /* style of web */
