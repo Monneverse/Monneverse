@@ -64,9 +64,9 @@
     <p class="subtitle">Utilities DeFi</p>
     <p class="description">
       Take advantage of this opportunity and RESERVE your place at our
-      <b>FAIR LAUNCH</b>. Note: 7.5% every 24 hours for the first 2 months.
-      Payments directly to MetaMask/TrustWallet. Only for portfolios that invest
-      in <b>FAIR LAUNCH</b>
+      <b>FAIR LAUNCH</b>. <br> <br> <span>Note:</span> 7.5% every 24 hours for the first 2
+      months. Payments directly to MetaMask/TrustWallet. Only for portfolios
+      that invest in <b>FAIR LAUNCH</b>
     </p>
     <a target="_blank" href="" class="btn_new">Buy in FAIR LAUCH</a>
   </div>
@@ -415,9 +415,16 @@ img {
   font-family: "work Sans", sans-serif;
   font-weight: 300;
 }
+.description span {
+  color: #ffc000;
+  text-transform: uppercase; 
+  font-weight: bold;
+}
 
 .welcome .description b {
   text-transform: uppercase;
+   color: #ffc000;
+   font-weight: bold;
 }
 
 .btn_new {

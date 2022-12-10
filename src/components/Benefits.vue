@@ -55,7 +55,9 @@ export default {
           </div>
           <div class="content-text">
             <div class="sale">
-              <h3>Pre-sale Price</h3>
+              <h3>
+                Starting price at <span class="amarrillo">LAUNCH FAIR</span>
+              </h3>
             </div>
           </div>
         </div>
@@ -78,50 +80,23 @@ export default {
           />
           <div class="content-price">
             <div class="titulo-two">
-              <h1>Phase 1</h1>
-            </div>
-          </div>
-          <div class="content-text">
-            <div class="text">
-              <p>Phase 1 of staking only for users who buy in pre-sale</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          :class="{
-            beneficio: true,
-            'animacion-aparecer': this.enterAnimation && !this.isRevert,
-            'animacion-aparecer-revert': this.exitAnimation && this.isRevert,
-            'animacion-desaparecer': this.enterAnimation && this.isRevert,
-            'animacion-desaparecer-revert':
-              this.exitAnimation && !this.isRevert,
-          }"
-        >
-          <img
-            id="b"
-            class="circulos"
-            src="/img/plus.svg"
-            alt="Plus-Benefits"
-          />
-          <div class="content-price">
-            <div class="titulo-two">
-              <h2>
-                <span>$ </span>7.0  <b> USD</b>  in PancakeSwap
-                <img src="/img/cakelogo.png" alt="Cake" srcset="" />
-              </h2>
+              <h1 id="texto">Benefits for our early investors</h1>
             </div>
           </div>
           <div class="content-text">
             <div class="text">
               <p>
-                Price is bought and sold: <br />
-                MNR will be priced at $7.0 on your listing at a PancakeSwap
-                Right at the time our pre-sale ends.
+                Investors of our Fair Launch will have access to our daily
+                payment of 7.5% of their investment. will get <span class="amarrillo"> $300</span>  in bonus MNR
+                in our <span class="amarrillo">MonnerGame</span> game center (available soon). And founder
+                privileges in all our projects from <span class="amarrillo"> $300</span> and up. <span class="amarrillo">Note:</span> The
+                Wallets that invested in Fair Launch will be published on our
+                official website and will be recognized as a benefited wallet
               </p>
             </div>
           </div>
         </div>
+
         <div
           :class="{
             beneficio: true,
@@ -140,20 +115,19 @@ export default {
           />
           <div class="content-price">
             <div class="titulo-two">
-              <h1>6.2%<span>*</span>48h</h1>
+              <h1>7.5%<span>*</span>24h</h1>
             </div>
           </div>
           <div class="content-text">
             <div class="sale">
-              <h3>Sale Price</h3>
+              <h3><span class="amarrillo">Important Note:</span></h3>
             </div>
 
             <div class="text">
               <p class="">
-                Enter our first phase os staking buying in pre-sale and earn
-                6.2% every 48 hours of your total capital in Monnercoins after
-                the launch in Pancakeswap.
-                <span class="amarrillo">Only for the first 600 holders</span>
+                Staking 7.5% every 48 hours is only for the wallets that
+                invested to our 
+                <span class="amarrillo">LAUNCH FAIR </span>
               </p>
             </div>
           </div>
@@ -239,7 +213,14 @@ p {
   text-align: center;
   z-index: 45;
 }
-
+#texto {
+  font-size: 2rem;
+}
+@media screen and (max-width: 900px) {
+  #texto {
+    font-size: 1rem;
+  }
+}
 .titulo h1 {
   font-size: 2rem;
   font-family: "Work Sans", sans-serif;
@@ -273,21 +254,15 @@ p {
 }
 
 .beneficio:nth-child(1) {
-  height: 20%;
+  height: 80% !important;
 }
 
 .beneficio:nth-child(2) {
-  height: 10%;
+  height: 80% !important;
 }
 
 .beneficio:nth-child(3) {
   height: 10%;
-}
-
-.beneficio:nth-child(5) {
-  opacity: 0 !important;
-  margin-top: 4.5rem;
-  height: 25rem;
 }
 
 @media screen and (max-width: 900px) {
