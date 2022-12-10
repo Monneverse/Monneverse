@@ -57,16 +57,18 @@ export default {
       <div class="benefit_title">
         <img class="benefit_img_plus" src="/img/plus.svg" alt="Plus-Benefits">
         <h2 class="title">
-        Benfits for our early investors
+          Benfits for our early investors
         </h2>
       </div>
-      <p class="description"> Investors of our Fair Launch will have access to our daily payment of 7.5% of their investment. will get 
+      <p class="description"> Investors of our Fair Launch will have access to our daily payment of 7.5% of their
+        investment. will get
         <span class="highlight">$300</span>
-        in bonus MNR in our 
+        in bonus MNR in our
         <span class="highlight">MonnerGame</span>
         game center (available soon). And founder privileges in all our projects from
-        <span class="highlight">$300</span> and up.   <span class="highlight">Note : </span> 
-        The Wallets that invested in Fair Launch will be published on our official website and will be recognized as a benefited wallet 
+        <span class="highlight">$300</span> and up. <span class="highlight">Note : </span>
+        The Wallets that invested in Fair Launch will be published on our official website and will be recognized as a
+        benefited wallet
       </p>
     </div>
     <!--       
@@ -292,7 +294,7 @@ img {
 }
 
 .contenido .benefit {
-  width: 42%;
+  width: 48%;
   color: white;
   margin-top: 1rem;
 }
@@ -339,6 +341,12 @@ img {
 .contenido .benefit .description .highlight {
   color: #FFC007;
   font-weight: 500;
+}
+/* version tablet */
+@media screen and (max-width: 1250px) {
+  .contenido {
+    width: 95%;
+  }
 }
 
 /* 
