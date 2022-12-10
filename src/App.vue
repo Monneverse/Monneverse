@@ -103,6 +103,9 @@ export default {
           if (newPosition == 10) {
             newPosition = 12;
           }
+          if (newPosition == 15) {
+              newPosition = 16;
+            }
 
           if (newPosition == 19) {
             newPosition = 24;
@@ -126,6 +129,9 @@ export default {
           if (newPosition == 11) {
             newPosition = 9;
           }
+          if (newPosition == 15) {
+              newPosition = 14;
+            }
 
           if (newPosition == 23) {
             newPosition = 18;
@@ -400,6 +406,9 @@ export default {
             if (newPosition == 10) {
               newPosition = 12;
             }
+            if (newPosition == 15) {
+              newPosition = 16;
+            }
             if (newPosition == 19) {
               newPosition = 24;
             }
@@ -414,6 +423,9 @@ export default {
             }
             if (newPosition == 11) {
               newPosition = 9;
+            }
+            if (newPosition == 15) {
+              newPosition = 14;
             }
             if (newPosition == 23) {
               newPosition = 18;
