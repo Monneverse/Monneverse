@@ -101,11 +101,11 @@
   <article :class="{ informacion: true, 'aparecer-animation': this.enterAnimation && !this.isRevert }">
     <div class="titulo-imagen">
       <img src="../assets/add.svg" alt="" />
-      <p id="title">{{ porcentajeInteres }}%<span>*</span>48h</p>
+      <p id="title">{{ porcentajeInteres }}%<span>*</span>24 H</p>
     </div>
 
     <p class="descripcion_information">
-      First Two Months Every 48 Hours
+      First Two Months Every 24 Hours
       <br>The Monner Will Return {{ porcentajeInteres }}% Interest
     </p>
 
@@ -177,7 +177,7 @@ export default {
   data() {
     return {
       inversion: 1500,
-      porcentajeInteres: 6.2,
+      porcentajeInteres: 7.5,
       interes: "$ 0",
       indicador: State.Hour48
     };

@@ -121,19 +121,19 @@ export default {
             fadeInRight: this.enterAnimation,
             fadeOutRight: this.exitAnimation,
           }">
-            <h2>Sale Tax 15%</h2>
+            <h2>Sale Tax 0%</h2>
           </div>
         </div>
         <div class="">
           <p>
-            <span>12%</span> Destined for Monner liquidity blocked for 100 years.
+            <span>0%</span> Destined for Monner liquidity blocked for 100 years.
           </p>
         </div>
         <div class="">
-          <p><span>2%</span> Destined to Marketing.</p>
+          <p><span>0%</span> Destined to Marketing.</p>
         </div>
         <div class="">
-          <p><span>1%</span> For development.</p>
+          <p><span>0%</span> For development.</p>
         </div>
         <div class="">
           <p></p>

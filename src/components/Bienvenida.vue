@@ -1,8 +1,20 @@
 <template>
   <!-- video de fondo -->
-  <video preload="auto" autoplay webkit-playsinline playsinline muted loop class="video-fondo"
-    poster="/img/fondo_binario.png">
-    <source data-src="/video/Full-HD-Lite-2.mp4" type="video/mp4" src="/video/Full-HD-Lite-2.mp4" />
+  <video
+    preload="auto"
+    autoplay
+    webkit-playsinline
+    playsinline
+    muted
+    loop
+    class="video-fondo"
+    poster="/img/fondo_binario.png"
+  >
+    <source
+      data-src="/video/Full-HD-Lite-2.mp4"
+      type="video/mp4"
+      src="/video/Full-HD-Lite-2.mp4"
+    />
   </video>
 
   <!-- logos de fondos -->
@@ -18,40 +30,45 @@
     <img src="../assets/aro-iluminado-brillante.svg" alt="" />
   </div>
   <div class="fondo-montana">
-    <img src="/img/fondo-montana.png" alt="Background-montain"  />
+    <img src="/img/fondo-montana.png" alt="Background-montain" />
   </div>
   <div class="fondo-montana">
-    <img src="/img/fondo-montana.png" alt="Background-montain"  />
+    <img src="/img/fondo-montana.png" alt="Background-montain" />
   </div>
   <div class="fondo-montana">
-    <img src="/img/fondo-montana.png" alt="Background-montain"  />
+    <img src="/img/fondo-montana.png" alt="Background-montain" />
   </div>
   <div class="fondo-oscuro"></div>
-  <div class="fondo-oscuro-superior"> </div>
+  <div class="fondo-oscuro-superior"></div>
   <div class="iluminacionLogo"></div>
   <div class="fondo-mundial">
-    <img src="/img/fondo_Cel.png" alt="Background-cell"  />
+    <img src="/img/fondo_Cel.png" alt="Background-cell" />
   </div>
   <div class="degradado degradado_izquierdo"></div>
   <div class="degradado degradado_derecho"></div>
 
-  <div class="welcome" :class="{
-    animated: true,
-    duration1s: true,
-    fadeInLeft: this.enterAnimation,
-    fadeOutLeft: this.exitAnimation,
-  }">
+  <div
+    class="welcome"
+    :class="{
+      animated: true,
+      duration1s: true,
+      fadeInLeft: this.enterAnimation,
+      fadeOutLeft: this.exitAnimation,
+    }"
+  >
     <p class="title">
       <b>Welcome to</b>
-      <br /> <span>$MNR</span> Energy Project
+      <br />
+      <span>$MNR</span> Energy Project
     </p>
     <p class="subtitle">Utilities DeFi</p>
     <p class="description">
-      Take advantage of this opportunity and <b>reserve</b> your spot in our
-      pre-sale
+      Take advantage of this opportunity and RESERVE your place at our
+      <b>FAIR LAUNCH</b>. Note: 7.5% every 24 hours for the first 2 months.
+      Payments directly to MetaMask/TrustWallet. Only for portfolios that invest
+      in <b>FAIR LAUNCH</b>
     </p>
-    <a target="_blank" href="" class="btn_new">Buy in pre-Sale</a>
-
+    <a target="_blank" href="" class="btn_new">Buy in FAIR LAUCH</a>
   </div>
 </template>
 <script>
@@ -100,10 +117,12 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center,
-      #48d0ab 0%,
-      #097561 50%,
-      #505863 100%);
+  background: radial-gradient(
+    circle at center,
+    #48d0ab 0%,
+    #097561 50%,
+    #505863 100%
+  );
   z-index: 0;
   opacity: 40%;
   user-select: none;
@@ -204,10 +223,14 @@ img {
 }
 
 .btn_new {
-  padding: .5rem;
+  padding: 0.5rem;
   margin-top: 5%;
   min-width: 15rem;
-  background: linear-gradient(90deg, rgba(85, 0, 255, 1) 35%, rgba(214, 0, 255, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(85, 0, 255, 1) 35%,
+    rgba(214, 0, 255, 1) 100%
+  );
   border-radius: 2rem;
   color: #fff;
   font-family: "Bahn";
@@ -216,8 +239,6 @@ img {
   font-size: 1.5rem;
   text-align: center;
 }
-
-
 
 .degradado {
   background: linear-gradient(to right, #090380 55%, transparent);
@@ -260,10 +281,12 @@ img {
     left: 0;
     width: 100em;
     height: 100em;
-    background: radial-gradient(circle at center,
-        #48d0ab 0%,
-        #097561 50%,
-        #505863 100%);
+    background: radial-gradient(
+      circle at center,
+      #48d0ab 0%,
+      #097561 50%,
+      #505863 100%
+    );
     z-index: 1;
   }
 
@@ -291,10 +314,12 @@ img {
     left: -15em;
     width: 50em;
     height: 80em;
-    background: radial-gradient(circle at center,
-        #48d0ab 10%,
-        #097561 30%,
-        #0f161c 100%);
+    background: radial-gradient(
+      circle at center,
+      #48d0ab 10%,
+      #097561 30%,
+      #0f161c 100%
+    );
     z-index: 3;
     opacity: 70%;
   }
@@ -396,10 +421,14 @@ img {
 }
 
 .btn_new {
-  padding: .5rem;
+  padding: 0.5rem;
   margin-top: 5%;
   min-width: 15rem;
-  background: linear-gradient(90deg, rgba(85, 0, 255, 1) 35%, rgba(214, 0, 255, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(85, 0, 255, 1) 35%,
+    rgba(214, 0, 255, 1) 100%
+  );
   border-radius: 2rem;
   color: #fff;
   font-family: "Bahn";
