@@ -101,7 +101,7 @@
   <article :class="{ informacion: true, 'aparecer-animation': this.enterAnimation && !this.isRevert }">
     <div class="titulo-imagen">
       <img src="../assets/add.svg" alt="" />
-      <p id="title">{{ porcentajeInteres }}%<span>*</span>24 H</p>
+      <p id="title">{{ porcentajeInteres }}%<span>*</span>24H</p>
     </div>
 
     <p class="descripcion_information">
@@ -109,7 +109,7 @@
       <br>The Monner Will Return {{ porcentajeInteres }}% Interest
     </p>
 
-    <p class="descripcion_information seg_linea">Note: Our Staking is only for holders who invest in our <span>FAIR LAUNCH</span>.  We will reward you with many benefits for being part of the project from the beginning.</p>
+    <p class="descripcion_information seg_linea"> Note: Our Staking is only for holders who invest in our <span>FAIR LAUNCH</span>.  We will reward you with many benefits for being part of the project from the beginning.</p>
   </article>
 
   <!-- redes sociales -->
