@@ -86,11 +86,11 @@ export default {
           <div class="content-text">
             <div class="text">
               <p>
-                Investors of our Fair Launch will have access to our daily
-                payment of 7.5% of their investment. will get <span class="amarrillo"> $300</span>  in bonus MNR
+                Investors of our <span class="amarrillo">FAIR LAUNCH</span> will have access to our daily
+                payment of <span class="amarrillo">7.5%</span> of their investment. will get <span class="amarrillo"> $300</span>  in bonus MNR
                 in our <span class="amarrillo">MonnerGame</span> game center (available soon). And founder
                 privileges in all our projects from <span class="amarrillo"> $300</span> and up. <span class="amarrillo">Note:</span> The
-                Wallets that invested in Fair Launch will be published on our
+                Wallets that invested in <span class="amarrillo">FAIR LAUNCH</span> will be published on our
                 official website and will be recognized as a benefited wallet
               </p>
             </div>
