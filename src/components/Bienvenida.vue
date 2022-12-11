@@ -68,7 +68,7 @@
       months. Payments directly to MetaMask/TrustWallet. Only for portfolios
       that invest in <b>FAIR LAUNCH</b>
     </p>
-    <a target="_blank" href="" class="btn_new">Buy in FAIR LAUCH</a>
+    <a target="_blank" href="https://www.pinksale.finance/launchpad/0xa425313d627148DB0d8384D92a0F37E3b320e839?chain=BSC" class="btn_new">Buy in FAIR LAUCH</a>
   </div>
 </template>
 <script>

@@ -170,14 +170,14 @@ export default {
       fadeInDown: this.enterAnimation,
       fadeOutUp: this.exitAnimation,
     }"
-    @click="addTokenFunction()"
+   
   >
     <!-- <div class="contrato">
       <span>Contract:0xCD1e230ebA2E1ACEE43eB1AF3948bdb333044893</span>
     </div> -->
     <div class="separar"></div>
     <div class="buyNow">
-      <a target="_blank" class="btn_moner">
+      <a target="_blank" href="https://www.pinksale.finance/launchpad/0xa425313d627148DB0d8384D92a0F37E3b320e839?chain=BSC"  class="btn_moner">
         <div class="texto1">BUY MONNER</div>
         <div class="logos">
           <div class="binance"><img src="/./img/Articulo/BNC.svg" /></div>

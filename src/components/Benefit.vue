@@ -163,8 +163,8 @@ img {
 
   @keyframes titulo {
     0% {
-      top: 10rem;
-      left: 18%;
+      top: 11.5rem;
+      left: 19%;
     }
   }
 }
