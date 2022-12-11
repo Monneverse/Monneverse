@@ -38,9 +38,7 @@ export default {
       <div class="benefit_title">
         <img class="benefit_img_plus" src="/img/plus.svg" alt="Plus-Benefits" />
         <h2 class="title">
-          <span class="highlight">$ </span>1,5  <span class="highlight"
-            >USD</span
-          >
+          <span class="highlight">FAIR LAUNCH</span>
            in Pinksale
           <img
             class="title_img"
@@ -70,7 +68,7 @@ export default {
       </div>
       <p class="description">
         <span class="highlight">Important Note : <br /> </span>
-        Starking 7.5% every 48 hours is only for the wallets that invested to
+        Starking 7.5% every 24 hours is only for the wallets that invested to
         our
         <span class="highlight">FAIR LAUNCH</span>
       </p>

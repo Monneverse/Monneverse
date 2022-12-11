@@ -79,7 +79,7 @@ export default {
             <li id="sub">-Listed on PancakeSwap</li>
             <li id="sub">
               -Began of staking for the briefcase that participated in the
-              <span class="resaltar">FAIR LUNCH </span>
+              <span class="resaltar">FAIR LAUNCH</span>
             </li>
             <li>
               -Injection of liquidity to raise our price after its first listing
