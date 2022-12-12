@@ -203,11 +203,12 @@ img {
 
 .contenido {
   position: absolute;
-  top: 50%;
+  top: 56%;
   left: 50%;
-  transform: translate(-50%, -48%);
   width: 70%;
   height: 90%;
+  transform: translate(-50%, -45%);
+
   z-index: 4;
   display: flex;
   flex-direction: column;
