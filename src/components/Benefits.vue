@@ -207,11 +207,11 @@ img {
   left: 50%;
   transform: translate(-50%, -48%);
   width: 70%;
-  height: 70%;
+  height: 90%;
   z-index: 4;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: start;
   flex-wrap: wrap;
   padding: 1rem;
   font-family: "Work Sans", sans-serif;
@@ -282,11 +282,9 @@ img {
 
 @media screen and (max-width: 900px) {
   .contenido {
-    top: 45%;
     width: 98%;
-    height: 70%;
-    margin-top: 0rem;
-    justify-content: space-between;
+    height: 90%;
+    margin-top: 1.5rem;
   }
 
   .contenido .contenido_title {
