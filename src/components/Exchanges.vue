@@ -233,8 +233,8 @@ export default {
               zoomInLeft: this.enterAnimation,
               zoomOutLeft: this.exitAnimation,
             }"
-            iconos="/img/Exchanges/ftx.svg"
-            iconname="FTX"
+            iconos="/img/Exchanges/Bitmart_Logo.svg"
+            iconname="BitMart"
           />
         </div>
       </div>
