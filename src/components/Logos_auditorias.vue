@@ -1,14 +1,14 @@
 <template>
   <div class="texto_auditoria">
-    <p
-      :class="{
-        animated: true,
-        duration1s: true,
-        zoomIn: this.enterAnimation,
-        zoomOut: this.exitAnimation,
-      }"
-    >
+    <p :class="{
+      animated: true,
+      duration1s: true,
+      zoomIn: this.enterAnimation,
+      zoomOut: this.exitAnimation,
+    }">
+      <span>Coming soon</span>
       audited by the <br />most reliable companies
+
     </p>
   </div>
   <div class="fondo"></div>
@@ -41,82 +41,55 @@
   <div class="circuito circuito-derecho">
     <img src="/img/calculadora/circuito-derecho.png" alt="Circuit" />
   </div>
-  <div
-    :class="{
-      luces: true,
-      animated: true,
-      duration1s: true,
-      fadeIn: this.enterAnimation,
-      fadeOut: this.exitAnimation,
-    }"
-  >
+  <div :class="{
+    luces: true,
+    animated: true,
+    duration1s: true,
+    fadeIn: this.enterAnimation,
+    fadeOut: this.exitAnimation,
+  }">
     <img src="/img/luz.png" alt="Light" />
   </div>
-  <div
-    class="fondoSolidity"
-    :class="{
-      animated: true,
-      duration1s: true,
-      zoomIn: this.enterAnimation,
-      zoomOut: this.exitAnimation,
-    }"
-  ></div>
-  <div
-    class="fondoCertik"
-    :class="{
-      animated: true,
-      duration1s: true,
-      zoomIn: this.enterAnimation,
-      zoomOut: this.exitAnimation,
-    }"
-  ></div>
+  <div class="fondoSolidity" :class="{
+    animated: true,
+    duration1s: true,
+    zoomIn: this.enterAnimation,
+    zoomOut: this.exitAnimation,
+  }"></div>
+  <div class="fondoCertik" :class="{
+    animated: true,
+    duration1s: true,
+    zoomIn: this.enterAnimation,
+    zoomOut: this.exitAnimation,
+  }"></div>
   <br />
-  <div
-    class="logos_auditoria"
-    :class="{
+  <div class="logos_auditoria" :class="{
+    animated: true,
+    duration1s: true,
+    zoomIn: this.enterAnimation,
+    zoomOut: this.exitAnimation,
+  }">
+    <a href="" target="_blank">
+      <img src="/img/Exchanges/solidity1.png" class="auditoria1 zoomIn animated" alt="Solidity" /></a>
+    <a href="https://sites.google.com/view/certik-kyc-approved/certik-kyc-approved" target="_blank"><img
+        class="auditoria2" src="/img/Exchanges/certik.png" alt="Certik" /></a>
+    <button class="btn_registro" :class="{
       animated: true,
       duration1s: true,
-      zoomIn: this.enterAnimation,
-      zoomOut: this.exitAnimation,
-    }"
-  >
-    <a href="" target="_blank">
-      <img
-        src="/img/Exchanges/solidity1.png"
-        class="auditoria1 zoomIn animated"
-        alt="Solidity"
-    /></a>
-    <a
-      href="https://sites.google.com/view/certik-kyc-approved/certik-kyc-approved"
-      target="_blank"
-      ><img class="auditoria2" src="/img/Exchanges/certik.png" alt="Certik"
-    /></a>
-    <button
-      class="btn_registro"
-      :class="{
-        animated: true,
-        duration1s: true,
-        fadeInLeft: this.enterAnimation,
-        fadeOutLeft: this.exitAnimation,
-      }"
-    >
-      <a
-        href="https://www.flbusinessgo.com/companies/L22000347356/"
-        target="_blank"
-      >
-        register EEUU</a
-      >
+      fadeInLeft: this.enterAnimation,
+      fadeOutLeft: this.exitAnimation,
+    }">
+      <a href="https://www.flbusinessgo.com/companies/L22000347356/" target="_blank">
+        register EEUU</a>
     </button>
   </div>
-  <div
-    :class="{
-      circulos: true,
-      animated: true,
-      duration1s: true,
-      fadeInRight: this.enterAnimation,
-      fadeOutRight: this.exitAnimation,
-    }"
-  >
+  <div :class="{
+    circulos: true,
+    animated: true,
+    duration1s: true,
+    fadeInRight: this.enterAnimation,
+    fadeOutRight: this.exitAnimation,
+  }">
     <img src="../assets/aro.svg" />
   </div>
   <div class="logo-redes">
@@ -243,12 +216,10 @@ img {
     left: 0em;
     width: 24em;
     height: 52em;
-    background: radial-gradient(
-      circle at center,
-      #48d0ab 10%,
-      #097561 20%,
-      #0f161c 100%
-    );
+    background: radial-gradient(circle at center,
+        #48d0ab 10%,
+        #097561 20%,
+        #0f161c 100%);
     z-index: 1;
     opacity: 100%;
   }
@@ -336,12 +307,10 @@ img {
     left: 0em;
     width: 100em;
     height: 100em;
-    background: radial-gradient(
-      circle at center,
-      #48d0ab 10%,
-      #097561 20%,
-      #0f161c 100%
-    );
+    background: radial-gradient(circle at center,
+        #48d0ab 10%,
+        #097561 20%,
+        #0f161c 100%);
     z-index: 1;
     opacity: 100%;
   }
@@ -430,6 +399,10 @@ img {
   font-family: "Bahn";
   font-weight: 500;
   text-transform: uppercase;
+}
+
+.texto_auditoria p span {
+  color: #ffc000;
 }
 
 @media only screen and (min-device-width: 1px) and (max-device-width: 900px) {
